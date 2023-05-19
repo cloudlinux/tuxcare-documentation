@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-33720eeb","path":"/kernelcare-for-iot/","title":"KernelCare for IOT","lang":"en-US","frontmatter":{},"headers":[{"level":3,"title":"How KernelCare IoT works","slug":"how-kernelcare-iot-works","link":"#how-kernelcare-iot-works","children":[]}]}');export{e as data};

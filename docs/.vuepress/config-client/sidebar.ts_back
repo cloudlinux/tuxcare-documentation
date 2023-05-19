@@ -1,0 +1,50 @@
+export default {
+    '/almacare/': [
+        {
+            collapsable: false,
+            children: [
+                "/almacare/",
+            ]
+        },
+    ],
+    '/live-patching-services/': [
+        {
+            collapsable: false,
+            children: [
+                "/live-patching-services/",
+            ]
+        },
+    ],
+    '/kernelcare-for-iot/': [
+        {
+            collapsable: false,
+            children: [
+                "/kernelcare-for-iot/"
+            ]
+        },
+    ],
+    '/eportal/': [
+        {
+            collapsable: false,
+            children: [
+                "/eportal/"
+            ]
+        },
+    ],
+    '/eportal-api/': [
+        {
+            collapsable: false,
+            children: [
+                "/eportal-api/"
+            ]
+        },
+    ],
+    '/extended-lifecycle-support/': [
+        {
+            collapsable: false,
+            children: [
+                "/extended-lifecycle-support/",
+            ]
+        },
+    ]
+}
