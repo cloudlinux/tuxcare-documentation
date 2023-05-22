@@ -8,12 +8,14 @@ on:
 jobs:  
  publish:
     runs-on: ubuntu-latest
+    outputs:
+      commit_hash: ${{ steps.commit-and-push.outputs.commit_hash }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v3
         with:
               persist-credentials: false
-              fetch-depth: 0
+              ref: ${{ needs.update-changelog.outputs.commit_hash }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
