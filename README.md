@@ -1,17 +1,17 @@
 # tuxcare-documentation
 
-# Install dependencies
+## Install dependencies
 
 ```
 $ yarn
 ```
 
-# Start local server
+## Start local server
 
 ```sh
 $ yarn docs:dev
 ```
-# Static assets
+## Static assets
 
 ```sh
 $ yarn docs:build
