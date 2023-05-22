@@ -21,6 +21,6 @@ git commit -m 'deploy [skip ci]'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # static html pages are going to be deployed to gh-pages branch
-git push -f git@github.com:bogdanssh/tuxcare-documentation.git master:gh-pages
+git push -f git@github.com:cloudlinux/tuxcare-documentation.git master:gh-pages
 
 cd -
