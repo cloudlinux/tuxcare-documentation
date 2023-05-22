@@ -27,6 +27,7 @@ export default defineClientConfig({
             script.async = true;
             script.onload = () => {
                 Weglot.initialize({
+                    // change to key provided by DeShea
                     api_key: "wg_47c089850d691f428411a968f7baa3141"
                 });
             };
