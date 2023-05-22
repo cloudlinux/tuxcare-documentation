@@ -9,7 +9,7 @@ import bottomLinks from "./config-client/bottomLinks";
 import documents from "./config-client/documents";
 import sidebar from "./config-client/sidebar";
 import social from "./config-client/social";
-import { loadScript } from "vue-plugin-load-script";
+import {onBeforeMount} from "vue";
 
 export default defineClientConfig({
     layouts: {
@@ -20,6 +20,18 @@ export default defineClientConfig({
         app.component('InstantSearch', InstantSearch)
     },
     setup() {
+        onBeforeMount(()=>{
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://cdn.weglot.com/weglot.min.js';
+            script.async = true;
+            script.onload = () => {
+                Weglot.initialize({
+                    api_key: "wg_47c089850d691f428411a968f7baa3141"
+                });
+            };
+            document.head.appendChild(script);
+        })
         provide('themeConfig', {
             //general
             cloudlinuxSite: "https://cloudlinux.com",
