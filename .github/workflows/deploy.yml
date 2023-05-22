@@ -8,14 +8,11 @@ on:
 jobs:  
  publish:
     runs-on: ubuntu-latest
-    outputs:
-      commit_hash: ${{ steps.commit-and-push.outputs.commit_hash }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
               persist-credentials: false
-              ref: ${{ needs.update-changelog.outputs.commit_hash }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
