@@ -5,6 +5,11 @@ export default [
         link: "/tuxcare/",
     },
     {
+        title: "AlmaCare",
+        description: "brings essential support and a 16-year long lifecycle to your AlmaLinux systems. It comes with high value extensions that enable your cybersecurity compliance with rapid security updates and your compliance with the FIPS 140-3 standard.",
+        link: "/almacare/",
+    },
+    {
         title: "KernelCare Enterprise",
         description: "is a live kernel patching service that provides security patches and bugfixes for a range of popular Linux kernels that can be installed without rebooting the system.",
         link: "/live-patching-services/",
@@ -38,6 +43,11 @@ export default [
         title: "Subscription Management Portal",
         description: "The TuxCare subscription management portal is designed to easily manage your licenses of TuxCare products and services by means of a user-friendly interface.",
         link: "/tuxcare-cln/",
+    },
+    {
+        title: "Service Descriptions",
+        description: "AlmaCare service description",
+        link: "/service-descriptions/",
     }
 
 ]
