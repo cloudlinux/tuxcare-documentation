@@ -93,6 +93,12 @@ subscription-manager repos --enable rhel-7-server-optional-rpms
 subscription-manager repos --enable rhel-server-rhscl-7-rpms
 ```
 
+For Oracle Linux 7 users, similar to CentOS7, you need to install the oracle-softwarecollection-release-el7 package. This can be done using the following command:
+
+```
+yum install oracle-softwarecollection-release-el7
+```
+
 :::
 
 Install ePortal:
