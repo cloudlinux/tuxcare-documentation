@@ -1087,9 +1087,9 @@ You can find instructions to install KernelCare agent on http://your-eportal-dom
 To install agent through ePortal you can use special endpoint `http://your-eportal-domain/install-kernelcare`:
 
 ```text
-$ export KCARE_MAILTO=admin@mycompany.com
-$ curl -s http://eportal.mycompany.com/install-kernelcare | bash
-$ kcarectl --register my-key
+# export KCARE_MAILTO=admin@mycompany.com
+# curl -s http://eportal.mycompany.com/install-kernelcare | bash
+# kcarectl --register my-key
 ```
 
 Exporting `KCARE_MAILTO` is an optional step, it helps to configure corresponding entry in `/etc/cron.d/kcare-cron` to receive all notifications related to failed KernelCare updates.
@@ -1132,7 +1132,7 @@ To start the automated deployment, you need to specify the following information
 
 Ansible playbook for deployment phase may look like:
 
-```yaml
+```text
 - hosts: kernelcare
   vars:
     eportal_srv: http://192.168.250.19
@@ -1153,7 +1153,7 @@ Ansible playbook for deployment phase may look like:
 
 Ansible playbook file example for KernelCare agent removal:
 
-```yaml
+```text
 - hosts: kernelcare
   tasks:
     - name: unregister KernelCare agents
