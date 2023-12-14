@@ -143,7 +143,7 @@ Install ePortal:
 
 ## Allowed hosts
 
-We must declare the list of allowed hosts in the configuration for security reasons. It help to avoid HTTP Host header attacks. According to your installation, you need to add this parameter into [ePortal config file](/eportal/#config-files):
+We must declare the list of allowed hosts in the configuration for security reasons. It help to avoid HTTP Host header attacks. According to your installation, you need to add this parameter into [ePortal config file](#config-files):
 
 ```text
 ALLOWED_HOSTS = ['node1-yourdomain.example.com', 'node2-yourdomain.example.com']
@@ -161,7 +161,7 @@ In cache mode ePortal downloads only lightweight meta information about patchset
 
 ### Enable cache mode
 
-1. add the following setting into the [ePortal config file](/eportal/#config-files):
+1. add the following setting into the [ePortal config file](#config-files):
 
 ```text
 CACHE_MODE = True
@@ -181,7 +181,7 @@ For existing installations you have to refetch meta info for existing patchsets:
 
 ### Disable cache mode
 
-1. remove or comment the line below in the [ePortal config file](/eportal/#config-files):
+1. remove or comment the line below in the [ePortal config file](#config-files):
 
 ```text
 CACHE_MODE = True
@@ -207,7 +207,7 @@ ePortal can fetch packages and patches via a customer's proxy server.
 
 On the ePortal machine, you should define the same proxy settings as you use on the command line.
 
-To do so, add `PROXY = 'http://example.com:3128'` into the [ePortal config file](/eportal/#config-files):
+To do so, add `PROXY = 'http://example.com:3128'` into the [ePortal config file](#config-files):
 
 ```text
 # echo "PROXY = 'http://example.com:3128'" >> /etc/eportal/config
@@ -219,7 +219,7 @@ ePortal also supports a SOCKS5 proxy via `socks5://` proxy scheme:
 # echo "PROXY = 'socks5://example.com:1080'" >> /etc/eportal/config
 ```
 
-Restart ePortal (see the [Stopping & Starting](/eportal/#stopping-starting) section, choose a corresponding OS).
+Restart ePortal (see the [Stopping & Starting](#stopping-starting) section, choose a corresponding OS).
 
 ## Auth configuration
 
@@ -230,7 +230,7 @@ Restart ePortal (see the [Stopping & Starting](/eportal/#stopping-starting) sect
 | `AUTH_SESSION_LIFETIME`    | Session lifetime in seconds, by default session will last till browser closing |
 | `AUTH_REFRESH_SESSION`     | If `False` (default), expires session after lifetime seconds after login. If `True`, expires session after lifetime seconds of inactivity. |
 
-You can set configuration in [ePortal config file](/eportal/#config-files).
+You can set configuration in [ePortal config file](#config-files).
 
 ## Managing Users
 
@@ -411,7 +411,7 @@ To access KernelCare.eportal management console, connect to **http://YOUR_IP/adm
 
 ![login screen](/images/access_eportal.png)
 
-You can manage your login information using the [kc.eportal tool](/eportal/#managing-users)
+You can manage your login information using the [kc.eportal tool](#managing-users)
 
 ## PatchSet deployment
 
@@ -629,7 +629,7 @@ To register new servers you need to create a KernelCare key that will be used fo
 
 * To edit a key, click ![edit keys](/images/eportal_keys_edit.png). The _Edit_ tab opens.
 * To remove a key, click ![remove keys](/images/eportal_keys_remove.png). Please note, that removing the key would remove all servers under that key.
-* Click a key to go to Servers tab with the list of [servers registered](/eportal/#managing-servers) under that key. You can also remove servers on that tab.
+* Click a key to go to Servers tab with the list of [servers registered](#managing-servers) under that key. You can also remove servers on that tab.
 
 To create a new registration click _Create_ tab.
 
@@ -652,7 +652,7 @@ Products can be mixed to limit access to a particular set of patch types. For ex
 
 * **KernelCare** + **LibCare**: allow access only to kernel and lib patches.
 
-For Enterprise Support for AlmaLinux deployment instructions please see the [dedicated section](/eportal/#deploying-essential-support-for-almalinux)
+For Enterprise Support for AlmaLinux deployment instructions please see the [dedicated section](#deploying-enterprise-support-for-almalinux)
 
 Click _Save_ to add the key. The new registration key will be created and added to the list. The key itself will be used as a part of the registration command on an individual server.
 
@@ -714,7 +714,7 @@ Set feed to key:
 
 ## Managing Servers
 
-You can see servers belonging to the key by clicking on the key itself in the [Managing Keys](/eportal/#managing-keys) interface.
+You can see servers belonging to the key by clicking on the key itself in the [Managing Keys](#managing-keys) interface.
 
 ![server list](/images/server_list_1_zoom70.png)
 
@@ -750,7 +750,7 @@ Servers inactive for more than 30 days can be removed using the followed command
 ```
 
 Clean-up of inactive servers can be performed automatically every day or rarer. To enable daily auto clean-up, you can add an option `CLEAN_INACTIVE_SERVERS_PERIOD = 3600 * 24` (value in seconds)
-in the [ePortal config file](/eportal/#config-files)
+in the [ePortal config file](#config-files)
 
 ### Show extended check-in statistics in admin UI
 
@@ -961,7 +961,7 @@ Starting from version 1.28, ePortal supports application level replication. It
 allows to propagate changes in both ways – from a leader to followers and from
 followers to the leader.
 
-Configuration settings related to replication and can be changed in [ePortal config file](/eportal/#config-files):
+Configuration settings related to replication and can be changed in [ePortal config file](#config-files):
 
 * `NODE_URL`: URL to the self instance, needed for auto-discovery purposes
 * `LEADER_URL`: URL to the instance from where to fetch changes
@@ -1126,9 +1126,9 @@ The deployment process includes:
 To start the automated deployment, you need to specify the following information:
 
 * ePortal server name (or IP) in the `eportal_srv` Ansible variable. Other config file options can be found at [Config Options](/live-patching-services/#config-options) and
-  [KernelCare client config file](/eportal/#kernelcare-enterprise-client-config-file) (ePortal).
+  [KernelCare client config file](#kernelcare-enterprise-client-config-file) (ePortal).
 
-* an activation key in the `activation_key` Ansible variable. Activation keys can be generated in ePortal as described in [Managing Keys](/eportal/#managing-keys) (ePortal).
+* an activation key in the `activation_key` Ansible variable. Activation keys can be generated in ePortal as described in [Managing Keys](#managing-keys) (ePortal).
 
 Ansible playbook for deployment phase may look like:
 
@@ -1471,7 +1471,7 @@ You set up your OpenID Connect application inside the Okta Admin Console:
 
 On the ePortal machine, configure SSO settings.
 
-Edit [ePortal config file](/eportal/#config-files):
+Edit [ePortal config file](#config-files):
 
 ```text
 OIDC_AUTH_URL="https://dev-61441893.okta.com/oauth2/v1/authorize"
@@ -1483,7 +1483,7 @@ OIDC_CLIENT_ID="0Aa134lzhUKj8jDMo5d7"
 OIDC_CLIENT_SECRET="AoBNuWRLRu2dxIR3Q0btO53N1entmGxBjQqwmjVL"
 ```
 
-Restart ePortal (see the [Stopping & Starting](/eportal/#stopping-starting) section, choose a corresponding OS).
+Restart ePortal (see the [Stopping & Starting](#stopping-starting) section, choose a corresponding OS).
 
 If all settings configured correctly the new **Sign In with SSO** button has to appear on login page `http://eportal_ip/admin/login`
 
@@ -1493,7 +1493,7 @@ If all settings configured correctly the new **Sign In with SSO** button has to 
 
 By default patches with databases are stored in `/usr/share/kcare-eportal` for RHEL-based systems and `/var/lib/eportal` for deb-based systems. You can configure it to use split storage, for example to keep patches on external block device.
 
-Edit [ePortal config file](/eportal/#config-files):
+Edit [ePortal config file](#config-files):
 
 ```text
 PATCHES_DIR = '/path/to/patches/storage'
