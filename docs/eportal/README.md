@@ -145,7 +145,7 @@ Install ePortal:
 
 We must declare the list of allowed hosts in the configuration for security reasons. It help to avoid HTTP Host header attacks. According to your installation, you need to add this parameter into [ePortal config file](/eportal/#config-files):
 
-```python
+```text
 ALLOWED_HOSTS = ['node1-yourdomain.example.com', 'node2-yourdomain.example.com']
 ```
 
