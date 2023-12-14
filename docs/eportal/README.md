@@ -915,7 +915,7 @@ forward requests to ePortal instance. The only requirement is to provide correct
 
 For example balancer nginx config:
 
-```json
+```text
 server {
    listen       443 ssl;
    server_name  your-eportal-domain;
@@ -1030,7 +1030,7 @@ If you already have a working ePortal instance, you can setup a second node, def
 
 You can use `kc.eportal replication --short-status` CLI command to check replication status. It exits with code `1` if there are some issues with replication and outputs JSON:
 
-```json
+```text
 {
   "ok": true,       // overall health status
   "lag": 1,         // overall replication lag in seconds
