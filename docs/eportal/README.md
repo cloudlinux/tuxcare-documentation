@@ -2,20 +2,19 @@
 sidebarDepth: 4
 ---
 
+<!-- markdownlint-disable MD014 MD033 MD029 MD049 MD034 MD051-->
+
 # ePortal
 
 TuxCare ePortal is the web management console dedicated to KernelCare Enterprise live patch management.
 
-ePortal software can help protect servers located behind the
-firewall (i.e. with no internet access) and can be installed both
-on-premises and in the cloud.
+ePortal software can help protect servers located behind the firewall (i.e. with no internet access) and can be installed both on-premises and in the cloud.
 
 ![Overview](/images/eportal-overview.svg)
 
-
 ## ePortal Hardware Requirements
 
-**Disk**
+**Disk:**
 
 * 100 GB minimum, 200 GB recommended (20GB in case of cache mode)
 * SSD with at least 100 IOPS
@@ -24,10 +23,9 @@ on-premises and in the cloud.
 SSD based storage is a crucial requirement for ePortal server.
 :::
 
-**CPU**
+**CPU:**
 
-As far as other requirements concerned, we have tested the following configuration
-and the following number of connected servers:
+As far as other requirements concerned, we have tested the following configuration and the following number of connected servers:
 
 * 10k of connected machines is the maximum for the following requirements:
   * VM
@@ -39,19 +37,16 @@ and the following number of connected servers:
   * 1 CPU
   * 4 GB RAM
 
-
 ## Installation
 
-ePortal is compatible with 64-bit versions of EL7/8/9 based distros like CentOS 7/8, AlmaLinux 8/9 and
-Ubuntu 20.04/22.04.
+ePortal is compatible with 64-bit versions of EL7/8/9 based distros like CentOS 7/8, AlmaLinux 8/9 and Ubuntu 20.04/22.04
 
 ### RHEL-based distros
 
-For installation and workability of ePortal the Nginx web server is required.
-We recommend to use stable version from the official Nginx repository:
+For installation and workability of ePortal the Nginx web server is required. We recommend to use stable version from the official Nginx repository:
 
-```
-cat > /etc/yum.repos.d/nginx.repo <<EOL
+```text
+# cat > /etc/yum.repos.d/nginx.repo <<EOL
 [nginx]
 name=nginx stable repo
 baseurl=http://nginx.org/packages/centos/\$releasever/\$basearch/
@@ -66,8 +61,8 @@ You can find more information at [https://nginx.org/en/linux_packages.html#stabl
 
 Setup ePortal repo:
 
-```
-cat > /etc/yum.repos.d/kcare-eportal.repo <<EOL
+```text
+# cat > /etc/yum.repos.d/kcare-eportal.repo <<EOL
 [kcare-eportal]
 name=KernelCare ePortal
 baseurl=https://www.repo.cloudlinux.com/kcare-eportal/\$releasever/\$basearch/
@@ -78,170 +73,158 @@ EOL
 ```
 
 :::tip Note
-
-If you are using CentOS7, starting from ePortal version 2.4-2, it's necessary to install the `centos-release-scl` package. 
+If you are using CentOS7, starting from ePortal version 2.4-2, it's necessary to install the `centos-release-scl` package.
 You can do so with the following command:
 
-```
-yum install centos-release-scl
+```text
+# yum install centos-release-scl
 ```
 
 For RHEL7 users, you'll need to enable the necessary repositories to ensure access to the required packages. Use the subscription-manager utility with the following commands:
 
-```
-subscription-manager repos --enable rhel-7-server-optional-rpms
-subscription-manager repos --enable rhel-server-rhscl-7-rpms
+```text
+# subscription-manager repos --enable rhel-7-server-optional-rpms
+# subscription-manager repos --enable rhel-server-rhscl-7-rpms
 ```
 
 For Oracle Linux 7 users, similar to CentOS7, you need to install the oracle-softwarecollection-release-el7 package. This can be done using the following command:
 
-```
-yum install oracle-softwarecollection-release-el7
+```text
+# yum install oracle-softwarecollection-release-el7
 ```
 
 :::
 
 Install ePortal:
 
-```
-yum install -y kcare-eportal
+```text
+# yum install -y kcare-eportal
 ```
 
 ### Ubuntu 20.04
 
 Setup ePortal repo:
 
-```
-apt-get install -y --no-install-recommends curl ca-certificates
+```text
+# apt-get install -y --no-install-recommends curl ca-certificates
 
-curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
+# curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
 
-cat > /etc/apt/sources.list.d/kcare-eportal.list <<EOL
+# cat > /etc/apt/sources.list.d/kcare-eportal.list <<EOL
 deb [signed-by=/usr/share/keyrings/kcare-eportal.gpg] https://repo.cloudlinux.com/kcare-eportal/20.04 focal main
 EOL
 ```
 
 Install ePortal:
 
-```
-apt-get update && apt-get install -y --no-install-recommends kcare-eportal
+```text
+# apt-get update && apt-get install -y --no-install-recommends kcare-eportal
 ```
 
 ### Ubuntu 22.04
 
 Setup ePortal repo:
 
-```
-apt-get install -y --no-install-recommends curl ca-certificates
+```text
+# apt-get install -y --no-install-recommends curl ca-certificates
 
-curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
+# curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
 
-cat > /etc/apt/sources.list.d/kcare-eportal.list <<EOL
+# cat > /etc/apt/sources.list.d/kcare-eportal.list <<EOL
 deb [signed-by=/usr/share/keyrings/kcare-eportal.gpg] https://repo.cloudlinux.com/kcare-eportal/22.04 jammy main
 EOL
 ```
 
 Install ePortal:
 
+```text
+# apt-get update && apt-get install -y --no-install-recommends kcare-eportal
 ```
-apt-get update && apt-get install -y --no-install-recommends kcare-eportal
-```
+
 ## Allowed hosts
-We must declare the list of allowed hosts in the configuration for security reasons. It help to avoid HTTP Host header attacks.
-According to your installation, you need to add this parameter into [ePortal config file](#config-files).
-```python
+
+We must declare the list of allowed hosts in the configuration for security reasons. It help to avoid HTTP Host header attacks. According to your installation, you need to add this parameter into [ePortal config file](#config-files):
+
+```text
 ALLOWED_HOSTS = ['node1-yourdomain.example.com', 'node2-yourdomain.example.com']
 ```
-Instead of an example, use the DNS name(s) of your ePortal server installation. Deafault value is `[]`.
+
+Instead of an example, use the DNS name(s) of your ePortal server installation. Default value is `[]`.
 
 ## Cache mode
 
-Cache mode allows to greatly reduce disk usage requirements and speed up
-initial downloading step.
+Cache mode allows to greatly reduce disk usage requirements and speed up initial downloading step.
 
-In cache mode ePortal downloads only lightweight meta information about
-patchsets and proxies patch requests from KernelCare agent to the patch server
-(Patch Source). Downloaded patch binaries are cached for 2 weeks and
-accessible for following requests directly from ePortal and doesn't consume
-public internet bandwidth.
+In cache mode ePortal downloads only lightweight meta information about patchsets and proxies patch requests from KernelCare agent to the patch server (Patch Source). Downloaded patch binaries are cached for 2 weeks and accessible for following requests directly from ePortal and doesn't consume public internet bandwidth.
 
 ![Cache mode](/images/eportal-cache-mode.svg)
 
 ### Enable cache mode
 
-1. add
+1. add the following setting into the [ePortal config file](#config-files):
 
-   ```
-   CACHE_MODE = True
-   ```
-
-   setting into [ePortal config file](#config-files)
-
-2. restart ePortal
-
-   ```
-   systemctl restart eportal
-   ```
-
-For existing installation you have to refetch meta info for existing patchsets:
-
+```text
+CACHE_MODE = True
 ```
-kcare/kc.eportal cache-mode --fetch-meta
+
+2. restart ePortal:
+
+```text
+# systemctl restart eportal
+```
+
+For existing installations you have to refetch meta info for existing patchsets:
+
+```text
+# kcare/kc.eportal cache-mode --fetch-meta
 ```
 
 ### Disable cache mode
 
-1. remove or comment line with
+1. remove or comment the line below in the [ePortal config file](#config-files):
 
-   ```
-   CACHE_MODE = True
-   ```
+```text
+CACHE_MODE = True
+```
 
-   in [ePortal config file](#config-files)
+2. download missing patchests:
 
-2. download missing patchests
+```text
+# kcare/kc.eportal kcare download-missing
+```
 
-   ```
-   kcare/kc.eportal kcare download-missing
-   ```
+3. restart ePortal:
 
-3. restart ePortal
-
-   ```
-   systemctl restart eportal
-   ```
-
+```text
+# systemctl restart eportal
+```
 
 ## Proxy configuration
 
-ePortal can fetch packages and patches via customer's proxy server.
+ePortal can fetch packages and patches via a customer's proxy server.
 
 ![Proxy](/images/eportal-with-proxy.svg)
 
-On the ePortal machine, you should define the same proxy settings as you use
-in the command line.
+On the ePortal machine, you should define the same proxy settings as you use on the command line.
 
-To do so, add `PROXY = 'http://example.com:3128'`
-into [ePortal config file](#config-files):
+To do so, add `PROXY = 'http://example.com:3128'` into the [ePortal config file](#config-files):
 
-```
-echo -e "\nPROXY = 'http://example.com:3128'" >> /etc/eportal/config
+```text
+# echo "PROXY = 'http://example.com:3128'" >> /etc/eportal/config
 ```
 
-ePortal supports SOCKS5 proxy via `socks5://` proxy scheme:
+ePortal also supports a SOCKS5 proxy via `socks5://` proxy scheme:
 
+```text
+# echo "PROXY = 'socks5://example.com:1080'" >> /etc/eportal/config
 ```
-PROXY = 'socks5://example.com:1080'
-```
 
-Restart ePortal (see [Stopping & Starting](#stopping-starting)
-section, choose a corresponding OS).
-
+Restart ePortal (see the [Stopping & Starting](#stopping-starting) section, choose a corresponding OS).
 
 ## Auth configuration
 
-| | |
-|-|-|
+| Setting | Description |
+|---|---|
 | `AUTH_RESTRICTED_INDEX`    | Allow access to the index page only for registered users |
 | `AUTH_PASSWORD_MIN_LENGTH` | Minimal password length, default 5 |
 | `AUTH_SESSION_LIFETIME`    | Session lifetime in seconds, by default session will last till browser closing |
@@ -249,12 +232,11 @@ section, choose a corresponding OS).
 
 You can set configuration in [ePortal config file](#config-files).
 
-
 ## Managing Users
 
 You can manage portal using `kc.eportal user` utility:
 
-```
+```text
 usage: kc.eportal user [-h] [-a] [-c] [-d] [-p PASSWORD] [-r {admin,readonly}] [--note NOTE] [user]
 
 list available users by default
@@ -274,43 +256,38 @@ optional arguments:
 
 To add a user:
 
-```
-kc.eportal user -a -p AdminPassword admin
+```text
+# kc.eportal user -a -p AdminPassword admin
 ```
 
 To change user's password:
 
-```
-kc.eportal user -c -p NewPassword admin
+```text
+# kc.eportal user -c -p NewPassword admin
 ```
 
 Set user as read-only:
 
+```text
+# kc.eportal user -c -r readonly admin
 ```
-kc.eportal user -c -r readonly admin
-```
-
 
 ## Authentication using LDAP
 
-ePortal supports LDAP authentication via bind operation. Every user should
-have a DN with an ability to perform bind request. ePortal doesn't sync
-users so you don't need to set special DN/password to access LDAP server.
-
+ePortal supports LDAP authentication via bind operation. Every user should have a DN with an ability to perform bind request. ePortal doesn't sync users so you don't need to set special DN/password to access LDAP server.
 
 ### Configuration
 
-LDAP configuration settings are available inside `Settings / LDAP` navigation item.
+LDAP configuration settings are available inside the `Settings / LDAP` navigation item.
 
 #### URL
 
-Specifies host, port, and protocol of LDAP server to connect to.
+Specifies host, port, and protocol of the LDAP server to connect to.
 
-Format: `<scheme>://<host>[:port][?params]`.
+Format: `<scheme>://<host>[:port][?params]`
 
 * **scheme**:
-  * `ldap`: a verified encrypted TLS connection, you can specify `tls=0` to use
-    insecure connection;
+  * `ldap`: a verified encrypted TLS connection, you can specify `tls=0` to use an insecure connection;
   * `ldaps`: an SSL connection;
 * **host**: hostname or ip of your LDAP server;
 * **port**: custom port, by default 389 for `ldap` and 636 for `ldaps` scheme;
@@ -321,30 +298,22 @@ Format: `<scheme>://<host>[:port][?params]`.
 
 For example:
 
-* `ldap://ldap.forumsys.com?tls=0&timeout=30`: use insecure connection with 30s
-  connection timeout.
+* `ldap://ldap.forumsys.com?tls=0&timeout=30`: use insecure connection with 30s connection timeout.
 
 #### Connection String (DN template)
 
-Connection string is a DN template used in LDAP bind operation. All `%s`
-template placeholders will be replaced with username from login form.
-
-For example: `uid=%s,dc=example,dc=com`.
+Connection string is a DN template used in LDAP bind operation. All `%s` template placeholders will be replaced with the username from the login form. For example: `uid=%s,dc=example,dc=com`
 
 Some LDAP implementations support additional templates for bind requests:
 
-* Active Directory accepts `%s@example.com` template;
+* Active Directory accepts the `%s@example.com` template;
 * `cn=%s,dc=example,dc=com` or `email=%s,dc=example,dc=com` can be also valid.
 
 #### Filter
 
-Filter is an optional setting which specifies parameters for an additional LDAP
-search request to limit users who have access to ePortal. Usually it is a check
-of a group user belongs to. If search returns non-empty result user will be
-considered authenticated.
+Filter is an optional setting which specifies parameters for an additional LDAP search request to limit users who have access to ePortal. Usually it is a check of a group a user belongs to. If the search returns a non-empty result the user will be considered authenticated.
 
-Format: `<base>??<scope>?<filter>`, is a part of
-[The LDAP URL Format RFC](https://tools.ietf.org/html/rfc2255).
+Format: `<base>??<scope>?<filter>`, is a part of [The LDAP URL Format RFC](https://tools.ietf.org/html/rfc2255)
 
 * **base**: a search base, a root node to perform search from;
 * **scope**: a search scope;
@@ -355,50 +324,40 @@ Format: `<base>??<scope>?<filter>`, is a part of
 
 For example: `dc=example,dc=com??one?(&(ou=mathematicians)(uniqueMember=uid=%s,dc=example,dc=com))`
 
-Take note. You can use `%s` placeholder in `Filter` setting as well. It will be
-replaced with username from login form.
+:::tip Note
+You can use a `%s` placeholder in the `Filter` setting as well. It will be replaced with the username from the login form.
+:::
 
 ### Login process
 
-When a user logs in to ePortal, ePortal checks the user credentials in the local
-database at first. If the credentials are found, the user will be authenticated,
-and only if the user credentials are not found, ePortal redirects to LDAP.
+When a user logs in to ePortal, ePortal checks the user credentials in the local database at first. If the credentials are found, the user will be authenticated, and only if the user credentials are not found, ePortal redirects to LDAP.
 
-When you log in to ePortal with your LDAP credentials for the first time,
-a user with LDAP username, read-only permissions, and `LDAP` description
-is created in the database by default (`https://<eportal>/admin/user/`).
+When you log in to ePortal with your LDAP credentials for the first time, a user with LDAP username, read-only permissions, and `LDAP` description is created in the database by default (`https://<eportal>/admin/user/`).
 
-In the picture, you can see one user created with `kc.eportal` command line
-interface and two users logged in with LDAP credentials.
+In the picture, you can see one user created with `kc.eportal` command line interface and two users logged in with LDAP credentials:
 
-![](/images/eportalLDAPusers.png)
+![ldap users](/images/eportalLDAPusers.png)
 
 :::tip Note
-Take note. All fresh LDAP users have read-only permissions. You can set
-admin rights on `User edit` page by turning off `Readonly` field.
+All fresh LDAP users have read-only permissions. You can set admin rights on `User edit` page by turning off `Readonly` field.
 :::
-
 
 ### Basic setup example
 
-This and following example are based on public test LDAP server
-[ldap.forumsys.com](https://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/).
+The following examples are based on the public test LDAP server [ldap.forumsys.com](https://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/)
 
 Here is a list of our users:
 
-```
+```text
 ~$ ldapsearch -H ldap://ldap.forumsys.com -LLL -x -b 'dc=example,dc=com' '(objectClass=person)' dn
 dn: uid=tesla,dc=example,dc=com
 dn: uid=gauss,dc=example,dc=com
 ...
 ```
 
-Basic setup only checks if provided username/password can bind to your directory
-service. Take note: all fresh users have read-only permission. So you can
-safely allow to login into eportal for all LDAP users and set correct
-permissions individually.
+Basic setup only checks if the provided username/password can bind to your directory service. Note: all fresh users have read-only permission so you can safely allow them to login into eportal and set correct permissions individually.
 
-For basic setup you should fill `Url` and  `Connection string` settings:
+For a basic setup you should fill `Url` and  `Connection string` settings:
 
 |Setting|Value|
 |-|-|
@@ -409,12 +368,11 @@ After that you can login using `gauss:password` or `tesla:password` credentials.
 
 ### Filter setup example
 
-Filter allows to limit a set of users permitted to login into ePortal, for
-example users belonging to `mathematicians` group.
+Filter allows you to limit a set of users permitted to login into ePortal, for example users belonging to the `mathematicians` group.
 
 Here are our example groups:
 
-```
+```text
 ~$ ldapsearch -H ldap://ldap.forumsys.com -LLL -x -b 'dc=example,dc=com' '(objectClass=groupOfUniqueNames)' dn
 dn: ou=mathematicians,dc=example,dc=com
 dn: ou=scientists,dc=example,dc=com
@@ -423,7 +381,7 @@ dn: ou=scientists,dc=example,dc=com
 
 And `mathematicians` group attributes:
 
-```
+```text
 ~$ ldapsearch -H ldap://ldap.forumsys.com -LLL -x -b 'dc=example,dc=com' '(ou=mathematicians)'
 dn: ou=mathematicians,dc=example,dc=com
 uniqueMember: uid=euclid,dc=example,dc=com
@@ -445,120 +403,83 @@ ePortal LDAP settings to limit allowed users:
 |Filter|dc=example,dc=com??one?(&(ou=mathematicians)(uniqueMember=uid=%s,dc=example,dc=com))|
 |Connection string|uid=%s,dc=example,dc=com|
 
-Filter idea is to find the `mathematicians` group which has an attribute
-`uniqueMember` equal to DN of our user who tries to login.
-
-After that you can login using `gauss:password` but not `tesla:password` credentials.
-
+The filter idea is to find the `mathematicians` group which has an attribute `uniqueMember` equal to DN of our user who tries to login. After that you can login using `gauss:password` but not `tesla:password` credentials.
 
 ## Accessing ePortal
 
-To access KernelCare.eportal management console, connect to:
-**http://YOUR_IP/admin**
+To access KernelCare.eportal management console, connect to **http://YOUR_IP/admin** and enter your login & password.
 
-And enter your login & password
+![login screen](/images/access_eportal.png)
 
-![](/images/access_eportal.png)
-
-You can manage your login information using [kc.eportal tool](#managing-users).
-
+You can manage your login information using the [kc.eportal tool](#managing-users)
 
 ## PatchSet deployment
 
-ePortal has built-in mechanism to download latest patches. To start
-using it, click _Settings_ link in ePortal navigational bar and
-then click _Patch Source_. To get access, please contact
-[sales@tuxcare.com](mailto:sales@tuxcare.com) and request your ePortal
-access credentials.
+ePortal has a built-in mechanism to download the latest patches. To start using it, click the _Settings_ link in the ePortal navigational bar and then click _Patch Source_. To get access, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and request your ePortal access credentials.
 
-![](/images/eportal-edit-patch-source.png)
+![patch source](/images/eportal-edit-patch-source.png)
 
-You can choose only a limited set of distros to fetch to reduce disk
-space and network bandwidth requirements.
+You can choose only a limited set of distros to fetch to reduce disk space and network bandwidth requirements. Once you set up patch source access info, you will get to a list of available patchsets.
 
-Once you set up patch source access info, you will get to a list of available patchsets.
+![dashboard](/images/eportal-dashboard.png)
 
-![](/images/eportal-dashboard.png)
+* **Usage**: amount of servers using particular patchset on any feed. You can click on the number to see a list of servers using the patchset.
 
-* **Usage**: amount of servers using particular patchset on any
-  feed. You can click on the number to see a list of servers using the patchset.
+* **Patchsets**: name of the patchset. Click on a name will show patchset changelog.
 
-* **Patchsets**: name of the patchset. Click on a name will show patchset
-  changelog.
-
-* **Feed name**: cells show patchset deployment and server usage status on particular feed.
-  Numbers are also clickable to filter server list.
+* **Feed name**: cells show patchset deployment and server usage status on particular feed. Numbers are also clickable to filter server list.
 
 * **Manage**: opens dialog to enable/disable the patchset.
 
-### Live Patching for AlmaLinux (KernelCare and LibCare) management
-
-After enabling **Live Patching** for one of the keys AlmaLinux patchsets would be available on a separate dashboard tab page:
-
-![](/images/eportal-dashboard-alma1.png)
-
-
 ### Manage patchset page
 
-![](/images/eportal-manage.png)
+![manage patchsets](/images/eportal-manage.png)
 
-In this dialog you can control which patchsets will be enabled/disabled on
-corresponding feeds.
+In this dialog you can control which patchsets will be enabled/disabled on corresponding feeds.
 
-* **Enable all up to this patchset**: action will enable all patchsets
-(excluding **disabled**) up to this patchset.
+* **Enable all up to this patchset**: action will enable all patchsets (excluding **disabled**) up to this patchset.
 
 * **Enable**: action will enable only current patchset.
 
-* **Disable**: action will disable only current patchset. Disabled patchsets
-are immune to auto-update and mass-enabling via **Enable all up to this patchset**
-action.
+* **Disable**: action will disable only current patchset. Disabled patchsets are immune to auto-update and mass-enabling via **Enable all up to this patchset** action.
 
-To unroll patchset from CLI, run:
+To unroll a patchset from the CLI, run:
 
-```
-kc.eportal --unroll 16012017_1
+```text
+# kc.eportal --unroll 16012017_1
 ```
 
 ### Automatic updates
 
-You can configure automatic updates by enabling Autoupdate on the desired feeds via Settings → Feeds.
+You can configure automatic updates by enabling Autoupdate on the desired feeds via Settings -> Feeds.
 
 :::danger Note
-The **default feed** cannot be configured via the Settings page to receive automatic updates.
-See the next section on configuring automatic updates for the **default feed**.
+The **default feed** cannot be configured via the Settings page to receive automatic updates. See the next section on configuring automatic updates for the **default feed**.
 :::
 
 ### Automatic updates on default feed
 
-It is possible to configure automatic updates on the **default feed** by
-creating a cron job. The following commands can be used to receive these
-updates.
+It is possible to configure automatic updates on the **default feed** by creating a cron job. The following commands can be used to receive these updates.
 
-The command below determines if latest patches are available and installs them to the **default feed**.
+The command below determines if the latest patches are available and installs them to the **default feed**:
 
-```
-kc.eportal --get-latest
+```text
+# kc.eportal --get-latest
 ```
 
 ### Script to deploy release from a file
 
-If you have no opportunity to connect your ePortal server to the KernelCare
-patch server to download patchsets directly from it, you can do it manually.
+If you have no opportunity to connect your ePortal server to the KernelCare patch server to download patchsets directly from it, you can do it manually.
 
-If you have a location with already downloaded patchsets, and would like to
-identify the latest patchset file to be moved, you can compare the lists of
-archives you have with the content of the `/usr/share/kcare-eportal/arch/`
-folder.
+If you have a location with already downloaded patchsets, and would like to identify the latest patchset file to be moved, you can compare the lists of archives you have with the content of the `/usr/share/kcare-eportal/arch/` folder.
 
-After that, upload the selected patchsets to your ePortal server and run the
-`kc.eportal --deploy` command for each of them.
+After that, upload the selected patchsets to your ePortal server and run the `kc.eportal --deploy` command for each of them.
 
 #### Example
 
 Lets find out the difference between a test and a production ePortal instances:
 
-```bash
+```text
 $ comm -23 \
     <(ssh eportal-test "ls /usr/share/kcare-eportal/arch/K*.tar.bz2" | sort -h) \
     <(ssh eportal-prod "ls /usr/share/kcare-eportal/arch/K*.tar.bz2" | sort -h) | tee patchsets.diff
@@ -566,42 +487,37 @@ $ comm -23 \
 
 Upload patchsets to the production:
 
-```bash
+```text
 $ cat patchsets.diff | xargs -Phav {} rsync -iv eportal-test:{} /tmp/
 $ rsync -Phav /tmp/K*.tar.bz2 eportal-prod:/tmp/
 ```
 
 Run the deployment tool with patchset file name as a parameter:
 
-```bash
+```text
 $ ssh eportal-prod 'ls /tmp/K*.tar.bz2 | sort -h | xargs -n1 kc.eportal kcare deploy'
 2021-12-02 01:25:06,555 - eportal.patches - INFO - K04082020_1 was enabled in main
 ...
 ```
 
 :::danger Note
-Please note that procedure above should be done for all other types of
-patchsets (like libcare and qemu) *separately*. Use corresponding file prefixes
-and commands like `kc.eportal libcare deploy`.
+Please note that procedure above should be done for all other types of patchsets (like libcare and qemu) *separately*. Use corresponding file prefixes and commands like `kc.eportal libcare deploy`.
 :::
 
 ### Clean obsolete releases
 
-The list of provided patches is reduced once in a month (old patches that have
-newer versions are removed), but resources are not deleted from ePortal machine.
-The control of resource deletion is in charge of the ePortal administrator. To
-free disk space on ePortal old release resources could be removed.
+The list of provided patches is reduced once in a month (old patches that have newer versions are removed), but resources are not deleted from ePortal machine. The control of resource deletion is in charge of the ePortal administrator. To free disk space on ePortal old release resources could be removed.
 
 To check what releases will be removed:
 
-```
-DRY_RUN=1 kc.eportal --clean-releases
+```text
+# DRY_RUN=1 kc.eportal --clean-releases
 ```
 
 To remove obsolete releases:
 
-```
-kc.eportal --clean-releases
+```text
+# kc.eportal --clean-releases
 ```
 
 ## LibCare PatchSet Deployment
@@ -611,32 +527,31 @@ is accessible from the `Patches / LibCare` navigation item. LibCare patches
 use the same Patch Source credentials, and you don't need to perform additional
 configuration.
 
-![](/images/eportal-libcare-feed.png)
-
+![libcare feed](/images/eportal-libcare-feed.png)
 
 ### CLI to install the latest patchsets
 
 To update the default feed, run the following command:
 
-```
-kc.eportal libcare update
+```text
+# kc.eportal libcare update
 ```
 
 To update the `test` feed, run the following command:
 
-```
-kc.eportal libcare update --feed test
+```text
+# kc.eportal libcare update --feed test
 ```
 
 To update all auto-feeds, run the following command:
 
-```
-kc.eportal libcare auto-update
+```text
+# kc.eportal libcare auto-update
 ```
 
 ### CLI to deploy patchset from archive
 
-```
+```text
 ~$ kc.eportal libcare deploy --help
 usage: kc.eportal libcare deploy [-h] [--feed FEED] [--disabled] archive
 
@@ -651,45 +566,41 @@ optional arguments:
 
 For example:
 
-```
-kc.eportal libcare deploy --feed test /tmp/U20210129_02.tar.bz2
+```text
+# kc.eportal libcare deploy --feed test /tmp/U20210129_02.tar.bz2
 ```
 
 This command will deploy and enable the `U20210129_02` patchset in to the `test` feed.
 
 ## QEMU PatchSet Deployment
 
-Starting from version 1.25, ePortal supports the QEMU patchset management. It
-is accessible from the `Patches / QEMUcare` navigation item. QEMU patches
-use the same Patch Source credentials, and you don't need to perform additional
-configuration.
+Starting from version 1.25, ePortal supports the QEMU patchset management. It is accessible from the `Patches / QEMUcare` navigation item. QEMU patches use the same Patch Source credentials, and you don't need to perform additional configuration.
 
-![](/images/eportal-qemu-feed.png)
+![qemu feed](/images/eportal-qemu-feed.png)
 
-
-### CLI to install the latest patchsets
+### Command to install the latest patchsets
 
 To update the default feed, run the following command:
 
-```
-kc.eportal qemu update
+```text
+# kc.eportal qemu update
 ```
 
 To update the `test` feed, run the following command:
 
-```
-kc.eportal qemu update --feed test
+```text
+# kc.eportal qemu update --feed test
 ```
 
 To update all auto-feeds, run the following command:
 
-```
-kc.eportal qemu auto-update
+```text
+# kc.eportal qemu auto-update
 ```
 
-### CLI to deploy patchset from archive
+### Command to deploy patchset from archive
 
-```
+```text
 ~$ kc.eportal qemu deploy --help
 usage: kc.eportal qemu deploy [-h] [--feed FEED] [--disabled] archive
 
@@ -704,59 +615,46 @@ optional arguments:
 
 For example:
 
-```
-kc.eportal qemu deploy --feed test /tmp/U20210818_01-qemu.tar.bz2
+```text
+# kc.eportal qemu deploy --feed test /tmp/U20210818_01-qemu.tar.bz2
 ```
 
 This command will deploy and enable the `U20210818_01-qemu` patchset in to the `test` feed.
 
 ## Managing Keys
 
-To register new servers you need to create a KernelCare key that will be used
-for server registration. To go to the list of keys, click the _Keys_ navigation
-item.
+To register new servers you need to create a KernelCare key that will be used for server registration. To go to the list of keys, click the _Keys_ navigation item.
 
-![](/images/key-menu_zoom70.png)
+![keys](/images/key-menu_zoom70.png)
 
-* To edit a key, click ![](/images/eportal_keys_edit.png). The _Edit_ tab opens.
-* To remove a key, click ![](/images/eportal_keys_remove.png). Please note, that
-  removing the key would remove all servers under that key.
-* Click a key to go to Servers tab with the list of
-  [servers registered](#managing-servers) under that key.
-  You can also remove servers on that tab.
+* To edit a key, click ![edit keys](/images/eportal_keys_edit.png). The _Edit_ tab opens.
+* To remove a key, click ![remove keys](/images/eportal_keys_remove.png). Please note, that removing the key would remove all servers under that key.
+* Click a key to go to Servers tab with the list of [servers registered](#managing-servers) under that key. You can also remove servers on that tab.
 
 To create a new registration click _Create_ tab.
 
-   ![](/images/key-creation_zoom70.png)
+![create key](/images/key-creation_zoom70.png)
 
 Fill in the following fields:
 
-* **Key** —  you can provide a key value or leave the field empty, so an
-  automatically generated key will be used
-* **Description** — you can provide a description for the key
-* **Server Limit** — the amount of servers that can be registered under that key
-* **Feed** — select a specific feed or leave empty. Take note: keys with
-  KCE/Live Patching for AlmaLinux products can't share the same feed.
+* **Key** - you can provide a key value or leave the field empty, so an automatically generated key will be used
+* **Description** - you can provide a description for the key
+* **Server Limit** - the amount of servers that can be registered under that key
+* **Feed** - select a specific feed or leave empty.
 * **Products** - limit allowed products can be used with the key.
 
 Available products:
 
-* **KernelCare**/**LibCare**/**QemuCare**/**DBCare**: allow only patches of selected
-    type.
-* **Enterprise Support for AlmaLinux**:
-  * **Essential Support**: allows access to the TuxCare-vetted package repository of AlmaLinux updates with guaranteed uptime, expedited break-and-fix support and up to 16 years of support coverage
-  * **Live Patching for AlmaLinux (KernelCare and LibCare)**: allows to use AlmaLinux live patches.
+* **KernelCare**/**LibCare**/**QemuCare**/**DBCare**: allow only patches of selected type.
+* **Enterprise Support for AlmaLinux - ESU**: allow access to the Extended Security Updates and FIPS repositories.
 
-Products can be mixed to limit access to a particular set of patch types.
-For example:
+Products can be mixed to limit access to a particular set of patch types. For example:
 
 * **KernelCare** + **LibCare**: allow access only to kernel and lib patches.
 
-For Enterprise Support for AlmaLinux deployment instructions please look into a [dedicated section](https://docs.tuxcare.com/eportal/#deploying-essential-support-esu-live-patching-almalinux).
+For Enterprise Support for AlmaLinux deployment instructions please see the [dedicated section](#deploying-enterprise-support-for-almalinux)
 
-Click _Save_ to add the key. The new registration key will be created and added
-to the list. The key itself will be used as a part of the registration command
-on an individual server.
+Click _Save_ to add the key. The new registration key will be created and added to the list. The key itself will be used as a part of the registration command on an individual server.
 
 Click _Save and Add Another_ to save this key and add one more key.
 
@@ -766,7 +664,7 @@ Click _Cancel_ to return to the key list tab without adding a new key.
 
 ### CLI to manage keys
 
-```
+```text
 ~$ kc.eportal key --help
 usage: kc.eportal key [-h] [-a] [-c] [--note NOTE] [--server-limit SERVER_LIMIT] [--feed FEED]
                       [--product {tuxcare-repo,db,kernel,libcare,qemu}] [--default-products]
@@ -792,41 +690,37 @@ optional arguments:
 
 List keys:
 
-```
-kc.eportal key
+```text
+# kc.eportal key
 ```
 
 Autogenerate key:
 
-```
-kc.eportal key -a
+```text
+# kc.eportal key -a
 ```
 
 Create key with specified value:
 
-```
-kc.eportal key -a test
+```text
+# kc.eportal key -a test
 ```
 
 Set feed to key:
 
+```text
+# kc.eportal key -c test --feed test
 ```
-kc.eportal key -c test --feed test
-```
-
 
 ## Managing Servers
 
-You can see servers belonging to the key by clicking on the key itself in
-[Managing Keys](#managing-keys) interface.
+You can see servers belonging to the key by clicking on the key itself in the [Managing Keys](#managing-keys) interface.
 
-![](/images/server_list_1_zoom70.png)
+![server list](/images/server_list_1_zoom70.png)
 
-The screen shows servers registered under the key, their IP, hostname,
-effective kernel as well as the time of registration and last check in.
+The screen shows servers registered under the key, their IP, hostname, effective kernel as well as the time of registration and last check in.
 
-To view the list of all servers IDs that are connected to the particular key,
-do the following:
+To view the list of all servers IDs that are connected to the particular key, do the following:
 
 * In the UI go to the page with the list of keys. Then click the particular
   key. The list of servers connected to this key will be displayed.
@@ -834,11 +728,11 @@ do the following:
 To view the list of all servers IDs that are not connected to any key, use the
 <span class="notranslate">_Servers_</span> button on the navigation bar.
 
-![](/images/eportal-servers.png)
+![eportal servers](/images/eportal-servers.png)
 
 Also you can use CLI to see pairs of key/number of servers run:
 
-```
+```text
 $ kc.eportal --list-servers
 Count | Key
 ----- + --------------------------------
@@ -850,94 +744,73 @@ Count | Key
 
 Servers inactive for more than 30 days can be removed using the followed command:
 
-```
-$ kc.eportal server clean --inactive
+```text
+# kc.eportal server clean --inactive
 2 servers were deleted
 ```
 
-Clean-up of inactive servers can be performed automatically every day or rarer.
-To enable daily auto clean-up, you can add an option `CLEAN_INACTIVE_SERVERS_PERIOD = 3600 * 24` (value in seconds)
-in the [ePortal config file](#config-files).
+Clean-up of inactive servers can be performed automatically every day or rarer. To enable daily auto clean-up, you can add an option `CLEAN_INACTIVE_SERVERS_PERIOD = 3600 * 24` (value in seconds)
+in the [ePortal config file](#config-files)
 
 ### Show extended check-in statistics in admin UI
 
 A new table is added to the starting page. This table displays the following:
+
 * Total number of servers.
 * Number of servers that checked in for the past 48 hours.
 
 The number of servers for each key is listed on the _Keys_ page.
 
-
 ## Feed Management
 
-Feeds are intended to manage patchsets on the server, and they provide
-a possibility to bind a set of patches to a specific key. Possible use cases:
-for preliminary testing of patches, for applying updates to groups of
-servers with the similar hardware, etc.
+Feeds are intended to manage patchsets on the server, and they provide a possibility to bind a set of patches to a specific key. Possible use cases:
+for preliminary testing of patches, for applying updates to groups of servers with the similar hardware, etc.
 
-To get into Feeds Management interface go to Settings → Feeds:
+To get into Feeds Management interface go to Settings -> Feeds:
 
-![](/images/feed-button_zoom70.png)
+![feeds](/images/feed-button_zoom70.png)
 
 On this page a user can manage the existing feeds: create, delete, edit.
 
-![](/images/feed-menu_zoom70.png)
+![feed menu](/images/feed-menu_zoom70.png)
 
 Available options:
-* Name — a name of a feed.
-* Auto update — enable and disable automatic downloading of patches to this feed.
-* Deploy after X hours — a delay in hours between the moment the patchset is
+
+* Name - a name of a feed.
+* Auto update - enable and disable automatic downloading of patches to this feed.
+* Deploy after X hours - a delay in hours between the moment the patchset is
   available for deployment and the moment it is installed to the feed.
 * Channel - a patch channel to use.
 
   * **Stable**: (default) stable patchsets marked with `eportal` label on [the patch server](https://patches.kernelcare.com/).
   * **Testing**: all patchsets available on [the patch server](https://patches.kernelcare.com/).
 
-Every 10 minutes ePortal checks for new patches on the main patch server. If
-a new patch is available, it is uploaded to the ePortal server. Note: it is
-uploaded but is not deployed. The patch availability time is considered
-starting from the moment a new patch appears on the ePortal, and that time is
-taken into account in `Deploy after X hours` option. So, if a user sets `Deploy
-after X hours = 10`, the patch will be deployed to the feed 10 hours after it
-has been downloaded to the ePortal server.
+Every 10 minutes ePortal checks for new patches on the main patch server. If a new patch is available, it is uploaded to the ePortal server. Note: it is uploaded but is not deployed. The patch availability time is considered starting from the moment a new patch appears on the ePortal, and that time is taken into account in `Deploy after X hours` option. So, if a user sets `Deploy after X hours = 10`, the patch will be deployed to the feed 10 hours after it has been downloaded to the ePortal server.
 
-To make the feed auto-update immediately, so new patches are loaded to
-the feed immediately after they are available on ePortal, set `Deploy after
-X hours = 0`.
+To make the feed auto-update immediately, so new patches are loaded to the feed immediately after they are available on ePortal, set `Deploy after X hours = 0`.
 
-A special case is a clean installation when ePortal is installed on a new
-server (there aren't any downloaded archives with patches and feeds with
-deployed patchsets, including default feed). In this case, if a user
-creates a new feed and sets Deployed after X hours option right away,
-then all patches (from the oldest to the latest available) will be
-deployed to the feed after the specified X hours. This is because the
-archives are downloaded from scratch and will be considered as “just
-appeared on ePortal” — that is, all patches will have the same
-appearance time on ePortal from which the option Deploy after X hours
+A special case is a clean installation when ePortal is installed on a new server (there aren't any downloaded archives with patches and feeds with deployed patchsets, including default feed). In this case, if a user creates a new feed and sets Deployed after X hours option right away, then all patches (from the oldest to the latest available) will be deployed to the feed after the specified X hours. This is because the archives are downloaded from scratch and will be considered as "just appeared on ePortal" - that is, all patches will have the same appearance time on ePortal from which the option Deploy after X hours
 will repel.
 
-![](/images/feedmanagement3_zoom70.png)
+![feed management](/images/feedmanagement3_zoom70.png)
 
-On the main ePortal page, a user can set the corresponding key <> feed pair.
-This is done in the key creation interface or when editing a key.
+On the main ePortal page, a user can set the corresponding key <> feed pair. This is done in the key creation interface or when editing a key.
 
-![](/images/feedmanagement4_zoom70.png)
+![edit key](/images/feedmanagement4_zoom70.png)
 
-By default, a new key is bound to the default feed, alternatively, a user can
-choose a desired feed from the drop-down menu.
+By default, a new key is bound to the default feed, alternatively, a user can choose a desired feed from the drop-down menu.
 
-![](/images/feedmanagement5_01_zoom70.png)
+![feed list](/images/feedmanagement5_01_zoom70.png)
 
 :::tip Note
-When removing a feed all keys attached to this feed will be moved to the
-default feed.
+When removing a feed all keys attached to this feed will be moved to the default feed.
 :::
 
-![](/images/feedmanagement6_zoom70.png)
+![delete feed](/images/feedmanagement6_zoom70.png)
 
 ### CLI to manage feeds
 
-```
+```text
 ~$ kc.eportal feed --help
 usage: kc.eportal feed [-h] [-a] [-c] [--auto] [--no-auto] [--deploy-after hours]
                        [--channel {default,test}] [feed]
@@ -960,55 +833,51 @@ optional arguments:
 
 List feeds:
 
-```
-kc.eportal feed
+```text
+$ kc.eportal feed
 ```
 
 Add auto updated feed:
 
-```
-kc.eportal feed -a test --auto
+```text
+# kc.eportal feed -a test --auto
 ```
 
 Change feed into delayed feed:
 
+```text
+# kc.eportal feed -c test --deploy-after 12
 ```
-kc.eportal feed -c test --deploy-after 12
-```
-
 
 ## Adding extra Tag field
- 
+
 To add an extra Tag field for the server, run:
 
-```
-kcarectl --tag command
+```text
+# kcarectl --tag command
 ```
 
-where `command` is a parameter defined by a user. This parameter will be
-displayed in UI for the server. User could add multiple tags for each server.
-Each tag should be separated with `;` symbol.
+where `command` is a parameter defined by a user. This parameter will be displayed in UI for the server. User could add multiple tags for each server. Each tag should be separated with `;` symbol.
 
 Example:
 
-```
-kcarectl --tag "env:prod;ubuntu"
+```text
+# kcarectl --tag "env:prod;ubuntu"
 ```
 
 This server has two tags : `env:prod` and `ubuntu`.
 
 `env:prod` is a parameter that has tag name `env` and the value `prod`.
 
-![](/images/addingextratagfield_zoom88.png)
+![tags](/images/addingextratagfield_zoom88.png)
 
 To remove all tags from a particular server, run:
 
-```
-kcarectl --tag ""
+```text
+# kcarectl --tag ""
 ```
 
 Where `""` is a parameter to delete the previously defined tag.
-
 
 ## How to setup ePortal to use HTTPS
 
@@ -1021,21 +890,21 @@ Some assumptions for a server where e-portal is deployed:
 
 * Edit SSL configuration template according to your certificates:
 
-```
-mv /etc/nginx/eportal.ssl.conf.example /etc/nginx/eportal.ssl.conf
-vi /etc/nginx/eportal.ssl.conf
+```text
+# mv /etc/nginx/eportal.ssl.conf.example /etc/nginx/eportal.ssl.conf
+# vi /etc/nginx/eportal.ssl.conf
 ```
 
 * Include this configuration into the main one:
 
-```
-sed -e '3iinclude eportal.ssl.conf;' -i /etc/nginx/conf.d/eportal.conf
+```text
+# sed -e '3iinclude eportal.ssl.conf;' -i /etc/nginx/conf.d/eportal.conf
 ```
 
 * Restart nginx:
 
-```
-service nginx restart
+```text
+# service nginx restart
 ```
 
 ### Terminate TLS on external balancer
@@ -1046,7 +915,7 @@ forward requests to ePortal instance. The only requirement is to provide correct
 
 For example balancer nginx config:
 
-```
+```text
 server {
    listen       443 ssl;
    server_name  your-eportal-domain;
@@ -1065,31 +934,26 @@ server {
 
 ### Update agent configuration
 
-In order to communicate with e-portal, updated to https, you need to modify
-KernelCare configuration file on all the servers if they have IPs hard coded servers
-settings.
+In order to communicate with e-portal, updated to https, you need to modify KernelCare configuration file on all the servers if they have IPs hard coded servers settings.
 
 To do that, update `PATCH_SERVER` and `REGISTRATION_URL` options:
 
-```
-vi /etc/sysconfig/kcare/kcare.conf
+```text
+# vi /etc/sysconfig/kcare/kcare.conf
 ```
 
-So, after editing your `/etc/sysconfig/kcare/kcare.conf` should contain updated
-`PATCH_SERVER` and `REGISTRATION_URL` environment variables like in the example
-below:
+So, after editing your `/etc/sysconfig/kcare/kcare.conf` should contain updated `PATCH_SERVER` and `REGISTRATION_URL` environment variables like in the example below:
 
-```
+```text
 PATCH_SERVER=https://eportal_domain_name/
 REGISTRATION_URL=https://eportal_domain_name/admin/api/kcare
 ```
 
 As an alternative you can use ePortal's special endpoint to update patch server address:
 
+```text
+# curl -s https://eportal_domain_name/set-patch-server | bash
 ```
-curl -s https://eportal_domain_name/set-patch-server | bash
-```
-
 
 ## High availability
 
@@ -1102,20 +966,13 @@ Configuration settings related to replication and can be changed in [ePortal con
 * `NODE_URL`: URL to the self instance, needed for auto-discovery purposes
 * `LEADER_URL`: URL to the instance from where to fetch changes
 * `REPLICATION_SHARED_KEY`: authorization key to access the replication data
-* `REPLICATION_CHECK_CERT`: use strict TLS cert check for replication
-  requests. It can be useful to deploy self signed certificates on replicas and
-  get encrypted replication traffic without getting proper TLS certificate.
-* `REPLICATION_CLEAN_AGE`: data age in seconds to leave during oplog cleanup.
-  7 days by default.
-* `REPLICATION_CLEAN_AGGRESSIVE_AGE`: data age in seconds to leave
-  during oplog cleanup for not-important operations. 1 hour by default.
+* `REPLICATION_CHECK_CERT`: use strict TLS cert check for replication requests. It can be useful to deploy self signed certificates on replicas and get encrypted replication traffic without getting proper TLS certificate.
+* `REPLICATION_CLEAN_AGE`: data age in seconds to leave during oplog cleanup. 7 days by default.
+* `REPLICATION_CLEAN_AGGRESSIVE_AGE`: data age in seconds to leave during oplog cleanup for not-important operations. 1 hour by default.
 
 A leader node discovers followers automatically and after that fetches the changes.
 
-You can use any convenient way to balance agent requests to the ePortal
-cluster. For example, you can add multiple IP addresses to the DNS name or use
-an HTTP balancer.
-
+You can use any convenient way to balance agent requests to the ePortal cluster. For example, you can add multiple IP addresses to the DNS name or use an HTTP balancer.
 
 ### Basic setup
 
@@ -1136,46 +993,44 @@ an HTTP balancer.
 3. On the `eportal1` define `NODE_URL` and `REPLICATION_SHARED_KEY` in the
    configuration file:
 
-   ```
-   NODE_URL = 'http://eportal1.corp'
-   REPLICATION_SHARED_KEY = 'secret'
-   ```
+```text
+NODE_URL = 'http://eportal1.corp'
+REPLICATION_SHARED_KEY = 'secret'
+```
 
 4. On the `eportal2` define `NODE_URL`, `LEADER_URL` and `REPLICATION_SHARED_KEY`:
 
-   ```
-   NODE_URL = 'http://eportal2.corp'
-   LEADER_URL = 'http://eportal1.corp'
-   REPLICATION_SHARED_KEY = 'secret'
-   ```
+```text
+NODE_URL = 'http://eportal2.corp'
+LEADER_URL = 'http://eportal1.corp'
+REPLICATION_SHARED_KEY = 'secret'
+```
 
 5. That's it. After ePortal restart on both hosts, changes on the `eportal1`
    will be replicated to the `eportal2` instance and vice versa.
 
 :::tip Note
 You can change the KernelCare agent settings to point to a cluster hostname via:
+
+```text
+# curl -s http://eportal.corp/set-patch-server | bash
 ```
-curl -s http://eportal.corp/set-patch-server | bash
-```
+
 :::
 
 ### Adding node to an existing ePortal instance
 
-If you already have a working ePortal instance, you can setup a second node,
-define `NODE_URL` and `LEADER_URL` on both instances and trigger full sync on
-the follower instance:
+If you already have a working ePortal instance, you can setup a second node, define `NODE_URL` and `LEADER_URL` on both instances and trigger full sync on the follower instance:
 
-```
+```text
 [root@eportal2.corp]$ kc.eportal replication --full-sync
 ```
 
 ### Monitoring
 
-You can use `kc.eportal replication --short-status` CLI command to check replication
-status. It exits with code `1` if there are some issues with replication and
-outputs JSON:
+You can use `kc.eportal replication --short-status` CLI command to check replication status. It exits with code `1` if there are some issues with replication and outputs JSON:
 
-```
+```text
 {
   "ok": true,       // overall health status
   "lag": 1,         // overall replication lag in seconds
@@ -1199,18 +1054,16 @@ outputs JSON:
 
 For one leader and two follower setup:
 
-```
+```text
      +-> leader <-+
      |            |
      |            |
 follower1       follower2
 ```
 
-there is a chance to lose a `leader` node and `follower1`/`follower2` will not
-communicate with each other. To mitigate this issue, you can deploy a ring
-replication:
+there is a chance to lose a `leader` node and `follower1`/`follower2` will not communicate with each other. To mitigate this issue, you can deploy a ring replication:
 
-```
+```text
   +-> node1 --+
   |           |
   |           v
@@ -1219,20 +1072,13 @@ node2 <---- node3
 
 where each instance follows another node.
 
-
 ### Caveats
 
-1. Replication uses HTTP transport. If you deploy ePortal without SSL
-   termination, the replication data will be transferred as-is unencrypted.
+1. Replication uses HTTP transport. If you deploy ePortal without SSL termination, the replication data will be transferred as-is unencrypted.
 
-2. For a round-robin balancer setups (DNS or HTTP balancer round-robin)
-   KernelCare agent can run onto replication lag in case of sequential
-   registration and following update. You can introduce 10s timeout or repeat
-   in your configuration management logic to mitigate the issue.
+2. For a round-robin balancer setups (DNS or HTTP balancer round-robin) KernelCare agent can run onto replication lag in case of sequential registration and following update. You can introduce 10s timeout or repeat in your configuration management logic to mitigate the issue.
 
-3. Replication log is kept for 7 days. If a node loses connectivity for more
-   than 7 days it skips some changes.
-
+3. Replication log is kept for 7 days. If a node loses connectivity for more than 7 days it skips some changes.
 
 ## Deploying KernelCare Enterprise
 
@@ -1240,31 +1086,27 @@ You can find instructions to install KernelCare agent on http://your-eportal-dom
 
 To install agent through ePortal you can use special endpoint `http://your-eportal-domain/install-kernelcare`:
 
-```
-$ export KCARE_MAILTO=admin@mycompany.com
-$ curl -s http://eportal.mycompany.com/install-kernelcare | bash
-$ kcarectl --register my-key
+```text
+# export KCARE_MAILTO=admin@mycompany.com
+# curl -s http://eportal.mycompany.com/install-kernelcare | bash
+# kcarectl --register my-key
 ```
 
-Exporting `KCARE_MAILTO` is an optional step, it helps to configure
-corresponding entry in `/etc/cron.d/kcare-cron` to receive all notifications
-related to failed KernelCare updates.
+Exporting `KCARE_MAILTO` is an optional step, it helps to configure corresponding entry in `/etc/cron.d/kcare-cron` to receive all notifications related to failed KernelCare updates.
 
 ### KernelCare Enterprise client config file
 
-KernelCare Enterprise client configuration file is located in
-`/etc/sysconfig/kcare/kcare.conf`
+KernelCare Enterprise client configuration file is located in `/etc/sysconfig/kcare/kcare.conf`
 
 Example:
 
-```
+```text
 AUTO_UPDATE=True
 PATCH_SERVER=http://10.1.10.115/
 REGISTRATION_URL=http://10.1.10.115/admin/api/kcare
 ```
 
-If `AUTO_UPDATE` set to `True`, KernelCare client will check in every 4 hours,
-and try to download and apply latest patches
+If `AUTO_UPDATE` set to `True`, KernelCare client will check in every 4 hours, and try to download and apply latest patches
 
 `PATCH_SERVER` - server from which patches will be downloaded
 
@@ -1272,32 +1114,25 @@ and try to download and apply latest patches
 
 ### Deployment Automation
 
-It is possible to use automation tools like Ansible/Puppet/Chef/Salt to install
-and operate KernelCare on a big number of systems.
+It is possible to use automation tools like Ansible/Puppet/Chef/Salt to install and operate KernelCare on a big number of systems.
 
 The deployment process includes:
 
-* Running `http://your-eportal-domain/install-kernelcare` script. You can
-  pre-download it (verify checksum) or directly execute
-  `curl -s http://your-eportal-domain/install-kernelcare | bash`.
+* Running `http://your-eportal-domain/install-kernelcare` script. You can pre-download it (verify checksum) or directly execute `curl -s http://your-eportal-domain/install-kernelcare | bash`.
 * Registering KernelCare agents using an activation key
 
 #### Ansible
 
 To start the automated deployment, you need to specify the following information:
 
-* ePortal server name (or IP) in the `eportal_srv` Ansible variable. Other config
-  file options can be found at [Config Options](/live-patching-services/#config-options) and
-  [KernelCare client config file](#kernelcare-enterprise-client-config-file)
-  (ePortal).
+* ePortal server name (or IP) in the `eportal_srv` Ansible variable. Other config file options can be found at [Config Options](/live-patching-services/#config-options) and
+  [KernelCare client config file](#kernelcare-enterprise-client-config-file) (ePortal).
 
-* an activation key in the `activation_key` Ansible variable. Activation keys can
-  be generated in ePortal as described in
-  [Managing Keys](#managing-keys) (ePortal).
+* an activation key in the `activation_key` Ansible variable. Activation keys can be generated in ePortal as described in [Managing Keys](#managing-keys) (ePortal).
 
 Ansible playbook for deployment phase may look like:
 
-```
+```text
 - hosts: kernelcare
   vars:
     eportal_srv: http://192.168.250.19
@@ -1318,7 +1153,7 @@ Ansible playbook for deployment phase may look like:
 
 Ansible playbook file example for KernelCare agent removal:
 
-```
+```text
 - hosts: kernelcare
   tasks:
     - name: unregister KernelCare agents
@@ -1337,35 +1172,30 @@ Ansible playbook file example for KernelCare agent removal:
 
 You can change ePortal address at any moment by calling two special endpoints on hosts with KernelCare agent:
 
-```
-curl -s http://your-eportal-domain/set-kernelcare-repo | bash
-curl -s http://your-eportal-domain/set-patch-server | bash
+```text
+# curl -s http://your-eportal-domain/set-kernelcare-repo | bash
+# curl -s http://your-eportal-domain/set-patch-server | bash
 ```
 
-* `set-kernelcare-repo` configures new package repo to download agent updates
-through ePortal.
+* `set-kernelcare-repo` configures new package repo to download agent updates through ePortal.
 * `set-patch-server` configures new address of patch server.
 
+## Deploying Enterprise Support for AlmaLinux
 
-## Deploying Essential Support/Live Patching for AlmaLinux
+You can find instructions on how to set up [Enterprise Support for AlmaLinux](https://docs.tuxcare.com/enterprise-support-for-almalinux/) on http://your-eportal-domain/admin/docs/
 
-You can find instructions on how to set up [Enterprise Support for AlmaLinux](https://docs.tuxcare.com/enterprise-support-for-almalinux/) on **http://your-eportal-domain/admin/docs/**.
+tuxctl is the setup tool for TuxCare's Extended Security Updates product for AlmaLinux. To set up `tuxctl` through ePortal you can use a special endpoint **http://your-eportal-domain/install-tuxcare**:
 
-Tuxctl is a setup tool for TuxCare’s Enterprise Support for AlmaLinux, which provides access to Essential Support, Extended Security Updates, and Live Patching, depending on the purchased license. To set up `tuxctl` through ePortal you can use a special endpoint **http://your-eportal-domain/install-almacare**:
-
+```text
+# curl -s http://eportal.mycompany.com/install-tuxcare | bash
+# tuxctl --license-key my-key
 ```
-$ curl -s http://eportal.mycompany.com/install-almacare | bash
-$ tuxctl --register my-key
-```
 
-Where `my-key` should have enabled `Essential Support` or `Live Patching (KernelCare and LibCare)` or `Extended Security Updates` products.
-
+Where `my-key` should have the `Enterprise Support for AlmaLinux - ESU` product enabled.
 
 ## Migrate ePortal
 
-Here is a procedure to migrate feed/server/key configuration and patches data from one ePortal
-to another. ePortal version on a new host should be >=1.18 and equal or greater
-than on an old host.
+Here is a procedure to migrate feed/server/key configuration and patches data from one ePortal to another. ePortal version on a new host should be >=1.18 and equal or greater than on an old host.
 
 If you migrate from Debian-based to Debian-based system you can simply:
 
@@ -1375,76 +1205,70 @@ If you migrate from Debian-based to Debian-based system you can simply:
 * Run migration `/usr/share/kcare-eportal/migratedb.py --upgrade` on a new host.
 * Start ePortal on a new host.
 
-Migration from RHEL-based distro is more elaborate. Later we refer to a `$BASE_DIR` variable in scripts.
-You can export it for RHEL-based distros:
+Migration from RHEL-based distro is more elaborate. Later we refer to a `$BASE_DIR` variable in scripts. You can export it for RHEL-based distros:
 
-```
-export BASE_DIR=/usr/share/kcare-eportal
+```text
+# export BASE_DIR=/usr/share/kcare-eportal
 ```
 
 or for Debian-based distros:
 
-```
-export BASE_DIR=/var/lib/eportal
+```text
+# export BASE_DIR=/var/lib/eportal
 ```
 
-or for docker-based installation use corresponding data directory. For example if you
-run container as `docker run -v /var/lib/eportal/data:/var/lib/eportal/data kernelcare/eportal`
+or for docker-based installation use corresponding data directory. For example if you run a container as `docker run -v /var/lib/eportal/data:/var/lib/eportal/data kernelcare/eportal`
 use /var/lib/eportal/data as `$BASE_DIR`:
 
-```
-export BASE_DIR=/var/lib/eportal/data
+```text
+# export BASE_DIR=/var/lib/eportal/data
 ```
 
 * Stop ePortal on both hosts:
 
-  ```
+```text
   [old-host ~]# systemctl stop eportal
-  ```
+```
 
-  ```
+```text
   [new-host ~]# systemctl stop eportal
-  ```
+```
 
 * Remove db files on a new host:
 
-  ```
-  [new-host ~]# rm $BASE_DIR/*.sqlite*
-  ```
+```text
+[new-host ~]# rm $BASE_DIR/*.sqlite*
+```
 
 * Copy database files `$BASE_DIR/*.sqlite*` from an old host to a new host.
 
 * (Optional) copy runtime LDAP and Feed Source settings `$BASE_DIR/config/config.json`.
 
-* (Optional) copy ePortal web app settings `/usr/share/kcare-eportal/config/local.py`
-  or for new ePortal `/etc/eportal/config` to `/etc/eportal/config` on a new
-  host if it exists.
+* (Optional) copy ePortal web app settings `/usr/share/kcare-eportal/config/local.py` or for new ePortal `/etc/eportal/config` to `/etc/eportal/config` on a new host if it exists.
 
-* Copy `$BASE_DIR/instance-id` so our billing can know that the new ePortal was
-  migrated and to avoid double billing.
+* Copy `$BASE_DIR/instance-id` so our billing can know that the new ePortal was migrated and to avoid double billing.
 
 * Copy patch data `$BASE_DIR/{arch,resources,user-resources}` to a new host.
 
 * Set file owner. For RHEL-based distros:
 
-  ```
-  [new-host ~]# chown -R nginx:nginx $BASE_DIR
-  ```
+```text
+[new-host ~]# chown -R nginx:nginx $BASE_DIR
+```
 
-  For Debian-based distros:
+For Debian-based distros:
 
-  ```
-  [new-host ~]# chown -R eportal:eportal $BASE_DIR
-  ```
+```text
+[new-host ~]# chown -R eportal:eportal $BASE_DIR
+```
 
 * Run migration `/usr/share/kcare-eportal/migratedb.py --upgrade` on a new host.
 
 * Start ePortal on the new host:
 
-  ```
-  [new-host ~]# systemctl start eportal
-  ```
-
+```text
+[new-host ~]# systemctl start eportal
+```
 
 ## Database backup
 
@@ -1456,34 +1280,35 @@ kc.eportal utility have an option to create database backup
 
 For example:
 
-```
-kc.eportal backup-db /usr/share/kcare-eportal/db-backup_$(date '+%Y-%m-%d')
+```text
+# kc.eportal backup-db /usr/share/kcare-eportal/db-backup_$(date '+%Y-%m-%d')
 ```
 
 ### Recover from backup
 
 You can replace existing databases (by default, in eportal home directory) with the backup files.
 
+:::danger Warning!
 IMPORTANT: ePortal should be stopped before replacing database files. Backup files should have owner and group `nginx:nginx`.
+:::
 
 For example:
 
-```
-systemctl stop eportal
-cp -f /path/to/backup_dir/* /usr/share/kcare-eportal/
-chown nginx:nginx /usr/share/kcare-eportal/*.sqlite*
-systemctl start eportal
+```text
+# systemctl stop eportal
+# cp -f /path/to/backup_dir/* /usr/share/kcare-eportal/
+# chown nginx:nginx /usr/share/kcare-eportal/*.sqlite*
+# systemctl start eportal
 ```
 
 Also, you need to check remote patchsource settings (Login, Password, Download URL in eportal UI), and after it download patches
 
+```text
+# kc.eportal kcare download-missing
+# kc.eportal libcare download-missing
+# kc.eportal qemu download-missing
+# kc.eportal db download-missing
 ```
-kc.eportal kcare download-missing
-kc.eportal libcare download-missing
-kc.eportal qemu download-missing
-kc.eportal db download-missing
-```
-
 
 ## Config files
 
@@ -1492,21 +1317,19 @@ kc.eportal db download-missing
 * Data directory (RHEL based distros): `/usr/share/kcare-eportal`.
 * Data directory (Debian based distros): `/var/lib/eportal`.
 
-
 ## Stopping & starting
 
 To stop/start/reload/restart configuration of nginx server:
 
-```
-$ systemctl stop|start|reload|restart nginx
+```text
+# systemctl stop|start|reload|restart nginx
 ```
 
 To stop/start/restart ePortal (Python):
 
+```text
+# systemctl stop|start|restart eportal
 ```
-$ systemctl stop|start|restart eportal
-```
-
 
 ## Log files
 
@@ -1516,18 +1339,17 @@ Nginx ePortal access log: `/var/log/nginx/access.log`
 
 Nginx error log: `/var/log/nginx/error.log`
 
-
 ### Log rotation
 
 By default there is no predefined parameters for ePortal's logs rotation. If you
 want to enable it for the files listed above:
 
- - Install `logrotate` package
- - Create/edit `/etc/logrotate.d/eportal` configuration file
+* Install `logrotate` package
+* Create/edit `/etc/logrotate.d/eportal` configuration file
 
 Example logrotate config:
 
-```
+```text
 /var/log/nginx/kcare-eportal.log {
     daily
     rotate 5 # keep 5 last archives
@@ -1537,7 +1359,6 @@ Example logrotate config:
 }
 ```
 
-
 ## Nagios & Zabbix support
 
 KernelCare.ePortal since version 1.2 supports server monitoring similar to
@@ -1546,38 +1367,35 @@ KernelCare.ePortal since version 1.2 supports server monitoring similar to
 
 You can curl the API directly to receive the information:
 
-```
+```text
 https://yourserver/admin/api/kcare/nagios/KCAREKEY
 ```
 
 or you can use [https://patches.kernelcare.com/downloads/nagios/check_kcare](https://patches.kernelcare.com/downloads/nagios/check_kcare) script by modifying KEY_KCARE_NAGIOS_ENDPOINT in it to point to your server (change [https://cln.cloudlinux.com/clweb](https://cln.cloudlinux.com/clweb) (link to old UI) or [https://cln.cloudlinux.com/console/auth/login](https://cln.cloudlinux.com/console/auth/login) (link to new UI) with [https://yourserver/admin](https://yourserver/admin) ).
 
 :::tip Note
-Access using `PARTNER_LOGIN/TOKEN` is not supported by KernelCare.ePortal.
+Access using `PARTNER_LOGIN/TOKEN` is not supported by KernelCare.ePortal
 :::
 
 ## Usage reports
 
-In common case, usage reports are sending automatically but when it's not
-possible, ePortal will try to send report as an email. That requires configured
-Sendmail (SSMTP) on the host. You can find a short instruction below.
+In common case, usage reports are sending automatically but when it's not possible, ePortal will try to send report as an email. That requires configured Sendmail (SSMTP) on the host. You can find a short instruction below.
 
-If mail sending attempt fails, ePortal will save the reports in
-`/usr/share/kcare-eportal/reports` which should be sent manually.
+If mail sending attempt fails, ePortal will save the reports in `/usr/share/kcare-eportal/reports` which should be sent manually.
 
 ### How to configure Sendmail (SSMTP)
 
 First of all you need to install `ssmtp`:
 
-```
-yum install -y ssmtp
+```text
+# yum install -y ssmtp
 ```
 
 Edit `/etc/ssmtp/ssmtp.conf` file in accordance with your SMTP server
 configuration. Here is a simple config file describing a common way to connect
 to Gmail accounts:
 
-```
+```text
 root=username@gmail.com
 mailhub=smtp.gmail.com:587
 hostname=localhost
@@ -1590,7 +1408,7 @@ TLS_CA_File=/etc/ssl/certs/ca-certificates.crt
 
 Actual location of a TLS_CA_Files depends on Linux distribution:
 
-```
+```text
 "/etc/ssl/certs/ca-certificates.crt",                // Debian/Ubuntu/Gentoo etc.
 "/etc/pki/tls/certs/ca-bundle.crt",                  // Fedora/RHEL 6
 "/etc/ssl/ca-bundle.pem",                            // OpenSUSE
@@ -1600,36 +1418,33 @@ Actual location of a TLS_CA_Files depends on Linux distribution:
 
 Also you could get if from:
 
-```
-curl-config --ca
+```text
+# curl-config --ca
 ```
 
 Now you can test a connection:
 
-```
-echo -n 'Subject: test\n\nTesting ssmtp' | sendmail -v some-recipient@gmail.com
+```text
+$ echo -n 'Subject: test\n\nTesting ssmtp' | sendmail -v some-recipient@gmail.com
 ```
 
 ## Custom environment variables
 
 You can define your own environment variables for ePortal process.
 
-There is the `/usr/share/kcare-eportal/environment` folder, which is basically
-daemon tools compatible envdir.
+There is the `/usr/share/kcare-eportal/environment` folder, which is basically daemon tools compatible envdir.
 
-For example, to disable the default https verification you can set the
-`PYTHONHTTPSVERIFY` environment variable to `0` as follows:
+For example, to disable the default https verification you can set the `PYTHONHTTPSVERIFY` environment variable to `0` as follows:
 
+```text
+# echo 0 > /usr/share/kcare-eportal/environment/PYTHONHTTPSVERIFY`
 ```
-echo 0 > /usr/share/kcare-eportal/environment/PYTHONHTTPSVERIFY`
-```
-
 
 ## Authentication using Single Sign On
 
 ePortal supports Single Sign On authentication by "OAuth 2.0" standard, "Authorization Code" flow.
 
-### Configuration
+### SSO Configuration
 
 To enable SSO you need to configure OAuth2 authentication service provider and ePortal.
 
@@ -1641,9 +1456,7 @@ You set up your OpenID Connect application inside the Okta Admin Console:
 
 2. Click **Create App Integration**.
 
-3. On the Create a new app integration page, select **OIDC - OpenID Connect**
-   for the **Sign-in method** and then select **Web Application** as the
-   **Application type**.
+3. On the Create a new app integration page, select **OIDC - OpenID Connect** for the **Sign-in method** and then select **Web Application** as the **Application type**.
 
 4. Fill in the **Application Settings**.
 
@@ -1660,7 +1473,7 @@ On the ePortal machine, configure SSO settings.
 
 Edit [ePortal config file](#config-files):
 
-```
+```text
 OIDC_AUTH_URL="https://dev-61441893.okta.com/oauth2/v1/authorize"
 OIDC_TOKEN_URL="https://dev-61441893.okta.com/oauth2/v1/token"
 OIDC_USERINFO_URL="https://dev-61441893.okta.com/oauth2/v1/userinfo"
@@ -1670,37 +1483,32 @@ OIDC_CLIENT_ID="0Aa134lzhUKj8jDMo5d7"
 OIDC_CLIENT_SECRET="AoBNuWRLRu2dxIR3Q0btO53N1entmGxBjQqwmjVL"
 ```
 
-Restart ePortal (see [Stopping & Starting](#stopping-starting)
-section, choose a corresponding OS).
+Restart ePortal (see the [Stopping & Starting](#stopping-starting) section, choose a corresponding OS).
 
 If all settings configured correctly the new **Sign In with SSO** button has to appear on login page `http://eportal_ip/admin/login`
 
-![](/images/sso_eportal.png)
-
+![sso eportal](/images/sso_eportal.png)
 
 ## Custom patches storage
 
-By default patches with databases are stored in `/usr/share/kcare-eportal` for RHEL-based
-systems and `/var/lib/eportal` for deb-based systems. You can configure it to
-use split storage, for example to keep patches on external block device.
+By default patches with databases are stored in `/usr/share/kcare-eportal` for RHEL-based systems and `/var/lib/eportal` for deb-based systems. You can configure it to use split storage, for example to keep patches on external block device.
 
 Edit [ePortal config file](#config-files):
 
-```
+```text
 PATCHES_DIR = '/path/to/patches/storage'
 ```
 
 Run:
 
-```
-kc.eportal sync-nginx-conf
+```text
+# kc.eportal sync-nginx-conf
 ```
 
-It initializes storage and makes corresponding modifications to nginx config to
-serve patches from a new place.
+It initializes storage and makes corresponding modifications to nginx config to serve patches from a new place.
 
 And restart `nginx` and `eportal` services to apply changes:
 
-```
-systemctl restart eportal nginx
+```text
+# systemctl restart eportal nginx
 ```
