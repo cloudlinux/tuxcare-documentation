@@ -27,7 +27,7 @@ TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except f
 | CentOS 8  | January 2022  | January 2026  |
 | Oracle Linux 6  | December 2020  | December 2024  |
 | Ubuntu 16.04  | April 2021  | April 2025  |
-| Ubuntu 18.04  | April 2023  | April 2027  |
+| Ubuntu 18.04  | May 2023  | May 2028  |
 
 ### Supported packages
 
