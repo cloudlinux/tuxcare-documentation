@@ -304,13 +304,13 @@ Description  : CentOS Server els-release file
 1. Download an installer script:
 
 ```
-wget https://repo.cloudlinux.com/ubuntu16_04-els/install-ubuntu-els-repo.py
+wget https://repo.cloudlinux.com/ubuntu16_04-els/install-ubuntu16.04-els-repo.sh
 ```
 
 2. Run the installer script with keys:
 
 ```
-python install-ubuntu-els-repo.py --license-key XXX-XXXXXXXXXXXX
+bash install-ubuntu16.04-els-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
 
 The installation script registers the server in the CLN with the key, adds PGP key to the server
@@ -326,18 +326,7 @@ It should return the info of an available package. If you see information about 
 After this, you will be able to install updates from the repository using a regular yum upgrade command.
 
 Example:
-
 ```
-[els@ubuntu16 ~]# python install-ubuntu-els-repo.py --license-key XXXX-XXXXXXXXX
-Get dist name... Ubuntu
-Check that repository isn't created... Ok
-https://cln.cloudlinux.com/cln/api/centos/token/register
-Request repository token for this server... Ok
-Save repo file to /etc/apt/sources.list.d/ubuntu-els.list... Ok
-Add Cloudlinux gpg key to apt... Ok
-Cleaning repository cache... Ok
-
-
 [els@ubuntu16 ~]# apt-cache show els-define
 Package: els-define
 Version: 1-1.0.1
@@ -360,11 +349,11 @@ Description-md5: 39e3bb446b4c63607f8f0358484545bf
 
 1. Download an installer script:
 ```
-wget https://repo.cloudlinux.com/ubuntu18_04-els/install-ubuntu-els-repo.py
+wget https://repo.cloudlinux.com/ubuntu18_04-els/install-ubuntu18.04-els-repo.sh
 ```
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds PGP key to the server
 ```
-python install-ubuntu-els-repo.py --license-key XXXX-XXXXXXXXXXXX
+bash install-ubuntu18.04-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
 ```
 3. Verify that the installation was successful. To ensure that installation has been completed successfully, run the following command:
 ```
@@ -374,7 +363,7 @@ It should return the info of an available package. If you see information about 
 
 Example:
 ```
-apt-cache show els-define
+[els@ubuntu18 ~]# apt-cache show els-define
 Package: els-define
 Version: 1-1.0.2
 Architecture: amd64
