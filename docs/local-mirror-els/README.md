@@ -92,3 +92,15 @@ For example:
 ```
 rsync  -avSHP --delete rsync://repo.cloudlinux.com/UBUNTU1804ELS/ .
 ```
+
+### CentOS 7 ELS
+
+To create a local mirror of the repository with security updates via `rsync`, use the following:
+```
+rsync://repo.tuxcare.com/CENTOS7ELS/
+```
+
+For example:
+```
+rsync  -avSHP --delete rsync://repo.tuxcare.com/CENTOS7ELS/ .
+```
