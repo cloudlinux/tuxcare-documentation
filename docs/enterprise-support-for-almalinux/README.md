@@ -68,6 +68,16 @@ Technical Support for Extended Security Updates provides assistance with:
 * ePortal issues
 * AlmaLinux kernel crash issues (root cause analysis)
 
+### GnuPG Keys
+
+The TuxCare ESU/FIPS packages and repositories are cryptographically signed with a GPG key, so you can verify the legitimacy of the software you download and the source of the download. The details of our key are below:
+
+* Public key: rsa4096/8D50EB66 (2023-03-06)
+  * Fingerprint: FAD7 8590 81D0 738B 7A82  8496 D07B F2A0 8D50 EB66
+  * ID: TuxCare (Software Signing Key) <packager@tuxcare.com>
+  * Installation location: /etc/pki/rpm-gpg/RPM-GPG-KEY-TuxCare
+  * Download link: [RPM-GPG-KEY-TuxCare](https://repo.tuxcare.com/tuxcare/RPM-GPG-KEY-TuxCare)
+
 ### Installing tuxctl
 
 **Requirements**
