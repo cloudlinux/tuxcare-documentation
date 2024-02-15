@@ -10,7 +10,7 @@ export default [
         link: "/enterprise-support-for-almalinux/",
     },
     {
-        title: "KernelCare Enterprise",
+        title: "KernelCare",
         description: "is a live kernel patching service that provides security patches and bugfixes for a range of popular Linux kernels that can be installed without rebooting the system.",
         link: "/live-patching-services/",
     },
