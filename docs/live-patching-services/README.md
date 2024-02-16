@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 4
+sidebarDepth: 5
 ---
 
 <!-- markdownlint-disable MD014 MD033 MD029 MD049 -->
