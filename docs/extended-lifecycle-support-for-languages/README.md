@@ -16,9 +16,11 @@ TuxCare provides Extended Lifecycle Support through four years after the EOL dat
 
 ### Supported versions
 
-**CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.:** 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2
+**CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.:** 5.1.6, 5.2.17, 5.3.29, 5.4.45, 5.5.38, 5.6.40, 7.0.33, 7.1.33, 7.2.34, 7.3.33, 7.4.33, 8.0.30, 8.1.27, 8.2, 8.3
 
-**Ubuntu:** 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2
+**Ubuntu:** 5.6.40, 7.0.33, 7.1.33, 7.2.34, 7.3.33, 7.4.33, 8.0.30, 8.1.27, 8.2, 8.3
+
+
 
 ### Installation instructions of yum repositories
 
