@@ -20,14 +20,14 @@ We aim to deliver security patches for critical and high-risk vulnerabilities (C
 
 TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except for CentOS 7 which is supported for up to five years). This support is offered after the Linux distribution has reached its End of Life (EOL) or no longer receives standard support.
 
-| **Distribution** | **EOL**  | **ELS**  |
-|---|---|---|
-| CentOS 6  | November 2020  | November 2026  |
-| CentOS 7  | June 2024  | June 2029  |
-| CentOS 8  | January 2022  | January 2026  |
-| Oracle Linux 6  | December 2020  | December 2024  |
-| Ubuntu 16.04  | April 2021  | April 2025  |
-| Ubuntu 18.04  | May 2023  | May 2028  |
+| **Distribution** | **Arch** | **EOL** | **ELS** |
+|---|---|---|---|
+| CentOS 6 | x86_64 i386 | November 2020 | November 2026 |
+| CentOS 7 | x86_64 i386 | June 2024 | June 2029 |
+| CentOS 8 | x86_64 | January 2022 | January 2026 |
+| Oracle Linux 6 | x86_64 | December 2020 | December 2024 |
+| Ubuntu 16.04 | amd64 | April 2021 | April 2025 |
+| Ubuntu 18.04 | amd64 | May 2023 | May 2028 |
 
 ### Supported packages
 
