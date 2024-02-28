@@ -2,7 +2,7 @@
 
 ## Extended Lifecycle Support for PHP
 
-Extended Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows to continue running Linux server vulnerability-free. 
+Extended Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows to continue running Linux server vulnerability-free.
 
 ### Supported OS
 
@@ -211,7 +211,7 @@ oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xm
 
 ### PHP extensions list
 
-You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/shared/cloudlinux_os_components/#bundled-php-extensions).
+You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/shared/alt-ea_packages/#bundled-php-extensions).
 
 ### How to use PHP-ELS
 
