@@ -39,6 +39,10 @@ As far as other requirements concerned, we have tested the following configurati
 
 ## Installation
 
+::: tip Note
+If you are installing for the first time, please confirm with our sales engineering team at [sales@tuxcare.com](sales@tuxcare.com) **BEFORE** trying the installation via the documentation below. Please note that support tickets resulting from not following this recommendation will not be accepted.
+:::
+
 ePortal is compatible with 64-bit versions of EL7/8/9 based distros like CentOS 7/8, AlmaLinux 8/9 and Ubuntu 20.04/22.04
 
 ### RHEL-based distros
