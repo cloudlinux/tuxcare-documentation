@@ -33,6 +33,10 @@ TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except f
 
 TuxCare's Extended Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://cve.tuxcare.com/els/projects). Support for additional packages can be provided on request.
 
+:::warning Note
+**ELS for CentOS 7** will start supporting kernel, OpenSSL, and glibc packages after the CentOS 7 EOL date (June 30th, 2024).
+:::
+
 ### Errata advisories
 
 TuxCare Extended Lifecycle Support provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which CVEs are resolved and which bugs have been addressed. You can view the full list of released advisories [here](https://cve.tuxcare.com/els/releases).
