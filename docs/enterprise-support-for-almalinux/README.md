@@ -84,16 +84,16 @@ The TuxCare ESU/FIPS packages and repositories are cryptographically signed with
 
 * AlmaLinux 9.2 operating system
 * x86_64 or aarch64 architecture
-* Enterprise Support license key (should be obtained from [portal.tuxcare.com](https://portal.tuxcare.com))
+* Extended Security Updates license key (should be obtained from [portal.tuxcare.com](https://portal.tuxcare.com))
 * Internet access
 
 `tuxctl` is the setup tool for TuxCare's Enterprise Support for AlmaLinux, which will configure your system to receive patches from the TuxCare repositories. To install `tuxctl` you need to install the `tuxcare-release` package first. This package contains the TuxCare repo definitions, TuxCare GPG key and the `tuxctl` setup tool. Run the following as root:
 
 ```text
-# dnf install -y https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-$(rpm --eval %almalinux).noarch.rpm
+# dnf install -y https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-$(rpm --eval %almalinux.%_arch).rpm
 ```
 
-The second step is to activate your TuxCare license on the system. You should run the `tuxctl` tool as root with your TuxCare license key provided as a command line argument like so:
+The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your ESU license key provided as a command line argument like so:
 
 ```text
 # tuxctl --license-key ESU-XXXXXXXXXXXXXXXXXXXXXXXX
@@ -106,7 +106,7 @@ This tool will do the following:
 3. Check if your system is already registered
 4. Register to CloudLinux Network
 5. Obtain a token to access the restricted TuxCare repos
-6. Enable the TuxCare Updates repo
+6. Enable the TuxCare ESU repo
 7. Switch the default AlmaLinux repos to use repo.tuxcare.com
 8. Import the TuxCare GPG key
 
@@ -128,7 +128,7 @@ To force re-registration, please run the script with --force
 Then you will have to run `tuxctl` like this:
 
 ```text
-# tuxctl --license-key ESU-XXXXXXXXXXXXXXXXXXXXXXXX --force
+# tuxctl --force -l ESU-XXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 :::
@@ -140,12 +140,17 @@ First please ensure you have installed the `tuxcare-release` package as describe
 To enable the FIPS repo, install the FIPS 140-3 validated packages, enable FIPS mode and configure grub to boot into the FIPS-validated kernel, please run these commands as root, substituting in your license key:
 
 ```text
-# tuxctl --license-key ESU-XXXXXXXXXXXXXXXXXXXXXXXX --fips
+# tuxctl --fips -l ESU-XXXXXXXXXXXXXXXXXXXXXXXX
 # dnf -y install openssl-3.0.7-20.el9_2.tuxcare.1 kernel-5.14.0-284.11.1.el9_2.tuxcare.5
+# dnf -y install gnutls-3.7.6-23.el9_2.tuxcare.3 nettle-3.8-3.el9_2.tuxcare.1 libgcrypt-1.10.0-10.el9_2.tuxcare.3 nss-3.90.0-6.el9_2.tuxcare.1
 # grubby --set-default=/boot/vmlinuz-5.14.0-284.11.1.el9_2.tuxcare.5.$(uname -i)
 # fips-mode-setup --enable
 # reboot
 ```
+
+:::warning
+Note the aarch64 platform doesn't currently have FIPS-validated gnutls/libgcrypt/nss packages, so ARM users should only run the first `dnf` command to install the openssl and kernel packages.
+:::
 
 Once you've logged in after the reboot, run these commands and check the output matches to confirm it worked:
 
@@ -180,8 +185,6 @@ To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux 
   -e 's|$almacare_releasever|$releasever|g' \
   /etc/yum.repos.d/almalinux*.repo
 
-# dnf upgrade
-
 # reboot
 ```
 
@@ -192,22 +195,23 @@ Note that by disabling ESU, you will revert to tracking major version releases i
 To completely remove the TuxCare packages, after following the above steps, run the following as root:
 
 ```text
-# dnf remove openssl*tuxcare* kernel*tuxcare*
+# dnf remove *tuxcare*
 ```
 
 In most cases this will be the end of the uninstallation procedure, however if you see an error message like the following, then you may have to use `grubby` or `grub2-reboot` or simply the grub menu, to reboot into a non-TuxCare kernel first:
 
 ```text
 Error:
- Problem: The operation would result in removing the following protected packages: sudo, systemd, kernel-core
+ Problem: The operation would result in removing the following protected packages: sudo, systemd, kernel-core, dnf
 (try to add '--skip-broken' to skip uninstallable packages or '--nobest' to use not only best candidate packages)
 ```
 
 Then run the following:
 
 ```text
-# dnf downgrade openssl
+# dnf downgrade openssl libgcrypt gnutls nettle nss
 # dnf remove kernel*tuxcare*
+# dnf upgrade
 ```
 
 ## **Live Patching (KernelCare and LibCare)**
