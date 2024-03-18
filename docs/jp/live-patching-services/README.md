@@ -480,7 +480,7 @@ curl -o /usr/libexec/kcare/kernelcare_pub.der https://patches.kernelcare.com/ker
 
 1. rootユーザーで`mokutil`を使用して、この新しいMOKをUEFIファームウェアに追加します。
 
-```bash
+```
 $ mokutil --import /usr/libexec/kcare/kernelcare_pub.der
  input password:
  input password again:
@@ -519,7 +519,7 @@ $ mokutil --list-enrolled | egrep -i 'SHA1|Issuer'
 
 登録済みのキーが表示されない場合がありますが、以下のコマンドで確認できます。
 
-```bash
+```
 $ dmesg | grep -i 'cloud linux' 
 [   0.722149] EFI: Loaded cert 'Cloud Linux Software, Inc: Kernel Module Signing Key: 12ff0613c0f80cfba3b2f8eba71ebc27c5a76170' linked to '.system_keyring'
 ```

@@ -138,13 +138,13 @@ rsync://repo.cloudlinux.com/PHP_ELS/
 
 Example of creating a local mirror for all supported OS versions:
 
-```bash
+```
 rsync -avSHP --delete rsync://repo.cloudlinux.com/PHP_ELS/ .
 ```
 
 Example of creating a local mirror for a specific OS version:
 
-```bash
+```
 rsync -avSHP --delete rsync://repo.cloudlinux.com/PHP_ELS/el6/ .
 ```
 
@@ -193,19 +193,19 @@ Currently, we provide OVAL data for the following OS versions:
 
 1. Install OpenSCAP
     * for rpm systems:
-    ```bash
+    ```
     yum install openscap openscap-utils scap-security-guide -y
     ```
     * for  deb systems:
-    ```bash
+    ```
     apt-get install libopenscap8 -y
     ```
 2. Download OVAL stream:
-```bash
+```
 wget https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml
 ```
 3. Run scanning:
-```bash
+```
 oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xml
 ```
 
@@ -221,7 +221,7 @@ When you deploy an updated version of PHP through PHP ELS, using your system’s
 
 **The *bin* files:**
 
-```javascript
+```
 [root@localhost ~]# ll /opt/alt/phpXY/usr/bin/
 bytekit          hphpa            pear             pecl             phar.phar        phpcb            php-config       phpcpd           phploc           phpunit-skelgen
 dbunit           lsphp            peardev          phar             php              php-cgi          phpcov           phpize           phpunit          ppw
@@ -230,7 +230,7 @@ dbunit           lsphp            peardev          phar             php         
 
 ***Modules* and *pecl* extensions:**
 
-```javascript
+```
 ls /opt/alt/phpXY/usr/lib64/php/modules/
 ZendGuardLoader.so  imagick.so         oci8.so          stem.so
 amqp.so             imap.so            odbc.so          stomp.so
@@ -268,14 +268,14 @@ igbinary.so         oauth.so           stats.so
 
 **Running code on a specific version through the CLI:**
 
-```javascript
+```
 [root@localhost ~]# /opt/alt/phpXY/usr/bin/php helloworld.php
 Hello, World!
 ```
 
 **Location of *ini* config files:**
 
-```javascript
+```
 [root@localhost ~]# ls /opt/alt/phpXY/etc/php.d.all/
 40-leveldb.ini        mailparse.ini     redis.ini
 40-snuffleupagus.ini  mbstring.ini      rrd.ini
@@ -314,13 +314,13 @@ lzf.ini               raphf.ini
 
 **Location of *default.ini*:**
 
-```javascript
+```
 ls /opt/alt/phpXY/etc/php.d/default.ini
 ```
 
 **Listing enabled modules on a specific version:**
 
-```javascript
+```
 [root@localhost ~]# /opt/alt/php73/usr/bin/php -m
 [PHP Modules]
 bz2
@@ -357,7 +357,7 @@ zlib
 
 **Enabling a module through the CLI:**
 
-```javascript
+```
 [root@localhost ~]# /opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
 [PHP Modules]
 bz2
@@ -403,17 +403,17 @@ Extended Lifecycle Support (ELS) for Python from TuxCare provides security fixes
 
 1. Download an installer script:
 
-```bash
+```
 wget https://repo.cloudlinux.com/python-els/install-python-els-repo.sh
 ```
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds a PGP key and adds repository to the server.
-```bash
+```
 sh install-python-els-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
 3. Verify that the installation was successful.
 
 To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual yum upgrade command.
-```bash
+```
 yum info python2
 
 Available Packages
@@ -431,7 +431,7 @@ Description  : Python 2 is an old version of the language that is incompatible
              : with the 3.x line of releases.
 ```
 4. To install python, it's necessary to enable the CodeReady Builder(CRB) repository, which contains the `gdbm` package.
-```bash
+```
 yum install python2 --enablerepo crb
 ```
 Once installed, you can use python2 in the usual way.
@@ -451,13 +451,13 @@ To obtain the access to the local mirroring, provide your External IP address to
 
 To create a local mirror of the repository with security updates via `rsync`, use the following:
 
-```bash
+```
 rsync://repo.cloudlinux.com/PYTHON_ELS/
 ```
 
 Example of creating a local mirror for all supported OS versions:
 
-```bash
+```
 rsync  -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
 ```
 
@@ -475,14 +475,14 @@ AlmaLinux 9: [https://repo.cloudlinux.com/python-els/almalinux9-els-python-oval.
 #### How to use OVAL
 
 1. Install OpenSCAP:
-```bash
+```
 yum install openscap openscap-utils scap-security-guide -y
 ```
 2. Download OVAL stream:
-```bash
+```
 wget https://repo.cloudlinux.com/python-els/almalinux9-els-python-oval.xml
 ```
 3. Run scanning:
-```bash
+```
 oscap oval eval --results result.xml --report report.xml almalinux9-els-python-oval.xml
 ```
