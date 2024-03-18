@@ -597,7 +597,7 @@ Puppet provides the framework to run tasks on target systems. The following is a
 
 Unregister KernelCare agent through API call:
 
-```bash
+```
 #!/bin/bash
 
 EPORTAL_API_USERNAME=<your ePortal api user name>
@@ -616,7 +616,7 @@ curl -kL -u "${EPORTAL_API_PASSWORD}"':'"${EPORTAL_API_PASSWORD}" -X POST "${EPO
 
 Example (unregister_server.sh):
 
-```bash
+```
 #!/bin/bash
 
 EPORTAL_API_USERNAME=admin

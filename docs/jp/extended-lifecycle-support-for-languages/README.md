@@ -139,13 +139,13 @@ rsync://repo.cloudlinux.com/PHP_ELS/
 
 サポートされているすべてのOSバージョンのローカルミラーを作成する例：
 
-```bash
+```
 rsync -avSHP --delete rsync://repo.cloudlinux.com/PHP_ELS/ .
 ```
 
 特定のOSバージョンのローカルミラーを作成する例：
 
-```bash
+```
 rsync -avSHP --delete rsync://repo.cloudlinux.com/PHP_ELS/el6/ .
 ```
 
@@ -188,19 +188,19 @@ OSを指定するには、推奨オプションのいずれかを使用してく
 
 1. OpenSCAPをインストールします。
     * rpmシステムの場合
-    ```bash
+    ```
     yum install openscap openscap-utils scap-security-guide -y
     ```
     * debシステムの場合
-    ```bash
+    ```
     apt-get install libopenscap8 -y
     ```
 2. OVALストリームをダウンロードします。
-```bash
+```
 wget https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml
 ```
 3. スキャンを実行します。
-```bash
+```
 oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xml
 ```
 
@@ -299,7 +299,7 @@ oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xm
 
 ***bin*ファイル：**
 
-```javascript
+```
 [root@localhost ~]# ll /opt/alt/phpXY/usr/bin/
 bytekit          hphpa            pear             pecl             phar.phar        phpcb            php-config       phpcpd           phploc           phpunit-skelgen
 dbunit           lsphp            peardev          phar             php              php-cgi          phpcov           phpize           phpunit          ppw
@@ -308,7 +308,7 @@ dbunit           lsphp            peardev          phar             php         
 
 ***Modules*と*pecl*拡張モジュール：**
 
-```javascript
+```
 ls /opt/alt/phpXY/usr/lib64/php/modules/
 ZendGuardLoader.so  imagick.so         oci8.so          stem.so
 amqp.so             imap.so            odbc.so          stomp.so
@@ -346,14 +346,14 @@ igbinary.so         oauth.so           stats.so
 
 **CLIを介した、特定のバージョンへのコードの実行：**
 
-```javascript
+```
 [root@localhost ~]# /opt/alt/phpXY/usr/bin/php helloworld.php
 Hello, World!
 ```
 
 ***ini*構成ファイルの場所：**
 
-```javascript
+```
 [root@localhost ~]# ls /opt/alt/phpXY/etc/php.d.all/
 40-leveldb.ini        mailparse.ini     redis.ini
 40-snuffleupagus.ini  mbstring.ini      rrd.ini
@@ -392,13 +392,13 @@ lzf.ini               raphf.ini
 
 ***default.ini*の場所：**
 
-```javascript
+```
 ls /opt/alt/phpXY/etc/php.d/default.ini
 ```
 
 **特定のバージョンで有効なモジュールのリスト表示：**
 
-```javascript
+```
 [root@localhost ~]# /opt/alt/php73/usr/bin/php -m
 [PHP Modules]
 bz2
@@ -435,7 +435,7 @@ zlib
 
 **CLIを介したモジュールの有効化：**
 
-```javascript
+```
 [root@localhost ~]# /opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
 [PHP Modules]
 bz2
@@ -481,18 +481,18 @@ TuxCareは、Python向け延長ライフサイクルサポート（ELS）によ�
 
 1. インストールスクリプトをダウンロードします。
 
-```bash
+```
 wget https://repo.cloudlinux.com/python-els/install-python-els-repo.sh
 ```
 2. キーを使用して、インストールスクリプトを実行します。インストールスクリプトを実行すると、そのキーと共にCLNにサーバーが登録され、PGPキーが追加され、リポジトリがサーバーに追加されます。
-```bash
+```
 sh install-python-els-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
 3. インストールが成功したことを確認します。
 
 インストールが正常に完了したことを確認するには、以下のコマンドを実行します。コマンドを実行すると、利用可能なパッケージに関する情報が返されるはずです。パッケージに関する情報が利用可能な場合は、インストールが成功したことになります。それ以降は、通常のyum upgradeコマンドを使用して、リポジトリから更新をインストールできます。
 
-```bash
+```
 yum info python2
 
 Available Packages
@@ -510,7 +510,7 @@ Description  : Python 2 is an old version of the language that is incompatible
              : with the 3.x line of releases.
 ```
 4. Pythonをインストールするには、CodeReady Builder（CRB) リポジトリを有効にする必要があります。このリポジトリには、`gdbm`パッケージが含まれています。
-```bash
+```
 yum install python2 --enablerepo crb
 ```
 インストールしたら、通常の方法でpython2を使用できます。
@@ -529,13 +529,13 @@ ELSアップデート用にPythonのローカルミラーを作成する機能�
 
 `rsync`経由でセキュリティアップデートのリポジトリのローカルミラーを作成するには、以下のコマンドを使用します。
 
-```bash
+```
 rsync://repo.cloudlinux.com/PYTHON_ELS/
 ```
 
 サポートされているすべてのOSバージョンのローカルミラーを作成する例：
 
-```bash
+```
 rsync  -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
 ```
 
@@ -552,14 +552,14 @@ AlmaLinux 9: [https://repo.cloudlinux.com/python-els/almalinux9-els-python-oval.
 #### OVALの使用方法
 
 1. OpenSCAPをインストールします。
-```bash
+```
 yum install openscap openscap-utils scap-security-guide -y
 ```
 2. OVALストリームをダウンロードします。
-```bash
+```
 wget https://repo.cloudlinux.com/python-els/almalinux9-els-python-oval.xml
 ```
 3. スキャンを実行します。
-```bash
+```
 oscap oval eval --results result.xml --report report.xml almalinux9-els-python-oval.xml
 ```
