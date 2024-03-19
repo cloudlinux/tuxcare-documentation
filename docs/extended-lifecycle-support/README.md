@@ -6,9 +6,11 @@ Our ELS service is designed to provide solutions for organizations that are not 
 
 ### Vulnerability coverage
 
-TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.
+TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.  
 
-TuxCare Extended Lifecycle Support, by default, provides security patches for High and Critical vulnerabilities (with a 7+ CVSS score). For vulnerabilities rated as Medium (4.0 to 6.9), and/or when patches are required for FIPS-certified deployments, custom coverage options are available. Specific details regarding these coverage options and their pricing can be obtained by contacting our sales team.
+TuxCare Extended Lifecycle Support automatically provides security patches for High and Critical vulnerabilities with CVSS scores of 7+. For Medium-severity vulnerabilities (CVSS scores 4.0 to 6.9), TuxCare actively monitors and selectively patches those with potentially underrated CVE impacts and/or risks to TuxCare customers.  
+
+Custom coverage options include patches for FIPS-certified deployments and a 10-pack of customer-selected patches for CVEs outside the standard ELS scope. For detailed information on these coverage options and their pricing, please contact our sales team
 
 ### Target response times
 
