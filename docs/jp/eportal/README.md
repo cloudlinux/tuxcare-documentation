@@ -464,7 +464,7 @@ ePortalサーバーをKernelCareパッチサーバーに接続して、パッチ
 
 ePortalのテストインスタンスと本番インスタンスの違いを見てみましょう。
 
-```bash
+```
 $ comm -23 \
     <(ssh eportal-test "ls /usr/share/kcare-eportal/arch/K*.tar.bz2" | sort -h) \
     <(ssh eportal-prod "ls /usr/share/kcare-eportal/arch/K*.tar.bz2" | sort -h) | tee patchsets.diff
@@ -472,14 +472,14 @@ $ comm -23 \
 
 本番環境にパッチセットをアップロードします。
 
-```bash
+```
 $ cat patchsets.diff | xargs -Phav {} rsync -iv eportal-test:{} /tmp/
 $ rsync -Phav /tmp/K*.tar.bz2 eportal-prod:/tmp/
 ```
 
 パッチセットファイル名をパラメーターとして、展開ツールを実行します。
 
-```bash
+```
 $ ssh eportal-prod 'ls /tmp/K*.tar.bz2 | sort -h | xargs -n1 kc.eportal kcare deploy'
 2021-12-02 01:25:06,555 - eportal.patches - INFO - K04082020_1 was enabled in main
 ...

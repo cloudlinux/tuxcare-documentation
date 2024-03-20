@@ -256,7 +256,7 @@ Puppetは、対象のシステムでタスクを実行するためのフレー�
 
 API呼び出しを介してKernelCareエージェントを登録解除します。
 
-```bash
+```
 #!/bin/bash
 
 EPORTAL_API_USERNAME=<your ePortal api user name>
@@ -275,7 +275,7 @@ curl -kL -u "${EPORTAL_API_PASSWORD}"':'"${EPORTAL_API_PASSWORD}" -X POST "${EPO
 
 例（unregister_server.sh）：
 
-```bash
+```
 #!/bin/bash
 
 EPORTAL_API_USERNAME=admin
