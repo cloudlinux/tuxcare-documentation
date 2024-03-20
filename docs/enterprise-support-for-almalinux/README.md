@@ -34,7 +34,8 @@ AlmaLinux provides a 10-year lifecycle with a new minor release arriving every 6
 ### Vulnerability coverage
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.
-ESU provides security patches for High and Critical vulnerabilities (with a 7+ CVSS score) and urgent priority bug fixes. This strategy aims to reduce changes in the environment, prioritizing stability without compromising critical security.
+
+TuxCare Extended Lifecycle Support, by default, provides security patches for High and Critical vulnerabilities (with a 7+ CVSS score). For vulnerabilities rated as Medium (4.0 to 6.9), TuxCare and can provide patches for CVE's where mitigations are not available and there is sufficient customer demand, and/or when patches are required for FIPS-certified deployments. Custom coverage options are available, including a 10-pack of customer-directed patches for clients who need CVEs patched outside of the ELS scope. Specific details regarding these coverage options and their pricing can be obtained by contacting our sales team.
 
 ### FIPS-compliant security patches
 
