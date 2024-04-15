@@ -1468,7 +1468,7 @@ You set up your OpenID Connect application inside the Okta Admin Console:
 | **Setting**           | **Value**
 |-----------------------|-------------------------------------------
 | Sign-in redirect URI  | http://eportal_ip/admin/sso/login/callback
-| Sign-out redirect URI | http://eportal_ip/admin
+| Sign-out redirect URI | http://eportal_ip/admin/login
 
 5. Obtain *Client ID*, *Client secret*, the full URL to the `/authorize`, `/token`, `/userinfo` endpoints.
 
