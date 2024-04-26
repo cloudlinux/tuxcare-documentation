@@ -1,6 +1,6 @@
 # Extended Lifecycle Support
 
-TuxCare's [Extended Lifecycle Support (ELS)](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CloudLinux 6, CentOS 7, CentOS 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's [Extended Lifecycle Support (ELS)](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CloudLinux 6, CentOS 7, CentOS 8, CentOS Stream 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
@@ -29,6 +29,7 @@ TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except f
 | CentOS 6 | x86_64 i386 | November 2020 | November 2026 |
 | CentOS 7 | x86_64 i386 | June 2024 | June 2029 |
 | CentOS 8 | x86_64 | January 2022 | January 2026 |
+| CentOS Stream 8 | x86_64 | June 2024 | June 2028 |
 | Oracle Linux 6 | x86_64 | December 2020 | December 2024 |
 | Ubuntu 16.04 | amd64 | April 2021 | April 2025 |
 | Ubuntu 18.04 | amd64 | May 2023 | May 2028 |
@@ -72,6 +73,7 @@ els-rollout.cloudlinux.com
 
 - OracleLinux 6 ELS,
 - CentOS 8 ELS,
+- CentOS Stream 8 ELS,
 - Ubuntu 16.04 ELS,
 - Ubuntu 18.04 ELS:
 
@@ -307,6 +309,50 @@ License      : GPLv2
 Description  : CentOS Server els-release file
 ```
 
+### CentOS Stream 8 ELS
+
+1. Download an installer script:
+
+```
+wget https://repo.tuxcare.com/centos8stream-els/install-centos8stream-els-repo.sh
+```
+
+2. Run the installer script with keys:
+
+```
+sh install-centos8stream-els-repo.sh --license-key XXXX-XXXXXXXXX
+```
+
+The installation script registers a server in CLN with the key and adds a PGP key to the server.
+
+3. Verify that the installation was successful.
+
+To ensure the installation has been completed successfully, run the following command:
+
+```
+yum info els-define
+```
+
+It should return the info about an available package. If you can see information about the package, you can be sure that the installation was successful. After this, you will be able to install updates from the repository using a regular yum upgrade command.
+
+Example:
+
+```
+[els@centos6 ~]# yum info els-define
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Available Packages
+Name        : els-define
+Arch        : x86_64
+Version     : 1
+Release     : 1.0.1.el6
+Size        : 2.6 k
+Repo        : centos8stream-els
+Summary     : CentOS Server simulate release file
+License     : GPLv2
+Description : CentOS Server simulate els release files
+```
+
 ### Ubuntu 16.04 ELS
 
 1. Download an installer script:
@@ -411,6 +457,7 @@ Currently, we provide OVAL data for the following products:
 * CentOS 7: [https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml](https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml)
 * CentOS 8.4: [https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml](https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml)
 * CentOS 8.5: [https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml](https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml)
+* CentOS Stream 8: [https://repo.cloudlinux.com/centos8stream-els/centos8stream-els-oval.xml](https://repo.cloudlinux.com/centos8stream-els/centos8stream-els-oval.xml)
 * Ubuntu 16.04: [https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml)
 * Ubuntu 18.04: [https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml)
 
@@ -484,6 +531,7 @@ Once that is validated, you can use the corresponding to the operating system OV
 * CentOS 7: [https://cve.tuxcare.com/rss_feed/releases/centos7els](https://cve.tuxcare.com/rss_feed/releases/centos7els)
 * CentOS 8.4: [https://cve.tuxcare.com/rss_feed/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/releases/centos8.4els)
 * CentOS 8.5: [https://cve.tuxcare.com/rss_feed/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/releases/centos8.5els)
+* CentOS Stream 8: [https://cve.tuxcare.com/rss_feed/releases/centos8streamels](https://cve.tuxcare.com/rss_feed/releases/centos8streamels)
 * Ubuntu 16.04: [https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els)
 * Ubuntu 18.04: [https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els)
 
