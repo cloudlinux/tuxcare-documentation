@@ -35,6 +35,8 @@ Requires basic authorization with read only user permissions.
   contain `%` placeholder to match any string.
 * `ip`: String, optional. Return servers with IP like value. Value can
   contain `%` placeholder to match any string.
+* `service_id`: String, optional. Return a single server with the service ID
+  equal to the provided value.
 * `feed`: String, optional. Return servers attached to feed. Use `main`
   for default feed.
 * `key`: String, optional. Return servers registered to key.
