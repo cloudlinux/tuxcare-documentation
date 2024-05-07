@@ -22,7 +22,7 @@ Requests for customer-directed security patches for CVEs that are outside of the
 
 ### Duration of support
 
-TuxCare provides Extended Lifecycle Support (ELS) for up to four years (except for CentOS 7 which is supported for up to five years). This support is offered after the Linux distribution has reached its End of Life (EOL) or no longer receives standard support.
+TuxCare provides Extended Lifecycle Support (ELS) for up to four years (see the table below for exceptions). This support is offered after the Linux distribution has reached its End of Life (EOL) or no longer receives standard support.
 
 | **Distribution** | **Arch** | **EOL** | **ELS** |
 |---|---|---|---|
