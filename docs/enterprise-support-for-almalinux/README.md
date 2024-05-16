@@ -6,7 +6,7 @@ This guide describes [Enterprise Support for AlmaLinux](https://tuxcare.com/alma
 
 ## What is Enterprise Support for AlmaLinux?
 
-Enterprise Support for AlmaLinux provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.
+Enterprise Support for AlmaLinux provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, ensures long-term stability and FIPS 140-3 compliance with extended security support for select AlmaLinux minor releases, and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.
 
 Available services:
 
