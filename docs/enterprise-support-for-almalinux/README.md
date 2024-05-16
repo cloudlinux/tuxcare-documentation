@@ -11,8 +11,7 @@ Enterprise Support for AlmaLinux provides a TuxCare-vetted repository of AlmaLin
 Available services:
 
 * **Essential Support**: TuxCare-vetted repository of AlmaLinux updates with guaranteed uptime, expedited break-and-fix support and up to 16 years of support coverage
-* **Extended Security Updates** deliver an extension of an additional 4.5 years of security fixes for Critical and High-risk vulnerabilities and FIPS-compliant security patches for select AlmaLinux minor versions
-* **Live Patching (KernelCare and LibCare)**: automated live patches for the kernel and critical userspace packages with zero downtime
+* **Extended Security Updates** provide an extended period of security fixes for critical and high-risk vulnerabilities for select AlmaLinux minor versions, as well as the **full suite of five FIPS-validated modules** (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified AlmaLinux deployments. **The product also unlocks commercial use of the FIPS-validated packages.**
 * **Enhanced Support**: Enterprise-grade support for AlmaLinux and open-source applications with pay-as-you-go pricing in 5, 10, and 20-hour bundles
 
 Learn more at [https://tuxcare.com/almalinux-enterprise-support/](https://tuxcare.com/almalinux-enterprise-support/)
@@ -23,9 +22,13 @@ Extended Security Updates (ESU) for AlmaLinux extend the lifecycle of specific A
 
 ### ESU lifecycle
 
-AlmaLinux provides a 10-year lifecycle with a new minor release arriving every 6 months, bringing new features until the fifth year. Each of the minor releases is supported for 6 months. Customers who want to remain with the specific AlmaLinux minor release for longer can opt for Extended Security Updates (ESU). ESU delivers an extension of an additional 4.5 years of security fixes for Critical and High-risk vulnerabilities as well as FIPS-compliant security patches for select AlmaLinux minor versions. The service is currently available for AlmaLinux 9.2 with planned support for AlmaLinux 9.6 and 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every 6 months and test/certify their applications against the next minor version at their own pace.
+AlmaLinux provides a 10-year lifecycle with a new minor release arriving every 6 months, bringing new features until the fifth year. Each of the minor releases is supported for 6 months. Customers who want to remain with the specific AlmaLinux minor release for longer can opt for Extended Security Updates (ESU).  
 
-![esu lifecycle](/images/esu_lifecycle_graph.png)
+ESU delivers an extended period of security fixes for critical and high-risk vulnerabilities for select AlmaLinux minor versions, as well as the full suite of five FIPS-validated modules (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified AlmaLinux deployments. The product also unlocks commercial use of the FIPS-validated packages.   
+
+Extended Security Updates are currently available for AlmaLinux 9.2 and have planned support for AlmaLinux 9.6 and 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every six months and test/certify their applications against the next minor version at their own pace.
+
+![esu lifecycle](/images/esu_lifecycle_graph2.png)
 
 :::warning
 **Disclaimer**: AlmaLinux minor releases planned for ESU are subject to change. TuxCare reserves the right to change them at any time without prior notice.
@@ -38,7 +41,7 @@ ESU provides security patches for High and Critical vulnerabilities (with a 7+ C
 
 ### FIPS-compliant security patches
 
-ESU enables continuous security for FIPS-certified AlmaLinux 9.2 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel and OpenSSL packages](/enterprise-support-for-almalinux/fips/). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/) and are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged kernel. This kernel will undergo an expedited FIPS 140-3 recertification to ensure it is attested to conform to FIPS 140-3 requirements.
+ESU enables continuous security for FIPS-certified AlmaLinux 9.2 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel, openssl, libcrypt, nss and gnutls packages](https://docs.tuxcare.com/enterprise-support-for-almalinux/#enabling-fips-140-3-mode). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/). They are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged module. This module will undergo an expedited FIPS 140-3 recertification to ensure it is attested to conform to FIPS 140-3 requirements.
 
 ### Target response times
 
@@ -215,49 +218,6 @@ Then run the following:
 # dnf downgrade openssl libgcrypt gnutls nettle nss
 # dnf remove kernel*tuxcare*
 # dnf upgrade
-```
-
-## **Live Patching (KernelCare and LibCare)**
-
-Live Patching brings rapid security patching for the kernel and critical userspace packages such as `glibc` and `openssl` using the [KernelCare Enterprise](https://docs.tuxcare.com/live-patching-services/) and [LibCare](https://docs.tuxcare.com/live-patching-services/#libcare) live patching technologies.
-
-### Installation
-
-To install the Live Patching product follow the instructions here or simply run the following as root to download the installer and configure the repo:
-
-```text
-# curl -s -L https://kernelcare.com/installer | bash
-```
-
-Then to activate your license:
-
-```text
-# kcarectl --register <KEY>
-```
-
-#### Enabling rapid security updates for userspace components
-
-To enable rapid security updates with live patching for critical userspace components such as `glibc` and `openssl` use the following commands to enable LibCare and periodic updates:
-
-```text
-# kcarectl --enable-libcare
-# libcare-cron init
-```
-
-### Using the Live Patching for AlmaLinux (KernelCare and LibCare)
-
-After installation, you can verify that your system has access to KernelCare live patching by running:
-
-```text
-# kcarectl -u
-```
-
-You should get a message like below, and the system is now receiving kernel security updates as live patches:
-
-```text
-Downloading updates
-Patch level 1 applied. Effective kernel version 5.14.0-162.12.1.el9_1
-Kernel is safe
 ```
 
 ## **Essential and Enhanced Support**
