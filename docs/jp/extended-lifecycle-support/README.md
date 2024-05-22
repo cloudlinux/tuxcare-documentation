@@ -116,7 +116,7 @@ python install-oraclelinux-els-repo.py --license-key XXX-XXXXXXXXXXXX
 
 インストールスクリプトを実行すると、そのキーと共にCLNにサーバーが登録され、サーバーにPGPキーが追加されます。
 
-3. インストールが成功したことを確認します。インストールが正常に完了したことを確認するには、以下のコマンドを実行します。   
+3. インストールが成功したことを確認します。インストールが正常に完了したことを確認するには、以下のコマンドを実行します。
 
 ```
 yum info els-define
@@ -134,7 +134,7 @@ Request repository token for this server... Ok
 Prepare repo configuration... Ok
 Save repo file to /etc/yum.repos.d/oraclelinux-els.repo... Ok
 Save GPG key to /etc/pki/rpm-gpg/RPM-GPG-KEY-CloudLinux... Ok
-Import Cloudlinux GPG... 
+Import Cloudlinux GPG...
 
 
 
@@ -214,7 +214,7 @@ Description-md5: 39e3bb446b4c63607f8f0358484545bf
 1. インストールスクリプトをダウンロードします。
 
   * CentOS 8.4の場合、
-  
+
   ```
   wget https://repo.cloudlinux.com/el8-els/centos8.4-els/install-centos8.4-els-repo.sh
   ```
@@ -232,13 +232,13 @@ Description-md5: 39e3bb446b4c63607f8f0358484545bf
   ```
   sh install-centos8.4-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
   ```
-  
+
   * CentOS 8.5の場合、
 
   ```
   sh install-centos8.5-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
   ```
-  
+
   インストールスクリプトを実行すると、そのキーと共にCLNにサーバーが登録され、サーバーにPGPキーが追加されます。
 
 3. インストールが成功したことを確認します。インストールが正常に完了したことを確認するには、以下のコマンドを実行します。
@@ -294,8 +294,8 @@ rsync://repo.cloudlinux.com/CENTOS6/
 例えば、
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6ELS/ .
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6/ .
 ```
 
 ### Oracle Linux 6 ELS
@@ -309,7 +309,7 @@ rsync://repo.cloudlinux.com/ORALINUX6ELS/
 例えば、
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/ORALINUX6ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/ORALINUX6ELS/ .
 ```
 
 ### Ubuntu 16.04 ELS
@@ -323,7 +323,7 @@ rsync://repo.cloudlinux.com/UBUNTU1604ELS/
 例えば、
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/UBUNTU1604ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/UBUNTU1604ELS/ .
 ```
 
 ### CentOS 8 ELS
@@ -339,7 +339,7 @@ rsync://repo.cloudlinux.com/CENTOS84_ELS/
 例えば、
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS84_ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS84_ELS/ .
 ```
 
 * CentOS 8.5の場合、
@@ -351,7 +351,7 @@ rsync://repo.cloudlinux.com/CENTOS85_ELS/
 例えば、
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS85_ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS85_ELS/ .
 ```
 
 ## #OVALデータ
@@ -379,7 +379,7 @@ rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS85_ELS/ .
 ### ELSでOVALを使用する方法
 
 #### CentOS 6、8、Oracle Linux 6の場合
- 
+
 OVALを使用するには、システムがELSとして定義されていることを確認してください。
 
 1. 以下のコマンドを実行します。
@@ -389,7 +389,7 @@ $ rpm -qi els-define centos-els-release | grep -o "8c55a6628608cb71"
 ```
 
 コマンドの結果が`8c55a6628608cb71`の場合、ご利用のシステムはELSとして定義されていますので、OVALを使用できます。
- 
+
 2. それ以外の場合は、以下のコマンドを使用して、`els-define`パッケージをインストールする必要があります。
 
 ```
@@ -408,7 +408,7 @@ $ apt list els-define | grep -o "installed"
 ```
 
 コマンドの結果が`installed`の場合、ご利用のシステムはELSとして定義されていますので、OVALを使用できます。
- 
+
 2. それ以外の場合は、以下のコマンドを使用して、`els-define`パッケージをインストールする必要があります。
 
 ```

@@ -21,8 +21,8 @@ rsync://repo.cloudlinux.com/CENTOS6/
 For example:
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6ELS/ .
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS6/ .
 ```
 
 ### OracleLinux 6 ELS
@@ -36,7 +36,7 @@ rsync://repo.cloudlinux.com/ORALINUX6ELS/
 For example:
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/ORALINUX6ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/ORALINUX6ELS/ .
 ```
 
 ### CentOS 8 ELS
@@ -52,7 +52,7 @@ rsync://repo.cloudlinux.com/CENTOS84_ELS/
 For example:
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS84_ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS84_ELS/ .
 ```
 
 * For CentOS 8.5:
@@ -64,7 +64,7 @@ rsync://repo.cloudlinux.com/CENTOS85_ELS/
 For example:
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/CENTOS85_ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS85_ELS/ .
 ```
 
 ### Ubuntu 16.04 ELS
@@ -78,7 +78,7 @@ rsync://repo.cloudlinux.com/UBUNTU1604ELS/
 For example:
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/UBUNTU1604ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/UBUNTU1604ELS/ .
 ```
 
 ### Ubuntu 18.04 ELS
@@ -90,7 +90,7 @@ rsync://repo.cloudlinux.com/UBUNTU1804ELS/
 
 For example:
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/UBUNTU1804ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/UBUNTU1804ELS/ .
 ```
 
 ### CentOS 7 ELS
@@ -100,7 +100,15 @@ To create a local mirror of the repository with security updates via `rsync`, u
 rsync://repo.tuxcare.com/CENTOS7ELS/
 ```
 
-For example:
+To create a local mirror of CentOS mirrors, use the following:
+
 ```
-rsync  -avSHP --delete rsync://repo.tuxcare.com/CENTOS7ELS/ .
+rsync://repo.tuxcare.com/CENTOS7/
+```
+
+For example:
+
+```
+rsync -avSHP --delete rsync://repo.tuxcare.com/CENTOS7ELS/ .
+rsync -avSHP --delete rsync://repo.tuxcare.com/CENTOS7/ .
 ```

@@ -536,7 +536,7 @@ rsync://repo.cloudlinux.com/PYTHON_ELS/
 サポートされているすべてのOSバージョンのローカルミラーを作成する例：
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
 ```
 
 ### OVALデータ
