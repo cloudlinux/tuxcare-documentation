@@ -458,7 +458,7 @@ rsync://repo.cloudlinux.com/PYTHON_ELS/
 Example of creating a local mirror for all supported OS versions:
 
 ```
-rsync  -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
+rsync -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
 ```
 
 ### OVAL data
