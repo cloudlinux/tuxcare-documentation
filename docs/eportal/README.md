@@ -1275,52 +1275,44 @@ For Debian-based distros:
 [new-host ~]# systemctl start eportal
 ```
 
-## Database backup
+## Backup and restore
 
 ### Create backup
 
-kc.eportal utility have an option to create database backup
+kc.eportal utility have an option to create a data backup
 
-`kc.eportal backup-db <path_to_directory>` - creates backup in provided directory. If directory is not exists it will be created.
-
-For example:
+`kc.eportal backup <path_to_archive>` - creates an archive with a backup.
 
 ```text
-# kc.eportal backup-db /usr/share/kcare-eportal/db-backup_$(date '+%Y-%m-%d')
+# kc.eportal backup /var/lib/eportal/backups/eportal_$(date '+%Y-%m-%d').tar.gz
 ```
 
-### Recover from backup
-
-You can replace existing databases (by default, in eportal home directory) with the backup files.
+### Restore data from a backup
 
 :::danger Warning!
-IMPORTANT: ePortal should be stopped before replacing database files. Backup files should have owner and group `nginx:nginx`.
+IMPORTANT: ePortal should be stopped before restore process.
 :::
 
 For example:
 
 ```text
 # systemctl stop eportal
-# cp -f /path/to/backup_dir/* /usr/share/kcare-eportal/
-# chown nginx:nginx /usr/share/kcare-eportal/*.sqlite*
-# systemctl start eportal
-```
-
-Also, you need to check remote patchsource settings (Login, Password, Download URL in eportal UI), and after it download patches
-
-```text
+# kc.eportal restore /var/lib/eportal/backups/eportal_backup.tar.gz
 # kc.eportal kcare download-missing
 # kc.eportal libcare download-missing
 # kc.eportal qemu download-missing
-# kc.eportal db download-missing
+# systemctl start eportal
 ```
+
+`download-missing` commands ensure patchset state on disk corresponds with a state
+in db.
 
 ## Config files
 
 * ePortal config: `/etc/eportal/config`. Config for old versions (<1.35): `/usr/share/kcare-eportal/local.py`.
 * Web Server (nginx) config: `/etc/nginx/conf.d/eportal.conf`.
-* Data directory (RHEL based distros): `/usr/share/kcare-eportal`.
-* Data directory (Debian based distros): `/var/lib/eportal`.
+* Data directory: `/var/lib/eportal`.
+* Legacy data directory (RHEL based distros for old versions <2.6): `/usr/share/kcare-eportal`.
 
 ## Stopping & starting
 
