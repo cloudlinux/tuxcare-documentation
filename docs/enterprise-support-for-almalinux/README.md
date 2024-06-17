@@ -274,7 +274,7 @@ There are two levels of support services for AlmaLinux:
 
 TuxCare Technical Support is designed for enterprise clients with trained IT staff which provide initial ‘1st-line' support to triage incidents. Customer and TuxCare will agree on Customer Technical Leads with the client, who will be entitled to access TuxCare Technical Support services; Customer Technical Leads must complete AlmaLinux training requirements. Customer Technical Leads may submit Technical Support Incidents and Service Requests to:
 
-1. Technical Support ticketing system:
+1. Technical Support ticketing system: [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/)
 
 * Acceptance of requests 24 hours a day, 365 days a year
 * Unlimited number of tickets may be submitted
