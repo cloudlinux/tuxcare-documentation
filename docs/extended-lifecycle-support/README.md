@@ -28,7 +28,7 @@ Requests for customer-directed security patches for CVEs that are outside of the
 - In Testing: Testing the developed fix for the vulnerability
 - In Rollout: Releasing the fix in rollout repositories
 - Released: Fix has been fully released to all users
-- Ignored: This CVE is ignored for specific reasons, detailed in the statement field
+- Ignored: This CVE is ignored for specific reasons (low score or another), detailed in the statement field
 - Not Vulnerable: The vulnerability does not affect our version
 - Already Fixed: The vulnerability has already been addressed by the vendor
 
