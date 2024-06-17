@@ -16,9 +16,21 @@ Custom coverage options are available, including a 10-pack of customer-directed 
 
 Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
 
-We aim to deliver security patches for critical and high-risk vulnerabilities (CVSS 7+) within 14 days from when the vulnerabilities become publicly disclosed. This rapid response time significantly reduces the window of opportunity for potential attackers and meets most security regulation requirements. 
+We aim to deliver security patches for critical and high-risk vulnerabilities (CVSS 7+) within 14 days from when the vulnerabilities become publicly disclosed. This rapid response time significantly reduces the window of opportunity for potential attackers and meets most security regulation requirements.
 
 Requests for customer-directed security patches for CVEs that are outside of the ELS scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 14 days.
+
+### CVE status definition
+
+- Needs Triage: Vulnerability information received and pending initial review
+- In Research: Investigating the details of the vulnerability
+- In Progress: Developing a fix for the identified vulnerability
+- In Testing: Testing the developed fix for the vulnerability
+- In Rollout: Releasing the fix in rollout repositories
+- Released: Fix has been fully released to all users
+- Ignored: This CVE is ignored for specific reasons (low score or another), detailed in the statement field
+- Not Vulnerable: The vulnerability does not affect our version
+- Already Fixed: The vulnerability has already been addressed by the vendor
 
 ### Duration of support
 
