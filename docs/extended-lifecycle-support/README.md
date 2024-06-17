@@ -22,15 +22,15 @@ Requests for customer-directed security patches for CVEs that are outside of the
 
 ### CVE status definition
 
-- Needs Triage - we receive issue
-- In Research - we are investigating issue
-- In Progress - we are fixing problem
-- In Testing - we are testing our fix
-- In Rollout - fix released in rollout repos
-- Released - fix released
-- Ignored - we decide to ignore this CVE for some reason. Reason can be found in statement field
-- Not Vulnerable - vulnerable not exist in our version
-- Already Fixed - already fixed by vendor
+- Needs Triage: Vulnerability information received and pending initial review
+- In Research: Investigating the details of the vulnerability
+- In Progress: Developing a fix for the identified vulnerability
+- In Testing: Testing the developed fix for the vulnerability
+- In Rollout: Releasing the fix in rollout repositories
+- Released: Fix has been fully released to all users
+- Ignored: This CVE is ignored for specific reasons, detailed in the statement field
+- Not Vulnerable: The vulnerability does not affect our version
+- Already Fixed: The vulnerability has already been addressed by the vendor
 
 ### Duration of support
 
