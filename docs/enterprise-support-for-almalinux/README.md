@@ -22,10 +22,6 @@ Extended Security Updates (ESU) for AlmaLinux extend the lifecycle of specific A
 
 ### ESU lifecycle
 
-AlmaLinux provides a 10-year lifecycle with a new minor release arriving every 6 months, bringing new features until the fifth year. Each of the minor releases is supported for 6 months. Customers who want to remain with the specific AlmaLinux minor release for longer can opt for Extended Security Updates (ESU).
-
-ESU delivers an extended period of security fixes for critical and high-risk vulnerabilities for select AlmaLinux minor versions, as well as the full suite of five FIPS-validated modules (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified AlmaLinux deployments. The product also unlocks commercial use of the FIPS-validated packages.
-
 Extended Security Updates are currently available for AlmaLinux 9.2 and have planned support for AlmaLinux 9.6 and 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every six months and test/certify their applications against the next minor version at their own pace.
 
 ![esu lifecycle](/images/esu_lifecycle_graph2.png)
@@ -96,7 +92,7 @@ The TuxCare ESU/FIPS packages and repositories are cryptographically signed with
 `tuxctl` is the setup tool for TuxCare's Enterprise Support for AlmaLinux, which will configure your system to receive patches from the TuxCare repositories. To install `tuxctl` you need to install the `tuxcare-release` package first. This package contains the TuxCare repo definitions, TuxCare GPG key and the `tuxctl` setup tool. Run the following as root:
 
 ```text
-# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.$(uname -i).rpm
+# dnf install -y https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-$(rpm --eval %almalinux.%_arch).rpm
 ```
 
 The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your ESU license key provided as a command line argument like so:
@@ -139,43 +135,6 @@ Then you will have to run `tuxctl` like this:
 
 :::
 
-### SaaS usage
-
-If you are using ESU with our SaaS license in AWS, then the instructions are slightly different. You should login to your instance and run the following as root (use of `--fips` is optional depending on your needs):
-
-```text
-# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.$(uname -i).rpm
-
-# tuxctl --saas --fips
-```
-
-If you want to reclaim a license when you terminate an instance, you should first run:
-
-```text
-# tuxctl --delete
-
-De-registration successful
-```
-
-Then you can use that license to register another instance.
-
-If you want to check if you've already registered an instance, you can run the following to display your token:
-
-```text
-# tuxctl --validate
-
-Server is registered with token EXTENDED_SECURITY_UPDATES-SERVER-xxxxx
-```
-
-If the instance has no license installed, it will return:
-
-```text
-Server is not registered
-```
-
-:::warning
-We can provide a systemd unit file and instructions, should you want to incorporate installing tuxcare-release and registering using tuxctl into your AMI, so that when you spin-up an instance its ready to receive patches, simply email [support@tuxcare.com](support@tuxcare.com)
-:::
 
 ### Enabling FIPS 140-3 mode
 
@@ -185,17 +144,15 @@ To enable the FIPS repo, install the FIPS 140-3 validated packages, enable FIPS 
 
 ```text
 # tuxctl --fips -l ESU-XXXXXXXXXXXXXXXXXXXXXXXX
-# dnf -y install openssl-3.0.7-20.el9_2.tuxcare.1 kernel-5.14.0-284.11.1.el9_2.tuxcare.6
+# dnf -y install openssl-3.0.7-20.el9_2.tuxcare.1 kernel-5.14.0-284.11.1.el9_2.tuxcare.5
 # dnf -y install gnutls-3.7.6-23.el9_2.tuxcare.3 nettle-3.8-3.el9_2.tuxcare.1 libgcrypt-1.10.0-10.el9_2.tuxcare.3 nss-3.90.0-6.el9_2.tuxcare.1
-# grubby --set-default=/boot/vmlinuz-5.14.0-284.11.1.el9_2.tuxcare.6.$(uname -i)
+# grubby --set-default=/boot/vmlinuz-5.14.0-284.11.1.el9_2.tuxcare.5.$(uname -i)
 # fips-mode-setup --enable
 # reboot
 ```
 
 :::warning
 Note the aarch64 platform doesn't currently have FIPS-validated gnutls/libgcrypt/nss packages, so ARM users should only run the first `dnf` command to install the openssl and kernel packages.
-
-We also provide multilib i686 packages of the userspace modules in the x86_64 repo for backwards compatibility, note that these are not FIPS-validated but are built from the same source.
 :::
 
 Once you've logged in after the reboot, run these commands and check the output matches to confirm it worked:
@@ -205,7 +162,7 @@ $ fips-mode-setup --check
 FIPS mode is enabled.
 
 $ uname -r
-5.14.0-284.11.1.el9_2.tuxcare.6.x86_64
+5.14.0-284.11.1.el9_2.tuxcare.5.x86_64
 
 $ openssl list -providers | grep -A3 fips
   fips
@@ -230,14 +187,14 @@ To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux 
   -e 's|$tuxcare_releasever/$tuxcare_token|$releasever|g' \
   -e 's|almacare|tuxcare|g' \
   -e 's|$tuxcare_releasever|$releasever|g' \
-  -e '/^exclude/d' \
+  -e 's|$almacare_releasever|$releasever|g' \
   /etc/yum.repos.d/almalinux*.repo
 
 # reboot
 ```
 
 :::warning
-Note that by disabling ESU, you will revert to tracking major version releases instead of sticking to a specific minor version, so you may be upgraded from 9.2 to 9.4 for example - a process you cannot undo.
+Note that by disabling ESU, you will revert to tracking major version releases instead of sticking to a specific minor version, so you may be upgraded from 9.2 to 9.3 for example - a process you cannot undo.
 :::
 
 To completely remove the TuxCare packages, after following the above steps, run the following as root:
@@ -328,28 +285,6 @@ TuxCare Technical Support is designed for enterprise clients with trained IT sta
 
 * New tickets may be created by simply emailing the support desk: [support@tuxcare.com](support@tuxcare.com)
 
-:::warning
-If you are a user of our SaaS product on AWS Marketplace, before you contact support, you should have your AWS accountId to hand, there are various ways to find it.
-
-If you have the aws cli tool installed on your computer, you can run:
-
-```text
-$ aws sts get-caller-identity --query Account --output text
-
-123456789012
-```
-
-Alternatively you can make a request to the AWS API from within a running instance, as described [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html#retrieve-iid), for example using IMDSv1:
-
-```text
-$ curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | grep accountId
-
-  "accountId" : "123456789012",
-```
-
-Or if you have access to the [ec2 console](https://console.aws.amazon.com/console/home) you can simply click your username at the top right of the page. Your Account ID is the 12 digits in the dropdown.
-:::
-
 All customers are entitled to access the Support knowledgebase, FAQs, and other self-service tools as may be offered by Enterprise Support for AlmaLinux.
 
 #### Response Time
@@ -415,28 +350,28 @@ Technical support covered by any of the TuxCare Support Programs shall not be pr
 * Incidents for which the Customer cannot provide accurate information, as reasonably requested by TuxCare, in order to reproduce, investigate, and resolve the incident
 * Incidents which arise as a result of neglect or incorrect use of TuxCare instructions, which, if properly used, would have prevented the Incident
 
-### Installing tuxctl (Essential Support)
+### Switching repositories
 
-Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux version.
-
-If you are unsure, run this to find your exact OS version:
+For Essential Support customers wishing to use our vetted TuxCare repos instead of the community AlmaLinux ones, all you have to do is run the following as root:
 
 ```text
-$ cat /etc/almalinux-release
-
-AlmaLinux release 8.10 (Cerulean Leopard)
+# sed -i \
+  -e 's|https://repo.almalinux.org/almalinux/|https://repo.tuxcare.com/almalinux/|' \
+  -e 's|^mirrorlist|# mirrorlist|' \
+  -e 's|^# baseurl|baseurl|' \
+  /etc/yum.repos.d/almalinux*.repo
 ```
 
-You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (e.g. 8.10, 9.2, 9.4...) then install it as root, for example:
+This method will work for any version of AlmaLinux 8.x or 9.x, we currently don't mirror the vault (debuginfo/source) repo's.
+
+To revert back to the community mirrors you can run the following as root:
 
 ```text
-# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-8.10.$(uname -i).rpm
-```
-
-The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your Essential Support license key provided as a command line argument like so:
-
-```text
-# tuxctl --license-key ESA-XXXXXXXXXXXXXXXXXXXXXXXX
+# sed -i \
+  -e 's|https://repo.tuxcare.com/almalinux/|https://repo.almalinux.org/almalinux/|' \
+  -e 's|^# mirrorlist|mirrorlist|' \
+  -e 's|^baseurl|# baseurl|' \
+  /etc/yum.repos.d/almalinux*.repo
 ```
 
 :::warning
