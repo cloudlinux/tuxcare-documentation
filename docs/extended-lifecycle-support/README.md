@@ -50,6 +50,13 @@ TuxCare provides Extended Lifecycle Support (ELS) for up to four years (see the 
 
 TuxCare's Extended Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://cve.tuxcare.com/els/projects). Support for additional packages can be provided on request.
 
+### Live patching for ELS systems 
+
+TuxCare provides KernelCare live patching for **Ubuntu 18.04 ELS** and **CentOS 7 ELS** systems. [KernelCare](https://docs.tuxcare.com/live-patching-services/) is a product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It can be further enhanced with LibCare providing live security patches for critical shared libraries – openssl and glibc. Updating both the kernel and these libraries requires a system reboot while updating other packages does not. Using ELS, KernelCare and LibCare together provides comprehensive protection for your entire system without reboots and downtime.     
+
+You can easily add KernelCare to your ELS systems and start live patching them. You can also add ELS to systems already using KernelCare's live patching. Both ways, there's no need for system reboots or disruptions.
+
+Please note that if you are using KernelCare on the system that will soon reach its end-of-life date, you will be able to continue using it after this date without subscribing to ELS. In this scenario, you will [still receive](https://docs.tuxcare.com/live-patching-services/#kernel-patching-lifetime) live kernel patches, but won’t receive security updates for other operating system packages which are delivered by ELS. At the same time, if you choose to uninstall KernelCare from your Ubuntu 18.04 ELS or CentOS 7 ELS systems and subscribe these systems to ELS, all previously applied KernelCare patches will be removed. Consequently, the systems will start getting updates only from the ELS repository.
 
 ### Errata advisories
 
