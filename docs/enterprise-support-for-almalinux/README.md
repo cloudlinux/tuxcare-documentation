@@ -433,10 +433,21 @@ You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxc
 # dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-8.10.$(uname -i).rpm
 ```
 
+:::warning
+Be aware that installing tuxcare-release will modify any files that match the wildcard /etc/yum.repos.d/almalinux*
+:::
+
 The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your Essential Support license key provided as a command line argument like so:
 
 ```text
 # tuxctl --license-key ESA-XXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+Essential Support customers can upgrade to a new minor version, for example from 9.2 to 9.4 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
+
+```text
+# echo 9.4 > /etc/dnf/vars/tuxcare_releasever
+# dnf upgrade
 ```
 
 :::warning
