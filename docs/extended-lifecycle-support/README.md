@@ -1,6 +1,6 @@
-# Extended Lifecycle Support
+# Extended Lifecycle Support for OS
 
-TuxCare's [Extended Lifecycle Support (ELS)](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CloudLinux 6, CentOS 7, CentOS 8, CentOS Stream 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's [Extended Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CentOS 7, Oracle Linux 7, CentOS 8, CentOS Stream 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
@@ -43,12 +43,13 @@ TuxCare provides Extended Lifecycle Support (ELS) for up to four years (see the 
 | CentOS 8 | x86_64 | January 2022 | January 2026 |
 | CentOS Stream 8 | x86_64 | June 2024 | June 2028 |
 | Oracle Linux 6 | x86_64 | December 2020 | December 2024 |
+| Oracle Linux 7 | x86_64 | December 2024 | December 2028 |
 | Ubuntu 16.04 | amd64 | April 2021 | April 2025 |
 | Ubuntu 18.04 | amd64 | May 2023 | May 2028 |
 
 ### Supported packages
 
-TuxCare's Extended Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://cve.tuxcare.com/els/projects). Support for additional packages can be provided on request.
+TuxCare's Extended Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://cve.tuxcare.com/els/projects). The list of supported packages may change as projects can be added or removed from the list. Support for additional packages can be provided on request.
 
 ### Live patching for ELS systems 
 
@@ -88,6 +89,7 @@ els-rollout.cloudlinux.com
 ```
 
 - OracleLinux 6 ELS,
+- OracleLinux 7 ELS,
 - CentOS 8 ELS,
 - CentOS Stream 8 ELS,
 - Ubuntu 16.04 ELS,
@@ -108,8 +110,6 @@ els-rollout.tuxcare.com
 ### Technical Support
 
 All TuxCare products include technical support provided according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base.
-
-
 
 ## Installation instructions of yum repositories
 
@@ -190,7 +190,6 @@ After this, you will be able to install updates from the repository using a regu
 
 Example:
 
-
 ```
 [els@oraclelinux6 ~]# python install-oraclelinux-els-repo.py --license-key XXXX-XXXXXXX
 Check that repository isn't created... Ok
@@ -201,8 +200,6 @@ Save repo file to /etc/yum.repos.d/oraclelinux-els.repo... Ok
 Save GPG key to /etc/pki/rpm-gpg/RPM-GPG-KEY-CloudLinux... Ok
 Import Cloudlinux GPG...
 
-
-
 [els@oraclelinux6 ~]# yum info els-define
 
 Available Packages
@@ -212,9 +209,54 @@ Version     : 1
 Release     : 1.0.1.el6
 Size        : 2.7 k
 Repo        : oraclelinux-els
-Summary     : CentOS Server simulate release file
+Summary     : OEL6 Server simulate release file
 License     : GPLv2
-Description : CentOS Server simulate els release files
+Description : OLE6 Server simulate els release files
+```
+
+### OracleLinux 7 ELS
+
+1. Download an installer script:
+
+```
+wget https://repo.tuxcare.com/oraclelinux7-els/install-oraclelinux7-els-repo.sh
+```
+
+2. Run the installer script with keys:
+
+```
+sh install-oraclelinux7-els-repo.sh --license-key XXXX-XXXXXXXXX
+
+```
+
+The installation script registers the server in the CLN with the key and adds a PGP key to the server.
+
+3. Verify that the installation was successful. To ensure the installation has been completed successfully, run the following command:
+
+```
+yum info els-define
+```
+
+It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful.
+After this, you will be able to install updates from the repository using a regular yum upgrade command.
+
+Example:
+
+```
+[els@oraclelinux7 ~]# yum info els-define
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Installed Packages
+Name        : els-define
+Arch        : x86_64
+Version     : 1
+Release     : 1.0.4.el7
+Size        : 52
+Repo        : installed
+From repo   : oraclelinux7-els
+Summary     : OEL7 Server els-release file
+License     : GPLv2
+Description : OEL7 Server els-release file
 ```
 
 ### CentOS 7 ELS
@@ -470,6 +512,7 @@ Currently, we provide OVAL data for the following products:
 
 * CentOS 6: [https://repo.cloudlinux.com/centos6-els/centos6-els-oval.xml](https://repo.cloudlinux.com/centos6-els/centos6-els-oval.xml)
 * Oracle Linux 6: [https://repo.cloudlinux.com/oraclelinux6-els/oraclelinux6-els-oval.xml](https://repo.cloudlinux.com/oraclelinux6-els/oraclelinux6-els-oval.xml)
+* Oracle Linux 7: [https://repo.tuxcare.com/oraclelinux7-els/oraclelinux7-els-oval.xml](https://repo.tuxcare.com/oraclelinux7-els/oraclelinux7-els-oval.xml)
 * CentOS 7: [https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml](https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml)
 * CentOS 8.4: [https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml](https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml)
 * CentOS 8.5: [https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml](https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml)
@@ -544,6 +587,7 @@ Once that is validated, you can use the corresponding to the operating system OV
 * CentOS 6: [https://cve.tuxcare.com/rss_feed/releases/centos6els](https://cve.tuxcare.com/rss_feed/releases/centos6els)
 * CloudLinux 6: [https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els](https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els)
 * Oracle Linux 6: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els)
+* Oracle Linux 7: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els)
 * CentOS 7: [https://cve.tuxcare.com/rss_feed/releases/centos7els](https://cve.tuxcare.com/rss_feed/releases/centos7els)
 * CentOS 8.4: [https://cve.tuxcare.com/rss_feed/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/releases/centos8.4els)
 * CentOS 8.5: [https://cve.tuxcare.com/rss_feed/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/releases/centos8.5els)
