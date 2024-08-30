@@ -713,9 +713,6 @@ You've successfully integrated the TuxCare ELS for Spring repository into your p
 |                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
 |                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
 |                |          |                              |                                             |               |
-|                |          |                              |                                             |               |
-|                |          |                              |                                             |               |
-|                |          |                              |                                             |               |
 | CVE-2023-6378  | HIGH     | org.springframework.boot     | spring-boot-starter                         | 2.7.18        |
 |                |          | org.springframework.boot     | spring-boot-starter-activemq                | 2.7.18        |
 |                |          | org.springframework.boot     | spring-boot-starter-actuator                | 2.7.18        |
@@ -804,7 +801,6 @@ You've successfully integrated the TuxCare ELS for Spring repository into your p
 |                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
 |                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
 |                |          |                              |                                             |               |
-|                |          |                              |                                             |               |
 | CVE-2024-23672 | HIGH     | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
 |                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
 |                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
@@ -812,13 +808,6 @@ You've successfully integrated the TuxCare ELS for Spring repository into your p
 |                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
 |                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
 |                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
-|                |          |                              |                                             |               |
-|                |          |                              |                                             |               |
-| CVE-2022-4244  | HIGH     | org.springframework.boot     | spring-boot-maven-plugin                    | 2.7.18        |
-|                |          |                              |                                             |               |
-|                |          |                              |                                             |               |
-|                |          |                              |                                             |               |
-| CVE-2024-25710 | CRITICAL | org.springframework.boot     | spring-boot-maven-plugin                    | 2.7.18        |
 |                |          |                              |                                             |               |
 | CVE-2022-0084  | HIGH     | org.springframework.boot     | spring-boot-starter-undertow                | 2.7.18        |
 |                |          |                              |                                             |               |
