@@ -493,6 +493,338 @@ To confirm that the repository has been correctly established, include any libra
 
 You've successfully integrated the TuxCare ELS for Spring repository into your project. You can now benefit from the secure and vetted Spring libraries it provides.
 
+## Resolved CVEs in ELS for Spring
+
+| ID             | Severity | Group                        | Artifact                                    | Version       |
+| -------------- | -------- | ---------------------------- | ------------------------------------------- | ------------- |
+| CVE-2023-5379  | HIGH     | org.springframework.boot     | spring-boot-starter-undertow                | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2022-42003 | HIGH     | org.springframework.batch    | spring-batch-core                           | 4.3.10        |
+|                |          | org.springframework.data     | spring-data-cassandra                       | 3.4.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-batch                   | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2022-42004 | HIGH     | org.springframework.data     | spring-data-cassandra                       | 3.4.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-batch                   | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2021-46877 | HIGH     | org.springframework.boot     | spring-boot-starter-batch                   | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2020-36518 | HIGH     | org.springframework.boot     | spring-boot-starter-batch                   | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2024-22243 | HIGH     | org.springframework.data     | spring-data-rest-webmvc                     | 3.7.18        |
+|                |          | org.springframework.data     | spring-data-rest-core                       | 3.7.18        |
+|                |          | org.springframework.data     | spring-data-couchbase                       | 4.4.18        |
+|                |          | org.springframework          | spring-webflux                              | 5.3.31        |
+|                |          | org.springframework          | spring-websocket                            | 5.3.31        |
+|                |          | org.springframework          | spring-web                                  | 5.3.31        |
+|                |          | org.springframework.security | spring-security-oauth2-client               | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-core                 | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-jose                 | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-resource-server      | 5.7.11        |
+|                |          | org.springframework.security | spring-security-web                         | 5.7.11        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-graphql                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-json                    |               |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-rsocket                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-security                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2024-22259 | HIGH     | org.springframework.data     | spring-data-rest-webmvc                     | 3.7.18        |
+|                |          | org.springframework.data     | spring-data-rest-core                       | 3.7.18        |
+|                |          | org.springframework          | spring-webflux                              | 5.3.31        |
+|                |          | org.springframework          | spring-websocket                            | 5.3.31        |
+|                |          | org.springframework.data     | spring-data-couchbase                       | 4.4.18        |
+|                |          | org.springframework.security | spring-security-oauth2-client               | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-core                 | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-jose                 | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-resource-server      | 5.7.11        |
+|                |          | org.springframework.security | spring-security-web                         | 5.7.11        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-graphql                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-json                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-rsocket                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-security                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
+|                |          | org.springframework          | spring-web                                  | 5.3.31        |
+|                |          |                              |                                             |               |
+| CVE-2024-22262 | HIGH     | org.springframework.data     | spring-data-rest-webmvc                     | 3.7.18        |
+|                |          | org.springframework.data     | spring-data-rest-core                       | 3.7.18        |
+|                |          | org.springframework.data     | spring-data-couchbase                       | 4.4.18        |
+|                |          | org.springframework          | spring-websocket                            | 5.3.31        |
+|                |          | org.springframework          | spring-webflux                              | 5.3.31        |
+|                |          | org.springframework          | spring-web                                  | 5.3.31        |
+|                |          | org.springframework.security | spring-security-oauth2-client               | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-core                 | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-jose                 | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-resource-server      | 5.7.11        |
+|                |          | org.springframework.security | spring-security-web                         | 5.7.11        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-graphql                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-json                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-rsocket                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-security                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2023-1370  | HIGH     | org.springframework.data     | spring-data-rest-webmvc                     | 3.7.18        |
+|                |          | org.springframework.data     | spring-data-rest-core                       | 3.7.18        |
+|                |          | org.springframework.security | spring-security-oauth2-client               | 5.7.11        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2022-22965 | CRITICAL | org.springframework.plugin   | spring-plugin-core                          | 2.0.0.RELEASE |
+|                |          |                              |                                             |               |
+| CVE-2022-1471  | CRITICAL | org.springframework.data     | spring-data-elasticsearch                   | 4.4.18        |
+|                |          |                              |                                             |               |
+| CVE-2023-4043  | HIGH     | org.springframework.data     | spring-data-elasticsearch                   | 4.4.18        |
+|                |          |                              |                                             |               |
+| CVE-2024-22257 | HIGH     | org.springframework.security | spring-security-config                      | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-client               | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-core                 | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-jose                 | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-resource-server      | 5.7.11        |
+|                |          | org.springframework.security | spring-security-web                         | 5.7.11        |
+|                |          | org.springframework.security | spring-security-core                        | 5.7.11        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-security                |               |
+|                |          |                              |                                             |               |
+| CVE-2023-52428 | HIGH     | org.springframework.security | spring-security-oauth2-client               | 5.7.11        |
+|                |          | org.springframework.security | spring-security-oauth2-jose                 | 5.7.11        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2024-26308 | MEDIUM   | org.springframework.boot     | spring-boot-buildpack-platform              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-antlib                          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-gradle-plugin                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-loader-tools                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-maven-plugin                    | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2022-25857 | HIGH     | org.springframework.boot     | spring-boot-starter                         | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-activemq                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-actuator                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-aop                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-batch                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-cache                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-jdbc               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-jpa                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-ldap               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-mongodb            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-mongodb-reactive   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-neo4j              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-r2dbc              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-redis              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-redis-reactive     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-freemarker              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-graphql                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jdbc                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jooq                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-json                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jta-atomikos            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-mail                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-mustache                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-quartz                  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-rsocket                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-security                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-thymeleaf               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-validation              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2022-1471  | CRITICAL | org.springframework.boot     | spring-boot-starter                         | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-activemq                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-actuator                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-amqp                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-aop                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-batch                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-cache                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-jdbc               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-jpa                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-ldap               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-mongodb            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-mongodb-reactive   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-neo4j              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-r2dbc              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-redis              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-redis-reactive     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-freemarker              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-graphql                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jdbc                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jooq                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-json                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jta-atomikos            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-mail                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-mustache                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-quartz                  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-rsocket                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-security                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-thymeleaf               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-validation              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
+|                |          |                              |                                             |               |
+|                |          |                              |                                             |               |
+|                |          |                              |                                             |               |
+|                |          |                              |                                             |               |
+| CVE-2023-6378  | HIGH     | org.springframework.boot     | spring-boot-starter                         | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-activemq                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-actuator                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-amqp                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-aop                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-batch                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-cache                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-jdbc               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-jpa                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-ldap               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-mongodb            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-mongodb-reactive   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-neo4j              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-r2dbc              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-redis              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-redis-reactive     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-freemarker              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-graphql                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jdbc                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jooq                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-json                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jta-atomikos            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-logging                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-mail                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-mustache                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-quartz                  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-rsocket                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-security                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-thymeleaf               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-validation              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2023-6481  | HIGH     | org.springframework.boot     | spring-boot-starter                         | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-activemq                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-actuator                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-amqp                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-aop                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-batch                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-cache                   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-cassandra-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase          | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-couchbase-reactive | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-jdbc               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-jpa                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-ldap               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-mongodb            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-mongodb-reactive   | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-neo4j              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-r2dbc              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-redis              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-redis-reactive     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-freemarker              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-graphql                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jdbc                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jooq                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-json                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-jta-atomikos            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-logging                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-mail                    | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-mustache                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-client           | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-oauth2-resource-server  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-quartz                  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-rsocket                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-security                | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-thymeleaf               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-validation              | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-webflux                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
+|                |          |                              |                                             |               |
+|                |          |                              |                                             |               |
+| CVE-2024-23672 | HIGH     | org.springframework.boot     | spring-boot-starter-data-rest               | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-groovy-templates        | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-hateoas                 | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-tomcat                  | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web                     | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-web-services            | 2.7.18        |
+|                |          | org.springframework.boot     | spring-boot-starter-websocket               | 2.7.18        |
+|                |          |                              |                                             |               |
+|                |          |                              |                                             |               |
+| CVE-2022-4244  | HIGH     | org.springframework.boot     | spring-boot-maven-plugin                    | 2.7.18        |
+|                |          |                              |                                             |               |
+|                |          |                              |                                             |               |
+|                |          |                              |                                             |               |
+| CVE-2024-25710 | CRITICAL | org.springframework.boot     | spring-boot-maven-plugin                    | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2022-0084  | HIGH     | org.springframework.boot     | spring-boot-starter-undertow                | 2.7.18        |
+|                |          |                              |                                             |               |
+| CVE-2023-5685  | HIGH     | org.springframework.boot     | spring-boot-starter-undertow                | 2.7.18        |
+
+          
 ## Extended Lifecycle Support for Python
 
 Extended Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python 2.7 version for AlmaLinux 9. This allows to continue running Linux server vulnerability-free.
