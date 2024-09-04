@@ -394,10 +394,10 @@ TuxCare provides Extended Lifecycle Support (ELS) for more than three years (see
 | ---------------------- | ----------------------------- | ---------------------- |
 | Spring Framework 5.3   | 31 Aug 2024                   | 31 Dec 2027            |
 | Spring Boot 2.7        | 24 Nov 2023                   | 31 Dec 2027            |
-| Spring Security 5.6    | 31 Dec 2024                   | 31 Dec 2027            |
-| Spring Data 2.7        | 24 Nov 2023                   | 31 Dec 2027            |
-| Spring Integration 5.5 | 31 Dec 2024 **(coming soon)** | Planned                |
-| Spring Batch 4.3.x     | 31 Dec 2024 **(coming soon)** | Planned                |
+| Spring Security 5.8    | 31 Aug 2024                   | 31 Dec 2027            |
+| Spring Data 2.7        | 18 Nov 2023                   | 31 Dec 2027            |
+| Spring Integration 5.5 | 21 Nov 2023                   | 31 Dec 2027            |
+| Spring Batch 4.3       | 22 Nov 2024                   | 31 Dec 2027            |
 
 Support for additional libraries can be provided on request.
 
