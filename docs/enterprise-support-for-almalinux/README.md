@@ -60,8 +60,8 @@ ESU provides qualified security and selected bug-fix errata advisories across al
 
 Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities:
 
-* AlmaLinux 9.2 FIPS: [https://repo.tuxcare.com/tuxcare/9/almalinux9.2-fips-oval.xml](https://repo.tuxcare.com/tuxcare/9/almalinux9.2-fips-oval.xml)
-* AlmaLinux 9.2 ESU: [https://repo.tuxcare.com/tuxcare/9/almalinux9.2-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9/almalinux9.2-esu-oval.xml)
+* AlmaLinux 9.2 FIPS: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-fips-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-fips-oval.xml)
+* AlmaLinux 9.2 ESU: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml)
 
 ### Technical support
 
