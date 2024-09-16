@@ -1,0 +1,1 @@
+const l=JSON.parse('{"key":"v-d821cde8","path":"/local-mirror-els-for-languages/","title":"","lang":"en-US","frontmatter":{},"headers":[{"level":3,"title":"Installation instructions of a local mirror","slug":"installation-instructions-of-a-local-mirror","link":"#installation-instructions-of-a-local-mirror","children":[]}]}');export{l as data};
