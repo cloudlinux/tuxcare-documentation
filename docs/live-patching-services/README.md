@@ -2161,3 +2161,100 @@ The list of vulnerabilities addressed by system live patching (LibCare, QEMUCare
 /var/cache/kcare/libcare_cvelist
 ```
 
+# Live Patching for Proxmox VE 8
+
+## Overview of Proxmox VE 8
+
+Proxmox Virtual Environment (VE) 8 is a powerful, open-source platform for enterprise virtualization. It integrates KVM hypervisor and LXC containers, software-defined storage, and networking functionality on a single platform. Proxmox VE 8 offers a robust and scalable solution for managing virtual machines (VMs) and containers, making it ideal for data centers and enterprise environments.
+
+## The Need for Live Patching
+
+In the modern digital landscape, minimizing downtime is crucial. Applying security patches and updates often requires system reboots, leading to service interruptions. Live patching addresses this challenge by allowing you to apply critical updates to the kernel and key libraries without rebooting your servers. This ensures continuous security compliance and system availability.
+
+**Advantages of Live Patching:**
+
+-   **Zero Downtime Maintenance**: Apply critical updates without interrupting services or affecting end-users.
+-   **Enhanced Security Posture**: Rapid deployment of patches reduces the window of vulnerability.
+-   **Operational Efficiency**: Eliminates the need for scheduling maintenance windows and reduces the administrative burden.
+-   **Regulatory Compliance**: Meets compliance requirements that mandate timely application of security patches.
+-   **Cost Savings**: Minimizes potential revenue loss due to downtime and reduces operational overhead.
+
+Implementing live patching solutions is essential for organizations that prioritize both security and availability in their IT operations.
+
+## Introduction to TuxCare's Live Patching Services
+
+TuxCare offers a comprehensive suite of live patching services designed to keep Linux-based systems secure and up-to-date without the need for reboots or service restarts. These services seamlessly integrate with Proxmox VE 8, enhancing its capabilities and ensuring uninterrupted operations.
+
+**TuxCare's Live Patching Solutions:**
+
+-   **KernelCare**: Provides automated, rebootless kernel updates, ensuring the Linux kernel is always secure against the latest vulnerabilities.
+-   **LibCare**: Delivers live patching for critical shared libraries like OpenSSL and glibc, protecting user-space applications without requiring restarts.
+-   **QEMUCare**: Offers live patching for the QEMU emulator, allowing security fixes to be applied without stopping or migrating virtual machines.
+
+By integrating TuxCare's services into your Proxmox VE 8 environment, you can achieve a higher level of security and compliance while maintaining the performance and availability of your virtual infrastructure.
+
+### KernelCare for Proxmox VE 8
+
+KernelCare is a live patching solution that automatically applies security patches to the Linux kernel without requiring a reboot. This service ensures that your Proxmox VE 8 servers remain secure against known vulnerabilities while maintaining high availability.
+
+#### Integration with Proxmox VE 8
+
+In a Proxmox VE 8 environment, KernelCare ensures that the underlying Linux kernel is always protected without affecting the operation of VMs and containers. This integration offers:
+
+-   **Cluster-Wide Protection**: Apply kernel patches across all nodes in a Proxmox cluster without rebooting any servers.
+-   **Simplified Management**: Centralized control and monitoring of kernel patch status across multiple nodes.
+-   **Reduced Risk**: Mitigates the risk of security breaches that could compromise the entire virtualized infrastructure.
+
+#### Getting Started with KernelCare
+
+For detailed installation instructions, please refer to the [KernelCare Installation Guide](https://docs.tuxcare.com/live-patching-services/#installation-1) .
+
+### LibCare for Proxmox VE 8
+
+Shared libraries like **OpenSSL** and **glibc** are fundamental to the operation of many applications and services. Vulnerabilities in these libraries can lead to serious security breaches, such as unauthorized data access or remote code execution. Traditionally, updating these libraries requires restarting the services or applications that use them, which can cause downtime.
+
+**LibCare** provides a solution by enabling live patching of these critical shared libraries without the need to restart dependent services or reboot the servers. This ensures that security updates are applied promptly, keeping your system secure while maintaining service availability.
+
+#### Importance in Proxmox VE 8
+
+In the context of Proxmox VE 8, LibCare plays a critical role in maintaining the security of both the host environment and the guest virtual machines:
+
+-   **Secure Management Interfaces**: Protects the Proxmox web interface and API from vulnerabilities in libraries like OpenSSL.
+-   **Guest Isolation**: Ensures that vulnerabilities in shared libraries do not compromise the isolation between VMs or containers.
+-   **Service Reliability**: Maintains the stability of critical services by avoiding restarts.
+
+#### Getting Started with LibCare
+
+For detailed installation instructions, please refer to the [LibCare Installation Guide](https://docs.tuxcare.com/live-patching-services/#libcare) .
+
+### QEMUCare for Proxmox VE 8
+
+#### Overview
+
+**QEMU** is the emulator and virtualizer used by Proxmox VE to run virtual machines. Vulnerabilities in QEMU can pose significant risks, potentially allowing attackers to escape from guest environments or cause denial-of-service conditions. Traditionally, patching QEMU requires stopping or migrating virtual machines, which can be disruptive.
+
+**QEMUCare** provides live patching for QEMU, enabling security updates to be applied without interrupting running virtual machines. This ensures that your virtual infrastructure remains secure while maintaining continuous operation.
+
+#### Benefits
+
+-   **Uninterrupted VM Operation**: Apply security patches without stopping or migrating VMs.
+-   **Immediate Vulnerability Mitigation**: Quickly address security flaws as patches become available.
+-   **Operational Continuity**: Avoids the complexity and risk associated with migrating VMs for maintenance.
+-   **Simplified Management**: Reduces the administrative burden of coordinating VM downtime.
+-   **Compliance Assurance**: Helps meet security compliance requirements by ensuring the virtualization layer is up-to-date.
+
+#### Integration with Proxmox VE 8
+
+In Proxmox VE 8 environments, QEMUCare enhances the security of the virtualization stack:
+
+-   **Secure Virtualization Layer**: Protects against exploits targeting QEMU vulnerabilities.
+-   **Cluster-Wide Deployment**: Apply patches across all nodes without affecting cluster operations.
+-   **Reduced Risk**: Minimizes the attack surface by keeping the hypervisor components up-to-date.
+
+#### Getting Started with QEMUCare
+
+For detailed installation instructions, please refer to the [QEMUCare Installation Guide](https://docs.tuxcare.com/live-patching-services/#qemucare) .
+
+## Conclusion
+
+Integrating TuxCare’s live patching services—KernelCare, LibCare, and QEMUCare—into your Proxmox VE 8 environment provides a robust solution for maintaining system security and uptime. By following the installation and configuration steps outlined in this guide, you can ensure that your virtualization infrastructure remains secure and operational without the need for disruptive reboots or service restarts.
