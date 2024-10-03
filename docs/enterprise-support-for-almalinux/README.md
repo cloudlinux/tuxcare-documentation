@@ -63,6 +63,11 @@ Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions w
 * AlmaLinux 9.2 FIPS: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-fips-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-fips-oval.xml)
 * AlmaLinux 9.2 ESU: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml)
 
+### RSS releases feeds
+
+* AlmaLinux 9.2 FIPS: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2fips](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2fips)
+* AlmaLinux 9.2 ESU: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu)
+
 ### Technical support
 
 All TuxCare products include technical support provided according to the support policy [https://tuxcare.com/TuxCare-support-policy.pdf](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base.
