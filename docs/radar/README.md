@@ -8,37 +8,29 @@ TuxCare Radar is an intelligent vulnerability scanner for Linux systems, fully i
 
 ## Installation
 
-If you are not already a KernelCare or ePortal user, you will first need to install our repository configuration:
+First you need to install our repository configuration:
 
 RPM-based distributions (AlmaLinux, RHEL etc):
 
 ```text
-cat > /etc/yum.repos.d/kernelcare.repo <<EOL
-[kernelcare]
-name=kernelcare
-baseurl=https://repo.cloudlinux.com/kernelcare/\$releasever/\$basearch
+cat > /etc/yum.repos.d/tuxcare-radar.repo <<EOL
+[tuxcare-radar]
+name=TuxCare Radar
+baseurl=https://repo.tuxcare.com/radar/\$releasever/\$basearch/
 enabled=1
 gpgcheck=1
-gpgkey=https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare
+skip_if_unavailable=1
+gpgkey=https://repo.tuxcare.com/radar/RPM-GPG-KEY-TuxCare
 EOL
 ```
 
-For APT-based distributions (Debian, Ubuntu etc):
+APT-based distributions (Debian, Ubuntu etc):
 
 ```text
-curl -s https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare.gpg
-
-source /etc/os-release
-
-if [ "$ID" = "debian" ]; then export VERSION_CODENAME=kcare; fi
-
-printf '%s' \
-  "deb [signed-by=/usr/share/keyrings/kcare.gpg] " \
-  "https://repo.cloudlinux.com/kernelcare/kernelcare-$ID/$VERSION_ID " \
-  "$VERSION_CODENAME main" > /etc/apt/sources.list.d/kcare.list
+echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/tuxcare.gpg] https://repo.tuxcare.com/radar/debian stable main" > /etc/apt/sources.list.d/tuxcare-radar.list
 ```
 
-If you are already a KernelCare user or have followed the above repo instructions, you should be able to install Radar as simply as running one of the following:
+You should now be able to install Radar as simply as running one of the following:
 
 RPM-based distributions (AlmaLinux, RHEL etc):
 
@@ -46,7 +38,7 @@ RPM-based distributions (AlmaLinux, RHEL etc):
 yum install tuxcare-radar
 ```
 
-For APT-based distributions (Debian, Ubuntu etc):
+APT-based distributions (Debian, Ubuntu etc):
 
 ```text
 apt-get install tuxcare-radar
@@ -83,4 +75,3 @@ su -s /bin/bash nobody -c "tuxcare-radar --config /etc/tuxcare-radar/radar.yaml"
 ```
 
 Then visit [https://radar.tuxcare.com](https://radar.tuxcare.com/) to view the results.
-
