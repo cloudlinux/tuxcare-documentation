@@ -497,6 +497,9 @@ You've successfully integrated the TuxCare ELS for Spring repository into your p
 
 | ID             | Severity | Group                        | Artifact                                    | Version       |
 | -------------- | -------- | ---------------------------- | ------------------------------------------- | ------------- |
+| CVE-2024-38816 | HIGH     | org.springframework          | spring-webmvc                               | 5.3.39        |
+|                |          | org.springframework          | spring-webflux                              | 5.3.39        |
+|                |          |                              |                                             |               |
 | CVE-2023-5379  | HIGH     | org.springframework.boot     | spring-boot-starter-undertow                | 2.7.18        |
 |                |          |                              |                                             |               |
 | CVE-2022-42003 | HIGH     | org.springframework.batch    | spring-batch-core                           | 4.3.10        |
