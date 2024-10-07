@@ -27,7 +27,14 @@ EOL
 APT-based distributions (Debian, Ubuntu etc):
 
 ```text
-echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/tuxcare.gpg] https://repo.tuxcare.com/radar/debian stable main" > /etc/apt/sources.list.d/tuxcare-radar.list
+curl -s https://repo.tuxcare.com/radar/tuxcare.gpg -o /usr/share/keyrings/tuxcare.gpg
+
+source /etc/os-release
+
+printf '%s' \
+  "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/tuxcare.gpg] " \
+  "https://repo.tuxcare.com/radar/$ID/$VERSION_ID " \
+  "stable main" > /etc/apt/sources.list.d/tuxcare-radar.list
 ```
 
 You should now be able to install Radar as simply as running one of the following:
