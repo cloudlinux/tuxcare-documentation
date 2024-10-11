@@ -48,6 +48,7 @@ yum install tuxcare-radar
 APT-based distributions (Debian, Ubuntu etc):
 
 ```text
+apt-get update
 apt-get install tuxcare-radar
 ```
 
