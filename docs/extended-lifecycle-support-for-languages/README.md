@@ -497,6 +497,8 @@ You've successfully integrated the TuxCare ELS for Spring repository into your p
 
 | ID             | Severity | Group                        | Artifact                                    | Version       |
 | -------------- | -------- | ---------------------------- | ------------------------------------------- | ------------- |
+| CVE-2022-1471  | CRITICAL | org.yaml                     | snakeyaml                                   | 1.33          |
+|                |          |                              |                                             |               |
 | CVE-2024-38816 | HIGH     | org.springframework          | spring-webmvc                               | 5.3.39        |
 |                |          | org.springframework          | spring-webflux                              | 5.3.39        |
 |                |          |                              |                                             |               |
