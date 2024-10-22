@@ -790,7 +790,13 @@ Available options:
   * **Testing**: all patchsets available on [the patch server](https://patches.kernelcare.com/).
   * **Unstable**: patches from early-access feed (not recommended).
 
-Every 10 minutes ePortal checks for new patches on the main patch server. If a new patch is available, it is uploaded to the ePortal server. Note: it is uploaded but is not deployed. The patch availability time is considered starting from the moment a new patch appears on the ePortal, and that time is taken into account in `Deploy after X hours` option. So, if a user sets `Deploy after X hours = 10`, the patch will be deployed to the feed 10 hours after it has been downloaded to the ePortal server.
+Every 10 minutes ePortal checks for new patches on the main patch server. If a new patch is available, it is uploaded to the ePortal server. Note: it is uploaded but is not deployed.
+
+:::tip Note
+For information about configuring a client to periodically check and automatically download new patch sets, see [client configuration](#kernelcare-enterprise-client-config-file)
+:::
+
+The patch availability time is considered starting from the moment a new patch appears on the ePortal, and that time is taken into account in `Deploy after X hours` option. So, if a user sets `Deploy after X hours = 10`, the patch will be deployed to the feed 10 hours after it has been downloaded to the ePortal server.
 
 To make the feed auto-update immediately, so new patches are loaded to the feed immediately after they are available on ePortal, set `Deploy after X hours = 0`.
 
