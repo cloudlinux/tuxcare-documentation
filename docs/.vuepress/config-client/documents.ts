@@ -30,14 +30,14 @@ export default [
         link: "/eportal-api/",
     },
     {
-        title: "Extended Lifecycle Support",
+        title: "Endless Lifecycle Support",
         description: "allows you to continue running your Linux server after the operating system’s end of life.",
-        link: "/extended-lifecycle-support/",
+        link: "/endless-lifecycle-support/",
     },
     {
-        title: "Extended Lifecycle Support for Languages",
+        title: "Endless Lifecycle Support for Languages",
         description: "provides security fixes for PHP and Python versions that have reached their end-of-life which allows to continue running Linux server vulnerability-free.",
-        link: "/extended-lifecycle-support-for-languages/",
+        link: "/endless-lifecycle-support-for-languages/",
     },
     {
         title: "Subscription Management Portal",

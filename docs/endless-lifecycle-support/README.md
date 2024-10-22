@@ -1,6 +1,6 @@
-# Extended Lifecycle Support for OS
+# Endless Lifecycle Support for OS
 
-TuxCare's [Extended Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CentOS 7, Oracle Linux 7, CentOS 8, CentOS Stream 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's [Endless Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CentOS 7, Oracle Linux 7, CentOS 8, CentOS Stream 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
@@ -8,7 +8,7 @@ Our ELS service is designed to provide solutions for organizations that are not 
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.
 
-TuxCare Extended Lifecycle Support, by default, provides security patches for High and Critical vulnerabilities (with a 7+ CVSS score). For vulnerabilities rated as Medium (4.0 to 6.9), TuxCare can provide patches for CVE's where mitigations are not available and there is sufficient customer demand.
+TuxCare Endless Lifecycle Support, by default, provides security patches for High and Critical vulnerabilities (with a 7+ CVSS score). For vulnerabilities rated as Medium (4.0 to 6.9), TuxCare can provide patches for CVE's where mitigations are not available and there is sufficient customer demand.
 
 Custom coverage options are available, including a 10-pack of customer-directed patches for clients who need CVEs patched outside of the ELS scope. Specific details regarding these coverage options and their pricing can be obtained by contacting our sales team.
 
@@ -32,24 +32,9 @@ Requests for customer-directed security patches for CVEs that are outside of the
 - Not Vulnerable: The vulnerability does not affect our version
 - Already Fixed: The vulnerability has already been addressed by the vendor
 
-### Duration of support
-
-TuxCare provides Extended Lifecycle Support (ELS) for up to four years (see the table below for exceptions). This support is offered after the Linux distribution has reached its End of Life (EOL) or no longer receives standard support.
-
-| **Distribution** | **Arch** | **EOL** | **ELS** |
-|---|---|---|---|
-| CentOS 6 | x86_64 i386 | November 2020 | November 2026 |
-| CentOS 7 | x86_64 i386 | June 2024 | June 2029 |
-| CentOS 8 | x86_64 | January 2022 | January 2026 |
-| CentOS Stream 8 | x86_64 | June 2024 | June 2028 |
-| Oracle Linux 6 | x86_64 | December 2020 | December 2024 |
-| Oracle Linux 7 | x86_64 | December 2024 | December 2028 |
-| Ubuntu 16.04 | amd64 | April 2021 | April 2025 |
-| Ubuntu 18.04 | amd64 | May 2023 | May 2028 |
-
 ### Supported packages
 
-TuxCare's Extended Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://cve.tuxcare.com/els/projects). The list of supported packages may change as projects can be added or removed from the list. Support for additional packages can be provided on request.
+TuxCare's Endless Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://cve.tuxcare.com/els/projects). The list of supported packages may change as projects can be added or removed from the list. Support for additional packages can be provided on request.
 
 ### Live patching for ELS systems 
 
@@ -61,17 +46,17 @@ Please note that if you are using KernelCare on the system that will soon reach 
 
 ### Errata advisories
 
-TuxCare Extended Lifecycle Support provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which CVEs are resolved and which bugs have been addressed. You can view the full list of released advisories [here](https://cve.tuxcare.com/els/releases).
+TuxCare Endless Lifecycle Support provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which CVEs are resolved and which bugs have been addressed. You can view the full list of released advisories [here](https://cve.tuxcare.com/els/releases).
 
 ### OVAL patch definitions
 
-Leveraging the [Open Vulnerability and Assessment Language (OVAL)](/extended-lifecycle-support/#oval-data) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
+Leveraging the [Open Vulnerability and Assessment Language (OVAL)](/endless-lifecycle-support/#oval-data) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
 
 ### Connection to ELS repository
 
-To install the Extended Lifecycle Support repository on a server, you just need to download an installer script and run the script with a key. The installation script will register the server in the CLN with the key, add a PGP key to the server, and create the ELS repository.
+To install the Endless Lifecycle Support repository on a server, you just need to download an installer script and run the script with a key. The installation script will register the server in the CLN with the key, add a PGP key to the server, and create the ELS repository.
 
-In order to use Extended Lifecycle Support, you will need to open TCP port 443 to the following destinations:
+In order to use Endless Lifecycle Support, you will need to open TCP port 443 to the following destinations:
 
 * [cln.cloudlinux.com](http://cln.cloudlinux.com)
 * [repo.cloudlinux.com](http://repo.cloudlinux.com)
@@ -445,7 +430,7 @@ Version: 1-1.0.1
 Architecture: amd64
 Maintainer: Darya Malyavkina <dmalyavkina@cloudlinux.com>
 Installed-Size: 10
-Homepage: https://tuxcare.com/extended-lifecycle-support/
+Homepage: https://tuxcare.com/endless-lifecycle-support/
 Priority: optional
 Section: utils
 Filename: pool/main/e/els-define/els-define_1-1.0.1_amd64.deb

@@ -25,19 +25,19 @@ export default {
             ]
         },
     ],
-    '/extended-lifecycle-support/': [
+    '/endless-lifecycle-support/': [
         {
             collapsable: false,
             children: [
-                "/extended-lifecycle-support/",
+                "/endless-lifecycle-support/",
             ]
         },
     ],
-    '/extended-lifecycle-support-for-languages/': [
+    '/endless-lifecycle-support-for-languages/': [
         {
             collapsable: false,
             children: [
-                "/extended-lifecycle-support-for-languages/",
+                "/endless-lifecycle-support-for-languages/",
             ]
         },
     ],
