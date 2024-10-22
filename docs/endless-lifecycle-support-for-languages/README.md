@@ -1,12 +1,12 @@
-# Extended Lifecycle Support for Languages
+# Endless Lifecycle Support for Languages
 
-## Extended Lifecycle Support for PHP
+## Endless Lifecycle Support for PHP
 
-Extended Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows to continue running Linux server vulnerability-free.
+Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows to continue running Linux server vulnerability-free.
 
 ### Supported OS
 
-TuxCare provides Extended Lifecycle Support through four years after the EOL date.
+TuxCare provides Endless Lifecycle Support through four years after the EOL date.
 
 | OS                                    | Version                                               |
 | :-----------------------------------: | :----------------------------------------------:      |
@@ -359,9 +359,9 @@ zlib
 As you can see, each version is entirely self-contained, and changing configurations in one will not impact the others, a desired feature in hosting environments.
 
 
-## Extended Lifecycle Support for Spring Framework and Spring Boot
+## Endless Lifecycle Support for Spring Framework and Spring Boot
 
-TuxCare's Extended Lifecycle Support (ELS) for Spring provides security updates, system enhancement patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Spring ecosystem components such as Spring Framework, Spring Boot, Spring Data, Spring Security, etc. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's Endless Lifecycle Support (ELS) for Spring provides security updates, system enhancement patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Spring ecosystem components such as Spring Framework, Spring Boot, Spring Data, Spring Security, etc. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
 Our ELS for Spring service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Spring applications.
 
@@ -388,7 +388,7 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 
 ### Supported Projects and Duration of Support
 
-TuxCare provides Extended Lifecycle Support (ELS) for more than three years (see the table below for details). This support is offered after the Spring project has reached its End of Life (EOL) or no longer receives standard support.
+TuxCare provides Endless Lifecycle Support (ELS) for more than three years (see the table below for details). This support is offered after the Spring project has reached its End of Life (EOL) or no longer receives standard support.
 
 | Project                | End of OSS Support            | End of TuxCare Support |
 | ---------------------- | ----------------------------- | ---------------------- |
@@ -819,9 +819,9 @@ You've successfully integrated the TuxCare ELS for Spring repository into your p
 | CVE-2023-5685  | HIGH     | org.springframework.boot     | spring-boot-starter-undertow                | 2.7.18        |
 
           
-## Extended Lifecycle Support for Python
+## Endless Lifecycle Support for Python
 
-Extended Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python 2.7 version for AlmaLinux 9. This allows to continue running Linux server vulnerability-free.
+Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python 2.7 version for AlmaLinux 9. This allows to continue running Linux server vulnerability-free.
 
 ### Installation instructions of yum repositories
 
