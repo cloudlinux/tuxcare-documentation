@@ -20,7 +20,18 @@ TuxCare provides Endless Lifecycle Support through four years after the EOL date
 
 **Ubuntu:** 5.6.40, 7.0.33, 7.1.33, 7.2.34, 7.3.33, 7.4.33, 8.0.30, 8.1.27, 8.2, 8.3
 
+### Vulnerability Coverage and Target Response Times
 
+TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we prioritize the NVD score.
+
+Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
+
+TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
+
+-   **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
+-   **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
+-   **Low-severity CVEs:** Patches provided within 90 days
+-   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
 ### Installation instructions of yum repositories
 
