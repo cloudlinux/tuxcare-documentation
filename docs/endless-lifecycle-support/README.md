@@ -96,7 +96,7 @@ els-rollout.tuxcare.com
 
 All TuxCare products include technical support provided according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to our online knowledge base.
 
-## Installation instructions of yum repositories
+## Installation of repositories
 
 ### CentOS 6 ELS
 
@@ -420,7 +420,7 @@ apt-cache show els-define
 ```
 
 It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful.
-After this, you will be able to install updates from the repository using a regular yum upgrade command.
+After this, you will be able to install updates from the repository using a regular apt upgrade command.
 
 Example:
 ```
@@ -456,7 +456,7 @@ bash install-ubuntu18.04-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
 ```
 apt-cache show els-define
 ```
-It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful. After this, you will be able to install updates from the repository using a regular yum upgrade command.
+It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful. After this, you will be able to install updates from the repository using a regular apt upgrade command.
 
 Example:
 ```
