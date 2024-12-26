@@ -20,6 +20,7 @@
     "algoliasearch": "4.14.3",
     "cl-doc-vue-bot-ui": "0.1.4",
     "instantsearch.js": "4.55.0",
+    "marked": "^15.0.4",
     "mitt": "^3.0.0",
     "stylus": "^0.59.0",
     "vue-instantsearch": "4.9.0",
