@@ -170,6 +170,34 @@ It can be more convenient to use on of:
 * if you have an access to a host (it is alive) it's a way more simpler to call `kcarectl --unregister` to delete the host.
 * if host is already destroyed you can consider using bulk [inactive server cleanup](#clean-inactive-servers).
 
+## Bulk unregister hosts
+
+**DELETE /admin/api/servers**
+
+Removes registered servers by the latest check-in age.
+
+Requires basic authorization with admin user permissions.
+
+**Query string parameters:**
+
+* `checkin_age`: Integer, required, greater or equal 1. Delete servers that sent latest check-in more than `checkin_age` days ago.
+
+**Response:**
+
+Response contains number of deleted servers.
+
+```json
+{
+    "result": 1200
+}
+```
+
+For example:
+
+```
+curl --user admin:admin-password -X DELETE https://eportal.corp.com/admin/api/servers?checkin_age=15
+```
+
 
 ## Create/modify feed
 
