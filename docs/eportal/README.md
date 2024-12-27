@@ -43,7 +43,7 @@ As far as other requirements concerned, we have tested the following configurati
 If you are installing for the first time, please confirm with our sales engineering team at [sales@tuxcare.com](sales@tuxcare.com) **BEFORE** trying the installation via the documentation below. Please note that support tickets resulting from not following this recommendation will not be accepted.
 :::
 
-ePortal is compatible with 64-bit versions of EL7/8/9 based distros like CentOS 7/8, AlmaLinux 8/9 and Ubuntu 20.04/22.04
+ePortal is compatible with 64-bit versions of EL7/8/9 based distros like CentOS 7/8, AlmaLinux 8/9, Ubuntu 20.04/22.04/24.04 and Debian 11/12
 
 ### RHEL-based distros
 
@@ -110,7 +110,7 @@ Install ePortal:
 Setup ePortal repo:
 
 ```text
-# apt-get install -y --no-install-recommends curl ca-certificates
+# apt update && apt install -y --no-install-recommends curl ca-certificates
 
 # curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
 
@@ -122,7 +122,7 @@ EOL
 Install ePortal:
 
 ```text
-# apt-get update && apt-get install -y --no-install-recommends kcare-eportal
+# apt update && apt install -y --no-install-recommends kcare-eportal
 ```
 
 ### Ubuntu 22.04
@@ -130,7 +130,7 @@ Install ePortal:
 Setup ePortal repo:
 
 ```text
-# apt-get install -y --no-install-recommends curl ca-certificates
+# apt update && apt install -y --no-install-recommends curl ca-certificates
 
 # curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
 
@@ -142,7 +142,63 @@ EOL
 Install ePortal:
 
 ```text
-# apt-get update && apt-get install -y --no-install-recommends kcare-eportal
+# apt update && apt install -y --no-install-recommends kcare-eportal
+```
+
+### Ubuntu 24.04
+
+Setup ePortal repo:
+
+```text
+# apt update && apt install -y --no-install-recommends curl ca-certificates
+
+# curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
+
+# cat > /etc/apt/sources.list.d/kcare-eportal.list <<EOL
+deb [signed-by=/usr/share/keyrings/kcare-eportal.gpg] https://repo.cloudlinux.com/kcare-eportal/24.04 noble main
+EOL
+```
+
+Install ePortal:
+
+```text
+# apt update && apt install -y --no-install-recommends kcare-eportal
+```
+
+### Debian 11
+
+```text
+# apt update && apt install -y --no-install-recommends curl ca-certificates
+
+# curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
+
+# cat > /etc/apt/sources.list.d/kcare-eportal.list <<EOL
+deb [signed-by=/usr/share/keyrings/kcare-eportal.gpg] https://repo.cloudlinux.com/kcare-eportal/debian/11 kcare main
+EOL
+```
+
+Install ePortal:
+
+```text
+# apt update && apt install -y --no-install-recommends kcare-eportal
+```
+
+### Debian 12
+
+```text
+# apt update && apt install -y --no-install-recommends curl ca-certificates
+
+# curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
+
+# cat > /etc/apt/sources.list.d/kcare-eportal.list <<EOL
+deb [signed-by=/usr/share/keyrings/kcare-eportal.gpg] https://repo.cloudlinux.com/kcare-eportal/debian/12 kcare main
+EOL
+```
+
+Install ePortal:
+
+```text
+# apt update && apt install -y --no-install-recommends kcare-eportal
 ```
 
 ## Allowed hosts
