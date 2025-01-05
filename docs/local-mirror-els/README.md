@@ -124,3 +124,17 @@ For example:
 ```
 rsync -avSHP --delete rsync://repo.tuxcare.com/CENTOS8STREAMELS/ .
 ```
+
+### OracleLinux 7 ELS
+
+To create a local mirror of the repository with security updates via `rsync`, use the following:
+
+```
+rsync://repo.tuxcare.com/ORACLELINUX7ELS/
+```
+
+For example:
+
+```
+rsync -avSHP --delete rsync://repo.tuxcare.com/ORACLELINUX7ELS/ .
+```
