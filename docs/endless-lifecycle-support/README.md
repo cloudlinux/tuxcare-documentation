@@ -501,7 +501,7 @@ Currently, we provide OVAL data for the following products:
 * CentOS 7: [https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml](https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml)
 * CentOS 8.4: [https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml](https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml)
 * CentOS 8.5: [https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml](https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml)
-* CentOS Stream 8: [https://repo.cloudlinux.com/centos8stream-els/centos8stream-els-oval.xml](https://repo.cloudlinux.com/centos8stream-els/centos8stream-els-oval.xml)
+* CentOS Stream 8: [https://repo.tuxcare.com/centos8stream-els/centos8stream-els-oval.xml](https://repo.tuxcare.com/centos8stream-els/centos8stream-els-oval.xml)
 * Ubuntu 16.04: [https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml)
 * Ubuntu 18.04: [https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml)
 
