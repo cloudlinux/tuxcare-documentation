@@ -44,7 +44,13 @@ TuxCare will stop supporting live patching for specific distros if there are no 
 
 ### Technical Support 
 
-All TuxCare live patching products include technical support provided according to the [TuxCare support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to our online knowledge base.
+All TuxCare live patching products include technical support provided according to the [TuxCare support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to our engineers through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to our online knowledge base. 
+
+### Getting a trial license
+
+You will need a trial activation key to be able to use the KernelCare Enterprise. The trial license subscription will work for 30 days. You can request your free trial here [https://tuxcare.com/free-trial/](https://tuxcare.com/free-trial/).  
+ 
+ If you have any questions regarding using your trial subscription, contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and we will help. 
 
 ### Installation 
 
@@ -648,10 +654,10 @@ All TuxCare live patching products include technical support provided according 
 
 #### Getting a trial license
 
-You will need a trial activation key to be able to use the KernelCare Enterprise. The trial license subscription will work for 7 days.
-
-If you have any issues getting an activation key or if you have any questions regarding using your trial subscription, contact [sales@cloudlinux.com](mailto:sales@cloudlinux.com) and we will help.
-
+You will need a trial activation key to be able to use the KernelCare Enterprise. The trial license subscription will work for 30 days. You can request your free trial here [https://tuxcare.com/free-trial/](https://tuxcare.com/free-trial/).  
+ 
+ If you have any questions regarding using your trial subscription, contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and we will help.  
+ 
 #### Installation
 
 KernelCare Enterprise is compatible with 64-bit versions of CloudLinuxOS/CentOS 6, 7 and 8, AlmaLinux/RHEL 6, 7, 8 and 9, Oracle Linux 6 and 7, Amazon Linux 1 and 2, Virtuozzo/PCS/OpenVZ 2.6.32, Debian 8, 9 and 10, Proxmox VE 5 and 6, Virt-SIG/Xen4CentOS 6 and 7, Ubuntu 14.04, 15.04, 16.04, 18.04 and 20.04 kernels. The list of compatible kernels can be found at the following link: [https://patches.kernelcare.com/](https://patches.kernelcare.com/)
