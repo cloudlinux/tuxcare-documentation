@@ -14,7 +14,22 @@ export default defineUserConfig({
   bundler: viteBundler({
     viteOptions: {
       ssr: {
-        noExternal: ["vue-select", "vue-multiselect"],
+        noExternal: ['vue-select', 'vue-multiselect'],
+      },
+    },
+    vuePluginOptions: {
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => {
+            // List of deprecated HTML tags to treat as custom elements
+            // Add any other custom elements to this list 
+            const customElements = [
+              'Badge', 'center', 'font', 'big', 'small', 'strike', 'tt', 
+              'marquee', 'blink', 'applet', 'frameset', 'frame', 'dir',
+            ];
+            return customElements.includes(tag);
+          },
+        },
       },
     },
   }),
