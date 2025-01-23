@@ -48,7 +48,7 @@ All TuxCare live patching products include technical support provided according 
 
 ### Getting a trial license
 
-You will need a trial activation key to be able to use the KernelCare Enterprise. The trial license subscription will work for 30 days. You can request your free trial here [https://tuxcare.com/free-trial/](https://tuxcare.com/free-trial/).  
+You will need a trial activation key to be able to use the KernelCare SimplePatch. The trial license subscription will work for 30 days. You can request your free trial here [https://tuxcare.com/free-trial/](https://tuxcare.com/free-trial/).  
  
  If you have any questions regarding using your trial subscription, contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and we will help. 
 
