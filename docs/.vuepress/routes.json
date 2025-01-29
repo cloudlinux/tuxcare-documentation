@@ -3,6 +3,6 @@
     "/service-descriptions/#almacare": "/enterprise-support-for-almalinux/#essential-and-enhanced-support",
     "/eportal/#almacare-cybersecurity-patch-management": "/eportal/#live-patching-for-almalinux-kernelcare-and-libcare-management",
     "/eportal/#deploying-almacare-almacare-cybersecurity": "/eportal/#deploying-essential-support-live-patching-for-almalinux",
-    "/extended-lifecycle-support": "/endless-lifecycle-support/",
-    "/extended-lifecycle-support-for-languages": "/endless-lifecycle-support-for-languages/"
+    "/els-for-os": "/els-for-os/",
+    "/els-for-languages": "/els-for-languages/"
 }
