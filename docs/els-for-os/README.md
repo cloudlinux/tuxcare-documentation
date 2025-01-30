@@ -36,9 +36,9 @@ Requests for customer-directed security patches for CVEs that are outside of the
 
 TuxCare's Endless Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), [here](https://cve.tuxcare.com/els/projects). The list of supported packages may change as projects can be added or removed from the list. Support for additional packages can be provided on request.
 
-### Live patching for ELS systems 
+### Live patching for ELS systems
 
-TuxCare provides KernelCare live patching for **Ubuntu 18.04 ELS** and **CentOS 7 ELS** systems. [KernelCare](https://docs.tuxcare.com/live-patching-services/) is a product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It can be further enhanced with LibCare providing live security patches for critical shared libraries – openssl and glibc. Updating both the kernel and these libraries requires a system reboot while updating other packages does not. Using ELS, KernelCare and LibCare together provides comprehensive protection for your entire system without reboots and downtime.     
+TuxCare provides KernelCare live patching for **Ubuntu 18.04 ELS** and **CentOS 7 ELS** systems. [KernelCare](https://docs.tuxcare.com/live-patching-services/) is a product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It can be further enhanced with LibCare providing live security patches for critical shared libraries – openssl and glibc. Updating both the kernel and these libraries requires a system reboot while updating other packages does not. Using ELS, KernelCare and LibCare together provides comprehensive protection for your entire system without reboots and downtime.
 
 You can easily add KernelCare to your ELS systems and start live patching them. You can also add ELS to systems already using KernelCare's live patching. Both ways, there's no need for system reboots or disruptions.
 
@@ -50,7 +50,7 @@ TuxCare Endless Lifecycle Support provides qualified security and selected bug-f
 
 ### OVAL patch definitions
 
-Leveraging the [Open Vulnerability and Assessment Language (OVAL)](/endless-lifecycle-support/#oval-data) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
+Leveraging the [Open Vulnerability and Assessment Language (OVAL)](/els-for-os/#oval-data) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
 
 ### Connection to ELS repository
 
@@ -430,7 +430,7 @@ Version: 1-1.0.1
 Architecture: amd64
 Maintainer: Darya Malyavkina <dmalyavkina@cloudlinux.com>
 Installed-Size: 10
-Homepage: https://tuxcare.com/endless-lifecycle-support/
+Homepage: https://tuxcare.com/els-for-os/
 Priority: optional
 Section: utils
 Filename: pool/main/e/els-define/els-define_1-1.0.1_amd64.deb

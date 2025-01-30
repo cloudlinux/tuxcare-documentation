@@ -25,19 +25,22 @@ export default {
             ]
         },
     ],
-    '/endless-lifecycle-support/': [
+    '/els-for-os/': [
         {
             collapsable: false,
             children: [
-                "/endless-lifecycle-support/",
+                "/els-for-os/",
             ]
         },
     ],
-    '/endless-lifecycle-support-for-languages/': [
+    '/els-for-languages/': [
         {
             collapsable: false,
             children: [
-                "/endless-lifecycle-support-for-languages/",
+                "/els-for-languages/",
+                "/els-for-languages/els-for-php/",
+                "/els-for-languages/els-for-python/",
+                "/els-for-languages/els-for-java/",
             ]
         },
     ],

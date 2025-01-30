@@ -30,14 +30,24 @@ export default [
         link: "/eportal-api/",
     },
     {
-        title: "Endless Lifecycle Support",
+        title: "ELS for OS",
         description: "allows you to continue running your Linux server after the operating system’s end of life.",
-        link: "/endless-lifecycle-support/",
+        link: "/els-for-os/",
     },
     {
-        title: "Endless Lifecycle Support for Languages",
+        title: "ELS for PHP",
         description: "provides security fixes for PHP and Python versions that have reached their end-of-life which allows to continue running Linux server vulnerability-free.",
-        link: "/endless-lifecycle-support-for-languages/",
+        link: "/els-for-languages/els-for-php/",
+    },
+    {
+        title: "ELS for JAVA",
+        description: "provides security fixes for java versions that have reached their end-of-life which allows to continue running Linux server vulnerability-free.",
+        link: "/els-for-languages/els-for-java/",
+    },
+    {
+        title: "ELS for Python",
+        description: "provides security fixes for PHP and Python versions that have reached their end-of-life which allows to continue running Linux server vulnerability-free.",
+        link: "/els-for-languages/els-for-python/",
     },
     {
         title: "Subscription Management Portal",
