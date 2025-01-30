@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-87c0a29c","path":"/endless-lifecycle-support/duration-of-support/","title":"","lang":"en-US","frontmatter":{},"headers":[{"level":3,"title":"Duration of support","slug":"duration-of-support","link":"#duration-of-support","children":[]}]}');export{t as data};

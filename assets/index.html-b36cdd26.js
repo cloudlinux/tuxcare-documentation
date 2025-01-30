@@ -128,7 +128,7 @@ Version: 1-1.0.1
 Architecture: amd64
 Maintainer: Darya Malyavkina &lt;dmalyavkina@cloudlinux.com&gt;
 Installed-Size: 10
-Homepage: https://tuxcare.com/endless-lifecycle-support/
+Homepage: https://tuxcare.com/els-for-os/
 Priority: optional
 Section: utils
 Filename: pool/main/e/els-define/els-define_1-1.0.1_amd64.deb
@@ -170,4 +170,4 @@ Description-md5: 39e3bb446b4c63607f8f0358484545bf
 
 # rm /etc/yum.repos.d/centos6-els.repo
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2"><li>Remove the <code>els-define</code> package:</li></ol><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code># yum remove els-define
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,154);function p(m,b){const s=n("RouterLink");return l(),t("div",null,[h,r("p",null,[e("Leveraging the "),o(s,{to:"/endless-lifecycle-support/#oval-data"},{default:d(()=>[e("Open Vulnerability and Assessment Language (OVAL)")]),_:1}),e(" patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.")]),v])}const g=a(u,[["render",p],["__file","index.html.vue"]]);export{g as default};
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,154);function p(m,b){const s=n("RouterLink");return l(),t("div",null,[h,r("p",null,[e("Leveraging the "),o(s,{to:"/els-for-os/#oval-data"},{default:d(()=>[e("Open Vulnerability and Assessment Language (OVAL)")]),_:1}),e(" patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.")]),v])}const g=a(u,[["render",p],["__file","index.html.vue"]]);export{g as default};
