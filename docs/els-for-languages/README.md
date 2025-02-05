@@ -1,9 +1,9 @@
 # Endless Lifecycle Support for Languages
 
-* [ELS for PHP](./#els-for-php/)
-* [ELS for Python](./#els-for-python/)
-* [ELS for Spring Framework and Spring Boot](./##els-for-spring-framework-and-spring-boot/)
-* [ELS for .NET](./#endless-lifecycle-support-for-net-6/)
+* [ELS for PHP](./#els-for-php)
+* [ELS for Python](./#els-for-python)
+* [ELS for Spring Framework and Spring Boot](./#els-for-spring-framework-and-spring-boot)
+* [ELS for .NET](./#endless-lifecycle-support-for-net-6)
 
 ## ELS for PHP
 
@@ -341,10 +341,11 @@ You need username and password in order to use TuxCare ELS Spring repository. An
 
 ### Step 2: Create or Modify Your Build Tool Settings
 
-Maven
+**Maven**
 
 If you are using Maven as your build automation tool, you will need to make changes in your `${MAVEN_HOME}/settings.xml` file. If the file does not already exist in your Maven home directory (`${MAVEN_HOME}`), you should create one. Open the `settings.xml` file with a text editor and include the following configuration:
 
+```
     <?xml version="1.0" encoding="UTF-8"?>
     <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
         <servers>
@@ -354,30 +355,36 @@ If you are using Maven as your build automation tool, you will need to make chan
          	    <password>${env.PASSWORD}</password>
        	</server>
         </servers>
-    </settings>
+    </settings> 
+```
 
 Set your credentials via the following enviromnent variables:
 
+```
     export USERNAME=your-username
     export PASSWORD=your-password
+```
 
 Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](https://github.com/cloudlinux/securechain-java/blob/main/details/integration_guide.md#step-1-get-user-credntials) .
 
 You may choose an arbitrary allowed value instead of `repository-id` and use the same value in the following snippet from your `pom.xml` file:
 
+```
     <repositories>
         <repository>
             <id>repository-id</id>
             <url>https://nexus-repo.corp.cloudlinux.com/repository/els_spring/</url>
         </repository>
     </repositories>
+```
 
 An example of maven project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven) . Do not forget to set the enviromnet variables.
 
-Gradle
+**Gradle**
 
 If you are using Gradle as your build automation tool, make sure to include the following configuration in your project setup:
 
+```
     repositories {
       maven {
         url = uri("https://nexus-repo.corp.cloudlinux.com/repository/els_spring")
@@ -387,6 +394,7 @@ If you are using Gradle as your build automation tool, make sure to include the 
         }
       }
     }
+```
 
 Set your credentials via the following enviromnent variables:
 
@@ -1828,11 +1836,11 @@ You've successfully integrated the TuxCare ELS for Spring repository into your p
 | CVE-2023-5685  | HIGH     | org.springframework.boot     | spring-boot-starter-undertow                | 2.7.18        |
 
 
-### Endless Lifecycle Support for .NET 6
+## Endless Lifecycle Support for .NET 6
 
 Endless Lifecycle Support (ELS) for .NET 6 from TuxCare provides security fixes for .NET 6 that has reached its end of life. This allows you to continue running .NET 6 applications without vulnerability concerns, even after official support has ended. 
 
-#### Vulnerability Coverage and Target Response Times 
+### Vulnerability Coverage and Target Response Times 
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
@@ -1844,7 +1852,7 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 * **Low-severity CVEs**: Patches may be provided upon custom request
 * TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
-#### Incident Reporting and Response Timeframe 
+### Incident Reporting and Response Timeframe 
 
 Customers can report vulnerabilities by submitting a ticket through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/). TuxCare commits to providing an initial response to any reported issue within 3 days.
 
@@ -1852,7 +1860,7 @@ Requests for customer-directed security patches for CVEs that are outside of the
 
 Handling Multiple Vulnerabilities: In cases where several CVEs are reported simultaneously for fixing, TuxCare will discuss and agree upon resolution timelines separately with the customer.
 
-#### Enhanced Transparency & Visibility 
+### Enhanced Transparency & Visibility 
 
 TuxCare's commitment to transparency and visibility is foundational to our ELS for .NET offering. We aim to provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
@@ -1861,7 +1869,7 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 * **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy. _Note: Availability is planned for Q2 2025_. 
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
-#### Technical Support
+### Technical Support
 
 TuxCare provides technical support according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf). It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
 
