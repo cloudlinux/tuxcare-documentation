@@ -38,10 +38,6 @@ export default {
             collapsable: false,
             children: [
                 "/els-for-languages/",
-                "/els-for-languages/els-for-php/",
-                "/els-for-languages/els-for-python/",
-                "/els-for-languages/els-for-java/",
-                "/els-for-languages/els-for-dotnet/",
             ]
         },
     ],

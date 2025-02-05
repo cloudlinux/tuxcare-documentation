@@ -35,19 +35,9 @@ export default [
         link: "/els-for-os/",
     },
     {
-        title: "ELS for PHP",
-        description: "provides security fixes for PHP and Python versions that have reached their end-of-life which allows to continue running Linux server vulnerability-free.",
-        link: "/els-for-languages/els-for-php/",
-    },
-    {
-        title: "ELS for JAVA",
-        description: "provides security fixes for java versions that have reached their end-of-life which allows to continue running Linux server vulnerability-free.",
-        link: "/els-for-languages/els-for-java/",
-    },
-    {
-        title: "ELS for Python",
-        description: "provides security fixes for PHP and Python versions that have reached their end-of-life which allows to continue running Linux server vulnerability-free.",
-        link: "/els-for-languages/els-for-python/",
+        title: "ELS for Languages",
+        description: "provides security fixes for programming languages and software development frameworks that have reached their end-of-life”",
+        link: "/els-for-languages/",
     },
     {
         title: "Subscription Management Portal",
