@@ -398,8 +398,10 @@ If you are using Gradle as your build automation tool, make sure to include the 
 
 Set your credentials via the following enviromnent variables:
 
+```
     export ORG_GRADLE_PROJECT_USERNAME=your-username
     export ORG_GRADLE_PROJECT_PASSWORD=your-password
+```
 
 Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](https://github.com/cloudlinux/securechain-java/blob/main/details/integration_guide.md#step-1-get-user-credntials) .
 
