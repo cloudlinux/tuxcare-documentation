@@ -192,7 +192,181 @@ oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xm
 
 You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/shared/alt-ea_packages/#bundled-php-extensions).
 
-### How to use PHP-ELS
+### How to use PHP-ELS 
+
+When you deploy an updated version of PHP through PHP ELS, using your system’s regular update tool (yum, dnf, apt), the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes. 
+
+**The *bin* files:** 
+
+```
+[root@localhost ~]# ll /opt/alt/phpXY/usr/bin/
+bytekit          hphpa            pear             pecl             phar.phar        phpcb            php-config       phpcpd           phploc           phpunit-skelgen
+dbunit           lsphp            peardev          phar             php              php-cgi          phpcov           phpize           phpunit          ppw
+```
+ 
+***Modules* and *pecl* extensions:** 
+ 
+```
+ls /opt/alt/phpXY/usr/lib64/php/modules/
+ZendGuardLoader.so  imagick.so         oci8.so          stem.so
+amqp.so             imap.so            odbc.so          stomp.so
+apc.so              inclued.so         opcache.so       suhosin.so
+apcu.so             inotify.so         pdf.so           sybase_ct.so
+apm.so              interbase.so       pdo.so           sysvmsg.so
+ares.so             intl.so            pdo_dblib.so     sysvsem.so
+bcmath.so           ioncube_loader.so  pdo_firebird.so  sysvshm.so
+big_int.so          ixed.5.4.lin       pdo_mysql.so     tideways.so
+bitset.so           jsmin.so           pdo_oci.so       tidy.so
+brotli.so           json.so            pdo_odbc.so      timezonedb.so
+bz2_filter.so       ldap.so            pdo_pgsql.so     trader.so
+dba.so              libevent.so        pdo_sqlite.so    translit.so
+dbase.so            libsodium.so       pgsql.so         uploadprogress.so
+dbx.so              luasandbox.so      phalcon.so       uri_template.so
+dom.so              lzf.so             phar.so          uuid.so
+doublemetaphone.so  mailparse.so       posix.so         wddx.so
+eaccelerator.so     mbstring.so        propro.so        weakref.so
+eio.so              mcrypt.so          pspell.so        xcache.so
+enchant.so          memcache.so        quickhash.so     xcache_3.so
+fileinfo.so         memcached.so       radius.so        xdebug.so
+functional.so       mongo.so           raphf.so         xhprof.so
+gd.so               mongodb.so         rar.so           xmlreader.so
+gender.so           msgpack.so         recode.so        xmlrpc.so
+geoip.so            mssql.so           redis.so         xmlwriter.so
+geos.so             mysql.so           rsync.so         xrange.so
+gmagick.so          mysqli.so          snmp.so          xsl.so
+gnupg.so            mysqlnd.so         soap.so          yaf.so
+haru.so             ncurses.so         sockets.so       yaml.so
+hidef.so            nd_mysql.so        solr.so          yaz.so
+htscanner.so        nd_mysqli.so       spl_types.so     zip.so
+http.so             nd_pdo_mysql.so    ssh2.so          zmq.so
+igbinary.so         oauth.so           stats.so
+```
+
+**Running code on a specific version through the CLI:** 
+ 
+```
+[root@localhost ~]# /opt/alt/phpXY/usr/bin/php helloworld.php
+Hello, World!
+```
+
+**Location of *ini* config files:** 
+
+```
+[root@localhost ~]# ls /opt/alt/phpXY/etc/php.d.all/
+40-leveldb.ini        mailparse.ini     redis.ini
+40-snuffleupagus.ini  mbstring.ini      rrd.ini
+40-vld.ini            mcrypt.ini        snmp.ini
+amqp.ini              memcache.ini      snuffleupagus-default.rules
+apcu.ini              memcached.ini     soap.ini
+bcmath.ini            mongodb.ini       sockets.ini
+dba.ini               mysqli.ini        sodium.ini
+dbase.ini             mysqlnd.ini       solr.ini
+dom.ini               nd_mysqli.ini     sourceguardian.ini
+eio.ini               nd_pdo_mysql.ini  sqlsrv.ini
+enchant.ini           newrelic.ini      ssh2.ini
+ffmpeg.ini            oauth.ini         stats.ini
+fileinfo.ini          oci8.ini          swoole.ini
+gd.ini                odbc.ini          sysvmsg.ini
+gearman.ini           opcache.ini       sysvsem.ini
+gender.ini            pdf.ini           sysvshm.ini
+geoip.ini             pdo.ini           tideways_xhprof.ini
+geos.ini              pdo_dblib.ini     tidy.ini
+gmagick.ini           pdo_firebird.ini  timezonedb.ini
+gnupg.ini             pdo_mysql.ini     trader.ini
+grpc.ini              pdo_oci.ini       uploadprogress.ini
+http.ini              pdo_odbc.ini      uuid.ini
+igbinary.ini          pdo_pgsql.ini     vips.ini
+imagick.ini           pdo_sqlite.ini    xdebug.ini
+imap.ini              pdo_sqlsrv.ini    xmlreader.ini
+inotify.ini           pgsql.ini         xmlrpc.ini
+intl.ini              phalcon4.ini      xmlwriter.ini
+ioncube_loader.ini    phar.ini          xsl.ini
+jsmin.ini             posix.ini         yaml.ini
+json.ini              propro.ini        yaz.ini
+ldap.ini              pspell.ini        zip.ini
+luasandbox.ini        psr.ini           zmq.ini
+lzf.ini               raphf.ini
+```
+
+**Location of *default.ini*:** 
+
+```
+ls /opt/alt/phpXY/etc/php.d/default.ini
+```
+
+**Listing enabled modules on a specific version:** 
+
+```
+[root@localhost ~]# /opt/alt/php73/usr/bin/php -m
+[PHP Modules]
+bz2
+calendar
+Core
+ctype
+curl
+date
+exif
+filter
+ftp
+gettext
+gmp
+hash
+iconv
+libxml
+openssl
+pcntl
+pcre
+readline
+Reflection
+session
+shmop
+SimpleXML
+SPL
+sqlite3
+standard
+tokenizer
+xml
+zlib
+[Zend Modules]
+```
+
+**Enabling a module through the CLI:** 
+
+```
+[root@localhost ~]# /opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
+[PHP Modules]
+bz2
+calendar
+Core
+ctype
+curl
+date
+exif
+filter
+ftp
+gettext
+gmp
+hash
+iconv
+igbinary
+libxml
+openssl
+pcntl
+pcre
+readline
+Reflection
+session
+shmop
+SimpleXML
+SPL
+sqlite3
+standard
+tokenizer
+xml
+zlib
+[Zend Modules]
+```
+As you can see, each version is entirely self-contained, and changing configurations in one will not impact the others, a desired feature in hosting environments.
 
 ## ELS for Python
 
