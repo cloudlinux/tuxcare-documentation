@@ -97,4 +97,12 @@ export default {
             ]
         },
     ],
+    '/radar/': [
+        {
+            collapsable: false,
+            children: [
+                "/radar/",
+            ]
+        },
+    ],
 }
