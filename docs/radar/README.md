@@ -87,11 +87,15 @@ The next time a scan is run, the tags will appear in the asset overview.
 
 TuxCare Radar requires outbound connectivity on tcp/443 (TLS) to `radar.tuxcare.com` which by default is in the US. If you need your own private instance, or can only use a certain geographical location, please discuss with your Account Manager. IPv6 or IPv4 can be used. No inbound connectivity is required, tuxcare-radar does not open any listening ports.
 
-To use via a proxy, set the `https_proxy` environment variable based on your infrastructure, either of the following will work:
+To use via a proxy, set the `https_proxy` environment variable based on your infrastructure. For running the service from cron, you can use this:
 
 ```text
 echo "https_proxy=http://proxy.domain.com:port" >> /etc/environment
+```
 
+For running manually, you may need to set it in the user profile like so (or simply via the CLI):
+
+```text
 echo "export https_proxy=http://proxy.domain.com:port" > /etc/profile.d/proxy.sh
 ```
 
