@@ -69,12 +69,39 @@ base-url: https://radar.tuxcare.com
 logfile: /var/log/tuxcare-radar/radar.log
 statefile: /var/cache/tuxcare-radar/radar.json
 time-between-runs: 23h
+enabled: true
 apikey: FILLME
+```
+
+## Tagging
+
+Tags are a powerful feature that let you easily identify and filter hosts based on tags. You can create tags to describe your environment, for example `prod`, `dev`, `staging` or the TuxCare products such as `esu`, `esa`, `kce`, or maybe location, such as `eu`, `us`, `apac`. To use tags, simply add them to /etc/tuxcare-radar/radar.yaml like so:
+
+```text
+tags: esu,prod,us-east-1
+```
+
+The next time a scan is run, the tags will appear in the asset overview.
+
+## Firewall and Proxy Settings
+
+TuxCare Radar requires outbound connectivity on tcp/443 (TLS) to `radar.tuxcare.com` which by default is in the US. If you need your own private instance, or can only use a certain geographical location, please discuss with your Account Manager. IPv6 or IPv4 can be used. No inbound connectivity is required, tuxcare-radar does not open any listening ports.
+
+To use via a proxy, set the `https_proxy` environment variable based on your infrastructure. For running the service from cron, you can use this:
+
+```text
+echo "https_proxy=http://proxy.domain.com:port" >> /etc/environment
+```
+
+For running manually, you may need to set it in the user profile like so (or simply via the CLI):
+
+```text
+echo "export https_proxy=http://proxy.domain.com:port" > /etc/profile.d/proxy.sh
 ```
 
 ## Usage
 
-The installer should have created an /etc/cron.d/tuxcare-radar file that will run every 4th hour, it will check if a scan has been run in the last 23 hours (`time-between-runs` in radar.yaml) and if not, it will run a scan.
+The installer should have created an /etc/cron.d/tuxcare-radar file that will run from a randomized time every 6 hours, it will check if a scan has been run in the last 23 hours (`time-between-runs` in radar.yaml) and if not, it will run a scan.
 
 If you need to manually run a scan instantly for any reason, you can run:
 
