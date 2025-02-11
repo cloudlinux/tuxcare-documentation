@@ -101,7 +101,7 @@ echo "export https_proxy=http://proxy.domain.com:port" > /etc/profile.d/proxy.sh
 
 ## Usage
 
-The installer should have created an /etc/cron.d/tuxcare-radar file that will run from a randomized time every 4th hour, it will check if a scan has been run in the last 23 hours (`time-between-runs` in radar.yaml) and if not, it will run a scan.
+The installer should have created an /etc/cron.d/tuxcare-radar file that will run from a randomized time every 6 hours, it will check if a scan has been run in the last 23 hours (`time-between-runs` in radar.yaml) and if not, it will run a scan.
 
 If you need to manually run a scan instantly for any reason, you can run:
 
