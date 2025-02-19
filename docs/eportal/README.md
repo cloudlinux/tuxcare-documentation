@@ -916,6 +916,36 @@ Change feed into delayed feed:
 # kc.eportal feed -c test --deploy-after 12
 ```
 
+## API keys Management
+
+An API key may be used as an alternative to password authentication when accessing public API endpoints.
+API tokens provide a more secure way to authenticate APIs because they can be easily revoked
+without affecting each other, and you don't need to share your credentials.
+
+To get into API keys Management interface go to Settings -> API keys:
+
+![API keys](/images/api_key_list.png)
+
+On this page a user can manage the existing API keys: create, revoke (delete).
+
+![API key edit](/images/api_key_create.png)
+
+Available options:
+
+* Key name - a name of the API key.
+* Expiration date - optional key expiration date.
+
+After generating the key, you will see a bar with a token, as in the picture below.
+
+![API key generated](/images/api_key_generated.png)
+
+This token is not stored on the server, so you need to keep it in a safe place.
+Use this token in an API client as described in [ePortal API documentation](/eportal-api).
+
+The API key is personal, meaning it is tied to a specific user and inherits their permissions.
+A user with read-only permissions can only manage their own keys,
+while an administrator has access to any user's API keys.
+
 ## Adding extra Tag field
 
 To add an extra Tag field for the server, run:

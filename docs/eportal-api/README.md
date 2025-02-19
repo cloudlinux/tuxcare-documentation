@@ -13,6 +13,14 @@ kc.eportal user -a api-user -p <password>
 It can be useful for SSO/LDAP setups to be able to pass HTTP API credentials via
 basic auth.
 
+Starting with version 2.14-1, an API key can be used for authentication
+as an alternative to basic authentication.
+First, you need to generate an API token using ePortal admin UI.
+Then you can put it in the *X-Api-Key* http header. In this case
+the Authorization header is no longer needed.
+If for some reason the "X-Api-Key" header doesn't work for you,
+you can define your own header name in the API_AUTH_HEADER setting in eportal.conf.
+
 In general ePortal API is configuration management friendly and idempotent. You
 don't need to make additional request to check existing state. For example
 entity deletion doesn't raise an error in case there is no such entity.
