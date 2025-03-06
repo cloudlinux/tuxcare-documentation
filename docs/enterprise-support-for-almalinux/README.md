@@ -144,44 +144,6 @@ Then you will have to run `tuxctl` like this:
 
 :::
 
-### SaaS usage
-
-If you are using ESU with our SaaS license in AWS, then the instructions are slightly different. You should login to your instance and run the following as root (use of `--fips` is optional depending on your needs):
-
-```text
-# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.$(uname -i).rpm
-
-# tuxctl --saas --fips
-```
-
-If you want to reclaim a license when you terminate an instance, you should first run:
-
-```text
-# tuxctl --delete
-
-De-registration successful
-```
-
-Then you can use that license to register another instance.
-
-If you want to check if you've already registered an instance, you can run the following to display your token:
-
-```text
-# tuxctl --validate
-
-Server is registered with token EXTENDED_SECURITY_UPDATES-SERVER-xxxxx
-```
-
-If the instance has no license installed, it will return:
-
-```text
-Server is not registered
-```
-
-:::warning
-We can provide a systemd unit file and instructions, should you want to incorporate installing tuxcare-release and registering using tuxctl into your AMI, so that when you spin-up an instance its ready to receive patches, simply email [support@tuxcare.com](support@tuxcare.com)
-:::
-
 ### Enabling FIPS 140-3 mode
 
 First please ensure you have installed the `tuxcare-release` package as described above. If you haven't already registered your ESU license using `tuxctl` the next step will also do that for you.
@@ -266,6 +228,90 @@ Then run the following:
 # dnf remove kernel*tuxcare*
 # dnf upgrade
 ```
+
+### Migrating from CentOS
+
+This guide contains steps on how to upgrade from CentOS 7 or Stream 8 [ELS](https://tuxcare.com/endless-lifecycle-support/centos-stream-8-eol-support/) to AlmaLinux 9.2 [ESU](https://tuxcare.com/fips-for-almalinux/).
+
+You will require an ESU license key from [https://tuxcare.com/buy/almalinux/](https://tuxcare.com/buy/almalinux/) or talk to your Account Manager about our ELS-to-ESU migration bundle offer.
+
+:::warning
+Ensure that you have a non-root user who can SSH and elevate privileges to root using su/sudo as this process will disable root SSH login. FIPS mode will also disable non-RSA SSH keys. Console access is recommended.
+:::
+
+Choose **one** of the migrations below (1a or 1b) based on your CentOS ELS version. Once you have migrated to AlmaLinux 8, the instructions for getting to 9.2 and enabling ESU/FIPS are the same.
+
+**1A. Migrate CentOS 7.9 ELS to AlmaLinux 8.10**
+
+```text
+# update then disable els
+yum -y update
+dnf config-manager --set-disabled centos7*
+
+# install elevate 7to8
+yum install -y http://repo.almalinux.org/elevate/elevate-release-latest-el7.noarch.rpm
+yum install -y leapp-upgrade leapp-data-almalinux
+leapp preupgrade
+leapp answer --section remove_pam_pkcs11_module_check.confirm=True
+leapp upgrade
+reboot
+```
+
+You will now be running AlmaLinux 8.10 and can skip ahead to step 2.
+
+**1B. Migrate CentOS Stream 8 ELS to AlmaLinux 8.10**
+
+```text
+# update then disable els
+dnf -y upgrade
+dnf config-manager --set-disabled centos8stream-els
+
+# install almalinux-deploy
+curl -O https://raw.githubusercontent.com/AlmaLinux/almalinux-deploy/master/almalinux-deploy.sh
+bash almalinux-deploy.sh -d
+reboot
+```
+
+**2. Upgrade AlmaLinux 8.10 to 9.2**
+
+```text
+# clean up
+sed -i '/^exclude=.*/d' /etc/yum.conf /etc/dnf/dnf.conf
+dnf -y remove *leapp* elevate-release els-define
+rm -rf  /lib/modules/3.10*
+
+# disable root ssh in a portable way
+echo PermitRootLogin no | sudo tee -a /etc/ssh/sshd_config
+sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config
+
+# install elevate 8to9
+dnf -y install https://repo.almalinux.org/elevate/elevate-release-latest-el8.noarch.rpm
+dnf -y install leapp-upgrade leapp-data-almalinux
+
+# upgrade specifically to 9.2
+export LEAPP_DISABLE_NET_NAMING_SCHEMES=1
+leapp preupgrade --target=9.2
+leapp upgrade --target=9.2
+reboot
+```
+
+**3. Enable AlmaLinux 9.2 ESU repositories and FIPS mode**
+
+```text
+# clean up
+sed -i '/^exclude=.*/d' /etc/yum.conf /etc/dnf/dnf.conf
+dnf -y remove *leapp* elevate-release kernel-*.el8*
+
+# enable esu+fips
+dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.$(uname -i).rpm
+tuxctl --fips --license-key ESU-xxxxxxxxxxxxxxx
+dnf -y install kernel-5.14.0-284.11*
+dnf -y upgrade
+fips-mode-setup --enable
+reboot
+```
+
+See also [Enabling FIPS 140-3 mode](#enabling-fips-140-3-mode)
 
 ## **Essential and Enhanced Support**
 
