@@ -563,6 +563,27 @@ Example:
         force_basic_auth: yes
 ```
 
+Example of server tagging:
+
+```json
+- hosts: kernelcare
+  vars:
+    eportal_srv: http://192.168.246.110
+    eportal_server_id: m9W4oTPfG52c0H1Z
+    eportal_tags: 'staging;location:Boston'
+  tasks:
+    - name: set server tags using ePortal API
+      uri:
+        url: '{{ eportal_srv }}/admin/api/set_tags'
+        method: POST
+        headers:
+          X-Api-Key: '{{ lookup("env", "EPORTAL_API_TOKEN") }}'
+        body_format: form-urlencoded
+        body:
+          server_id: '{{eportal_server_id }}'
+          tags: '{{ eportal_tags }}'
+```
+
 Ad hoc run with:
 
 ```
@@ -610,6 +631,22 @@ http_request "kernelcare-unregister-api" do
   headers({'AUTHORIZATION' => "Basic #{
     Base64.encode64("#{eportal_user}:#{eportal_password}")}",
   })
+end
+```
+
+Example of server tagging (kernelcare-tag-server.rb):
+
+```json
+eportal_url = "http://192.168.246.110"
+eportal_api_key = "Lgk5-qWeBypejSEc6nYmalGbv11Kh_OyWi2_vigrTro"
+server_id = "102cb40fcdfbdfa"
+tags = "staging;location:Boston"
+
+http_request "kernelcare-tag-server" do
+  url "#{eportal_url}/admin/api/set_tags"
+  action :post
+  message ({'server_id' => server_id, 'tags' => tags}.to_json)
+  headers({'X-Api-Key' => eportal_api_key, 'Content-Type' => 'application/json'})
 end
 ```
 
@@ -669,6 +706,19 @@ else
 fi
 
 curl -kL -u "${EPORTAL_API_PASSWORD}"':'"${EPORTAL_API_PASSWORD}" -X POST "${EPORTAL_URL}"'/admin/api/delete_server?ip='"${IP_TO_UNREGISTER}"
+```
+
+Example of server tagging (tag_server.sh)
+
+```
+#!/bin/bash
+
+EPORTAL_URL='http://192.168.246.110'
+EPORTAL_SERVER_ID='m9W4oTPfG52c0H1Z'
+EPORTAL_TAGS='staging;location:Boston'
+EPORTAL_API_KEY='Lgk5-qWeBypejSEc6nYmalGbv11Kh_OyWi2_vigrTro'
+
+curl -kL -H "X-Api-Key: ${EPORTAL_API_KEY}" --data-urlencode "server_id=${EPORTAL_SERVER_ID}" --data-urlencode "tags=${EPORTAL_TAGS}" "${EPORTAL_URL}/admin/api/set_tags"
 ```
 
 ### Puppet Plan
