@@ -569,9 +569,17 @@ Example of server tagging:
 - hosts: kernelcare
   vars:
     eportal_srv: http://192.168.246.110
-    eportal_server_id: m9W4oTPfG52c0H1Z
     eportal_tags: 'staging;location:Boston'
   tasks:
+    - name: get systemid content
+      slurp:
+        src: /etc/sysconfig/kcare/systemid
+      register: systemid_file
+
+    - name: set server_id
+      set_fact:
+        eportal_server_id: "{{ systemid_file.content | b64decode | trim | regex_replace('^server_id=(\\w+)$', '\\1') }}"
+
     - name: set server tags using ePortal API
       uri:
         url: '{{ eportal_srv }}/admin/api/set_tags'
@@ -639,13 +647,19 @@ Example of server tagging (kernelcare-tag-server.rb):
 ```json
 eportal_url = "http://192.168.246.110"
 eportal_api_key = "Lgk5-qWeBypejSEc6nYmalGbv11Kh_OyWi2_vigrTro"
-server_id = "102cb40fcdfbdfa"
 tags = "staging;location:Boston"
 
-http_request "kernelcare-tag-server" do
+ruby_block 'get-server-id' do
+  block do
+    node.run_state['server_id'] = File::read('/etc/sysconfig/kcare/systemid').gsub(/server_id=(\w+)\s*/, '\1')
+  end
+  action :run
+end
+
+http_request 'kernelcare-set-server-tags' do
   url "#{eportal_url}/admin/api/set_tags"
   action :post
-  message ({'server_id' => server_id, 'tags' => tags}.to_json)
+  message lazy {{'server_id' => "#{node.run_state['server_id']}", 'tags' => tags}.to_json}
   headers({'X-Api-Key' => eportal_api_key, 'Content-Type' => 'application/json'})
 end
 ```
@@ -714,9 +728,10 @@ Example of server tagging (tag_server.sh)
 #!/bin/bash
 
 EPORTAL_URL='http://192.168.246.110'
-EPORTAL_SERVER_ID='m9W4oTPfG52c0H1Z'
 EPORTAL_TAGS='staging;location:Boston'
 EPORTAL_API_KEY='Lgk5-qWeBypejSEc6nYmalGbv11Kh_OyWi2_vigrTro'
+
+EPORTAL_SERVER_ID=$( grep -oP 'server_id=\K(.+)' /etc/sysconfig/kcare/systemid )
 
 curl -kL -H "X-Api-Key: ${EPORTAL_API_KEY}" --data-urlencode "server_id=${EPORTAL_SERVER_ID}" --data-urlencode "tags=${EPORTAL_TAGS}" "${EPORTAL_URL}/admin/api/set_tags"
 ```
