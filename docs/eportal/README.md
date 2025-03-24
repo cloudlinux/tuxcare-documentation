@@ -821,6 +821,50 @@ A new table is added to the starting page. This table displays the following:
 
 The number of servers for each key is listed on the _Keys_ page.
 
+## Managing server tags
+
+You can use 'Server tags' page to deal with tags.
+
+![server tags view](/images/tags_view.png)
+
+Tagging is a convenient way to group servers by any criteria. For example OS, deployment environment, location, etc.
+You need to create a tag and then it can be assigned to a server from the [Managing Servers](#managing-servers) interface.
+
+![tag assignment](/images/tag_assignment.png)
+
+The tag may have an optional value. For example, this allows you to introduce a new geo location without creating a new tag for it.
+
+### Using agent CLI to manage tags
+
+To add an extra Tag field for the server, run:
+
+```text
+# kcarectl --tag command
+```
+
+where `command` is a parameter defined by a user. This parameter will be displayed in UI for the server. User could add multiple tags for each server. Each tag should be separated with `;` symbol.
+
+Example:
+
+```text
+# kcarectl --tag "env:prod;ubuntu"
+```
+
+This server has two tags : `env:prod` and `ubuntu`.
+
+`env:prod` is a parameter that has tag name `env` and the value `prod`.
+
+![tags](/images/addingextratagfield_zoom88.png)
+
+To remove all tags from a particular server, run:
+
+```text
+# kcarectl --tag ""
+```
+
+Where `""` is a parameter to delete the previously defined tag.
+
+
 ## Feed Management
 
 Feeds are intended to manage patchsets on the server, and they provide a possibility to bind a set of patches to a specific key. Possible use cases:
@@ -945,36 +989,6 @@ Use this token in an API client as described in [ePortal API documentation](/epo
 The API key is personal, meaning it is tied to a specific user and inherits their permissions.
 A user with read-only permissions can only manage their own keys,
 while an administrator has access to any user's API keys.
-
-## Adding extra Tag field
-
-To add an extra Tag field for the server, run:
-
-```text
-# kcarectl --tag command
-```
-
-where `command` is a parameter defined by a user. This parameter will be displayed in UI for the server. User could add multiple tags for each server. Each tag should be separated with `;` symbol.
-
-Example:
-
-```text
-# kcarectl --tag "env:prod;ubuntu"
-```
-
-This server has two tags : `env:prod` and `ubuntu`.
-
-`env:prod` is a parameter that has tag name `env` and the value `prod`.
-
-![tags](/images/addingextratagfield_zoom88.png)
-
-To remove all tags from a particular server, run:
-
-```text
-# kcarectl --tag ""
-```
-
-Where `""` is a parameter to delete the previously defined tag.
 
 ## How to setup ePortal to use HTTPS
 
