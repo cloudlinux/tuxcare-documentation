@@ -85,7 +85,9 @@ cln.cloudlinux.com
 repo.cloudlinux.com
 ```
 
-- CentOS 7 ELS
+- CentOS 7 ELS,
+- Ubuntu 20.04 ELS:
+
 ```
 cln.cloudlinux.com
 repo.tuxcare.com
@@ -478,32 +480,62 @@ Description: ELS define package for Ubuntu 18.04
 Description-md5: 39e3bb446b4c63607f8f0358484545bf
 ```
 
+### Ubuntu 20.04 ELS
+
+1. Download an installer script:
+```
+wget https://repo.tuxcare.com/ubuntu20_04-els/install-ubuntu20.04-els-repo.sh
+```
+2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds PGP key to the server
+```
+bash install-ubuntu20.04-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
+```
+3. Verify that the installation was successful. To ensure that installation has been completed successfully, run the following command:
+```
+apt-cache show els-define
+```
+It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful. After this, you will be able to install updates from the repository using a regular apt upgrade command.
+
+Example:
+```
+[els@ubuntu20 ~]# apt-cache show els-os-release
+Package: els-os-release
+Version: 1.0.0-1
+Architecture: amd64
+Maintainer: Koba Karaputadze <kkaraputadze@cloudlinux.com>
+Installed-Size: 16
+Depends: els-define
+Homepage: https://tuxcare.com/extended-lifecycle-support/
+Priority: optional
+Section: utils
+Filename: pool/main/e/els-os-release/els-os-release_1.0.0-1_amd64.deb
+Size: 4326
+SHA256: 74f7983c4a3e5c92f954e7af4048f2327e54beed9d06c2ad81baeb7e0b0af86d
+SHA1: b33baa2e0ed955043178863e05e05ebddb0254c6
+MD5sum: 57f60465595890e8fd374bd6d87a5d40
+Description: ELS os release package for Ubuntu 20.04
+Description-md5: 409266c8048d396eedc5dacdff306abc
+```
+
 ## OVAL data
 
 ### Introduction
 
 Identifying the vulnerabilities that apply to your systems is an important task for IT and InfoSec teams, and at TuxCare we make it easy. We provide OVAL data that contain instructions to the vulnerability scanner to determine the addressed vulnerabilities from the ELS updates.  This section contains information about available TuxCare ELS OVAL streams.
 
-Currently, we provide OVAL data for the following products:
-
-* CentOS 6 ELS
-* Oracle Linux 6 ELS
-* CentOS 7 ELS
-* CentOS 8 ELS
-* Ubuntu 16.04
-* Ubuntu 18.04
-
 ### TuxCare ELS OVAL Streams
 
-* CentOS 6: [https://repo.cloudlinux.com/centos6-els/centos6-els-oval.xml](https://repo.cloudlinux.com/centos6-els/centos6-els-oval.xml)
-* Oracle Linux 6: [https://repo.cloudlinux.com/oraclelinux6-els/oraclelinux6-els-oval.xml](https://repo.cloudlinux.com/oraclelinux6-els/oraclelinux6-els-oval.xml)
-* Oracle Linux 7: [https://repo.tuxcare.com/oraclelinux7-els/oraclelinux7-els-oval.xml](https://repo.tuxcare.com/oraclelinux7-els/oraclelinux7-els-oval.xml)
-* CentOS 7: [https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml](https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml)
-* CentOS 8.4: [https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml](https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml)
-* CentOS 8.5: [https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml](https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml)
-* CentOS Stream 8: [https://repo.tuxcare.com/centos8stream-els/centos8stream-els-oval.xml](https://repo.tuxcare.com/centos8stream-els/centos8stream-els-oval.xml)
-* Ubuntu 16.04: [https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml)
-* Ubuntu 18.04: [https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml)
+* CentOS 6 ELS: [https://repo.cloudlinux.com/centos6-els/centos6-els-oval.xml](https://repo.cloudlinux.com/centos6-els/centos6-els-oval.xml)
+* CentOS 7 ELS: [https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml](https://repo.tuxcare.com/centos7-els/centos7-els-oval.xml)
+* CentOS 8.4 ELS: [https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml](https://repo.cloudlinux.com/centos8.4-els/centos84-els-oval.xml)
+* CentOS 8.5 ELS: [https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml](https://repo.cloudlinux.com/centos8.5-els/centos85-els-oval.xml)
+* CentOS Stream 8 ELS: [https://repo.tuxcare.com/centos8stream-els/centos8stream-els-oval.xml](https://repo.tuxcare.com/centos8stream-els/centos8stream-els-oval.xml)
+* Oracle Linux 6 ELS: [https://repo.cloudlinux.com/oraclelinux6-els/oraclelinux6-els-oval.xml](https://repo.cloudlinux.com/oraclelinux6-els/oraclelinux6-els-oval.xml)
+* Oracle Linux 7 ELS: [https://repo.tuxcare.com/oraclelinux7-els/oraclelinux7-els-oval.xml](https://repo.tuxcare.com/oraclelinux7-els/oraclelinux7-els-oval.xml)
+* Ubuntu 16.04 ELS: [https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml)
+* Ubuntu 18.04 ELS: [https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml)
+* Ubuntu 20.04 ELS: [https://repo.tuxcare.com/ubuntu20_04-els/ubuntu20.04-els-oval.xml](https://repo.tuxcare.com/ubuntu20_04-els/ubuntu20.04-els-oval.xml)
+
 
 ### How to use OpenSCAP with TuxCare ELS
 
@@ -569,16 +601,17 @@ Once that is validated, you can use the corresponding to the operating system OV
 
 ## TuxCare ELS RSS releases feeds
 
-* CentOS 6: [https://cve.tuxcare.com/rss_feed/releases/centos6els](https://cve.tuxcare.com/rss_feed/releases/centos6els)
+* CentOS 6 ELS: [https://cve.tuxcare.com/rss_feed/releases/centos6els](https://cve.tuxcare.com/rss_feed/releases/centos6els)
+* CentOS 7 ELS: [https://cve.tuxcare.com/rss_feed/releases/centos7els](https://cve.tuxcare.com/rss_feed/releases/centos7els)
+* CentOS 8.4 ELS: [https://cve.tuxcare.com/rss_feed/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/releases/centos8.4els)
+* CentOS 8.5 ELS: [https://cve.tuxcare.com/rss_feed/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/releases/centos8.5els)
+* CentOS Stream 8 ELS: [https://cve.tuxcare.com/rss_feed/releases/centos8streamels](https://cve.tuxcare.com/rss_feed/releases/centos8streamels)
 * CloudLinux 6: [https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els](https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els)
-* Oracle Linux 6: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els)
-* Oracle Linux 7: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els)
-* CentOS 7: [https://cve.tuxcare.com/rss_feed/releases/centos7els](https://cve.tuxcare.com/rss_feed/releases/centos7els)
-* CentOS 8.4: [https://cve.tuxcare.com/rss_feed/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/releases/centos8.4els)
-* CentOS 8.5: [https://cve.tuxcare.com/rss_feed/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/releases/centos8.5els)
-* CentOS Stream 8: [https://cve.tuxcare.com/rss_feed/releases/centos8streamels](https://cve.tuxcare.com/rss_feed/releases/centos8streamels)
-* Ubuntu 16.04: [https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els)
-* Ubuntu 18.04: [https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els)
+* Oracle Linux 6 ELS: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els)
+* Oracle Linux 7 ELS: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els)
+* Ubuntu 16.04 ELS: [https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els)
+* Ubuntu 18.04 ELS: [https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els)
+* Ubuntu 20.04 ELS: [https://cve.tuxcare.com/rss_feed/releases/ubuntu20.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu20.04els)
 
 ## Deinstallation instructions for yum repositories
 
