@@ -149,7 +149,31 @@ import{_ as e,n as i,p as s,a6 as n}from"./framework-620c4f90.js";const a={},t=n
         user: api-user
         password: dummy
         force_basic_auth: yes
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Ad hoc run with:</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>ansible-playbook -u ansible  ./kernelcare.yml
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Example of server tagging:</p><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code>- hosts: kernelcare
+  vars:
+    eportal_srv: http://192.168.246.110
+    eportal_tags: &#39;staging;location:Boston&#39;
+  tasks:
+    - name: get systemid content
+      slurp:
+        src: /etc/sysconfig/kcare/systemid
+      register: systemid_file
+
+    - name: set server_id
+      set_fact:
+        eportal_server_id: &quot;{{ systemid_file.content | b64decode | trim | regex_replace(&#39;^server_id=(\\\\w+)$&#39;, &#39;\\\\1&#39;) }}&quot;
+
+    - name: set server tags using ePortal API
+      uri:
+        url: &#39;{{ eportal_srv }}/admin/api/set_tags&#39;
+        method: POST
+        headers:
+          X-Api-Key: &#39;{{ lookup(&quot;env&quot;, &quot;EPORTAL_API_TOKEN&quot;) }}&#39;
+        body_format: form-urlencoded
+        body:
+          server_id: &#39;{{eportal_server_id }}&#39;
+          tags: &#39;{{ eportal_tags }}&#39;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Ad hoc run with:</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>ansible-playbook -u ansible  ./kernelcare.yml
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>This can be called during machine tear down to properly remove the server from ePortal.</p><h3 id="chef-recipe" tabindex="-1"><a class="header-anchor" href="#chef-recipe" aria-hidden="true">#</a> Chef recipe</h3><p>Having tighter integration with automation tools like Chef has always been a goal for KernelCare and related tools like ePortal. The following recipe demonstrates how to use the delete_server api to correctly remove a server from ePortal during tear down, and can be integrated with your other recipes to avoid manual operations.</p><p>Unregister KernelCare agent through API recipe:</p><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code>eportal_url = &quot;EPORTAL URL&quot;
 eportal_user = &quot;EPORTAL API USER NAME&quot;
 eportal_password = &quot;EPORTAL API USER PASSWORD&quot;
@@ -178,7 +202,24 @@ http_request &quot;kernelcare-unregister-api&quot; do
     Base64.encode64(&quot;#{eportal_user}:#{eportal_password}&quot;)}&quot;,
   })
 end
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Ad hoc run with:</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>chef-apply kernelcare-unregister-api.rb
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Example of server tagging (kernelcare-tag-server.rb):</p><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code>eportal_url = &quot;http://192.168.246.110&quot;
+eportal_api_key = &quot;Lgk5-qWeBypejSEc6nYmalGbv11Kh_OyWi2_vigrTro&quot;
+tags = &quot;staging;location:Boston&quot;
+
+ruby_block &#39;get-server-id&#39; do
+  block do
+    node.run_state[&#39;server_id&#39;] = File::read(&#39;/etc/sysconfig/kcare/systemid&#39;).gsub(/server_id=(\\w+)\\s*/, &#39;\\1&#39;)
+  end
+  action :run
+end
+
+http_request &#39;kernelcare-set-server-tags&#39; do
+  url &quot;#{eportal_url}/admin/api/set_tags&quot;
+  action :post
+  message lazy {{&#39;server_id&#39; =&gt; &quot;#{node.run_state[&#39;server_id&#39;]}&quot;, &#39;tags&#39; =&gt; tags}.to_json}
+  headers({&#39;X-Api-Key&#39; =&gt; eportal_api_key, &#39;Content-Type&#39; =&gt; &#39;application/json&#39;})
+end
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Ad hoc run with:</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>chef-apply kernelcare-unregister-api.rb
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Output:</p><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code>Recipe: (chef-apply cookbook)::(chef-apply recipe)
   * http_request[kernelcare-unregister-api] action post
     - http_request[kernelcare-unregister-api] POST to http://192.168.246.110/admin/api/delete_server?ip=192.168.246.40
@@ -210,8 +251,17 @@ else
 fi
 
 curl -kL -u &quot;\${EPORTAL_API_PASSWORD}&quot;&#39;:&#39;&quot;\${EPORTAL_API_PASSWORD}&quot; -X POST &quot;\${EPORTAL_URL}&quot;&#39;/admin/api/delete_server?ip=&#39;&quot;\${IP_TO_UNREGISTER}&quot;
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="puppet-plan" tabindex="-1"><a class="header-anchor" href="#puppet-plan" aria-hidden="true">#</a> Puppet Plan</h3><p>If you prefer to have a plan rather than a task, then you can create one from this script with the following steps:</p><ul><li>Create a new directory called <code>eportal_puppet</code></li><li>Inside this directory, create a bolt project:<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>bolt project init
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Example of server tagging (tag_server.sh)</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>#!/bin/bash
+
+EPORTAL_URL=&#39;http://192.168.246.110&#39;
+EPORTAL_TAGS=&#39;staging;location:Boston&#39;
+EPORTAL_API_KEY=&#39;Lgk5-qWeBypejSEc6nYmalGbv11Kh_OyWi2_vigrTro&#39;
+
+EPORTAL_SERVER_ID=$( grep -oP &#39;server_id=\\K(.+)&#39; /etc/sysconfig/kcare/systemid )
+
+curl -kL -H &quot;X-Api-Key: \${EPORTAL_API_KEY}&quot; --data-urlencode &quot;server_id=\${EPORTAL_SERVER_ID}&quot; --data-urlencode &quot;tags=\${EPORTAL_TAGS}&quot; &quot;\${EPORTAL_URL}/admin/api/set_tags&quot;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="puppet-plan" tabindex="-1"><a class="header-anchor" href="#puppet-plan" aria-hidden="true">#</a> Puppet Plan</h3><p>If you prefer to have a plan rather than a task, then you can create one from this script with the following steps:</p><ul><li>Create a new directory called <code>eportal_puppet</code></li><li>Inside this directory, create a bolt project:<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>bolt project init
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li><li>Create a scripts directory inside it</li><li>Place the script above inside of it (call it <code>unregister_server.sh</code>)</li><li>Create the bolt plan using:<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>bolt plan new eportal_puppet::unregister_server --script eportal_puppet/scripts/unregister_server.sh
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li><li>Now your plan is ready and can be called directly with:<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>bolt plan run eportal_puppet:unregister_server -t &lt;TARGETS&gt;
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li></ul><p>Ad hoc run example with:</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>bolt plan run eportal_puppet::unregister_server -t 192.168.246.110
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>This can be called during machine tear down to properly remove the server from ePortal.</p>`,174),r=[t];function d(o,l){return i(),s("div",null,r)}const c=e(a,[["render",d],["__file","index.html.vue"]]);export{c as default};
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>This can be called during machine tear down to properly remove the server from ePortal.</p>`,180),r=[t];function d(o,l){return i(),s("div",null,r)}const c=e(a,[["render",d],["__file","index.html.vue"]]);export{c as default};
