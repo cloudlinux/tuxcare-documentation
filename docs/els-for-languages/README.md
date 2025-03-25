@@ -1325,7 +1325,7 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 
 <span style="color: red;">_Note: The following steps use the .NET SDK installation as an example. If you are installing a runtime instead, follow a similar process using the corresponding .msi file._</span>
 * Once the installer is downloaded, double-click the file to run it. You’ll see a dialog window. Follow the on-screen instructions: 
-  ![](/images/els-dotnet-installation.png)
+  ![image](/images/els-dotnet-installation.png)
   * Accept the **license agreement**.
   * Click **Install** and wait for the process to complete. It should only take a few minutes.
   * Once the installation is finished, click **Close**.
@@ -1450,6 +1450,8 @@ The following commands are useful for managing and troubleshooting .NET installa
   :::
 * A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window. 
 
+![image](/images/dotnet-uninstall-settings.gif)
+
 #### Uninstall via Control Panel
 * Open **Control Panel** &rarr; **Programs** &rarr; **Programs and Features**.
 * Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
@@ -1458,6 +1460,8 @@ The following commands are useful for managing and troubleshooting .NET installa
   During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required option"** and click **OK** to proceed.
   :::
 * A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window. 
+
+![image](/images/dotnet-uninstall-controlpanel.gif)
 
 #### Remove Remaining Files
 After uninstalling .NET some files may remain in the following locations:
