@@ -99,6 +99,37 @@ For running manually, you may need to set it in the user profile like so (or sim
 echo "export https_proxy=http://proxy.domain.com:port" > /etc/profile.d/proxy.sh
 ```
 
+## Proxying via ePortal
+
+If you are an [ePortal](/eportal) user, you can proxy Radar via ePortal instead of configuring a dedicated proxy as above.
+
+In /etc/tuxcare-radar/radar.yaml change the `base-url` to point to your eportal server with a trailing `/radar`, for example:
+
+```text
+#base-url: https://radar.tuxcare.com
+base-url: https://eportal.example.com/radar
+```
+
+Then on your ePortal server, update /etc/eportal/config with the following:
+
+```text
+RADAR_PROXY_ENABLE = True
+```
+
+Then restart ePortal:
+
+```text
+systemctl restart eportal
+```
+
+When it is working, you will see messages like the following, mentioning the ePortal URL in /var/log/tuxcare-radar/radar.log on your TuxCare Radar client:
+
+```text
+radar INFO: fetching oval file from https://eportal.example.com/radar/oval/alma/9.5?fips=false&oval=0
+radar INFO: fetching oval file from https://eportal.example.com/radar/oval/alma/9.5?fips=false&oval=1
+radar INFO: sending output to https://eportal.example.com/radar
+```
+
 ## Usage
 
 The installer should have created an /etc/cron.d/tuxcare-radar file that will run from a randomized time every 6 hours, it will check if a scan has been run in the last 23 hours (`time-between-runs` in radar.yaml) and if not, it will run a scan.
