@@ -39,11 +39,9 @@ For example:
 rsync -avSHP --delete rsync://repo.cloudlinux.com/ORALINUX6ELS/ .
 ```
 
-### CentOS 8 ELS
+### CentOS 8.4 ELS
 
-To create a local mirror of the repository with security updates via rsync, use the following:
-
-* For CentOS 8.4:
+To create a local mirror of the repository with security updates via `rsync`, use the following:
 
 ```
 rsync://repo.cloudlinux.com/CENTOS84_ELS/
@@ -55,7 +53,9 @@ For example:
 rsync -avSHP --delete rsync://repo.cloudlinux.com/CENTOS84_ELS/ .
 ```
 
-* For CentOS 8.5:
+### CentOS 8.5 ELS
+
+To create a local mirror of the repository with security updates via `rsync`, use the following:
 
 ```
 rsync://repo.cloudlinux.com/CENTOS85_ELS/
@@ -137,4 +137,16 @@ For example:
 
 ```
 rsync -avSHP --delete rsync://repo.tuxcare.com/ORACLELINUX7ELS/ .
+```
+
+### Ubuntu 20.04 ELS
+
+To create a local mirror of the repository with security updates via `rsync`, use the following:
+```
+rsync://repo.tuxcare.com/UBUNTU2004ELS/
+```
+
+For example:
+```
+rsync -avSHP --delete rsync://repo.tuxcare.com/UBUNTU2004ELS/ .
 ```
