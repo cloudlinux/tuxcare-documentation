@@ -589,6 +589,21 @@ configuration.
 
 ![libcare feed](/images/eportal-libcare-feed.png)
 
+### Disable arbitrary patchset
+
+To disable a patchset, run the following command:
+
+```
+kc.eportal kcare unroll K20210129_02
+```
+
+If you want to remove a patches instead of disabling them, you can use the
+`--delete` option:
+
+```
+kc.eportal kcare unroll K20210129_02 --delete
+```
+
 ### CLI to install the latest patchsets
 
 To update the default feed, run the following command:
