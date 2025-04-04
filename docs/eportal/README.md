@@ -1630,3 +1630,25 @@ And restart `nginx` and `eportal` services to apply changes:
 ```text
 # systemctl restart eportal nginx
 ```
+
+## Troubleshooting
+
+If you have any questions regarding setting up and operating ePortal, please reach out to the support team.
+To simplify the analysis of a problem, it is often necessary to provide additional information about the system environment.
+It is recommended to use the ePortal CLI to collect this information and submit it to support.
+
+Run:
+
+```text
+# kc.eportal doctor
+```
+In order for the auto-submission to work, you need to configure patch source (see [PatchSet deployment](#patchset-deployment)).
+
+If you experience problems configuring the patch source or have problems accessing the Internet, you can generate a report and submit it manually.
+
+```text
+# kc.eportal doctor --no-send
+```
+
+The above command will create an archive with the collected data and output the path to it.
+You can inspect the contents of the archive if necessary and then send it to the support team.
