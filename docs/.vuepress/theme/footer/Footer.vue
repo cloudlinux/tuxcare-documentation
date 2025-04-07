@@ -7,7 +7,7 @@
       </a>
     </div>
     <div class="footer-company-title">{{ year }}.
-      CloudLinux Inc
+      Cloud Linux Software Inc
     </div>
 
     <div class="social">
