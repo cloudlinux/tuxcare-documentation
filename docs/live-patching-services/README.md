@@ -202,7 +202,7 @@ kcarectl --patch-info
 | `-i`,`--info`  | Displays information about patches installed by KernelCare SimplePatch.  |
 | `-u`, `--updated`  | Downloads the latest patches and applies them to current kernel.  |
 |`--smart-update` [since 1.6]  | The same as `--update` but is used to decide where to get pathches |
-| `--unload`  | Unloads pathces.  |
+| `--unload`  | Unloads patches.  |
 | `--auto-update`  | Checks if update is needed and performs an update  |
 | `--patch-info`  | Lists applied patches.  |
 | `--status`  | Returns a status of an update. Refer to the exit code: <br> `0` - host is updated to the latests patch level <br> `1` - there are no applied patches <br> `2` - there are new but not applied patches <br> `3` - kernel is unsupported  |
