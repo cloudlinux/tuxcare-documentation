@@ -3,7 +3,7 @@
 * [ELS for PHP](./#els-for-php)
 * [ELS for Python](./#els-for-python)
 * [ELS for Spring Framework and Spring Boot](./#els-for-spring-framework-and-spring-boot)
-* [ELS for Apache Tomcat](./#els-for-apache-tomcat)
+* [ELS for Apache Tomcat](./#endless-lifecycle-support-for-apache-tomcat)
 * [ELS for .NET](./#endless-lifecycle-support-for-net-6)
 
 ## ELS for PHP
