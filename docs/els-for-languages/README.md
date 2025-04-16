@@ -22,13 +22,19 @@ TuxCare provides Endless Lifecycle Support through four years after the EOL date
 | AlmaLinux                             | 8.x 64-bit, 9.x 64-bit                                |
 | Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit|
 | Debian				| 10, 11, 12						|
-Other linux distros upon request.
+| Windows				| Windows Server 2019, 2025				|
+Other distros upon request.
+
+
 ### Supported versions
 
 **CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.:** 5.1.6, 5.2.17, 5.3.29, 5.4.45, 5.5.38, 5.6.40, 7.0.33, 7.1.33, 7.2.34, 7.3.33, 7.4.33, 8.0.30, 8.1.27, 8.2, 8.3
 
-**Ubuntu:** 5.6.40, 7.0.33, 7.1.33, 7.2.34, 7.3.33, 7.4.33, 8.0.30, 8.1.27, 8.2, 8.3
-**Debian:** 10, 11, 12
+**Ubuntu:** 5.6.40, 7.0.33, 7.1.33, 7.2.34, 7.3.33, 7.4.33, 8.0.30, 8.1.27, 8.2, 8.3 
+
+**Debian:** 10, 11, 12 
+
+**Windows:** 5.6, 7.4
 
 ### Vulnerability Coverage and Target Response Times
 
