@@ -41,7 +41,7 @@ ESU provides security patches for High and Critical vulnerabilities (with a 7+ C
 
 ### FIPS-compliant security patches
 
-ESU enables continuous security for FIPS-certified AlmaLinux 9.2 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel, openssl, libcrypt, nss and gnutls packages](https://docs.tuxcare.com/enterprise-support-for-almalinux/#enabling-fips-140-3-mode). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/). They are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged module. This module will undergo an expedited FIPS 140-3 recertification to ensure it is attested to conform to FIPS 140-3 requirements.
+ESU enables continuous security for FIPS-certified AlmaLinux 9.2 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel, openssl, libcrypt, nss and gnutls packages](https://tuxcare.com/fips-for-almalinux/). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/). They are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged module. This module will undergo an expedited FIPS 140-3 re-validation to ensure it is attested to conform to FIPS 140-3 requirements.
 
 ### Target response times
 
@@ -60,12 +60,12 @@ ESU provides qualified security and selected bug-fix errata advisories across al
 
 Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities:
 
-* AlmaLinux 9.2 FIPS: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-fips-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-fips-oval.xml)
 * AlmaLinux 9.2 ESU: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml)
+
+Ask your Account Manager about SBOM access.
 
 ### RSS releases feeds
 
-* AlmaLinux 9.2 FIPS: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2fips](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2fips)
 * AlmaLinux 9.2 ESU: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu)
 
 ### Technical support
@@ -93,7 +93,7 @@ The TuxCare ESU/FIPS packages and repositories are cryptographically signed with
 
 **Requirements**
 
-* AlmaLinux 9.2 operating system
+* AlmaLinux 9.2 operating system (download images from [here](https://tuxcare.com/almalinux-enterprise-support/get-almalinux/))
 * x86_64 or aarch64 architecture
 * Extended Security Updates license key (should be obtained from [portal.tuxcare.com](https://portal.tuxcare.com))
 * Internet access
@@ -101,7 +101,7 @@ The TuxCare ESU/FIPS packages and repositories are cryptographically signed with
 `tuxctl` is the setup tool for TuxCare's Enterprise Support for AlmaLinux, which will configure your system to receive patches from the TuxCare repositories. To install `tuxctl` you need to install the `tuxcare-release` package first. This package contains the TuxCare repo definitions, TuxCare GPG key and the `tuxctl` setup tool. Run the following as root:
 
 ```text
-# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.$(uname -i).rpm
+# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.noarch.rpm
 ```
 
 The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your ESU license key provided as a command line argument like so:
@@ -148,31 +148,41 @@ Then you will have to run `tuxctl` like this:
 
 First please ensure you have installed the `tuxcare-release` package as described above. If you haven't already registered your ESU license using `tuxctl` the next step will also do that for you.
 
-To enable the FIPS repo, install the FIPS 140-3 validated packages, enable FIPS mode and configure grub to boot into the FIPS-validated kernel, please run these commands as root, substituting in your license key:
+To install the FIPS 140-3 validated ESU packages over the default ones and enable FIPS mode, please run these commands as root:
 
 ```text
-# tuxctl --fips -l ESU-XXXXXXXXXXXXXXXXXXXXXXXX
-# dnf -y install openssl-3.0.7-20.el9_2.tuxcare.1 kernel-5.14.0-284.11.1.el9_2.tuxcare.6
-# dnf -y install gnutls-3.7.6-23.el9_2.tuxcare.3 nettle-3.8-3.el9_2.tuxcare.1 libgcrypt-1.10.0-10.el9_2.tuxcare.3 nss-3.90.0-6.el9_2.tuxcare.1
-# grubby --set-default=/boot/vmlinuz-5.14.0-284.11.1.el9_2.tuxcare.6.$(uname -i)
+# dnf -y upgrade
 # fips-mode-setup --enable
 # reboot
 ```
 
+If you wish to only boot into the FIPS-validated kernel (see [version table](https://tuxcare.com/fips-for-almalinux/)) and not the security patched kernels or updates under CMVP review (only required in very high classification environments) you can use grubby like so:
+
+```text
+# dnf -y install kernel-5.14.0-284.11.1.el9_2.tuxcare.6
+# grubby --set-default=/boot/vmlinuz-5.14.0-284.11.1.el9_2.tuxcare.6.$(uname -i)
+```
+
 :::warning
-Note the aarch64 platform doesn't currently have FIPS-validated gnutls/libgcrypt/nss packages, so ARM users should only run the first `dnf` command to install the openssl and kernel packages.
+Note the aarch64 platform doesn't currently have FIPS-validated gnutls/libgcrypt/nss packages, only kernel and openssl.
 
 We also provide multilib i686 packages of the userspace modules in the x86_64 repo for backwards compatibility, note that these are not FIPS-validated but are built from the same source.
 :::
 
-Once you've logged in after the reboot, run these commands and check the output matches to confirm it worked:
+Once you've logged in after the reboot, you can run these commands to confirm it worked (note the versions may be slightly different by the time you read this):
 
 ```text
 $ fips-mode-setup --check
 FIPS mode is enabled.
 
+$ $update-crypto-policies --show
+FIPS
+
+$ update-crypto-policies --check
+The configured policy matches the generated policy
+
 $ uname -r
-5.14.0-284.11.1.el9_2.tuxcare.6.x86_64
+5.14.0-284.1101.el9_2.tuxcare.7.x86_64
 
 $ openssl list -providers | grep -A3 fips
   fips
@@ -186,7 +196,7 @@ $ openssl list -providers | grep -A3 fips
 To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux community repo's, you can run the following as root:
 
 ```text
-# dnf -y remove almacare-release tuxcare-release
+# dnf -y remove tuxcare-release
 
 # fips-mode-setup --disable
 
@@ -195,7 +205,6 @@ To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux 
   -e 's|^# mirrorlist|mirrorlist|' \
   -e 's|^baseurl|# baseurl|' \
   -e 's|$tuxcare_releasever/$tuxcare_token|$releasever|g' \
-  -e 's|almacare|tuxcare|g' \
   -e 's|$tuxcare_releasever|$releasever|g' \
   -e '/^exclude/d' \
   /etc/yum.repos.d/almalinux*.repo
@@ -204,7 +213,7 @@ To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux 
 ```
 
 :::warning
-Note that by disabling ESU, you will revert to tracking major version releases instead of sticking to a specific minor version, so you may be upgraded from 9.2 to 9.4 for example - a process you cannot undo.
+Note that by disabling ESU, you will revert to tracking major version releases instead of sticking to a specific minor version, so you may be upgraded from 9.2 to 9.5 for example - a process you cannot undo.
 :::
 
 To completely remove the TuxCare packages, after following the above steps, run the following as root:
@@ -303,9 +312,8 @@ sed -i '/^exclude=.*/d' /etc/yum.conf /etc/dnf/dnf.conf
 dnf -y remove *leapp* elevate-release kernel-*.el8*
 
 # enable esu+fips
-dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.$(uname -i).rpm
-tuxctl --fips --license-key ESU-xxxxxxxxxxxxxxx
-dnf -y install kernel-5.14.0-284.11*
+dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.noarch.rpm
+tuxctl --license-key ESU-xxxxxxxxxxxxxxx
 dnf -y upgrade
 fips-mode-setup --enable
 reboot
@@ -468,7 +476,7 @@ Technical support covered by any of the TuxCare Support Programs shall not be pr
 
 ### Installing tuxctl (Essential Support)
 
-Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux version, currently 8.8, 8.10, 9.2 and 9.4 are supported.
+Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux version, currently 8.8, 8.10, 9.2, 9.4 and 9.5 are supported.
 
 If you are unsure, run this to find your exact OS version:
 
@@ -478,10 +486,10 @@ $ cat /etc/almalinux-release
 AlmaLinux release 8.10 (Cerulean Leopard)
 ```
 
-You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2 or 9.4) then install it as root, for example:
+You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2, 9.4 or 9.5) then install it as root, for example:
 
 ```text
-# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-8.10.$(uname -i).rpm
+# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-8.10.noarch.rpm
 ```
 
 :::warning
@@ -494,13 +502,25 @@ The second step is to activate your license on the system. You should run the `t
 # tuxctl --license-key ESA-XXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-Essential Support customers can upgrade to a new minor version, for example from 9.2 to 9.4 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
+Essential Support customers can upgrade to a new minor version, for example from 9.4 to 9.5 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
 
 ```text
-# echo 9.4 > /etc/dnf/vars/tuxcare_releasever
+# echo 9.5 > /etc/dnf/vars/tuxcare_releasever
 # dnf upgrade
 ```
 
 :::warning
-Note that if you upgrade past 9.2 you won't be able to upgrade to ESU without a reinstall. ESU customers can find instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl)
+If you get a status code 403:
+
+```text
+Errors during downloading metadata for repository 'tuxcare-esu'
+```
+
+Then you are using an ESA license key for an ESU release (9.2, 9.6 or 9.10) and can disable the ESU repository using:
+
+```text
+dnf config-manager --set-disabled tuxcare-esu
+```
+
+ESU customers can find instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl)
 :::
