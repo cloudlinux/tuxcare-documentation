@@ -381,7 +381,27 @@ As you can see, each version is entirely self-contained, and changing configurat
 
 ## ELS for Python
 
-Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python 2.7 version for AlmaLinux 9. This allows to continue running Linux server vulnerability-free.
+Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python versions that have reached their end-of-life. This allows to continue running Linux server vulnerability-free.
+
+### Supported OS
+
+TuxCare provides Endless Lifecycle Support through four years after the EOL date.
+
+| OS                                    | Version                                               |
+| :-----------------------------------: | :----------------------------------------------:      |
+| CentOS, CloudLinux, OracleLinux, etc. | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit		        |
+| AlmaLinux                             | 9.x 64-bit                              	        |
+| Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit		|					|
+Other distros upon request.
+
+
+### Supported versions
+
+**CentOS, CloudLinux, Oracle Linux, etc.:** 2.6.6, 2.7.5, 2.7.18, 3.6.8
+
+**AlmaLinux:** 3.9.16, 3.11.2
+
+**Ubuntu:** 2.7.17-1, 2.7.12, 3.5.2, 3.6.9-1
 
 ### Installation instructions of yum repositories
 
