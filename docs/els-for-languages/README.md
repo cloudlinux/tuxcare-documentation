@@ -391,12 +391,15 @@ TuxCare provides Endless Lifecycle Support through four years after the EOL date
 | AlmaLinux                             | 9.x 64-bit                              	        |
 | Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit, 24.04 64-bit		|					|
 Other distros upon request.
+
 ### Supported versions
 **EL6, 7, 8, 9**: alt-python 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 **debian 9 and 10**: 3.5, 3.8, 3.11
 **debian 11 and 12**: 3.8, 3.11
 **Ubuntu 16 and 18**: 3.5, 3.8, 3.11
-**Ubuntu 20, 22, 24**: 3.8, 3.11
+**Ubuntu 20**: 3.7, 3.8, 3.10, 3.11, 3.12 
+**Ubuntu 22**: 3.8, 3.11, 3.13 
+**Ubuntu 24**: 3.8, 3.11
 
 ### Installation instructions of yum repositories
 
