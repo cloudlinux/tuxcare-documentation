@@ -2047,7 +2047,7 @@ TuxCare provides ELS for Angular 16 trial version as an NPM package, hosted on a
   ```
   and login to your [npmjs.com](#step-2-create-an-account-on-npmjs-com) account. This will link your authentication to the registry.
   :::tip
-  After logging in, npm will automatically add a line like `//registry.npmjs.org/:_authToken=${TOKEN}` to your `.npmrc` file. It stores a  new token which is used to authenticate you to the [npmjs.com](https://www.npmjs.com/login) registry.
+  After logging in, npm will automatically add a line like `//registry.npmjs.org/:_authToken=${TOKEN}` to your `.npmrc` file. It stores a new token which is used to authenticate you to the [npmjs.com](https://www.npmjs.com/login) registry.
   :::
  
 * Update your `package.json` file to replace your Angular dependencies with the TuxCare trial packages:
