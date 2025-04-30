@@ -1959,13 +1959,13 @@ Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes
 
 **Please, note the following trial limitations:**
 * This trial is provided as-is.
-* It is not recommended to be used for production usage.
+* It is not recommended for production use.
 * It does not contain any security fixes or patches.
 
 ### Supported Angular Versions
 
 * Angular 16
-* Other versions available upon request
+* Angular 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, and 17 are in active development and will be available shortly
 
 ### Vulnerability Coverage and Target Response Times
 
@@ -2009,7 +2009,7 @@ TuxCare provides technical support according to the [<u>support policy</u>](http
 This guide outlines the steps needed to integrate the TuxCare ELS for Angular repository. 
 
 ### Step 1: Get user credentials
-You need a username and password in order to use TuxCare ELS Angular repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+You need a username, password, and token in order to use TuxCare ELS Angular repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Create an account on [npmjs.com](https://www.npmjs.com/login)
 
@@ -2019,13 +2019,9 @@ You need to create an account on [npmjs.com](https://www.npmjs.com/login) to ins
 
 TuxCare provides ELS for Angular 16 trial version as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-* Using the [credentials](#step-1-get-user-credentials-2) generate your authentication token. 
-  ```
-  echo -n 'YOUR-LOGIN:YOUR-PASSWORD' | openssl base64
-  ```
-  Save the generated token - you will need it to access ELS Angular repository and package.
 * Navigate to the root directory of your Angular project.
 * Create a `.npmrc` file or update it if it already exists.
+
   **Example:**
   ```
   my-angular-project/
@@ -2043,18 +2039,18 @@ TuxCare provides ELS for Angular 16 trial version as an NPM package, hosted on a
   //nexus.repo.tuxcare.com/repository/els_angular/:_auth=${TOKEN}
   ```
   :::warning
-  Replace ${TOKEN} with the token you generated above.
+  Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
   :::
 * In your terminal, run: 
   ```
   npm login --userconfig .npmrc
   ```
-  and login to your [npmjs.com](#step-2-create-account-on-npmjs-com) account. This will link your authentication to the registry.
+  and login to your [npmjs.com](#step-2-create-an-account-on-npmjs-com) account. This will link your authentication to the registry.
   :::tip
   After logging in, npm will automatically add a line like `//registry.npmjs.org/:_authToken=${TOKEN}` to your `.npmrc` file. It stores a  new token which is used to authenticate you to the [npmjs.com](https://www.npmjs.com/login) registry.
   :::
  
-* Update your package.json file to replace your Angular dependencies with the TuxCare trial packages:
+* Update your `package.json` file to replace your Angular dependencies with the TuxCare trial packages:
   ```
   "dependencies": {
     "@els-angular/angular-16": "^0.0.2",
