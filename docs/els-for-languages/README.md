@@ -1971,12 +1971,12 @@ If you encounter conflicts, try uninstalling the previous version before install
 
 Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes for Angular that have reached its end of life. This allows you to continue running Angular applications without vulnerability concerns, even after official support has ended. 
 
-<span style="color: red;">_ELS for Angular is currently in active development and will be available soon. If you’re interested or would like to stay informed, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span> 
+<span style="color: red;">_ELS for Angular is currently in active development. If you’re interested in updates, adoption, or have specific requirements or feature requests, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span>
 
 ### Supported Angular Versions
 
 * Angular 16
-* Other versions available upon request
+* Angular 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, and 17 are in active development and will be available shortly
 
 ### Vulnerability Coverage and Target Response Times
 
@@ -2014,6 +2014,96 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 ### Technical Support
 
 TuxCare provides technical support according to the [<u>support policy</u>](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
+
+### Connection to ELS for Angular Repository
+
+This guide outlines the steps needed to integrate the TuxCare ELS for Angular repository. 
+
+### Step 1: Get user credentials
+You need a username, password, and token in order to use TuxCare ELS Angular repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
+### Step 2: Create an account on [npmjs.com](https://www.npmjs.com/login)
+
+You need to create an account on [npmjs.com](https://www.npmjs.com/login) to install the ELS Angular NPM package. Anonymous access is disabled.
+
+### Step 3: Set Up ELS for Angular 16
+
+TuxCare provides ELS for Angular 16 as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+
+* Navigate to the root directory of your Angular project.
+* Create a `.npmrc` file or update it if it already exists.
+
+  **Example:**
+  ```
+  my-angular-project/
+  ├── src/
+  ├── angular.json
+  ├── package.json
+  ├── .npmrc         ⚠️ ← Create it here
+  └── tsconfig.json
+  ```
+
+* Use an editor of your choice (e.g., VS Code) to add the following registry address line: 
+  ```
+  registry=https://registry.npmjs.org/
+  @els-angular:registry=https://nexus.repo.tuxcare.com/repository/els_angular/
+  //nexus.repo.tuxcare.com/repository/els_angular/:_auth=${TOKEN}
+  ```
+  :::warning
+  Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
+  :::
+* In your terminal, run: 
+  ```
+  npm login --userconfig .npmrc
+  ```
+  and login to your [npmjs.com](#step-2-create-an-account-on-npmjs-com) account. This will link your authentication to the registry.
+  :::tip
+  After logging in, npm will automatically add a line like `//registry.npmjs.org/:_authToken=${TOKEN}` to your `.npmrc` file. It stores a new token which is used to authenticate you to the [npmjs.com](https://www.npmjs.com/login) registry.
+  :::
+ 
+* Update your `package.json` file to replace your Angular dependencies with the TuxCare packages:
+  ```
+  "dependencies": {
+    "@els-angular/angular-16": "^0.0.2",
+    "@angular/animations": "./node_modules/@els-angular/angular-16/deps/angular-core/animations",
+    "@angular/common": "./node_modules/@els-angular/angular-16/deps/angular-core/common",
+    "@angular/compiler": "./node_modules/@els-angular/angular-16/deps/angular-core/compiler",
+    "@angular/core": "./node_modules/@els-angular/angular-16/deps/angular-core/core",
+    "@angular/forms": "./node_modules/@els-angular/angular-16/deps/angular-core/forms",
+    "@angular/platform-browser": "./node_modules/@els-angular/angular-16/deps/angular-core/browser",
+    "@angular/platform-browser-dynamic": "./node_modules/@els-angular/angular-16/deps/angular-core/platform-browser-dynamic",
+    "@angular/router": "./node_modules/@els-angular/angular-16/deps/angular-core/router",
+    "rxjs": "./node_modules/@els-angular/angular-16/deps/angular-core/rxjs",
+    "tslib": "./node_modules/@els-angular/angular-16/deps/angular-core/tslib",
+    "zone.js": "./node_modules/@els-angular/angular-16/deps/angular-core/zone.js"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "./node_modules/@els-angular/angular-16/deps/angular-devkit/build-angular",
+    "@angular/cli": "./node_modules/@els-angular/angular-16/deps/angular/cli",
+    "@angular/compiler-cli": "./node_modules/@els-angular/angular-16/deps/angular/compiler-cli",
+    "@types/jasmine": "./node_modules/@els-angular/angular-16/deps/types/jasmine",
+    "jasmine-core": "./node_modules/@els-angular/angular-16/deps/jasmine-core",
+    "karma": "./node_modules/@els-angular/angular-16/deps/karma",
+    "karma-chrome-launcher": "./node_modules/@els-angular/angular-16/deps/karma-chrome-launcher",
+    "karma-coverage": "./node_modules/@els-angular/angular-16/deps/karma-coverage",
+    "karma-jasmine": "./node_modules/@els-angular/angular-16/deps/karma-jasmine",
+    "karma-jasmine-html-reporter": "./node_modules/@els-angular/angular-16/deps/karma-jasmine-html-reporter",
+    "typescript": "./node_modules/@els-angular/angular-16/deps/typescript"
+  }
+  ```
+
+* In your terminal, run the following command to install ELS for Angular 16 dependencies: 
+  ```
+  npm install --userconfig .npmrc
+  ```
+  You will see an output like:
+  ```
+  added 12 packages, removed 931 packages, changed 22 packages, and audited 57 packages in 23s
+
+  found 0 vulnerabilities
+  ```
+
+* You've successfully integrated the TuxCare ELS for Angular repository into your project.
 
 ## Endless Lifecycle Support for AngularJS
 
