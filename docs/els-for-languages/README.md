@@ -1955,12 +1955,7 @@ Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes
 
 ### Early Access Notice
 
-<span style="color: red;">_ELS for Angular is currently in active development and is provided as a trial version._</span> It is intended for evaluation and integration validation purposes only. If you’re interested in updates or adoption, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-
-**Please, note the following trial limitations:**
-* This trial is provided as-is.
-* It is not recommended for production use.
-* It does not contain any security fixes or patches.
+<span style="color: red;">_ELS for Angular is currently in active development. If you’re interested in updates, adoption, or have specific requirements or feature requests, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span>
 
 ### Supported Angular Versions
 
@@ -2015,9 +2010,9 @@ You need a username, password, and token in order to use TuxCare ELS Angular rep
 
 You need to create an account on [npmjs.com](https://www.npmjs.com/login) to install the ELS Angular NPM package. Anonymous access is disabled.
 
-### Step 3: Set Up ELS for Angular 16 Trial 
+### Step 3: Set Up ELS for Angular 16
 
-TuxCare provides ELS for Angular 16 trial version as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for Angular 16 as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
 * Navigate to the root directory of your Angular project.
 * Create a `.npmrc` file or update it if it already exists.
@@ -2050,7 +2045,7 @@ TuxCare provides ELS for Angular 16 trial version as an NPM package, hosted on a
   After logging in, npm will automatically add a line like `//registry.npmjs.org/:_authToken=${TOKEN}` to your `.npmrc` file. It stores a new token which is used to authenticate you to the [npmjs.com](https://www.npmjs.com/login) registry.
   :::
  
-* Update your `package.json` file to replace your Angular dependencies with the TuxCare trial packages:
+* Update your `package.json` file to replace your Angular dependencies with the TuxCare packages:
   ```
   "dependencies": {
     "@els-angular/angular-16": "^0.0.2",
@@ -2081,7 +2076,7 @@ TuxCare provides ELS for Angular 16 trial version as an NPM package, hosted on a
   }
   ```
 
-* In your terminal, run the following command to install ELS for Angular 16 trial dependencies: 
+* In your terminal, run the following command to install ELS for Angular 16 dependencies: 
   ```
   npm install --userconfig .npmrc
   ```
