@@ -151,6 +151,95 @@ To install all versions at the same time, it is necessary to use the alt-php met
 apt-get install alt-php
 ```
 
+### Installation Instructions: Windows
+
+#### Get user credentials
+
+* Obtain the required license to get access to the service.
+* Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating your unique access link (tokenized URL). Anonymous access is restricted.
+
+#### Download TuxCare PHP Windows
+
+* Follow the provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) instructions to create your secure download link.
+* Use this link to download the latest version of PHP.
+* Extract the downloaded archive (ZIP file) to a preffered directory, for example`C:\PHP`. 
+* PHP doesn’t have a traditional “installer” on Windows, it’s a portable application. Once you extract the files and set up a few things, it's ready to use.
+
+#### Configure PHP
+
+Configure TuxCare ELS PHP for Windows to work as intended on Windows: 
+
+* Navigate to your PHP directory (e.g. `C:\PHP`).
+* Find and rename `php.ini-development` file to `php.ini`. This is the main configuration file PHP uses when running.
+
+#### Additional configurations (optional)
+
+Depending on your ELS PHP usage purpose, additional configurations may be required. Here are some a few commonly useful configurations.
+
+##### Extensions
+
+Many PHP features come as extensions and are disabled by default to keep PHP lightweight. TuxCare provides the required `.dll` files to support these extensions.
+To enable the functionality you need, update the `php.ini` file:
+* Open the `php.ini` file in an editor of your choice (e.g. Notepad).
+* Uncomment necessary extensions by removing `;`:
+  ```
+  extension=curl
+  extension=gd # gd2
+  extension=mbstring
+  extension=mysqli
+  extension=pdo_mysql
+  ```
+
+#### Increase Upload/Memory Limits
+If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits:
+* Open the `php.ini` file in an editor of your choice (e.g. Notepad).
+* Set the limits as needed, e.g:
+  ```
+  upload_max_filesize=40M
+  post_max_size=40M
+  memory_limit=256M
+  ```
+      
+#### Add PHP to System Path
+Adding PHP to the system PATH lets you run the `php` command from a terminal window without typing its full location. This is useful for running scripts and using PHP with other tools.
+* Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
+* Click **Advanced system settings**.
+
+  ![image](/images/php-windows-advanced-settings.png)
+
+* Click on **Environment Variables**.
+
+  ![image](/images/php-windows-environment-variables.png)  
+
+* Under *System variables*, find **Path** and click **Edit**.
+
+  ![image](/images/php-windows-add-path.png)
+
+* Click **New** and add your PHP `C:\PHP` directory.
+
+  ![image](/images/php-windows-add-path-2.png)
+  
+* Click **OK** to save the changes.
+
+#### Validate the Installation
+
+To confirm PHP is working:
+* Open **Command Prompt**, **PowerShell**, or **Terminal**.
+* Run the following command:
+  ```
+  php -v
+  ```
+  You should see an output like:
+  ```
+  PHP 7.4.33 (cli) (built: Mar 14 2025 04:59:07) ( NTS Visual C++ 2017 x64 )
+  Copyright (c) The PHP Group
+  Zend Engine v3.4.0, Copyright (c) Zend Technologies
+  ```
+  
+#### Example Use Cases
+
+You can integrate your PHP with other tools, for example, IIS or WordPress. For further details and documentation, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
+
 ### OVAL data
 
 #### Introduction
