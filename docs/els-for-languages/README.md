@@ -160,9 +160,9 @@ apt-get install alt-php
 
 #### Download TuxCare PHP Windows
 
-* Follow the provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) instructions to create your secure download link.
+* Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
 * Use this link to download the latest version of PHP.
-* Extract the downloaded archive (ZIP file) to a preffered directory, for example`C:\PHP`. 
+* Extract the downloaded archive (ZIP file) to a preferred directory, for example`C:\PHP`. 
 * PHP doesn’t have a traditional “installer” on Windows, it’s a portable application. Once you extract the files and set up a few things, it's ready to use.
 
 #### Configure PHP
@@ -170,13 +170,13 @@ apt-get install alt-php
 Configure TuxCare ELS PHP for Windows to work as intended on Windows: 
 
 * Navigate to your PHP directory (e.g. `C:\PHP`).
-* Find and rename `php.ini-development` file to `php.ini`. This is the main configuration file PHP uses when running.
+* Find and rename the `php.ini-development` file to `php.ini`. This is the main configuration file PHP uses when running.
 
 #### Additional configurations (optional)
 
-Depending on your ELS PHP usage purpose, additional configurations may be required. Here are some a few commonly useful configurations.
+Depending on your ELS PHP usage purpose, additional configurations may be required. Here are some commonly useful configurations.
 
-##### Extensions
+#### Extensions
 
 Many PHP features come as extensions and are disabled by default to keep PHP lightweight. TuxCare provides the required `.dll` files to support these extensions.
 To enable the functionality you need, update the `php.ini` file:
@@ -184,7 +184,7 @@ To enable the functionality you need, update the `php.ini` file:
 * Uncomment necessary extensions by removing `;`:
   ```
   extension=curl
-  extension=gd # gd2
+  extension=gd2
   extension=mbstring
   extension=mysqli
   extension=pdo_mysql
