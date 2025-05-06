@@ -151,7 +151,7 @@ To install all versions at the same time, it is necessary to use the alt-php met
 apt-get install alt-php
 ```
 
-### Installation Instructions: Windows
+### Installation Instructions for Windows
 
 #### Get user credentials
 
