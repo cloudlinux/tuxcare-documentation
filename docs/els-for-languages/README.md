@@ -22,7 +22,7 @@ TuxCare provides Endless Lifecycle Support through four years after the EOL date
 | AlmaLinux                             | 8.x 64-bit, 9.x 64-bit                                |
 | Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit|
 | Debian				| 10, 11, 12						|
-| Windows				| Windows Server 2019, 2025				|
+| Windows				| Windows Server 2019, 2022, 2025				|
 Other distros upon request.
 
 
@@ -32,7 +32,7 @@ Other distros upon request.
 
 **Ubuntu:** 5.6.40, 7.0.33, 7.1.33, 7.2.34, 7.3.33, 7.4.33, 8.0.30, 8.1.27, 8.2, 8.3 
 
-**Debian:** 10, 11, 12 
+**Debian:** 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2
 
 **Windows:** 5.6, 7.4
 
@@ -95,7 +95,7 @@ Description : PHP is an HTML-embedded scripting language.
 yum install alt-php73*
 ```
 
-To install all versions at the same time, use group:
+- To install all versions at the same time, use group:
 
 ```
 yum groupinstall alt-php
@@ -103,19 +103,19 @@ yum groupinstall alt-php
 
 #### Ubuntu
 
-Download an installer script:
+1. Download an installer script:
 
 ```
 wget https://repo.cloudlinux.com/php-els/install-php-els-ubuntu-repo.sh
 ```
 
-Run the installer script with keys:
+2. Run the installer script with keys:
 
 ```
 bash install-php-els-ubuntu-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
 
-To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual apt upgrade command.
+3. To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual apt upgrade command.
 
 ```
 apt-cache show alt-php73-cli
@@ -146,7 +146,7 @@ Description-md5: 0d83f7bf7177d3376a59b73890c8494d
 ```
 apt-get install alt-php73*
 ```
-To install all versions at the same time, it is necessary to use the alt-php meta-package:
+- To install all versions at the same time, it is necessary to use the alt-php meta-package:
 ```
 apt-get install alt-php
 ```
@@ -201,7 +201,7 @@ oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xm
 
 ### PHP extensions list
 
-You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/shared/alt-ea_packages/#bundled-php-extensions).
+You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/cloudlinuxos/alt-ea_packages/#bundled-php-extensions).
 
 ### How to use PHP-ELS 
 
@@ -393,13 +393,13 @@ TuxCare provides Endless Lifecycle Support through four years after the EOL date
 Other distros upon request.
 
 ### Supported versions
-**EL6, 7, 8, 9**: alt-python 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
-**debian 9 and 10**: 3.5, 3.8, 3.11
-**debian 11 and 12**: 3.8, 3.11
-**Ubuntu 16 and 18**: 3.5, 3.8, 3.11
-**Ubuntu 20**: 3.7, 3.8, 3.10, 3.11, 3.12 
-**Ubuntu 22**: 3.8, 3.11, 3.13 
-**Ubuntu 24**: 3.8, 3.11
+* **EL6, 7, 8, 9**: alt-python 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
+* **Debian 9 and 10**: 3.5, 3.8, 3.11
+* **Debian 11 and 12**: 3.8, 3.11
+* **Ubuntu 16 and 18**: 3.5, 3.8, 3.11
+* **Ubuntu 20**: 3.7, 3.8, 3.10, 3.11, 3.12 
+* **Ubuntu 22**: 3.8, 3.11, 3.13 
+* **Ubuntu 24**: 3.8, 3.11
 
 ### Installation instructions of yum repositories
 
@@ -414,7 +414,7 @@ sh install-python-els-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
 3. Verify that the installation was successful.
 
-To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual yum upgrade command.
+   To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual yum upgrade command.
 ```
 yum info python2
 
@@ -436,7 +436,7 @@ Description  : Python 2 is an old version of the language that is incompatible
 ```
 yum install python2 --enablerepo crb
 ```
-Once installed, you can use python2 in the usual way.
+5. Once installed, you can use python2 in the usual way.
 ```python
 $ python2
 Python 2.7.18 (default, Jun 30 2022, 00:00:00)
@@ -449,15 +449,15 @@ Hello, World!
 ### Installation instructions of a local mirror
 
 We provide the ability to create local mirrors of Python for ELS updates.
-To obtain the access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* To obtain the access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-To create a local mirror of the repository with security updates via `rsync`, use the following:
+* To create a local mirror of the repository with security updates via `rsync`, use the following:
 
 ```
 rsync://repo.cloudlinux.com/PYTHON_ELS/
 ```
 
-Example of creating a local mirror for all supported OS versions:
+* Example of creating a local mirror for all supported OS versions:
 
 ```
 rsync -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
@@ -508,7 +508,7 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 -   **Low-severity CVEs:** Patches provided within 90 days
 -   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
-### **Incident Reporting and Response Timeframe**
+### Incident Reporting and Response Timeframe
 
 Customers can report vulnerabilities by submitting a ticket through the TuxCare Support Portal <https://tuxcare.com/support-portal/>. TuxCare commits to providing an initial response to any reported issue within 3 days.
 
@@ -548,7 +548,7 @@ You need username and password in order to use TuxCare ELS Spring repository. An
 
 **Maven**
 
-If you are using Maven as your build automation tool, you will need to make changes in your `${MAVEN_HOME}/settings.xml` file. If the file does not already exist in your Maven home directory (`${MAVEN_HOME}`), you should create one. Open the `settings.xml` file with a text editor and include the following configuration:
+* If you are using Maven as your build automation tool, you will need to make changes in your `${MAVEN_HOME}/settings.xml` file. If the file does not already exist in your Maven home directory (`${MAVEN_HOME}`), you should create one. Open the `settings.xml` file with a text editor and include the following configuration:
 
 ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -563,16 +563,16 @@ If you are using Maven as your build automation tool, you will need to make chan
     </settings> 
 ```
 
-Set your credentials via the following enviromnent variables:
+* Set your credentials via the following environment variables:
 
 ```
     export USERNAME=your-username
     export PASSWORD=your-password
 ```
 
-Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](https://github.com/cloudlinux/securechain-java/blob/main/details/integration_guide.md#step-1-get-user-credntials) .
+  Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
-You may choose an arbitrary allowed value instead of `repository-id` and use the same value in the following snippet from your `pom.xml` file:
+* You may choose an arbitrary allowed value instead of `repository-id` and use the same value in the following snippet from your `pom.xml` file:
 
 ```
     <repositories>
@@ -583,11 +583,11 @@ You may choose an arbitrary allowed value instead of `repository-id` and use the
     </repositories>
 ```
 
-An example of maven project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven) . Do not forget to set the enviromnet variables.
+* An example of maven project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven). Do not forget to set the environment variables.
 
 **Gradle**
 
-If you are using Gradle as your build automation tool, make sure to include the following configuration in your project setup:
+* If you are using Gradle as your build automation tool, make sure to include the following configuration in your project setup:
 
 ```
     repositories {
@@ -601,16 +601,16 @@ If you are using Gradle as your build automation tool, make sure to include the 
     }
 ```
 
-Set your credentials via the following enviromnent variables:
+* Set your credentials via the following environment variables:
 
 ```
     export ORG_GRADLE_PROJECT_USERNAME=your-username
     export ORG_GRADLE_PROJECT_PASSWORD=your-password
 ```
 
-Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](https://github.com/cloudlinux/securechain-java/blob/main/details/integration_guide.md#step-1-get-user-credntials) .
+  Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
-An example of gradle project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle) . Do not forget to set the enviromnet variables.
+* An example of gradle project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle). Do not forget to set the environment variables.
 
 ### Verification
 
@@ -1589,7 +1589,7 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 -   **Low-severity CVEs:** Patches provided within 90 days
 -   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
-### **Incident Reporting and Response Timeframe**
+### Incident Reporting and Response Timeframe
 
 Customers can report vulnerabilities by submitting a ticket through the TuxCare Support Portal <https://tuxcare.com/support-portal/>. TuxCare commits to providing an initial response to any reported issue within 3 days.
 
@@ -1621,13 +1621,13 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Tom
 ### Steps
 
 ### Step 1: Get user credentials
-You need username and password in order to use TuxCare ELS Apache Tomcat repository. Anonymous access is disabled. To receive username and password please contact sales@tuxcare.com
+You need username and password in order to use TuxCare ELS Apache Tomcat repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Create or Modify Your Build Tool Settings
 
 **Maven**
 
-If you are using Maven as your build automation tool, you will need to make changes in your `${MAVEN_HOME}/settings.xml` file. If the file does not already exist in your Maven home directory (`${MAVEN_HOME}`), you should create one. Open the `settings.xml` file with a text editor and include the following configuration:
+* If you are using Maven as your build automation tool, you will need to make changes in your `${MAVEN_HOME}/settings.xml` file. If the file does not already exist in your Maven home directory (`${MAVEN_HOME}`), you should create one. Open the `settings.xml` file with a text editor and include the following configuration:
 
 ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -1642,16 +1642,16 @@ If you are using Maven as your build automation tool, you will need to make chan
     </settings> 
 ```
 
-Set your credentials via the following enviromnent variables:
+* Set your credentials via the following environment variables:
 
 ```
     export USERNAME=your-username
     export PASSWORD=your-password
 ```
 
-Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](https://github.com/cloudlinux/securechain-java/blob/main/details/integration_guide.md#step-1-get-user-credntials) .
+Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials-1).
 
-You may choose an arbitrary allowed value instead of `repository-id` and use the same value in the following snippet from your `pom.xml` file:
+* You may choose an arbitrary allowed value instead of `repository-id` and use the same value in the following snippet from your `pom.xml` file:
 
 ```
     <repositories>
@@ -1662,11 +1662,11 @@ You may choose an arbitrary allowed value instead of `repository-id` and use the
     </repositories>
 ```
 
-An example of maven project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven) . Do not forget to set the enviromnet variables.
+* An example of maven project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven). Do not forget to set the environment variables.
 
 **Gradle**
 
-If you are using Gradle as your build automation tool, make sure to include the following configuration in your project setup:
+* If you are using Gradle as your build automation tool, make sure to include the following configuration in your project setup:
 
 ```
     repositories {
@@ -1680,16 +1680,16 @@ If you are using Gradle as your build automation tool, make sure to include the 
     }
 ```
 
-Set your credentials via the following enviromnent variables:
+* Set your credentials via the following environment variables:
 
 ```
     export ORG_GRADLE_PROJECT_USERNAME=your-username
     export ORG_GRADLE_PROJECT_PASSWORD=your-password
 ```
 
-Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](https://github.com/cloudlinux/securechain-java/blob/main/details/integration_guide.md#step-1-get-user-credntials) .
+Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials-1).
 
-An example of gradle project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle) . Do not forget to set the enviromnet variables.
+* An example of gradle project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle). Do not forget to set the environment variables.
 
 ### Verification
 
@@ -1934,7 +1934,7 @@ The following commands are useful for managing and troubleshooting .NET installa
 * Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
 * Click on each entry and select **Uninstall**.
   :::tip
-  During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required option"** and click **OK** to proceed.
+  During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
   :::
 * A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window. 
 
@@ -1945,7 +1945,7 @@ The following commands are useful for managing and troubleshooting .NET installa
 * Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
 * Right-click on each entry and select **Uninstall**.
   :::tip
-  During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required option"** and click **OK** to proceed.
+  During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
   :::
 * A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window. 
 
