@@ -12,28 +12,17 @@
 
 Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows to continue running Linux server vulnerability-free.
 
-### Supported OS
+### Supported OS and PHP versions
 
-| OS                                    | Version                                               |
-| :-----------------------------------: | :----------------------------------------------:      |
-| CentOS, CloudLinux, OracleLinux, etc. | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit, 9.x 64-bit        |
-| AlmaLinux                             | 8.x 64-bit, 9.x 64-bit                                |
-| Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit|
-| Debian				| 10, 11, 12						|
-| Windows				| Windows Server 2019, 2022, 2025				|
+| OS                                    | Package Type | OS Version                                             | PHP Version |
+| :-----------------------------------: | :----------: | :----------------------------------------------------: | :---------: | 
+| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit, 9.x 64-bit         | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| AlmaLinux                             | RPM          | 8.x 64-bit, 9.x 64-bit                                 | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| Ubuntu                                | DEB          | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| Debian				                        | DEB          |  10, 11, 12	                                          | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| Windows				                        | -            | Windows Server 2019, 2022, 2025				                | 5.6, 7.4 |
 
 Other distros upon request.
-
-
-### Supported versions
-
-**CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.:** 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4
-
-**Ubuntu:** 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4
-
-**Debian:** 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4
-
-**Windows:** 5.6, 7.4
 
 ### Vulnerability Coverage and Target Response Times
 
