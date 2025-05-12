@@ -52,6 +52,8 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 
 #### RPM-based Systems
 
+These steps are suitable for RPM-based systems (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc).
+
 1. Download an installer script:
 
 ```
@@ -101,6 +103,8 @@ yum groupinstall alt-php
 ```
 
 #### DEB-based Systems
+
+These steps are suitable for DEB-based systems (Ubuntu, Debian).
 
 1. Download an installer script:
 
