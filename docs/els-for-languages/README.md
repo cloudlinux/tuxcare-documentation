@@ -14,8 +14,6 @@ Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for
 
 ### Supported OS
 
-TuxCare provides Endless Lifecycle Support through four years after the EOL date.
-
 | OS                                    | Version                                               |
 | :-----------------------------------: | :----------------------------------------------:      |
 | CentOS, CloudLinux, OracleLinux, etc. | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit, 9.x 64-bit        |
@@ -23,6 +21,7 @@ TuxCare provides Endless Lifecycle Support through four years after the EOL date
 | Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit|
 | Debian				| 10, 11, 12						|
 | Windows				| Windows Server 2019, 2022, 2025				|
+
 Other distros upon request.
 
 
@@ -49,20 +48,20 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 -   **Low-severity CVEs:** Patches provided within 90 days
 -   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
-### Installation instructions of yum repositories
+### Installation Instructions for Linux
 
-#### RHEL based systems
+#### RPM-based Systems
 
 1. Download an installer script:
 
 ```
-wget https://repo.cloudlinux.com/php-els/install-php-els-repo.sh
+wget https://repo.cloudlinux.com/php-els/install-php-els-rpm-repo.sh
 ```
 
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds the yum repository, and adds a PGP key to the server.
 
 ```
-sh install-php-els-repo.sh --license-key XXX-XXXXXXXXXXXX
+sh install-php-els-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
 
 3. Verify that the installation was successful.
@@ -101,18 +100,18 @@ yum install alt-php73*
 yum groupinstall alt-php
 ```
 
-#### Ubuntu
+#### DEB-based Systems
 
 1. Download an installer script:
 
 ```
-wget https://repo.cloudlinux.com/php-els/install-php-els-ubuntu-repo.sh
+wget https://repo.cloudlinux.com/php-els/install-php-els-deb-repo.sh
 ```
 
 2. Run the installer script with keys:
 
 ```
-bash install-php-els-ubuntu-repo.sh --license-key XXX-XXXXXXXXXXXX
+bash install-php-els-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
 
 3. To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual apt upgrade command.
