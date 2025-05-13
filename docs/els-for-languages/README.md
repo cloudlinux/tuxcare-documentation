@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD029 MD024 MD036 -->
+
 # Endless Lifecycle Support for Languages
 
 * [ELS for PHP](./#els-for-php)
@@ -10,7 +12,7 @@
 
 ## ELS for PHP
 
-Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows to continue running Linux server vulnerability-free.
+Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
 
 ### Supported OS and PHP versions
 
@@ -19,7 +21,7 @@ Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for
 | CentOS, CloudLinux, OracleLinux, etc. | RPM          | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit, 9.x 64-bit         | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | AlmaLinux                             | RPM          | 8.x 64-bit, 9.x 64-bit                                 | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Ubuntu                                | DEB          | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Debian				                        | DEB          |  10, 11, 12	                                          | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| Debian				                        | DEB          | 10, 11, 12	                                            | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Windows				                        | -            | Windows Server 2019, 2022, 2025				                | 5.6, 7.4 |
 
 Other distros upon request.
@@ -28,14 +30,14 @@ Other distros upon request.
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
-Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
+Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI-DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, have similar requirements.
 
 TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
 
--   **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
--   **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
--   **Low-severity CVEs:** Patches provided within 90 days
--   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
+* **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
+* **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
+* **Low-severity CVEs:** Patches provided within 90 days
+* TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
 ### Installation Instructions for Linux
 
@@ -43,53 +45,53 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 
 These steps are suitable for RPM-based systems (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc).
 
-1. Download an installer script:
+1. Download the installer script:
 
-```
-wget https://repo.cloudlinux.com/php-els/install-php-els-rpm-repo.sh
-```
+    ```text
+    wget https://repo.cloudlinux.com/php-els/install-php-els-rpm-repo.sh
+    ```
 
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds the yum repository, and adds a PGP key to the server.
 
-```
-sh install-php-els-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX
-```
+    ```text
+    sh install-php-els-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX
+    ```
 
 3. Verify that the installation was successful.
 
-To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual yum upgrade command.
+    To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual `yum upgrade` command.
 
-```
-yum info alt-php73
+    ```text
+    yum info alt-php73
 
-Available Packages
-Name        : alt-php73
-Arch        : x86_64
-Epoch       : 1
-Version     : 7.3.33
-Release     : 5.2.el7
-Size        : 22 k
-Repo        : php-els/7
-Summary     : PHP scripting language for creating dynamic web sites
-URL         : http://www.php.net/
-License     : PHP and LGPLv2 and LGPLv2+
-Description : PHP is an HTML-embedded scripting language.
-```
+    Available Packages
+    Name        : alt-php73
+    Arch        : x86_64
+    Epoch       : 1
+    Version     : 7.3.33
+    Release     : 5.2.el7
+    Size        : 22 k
+    Repo        : php-els/7
+    Summary     : PHP scripting language for creating dynamic web sites
+    URL         : http://www.php.net/
+    License     : PHP and LGPLv2 and LGPLv2+
+    Description : PHP is an HTML-embedded scripting language.
+    ```
 
 **How to install packages:**
 
-- Each version of PHP individually or all versions at once can be installed.
-- Standard commands to install each version separately can be used. For example, installing alt-php73:
+* Each version of PHP individually or all versions at once can be installed.
+* Standard commands to install each version separately can be used. For example, installing alt-php73:
 
-```
-yum install alt-php73*
-```
+  ```text
+  yum install alt-php73*
+  ```
 
-- To install all versions at the same time, use group:
+* To install all versions at the same time, use `groupinstall`:
 
-```
-yum groupinstall alt-php
-```
+  ```text
+  yum groupinstall alt-php
+  ```
 
 #### DEB-based Systems
 
@@ -97,51 +99,54 @@ These steps are suitable for DEB-based systems (Ubuntu, Debian).
 
 1. Download an installer script:
 
-```
-wget https://repo.cloudlinux.com/php-els/install-php-els-deb-repo.sh
-```
+  ```text
+  wget https://repo.cloudlinux.com/php-els/install-php-els-deb-repo.sh
+  ```
 
-2. Run the installer script with keys:
+2. Run the installer script with your key:
 
-```
-bash install-php-els-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
-```
+  ```text
+  bash install-php-els-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
+  ```
 
-3. To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual apt upgrade command.
+3. To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual `apt upgrade` command.
 
-```
-apt-cache show alt-php73-cli
+  ```text
+  apt-cache show alt-php73-cli
 
-Package: alt-php73-cli
-Source: php
-Version: 7.3.18-1
-Architecture: amd64
-Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
-Installed-Size: 51694
-Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
-Homepage: http://www.php.net/
-Priority: optional
-Section: libs
-Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
-Size: 10247916
-SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
-SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
-MD5sum: d6c664d4f4b229c1e6727804888f6079
-Description: command-line interpreter for the PHP scripting language.
-Description-md5: 0d83f7bf7177d3376a59b73890c8494d
-```
+  Package: alt-php73-cli
+  Source: php
+  Version: 7.3.18-1
+  Architecture: amd64
+  Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
+  Installed-Size: 51694
+  Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
+  Homepage: http://www.php.net/
+  Priority: optional
+  Section: libs
+  Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
+  Size: 10247916
+  SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
+  SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
+  MD5sum: d6c664d4f4b229c1e6727804888f6079
+  Description: command-line interpreter for the PHP scripting language.
+  Description-md5: 0d83f7bf7177d3376a59b73890c8494d
+  ```
 
 **How to install packages:**
 
-- Each version of PHP individually or all versions at once can be installed.
-- Standard commands to install each version separately can be used. For example, installing alt-php73:
-```
-apt-get install alt-php73*
-```
-- To install all versions at the same time, it is necessary to use the alt-php meta-package:
-```
-apt-get install alt-php
-```
+* Each version of PHP individually or all versions at once can be installed.
+* Standard commands to install each version separately can be used. For example, installing alt-php73:
+
+  ```text
+  apt-get install alt-php73*
+  ```
+
+* To install all versions at the same time, it is necessary to use the alt-php meta-package:
+
+  ```text
+  apt-get install alt-php
+  ```
 
 ### Installation Instructions for Windows
 
@@ -154,12 +159,12 @@ apt-get install alt-php
 
 * Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
 * Use this link to download the latest version of PHP.
-* Extract the downloaded archive (ZIP file) to a preferred directory, for example`C:\PHP`. 
-* PHP doesn’t have a traditional “installer” on Windows, it’s a portable application. Once you extract the files and set up a few things, it's ready to use.
+* Extract the downloaded archive (ZIP file) to a preferred directory, for example`C:\PHP`.
+* PHP doesn't have a traditional "installer" on Windows, it’s a portable application. Once you extract the files and set up a few things, it's ready to use.
 
 #### Configure PHP
 
-Configure TuxCare ELS PHP for Windows to work as intended on Windows: 
+Configure TuxCare ELS PHP for Windows to work as intended on Windows:
 
 * Navigate to your PHP directory (e.g. `C:\PHP`).
 * Find and rename the `php.ini-development` file to `php.ini`. This is the main configuration file PHP uses when running.
@@ -172,9 +177,11 @@ Depending on your ELS PHP usage purpose, additional configurations may be requir
 
 Many PHP features come as extensions and are disabled by default to keep PHP lightweight. TuxCare provides the required `.dll` files to support these extensions.
 To enable the functionality you need, update the `php.ini` file:
+
 * Open the `php.ini` file in an editor of your choice (e.g. Notepad).
-* Uncomment necessary extensions by removing `;`:
-  ```
+* Uncomment necessary extensions by removing the `;` like so:
+
+  ```text
   extension=curl
   extension=gd2
   extension=mbstring
@@ -183,17 +190,22 @@ To enable the functionality you need, update the `php.ini` file:
   ```
 
 #### Increase Upload/Memory Limits
+
 If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits:
+
 * Open the `php.ini` file in an editor of your choice (e.g. Notepad).
 * Set the limits as needed, e.g:
-  ```
+
+  ```text
   upload_max_filesize=40M
   post_max_size=40M
   memory_limit=256M
   ```
-      
-#### Add PHP to System Path
+
+#### Add PHP to the System Path
+
 Adding PHP to the system PATH lets you run the `php` command from a terminal window without typing its full location. This is useful for running scripts and using PHP with other tools.
+
 * Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
 * Click **Advanced system settings**.
 
@@ -201,7 +213,7 @@ Adding PHP to the system PATH lets you run the `php` command from a terminal win
 
 * Click on **Environment Variables**.
 
-  ![image](/images/php-windows-environment-variables.png)  
+  ![image](/images/php-windows-environment-variables.png)
 
 * Under *System variables*, find **Path** and click **Edit**.
 
@@ -210,33 +222,37 @@ Adding PHP to the system PATH lets you run the `php` command from a terminal win
 * Click **New** and add your PHP `C:\PHP` directory.
 
   ![image](/images/php-windows-add-path-2.png)
-  
+
 * Click **OK** to save the changes.
 
 #### Validate the Installation
 
 To confirm PHP is working:
+
 * Open **Command Prompt**, **PowerShell**, or **Terminal**.
 * Run the following command:
-  ```
+
+  ```text
   php -v
   ```
-  You should see an output like:
-  ```
+
+  You should see output like:
+
+  ```text
   PHP 7.4.33 (cli) (built: Mar 14 2025 04:59:07) ( NTS Visual C++ 2017 x64 )
   Copyright (c) The PHP Group
   Zend Engine v3.4.0, Copyright (c) Zend Technologies
   ```
-  
+
 #### Example Use Cases
 
-You can integrate your PHP with other tools, for example, IIS or WordPress. For further details and documentation, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
+You can integrate PHP with other tools, for example, IIS or WordPress. For further details and documentation, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
 
 ### OVAL data
 
 #### Introduction
 
-This section contains information about available ELS for PHP OVAL streams that can be used for partner application integration.
+This section contains information about available ELS for PHP OVAL streams that can be used by vulnerability scanners.
 
 Currently, we provide OVAL data for the following OS versions:
 
@@ -264,41 +280,48 @@ Currently, we provide OVAL data for the following OS versions:
 
 1. Install OpenSCAP
     * for rpm systems:
-    ```
+
+    ```text
     yum install openscap openscap-utils scap-security-guide -y
     ```
+
     * for  deb systems:
-    ```
+
+    ```text
     apt-get install libopenscap8 -y
     ```
-2. Download OVAL stream:
-```
-wget https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml
-```
-3. Run scanning:
-```
-oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xml
-```
+
+2. Download an OVAL stream:
+
+    ```text
+    wget https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml
+    ```
+
+3. Run a scan:
+
+    ```text
+    oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xml
+    ```
 
 ### PHP extensions list
 
 You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/cloudlinuxos/alt-ea_packages/#bundled-php-extensions).
 
-### How to use PHP-ELS 
+### How to use PHP-ELS
 
-When you deploy an updated version of PHP through PHP ELS, using your system’s regular update tool (yum, dnf, apt), the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes. 
+When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt) the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
 
-**The *bin* files:** 
+**The *bin* files:**
 
-```
-[root@localhost ~]# ll /opt/alt/phpXY/usr/bin/
+```text
+[root@localhost ~]# ls -l /opt/alt/phpXY/usr/bin/
 bytekit          hphpa            pear             pecl             phar.phar        phpcb            php-config       phpcpd           phploc           phpunit-skelgen
 dbunit           lsphp            peardev          phar             php              php-cgi          phpcov           phpize           phpunit          ppw
 ```
- 
-***Modules* and *pecl* extensions:** 
- 
-```
+
+***Modules* and *pecl* extensions:**
+
+```text
 ls /opt/alt/phpXY/usr/lib64/php/modules/
 ZendGuardLoader.so  imagick.so         oci8.so          stem.so
 amqp.so             imap.so            odbc.so          stomp.so
@@ -334,16 +357,16 @@ http.so             nd_pdo_mysql.so    ssh2.so          zmq.so
 igbinary.so         oauth.so           stats.so
 ```
 
-**Running code on a specific version through the CLI:** 
- 
-```
+**Running code on a specific version through the CLI:**
+
+```text
 [root@localhost ~]# /opt/alt/phpXY/usr/bin/php helloworld.php
 Hello, World!
 ```
 
-**Location of *ini* config files:** 
+**Location of *ini* config files:**
 
-```
+```text
 [root@localhost ~]# ls /opt/alt/phpXY/etc/php.d.all/
 40-leveldb.ini        mailparse.ini     redis.ini
 40-snuffleupagus.ini  mbstring.ini      rrd.ini
@@ -380,15 +403,15 @@ luasandbox.ini        psr.ini           zmq.ini
 lzf.ini               raphf.ini
 ```
 
-**Location of *default.ini*:** 
+**Location of *default.ini*:**
 
-```
+```text
 ls /opt/alt/phpXY/etc/php.d/default.ini
 ```
 
-**Listing enabled modules on a specific version:** 
+**Listing enabled modules on a specific version:**
 
-```
+```text
 [root@localhost ~]# /opt/alt/php73/usr/bin/php -m
 [PHP Modules]
 bz2
@@ -422,9 +445,9 @@ zlib
 [Zend Modules]
 ```
 
-**Enabling a module through the CLI:** 
+**Enabling a module through the CLI:**
 
-```
+```text
 [root@localhost ~]# /opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
 [PHP Modules]
 bz2
@@ -458,45 +481,54 @@ xml
 zlib
 [Zend Modules]
 ```
+
 As you can see, each version is entirely self-contained, and changing configurations in one will not impact the others, a desired feature in hosting environments.
 
 ## ELS for Python
 
-Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python versions that have reached their end-of-life. This allows to continue running Linux server vulnerability-free.
+Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
 
 ### Supported OS
-TuxCare provides Endless Lifecycle Support through four years after the EOL date.
-| OS                                    | Version                                               |
-| :-----------------------------------: | :----------------------------------------------:      |
-| CentOS, CloudLinux, OracleLinux, etc. | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit		        |
-| AlmaLinux                             | 9.x 64-bit                              	        |
-| Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit, 24.04 64-bit		|					|
-Other distros upon request.
+
+TuxCare provides Endless Lifecycle Support for four years after the EOL date.
+
+| OS                                    | Version                                                              |
+| :-----------------------------------: | :------------------------------------------------------------------: |
+| CentOS, CloudLinux, OracleLinux, etc. | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit                                   |
+| AlmaLinux                             | 9.x 64-bit                                                           |
+| Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit, 24.04 64-bit |
+
+*Other distros upon request.
 
 ### Supported versions
+
 * **EL6, 7, 8, 9**: alt-python 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 * **Debian 9 and 10**: 3.5, 3.8, 3.11
 * **Debian 11 and 12**: 3.8, 3.11
 * **Ubuntu 16 and 18**: 3.5, 3.8, 3.11
-* **Ubuntu 20**: 3.7, 3.8, 3.10, 3.11, 3.12 
-* **Ubuntu 22**: 3.8, 3.11, 3.13 
+* **Ubuntu 20**: 3.7, 3.8, 3.10, 3.11, 3.12
+* **Ubuntu 22**: 3.8, 3.11, 3.13
 * **Ubuntu 24**: 3.8, 3.11
 
 ### Installation instructions of yum repositories
 
-1. Download an installer script:
+1. Download the installer script:
 
-```
+```text
 wget https://repo.cloudlinux.com/python-els/install-python-els-repo.sh
 ```
-2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds a PGP key and adds repository to the server.
-```
+
+2. Run the installer script with your key. The installation script registers the server to CLN with the key, and adds our PGP key and repository to the server.
+
+```text
 sh install-python-els-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
+
 3. Verify that the installation was successful.
 
-   To ensure the installation has been completed successfully, run the following command. It should return the info about an available package. If information about the package will be available, it would mean that installation was successful. After that, updates will be available for installation from the repository using the usual yum upgrade command.
-```
+To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual `yum upgrade` command.
+
+```text
 yum info python2
 
 Available Packages
@@ -513,12 +545,16 @@ License      : Python
 Description  : Python 2 is an old version of the language that is incompatible
              : with the 3.x line of releases.
 ```
+
 4. To install python, it's necessary to enable the CodeReady Builder(CRB) repository, which contains the `gdbm` package.
-```
+
+```text
 yum install python2 --enablerepo crb
 ```
+
 5. Once installed, you can use python2 in the usual way.
-```python
+
+```text
 $ python2
 Python 2.7.18 (default, Jun 30 2022, 00:00:00)
 [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)] on linux2
@@ -530,17 +566,18 @@ Hello, World!
 ### Installation instructions of a local mirror
 
 We provide the ability to create local mirrors of Python for ELS updates.
-* To obtain the access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
+* To obtain access to the local mirroring facility, provide your IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com)
 
 * To create a local mirror of the repository with security updates via `rsync`, use the following:
 
-```
+```text
 rsync://repo.cloudlinux.com/PYTHON_ELS/
 ```
 
 * Example of creating a local mirror for all supported OS versions:
 
-```
+```text
 rsync -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
 ```
 
@@ -548,8 +585,7 @@ rsync -avSHP --delete rsync://repo.cloudlinux.com/PYTHON_ELS/ .
 
 #### Introduction
 
-This section contains information about available ELS for Python OVAL streams that can be used for partner application integration.
-Currently, we provide OVAL data for AlmaLinux 9.
+This section contains information about available ELS for Python OVAL streams that can be used for partner application integration. Currently, we provide OVAL data for AlmaLinux 9.
 
 #### TuxCare Python ELS OVAL Stream
 
@@ -558,15 +594,20 @@ AlmaLinux 9: [https://repo.cloudlinux.com/python-els/almalinux9-els-python-oval.
 #### How to use OVAL
 
 1. Install OpenSCAP:
-```
+
+```text
 yum install openscap openscap-utils scap-security-guide -y
 ```
-2. Download OVAL stream:
-```
+
+2. Download an OVAL stream:
+
+```text
 wget https://repo.cloudlinux.com/python-els/almalinux9-els-python-oval.xml
 ```
-3. Run scanning:
-```
+
+3. Run a scan:
+
+```text
 oscap oval eval --results result.xml --report report.xml almalinux9-els-python-oval.xml
 ```
 
@@ -580,18 +621,18 @@ Our ELS for Spring service is designed to provide solutions for organizations th
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3.1) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
-Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
+Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI-DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, have similar requirements.
 
 TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
 
--   **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
--   **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
--   **Low-severity CVEs:** Patches provided within 90 days
--   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
+* **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
+* **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
+* **Low-severity CVEs:** Patches provided within 90 days
+* TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
 ### Incident Reporting and Response Timeframe
 
-Customers can report vulnerabilities by submitting a ticket through the TuxCare Support Portal <https://tuxcare.com/support-portal/>. TuxCare commits to providing an initial response to any reported issue within 3 days.
+Customers can report vulnerabilities by submitting a ticket through the TuxCare [Support Portal](https://tuxcare.com/support-portal/). TuxCare commits to providing an initial response to any reported issue within 3 days.
 
 Requests for customer-directed security patches for CVEs that are outside of the ELS for Spring scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 60 days.
 
@@ -602,16 +643,24 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 TuxCare's commitment to transparency and visibility is foundational to our ELS for Spring offering. We provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
 * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
-* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span>
+* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Enhanced Metadata in Standard Formats:** Each SBOM is provided in universally recognized formats such as SPDX and VEX. These include enhanced metadata like artifact analysis, package health, and vulnerability impact data, ensuring that you have the most detailed and actionable information at your fingertips.
-* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span> 
+* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
 ### Technical Support
 
-TuxCare provides technical support according to the [<u>support policy</u>](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
+TuxCare provides technical support according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare [Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
 
 ### Connection to ELS for Spring Repository
 
@@ -629,69 +678,69 @@ You need username and password in order to use TuxCare ELS Spring repository. An
 
 **Maven**
 
-* If you are using Maven as your build automation tool, you will need to make changes in your `${MAVEN_HOME}/settings.xml` file. If the file does not already exist in your Maven home directory (`${MAVEN_HOME}`), you should create one. Open the `settings.xml` file with a text editor and include the following configuration:
+* If you are using Maven as your build automation tool, you will need to make changes in your `${MAVEN_HOME}/settings.xml` file. If the file does not already exist in your `${MAVEN_HOME}` directory, you should create one. Open the `settings.xml` file with a text editor and include the following configuration:
 
-```
-    <?xml version="1.0" encoding="UTF-8"?>
-    <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
-        <servers>
-            <server>
-         	    <id>repository-id</id>
-         	    <username>${env.USERNAME}</username>
-         	    <password>${env.PASSWORD}</password>
-       	</server>
-        </servers>
-    </settings> 
+```text
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
+    <servers>
+        <server>
+          <id>repository-id</id>
+          <username>${env.USERNAME}</username>
+          <password>${env.PASSWORD}</password>
+        </server>
+    </servers>
+</settings>
 ```
 
 * Set your credentials via the following environment variables:
 
-```
-    export USERNAME=your-username
-    export PASSWORD=your-password
+```text
+export USERNAME=your-username
+export PASSWORD=your-password
 ```
 
-  Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
 * You may choose an arbitrary allowed value instead of `repository-id` and use the same value in the following snippet from your `pom.xml` file:
 
-```
-    <repositories>
-        <repository>
-            <id>repository-id</id>
-            <url>https://nexus-repo.corp.cloudlinux.com/repository/els_spring/</url>
-        </repository>
-    </repositories>
+```text
+<repositories>
+    <repository>
+        <id>repository-id</id>
+        <url>https://nexus-repo.corp.cloudlinux.com/repository/els_spring/</url>
+    </repository>
+</repositories>
 ```
 
-* An example of maven project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven). Do not forget to set the environment variables.
+* An example maven project can be found [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven). Do not forget to set the environment variables.
 
 **Gradle**
 
 * If you are using Gradle as your build automation tool, make sure to include the following configuration in your project setup:
 
-```
-    repositories {
-      maven {
-        url = uri("https://nexus-repo.corp.cloudlinux.com/repository/els_spring")
-        credentials {
-                username = findProperty('USERNAME')
-                password = findProperty('PASSWORD')
-        }
-      }
+```text
+repositories {
+  maven {
+    url = uri("https://nexus-repo.corp.cloudlinux.com/repository/els_spring")
+    credentials {
+            username = findProperty('USERNAME')
+            password = findProperty('PASSWORD')
     }
+  }
+}
 ```
 
 * Set your credentials via the following environment variables:
 
-```
-    export ORG_GRADLE_PROJECT_USERNAME=your-username
-    export ORG_GRADLE_PROJECT_PASSWORD=your-password
+```text
+export ORG_GRADLE_PROJECT_USERNAME=your-username
+export ORG_GRADLE_PROJECT_PASSWORD=your-password
 ```
 
   Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
-* An example of gradle project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle). Do not forget to set the environment variables.
+* An example gradle project can be found [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle). Do not forget to set the environment variables.
 
 ### Verification
 
@@ -1665,10 +1714,10 @@ Aligning with many industry standards and regulatory requirements, TuxCare is co
 
 TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
 
--   **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
--   **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
--   **Low-severity CVEs:** Patches provided within 90 days
--   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
+* **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
+* **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
+* **Low-severity CVEs:** Patches provided within 90 days
+* TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
 ### Incident Reporting and Response Timeframe
 
@@ -1683,25 +1732,35 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 TuxCare's commitment to transparency and visibility is foundational to our ELS for Apache Tomcat offering. We provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
 * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
-* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span>
+* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Enhanced Metadata in Standard Formats:** Each SBOM is provided in universally recognized formats such as SPDX and VEX. These include enhanced metadata like artifact analysis, package health, and vulnerability impact data, ensuring that you have the most detailed and actionable information at your fingertips.
-* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span> 
+* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
 ### Technical Support
 
-TuxCare provides technical support according to the [<u>support policy</u>](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
+TuxCare provides technical support according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
 
 ### Connection to ELS for Apache Tomcat Repository
 
 ### Overview
+
 This guide outlines the steps needed to integrate the TuxCare ELS for Apache Tomcat repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your Maven as well as Gradle project.
 
 ### Steps
 
 ### Step 1: Get user credentials
+
 You need username and password in order to use TuxCare ELS Apache Tomcat repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Create or Modify Your Build Tool Settings
@@ -1710,37 +1769,37 @@ You need username and password in order to use TuxCare ELS Apache Tomcat reposit
 
 * If you are using Maven as your build automation tool, you will need to make changes in your `${MAVEN_HOME}/settings.xml` file. If the file does not already exist in your Maven home directory (`${MAVEN_HOME}`), you should create one. Open the `settings.xml` file with a text editor and include the following configuration:
 
-```
-    <?xml version="1.0" encoding="UTF-8"?>
-    <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
-        <servers>
-            <server>
-         	    <id>repository-id</id>
-         	    <username>${env.USERNAME}</username>
-         	    <password>${env.PASSWORD}</password>
-       	</server>
-        </servers>
-    </settings> 
+```text
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
+    <servers>
+        <server>
+          <id>repository-id</id>
+          <username>${env.USERNAME}</username>
+          <password>${env.PASSWORD}</password>
+        </server>
+    </servers>
+</settings>
 ```
 
 * Set your credentials via the following environment variables:
 
-```
-    export USERNAME=your-username
-    export PASSWORD=your-password
+```text
+export USERNAME=your-username
+export PASSWORD=your-password
 ```
 
 Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials-1).
 
 * You may choose an arbitrary allowed value instead of `repository-id` and use the same value in the following snippet from your `pom.xml` file:
 
-```
-    <repositories>
-        <repository>
-            <id>repository-id</id>
-            <url>https://nexus.repo.tuxcare.com/#browse/browse:els_tomcat/</url>
-        </repository>
-    </repositories>
+```text
+<repositories>
+    <repository>
+        <id>repository-id</id>
+        <url>https://nexus.repo.tuxcare.com/#browse/browse:els_tomcat/</url>
+    </repository>
+</repositories>
 ```
 
 * An example of maven project you can find [here](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven). Do not forget to set the environment variables.
@@ -1749,23 +1808,23 @@ Here `your-username` and `your-password` are your credentials mentioned in the [
 
 * If you are using Gradle as your build automation tool, make sure to include the following configuration in your project setup:
 
-```
-    repositories {
-      maven {
-        url = uri("https://nexus.repo.tuxcare.com/#browse/browse:els_tomcat")
-        credentials {
-                username = findProperty('USERNAME')
-                password = findProperty('PASSWORD')
-        }
-      }
+```text
+repositories {
+  maven {
+    url = uri("https://nexus.repo.tuxcare.com/#browse/browse:els_tomcat")
+    credentials {
+            username = findProperty('USERNAME')
+            password = findProperty('PASSWORD')
     }
+  }
+}
 ```
 
 * Set your credentials via the following environment variables:
 
-```
-    export ORG_GRADLE_PROJECT_USERNAME=your-username
-    export ORG_GRADLE_PROJECT_PASSWORD=your-password
+```text
+export ORG_GRADLE_PROJECT_USERNAME=your-username
+export ORG_GRADLE_PROJECT_PASSWORD=your-password
 ```
 
 Here `your-username` and `your-password` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials-1).
@@ -1787,10 +1846,9 @@ You've successfully integrated the TuxCare ELS for Apache Tomcat repository into
 |     |      |             |                                     |           |           |
 |                  |          |     |     |       |         |
 
-
 ## Endless Lifecycle Support for .NET 6
 
-Endless Lifecycle Support (ELS) for .NET 6 from TuxCare provides security fixes for .NET 6 that has reached its end of life. This allows you to continue running .NET 6 applications without vulnerability concerns, even after official support has ended. 
+Endless Lifecycle Support (ELS) for .NET 6 from TuxCare provides security fixes for .NET 6 that has reached its end of life. This allows you to continue running .NET 6 applications without vulnerability concerns, even after official support has ended.
 
 ### Supported Windows Versions
 
@@ -1803,40 +1861,42 @@ Endless Lifecycle Support (ELS) for .NET 6 from TuxCare provides security fixes 
 
 ### Supported .NET 6 Versions
 
-**SDK 6.0.428**   
+**SDK 6.0.428**
 The .NET SDK (Software Development Kit) is the recommended option if you plan to develop, build, test, or publish .NET 6 applications. It includes:
-- The .NET Runtime, which is required to run .NET apps.
-- The ASP.NET Core Runtime, so you can develop and host ASP.NET Core web applications out of the box.
-- The .NET CLI and build tools for compiling and managing your .NET 6 projects.
 
-With the SDK, you won't need to install separate runtimes for ASP.NET Core or the Desktop environment—everything is bundled together to streamline development and deployment.
+* The .NET Runtime, which is required to run .NET apps.
+* The ASP.NET Core Runtime, so you can develop and host ASP.NET Core web applications out of the box.
+* The .NET CLI and build tools for compiling and managing your .NET 6 projects.
 
-**ASP.NET Core Runtime 6.0.36**   
+With the SDK, you won't need to install separate runtimes for ASP.NET Core or the Desktop environment - everything is bundled together to streamline development and deployment.
+
+**ASP.NET Core Runtime 6.0.36**
 The ASP.NET Core Runtime contains the components needed to run ASP.NET Core web applications on .NET 6. It includes libraries and features for building dynamic web pages, RESTful APIs, and real-time communication with SignalR.
 
 *Note:* If you install the full .NET SDK, you already get the ASP.NET Core Runtime.
 
-**.NET Desktop Runtime 6.0.36**   
+**.NET Desktop Runtime 6.0.36**
 The .NET Desktop Runtime allows you to run Windows desktop applications built with Windows Forms or WPF (Windows Presentation Foundation). It focuses on providing a smooth experience for traditional graphical apps on Windows platforms.
 
-**.NET Runtime 6.0.36**  
+**.NET Runtime 6.0.36**
 The .NET Runtime is the base runtime required to run console or server-based .NET applications. It's more lightweight than the SDK, since it does not include compilers, build tools, or additional libraries for web or desktop development.
 
 TuxCare applies security patches to .NET 6 for the above OS versions, ensuring continued stability and security even beyond the official end-of-life date.
 
-### Vulnerability Coverage and Target Response Times 
+### Vulnerability Coverage and Target Response Times
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
 Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
 
 TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
+
 * **High and Critical CVEs (CVSS 7+)**: Patches provided within 14 days
 * **Medium-severity CVEs (CVSS 4.0 to 6.9)**: Patches provided within 60 days
 * **Low-severity CVEs**: Patches may be provided upon custom request
 * TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
-### Incident Reporting and Response Timeframe 
+### Incident Reporting and Response Timeframe
 
 Customers can report vulnerabilities by submitting a ticket through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/). TuxCare commits to providing an initial response to any reported issue within 3 days.
 
@@ -1848,35 +1908,46 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 
 TuxCare provides technical support according to the [support policy](https://tuxcare.com/TuxCare-els-windows-support-policy.pdf). It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
 
-### Enhanced Transparency & Visibility 
+### Enhanced Transparency & Visibility
 
 TuxCare's commitment to transparency and visibility is foundational to our ELS for .NET offering. We aim to provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
 * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
-* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span> 
-* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span> 
+* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
+* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
 ### Installation via the .NET Installer
 
 #### Prerequisites & System Requirements
+
 * Operating System compatibility - please, check the [supported versions](#supported-windows-versions) section above.
 * For system requirements, please refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
 * Administrator rights for installation
 * Check if you have .NET already installed on your system:
   * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) and run the following command:
-    ```
+
+    ```text
     dotnet --version
     ```
-  * If .NET is already installed, the command will return the version number. If it’s not installed, you’ll see an error message. 
+
+  * If .NET is already installed, the command will return the version number. If it’s not installed, you’ll see an error message.
   * It’s recommended that you first install the latest version of .NET before uninstalling the old one. This ensures a smooth transition without breaking the dependencies.
 
-#### Installation Steps 
+#### Installation Steps
 
 * Obtain the required license to get access to the service.
-* Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive the necessary steps for generating your unique access link (tokenized URL). Anonymous access is restricted. 
+* Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive the necessary steps for generating your unique access link (tokenized URL). Anonymous access is restricted.
 * Follow the provided instructions to create your secure download link.
 * Use this link to access and download .NET 6 files.
 * Choose the appropriate runtime:
@@ -1884,26 +1955,33 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
   * **.NET Runtime** - Runs .NET applications but does not include development tools.
   * **.NET Runtime Desktop** - Required for running desktop applications built with .NET.
   * **ASP.NET Core Runtime** - Needed for running web applications and services built with ASP.NET Core.
-	For more information please refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
-* Download the corresponding installer based on your system type (x64 or x86). Downloading the latest version is recommended. 
+For more information please refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
+* Download the corresponding installer based on your system type (x64 or x86). Downloading the latest version is recommended.
   * .NET SDK - Installed via an .exe installer.
   * .NET Runtime, .NET Runtime Desktop, and ASP.NET Core Runtime – Installed via .msi files.
-  :::tip
-  In certain versions of some browsers (for example, Edge), you might see a warning after downloading. In this case,  manually allow the download. 
-  :::
 
-<span style="color: red;">_Note: The following steps use the .NET SDK installation as an example. If you are installing a runtime instead, follow a similar process using the corresponding .msi file._</span>
-* Once the installer is downloaded, double-click the file to run it. You’ll see a dialog window. Follow the on-screen instructions: 
+:::tip
+In certain versions of some browsers (for example, Edge), you might see a warning after downloading. In this case,  manually allow the download.
+:::
+
+:::warning
+Note: The following steps use the .NET SDK installation as an example. If you are installing a runtime instead, follow a similar process using the corresponding .msi file.
+:::
+
+* Once the installer is downloaded, double-click the file to run it. You’ll see a dialog window. Follow the on-screen instructions:
   ![image](/images/els-dotnet-installation.png)
   * Accept the **license agreement**.
   * Click **Install** and wait for the process to complete. It should only take a few minutes.
   * Once the installation is finished, click **Close**.
-* Verify the installation. Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) to confirm that .NET was installed successfully: 
-  ```
+* Verify the installation. Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) to confirm that .NET was installed successfully:
+
+  ```text
   dotnet --version
   ```
+
   Example output:
-  ```
+
+  ```text
   6.0.428
   ```
 
@@ -1916,13 +1994,17 @@ If you’re new to .NET, we recommend visiting the [official .NET documentation]
 #### Create and Run a Test Project
 
 For a quick start, you can follow this example to create and run a simple console application:
+
 * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar).
 * Run the following command to create a new console application:
-  ```
+
+  ```text
   dotnet new console -o MyTestApp
   ```
+
   Example output:
-  ```
+
+  ```text
   Welcome to .NET 6.0!
   ---------------------
   SDK Version: 6.0.428
@@ -1936,36 +2018,50 @@ For a quick start, you can follow this example to create and run a simple consol
     Restored C:\Users\user\MyTestApp\MyTestApp.csproj (in 115 ms).
   Restore succeeded.
   ```
+
 * Navigate to the newly created folder:
-  ```
+
+  ```text
   cd MyTestApp
   ```
+
 * Build and run the application:
-  ```
+
+  ```text
   dotnet run
   ```
+
   When executed, you should see the following output:
-  ```
+
+  ```text
   Hello, World!
   ```
 
 #### Useful Commands
 
 The following commands are useful for managing and troubleshooting .NET installation.
+
 * `where.exe` dotnet locates the dotnet executable on the system. The output shows the exact path where the dotnet command is installed. By default, the .NET installation is placed in the Program Files\dotnet folder, unless a different destination is chosen during setup.
-  ```
+
+  ```text
   where.exe dotnet
   ```
+
   Example output:
-  ```
+
+  ```text
   C:\Program Files\dotnet\dotnet.exe
   ```
+
 * `dontet --info` displays information about the installed .NET SDKs, runtimes and your OS. It also verifies the .NET is correctly set up.
-  ```
+
+  ```text
   dotnet --info
   ```
+
   Example output:
-  ```
+
+  ```text
   .NET SDK (reflecting any global.json):
    Version:   6.0.428
    Commit:    ef6f5ce48c
@@ -1999,47 +2095,56 @@ The following commands are useful for managing and troubleshooting .NET installa
   Learn about .NET Runtimes and SDKs:
     https://aka.ms/dotnet/runtimes-sdk-info
   ```
+
 * `dotnet –list-sdks` command lists all the .NET SDKs installed on your system. It’s recommended to uninstall the old .NET version after you install a new one.
-  ```
+
+  ```text
   dotnet --list-sdks
   ```
+
   Example output:
-  ```
+
+  ```text
   6.0.428 [C:\Program Files\dotnet\sdk]
   ```
 
 ### Uninstall ELS for .NET 6
 
 #### Uninstall via Windows Settings
-* Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** or (**Apps&Features** on older versions). 
+
+* Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** or (**Apps&Features** on older versions).
 * Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
 * Click on each entry and select **Uninstall**.
   :::tip
   During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
   :::
-* A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window. 
+* A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
 ![image](/images/dotnet-uninstall-settings.gif)
 
 #### Uninstall via Control Panel
+
 * Open **Control Panel** &rarr; **Programs** &rarr; **Programs and Features**.
 * Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
 * Right-click on each entry and select **Uninstall**.
   :::tip
   During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
   :::
-* A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window. 
+* A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
 ![image](/images/dotnet-uninstall-controlpanel.gif)
 
 #### Remove Remaining Files
+
 After uninstalling .NET some files may remain in the following locations:
+
 * `C:\Program Files\dotnet\`
 * `C:\Users\<user>\.dotnet\`
 
 Consider deleting the folders manually to fully remove .NET.
 
 ### Frequent Issues
+
 **How do I update .NET if a new version is released?**
 
 Currently, to update .NET, you need to manually download the latest installer and follow the installation steps described above. After installing the new version, it’s recommended to remove the previous one. In the future, an automatic update mechanism for the components will be provided.
@@ -2050,9 +2155,11 @@ If you encounter conflicts, try uninstalling the previous version before install
 
 ## Endless Lifecycle Support for Angular
 
-Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes for Angular that have reached its end of life. This allows you to continue running Angular applications without vulnerability concerns, even after official support has ended. 
+Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes for Angular that have reached its end of life. This allows you to continue running Angular applications without vulnerability concerns, even after official support has ended.
 
-<span style="color: red;">_ELS for Angular is currently in active development. If you’re interested in updates, adoption, or have specific requirements or feature requests, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span>
+:::warning
+ELS for Angular is currently in active development. If you are interested in updates, adoption, or have specific requirements or feature requests, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
 
 ### Supported Angular Versions
 
@@ -2067,10 +2174,10 @@ Aligning with many industry standards and regulatory requirements, TuxCare is co
 
 TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
 
--   **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
--   **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
--   **Low-severity CVEs:** Patches provided within 90 days
--   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
+* **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
+* **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
+* **Low-severity CVEs:** Patches provided within 90 days
+* TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
 ### Incident Reporting and Response Timeframe
 
@@ -2085,22 +2192,31 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 TuxCare's commitment to transparency and visibility is foundational to our ELS for Angular offering. We provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
 * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
-* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span>
+* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Enhanced Metadata in Standard Formats:** Each SBOM is provided in universally recognized formats such as SPDX and VEX. These include enhanced metadata like artifact analysis, package health, and vulnerability impact data, ensuring that you have the most detailed and actionable information at your fingertips.
-* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span> 
+* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
 ### Technical Support
 
-TuxCare provides technical support according to the [<u>support policy</u>](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
+TuxCare provides technical support according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
 
 ### Connection to ELS for Angular Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Angular repository. 
+This guide outlines the steps needed to integrate the TuxCare ELS for Angular repository.
 
 ### Step 1: Get user credentials
+
 You need a username, password, and token in order to use TuxCare ELS Angular repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Create an account on [npmjs.com](https://www.npmjs.com/login)
@@ -2115,7 +2231,8 @@ TuxCare provides ELS for Angular 16 as an NPM package, hosted on a secure intern
 * Create a `.npmrc` file or update it if it already exists.
 
   **Example:**
-  ```
+
+  ```text
   my-angular-project/
   ├── src/
   ├── angular.json
@@ -2124,26 +2241,33 @@ TuxCare provides ELS for Angular 16 as an NPM package, hosted on a secure intern
   └── tsconfig.json
   ```
 
-* Use an editor of your choice (e.g., VS Code) to add the following registry address line: 
-  ```
+* Use an editor of your choice (e.g., VS Code) to add the following registry address line:
+
+  ```text
   registry=https://registry.npmjs.org/
   @els-angular:registry=https://nexus.repo.tuxcare.com/repository/els_angular/
   //nexus.repo.tuxcare.com/repository/els_angular/:_auth=${TOKEN}
   ```
+
   :::warning
   Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
   :::
-* In your terminal, run: 
-  ```
+
+* In your terminal, run:
+
+  ```text
   npm login --userconfig .npmrc
   ```
-  and login to your [npmjs.com](#step-2-create-an-account-on-npmjs-com) account. This will link your authentication to the registry.
+
+  and login to your [npmjs.com](https://www.npmjs.com/login) account. This will link your authentication to the registry.
+
   :::tip
   After logging in, npm will automatically add a line like `//registry.npmjs.org/:_authToken=${TOKEN}` to your `.npmrc` file. It stores a new token which is used to authenticate you to the [npmjs.com](https://www.npmjs.com/login) registry.
   :::
- 
+
 * Update your `package.json` file to replace your Angular dependencies with the TuxCare packages:
-  ```
+
+  ```text
   "dependencies": {
     "@els-angular/angular-16": "^0.0.2",
     "@angular/animations": "./node_modules/@els-angular/angular-16/deps/angular-core/animations",
@@ -2173,12 +2297,15 @@ TuxCare provides ELS for Angular 16 as an NPM package, hosted on a secure intern
   }
   ```
 
-* In your terminal, run the following command to install ELS for Angular 16 dependencies: 
-  ```
+* In your terminal, run the following command to install ELS for Angular 16 dependencies:
+
+  ```text
   npm install --userconfig .npmrc
   ```
+
   You will see an output like:
-  ```
+
+  ```text
   added 12 packages, removed 931 packages, changed 22 packages, and audited 57 packages in 23s
 
   found 0 vulnerabilities
@@ -2188,9 +2315,11 @@ TuxCare provides ELS for Angular 16 as an NPM package, hosted on a secure intern
 
 ## Endless Lifecycle Support for AngularJS
 
-Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fixes for AngularJS that have reached its end of life. This allows you to continue running AngularJS applications without vulnerability concerns, even after official support has ended. 
+Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fixes for AngularJS that have reached its end of life. This allows you to continue running AngularJS applications without vulnerability concerns, even after official support has ended.
 
-<span style="color: red;">_ELS for AngularJS is currently in active development and will be available soon. If you’re interested or would like to stay informed, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span> 
+:::warning
+ELS for AngularJS is currently in active development and will be available soon. If you are interested or would like to stay informed, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
 
 ### Supported AngularJS Versions
 
@@ -2205,10 +2334,10 @@ Aligning with many industry standards and regulatory requirements, TuxCare is co
 
 TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
 
--   **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
--   **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
--   **Low-severity CVEs:** Patches provided within 90 days
--   TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
+* **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
+* **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
+* **Low-severity CVEs:** Patches provided within 90 days
+* TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
 ### Incident Reporting and Response Timeframe
 
@@ -2223,13 +2352,21 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 TuxCare's commitment to transparency and visibility is foundational to our ELS for AngularJS offering. We provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
 * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
-* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span>
+* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Enhanced Metadata in Standard Formats:** Each SBOM is provided in universally recognized formats such as SPDX and VEX. These include enhanced metadata like artifact analysis, package health, and vulnerability impact data, ensuring that you have the most detailed and actionable information at your fingertips.
-* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.  
-<span style="color: red;">_Note: This feature is under consideration for future development and may be available at a later date. If you’re interested, please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com)._</span> 
+* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
 ### Technical Support
 
-TuxCare provides technical support according to the [<u>support policy</u>](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
+TuxCare provides technical support according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
