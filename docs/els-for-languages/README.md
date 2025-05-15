@@ -2307,7 +2307,7 @@ ELS for AngularJS is currently in active development. If you are interested in u
 
 ### Supported AngularJS Versions
 
-* AngularJS 1.4, 1.5, 1.6, 1.7, 1.8
+* AngularJS 1.5, 1.6, 1.7, 1.8
 
 ### Vulnerability Coverage and Target Response Times
 
@@ -2392,15 +2392,6 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
   :::
 
 * Update your `package.json` file to replace your AngularJS dependencies with the TuxCare packages:
-
-  **AngularJS 1.4**
-
-  ```text
-  "dependencies": {
-    "@els-angularjs/angular-1.4": "^0.0.1",
-    "angular": "./node_modules/@els-angular/angularjs-1.4/deps/angular"
-  }
-  ```
 
   **AngularJS 1.5**
 
