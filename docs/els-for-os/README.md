@@ -1,6 +1,6 @@
 # Endless Lifecycle Support for OS
 
-TuxCare's [Endless Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CentOS 7, Oracle Linux 7, CentOS 8, CentOS Stream 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's [Endless Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-lifecycle-support/) service provides security updates, system enhancement patches, and selected bug fixes for older versions of a variety of Linux distributions, including CentOS 6, Oracle Linux 6, CentOS 7, Oracle Linux 7, Red Hat Enterprise Linux 7, CentOS 8, CentOS Stream 8, Ubuntu 16.04, and Ubuntu 18.04. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
@@ -86,6 +86,7 @@ repo.cloudlinux.com
 ```
 
 - CentOS 7 ELS,
+- Red Hat Enterprise Linux 7,
 - Ubuntu 20.04 ELS:
 
 ```
@@ -246,6 +247,27 @@ License     : GPLv2
 Description : OEL7 Server els-release file
 ```
 
+#### Common Use Cases
+
+**UEKR6 repository**
+
+The installation script **does not automatically add** the TuxCare UEKR6 repository. If you plan to use the `kernel-uek` package on your Oracle Linux 7 system, you need to enable the TuxCare UEKR6 repository manually.
+
+* Use an editor of your choice to edit the `/etc/yum.repos.d/oraclelinux7-els.repo` file:
+
+  ```
+  vi /etc/yum.repos.d/oraclelinux7-els.repo
+  ```
+
+* Add the following lines there to enable the TuxCare UEKR 6 repository:
+
+  ```
+  [oraclelinux7-els-UEKR6]
+  name = OracleLinux 7 Extended Lifecycle Support by TuxCare UEKR6
+  baseurl = https://repo.tuxcare.com/oraclelinux7-els/\$elstoken/UEKR6/\$basearch/
+  enabled = 1
+  ```
+
 ### CentOS 7 ELS
 
 1. Download an installer script:
@@ -290,6 +312,32 @@ Summary     : CentOS Server els-release file
 License     : GPLv2
 Description : CentOS Server els-release file
 ```
+
+### Red Hat Enterprise Linux 7 ELS
+
+1. Download an installer script:
+
+```
+wget https://repo.tuxcare.com/rhel7-els/install-rhel7-els-repo.sh
+```
+
+2. Run the installer script with keys:
+
+```
+sh install-rhel7-els-repo.sh --license-key XXXX-XXXXXXXXX
+
+```
+
+The installation script registers the server in the CLN with the key and adds a PGP key to the server.
+
+3. Verify that the installation was successful. To ensure the installation has been completed successfully, run the following command:
+
+```
+yum info els-define
+```
+
+It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful.
+After this, you will be able to install updates from the repository using a regular yum upgrade command.
 
 ### CentOS 8 ELS
 
@@ -609,6 +657,7 @@ Once that is validated, you can use the corresponding to the operating system OV
 * CloudLinux 6: [https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els](https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els)
 * Oracle Linux 6 ELS: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els)
 * Oracle Linux 7 ELS: [https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els)
+* Red Hat Enterprise Linux 7 ELS: [https://cve.tuxcare.com/rss_feed/releases/rhel7els](https://cve.tuxcare.com/rss_feed/releases/rhel7els)
 * Ubuntu 16.04 ELS: [https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els)
 * Ubuntu 18.04 ELS: [https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els)
 * Ubuntu 20.04 ELS: [https://cve.tuxcare.com/rss_feed/releases/ubuntu20.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu20.04els)
