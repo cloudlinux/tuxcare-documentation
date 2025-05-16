@@ -580,6 +580,7 @@ Identifying the vulnerabilities that apply to your systems is an important task 
 * CentOS Stream 8 ELS: [https://repo.tuxcare.com/centos8stream-els/centos8stream-els-oval.xml](https://repo.tuxcare.com/centos8stream-els/centos8stream-els-oval.xml)
 * Oracle Linux 6 ELS: [https://repo.cloudlinux.com/oraclelinux6-els/oraclelinux6-els-oval.xml](https://repo.cloudlinux.com/oraclelinux6-els/oraclelinux6-els-oval.xml)
 * Oracle Linux 7 ELS: [https://repo.tuxcare.com/oraclelinux7-els/oraclelinux7-els-oval.xml](https://repo.tuxcare.com/oraclelinux7-els/oraclelinux7-els-oval.xml)
+* Red Hat Enterprise Linux 7 ELS: [https://repo.tuxcare.com/rhel7-els/rhel7-els-oval.xml](https://repo.tuxcare.com/rhel7-els/rhel7-els-oval.xml)
 * Ubuntu 16.04 ELS: [https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu16_04-els/ubuntu16.04-els-oval.xml)
 * Ubuntu 18.04 ELS: [https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml](https://repo.cloudlinux.com/ubuntu18_04-els/ubuntu18.04-els-oval.xml)
 * Ubuntu 20.04 ELS: [https://repo.tuxcare.com/ubuntu20_04-els/ubuntu20.04-els-oval.xml](https://repo.tuxcare.com/ubuntu20_04-els/ubuntu20.04-els-oval.xml)
