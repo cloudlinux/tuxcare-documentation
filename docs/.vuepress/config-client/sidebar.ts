@@ -38,6 +38,13 @@ export default {
             collapsable: false,
             children: [
                 "/els-for-languages/",
+                "/els-for-languages/php/",
+                "/els-for-languages/python/",
+                "/els-for-languages/spring-framework-and-spring-boot/",
+                "/els-for-languages/dotnet/",
+                "/els-for-languages/angular/",
+                "/els-for-languages/angularjs/",
+                "/els-for-languages/apache-tomcat/",
             ]
         },
     ],

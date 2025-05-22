@@ -7,11 +7,18 @@
     "/endless-lifecycle-support-for-languages": "/els-for-languages",
     "/endless-lifecycle-support": "/els-for-os",
     "/endless-lifecycle-support/": "/els-for-os/",
-    "/els-for-languages/#installation-instructions-of-yum-repositories": "/els-for-languages/#installation-instructions-for-linux",
-    "/els-for-languages/#rhel-based-systems": "/els-for-languages/#rpm-based-systems",
-    "/els-for-languages/#ubuntu": "/els-for-languages/#deb-based-systems",
+    "/els-for-languages/#installation-instructions-of-yum-repositories": "/els-for-languages/python/#installation-instructions-for-linux",
+    "/els-for-languages/#rhel-based-systems": "/els-for-languages/php/#rpm-based-systems",
+    "/els-for-languages/#ubuntu": "/els-for-languages/php/#deb-based-systems",
     "/els-for-languages/#supported-os": "/els-for-languages/#supported-os-and-php-versions",
     "/els-for-languages/#supported-versions": "/els-for-languages/#supported-os-and-php-versions",
-    "/els-for-languages/#step-2-create-an-account-on-npmjs-com": "/els-for-languages/#step-2-set-up-els-for-angular",
-    "/els-for-languages/#step-2-set-up-els-for-angular-16": "/els-for-languages/#step-2-set-up-els-for-angular"
+    "/els-for-languages/#step-2-create-an-account-on-npmjs-com": "/els-for-languages/angular/#step-2-set-up-els-for-angular",
+    "/els-for-languages/#step-2-set-up-els-for-angular-16": "/els-for-languages/angular/#step-2-set-up-els-for-angular",
+    "/els-for-languages/#els-for-php": "/els-for-languages/php",
+    "/els-for-languages/#els-for-python": "/els-for-languages/python",
+    "/els-for-languages/#els-for-spring-framework-and-spring-boot": "/els-for-languages/spring-framework-and-spring-boot",
+    "/els-for-languages/#endless-lifecycle-support-for-apache-tomcat": "/els-for-languages/apache-tomcat",
+    "/els-for-languages/#endless-lifecycle-support-for-net-6": "/els-for-languages/dotnet",
+    "/els-for-languages/#endless-lifecycle-support-for-angular": "/els-for-languages/angular",
+    "/els-for-languages/#endless-lifecycle-support-for-angularjs": "/els-for-languages/angularjs"
 }
