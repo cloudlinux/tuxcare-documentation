@@ -4,15 +4,17 @@ Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for
 
 ## Supported OS and PHP versions
 
-| OS                                    | Package Type | OS Version                                             | PHP Version |
-| :-----------------------------------: | :----------: | :----------------------------------------------------: | :---------: | 
-| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit, 9.x 64-bit         | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| AlmaLinux                             | RPM          | 8.x 64-bit, 9.x 64-bit                                 | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Ubuntu                                | DEB          | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Debian				                        | DEB          | 10, 11, 12	                                            | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Windows				                        | -            | Windows Server 2019, 2022, 2025				                | 5.6, 7.4 |
+**Supported architecture:** 64-bit.
 
-Other distros upon request.
+| OS                                    | Package Type | OS Version                        | PHP Version |
+| :-----------------------------------: | :----------: | :-------------------------------: | :---------: | 
+| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 6.x, 7.x, 8.x, 9.x                | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| AlmaLinux                             | RPM          | 8.x, 9.x                          | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| Ubuntu                                | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| Debian				                        | DEB          | 10, 11, 12	                       | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| Windows				                        | -            | Windows Server 2019, 2022, 2025	 | 5.6, 7.4 |
+
+Other distros and architectures upon request.
 
 ## Vulnerability Coverage and Target Response Times
 
@@ -293,7 +295,7 @@ Currently, we provide OVAL data for the following OS versions:
 
 ## PHP extensions list
 
-You can find the list of the supported add-ons [here](/cloudlinuxos/alt-ea_packages/#bundled-php-extensions).
+You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/cloudlinuxos/alt-ea_packages/#bundled-php-extensions).
 
 ## How to use PHP-ELS
 
