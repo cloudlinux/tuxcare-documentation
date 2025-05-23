@@ -107,7 +107,7 @@ The TuxCare ESU/FIPS packages and repositories are cryptographically signed with
 The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your ESU license key provided as a command line argument like so:
 
 ```text
-# tuxctl --license-key ESU-XXXXXXXXXXXXXXXXXXXXXXXX
+# tuxctl --license-key XXXXXXXXXX
 ```
 
 This tool will do the following:
@@ -139,7 +139,7 @@ To force re-registration, please run the script with --force
 Then you will have to run `tuxctl` like this:
 
 ```text
-# tuxctl --force -l ESU-XXXXXXXXXXXXXXXXXXXXXXXX
+# tuxctl --force -l XXXXXXXXXX
 ```
 
 :::
@@ -175,7 +175,7 @@ Once you've logged in after the reboot, you can run these commands to confirm it
 $ fips-mode-setup --check
 FIPS mode is enabled.
 
-$ $update-crypto-policies --show
+$ update-crypto-policies --show
 FIPS
 
 $ update-crypto-policies --check
@@ -313,7 +313,7 @@ dnf -y remove *leapp* elevate-release kernel-*.el8*
 
 # enable esu+fips
 dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.noarch.rpm
-tuxctl --license-key ESU-xxxxxxxxxxxxxxx
+tuxctl --license-key XXXXXXXXXX
 dnf -y upgrade
 fips-mode-setup --enable
 reboot
@@ -476,7 +476,7 @@ Technical support covered by any of the TuxCare Support Programs shall not be pr
 
 ### Installing tuxctl (Essential Support)
 
-Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux version, currently 8.8, 8.10, 9.2, 9.4 and 9.5 are supported.
+Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux version, currently 8.8, 8.10, 9.2, 9.4, 9.5, 9.6 and 10.0 are supported.
 
 If you are unsure, run this to find your exact OS version:
 
@@ -486,7 +486,7 @@ $ cat /etc/almalinux-release
 AlmaLinux release 8.10 (Cerulean Leopard)
 ```
 
-You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2, 9.4 or 9.5) then install it as root, for example:
+You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2, 9.4, 9.5, 9.6 or 10.0) then install it as root, for example:
 
 ```text
 # dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-8.10.noarch.rpm
@@ -499,13 +499,13 @@ Be aware that installing tuxcare-release will modify any files that match the wi
 The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your Essential Support license key provided as a command line argument like so:
 
 ```text
-# tuxctl --license-key ESA-XXXXXXXXXXXXXXXXXXXXXXXX
+# tuxctl --license-key XXXXXXXXXX
 ```
 
-Essential Support customers can upgrade to a new minor version, for example from 9.4 to 9.5 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
+Essential Support customers can upgrade to a new minor version, for example from 9.5 to 9.6 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
 
 ```text
-# echo 9.5 > /etc/dnf/vars/tuxcare_releasever
+# echo 9.6 > /etc/dnf/vars/tuxcare_releasever
 # dnf upgrade
 ```
 
