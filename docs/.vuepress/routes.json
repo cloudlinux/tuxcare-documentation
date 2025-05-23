@@ -20,5 +20,7 @@
     "/els-for-languages/#endless-lifecycle-support-for-apache-tomcat": "/els-for-languages/apache-tomcat",
     "/els-for-languages/#endless-lifecycle-support-for-net-6": "/els-for-languages/dotnet",
     "/els-for-languages/#endless-lifecycle-support-for-angular": "/els-for-languages/angular",
-    "/els-for-languages/#endless-lifecycle-support-for-angularjs": "/els-for-languages/angularjs"
+    "/els-for-languages/#endless-lifecycle-support-for-angularjs": "/els-for-languages/angularjs",
+    "/els-for-languages/python/#supported-versions": "/els-for-languages/python/#supported-os-and-python-versions",
+    "/els-for-languages/python/#supported-os": "/els-for-languages/python/#supported-os-and-python-versions" 
 }

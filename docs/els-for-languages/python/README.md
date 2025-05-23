@@ -2,40 +2,35 @@
 
 Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
 
-## Supported OS
+## Supported OS and Python versions
 
-TuxCare provides Endless Lifecycle Support for four years after the EOL date.
+**Supported architecture:** 64-bit.
 
-| OS                                    | Version                                                              |
-| :-----------------------------------: | :------------------------------------------------------------------: |
-| CentOS, CloudLinux, OracleLinux, etc. | 6.x 64-bit, 7.x 64-bit, 8.x 64-bit                                   |
-| AlmaLinux                             | 9.x 64-bit                                                           |
-| Ubuntu                                | 16.04 64-bit, 18.04 64-bit, 20.04 64-bit, 22.04 64-bit, 24.04 64-bit |
+| OS                                    | Package Type | OS Version                        | Python version |
+| :-----------------------------------: | :----------: | :-------------------------------: | :------------: |
+| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 6.x, 7.x, 8.x                     | 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 |
+| AlmaLinux                             | RPM          | 9.x                               | 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 |
+| Ubuntu                                | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 3.8, 3.11      |
+| Debian                                | DEB          | 10, 11, 12                        | 3.8, 3.11      |
 
-*Other distros upon request.
+*Other distros and architectures upon request.
 
-## Supported versions
+## Installation Instructions for Linux
 
-* **EL6, 7, 8, 9**: alt-python 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
-* **Debian 9 and 10**: 3.5, 3.8, 3.11
-* **Debian 11 and 12**: 3.8, 3.11
-* **Ubuntu 16 and 18**: 3.5, 3.8, 3.11
-* **Ubuntu 20**: 3.7, 3.8, 3.10, 3.11, 3.12
-* **Ubuntu 22**: 3.8, 3.11, 3.13
-* **Ubuntu 24**: 3.8, 3.11
+### RPM-based
 
-## Installation instructions of yum repositories
+These steps are suitable for RPM-based systems (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc).
 
 1. Download the installer script:
 
 ```text
-wget https://repo.cloudlinux.com/python-els/install-python-els-repo.sh
+wget https://repo.alt.tuxcare.com/alt-python-els/install-els-alt-python-rpm-repo.sh
 ```
 
 2. Run the installer script with your key. The installation script registers the server to CLN with the key, and adds our PGP key and repository to the server.
 
 ```text
-sh install-python-els-repo.sh --license-key XXX-XXXXXXXXXXXX
+sh install-els-alt-python-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX
 ```
 
 3. Verify that the installation was successful.
@@ -43,40 +38,68 @@ sh install-python-els-repo.sh --license-key XXX-XXXXXXXXXXXX
 To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual `yum upgrade` command.
 
 ```text
-yum info python2
+yum info alt-python36
 
 Available Packages
-Name         : python2
-Version      : 2.7.18
-Release      : 10.el9.tuxcare.els1
+Name         : alt-python36
+Version      : 3.6.15
+Release      : 4.el9
 Architecture : x86_64
-Size         : 43 k
-Source       : python2-2.7.18-10.el9.tuxcare.els1.src.rpm
-Repository   : python-els
-Summary      : An interpreted, interactive, object-oriented programming language
+Size         : 26 k
+Source       : alt-python36-3.6.15-4.el9.src.rpm
+Repository   : alt-python
+Summary      : Version 3 of the Python programming language aka Python 3000
 URL          : https://www.python.org/
 License      : Python
-Description  : Python 2 is an old version of the language that is incompatible
-             : with the 3.x line of releases.
+Description  : Python 3 is a new version of the language that is incompatible
+             : with the 2.x line of releases. The language is mostly the same,
+             : but many details, especially how built-in objects like
+             : dictionaries and strings work, have changed considerably, and a
+             : lot of deprecated features have finally been removed.
 ```
 
 4. To install python, it's necessary to enable the CodeReady Builder(CRB) repository, which contains the `gdbm` package.
 
 ```text
-yum install python2 --enablerepo crb
+yum install alt-python36 --enablerepo crb
 ```
 
-5. Once installed, you can use python2 in the usual way.
+5. `alt-python` versions are intended to be installed alongside the system's default python and allow multiple versions to coexist. To use a specific `alt-python` version, please, run it directly from its installation directory, for example:
 
 ```text
-$ python2
-Python 2.7.18 (default, Jun 30 2022, 00:00:00)
-[GCC 11.2.1 20220127 (Red Hat 11.2.1-9)] on linux2
+$ /opt/alt/python36/bin/python3.6
+Python 3.6.15 (default, Apr 10 2024, 00:00:00) 
+[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)] on linux
 Type "help", "copyright", "credits" or "license" for more information.
->>> print "Hello, World!"
+>>> print("Hello, World!")
 Hello, World!
 ```
 
+### DEB-based
+
+These steps are suitable for DEB-based systems (Ubuntu, Debian).
+
+1. Download the installer script:
+
+```text
+wget https://repo.alt.tuxcare.com/alt-python-els/install-els-alt-python-deb-repo.sh
+```
+
+2. Run the installer script with your key. The installation script registers the server to CLN with the key, and adds our PGP key and repository to the server.
+
+```text
+bash install-els-alt-python-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
+```
+
+3. Verify that the installation was successful.
+
+To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual `apt upgrade` command.
+
+```text
+apt-cache show alt-python36
+```
+
+<!--
 ## Installation instructions of a local mirror
 
 We provide the ability to create local mirrors of Python for ELS updates.
@@ -124,3 +147,4 @@ wget https://repo.cloudlinux.com/python-els/almalinux9-els-python-oval.xml
 ```text
 oscap oval eval --results result.xml --report report.xml almalinux9-els-python-oval.xml
 ```
+-->
