@@ -254,6 +254,9 @@ Currently, we provide OVAL data for the following OS versions:
 * Ubuntu 18.04
 * Ubuntu 20.04
 * Ubuntu 22.04
+* Debian 10
+* Debian 11
+* Debian 12
 
 ### TuxCare PHP ELS OVAL Streams
 
@@ -265,6 +268,9 @@ Currently, we provide OVAL data for the following OS versions:
 * Ubuntu 18.04: [https://repo.cloudlinux.com/php-els/ubuntu18.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu18.04-els-php-oval.xml)
 * Ubuntu 20.04: [https://repo.cloudlinux.com/php-els/ubuntu20.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu20.04-els-php-oval.xml)
 * Ubuntu 22.04: [https://repo.cloudlinux.com/php-els/ubuntu22.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu22.04-els-php-oval.xml)
+* Debian 10: [https://repo.cloudlinux.com/php-els/debian10-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian10-els-php-oval.xml)
+* Debian 11: [https://repo.cloudlinux.com/php-els/debian11-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian11-els-php-oval.xml)
+* Debian 12: [https://repo.cloudlinux.com/php-els/debian12-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian12-els-php-oval.xml)
 
 ### How to use OVAL
 
