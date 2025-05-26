@@ -13,6 +13,8 @@ import sidebar from "./config-client/sidebar";
 import social from "./config-client/social";
 
 import Chat from "./components/Chat.vue";
+import CodeTabs from "./components/CodeTabs.vue";
+import CodeWithCopy from "./components/CodeWithCopy.vue";
 
 export default defineClientConfig({
     rootComponents: [
@@ -20,6 +22,8 @@ export default defineClientConfig({
     ],
     async enhance({ app }) {
         app.config.globalProperties.$eventBus = mitt();
+        app.component("CodeTabs", CodeTabs);
+        app.component("CodeWithCopy", CodeWithCopy);
     },
     layouts: {
         Layout,
