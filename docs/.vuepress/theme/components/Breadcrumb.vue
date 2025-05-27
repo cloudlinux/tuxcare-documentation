@@ -1,24 +1,50 @@
 <template>
   <div class="breadcrumb-wrapper">
-      <span class="breadcrumb-title">{{ siteTitle }}:</span>
-    <router-link class="breadcrumb" v-for="crumb in breadCrumbs" :key="crumb.path" :to="crumb.path">
+    <router-link
+      v-for="(crumb, index) in breadCrumbs"
+      :key="crumb.path"
+      class="breadcrumb"
+      :to="crumb.path"
+    >
       {{ crumb.title }}
     </router-link>
   </div>
 </template>
 
 <script setup>
-import {computed, inject} from "vue";
-import {usePageData, useSiteData} from "@vuepress/client";
+import { computed } from "vue";
+import { usePageData, useSiteData } from "@vuepress/client";
 
-const page = usePageData()
-const site = useSiteData()
-const { locales: {siteTitle}} = inject("themeConfig")
+const page = usePageData();
+const site = useSiteData();
+
+const siteTitle = computed(() => site.value.title);
+
+const titleMap = {
+  '/els-for-languages/': 'ELS for Languages',
+};
+
 const breadCrumbs = computed(() => {
-    const crumbs = [];
-    if (page.value.path !== '/') {
-      crumbs.push({path: page.value.path, title: page.value.title});
+  const segments = page.value.path.split("/").filter(Boolean);
+  const crumbs = [{ path: "/", title: "Documentation" }];
+  let cumulativePath = "";
+
+  for (let i = 0; i < segments.length; i++) {
+    cumulativePath += `/${segments[i]}`;
+    const isLast = i === segments.length - 1;
+    const fullPath = cumulativePath.endsWith(".html") ? cumulativePath : `${cumulativePath}/`;
+
+    let title;
+
+    if (isLast) {
+      title = page.value.title;
+    } else {
+      title = titleMap[fullPath] || fullPath;
     }
+
+    crumbs.push({ path: fullPath, title });
+  }
+
   return crumbs;
 });
 </script>
@@ -28,17 +54,26 @@ const breadCrumbs = computed(() => {
 
 .breadcrumb
   color $breadcrumbColor
+  text-decoration none
 
-  &::after
+  &:not(:last-child)::after
     content " > "
     font-family inherit
     font-size inherit
+    color $breadcrumbColor
+
+  &:not(:last-child)
+    cursor pointer
+
+    &:hover
+      color #1994f9
 
   &:last-child
     cursor default
+    color $breadcrumbColor
 
-.breadcrumb-title
-  color $breadcrumbColor
-  font-weight 600
-  margin-right 2px
+
 </style>
+
+
+

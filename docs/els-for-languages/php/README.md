@@ -35,36 +35,62 @@ These steps are suitable for RPM-based systems (CentOS, CloudLinux, AlmaLinux, O
 
 1. Download the installer script:
 
-    ```text
+    <CodeWithCopy>
+
+    ```
     wget https://repo.cloudlinux.com/php-els/install-php-els-rpm-repo.sh
     ```
+
+    </CodeWithCopy>    
 
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds the yum repository, and adds a PGP key to the server.
 
     ```text
     sh install-php-els-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX
     ```
-
+    <CodeTabs :tabs="[
+      { title: 'rpm', content: 'sh install-php-els-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX' },
+      { title: 'deb', content: 'bash install-php-els-deb-repo.sh --license-key XXX-XXXXXXXXXXXX' }
+    ]" />
 3. Verify that the installation was successful.
 
     To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual `yum upgrade` command.
 
-    ```text
-    yum info alt-php73
-
-    Available Packages
-    Name        : alt-php73
-    Arch        : x86_64
-    Epoch       : 1
-    Version     : 7.3.33
-    Release     : 5.2.el7
-    Size        : 22 k
-    Repo        : php-els/7
-    Summary     : PHP scripting language for creating dynamic web sites
-    URL         : http://www.php.net/
-    License     : PHP and LGPLv2 and LGPLv2+
-    Description : PHP is an HTML-embedded scripting language.
-    ```
+<CodeTabs :tabs="[
+{ title: 'rpm', content: 
+`yum info alt-php73\n
+Available Packages
+Name        : alt-php73
+Arch        : x86_64
+Epoch       : 1
+Version     : 7.3.33
+Release     : 5.2.el7
+Size        : 22 k
+Repo        : php-els/7
+Summary     : PHP scripting language for creating dynamic web sites
+URL         : http://www.php.net/
+License     : PHP and LGPLv2 and LGPLv2+
+Description : PHP is an HTML-embedded scripting language.` },
+{ title: 'deb', content: 
+`apt-cache show alt-php73-cli\n
+Package: alt-php73-cli
+Source: php
+Version: 7.3.18-1
+Architecture: amd64
+Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
+Installed-Size: 51694
+Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
+Homepage: http://www.php.net/
+Priority: optional
+Section: libs
+Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
+Size: 10247916
+SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
+SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
+MD5sum: d6c664d4f4b229c1e6727804888f6079
+Description: command-line interpreter for the PHP scripting language.
+Description-md5: 0d83f7bf7177d3376a59b73890c8494d` }
+]" />    
 
 **How to install packages:**
 
