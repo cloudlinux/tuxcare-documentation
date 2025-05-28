@@ -29,161 +29,147 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 * **Low-severity CVEs:** Patches provided within 90 days
 * TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
+## Incident Reporting and Response Timeframe
+
+Customers can report vulnerabilities by submitting a ticket through the TuxCare Support Portal <https://tuxcare.com/support-portal/>. TuxCare commits to providing an initial response to any reported issue within 3 days.
+
+Requests for customer-directed security patches for CVEs that are outside of the ELS for Angular scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 60 days.
+
+Handling Multiple Vulnerabilities: In cases where several CVEs are reported simultaneously for fixing, TuxCare will discuss and agree upon resolution timelines separately with the customer.
+
+## Enhanced Transparency & Visibility
+
+TuxCare's commitment to transparency and visibility is foundational to our ELS for Angular offering. We provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
+
+* **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
+* **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
+* **Enhanced Metadata in Standard Formats:** Each SBOM is provided in universally recognized formats such as SPDX and VEX. These include enhanced metadata like artifact analysis, package health, and vulnerability impact data, ensuring that you have the most detailed and actionable information at your fingertips.
+* **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
+
+:::warning
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+:::
+
+* **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
+
+## Technical Support
+
+TuxCare provides technical support according to the [support policy](https://tuxcare.com/TuxCare-support-policy.pdf?_gl=1*9hjdum*_up*MQ..*_ga*MTQ0MTM0NTI4OC4xNjk5Mzk2ODYy*_ga_Z539WTSZ80*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_1790YFKF4F*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..*_ga_64QBSWJJGS*MTY5OTM5Njg2MC4xLjAuMTY5OTM5Njg2MC4wLjAuMA..) . It delivers 24/7/365 access to the TuxCare’s support team through the TuxCare Support Portal <https://tuxcare.com/support-portal/> and to the TuxCare’s online knowledge base.
+
 ## Installation Instructions for Linux
 
-### RPM-based Systems
+The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Oracle Linux, AlmaLinux, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
 
-These steps are suitable for RPM-based systems (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc).
 
 1. Download the installer script:
 
-    <CodeWithCopy>
-
-    ```
-    wget https://repo.cloudlinux.com/php-els/install-php-els-rpm-repo.sh
-    ```
-
-    </CodeWithCopy>    
+    <CodeTabs :tabs="[
+      { title: 'rpm', content: 'wget https://repo.cloudlinux.com/php-els/install-php-els-rpm-repo.sh' },
+      { title: 'deb', content: 'wget https://repo.cloudlinux.com/php-els/install-php-els-deb-repo.sh' }
+    ]" />
 
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds the yum repository, and adds a PGP key to the server.
 
-    ```text
-    sh install-php-els-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX
-    ```
     <CodeTabs :tabs="[
       { title: 'rpm', content: 'sh install-php-els-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX' },
       { title: 'deb', content: 'bash install-php-els-deb-repo.sh --license-key XXX-XXXXXXXXXXXX' }
     ]" />
+
 3. Verify that the installation was successful.
 
-    To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual `yum upgrade` command.
+    To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual command:
 
-<CodeTabs :tabs="[
-{ title: 'rpm', content: 
-`yum info alt-php73\n
-Available Packages
-Name        : alt-php73
-Arch        : x86_64
-Epoch       : 1
-Version     : 7.3.33
-Release     : 5.2.el7
-Size        : 22 k
-Repo        : php-els/7
-Summary     : PHP scripting language for creating dynamic web sites
-URL         : http://www.php.net/
-License     : PHP and LGPLv2 and LGPLv2+
-Description : PHP is an HTML-embedded scripting language.` },
-{ title: 'deb', content: 
-`apt-cache show alt-php73-cli\n
-Package: alt-php73-cli
-Source: php
-Version: 7.3.18-1
-Architecture: amd64
-Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
-Installed-Size: 51694
-Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
-Homepage: http://www.php.net/
-Priority: optional
-Section: libs
-Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
-Size: 10247916
-SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
-SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
-MD5sum: d6c664d4f4b229c1e6727804888f6079
-Description: command-line interpreter for the PHP scripting language.
-Description-md5: 0d83f7bf7177d3376a59b73890c8494d` }
-]" />    
+    <CodeTabs :tabs="[
+      { title: 'rpm', content: 'yum upgrade' },
+      { title: 'deb', content: 'apt upgrade' }
+    ]" />
 
-**How to install packages:**
+4. To display information about the installed package, run the following command: 
+    
+    <CodeTabs :tabs="[
+      { title: 'rpm', content: 'yum info alt-php73' },
+      { title: 'deb', content: 'alt-php73-cli' }
+    ]" />
 
-* Each version of PHP individually or all versions at once can be installed.
-* Standard commands to install each version separately can be used. For example, installing alt-php73:
+    **An example output:**
 
-  ```text
-  yum install alt-php73*
-  ```
+    <CodeTabs :tabs="[
+    { title: 'rpm', content: 
+    `Available Packages
+    Name        : alt-php73
+    Arch        : x86_64
+    Epoch       : 1
+    Version     : 7.3.33
+    Release     : 5.2.el7
+    Size        : 22 k
+    Repo        : php-els/7
+    Summary     : PHP scripting language for creating dynamic web sites
+    URL         : http://www.php.net/
+    License     : PHP and LGPLv2 and LGPLv2+
+    Description : PHP is an HTML-embedded scripting language.` },
+    { title: 'deb', content: 
+    `Package: alt-php73-cli
+    Source: php
+    Version: 7.3.18-1
+    Architecture: amd64
+    Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
+    Installed-Size: 51694
+    Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
+    Homepage: http://www.php.net/
+    Priority: optional
+    Section: libs
+    Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
+    Size: 10247916
+    SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
+    SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
+    MD5sum: d6c664d4f4b229c1e6727804888f6079
+    Description: command-line interpreter for the PHP scripting language.
+    Description-md5: 0d83f7bf7177d3376a59b73890c8494d` }
+    ]" />    
 
-* To install all versions at the same time, use `groupinstall`:
+#### How to install packages
 
-  ```text
-  yum groupinstall alt-php
-  ```
+Each version of PHP can be installed individually or all versions at once.
 
-### DEB-based Systems
+* Standard commands to install each version separately, for example, installing alt-php73:
 
-These steps are suitable for DEB-based systems (Ubuntu, Debian).
+  <CodeTabs :tabs="[
+    { title: 'rpm', content: 'yum install alt-php73*' },
+    { title: 'deb', content: 'apt-get install alt-php73*' }
+  ]" />
 
-1. Download an installer script:
+* To install all versions at the same time:
 
-  ```text
-  wget https://repo.cloudlinux.com/php-els/install-php-els-deb-repo.sh
-  ```
-
-2. Run the installer script with your key:
-
-  ```text
-  bash install-php-els-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
-  ```
-
-3. To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual `apt upgrade` command.
-
-  ```text
-  apt-cache show alt-php73-cli
-
-  Package: alt-php73-cli
-  Source: php
-  Version: 7.3.18-1
-  Architecture: amd64
-  Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
-  Installed-Size: 51694
-  Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
-  Homepage: http://www.php.net/
-  Priority: optional
-  Section: libs
-  Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
-  Size: 10247916
-  SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
-  SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
-  MD5sum: d6c664d4f4b229c1e6727804888f6079
-  Description: command-line interpreter for the PHP scripting language.
-  Description-md5: 0d83f7bf7177d3376a59b73890c8494d
-  ```
-
-**How to install packages:**
-
-* Each version of PHP individually or all versions at once can be installed.
-* Standard commands to install each version separately can be used. For example, installing alt-php73:
-
-  ```text
-  apt-get install alt-php73*
-  ```
-
-* To install all versions at the same time, it is necessary to use the alt-php meta-package:
-
-  ```text
-  apt-get install alt-php
-  ```
+  <CodeTabs :tabs="[
+    { title: 'rpm', content: 'yum groupinstall alt-php' },
+    { title: 'deb', content: 'apt-get install alt-php' }
+  ]" />
 
 ## Installation Instructions for Windows
 
 ### Get user credentials
 
-* Obtain the required license to get access to the service.
-* Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating your unique access link (tokenized URL). Anonymous access is restricted.
+1. Obtain the required license to get access to the service.
+2. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating your unique access link (tokenized URL). Anonymous access is restricted.
 
 ### Download TuxCare PHP Windows
 
-* Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
-* Use this link to download the latest version of PHP.
-* Extract the downloaded archive (ZIP file) to a preferred directory, for example`C:\PHP`.
-* PHP doesn't have a traditional "installer" on Windows, it’s a portable application. Once you extract the files and set up a few things, it's ready to use.
+1. Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
+2. Use this link to download the latest version of PHP.
+3. Extract the downloaded archive (ZIP file) to a preferred directory, for example`C:\PHP`.
+4. PHP doesn't have a traditional "installer" on Windows, it’s a portable application. Once you extract the files and set up a few things, it's ready to use.
 
 ### Configure PHP
 
 Configure TuxCare ELS PHP for Windows to work as intended on Windows:
 
-* Navigate to your PHP directory (e.g. `C:\PHP`).
-* Find and rename the `php.ini-development` file to `php.ini`. This is the main configuration file PHP uses when running.
+1. Navigate to your PHP directory (e.g. `C:\PHP`).
+2. Find and rename the `php.ini-development` file to `php.ini`. This is the main configuration file PHP uses when running.
 
 ### Additional configurations (optional)
 
@@ -194,71 +180,83 @@ Depending on your ELS PHP usage purpose, additional configurations may be requir
 Many PHP features come as extensions and are disabled by default to keep PHP lightweight. TuxCare provides the required `.dll` files to support these extensions.
 To enable the functionality you need, update the `php.ini` file:
 
-* Open the `php.ini` file in an editor of your choice (e.g. Notepad).
-* Uncomment necessary extensions by removing the `;` like so:
+1. Open the `php.ini` file in an editor of your choice (e.g. Notepad).
+2. Uncomment necessary extensions by removing the `;` like so:
 
-  ```text
-  extension=curl
-  extension=gd2
-  extension=mbstring
-  extension=mysqli
-  extension=pdo_mysql
-  ```
+    <CodeWithCopy>
+
+    ```text
+    extension=curl
+    extension=gd2
+    extension=mbstring
+    extension=mysqli
+    extension=pdo_mysql
+    ```
+
+    </CodeWithCopy>
 
 ### Increase Upload/Memory Limits
 
 If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits:
 
-* Open the `php.ini` file in an editor of your choice (e.g. Notepad).
-* Set the limits as needed, e.g:
+1. Open the `php.ini` file in an editor of your choice (e.g. Notepad).
+2. Set the limits as needed, e.g:
 
-  ```text
-  upload_max_filesize=40M
-  post_max_size=40M
-  memory_limit=256M
-  ```
+    <CodeWithCopy>
+
+    ```text
+    upload_max_filesize=40M
+    post_max_size=40M
+    memory_limit=256M
+    ```
+
+    </CodeWithCopy>
 
 ### Add PHP to the System Path
 
 Adding PHP to the system PATH lets you run the `php` command from a terminal window without typing its full location. This is useful for running scripts and using PHP with other tools.
 
-* Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
-* Click **Advanced system settings**.
+1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
+2. Click **Advanced system settings**.
 
   ![image](/images/php-windows-advanced-settings.png)
 
-* Click on **Environment Variables**.
+3. Click on **Environment Variables**.
 
   ![image](/images/php-windows-environment-variables.png)
 
-* Under *System variables*, find **Path** and click **Edit**.
+4. Under *System variables*, find **Path** and click **Edit**.
 
   ![image](/images/php-windows-add-path.png)
 
-* Click **New** and add your PHP `C:\PHP` directory.
+5. Click **New** and add your PHP `C:\PHP` directory.
 
   ![image](/images/php-windows-add-path-2.png)
 
-* Click **OK** to save the changes.
+6. Click **OK** to save the changes.
 
 ### Validate the Installation
 
 To confirm PHP is working:
 
-* Open **Command Prompt**, **PowerShell**, or **Terminal**.
-* Run the following command:
+1. Open **Command Prompt**, **PowerShell**, or **Terminal**.
+2. Run the following command:
 
-  ```text
-  php -v
-  ```
+    <CodeWithCopy>
 
-  You should see output like:
+    ```text
+    php -v
+    ```
 
-  ```text
-  PHP 7.4.33 (cli) (built: Mar 14 2025 04:59:07) ( NTS Visual C++ 2017 x64 )
-  Copyright (c) The PHP Group
-  Zend Engine v3.4.0, Copyright (c) Zend Technologies
-  ```
+    </CodeWithCopy>
+
+    You should see output like:
+
+    ```text
+    PHP 7.4.33 (cli) (built: Mar 14 2025 04:59:07) ( NTS Visual C++ 2017 x64 )
+    Copyright (c) The PHP Group
+    Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    ```
 
 ### Example Use Cases
 
@@ -270,60 +268,54 @@ You can integrate PHP with other tools, for example, IIS or WordPress. For furth
 
 This section contains information about available ELS for PHP OVAL streams that can be used by vulnerability scanners.
 
-Currently, we provide OVAL data for the following OS versions:
-
-* EL 6 (CentOS, CloudLinux, OracleLinux, etc.)
-* EL 7 (CentOS, CloudLinux, OracleLinux, etc.)
-* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.)
-* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.)
-* Ubuntu 16.04
-* Ubuntu 18.04
-* Ubuntu 20.04
-* Ubuntu 22.04
-* Debian 10
-* Debian 11
-* Debian 12
-
 ### TuxCare PHP ELS OVAL Streams
 
-* EL 6: [https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml)
-* EL 7: [https://repo.cloudlinux.com/php-els/centos7-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos7-els-php-oval.xml)
-* EL 8: [https://repo.cloudlinux.com/php-els/centos8-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos8-els-php-oval.xml)
-* EL 9: [https://repo.cloudlinux.com/php-els/centos9-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos9-els-php-oval.xml)
-* Ubuntu 16.04: [https://repo.cloudlinux.com/php-els/ubuntu16.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu16.04-els-php-oval.xml)
-* Ubuntu 18.04: [https://repo.cloudlinux.com/php-els/ubuntu18.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu18.04-els-php-oval.xml)
-* Ubuntu 20.04: [https://repo.cloudlinux.com/php-els/ubuntu20.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu20.04-els-php-oval.xml)
-* Ubuntu 22.04: [https://repo.cloudlinux.com/php-els/ubuntu22.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu22.04-els-php-oval.xml)
-* Debian 10: [https://repo.cloudlinux.com/php-els/debian10-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian10-els-php-oval.xml)
-* Debian 11: [https://repo.cloudlinux.com/php-els/debian11-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian11-els-php-oval.xml)
-* Debian 12: [https://repo.cloudlinux.com/php-els/debian12-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian12-els-php-oval.xml)
+Currently, we provide OVAL data for the following OS versions:
+
+* EL 6 (CentOS, CloudLinux, OracleLinux, etc.): [centos6-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml)
+* EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [centos7-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos7-els-php-oval.xml)
+* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [centos8-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos8-els-php-oval.xml)
+* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [centos9-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos9-els-php-oval.xml)
+* Ubuntu 16.04: [ubuntu16.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu16.04-els-php-oval.xml)
+* Ubuntu 18.04: [ubuntu18.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu18.04-els-php-oval.xml)
+* Ubuntu 20.04: [ubuntu20.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu20.04-els-php-oval.xml)
+* Ubuntu 22.04: [ubuntu22.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu22.04-els-php-oval.xml)
+* Debian 10: [debian10-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian10-els-php-oval.xml)
+* Debian 11: [debian11-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian11-els-php-oval.xml)
+* Debian 12: [debian12-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian12-els-php-oval.xml)
 
 ### How to use OVAL
 
+OVAL can be used with the OpenSCAP tool.
+
 1. Install OpenSCAP
-    * for rpm systems:
 
-    ```text
-    yum install openscap openscap-utils scap-security-guide -y
-    ```
+    <CodeTabs :tabs="[
+      { title: 'rpm', content: 'yum install openscap openscap-utils scap-security-guide -y' },
+      { title: 'deb', content: 'apt-get install libopenscap8 -y' }
+    ]" />
 
-    * for  deb systems:
-
-    ```text
-    apt-get install libopenscap8 -y
-    ```
+**Note:** The next steps use CentOS 6 as an example. Please, substitute `centos6-els-php-oval.xml` as needed for your distribution.
 
 2. Download an OVAL stream:
 
+   <CodeWithCopy>
+   
     ```text
     wget https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml
     ```
 
+   </CodeWithCopy>
+
 3. Run a scan:
 
-    ```text
-    oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xml
-    ```
+   <CodeWithCopy>
+
+   ```text
+   oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xml
+   ```
+
+   </CodeWithCopy>
 
 ## PHP extensions list
 
@@ -333,18 +325,36 @@ You can find the list of the supported add-ons [here](https://docs.cloudlinux.co
 
 When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt) the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
 
-**The *bin* files:**
+### The *bin* files
+
+<CodeWithCopy>
 
 ```text
-[root@localhost ~]# ls -l /opt/alt/phpXY/usr/bin/
+ls -l /opt/alt/phpXY/usr/bin/
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
 bytekit          hphpa            pear             pecl             phar.phar        phpcb            php-config       phpcpd           phploc           phpunit-skelgen
 dbunit           lsphp            peardev          phar             php              php-cgi          phpcov           phpize           phpunit          ppw
 ```
 
-***Modules* and *pecl* extensions:**
+### *Modules* and *pecl* extensions
+
+<CodeWithCopy>
 
 ```text
 ls /opt/alt/phpXY/usr/lib64/php/modules/
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
 ZendGuardLoader.so  imagick.so         oci8.so          stem.so
 amqp.so             imap.so            odbc.so          stomp.so
 apc.so              inclued.so         opcache.so       suhosin.so
@@ -379,17 +389,36 @@ http.so             nd_pdo_mysql.so    ssh2.so          zmq.so
 igbinary.so         oauth.so           stats.so
 ```
 
-**Running code on a specific version through the CLI:**
+### Running code on a specific version through the CLI
+
+<CodeWithCopy>
 
 ```text
-[root@localhost ~]# /opt/alt/phpXY/usr/bin/php helloworld.php
+/opt/alt/phpXY/usr/bin/php helloworld.php
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+
+```text
 Hello, World!
 ```
 
-**Location of *ini* config files:**
+### Location of *ini* config files
+
+<CodeWithCopy>
 
 ```text
-[root@localhost ~]# ls /opt/alt/phpXY/etc/php.d.all/
+/opt/alt/phpXY/etc/php.d.all/
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
 40-leveldb.ini        mailparse.ini     redis.ini
 40-snuffleupagus.ini  mbstring.ini      rrd.ini
 40-vld.ini            mcrypt.ini        snmp.ini
@@ -425,16 +454,29 @@ luasandbox.ini        psr.ini           zmq.ini
 lzf.ini               raphf.ini
 ```
 
-**Location of *default.ini*:**
+### Location of *default.ini*
+
+<CodeWithCopy>
 
 ```text
 ls /opt/alt/phpXY/etc/php.d/default.ini
 ```
 
-**Listing enabled modules on a specific version:**
+</CodeWithCopy>
+
+### Listing enabled modules on a specific version
+
+<CodeWithCopy>
 
 ```text
-[root@localhost ~]# /opt/alt/php73/usr/bin/php -m
+/opt/alt/php73/usr/bin/php -m
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
 [PHP Modules]
 bz2
 calendar
@@ -467,10 +509,19 @@ zlib
 [Zend Modules]
 ```
 
-**Enabling a module through the CLI:**
+### Enabling a module through the CLI
+
+<CodeWithCopy>
 
 ```text
-[root@localhost ~]# /opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
+/opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
 [PHP Modules]
 bz2
 calendar
@@ -503,5 +554,7 @@ xml
 zlib
 [Zend Modules]
 ```
+
+### Conclusion
 
 As you can see, each version is entirely self-contained, and changing configurations in one will not impact the others, a desired feature in hosting environments.

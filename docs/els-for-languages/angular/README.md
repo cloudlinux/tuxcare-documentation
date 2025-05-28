@@ -68,8 +68,8 @@ You need a username, password, and token in order to use TuxCare ELS Angular rep
 
 TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-* Navigate to the root directory of your Angular project.
-* Create a `.npmrc` file or update it if it already exists.
+1. Navigate to the root directory of your Angular project.
+2. Create a `.npmrc` file or update it if it already exists.
 
   **Example:**
 
@@ -82,7 +82,9 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   └── tsconfig.json
   ```
 
-* Use an editor of your choice (e.g., VS Code) to add the following registry address line:
+3. Use an editor of your choice (e.g., VS Code) to add the following registry address line:
+
+  <CodeWithCopy>
 
   ```text
   registry=https://registry.npmjs.org/
@@ -90,15 +92,19 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   //nexus.repo.tuxcare.com/repository/els_angular/:_auth=${TOKEN}
   ```
 
+  </CodeWithCopy>
+
   :::warning
   Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
   :::
 
-* Update your `package.json` file to replace your Angular dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages:
   
   **Angular 12**
   <details>
     <summary>Click to expand</summary>
+
+  <CodeWithCopy>
 
   ```text
   "dependencies": {
@@ -131,11 +137,15 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   }
   ```
 
+  </CodeWithCopy>
+
   </details>
 
   **Angular 13**
   <details>
     <summary>Click to expand</summary>
+
+  <CodeWithCopy>
 
   ```text
   "dependencies": {
@@ -167,6 +177,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       "typescript": "file:./node_modules/@els-js/angular-13/deps/typescript"
   }
   ```
+  </CodeWithCopy>
 
   </details>
 
@@ -174,6 +185,8 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   <details>
     <summary>Click to expand</summary>
 
+  <CodeWithCopy>
+    
   ```text
   "dependencies": {
       "@els-js/angular-14": "^0.0.1",
@@ -203,12 +216,16 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       "typescript": "file:./node_modules/@els-js/angular-14/deps/typescript"
   }
   ```
+    
+  </CodeWithCopy>
 
   </details>
 
   **Angular 15**
   <details>
     <summary>Click to expand</summary>
+    
+  <CodeWithCopy>
 
   ```text
   "dependencies": {
@@ -239,12 +256,16 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       "typescript": "file:./node_modules/@els-js/angular-15/deps/typescript"
   }
   ```
+    
+  </CodeWithCopy>
 
   </details>
 
   **Angular 16**
   <details>
     <summary>Click to expand</summary>
+    
+  <CodeWithCopy>
 
   ```text
   "dependencies": {
@@ -275,12 +296,16 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       "typescript": "file:./node_modules/@els-js/angular-16/deps/typescript"
   }
   ```
+    
+  </CodeWithCopy>
 
   </details>
 
   **Angular 17**
   <details>
     <summary>Click to expand</summary>
+
+  <CodeWithCopy>
 
   ```text
   "dependencies": {
@@ -312,11 +337,15 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   }
   ```
 
+  </CodeWithCopy>
+
   </details>
 
   **Angular 18**
   <details>
     <summary>Click to expand</summary>
+
+  <CodeWithCopy>
 
   ```text
   "dependencies": {
@@ -347,12 +376,16 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       "typescript": "file:./node_modules/@els-js/angular-18/deps/typescript"
   }
   ```
+    
+  </CodeWithCopy>
 
   </details>
 
   **Angular 19**
   <details>
     <summary>Click to expand</summary>
+
+  <CodeWithCopy>
 
   ```text
   "dependencies": {
@@ -382,14 +415,20 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       "typescript": "file:./node_modules/@els-js/angular-19/deps/typescript"
   }
   ```
+    
+  </CodeWithCopy>
 
   </details>
 
-* In your terminal, run the following command to install ELS for Angular 16 dependencies:
+5. In your terminal, run the following command to install ELS for Angular 16 dependencies:
 
+  <CodeWithCopy>
+  
   ```text
   npm install --userconfig .npmrc
   ```
+  
+  </CodeWithCopy>
 
   You will see an output like:
 
@@ -399,4 +438,4 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   found 0 vulnerabilities
   ```
 
-* You've successfully integrated the TuxCare ELS for Angular repository into your project.
+6. You've successfully integrated the TuxCare ELS for Angular repository into your project.

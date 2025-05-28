@@ -1,5 +1,5 @@
 <template>
-  <div class="code-block-wrapper">
+  <div class="code-block-wrapper" ref="wrapper">
     <button class="copy-button" @click="copyCode" aria-label="Copy code">
       <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="copy-icon">
         <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
@@ -17,9 +17,10 @@
 import { ref } from 'vue';
 
 const copied = ref(false);
+const wrapper = ref(null)
 
 function copyCode() {
-  const code = document.querySelector('.code-block-wrapper pre code')?.innerText;
+  const code = wrapper.value?.querySelector('pre code')?.innerText;
   if (code) {
     navigator.clipboard.writeText(code);
     copied.value = true;
