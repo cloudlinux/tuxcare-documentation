@@ -22,5 +22,7 @@
     "/els-for-languages/#endless-lifecycle-support-for-angular": "/els-for-languages/angular",
     "/els-for-languages/#endless-lifecycle-support-for-angularjs": "/els-for-languages/angularjs",
     "/els-for-languages/python/#supported-versions": "/els-for-languages/python/#supported-os-and-python-versions",
-    "/els-for-languages/python/#supported-os": "/els-for-languages/python/#supported-os-and-python-versions" 
+    "/els-for-languages/python/#supported-os": "/els-for-languages/python/#supported-os-and-python-versions",
+    "/els-for-languages/php/#rpm-based-systems": "/els-for-languages/php/#installation-instructions-for-linux",
+    "/els-for-languages/php/#deb-based-systems": "/els-for-languages/php/#installation-instructions-for-linux"
 }
