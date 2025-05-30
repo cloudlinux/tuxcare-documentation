@@ -16,8 +16,6 @@ import Chat from "./components/Chat.vue";
 import CodeTabs from "./components/CodeTabs.vue";
 import CodeWithCopy from "./components/CodeWithCopy.vue";
 
-import CVETracker from './components/JavaSpringSolvedCveTable.vue'
-
 export default defineClientConfig({
     rootComponents: [
         Chat,
@@ -26,7 +24,6 @@ export default defineClientConfig({
         app.config.globalProperties.$eventBus = mitt();
         app.component("CodeTabs", CodeTabs);
         app.component("CodeWithCopy", CodeWithCopy);
-        app.component("CVETracker", CVETracker);
     },
     layouts: {
         Layout,

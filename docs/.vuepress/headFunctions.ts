@@ -1,31 +1,31 @@
 import routes from './routes.json';
 
 export default [
-  [
-    "script",
-    {
-      type: "text/javascript",
-      id: "hs-script-loader",
-      async: true,
-      defer: true,
-      src: "//js.hs-scripts.com/5408110.js",
-    },
-  ],
-  [
-    "script",
-    {},
-    `
+    [
+      "script",
+      {
+        type: "text/javascript",
+        id: "hs-script-loader",
+        async: true,
+        defer: true,
+        src: "//js.hs-scripts.com/5408110.js",
+      },
+    ],
+    [
+      "script",
+      {},
+      `
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-5BSW555');
       `,
-  ],
-  [
-    "script",
-    {},
-    `
+    ],
+    [
+      "script",
+      {},
+      `
       (function() {
         var routes = ${JSON.stringify(routes)};
     
@@ -36,11 +36,11 @@ export default [
         }
       })();
       `,
-  ],
-  [
-    "script",
-    {},
-    `
+    ],
+    [
+      "script",
+      {},
+      `
                     (function() {
                       // Trigger the scroll event without actually scrolling
                       function triggerScrollEvent() {
@@ -58,10 +58,6 @@ export default [
                       });
                     })();
                   `,
-  ],
+    ],
+  ];
   
-  // Add jQuery and DataTables
-  ['script', { src: 'https://code.jquery.com/jquery-3.7.1.min.js' }],
-  ['script', { src: 'https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js' }],
-  ['link', { rel: 'stylesheet', href: 'https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css' }],
-];
