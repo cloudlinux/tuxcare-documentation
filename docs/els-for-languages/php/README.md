@@ -262,13 +262,12 @@ To confirm PHP is working:
 
 You can integrate PHP with other tools, for example, IIS or WordPress. For further details and documentation, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
 
-## Security Assurance
 
-### OVAL data
+## OVAL data
 
 This section contains information about available ELS for PHP OVAL streams that can be used by vulnerability scanners.
 
-#### TuxCare PHP ELS OVAL Streams
+### TuxCare PHP ELS OVAL Streams
 
 Currently, we provide OVAL data for the following OS versions:
 
@@ -285,7 +284,7 @@ Currently, we provide OVAL data for the following OS versions:
 * Debian 11: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/debian11/oval.xml)
 * Debian 12: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/debian12/oval.xml)
 
-#### How to use OVAL
+### How to use OVAL
 
 OVAL can be used with the OpenSCAP tool.
 
@@ -316,7 +315,7 @@ OVAL can be used with the OpenSCAP tool.
 
    </CodeWithCopy>
 
-### Common Security Advisory Framework
+## Common Security Advisory Framework
 
 Common Security Advisory Framework (CSAF) is a machine-readable format, standardized by [OASIS](https://www.csaf.io/). It's designed to enable consistent and automated sharing of security advisory information. 
 
@@ -328,7 +327,7 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 * [csaf.data.security.tuxcare.com](https://csaf.data.security.tuxcare.com/)
 * [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
 
-#### TuxCare CSAF data
+### TuxCare CSAF data
 
 Currently, we provide CSAF data for the following OS versions:
 
@@ -345,11 +344,11 @@ Currently, we provide CSAF data for the following OS versions:
 * Debian 11: [security.tuxcare.com/csaf/v2/els_lang_php/debian11/](https://security.tuxcare.com/csaf/v2/els_lang_php/debian11/)
 * Debian 12: [security.tuxcare.com/csaf/v2/els_lang_php/debian12/](https://security.tuxcare.com/csaf/v2/els_lang_php/debian12/)
 
-#### How to Use CSAF
+### How to Use CSAF
 
 The CSAF files are published in JSON format which is easy to parse and integrate with other tools - OASIS provides a [list of reference tools](https://www.csaf.io/tools.html) that support CSAF.
 
-### Errata
+## Errata
 
 Currently, we provide errata for the following OS versions:
 
