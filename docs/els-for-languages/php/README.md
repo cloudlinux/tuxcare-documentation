@@ -262,29 +262,30 @@ To confirm PHP is working:
 
 You can integrate PHP with other tools, for example, IIS or WordPress. For further details and documentation, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
 
-## OVAL data
+## Security Assurance
 
-### Introduction
+### OVAL data
 
 This section contains information about available ELS for PHP OVAL streams that can be used by vulnerability scanners.
 
-### TuxCare PHP ELS OVAL Streams
+#### TuxCare PHP ELS OVAL Streams
 
 Currently, we provide OVAL data for the following OS versions:
 
-* EL 6 (CentOS, CloudLinux, OracleLinux, etc.): [centos6-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml)
-* EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [centos7-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos7-els-php-oval.xml)
-* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [centos8-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos8-els-php-oval.xml)
-* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [centos9-els-php-oval.xml](https://repo.cloudlinux.com/php-els/centos9-els-php-oval.xml)
-* Ubuntu 16.04: [ubuntu16.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu16.04-els-php-oval.xml)
-* Ubuntu 18.04: [ubuntu18.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu18.04-els-php-oval.xml)
-* Ubuntu 20.04: [ubuntu20.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu20.04-els-php-oval.xml)
-* Ubuntu 22.04: [ubuntu22.04-els-php-oval.xml](https://repo.cloudlinux.com/php-els/ubuntu22.04-els-php-oval.xml)
-* Debian 10: [debian10-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian10-els-php-oval.xml)
-* Debian 11: [debian11-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian11-els-php-oval.xml)
-* Debian 12: [debian12-els-php-oval.xml](https://repo.cloudlinux.com/php-els/debian12-els-php-oval.xml)
+* EL 6 (CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_lang_php/el6/oval.xml)
+* EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_lang_php/el7/oval.xml)
+* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_lang_php/el8/oval.xml)
+* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_lang_php/el9/oval.xml)
+* Ubuntu 16.04: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/ubuntu16.04/oval.xml)
+* Ubuntu 18.04: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/ubuntu18.04/oval.xml)
+* Ubuntu 20.04: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/ubuntu20.04/oval.xml)
+* Ubuntu 22.04: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/ubuntu22.04/oval.xml)
+* Ubuntu 24.04: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/ubuntu24.04/oval.xml)
+* Debian 10: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/debian10/oval.xml)
+* Debian 11: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/debian11/oval.xml)
+* Debian 12: [oval.xml](https://security.tuxcare.com/oval/els_lang_php/debian12/oval.xml)
 
-### How to use OVAL
+#### How to use OVAL
 
 OVAL can be used with the OpenSCAP tool.
 
@@ -295,14 +296,12 @@ OVAL can be used with the OpenSCAP tool.
       { title: 'deb', content: 'apt-get install libopenscap8 -y' }
     ]" />
 
-**Note:** The next steps use CentOS 6 as an example. Please, substitute `centos6-els-php-oval.xml` as needed for your distribution.
-
-2. Download an OVAL stream:
+2. Download an OVAL stream. For example, EL 6:
 
    <CodeWithCopy>
    
     ```text
-    wget https://repo.cloudlinux.com/php-els/centos6-els-php-oval.xml
+    wget https://security.tuxcare.com/oval/els_lang_php/el6/oval.xml
     ```
 
    </CodeWithCopy>
@@ -312,10 +311,47 @@ OVAL can be used with the OpenSCAP tool.
    <CodeWithCopy>
 
    ```text
-   oscap oval eval --results result.xml --report report.xml centos6-els-php-oval.xml
+   oscap oval eval --results result.xml --report report.xml oval.xml
    ```
 
    </CodeWithCopy>
+
+### Common Security Advisory Framework
+
+Common Security Advisory Framework (CSAF) is a machine-readable format, standardized by [OASIS](https://www.csaf.io/). It's designed to enable consistent and automated sharing of security advisory information. 
+
+TuxCare publishes the following CSAF files at [security.tuxcare.com](https://security.tuxcare.com/csaf/v2/):
+* CSAF Vulnerability Exploitability eXchange (VEX) files – indexed by CVE VEX documents are available in CSAF 2.0 format, including past CVEs.
+* CSAF Security Advisory files – advisories are published in CSAF 2.0 format and indexed by Security Advisory.
+
+`provider-matadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
+* [csaf.data.security.tuxcare.com/](https://csaf.data.security.tuxcare.com/)
+* [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
+
+#### TuxCare CSAF data
+
+Currently, we provide CSAF data for the following OS versions:
+
+* EL 6 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_lang_php/el6/](https://security.tuxcare.com/csaf/v2/els_lang_php/el6/)
+* EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_lang_php/el7/](https://security.tuxcare.com/csaf/v2/els_lang_php/el7/)
+* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_lang_php/el8/](https://security.tuxcare.com/csaf/v2/els_lang_php/el8/)
+* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_lang_php/el9/](https://security.tuxcare.com/csaf/v2/els_lang_php/el9/)
+* Ubuntu 16.04: [security.tuxcare.com/csaf/v2/els_lang_php/ubuntu16.04/](https://security.tuxcare.com/csaf/v2/els_lang_php/ubuntu16.04/)
+* Ubuntu 18.04: [security.tuxcare.com/csaf/v2/els_lang_php/ubuntu18.04/](https://security.tuxcare.com/csaf/v2/els_lang_php/ubuntu18.04/)
+* Ubuntu 20.04: [security.tuxcare.com/csaf/v2/els_lang_php/ubuntu20.04/](https://security.tuxcare.com/csaf/v2/els_lang_php/ubuntu20.04/)
+* Ubuntu 22.04: [security.tuxcare.com/csaf/v2/els_lang_php/ubuntu22.04/](https://security.tuxcare.com/csaf/v2/els_lang_php/ubuntu22.04/)
+* Ubuntu 24.04 [security.tuxcare.com/csaf/v2/els_lang_php/ubuntu24.04/](https://security.tuxcare.com/csaf/v2/els_lang_php/ubuntu24.04/)
+* Debian 10: [security.tuxcare.com/csaf/v2/els_lang_php/debian10/](https://security.tuxcare.com/csaf/v2/els_lang_php/debian10/)
+* Debian 11: [security.tuxcare.com/csaf/v2/els_lang_php/debian11/](https://security.tuxcare.com/csaf/v2/els_lang_php/debian11/)
+* Debian 12: [security.tuxcare.com/csaf/v2/els_lang_php/debian12/](https://security.tuxcare.com/csaf/v2/els_lang_php/debian12/)
+
+#### How to Use CSAF
+
+The CSAF files are published in JSON format which is easy to parse and integrate with other tools - OASIS provides a [list of reference tools](https://www.csaf.io/tools.html) that support CSAF.
+
+### Errata
+
+Published errata for ELS for PHP: [security.tuxcare.com/errata/](https://security.tuxcare.com/errata/).
 
 ## PHP extensions list
 
