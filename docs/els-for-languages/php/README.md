@@ -325,7 +325,7 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 * CSAF Security Advisory files – advisories are published in CSAF 2.0 format and indexed by Security Advisory.
 
 `provider-matadata.json` contains information for tools and users about where and how to retrieve CSAF advisories published by TuxCare. By OASIS requirements, it is available at two URLs (both serving the same file):
-* [csaf.data.security.tuxcare.com/](https://csaf.data.security.tuxcare.com/)
+* [csaf.data.security.tuxcare.com](https://csaf.data.security.tuxcare.com/)
 * [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
 
 #### TuxCare CSAF data
@@ -351,7 +351,20 @@ The CSAF files are published in JSON format which is easy to parse and integrate
 
 ### Errata
 
-Published errata for ELS for PHP: [security.tuxcare.com/errata/](https://security.tuxcare.com/errata/).
+Currently, we provide errata for the following OS versions:
+
+* EL 6 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_lang_php/el6/](https://security.tuxcare.com/errata/els_lang_php/el6/)
+* EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_lang_php/el7/](https://security.tuxcare.com/errata/els_lang_php/el7/)
+* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_lang_php/el8/](https://security.tuxcare.com/errata/els_lang_php/el8/)
+* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_lang_php/el9/](https://security.tuxcare.com/errata/els_lang_php/el9/)
+* Ubuntu 16.04: [security.tuxcare.com/errata/els_lang_php/ubuntu16.04/](https://security.tuxcare.com/errata/els_lang_php/ubuntu16.04/)
+* Ubuntu 18.04: [security.tuxcare.com/errata/els_lang_php/ubuntu18.04/](https://security.tuxcare.com/errata/els_lang_php/ubuntu18.04/)
+* Ubuntu 20.04: [security.tuxcare.com/errata/els_lang_php/ubuntu20.04/](https://security.tuxcare.com/errata/els_lang_php/ubuntu20.04/)
+* Ubuntu 22.04: [security.tuxcare.com/errata/els_lang_php/ubuntu22.04/](https://security.tuxcare.com/errata/els_lang_php/ubuntu22.04/)
+* Ubuntu 24.04 [security.tuxcare.com/errata/els_lang_php/ubuntu24.04/](https://security.tuxcare.com/errata/els_lang_php/ubuntu24.04/)
+* Debian 10: [security.tuxcare.com/errata/els_lang_php/debian10/](https://security.tuxcare.com/errata/els_lang_php/debian10/)
+* Debian 11: [security.tuxcare.com/errata/els_lang_php/debian11/](https://security.tuxcare.com/errata/els_lang_php/debian11/)
+* Debian 12: [security.tuxcare.com/errata/els_lang_php/debian12/](https://security.tuxcare.com/errata/els_lang_php/debian12/)
 
 ## PHP extensions list
 
