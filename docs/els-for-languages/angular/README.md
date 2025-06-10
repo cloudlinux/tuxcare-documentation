@@ -8,8 +8,7 @@ ELS for Angular is currently in active development. If you are interested in upd
 
 ## Supported Angular Versions
 
-* Angular 12, 13, 14, 15, 16, 17, 18, 19
-* Angular 4, 5, 6, 7, 8, 9, 10, and 11 are in active development and will be available shortly
+Angular versions 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, and 19 are supported.
 
 ## Vulnerability Coverage and Target Response Times
 
