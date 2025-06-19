@@ -32,19 +32,27 @@ export default {
                 "/els-for-os/",
             ]
         },
-    ],
-    '/els-for-languages/': [
+    ],    
+    '/els-for-runtimes-and-libraries/': [
         {
             collapsable: false,
             children: [
-                "/els-for-languages/",
-                "/els-for-languages/php/",
-                "/els-for-languages/python/",
-                "/els-for-languages/spring-framework-and-spring-boot/",
-                "/els-for-languages/dotnet/",
-                "/els-for-languages/angular/",
-                "/els-for-languages/angularjs/",
-                "/els-for-languages/apache-tomcat/",
+                "/els-for-runtimes-and-libraries/",
+                "/els-for-runtimes-and-libraries/php/",
+                "/els-for-runtimes-and-libraries/python/",
+                "/els-for-runtimes-and-libraries/spring/",
+                "/els-for-runtimes-and-libraries/dotnet/",
+                "/els-for-runtimes-and-libraries/angular/",
+                "/els-for-runtimes-and-libraries/angularjs/",
+            ]
+        },
+    ],
+    '/els-for-applications/': [
+        {
+            collapsable: false,
+            children: [
+                "/els-for-applications/",
+                "/els-for-applications/apache-tomcat/",
             ]
         },
     ],

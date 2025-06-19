@@ -35,14 +35,19 @@ export default [
         link: "/eportal-api/",
     },
     {
-        title: "ELS for OS",
+        title: "ELS for Operating Systems",
         description: "allows you to continue running your Linux server after the operating system’s end of life.",
         link: "/els-for-os/",
     },
     {
-        title: "ELS for Languages",
-        description: "provides security fixes for programming languages and software development frameworks that have reached their end-of-life”",
-        link: "/els-for-languages/",
+        title: "ELS for Runtimes & Libraries",
+        description: "provides security fixes for language runtimes and software libraries beyond their official end-of-life date",
+        link: "/els-for-runtimes-and-libraries/",
+    },
+    {
+        title: "ELS for Applications",
+        description: "provides security fixes for open-source applications after official support ends",
+        link: "/els-for-applications/",
     },
     {
         title: "Subscription Management Portal",
