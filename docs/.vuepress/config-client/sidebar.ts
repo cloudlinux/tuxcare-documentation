@@ -45,6 +45,7 @@ export default {
                 "/els-for-languages/angular/",
                 "/els-for-languages/angularjs/",
                 "/els-for-languages/apache-tomcat/",
+                "/els-for-languages/python-libraries/",
             ]
         },
     ],
