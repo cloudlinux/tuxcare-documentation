@@ -82,11 +82,15 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
 * Use an editor of your choice (e.g., VS Code) to add the following registry address line:
 
+  <CodeWithCopy>
+
   ```text
   registry=https://registry.npmjs.org/
-  @els-angularjs:registry=https://nexus.repo.tuxcare.com/repository/els_angularjs/
-  //nexus.repo.tuxcare.com/repository/els_angularjs/:_auth=${TOKEN}
+  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+  //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
   ```
+
+  </CodeWithCopy>
 
   :::warning
   Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -96,45 +100,65 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
   **AngularJS 1.5**
 
+  <CodeWithCopy>
+
   ```text
   "dependencies": {
-    "@els-angularjs/angular-1.5": "^0.0.1",
-    "angular": "./node_modules/@els-angular/angularjs-1.5/deps/angular"
+      "@els-js/angular-1.5": "^0.0.2",
+      "angular": "file:./node_modules/@els-js/angularjs-1.5/deps/angular"
   }
   ```
+
+  </CodeWithCopy>
 
   **AngularJS 1.6**
 
+  <CodeWithCopy>
+
   ```text
   "dependencies": {
-    "@els-angularjs/angular-1.6": "^0.0.1",
-    "angular": "./node_modules/@els-angular/angularjs-1.6/deps/angular"
+      "@els-js/angular-1.6": "^0.0.1",
+      "angular": "file:./node_modules/@els-js/angularjs-1.6/deps/angular"
   }
   ```
+
+  </CodeWithCopy>
 
   **AngularJS 1.7**
 
+  <CodeWithCopy>
+
   ```text
   "dependencies": {
-    "@els-angularjs/angular-1.7": "^0.0.1",
-    "angular": "./node_modules/@els-angular/angularjs-1.7/deps/angular"
+      "@els-js/angular-1.7": "^0.0.1",
+      "angular": "file:./node_modules/@els-js/angularjs-1.7/deps/angular",
   }
   ```
+
+  </CodeWithCopy>
 
   **AngularJS 1.8**
 
+  <CodeWithCopy>
+
   ```text
   "dependencies": {
-    "@els-angularjs/angular-1.8": "^0.0.1",
-    "angular": "./node_modules/@els-angular/angularjs-1.8/deps/angular"
+      "@els-js/angular-1.8": "^0.0.1",
+      "angular": "file:./node_modules/@els-js/angularjs-1.8/deps/angular"
   }
   ```
 
+  </CodeWithCopy>
+
 * In your terminal, run the following command to install ELS for AngularJS dependencies:
+
+  <CodeWithCopy>
 
   ```text
   npm install --userconfig .npmrc
   ```
+
+  </CodeWithCopy>
 
   You will see an output like:
 

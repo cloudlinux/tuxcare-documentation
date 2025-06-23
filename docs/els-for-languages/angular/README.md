@@ -87,8 +87,8 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
   ```text
   registry=https://registry.npmjs.org/
-  @els-angular:registry=https://nexus.repo.tuxcare.com/repository/els_angular/
-  //nexus.repo.tuxcare.com/repository/els_angular/:_auth=${TOKEN}
+  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+  //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
   ```
 
   </CodeWithCopy>
@@ -99,6 +99,296 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
 4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages:
   
+  **Angular 4**
+  <details>
+    <summary>Click to expand</summary>
+
+  <CodeWithCopy>
+
+  ```text
+  "dependencies": {
+      "@els-js/angular-4": "^0.0.1",
+      "@angular/animations": "^4.2.4",
+      "@angular/common": "^4.2.4",
+      "@angular/compiler": "^4.2.4",
+      "@angular/core": "^4.2.4",
+      "@angular/forms": "^4.2.4",
+      "@angular/http": "^4.2.4",
+      "@angular/platform-browser": "^4.2.4",
+      "@angular/platform-browser-dynamic": "^4.2.4",
+      "@angular/router": "^4.2.4",
+      "core-js": "^2.4.1",
+      "rxjs": "^5.4.2",
+      "zone.js": "^0.8.14"
+  },
+  "devDependencies": {
+      "@angular/cli": "1.4.10",
+      "@angular/compiler-cli": "^4.2.4",
+      "@angular/language-service": "^4.2.4",
+      "@types/jasmine": "~2.5.53",
+      "@types/jasminewd2": "~2.0.2",
+      "@types/node": "~6.0.60",
+      "codelyzer": "~3.2.0",
+      "jasmine-core": "~2.6.2",
+      "jasmine-spec-reporter": "~4.1.0",
+      "karma": "~1.7.0",
+      "karma-chrome-launcher": "~2.1.1",
+      "karma-cli": "~1.0.1",
+      "karma-coverage-istanbul-reporter": "^1.2.1",
+      "karma-jasmine": "~1.1.0",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "~5.1.2",
+      "ts-node": "~3.2.0",
+      "tslint": "~5.7.0",
+      "typescript": "~2.3.3"
+  }
+  ```
+
+  </CodeWithCopy>
+
+  </details>
+
+  **Angular 5**
+  <details>
+    <summary>Click to expand</summary>
+
+  <CodeWithCopy>
+
+  ```text
+  "dependencies": {
+      "@els-js/angular-5": "^0.0.1",
+      "@angular/animations": "^5.2.0",
+      "@angular/common": "^5.2.0",
+      "@angular/compiler": "^5.2.0",
+      "@angular/core": "^5.2.0",
+      "@angular/forms": "^5.2.0",
+      "@angular/http": "^5.2.0",
+      "@angular/platform-browser": "^5.2.0",
+      "@angular/platform-browser-dynamic": "^5.2.0",
+      "@angular/router": "^5.2.0",
+      "core-js": "^2.4.1",
+      "rxjs": "^5.5.6",
+      "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+      "@angular/cli": "~1.7.4",
+      "@angular/compiler-cli": "^5.2.0",
+      "@angular/language-service": "^5.2.0",
+      "@types/jasmine": "~2.8.3",
+      "@types/jasminewd2": "~2.0.2",
+      "@types/node": "~6.0.60",
+      "codelyzer": "^4.0.1",
+      "jasmine-core": "~2.8.0",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "~2.0.0",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-coverage-istanbul-reporter": "^1.2.1",
+      "karma-jasmine": "~1.1.0",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "~5.1.2",
+      "ts-node": "~4.1.0",
+      "tslint": "~5.9.1",
+      "typescript": "~2.5.3"
+  }
+  ```
+
+  </CodeWithCopy>
+
+  </details>
+
+  **Angular 6**
+  <details>
+    <summary>Click to expand</summary>
+
+  <CodeWithCopy>
+
+  ```text
+  "dependencies": {
+      "@els-js/angular-6": "^0.0.1",
+      "@angular/animations": "^6.1.0",
+      "@angular/common": "^6.1.0",
+      "@angular/compiler": "^6.1.0",
+      "@angular/core": "^6.1.0",
+      "@angular/forms": "^6.1.0",
+      "@angular/http": "^6.1.0",
+      "@angular/platform-browser": "^6.1.0",
+      "@angular/platform-browser-dynamic": "^6.1.0",
+      "@angular/router": "^6.1.0",
+      "core-js": "^2.5.4",
+      "rxjs": "~6.2.0",
+      "zone.js": "~0.8.26"
+      },
+  "devDependencies": {
+      "@angular-devkit/build-angular": "~0.8.0",
+      "@angular/cli": "~6.2.9",
+      "@angular/compiler-cli": "^6.1.0",
+      "@angular/language-service": "^6.1.0",
+      "@types/jasmine": "~2.8.8",
+      "@types/jasminewd2": "~2.0.3",
+      "@types/node": "~8.9.4",
+      "codelyzer": "~4.3.0",
+      "jasmine-core": "~2.99.1",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "~3.0.0",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-coverage-istanbul-reporter": "~2.0.1",
+      "karma-jasmine": "~1.1.2",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "~5.4.0",
+      "ts-node": "~7.0.0",
+      "tslint": "~5.11.0",
+      "typescript": "~2.9.2"
+  }
+  ```
+
+  </CodeWithCopy>
+
+  </details>
+
+  **Angular 7**
+  <details>
+    <summary>Click to expand</summary>
+
+  <CodeWithCopy>
+
+  ```text
+  "dependencies": {
+      "@els-js/angular-7": "^0.0.1",
+      "@angular/animations": "~7.2.0",
+      "@angular/common": "~7.2.0",
+      "@angular/compiler": "~7.2.0",
+      "@angular/core": "~7.2.0",
+      "@angular/forms": "~7.2.0",
+      "@angular/platform-browser": "~7.2.0",
+      "@angular/platform-browser-dynamic": "~7.2.0",
+      "@angular/router": "~7.2.0",
+      "core-js": "^2.5.4",
+      "rxjs": "~6.3.3",
+      "tslib": "^1.9.0",
+      "zone.js": "~0.8.26"
+  },
+  "devDependencies": {
+      "@angular-devkit/build-angular": "~0.13.0",
+      "@angular/cli": "~7.3.10",
+      "@angular/compiler-cli": "~7.2.0",
+      "@angular/language-service": "~7.2.0",
+      "@types/node": "~8.9.4",
+      "@types/jasmine": "~2.8.8",
+      "@types/jasminewd2": "~2.0.3",
+      "codelyzer": "~4.5.0",
+      "jasmine-core": "~2.99.1",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "~4.0.0",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-coverage-istanbul-reporter": "~2.0.1",
+      "karma-jasmine": "~1.1.2",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "~5.4.0",
+      "ts-node": "~7.0.0",
+      "tslint": "~5.11.0",
+      "typescript": "~3.2.2"
+  }
+  ```
+
+  </CodeWithCopy>
+
+  </details>
+
+  **Angular 8**
+  <details>
+    <summary>Click to expand</summary>
+
+  <CodeWithCopy>
+
+  ```text
+  "dependencies": {
+      "@els-js/angular-8": "^0.0.1",
+      "@angular/animations": "~8.2.14",
+      "@angular/common": "~8.2.14",
+      "@angular/compiler": "~8.2.14",
+      "@angular/core": "~8.2.14",
+      "@angular/forms": "~8.2.14",
+      "@angular/platform-browser": "~8.2.14",
+      "@angular/platform-browser-dynamic": "~8.2.14",
+      "@angular/router": "~8.2.14",
+      "rxjs": "~6.4.0",
+      "tslib": "^1.10.0",
+      "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+      "@angular-devkit/build-angular": "~0.803.29",
+      "@angular/cli": "~8.3.29",
+      "@angular/compiler-cli": "~8.2.14",
+      "@angular/language-service": "~8.2.14",
+      "@types/node": "~8.9.4",
+      "@types/jasmine": "~3.3.8",
+      "@types/jasminewd2": "~2.0.3",
+      "codelyzer": "^5.0.0",
+      "jasmine-core": "~3.4.0",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "~4.1.0",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-coverage-istanbul-reporter": "~2.0.1",
+      "karma-jasmine": "~2.0.1",
+      "karma-jasmine-html-reporter": "^1.4.0",
+      "protractor": "~7.0.0",
+      "ts-node": "~7.0.0",
+      "tslint": "~5.15.0",
+      "typescript": "~3.5.3"
+  }
+  ```
+
+  </CodeWithCopy>
+
+  </details>
+
+  **Angular 9**
+  <details>
+    <summary>Click to expand</summary>
+
+  <CodeWithCopy>
+
+  ```text
+  "dependencies": {
+      "@els-js/angular-9": "^0.0.1",
+      "@angular/animations": "~9.1.13",
+      "@angular/common": "~9.1.13",
+      "@angular/compiler": "~9.1.13",
+      "@angular/core": "~9.1.13",
+      "@angular/forms": "~9.1.13",
+      "@angular/platform-browser": "~9.1.13",
+      "@angular/platform-browser-dynamic": "~9.1.13",
+      "@angular/router": "~9.1.13",
+      "rxjs": "~6.5.4",
+      "tslib": "^1.10.0",
+      "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+      "@angular-devkit/build-angular": "~0.901.15",
+      "@angular/cli": "~9.1.15",
+      "@angular/compiler-cli": "~9.1.13",
+      "@types/node": "^12.11.1",
+      "@types/jasmine": "~3.5.0",
+      "@types/jasminewd2": "~2.0.3",
+      "codelyzer": "^5.1.2",
+      "jasmine-core": "~3.5.0",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "~5.0.0",
+      "karma-chrome-launcher": "~3.1.0",
+      "karma-coverage-istanbul-reporter": "~2.1.0",
+      "karma-jasmine": "~3.0.1",
+      "karma-jasmine-html-reporter": "^1.4.2",
+      "protractor": "~7.0.0",
+      "ts-node": "~8.3.0",
+      "tslint": "~6.1.0",
+      "typescript": "~3.8.3"
+  }
+  ```
+
+  </CodeWithCopy>
+
+  </details>
+
   **Angular 12**
   <details>
     <summary>Click to expand</summary>
@@ -189,30 +479,30 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   ```text
   "dependencies": {
       "@els-js/angular-14": "^0.0.1",
-      "@angular/animations": "file:./node_modules/@els-js/angular-14/deps/@angular/animations",
-      "@angular/common": "file:./node_modules/@els-js/angular-14/deps/@angular/common",
-      "@angular/compiler": "file:./node_modules/@els-js/angular-14/deps/@angular/compiler",
-      "@angular/core": "file:./node_modules/@els-js/angular-14/deps/@angular/core",
-      "@angular/forms": "file:./node_modules/@els-js/angular-14/deps/@angular/forms",
-      "@angular/platform-browser": "file:./node_modules/@els-js/angular-14/deps/@angular/platform-browser",
-      "@angular/platform-browser-dynamic": "file:./node_modules/@els-js/angular-14/deps/@angular/platform-browser-dynamic",
-      "@angular/router": "file:./node_modules/@els-js/angular-14/deps/@angular/router",
-      "rxjs": "file:./node_modules/@els-js/angular-14/deps/rxjs",
-      "tslib": "file:./node_modules/@els-js/angular-14/deps/tslib",
-      "zone.js": "file:./node_modules/@els-js/angular-14/deps/zone.js"
+      "@angular/animations": "file:./node_modules/@els-js/angular-14/deps/animations",
+      "@angular/common": "file:./node_modules/@els-js/angular-14/deps/common",
+      "@angular/compiler": "file:./node_modules/@els-js/angular-14/deps/compiler",
+      "@angular/core": "file:./node_modules/@els-js/angular-14/deps/core",
+      "@angular/forms": "file:./node_modules/@els-js/angular-14/deps/forms",
+      "@angular/platform-browser": "file:./node_modules/@els-js/angular-14/deps/platform-browser",
+      "@angular/platform-browser-dynamic": "file:./node_modules/@els-js/angular-14/deps/platform-browser-dynamic",
+      "@angular/router": "file:./node_modules/@els-js/angular-14/deps/router",
+      "rxjs": "~7.4.0",
+      "tslib": "^2.3.0",
+      "zone.js": "~0.11.4"
   },
   "devDependencies": {
-      "@angular-devkit/build-angular": "file:./node_modules/@els-js/angular-14/deps/@angular-devkit/build-angular",
-      "@angular/cli": "file:./node_modules/@els-js/angular-14/deps/@angular/cli",
-      "@angular/compiler-cli": "file:./node_modules/@els-js/angular-14/deps/@angular/compiler-cli",
-      "@types/jasmine": "file:./node_modules/@els-js/angular-14/deps/@types/jasmine",
-      "jasmine-core": "file:./node_modules/@els-js/angular-14/deps/jasmine-core",
-      "karma": "file:./node_modules/@els-js/angular-14/deps/karma",
-      "karma-chrome-launcher": "file:./node_modules/@els-js/angular-14/deps/karma-chrome-launcher",
-      "karma-coverage": "file:./node_modules/@els-js/angular-14/deps/karma-coverage",
-      "karma-jasmine": "file:./node_modules/@els-js/angular-14/deps/karma-jasmine",
-      "karma-jasmine-html-reporter": "file:./node_modules/@els-js/angular-14/deps/karma-jasmine-html-reporter",
-      "typescript": "file:./node_modules/@els-js/angular-14/deps/typescript"
+      "@angular-devkit/build-angular": "^14.2.13",
+      "@angular/cli": "~14.2.13",
+      "@angular/compiler-cli": "file:./node_modules/@els-js/angular-14/deps/compiler-cli",
+      "@types/jasmine": "~4.0.0",
+      "jasmine-core": "~4.3.0",
+      "karma": "~6.4.0",
+      "karma-chrome-launcher": "~3.1.0",
+      "karma-coverage": "~2.2.0",
+      "karma-jasmine": "~5.1.0",
+      "karma-jasmine-html-reporter": "~2.0.0",
+      "typescript": "~4.7.2"
   }
   ```
     
@@ -229,30 +519,30 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   ```text
   "dependencies": {
       "@els-js/angular-15": "^0.0.1",
-      "@angular/animations": "file:./node_modules/@els-js/angular-15/deps/@angular/animations",
-      "@angular/common": "file:./node_modules/@els-js/angular-15/deps/@angular/common",
-      "@angular/compiler": "file:./node_modules/@els-js/angular-15/deps/@angular/compiler",
-      "@angular/core": "file:./node_modules/@els-js/angular-15/deps/@angular/core",
-      "@angular/forms": "file:./node_modules/@els-js/angular-15/deps/@angular/forms",
-      "@angular/platform-browser": "file:./node_modules/@els-js/angular-15/deps/@angular/platform-browser",
-      "@angular/platform-browser-dynamic": "file:./node_modules/@els-js/angular-15/deps/@angular/platform-browser-dynamic",
-      "@angular/router": "file:./node_modules/@els-js/angular-15/deps/@angular/router",
-      "rxjs": "file:./node_modules/@els-js/angular-15/deps/rxjs",
-      "tslib": "file:./node_modules/@els-js/angular-15/deps/tslib",
-      "zone.js": "file:./node_modules/@els-js/angular-15/deps/zone.js"
+      "@angular/animations": "file:./node_modules/@els-js/angular-15/deps/animations",
+      "@angular/common": "file:./node_modules/@els-js/angular-15/deps/common",
+      "@angular/compiler": "file:./node_modules/@els-js/angular-15/deps/compiler",
+      "@angular/core": "file:./node_modules/@els-js/angular-15/deps/core",
+      "@angular/forms": "file:./node_modules/@els-js/angular-15/deps/forms",
+      "@angular/platform-browser": "file:./node_modules/@els-js/angular-15/deps/platform-browser",
+      "@angular/platform-browser-dynamic": "file:./node_modules/@els-js/angular-15/deps/platform-browser-dynamic",
+      "@angular/router": "file:./node_modules/@els-js/angular-15/deps/router",
+      "rxjs": "~7.8.0",
+      "tslib": "^2.3.0",
+      "zone.js": "~0.12.0"
   },
   "devDependencies": {
-      "@angular-devkit/build-angular": "file:./node_modules/@els-js/angular-15/deps/@angular-devkit/build-angular",
-      "@angular/cli": "file:./node_modules/@els-js/angular-15/deps/@angular/cli",
-      "@angular/compiler-cli": "file:./node_modules/@els-js/angular-15/deps/@angular/compiler-cli",
-      "@types/jasmine": "file:./node_modules/@els-js/angular-15/deps/@types/jasmine",
-      "jasmine-core": "file:./node_modules/@els-js/angular-15/deps/jasmine-core",
-      "karma": "file:./node_modules/@els-js/angular-15/deps/karma",
-      "karma-chrome-launcher": "file:./node_modules/@els-js/angular-15/deps/karma-chrome-launcher",
-      "karma-coverage": "file:./node_modules/@els-js/angular-15/deps/karma-coverage",
-      "karma-jasmine": "file:./node_modules/@els-js/angular-15/deps/karma-jasmine",
-      "karma-jasmine-html-reporter": "file:./node_modules/@els-js/angular-15/deps/karma-jasmine-html-reporter",
-      "typescript": "file:./node_modules/@els-js/angular-15/deps/typescript"
+      "@angular-devkit/build-angular": "^15.2.11",
+      "@angular/cli": "~15.2.11",
+      "@angular/compiler-cli": "file:./node_modules/@els-js/angular-15/deps/compiler-cli",
+      "@types/jasmine": "~4.3.0",
+      "jasmine-core": "~4.5.0",
+      "karma": "~6.4.0",
+      "karma-chrome-launcher": "~3.1.0",
+      "karma-coverage": "~2.2.0",
+      "karma-jasmine": "~5.1.0",
+      "karma-jasmine-html-reporter": "~2.0.0",
+      "typescript": "~4.9.4"
   }
   ```
     
