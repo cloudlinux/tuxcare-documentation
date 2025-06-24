@@ -10,6 +10,8 @@
 
 Please delete options that don't apply.
 
+<!-- Add a "x" in between each square bracket to ackonwledge a step was complete -->
+
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] Typo fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
@@ -27,7 +29,7 @@ Please delete options that don't apply.
 ## Checks to complete
 
 - [ ] I have performed a self-review of my code
-- [ ] PR title is in a coventional commit style
+- [ ] PR title is in a [coventional commit style](https://www.conventionalcommits.org/en/v1.0.0/#summary)
 - [ ] Code is free of console.logs
 - [ ] My code follows the styleguide of the project
 - [ ] I have commented my code properly
