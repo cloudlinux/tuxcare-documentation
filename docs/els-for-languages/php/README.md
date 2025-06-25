@@ -162,7 +162,7 @@ Each version of PHP can be installed individually or all versions at once.
 TuxCare provides a Windows Installer that allows you to install and manage ELS PHP versions. 
 
 1. Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
-2. Use this link to download the latest version of the PHP installer.
+2. Use this link to download the latest version of the installer.
 3. Launch the installer. After the first run, it will appear under **Settings > Apps**.
 4. Provide you access credentials:
    *  **Register** - if this is your first time using the installer or you're installing on a new system, choose the "Register" option. You’ll be asked to provide your license key or authentication token. You can also save your token for future use.
