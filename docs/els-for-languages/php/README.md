@@ -157,24 +157,88 @@ Each version of PHP can be installed individually or all versions at once.
 1. Obtain the required license to get access to the service.
 2. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating your unique access link (tokenized URL). Anonymous access is restricted.
 
-### Download TuxCare PHP Windows
+### Download and Install TuxCare PHP Windows
+
+TuxCare provides a Windows Installer that allows you to install and manage ELS PHP versions. 
 
 1. Follow the instructions provided by [sales@tuxcare.com](mailto:sales@tuxcare.com) to create your secure download link.
-2. Use this link to download the latest version of PHP.
-3. Extract the downloaded archive (ZIP file) to a preferred directory, for example`C:\PHP`.
-4. PHP doesn't have a traditional "installer" on Windows, it’s a portable application. Once you extract the files and set up a few things, it's ready to use.
+2. Use this link to download the latest version of the PHP installer.
+3. Launch the installer. After the first run, it will appear under **Settings > Apps**.
+4. Provide you access credentials:
+   *  **Register** - if this is your first time using the installer or you're installing on a new system, choose the "Register" option. You’ll be asked to provide your license key or authentication token. You can also save your token for future use.
+    
+   ![image](/images/php-installer-token.png)
 
-### Configure PHP
+   *  **Use previous token** - if you’ve already registered on this machine and chose to save your credentials, the installer will detect and use the saved token automatically. You won’t need to enter your credentials again unless the token is missing or expired. 
 
-Configure TuxCare ELS PHP for Windows to work as intended on Windows:
+5. Select a PHP version and tick the checkbox next to it. **Only 1 version can be installed per installation**.
+  
+   ![image](/images/php-installer-version.png)
 
-1. Navigate to your PHP directory (e.g. `C:\PHP`).
-2. Find and rename the `php.ini-development` file to `php.ini`. This is the main configuration file PHP uses when running.
+   :::tip
+   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
+   
+   ![image](/images/php-installer-versions-2.png)
+   :::
+
+6. Choose Installation Path. By default, the installer will use `C:\Program Files`. Click **Change** if you want to install to a different location.
+7. Click **Load** to fetch the required PHP archive. Once the archive is loaded, a list of available PHP modules will appear. Select the modules you need and click **Continue** to confirm.
+
+   ![image](/images/php-installer-load.png)
+
+8. During installation, the installer will create a folder with PHP configuration and selected modules, and add TuxCare PHP to the **System PATH** (advanced settings).
+
+   <details>
+    <summary>Click to see more</summary>
+
+    1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
+    2. Click **Advanced system settings**.
+
+      ![image](/images/php-windows-advanced-settings.png)
+
+    3. Click on **Environment Variables**.
+
+      ![image](/images/php-windows-environment-variables.png)
+
+    4. Under *System variables*, find **Path** and click **Edit**.
+
+      ![image](/images/php-windows-add-path.png)
+
+    5. You will see your PHP `C:\PHP` directory added.
+
+      ![image](/images/php-windows-add-path-2.png)
+   </details>
+
+9. Wait for the installation process to complete.
+
+### Validate the Installation
+
+To confirm PHP is working:
+
+1. Open **Command Prompt**, **PowerShell**, or **Terminal**.
+2. Run the following command:
+
+    <CodeWithCopy>
+
+    ```text
+    php -v
+    ```
+
+    </CodeWithCopy>
+
+    You should see output like this:
+
+    ```text
+    PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
+    Copyright (c) 1997-2016 The PHP Group
+    Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+    ```
 
 ### Additional configurations (optional)
 
 Depending on your ELS PHP usage purpose, additional configurations may be required. Here are some commonly useful configurations.
 
+<!--
 ### Extensions
 
 Many PHP features come as extensions and are disabled by default to keep PHP lightweight. TuxCare provides the required `.dll` files to support these extensions.
@@ -194,8 +258,8 @@ To enable the functionality you need, update the `php.ini` file:
     ```
 
     </CodeWithCopy>
-
-### Increase Upload/Memory Limits
+-->
+#### Increase Upload/Memory Limits
 
 If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits:
 
@@ -212,56 +276,27 @@ If you're integrating PHP with applications like WordPress, you might need to in
 
     </CodeWithCopy>
 
-### Add PHP to the System Path
-
-Adding PHP to the system PATH lets you run the `php` command from a terminal window without typing its full location. This is useful for running scripts and using PHP with other tools.
-
-1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
-2. Click **Advanced system settings**.
-
-  ![image](/images/php-windows-advanced-settings.png)
-
-3. Click on **Environment Variables**.
-
-  ![image](/images/php-windows-environment-variables.png)
-
-4. Under *System variables*, find **Path** and click **Edit**.
-
-  ![image](/images/php-windows-add-path.png)
-
-5. Click **New** and add your PHP `C:\PHP` directory.
-
-  ![image](/images/php-windows-add-path-2.png)
-
-6. Click **OK** to save the changes.
-
-### Validate the Installation
-
-To confirm PHP is working:
-
-1. Open **Command Prompt**, **PowerShell**, or **Terminal**.
-2. Run the following command:
-
-    <CodeWithCopy>
-
-    ```text
-    php -v
-    ```
-
-    </CodeWithCopy>
-
-    You should see output like:
-
-    ```text
-    PHP 7.4.33 (cli) (built: Mar 14 2025 04:59:07) ( NTS Visual C++ 2017 x64 )
-    Copyright (c) The PHP Group
-    Zend Engine v3.4.0, Copyright (c) Zend Technologies
-    ```
-
-### Example Use Cases
+#### Example Use Cases
 
 You can integrate PHP with other tools, for example, IIS or WordPress. For further details and documentation, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
 
+### Uninstallation
+
+#### Uninstall a PHP version, 
+
+To uninstall a PHP version:
+
+1. Manually delete the PHP installation directory (e.g., `C:\Program Files\TuxCare\php-version`).
+
+2. Remove the PHP path from **System Path**.
+
+#### Uninstall TuxCare Installer
+
+To uninstall TuxCare Installer:
+
+1. Open **Settings > Apps**.
+
+2. Find *TuxCare Installer* and click  **Uninstall** to remove it from the list of installed apps.
 
 ## OVAL data
 
