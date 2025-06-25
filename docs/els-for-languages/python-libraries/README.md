@@ -31,7 +31,7 @@ You can install or upgrade a package directly using the ELS repository with your
 
 ```text
 pip install --upgrade \
-  -i https://<username>:<password>@nexus-repo.corp.cloudlinux.com/repository/els_python/simple \
+  -i https://<username>:<password>@nexus.repo.corp.cloudlinux.com/repository/els_python/simple \
   <package>
 ```
 
@@ -50,10 +50,10 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeTabs :tabs="[
    { title: 'Linux/macOS (~/.pip/pip.conf)', content:
    `[global]
-   index-url = https://username:password@nexus-repo.corp.cloudlinux.com/repository/els_python/simple` },
+   index-url = https://username:password@nexus.repo.corp.cloudlinux.com/repository/els_python/simple` },
    { title: 'Windows (%APPDATA%\pip\pip.ini)', content:
    `[global]
-   index-url = https://username:password@nexus-repo.corp.cloudlinux.com/repository/els_python/simple` }
+   index-url = https://username:password@nexus.repo.corp.cloudlinux.com/repository/els_python/simple` }
    ]" />
 
 2. Run the command to install the latest package version:
@@ -87,10 +87,10 @@ If you want to keep using public PyPI and fetch only specific patched packages f
    <CodeTabs :tabs="[
    { title: 'Linux/macOS (~/.pip/pip.conf)', content:
    `[global]
-   extra-index-url = https://username:password@nexus-repo.corp.cloudlinux.com/repository/els_python/simple` },
+   extra-index-url = https://username:password@nexus.repo.corp.cloudlinux.com/repository/els_python/simple` },
    { title: 'Windows (%APPDATA%\pip\pip.ini)', content:
    `[global]
-   extra-index-url = https://username:password@nexus-repo.corp.cloudlinux.com/repository/els_python/simple` }
+   extra-index-url = https://username:password@nexus.repo.corp.cloudlinux.com/repository/els_python/simple` }
    ]" />
 
 2. Run the command to install a specific patched TuxCare version, for example:
