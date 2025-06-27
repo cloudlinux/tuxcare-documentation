@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD029 MD036 -->
+<!-- markdownlint-disable MD033 MD029 MD036 MD059 -->
 
 # **Enterprise Support for AlmaLinux**
 
@@ -50,19 +50,37 @@ We aim to deliver security patches for Critical and High-risk vulnerabilities (C
 
 ### Supported packages
 
-ESU provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages, as well as get detailed information on the patched CVEs, here [https://cve.tuxcare.com/](https://cve.tuxcare.com/). Support for additional packages can be provided on request.
+ESU provides updates for a comprehensive list of packages integral to server operations - the complete list of about 6,000 packages in BaseOS and AppStream, plus a few more - thus providing maximum security for your operating system. You can view the full list of supported packages, as well as get detailed information on the patched CVEs, here: [https://cve.tuxcare.com/](https://cve.tuxcare.com/)
+
+Support for additional packages can be provided on request.
 
 ### Errata advisories
 
-ESU provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which Common Vulnerabilities and Exposures (CVE) are resolved and which bugs have been addressed. You can view the full list of released advisories here [https://cve.tuxcare.com/els/releases](https://cve.tuxcare.com/els/releases).
+ESU provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which Common Vulnerabilities and Exposures (CVE) are resolved and which bugs have been addressed. You can view the full list of released advisories here [https://cve.tuxcare.com/els/releases](https://cve.tuxcare.com/els/releases)
 
 ### OVAL patch definitions
 
 Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities:
 
-* AlmaLinux 9.2 ESU: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml)
+* ESU 9.2 OVAL: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml)
 
-Ask your Account Manager about SBOM access.
+### CSAF data
+
+Vulnerability scanner vendors may prefer the Common Security Advisory Framework (CSAF) 2.0 machine-readable format:
+
+* ESU 9.2 CSAF advisories: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/advisories/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/advisories/)
+
+* ESU 9.2 CSAF VEX documents: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/vex/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/vex/)
+
+* Provider metadata: [https://csaf.data.security.tuxcare.com/](https://csaf.data.security.tuxcare.com/)
+
+### Secure Bill Of Materials
+
+You will need a tokenised URL to access the SBOM data, simply replace `<TOKEN>` below with the token from /etc/dnf/vars/tuxcare_token and you can access the latest SBOM file from a web browser or even `curl`:
+
+```text
+https://repo.tuxcare.com/tuxcare/9.2/<TOKEN>/esu/x86_64/spdx-reports/tuxcare92-esu-x86_64-esu.zip
+```
 
 ### RSS releases feeds
 
