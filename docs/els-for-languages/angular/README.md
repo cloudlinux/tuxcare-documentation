@@ -97,7 +97,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
   :::
 
-4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages. Please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for the list of dependencies.
+4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages.
 <!--  
   **Angular 12**
   <details>
