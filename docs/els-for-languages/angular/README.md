@@ -87,8 +87,8 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
   ```text
   registry=https://registry.npmjs.org/
-  @els-angular:registry=https://nexus.repo.tuxcare.com/repository/els_angular/
-  //nexus.repo.tuxcare.com/repository/els_angular/:_auth=${TOKEN}
+  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+  //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
   ```
 
   </CodeWithCopy>
@@ -97,8 +97,8 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
   :::
 
-4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages:
-  
+4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages. Please, contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for the list of dependencies.
+<!--  
   **Angular 12**
   <details>
     <summary>Click to expand</summary>
@@ -418,8 +418,9 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   </CodeWithCopy>
 
   </details>
+  -->
 
-5. In your terminal, run the following command to install ELS for Angular 16 dependencies:
+5. In your terminal, run the following command to install ELS for Angular:
 
   <CodeWithCopy>
   
