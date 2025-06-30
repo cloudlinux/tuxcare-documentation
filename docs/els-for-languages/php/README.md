@@ -69,15 +69,15 @@ The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Ora
 1. Download the installer script:
 
     <CodeTabs :tabs="[
-      { title: 'rpm', content: 'wget https://repo.cloudlinux.com/php-els/install-php-els-rpm-repo.sh' },
-      { title: 'deb', content: 'wget https://repo.cloudlinux.com/php-els/install-php-els-deb-repo.sh' }
+      { title: 'rpm', content: 'wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-rpm-repo.sh' },
+      { title: 'deb', content: 'wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh' }
     ]" />
 
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds the yum repository, and adds a PGP key to the server.
 
     <CodeTabs :tabs="[
-      { title: 'rpm', content: 'sh install-php-els-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX' },
-      { title: 'deb', content: 'bash install-php-els-deb-repo.sh --license-key XXX-XXXXXXXXXXXX' }
+      { title: 'rpm', content: 'sh install-els-alt-php-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX' },
+      { title: 'deb', content: 'bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX' }
     ]" />
 
 3. Verify that the installation was successful.
@@ -107,7 +107,7 @@ The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Ora
     Version     : 7.3.33
     Release     : 5.2.el7
     Size        : 22 k
-    Repo        : php-els/7
+    Repo        : alt-php-els/7
     Summary     : PHP scripting language for creating dynamic web sites
     URL         : http://www.php.net/
     License     : PHP and LGPLv2 and LGPLv2+
