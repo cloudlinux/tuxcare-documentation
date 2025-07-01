@@ -238,27 +238,51 @@ To confirm PHP is working:
 
 Depending on your ELS PHP usage purpose, additional configurations may be required. Here are some commonly useful configurations.
 
-<!--
-### Extensions
+#### Change Default PHP Version
 
-Many PHP features come as extensions and are disabled by default to keep PHP lightweight. TuxCare provides the required `.dll` files to support these extensions.
-To enable the functionality you need, update the `php.ini` file:
+If you have multiple PHP versions installed and want to change the default, update your *System Path* environment variable:
 
-1. Open the `php.ini` file in an editor of your choice (e.g. Notepad).
-2. Uncomment necessary extensions by removing the `;` like so:
+1. Open **Settings > System > About** in the Start menu.
+2. Click **Advanced system settings**.
+3. Click on **Environment Variables**.
+4. Under *System variables*, find **Path** and click **Edit**.
+   * Move the desired PHP version’s path to the top.
+   * Remove or move down other PHP paths.
+5. Click OK and restart your terminal
+6. Verify the active PHP version by running:
 
     <CodeWithCopy>
 
     ```text
-    extension=curl
+    php -v
+    ```
+
+    </CodeWithCopy>
+
+#### Extensions
+
+To enable or disable extensions in your installed PHP version:
+
+1. Navigate to your PHP installation directory, e.g. `C:\PHP` directory.
+2. Open the `php.ini` file in an editor of your choice (e.g. Notepad).
+3. Edit the list of extensions:
+   * To enable an extension, remove the semicolon `;` at the beginning of the line.
+   * To disable an extension, add a semicolon `;` at the beginning of the line.
+
+   **Example:**
+
+    <CodeWithCopy>
+
+    ```text
+    ;extension=curl
     extension=gd2
-    extension=mbstring
+    ;extension=mbstring
     extension=mysqli
     extension=pdo_mysql
     ```
 
     </CodeWithCopy>
--->
+
 #### Increase Upload/Memory Limits
 
 If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits:
