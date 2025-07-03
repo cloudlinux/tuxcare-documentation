@@ -12,7 +12,7 @@ Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for
 | AlmaLinux                             | RPM          | 8.x, 9.x                          | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Ubuntu                                | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Debian				                        | DEB          | 10, 11, 12	                       | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Windows				                        | -            | Windows Server 2019, 2022, 2025	 | 5.6, 7.4 |
+| Windows				                        | -            | Windows Server 2019, 2022, 2025	 | 5.6, 7.2, 7.3, 7.4 , 8.0, 8.1 |
 
 Other distros and architectures upon request.
 
