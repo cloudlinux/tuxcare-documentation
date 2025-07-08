@@ -89,9 +89,13 @@ Note: This feature is under consideration for future development and may be avai
 * Check if you have .NET already installed on your system:
   * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) and run the following command:
 
+    <CodeWithCopy>
+
     ```text
     dotnet --version
     ```
+
+    </CodeWithCopy>
 
   * If .NET is already installed, the command will return the version number. If it’s not installed, you’ll see an error message.
   * It’s recommended that you first install the latest version of .NET before uninstalling the old one. This ensures a smooth transition without breaking the dependencies.
@@ -127,9 +131,13 @@ Note: The following steps use the .NET SDK installation as an example. If you ar
   * Once the installation is finished, click **Close**.
 * Verify the installation. Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) to confirm that .NET was installed successfully:
 
+  <CodeWithCopy>
+
   ```text
   dotnet --version
   ```
+
+  </CodeWithCopy>
 
   Example output:
 
@@ -150,9 +158,13 @@ For a quick start, you can follow this example to create and run a simple consol
 * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar).
 * Run the following command to create a new console application:
 
+  <CodeWithCopy>
+
   ```text
   dotnet new console -o MyTestApp
   ```
+
+  </CodeWithCopy>
 
   Example output:
 
@@ -173,15 +185,23 @@ For a quick start, you can follow this example to create and run a simple consol
 
 * Navigate to the newly created folder:
 
+  <CodeWithCopy>
+
   ```text
   cd MyTestApp
   ```
 
+  </CodeWithCopy>
+
 * Build and run the application:
+
+  <CodeWithCopy>
 
   ```text
   dotnet run
   ```
+
+  </CodeWithCopy>
 
   When executed, you should see the following output:
 
@@ -195,9 +215,13 @@ The following commands are useful for managing and troubleshooting .NET installa
 
 * `where.exe` dotnet locates the dotnet executable on the system. The output shows the exact path where the dotnet command is installed. By default, the .NET installation is placed in the Program Files\dotnet folder, unless a different destination is chosen during setup.
 
+  <CodeWithCopy>
+
   ```text
   where.exe dotnet
   ```
+
+  </CodeWithCopy>
 
   Example output:
 
@@ -207,9 +231,13 @@ The following commands are useful for managing and troubleshooting .NET installa
 
 * `dontet --info` displays information about the installed .NET SDKs, runtimes and your OS. It also verifies the .NET is correctly set up.
 
+  <CodeWithCopy>
+
   ```text
   dotnet --info
   ```
+
+  </CodeWithCopy>
 
   Example output:
 
@@ -250,15 +278,37 @@ The following commands are useful for managing and troubleshooting .NET installa
 
 * `dotnet –list-sdks` command lists all the .NET SDKs installed on your system. It’s recommended to uninstall the old .NET version after you install a new one.
 
+  <CodeWithCopy>
+
   ```text
   dotnet --list-sdks
   ```
+
+  </CodeWithCopy>
 
   Example output:
 
   ```text
   6.0.428 [C:\Program Files\dotnet\sdk]
   ```
+
+## NuGet Repository
+
+Developers working on .NET projects may need a NuGet repository to manage and share packages across projects. TuxCare provides a shared NuGet repository, which you can add with a simple command:
+
+<CodeWithCopy>
+
+```text
+dotnet nuget add source \
+  https://nexus.repo.tuxcare.com/repository/els_dotnet/index.json \
+  --name TuxCare \
+  --username $USERNAME \
+  --password $PASSWORD
+```
+
+</CodeWithCopy>
+
+Replace `$USERNAME` and `$PASSWORD` with the credentials provided by [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ## Uninstall ELS for .NET 6
 
