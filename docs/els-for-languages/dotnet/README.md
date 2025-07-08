@@ -13,7 +13,7 @@ Endless Lifecycle Support (ELS) for .NET 6 from TuxCare provides security fixes 
 
 ## Supported .NET 6 Versions
 
-**SDK 6.0.428**
+**SDK 6.0.x**
 The .NET SDK (Software Development Kit) is the recommended option if you plan to develop, build, test, or publish .NET 6 applications. It includes:
 
 * The .NET Runtime, which is required to run .NET apps.
@@ -22,15 +22,15 @@ The .NET SDK (Software Development Kit) is the recommended option if you plan to
 
 With the SDK, you won't need to install separate runtimes for ASP.NET Core or the Desktop environment - everything is bundled together to streamline development and deployment.
 
-**ASP.NET Core Runtime 6.0.36**
+**ASP.NET Core Runtime 6.0.x**
 The ASP.NET Core Runtime contains the components needed to run ASP.NET Core web applications on .NET 6. It includes libraries and features for building dynamic web pages, RESTful APIs, and real-time communication with SignalR.
 
 *Note:* If you install the full .NET SDK, you already get the ASP.NET Core Runtime.
 
-**.NET Desktop Runtime 6.0.36**
+**.NET Desktop Runtime 6.0.x**
 The .NET Desktop Runtime allows you to run Windows desktop applications built with Windows Forms or WPF (Windows Presentation Foundation). It focuses on providing a smooth experience for traditional graphical apps on Windows platforms.
 
-**.NET Runtime 6.0.36**
+**.NET Runtime 6.0.x**
 The .NET Runtime is the base runtime required to run console or server-based .NET applications. It's more lightweight than the SDK, since it does not include compilers, build tools, or additional libraries for web or desktop development.
 
 TuxCare applies security patches to .NET 6 for the above OS versions, ensuring continued stability and security even beyond the official end-of-life date.
@@ -142,7 +142,7 @@ Note: The following steps use the .NET SDK installation as an example. If you ar
   Example output:
 
   ```text
-  6.0.428
+  6.0.429
   ```
 
 ## Start Using .NET
@@ -171,7 +171,7 @@ For a quick start, you can follow this example to create and run a simple consol
   ```text
   Welcome to .NET 6.0!
   ---------------------
-  SDK Version: 6.0.428
+  SDK Version: 6.0.429
 
   ----------------------------------------------------------------------------
   The template "Console App" was created successfully.
@@ -243,7 +243,7 @@ The following commands are useful for managing and troubleshooting .NET installa
 
   ```text
   .NET SDK (reflecting any global.json):
-   Version:   6.0.428
+   Version:   6.0.429
    Commit:    ef6f5ce48c
 
   Runtime Environment:
@@ -251,7 +251,7 @@ The following commands are useful for managing and troubleshooting .NET installa
    OS Version:  10.0.22631
    OS Platform: Windows
    RID:         win10-x64
-   Base Path:   C:\Program Files\dotnet\sdk\6.0.428\
+   Base Path:   C:\Program Files\dotnet\sdk\6.0.429\
 
   global.json file:
     Not found
@@ -262,7 +262,7 @@ The following commands are useful for managing and troubleshooting .NET installa
     Commit:       N/A
 
   .NET SDKs installed:
-    6.0.428 [C:\Program Files\dotnet\sdk]
+    6.0.429 [C:\Program Files\dotnet\sdk]
 
   .NET runtimes installed:
     Microsoft.AspNetCore.App 6.0.36 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
@@ -289,10 +289,10 @@ The following commands are useful for managing and troubleshooting .NET installa
   Example output:
 
   ```text
-  6.0.428 [C:\Program Files\dotnet\sdk]
+  6.0.429 [C:\Program Files\dotnet\sdk]
   ```
 
-## NuGet Repository
+## NuGet Repository (Optional)
 
 Developers working on .NET projects may need a NuGet repository to manage and share packages across projects. TuxCare provides a shared NuGet repository, which you can add with a simple command:
 
