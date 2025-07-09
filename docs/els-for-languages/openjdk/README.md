@@ -63,6 +63,10 @@ TuxCare provides technical support according to the [support policy](https://tux
 
 These steps are suitable for RPM-based systems (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc).
 
+:::tip
+This installation method is suitable for both non-containerized systems and containerized environments (such as Docker containers based on supported OS versions).
+:::
+
 1. Download the TuxCare OpenJDK ELS repository package:
 
    <CodeWithCopy>
