@@ -13,7 +13,7 @@ Endless Lifecycle Support (ELS) for .NET 6 from TuxCare provides security fixes 
 
 ## Supported .NET 6 Versions
 
-**SDK 6.0.428**
+**SDK 6.0.x**
 The .NET SDK (Software Development Kit) is the recommended option if you plan to develop, build, test, or publish .NET 6 applications. It includes:
 
 * The .NET Runtime, which is required to run .NET apps.
@@ -22,15 +22,15 @@ The .NET SDK (Software Development Kit) is the recommended option if you plan to
 
 With the SDK, you won't need to install separate runtimes for ASP.NET Core or the Desktop environment - everything is bundled together to streamline development and deployment.
 
-**ASP.NET Core Runtime 6.0.36**
+**ASP.NET Core Runtime 6.0.x**
 The ASP.NET Core Runtime contains the components needed to run ASP.NET Core web applications on .NET 6. It includes libraries and features for building dynamic web pages, RESTful APIs, and real-time communication with SignalR.
 
 *Note:* If you install the full .NET SDK, you already get the ASP.NET Core Runtime.
 
-**.NET Desktop Runtime 6.0.36**
+**.NET Desktop Runtime 6.0.x**
 The .NET Desktop Runtime allows you to run Windows desktop applications built with Windows Forms or WPF (Windows Presentation Foundation). It focuses on providing a smooth experience for traditional graphical apps on Windows platforms.
 
-**.NET Runtime 6.0.36**
+**.NET Runtime 6.0.x**
 The .NET Runtime is the base runtime required to run console or server-based .NET applications. It's more lightweight than the SDK, since it does not include compilers, build tools, or additional libraries for web or desktop development.
 
 TuxCare applies security patches to .NET 6 for the above OS versions, ensuring continued stability and security even beyond the official end-of-life date.
@@ -89,9 +89,13 @@ Note: This feature is under consideration for future development and may be avai
 * Check if you have .NET already installed on your system:
   * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) and run the following command:
 
+    <CodeWithCopy>
+
     ```text
     dotnet --version
     ```
+
+    </CodeWithCopy>
 
   * If .NET is already installed, the command will return the version number. If it’s not installed, you’ll see an error message.
   * It’s recommended that you first install the latest version of .NET before uninstalling the old one. This ensures a smooth transition without breaking the dependencies.
@@ -127,14 +131,18 @@ Note: The following steps use the .NET SDK installation as an example. If you ar
   * Once the installation is finished, click **Close**.
 * Verify the installation. Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) to confirm that .NET was installed successfully:
 
+  <CodeWithCopy>
+
   ```text
   dotnet --version
   ```
 
+  </CodeWithCopy>
+
   Example output:
 
   ```text
-  6.0.428
+  6.0.429
   ```
 
 ## Start Using .NET
@@ -150,16 +158,20 @@ For a quick start, you can follow this example to create and run a simple consol
 * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar).
 * Run the following command to create a new console application:
 
+  <CodeWithCopy>
+
   ```text
   dotnet new console -o MyTestApp
   ```
+
+  </CodeWithCopy>
 
   Example output:
 
   ```text
   Welcome to .NET 6.0!
   ---------------------
-  SDK Version: 6.0.428
+  SDK Version: 6.0.429
 
   ----------------------------------------------------------------------------
   The template "Console App" was created successfully.
@@ -173,15 +185,23 @@ For a quick start, you can follow this example to create and run a simple consol
 
 * Navigate to the newly created folder:
 
+  <CodeWithCopy>
+
   ```text
   cd MyTestApp
   ```
 
+  </CodeWithCopy>
+
 * Build and run the application:
+
+  <CodeWithCopy>
 
   ```text
   dotnet run
   ```
+
+  </CodeWithCopy>
 
   When executed, you should see the following output:
 
@@ -195,9 +215,13 @@ The following commands are useful for managing and troubleshooting .NET installa
 
 * `where.exe` dotnet locates the dotnet executable on the system. The output shows the exact path where the dotnet command is installed. By default, the .NET installation is placed in the Program Files\dotnet folder, unless a different destination is chosen during setup.
 
+  <CodeWithCopy>
+
   ```text
   where.exe dotnet
   ```
+
+  </CodeWithCopy>
 
   Example output:
 
@@ -207,15 +231,19 @@ The following commands are useful for managing and troubleshooting .NET installa
 
 * `dontet --info` displays information about the installed .NET SDKs, runtimes and your OS. It also verifies the .NET is correctly set up.
 
+  <CodeWithCopy>
+
   ```text
   dotnet --info
   ```
+
+  </CodeWithCopy>
 
   Example output:
 
   ```text
   .NET SDK (reflecting any global.json):
-   Version:   6.0.428
+   Version:   6.0.429
    Commit:    ef6f5ce48c
 
   Runtime Environment:
@@ -223,7 +251,7 @@ The following commands are useful for managing and troubleshooting .NET installa
    OS Version:  10.0.22631
    OS Platform: Windows
    RID:         win10-x64
-   Base Path:   C:\Program Files\dotnet\sdk\6.0.428\
+   Base Path:   C:\Program Files\dotnet\sdk\6.0.429\
 
   global.json file:
     Not found
@@ -234,7 +262,7 @@ The following commands are useful for managing and troubleshooting .NET installa
     Commit:       N/A
 
   .NET SDKs installed:
-    6.0.428 [C:\Program Files\dotnet\sdk]
+    6.0.429 [C:\Program Files\dotnet\sdk]
 
   .NET runtimes installed:
     Microsoft.AspNetCore.App 6.0.36 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
@@ -250,15 +278,37 @@ The following commands are useful for managing and troubleshooting .NET installa
 
 * `dotnet –list-sdks` command lists all the .NET SDKs installed on your system. It’s recommended to uninstall the old .NET version after you install a new one.
 
+  <CodeWithCopy>
+
   ```text
   dotnet --list-sdks
   ```
 
+  </CodeWithCopy>
+
   Example output:
 
   ```text
-  6.0.428 [C:\Program Files\dotnet\sdk]
+  6.0.429 [C:\Program Files\dotnet\sdk]
   ```
+
+## NuGet Repository (Optional)
+
+Developers working on .NET projects may need a NuGet repository to manage and share packages across projects. TuxCare provides a shared NuGet repository, which you can add with a simple command:
+
+<CodeWithCopy>
+
+```text
+dotnet nuget add source \
+  https://nexus.repo.tuxcare.com/repository/els_dotnet/index.json \
+  --name TuxCare \
+  --username $USERNAME \
+  --password $PASSWORD
+```
+
+</CodeWithCopy>
+
+Replace `$USERNAME` and `$PASSWORD` with the credentials provided by [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ## Uninstall ELS for .NET 6
 
