@@ -33,13 +33,13 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 
 Customers can report vulnerabilities by submitting a ticket through the TuxCare Support Portal <https://tuxcare.com/support-portal/>. TuxCare commits to providing an initial response to any reported issue within 3 days.
 
-Requests for customer-directed security patches for CVEs that are outside of the ELS for Angular scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 60 days.
+Requests for customer-directed security patches for CVEs that are outside of the ELS for PHP scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 60 days.
 
 Handling Multiple Vulnerabilities: In cases where several CVEs are reported simultaneously for fixing, TuxCare will discuss and agree upon resolution timelines separately with the customer.
 
 ## Enhanced Transparency & Visibility
 
-TuxCare's commitment to transparency and visibility is foundational to our ELS for Angular offering. We provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
+TuxCare's commitment to transparency and visibility is foundational to our ELS for PHP offering. We provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
 * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
 * **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.

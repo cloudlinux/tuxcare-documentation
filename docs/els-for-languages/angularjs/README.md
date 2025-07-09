@@ -1,6 +1,6 @@
 # AngularJS
 
-Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fixes for AngularJS that have reached its end of life. This allows you to continue running AngularJS applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fixes for AngularJS versions that have reached its end of life. This allows you to continue running AngularJS applications without vulnerability concerns, even after official support has ended.
 
 :::warning
 ELS for AngularJS is currently in active development. If you are interested in updates, adoption, or have specific requirements or feature requests, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
