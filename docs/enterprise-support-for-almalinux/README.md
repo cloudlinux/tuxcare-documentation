@@ -26,7 +26,7 @@ AlmaLinux provides a 10-year lifecycle with a new minor release arriving every 6
 
 ESU delivers an extended period of security fixes for critical and high-risk vulnerabilities for select AlmaLinux minor versions, as well as the full suite of five FIPS-validated modules (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified AlmaLinux deployments. The product also unlocks commercial use of the FIPS-validated packages.
 
-Extended Security Updates are currently available for AlmaLinux 9.2 and have planned support for AlmaLinux 9.6 and 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every six months and test/certify their applications against the next minor version at their own pace.
+Extended Security Updates are currently available for AlmaLinux 9.2 and 9.6 with planned support for 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every six months and test/certify their applications against the next minor version at their own pace.
 
 ![esu lifecycle](/images/esu_lifecycle_graph2.png)
 
@@ -41,7 +41,7 @@ ESU provides security patches for High and Critical vulnerabilities (with a 7+ C
 
 ### FIPS-compliant security patches
 
-ESU enables continuous security for FIPS-certified AlmaLinux 9.2 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel, openssl, libcrypt, nss and gnutls packages](https://tuxcare.com/fips-for-almalinux/). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/). They are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged module. This module will undergo an expedited FIPS 140-3 re-validation to ensure it is attested to conform to FIPS 140-3 requirements.
+ESU enables continuous security for FIPS-certified AlmaLinux 9 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel, openssl, libcrypt, nss and gnutls packages](https://tuxcare.com/fips-for-almalinux/). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/). They are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged module. This module will undergo an expedited FIPS 140-3 re-validation to ensure it is attested to conform to FIPS 140-3 requirements.
 
 ### Target response times
 
@@ -50,7 +50,7 @@ We aim to deliver security patches for Critical and High-risk vulnerabilities (C
 
 ### Supported packages
 
-ESU provides updates for a comprehensive list of packages integral to server operations - the complete list of about 6,000 packages in BaseOS and AppStream, plus a few more - thus providing maximum security for your operating system. You can view the full list of supported packages, as well as get detailed information on the patched CVEs, here: [https://cve.tuxcare.com/](https://cve.tuxcare.com/)
+ESU provides updates for a comprehensive list of packages integral to server operations - the complete list of over 6,000 packages in BaseOS and AppStream, plus a few more - thus providing maximum security for your operating system. You can view the full list of supported packages, as well as get detailed information on the patched CVEs, here: [https://cve.tuxcare.com/](https://cve.tuxcare.com/)
 
 Support for additional packages can be provided on request.
 
@@ -63,15 +63,16 @@ ESU provides qualified security and selected bug-fix errata advisories across al
 Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities:
 
 * ESU 9.2 OVAL: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml)
+* ESU 9.6 OVAL: [https://repo.tuxcare.com/tuxcare/9.6/almalinux9.6-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.6/almalinux9.6-esu-oval.xml)
 
 ### CSAF data
 
 Vulnerability scanner vendors may prefer the Common Security Advisory Framework (CSAF) 2.0 machine-readable format:
 
 * ESU 9.2 CSAF advisories: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/advisories/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/advisories/)
-
 * ESU 9.2 CSAF VEX documents: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/vex/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/vex/)
-
+* ESU 9.6 CSAF advisories: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.6esu/advisories/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.6esu/advisories/)
+* ESU 9.6 CSAF VEX documents: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.6esu/vex/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.6esu/vex/)
 * Provider metadata: [https://csaf.data.security.tuxcare.com/](https://csaf.data.security.tuxcare.com/)
 
 ### Secure Bill Of Materials
@@ -80,11 +81,14 @@ You will need a tokenised URL to access the SBOM data, simply replace `<TOKEN>` 
 
 ```text
 https://repo.tuxcare.com/tuxcare/9.2/<TOKEN>/esu/x86_64/spdx-reports/tuxcare92-esu-x86_64-esu.zip
+
+https://repo.tuxcare.com/tuxcare/9.6/<TOKEN>/esu/x86_64/spdx-reports/tuxcare96-esu-x86_64-esu.zip
 ```
 
 ### RSS releases feeds
 
 * AlmaLinux 9.2 ESU: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu)
+* AlmaLinux 9.6 ESU: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.6esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.6esu)
 
 ### Technical support
 
@@ -111,15 +115,23 @@ The TuxCare ESU/FIPS packages and repositories are cryptographically signed with
 
 **Requirements**
 
-* AlmaLinux 9.2 operating system (download images from [here](https://tuxcare.com/almalinux-enterprise-support/get-almalinux/))
+* AlmaLinux 9.2 or 9.6 operating system (download images from [here](https://tuxcare.com/almalinux-enterprise-support/get-almalinux/))
 * x86_64 or aarch64 architecture
 * Extended Security Updates license key (should be obtained from [portal.tuxcare.com](https://portal.tuxcare.com))
 * Internet access
 
-`tuxctl` is the setup tool for TuxCare's Enterprise Support for AlmaLinux, which will configure your system to receive patches from the TuxCare repositories. To install `tuxctl` you need to install the `tuxcare-release` package first. This package contains the TuxCare repo definitions, TuxCare GPG key and the `tuxctl` setup tool. Run the following as root:
+`tuxctl` is the setup tool for TuxCare's Enterprise Support for AlmaLinux, which will configure your system to receive patches from the TuxCare repositories. To install `tuxctl` you need to install the `tuxcare-release` package first. This package contains the TuxCare repo definitions, TuxCare GPG key and the `tuxctl` setup tool. Run one of the following as root:
+
+For 9.2:
 
 ```text
 # dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.noarch.rpm
+```
+
+For 9.6:
+
+```text
+# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.6.noarch.rpm
 ```
 
 The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your ESU license key provided as a command line argument like so:
@@ -162,6 +174,15 @@ Then you will have to run `tuxctl` like this:
 
 :::
 
+**Upgrading**
+
+ESU customers can upgrade between ESU releases, for example from 9.2 to 9.6 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
+
+```text
+# echo 9.6 > /etc/dnf/vars/tuxcare_releasever
+# dnf upgrade
+```
+
 ### Enabling FIPS 140-3 mode
 
 First please ensure you have installed the `tuxcare-release` package as described above. If you haven't already registered your ESU license using `tuxctl` the next step will also do that for you.
@@ -174,7 +195,7 @@ To install the FIPS 140-3 validated ESU packages over the default ones and enabl
 # reboot
 ```
 
-If you wish to only boot into the FIPS-validated kernel (see [version table](https://tuxcare.com/fips-for-almalinux/)) and not the security patched kernels or updates under CMVP review (only required in very high classification environments) you can use grubby like so:
+If you wish to only boot into the Active FIPS-validated kernel and not the security patched kernels or updates under CMVP review (only required in very high classification environments) you can use grubby like so:
 
 ```text
 # dnf -y install kernel-5.14.0-284.11.1.el9_2.tuxcare.6
@@ -182,12 +203,12 @@ If you wish to only boot into the FIPS-validated kernel (see [version table](htt
 ```
 
 :::warning
-Note the aarch64 platform doesn't currently have FIPS-validated gnutls/libgcrypt/nss packages, only kernel and openssl.
+Note the aarch64 platform doesn't currently have FIPS-validated gnutls/libgcrypt/nss packages, only kernel and openssl for AlmaLinux 9.2
 
 We also provide multilib i686 packages of the userspace modules in the x86_64 repo for backwards compatibility, note that these are not FIPS-validated but are built from the same source.
 :::
 
-Once you've logged in after the reboot, you can run these commands to confirm it worked (note the versions may be slightly different by the time you read this):
+Once you've logged in after the reboot, you can run these commands to confirm it worked (note the versions may be slightly different by the time you read this, see [version table](https://tuxcare.com/fips-for-almalinux/)):
 
 ```text
 $ fips-mode-setup --check
@@ -231,7 +252,7 @@ To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux 
 ```
 
 :::warning
-Note that by disabling ESU, you will revert to tracking major version releases instead of sticking to a specific minor version, so you may be upgraded from 9.2 to 9.5 for example - a process you cannot undo.
+Note that by disabling ESU, you will revert to tracking major version releases instead of sticking to a specific minor version, so you may be upgraded from 9.2 to 9.6 for example - a process you cannot undo.
 :::
 
 To completely remove the TuxCare packages, after following the above steps, run the following as root:
@@ -406,7 +427,7 @@ TuxCare Technical Support is designed for enterprise clients with trained IT sta
 * New tickets may be created by simply emailing the support desk: [support@tuxcare.com](support@tuxcare.com)
 
 :::warning
-If you are a user of our SaaS product on AWS Marketplace, before you contact support, you should have your AWS accountId to hand, there are various ways to find it.
+If you are a user of our server product AMI's on AWS Marketplace, before you contact support, you should have your AWS accountId to hand, there are various ways to find it.
 
 If you have the aws cli tool installed on your computer, you can run:
 
