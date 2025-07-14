@@ -4,8 +4,19 @@ Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides s
 
 ## Supported Python Libraries
 
+* **anyio**
 * **certifi**
 * **cryptography**
+* **Flask**
+* **gunicorn**
+* **idna**
+* **Jinja2**
+* **Pillow**
+* **pymongo**
+* **sentry-sdk**
+* **setuptools**
+* **waitress**
+* **Werkzeug**
 
   **Supported architecture:** x86_64.
 
