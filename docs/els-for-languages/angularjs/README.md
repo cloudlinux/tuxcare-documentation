@@ -159,9 +159,9 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
   You will see an output like:
 
   ```text
-  changed 1 package, and audited 5 packages in 892ms
+  up to date, audited 2 packages in 551ms
 
-  2 vulnerabilities (1 moderate, 1 high)
+  1 high severity vulnerability
   ```
 
 * You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
