@@ -165,3 +165,20 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
   ```
 
 * You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
+
+## Resolved CVEs
+
+Fixes for the following vulnerabilities are available in ELS for AngularJS from TuxCare versions:
+
+| CVE ID | Severity | Vulnerable Version | Fixed Version |
+| --- | --- | --- | --- |
+| CVE-2024-21490 | High | >=1.3.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2023-26118 | Medium | >=1.4.9 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2023-26117 | Medium | >=1.0.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2023-26116 | Medium | >=1.2.21 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2022-25869 | Medium | >=0.0.0| 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2022-25844 | Medium | >=1.7.0 | 1.7.9, 1.8.3 |
+| CVE-2019-10768 | Critical | <1.7.9 | 1.7.9 |
+| CVE-2020-7676 | Medium | <1.8.0 | 1.5.11, 1.6.10, 1.7.9 |
+
+If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
