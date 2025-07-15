@@ -150,6 +150,82 @@ Each version of PHP can be installed individually or all versions at once.
     { title: 'deb', content: 'apt-get install alt-php' }
   ]" />
 
+### Additional configurations (optional)
+
+The **default.ini** file is important for configuring alt-php. It sets default PHP settings and can be used to enable default extensions. We do not modify this file on our side. You need to update **default.ini** yourself to adjust PHP settings based on your Endless Lifecycle Support (ELS) usage and specific requirements.
+
+PHP extensions can be enabled or disabled in different configuration files. 
+* If you need to enable or disable an extension by *default* across all systems, list it by updating the `default.ini`.
+* If you want to enable or disable an extension only for a *specific* PHP version or setup, start by editing that extension's individual `.ini` file.
+
+#### Enabling a module through `default.ini`
+
+To enable or disable extensions in your installed PHP version:
+
+1. Open the `default.ini` file, usually located in the PHP configuration directory, in an editor of your choice: 
+
+<CodeWithCopy>
+
+```
+/opt/alt/phpXY/etc/php.d/default.ini
+```
+
+</CodeWithCopy>
+
+2. Edit the list of extensions:
+   * To enable an extension, remove the semicolon `;` at the beginning of the line.
+   * To disable an extension, add a semicolon `;` at the beginning of the line.
+   * If the extension line is missing, add it in this format: `extension=extension_name.so` (replace `extension_name.so` with the actual extension name).
+
+3. Save the changes in the `default.ini` file.
+
+#### Enabling a module through the configuration files
+
+Typically, extensions with their own `.ini` files are enabled or disabled directly in those files, allowing more control for a specific PHP configuration.
+* If you're unsure which file to modify to enable a specific extension, it's recommended to first try enabling it in the extension's own `.ini` file.
+* If that does not work or you want to enable it on all systems by default, add it to `default.ini`.
+
+1. Locate the extension’s `.ini` file (e.g., `memcached.ini`) in the directory:
+
+  <CodeWithCopy>
+
+  ```
+  /opt/alt/phpXY/etc/php.d.all/
+  ```
+  </CodeWithCopy>
+
+2. Open the file and find the lines starting with a semicolon `;` before the extension name (e.g., `;extension=memcached.so`). 
+   * The semicolon sign at the beginning of the line means that this extension is currently inactive. To enable an extension, remove the semicolon `;` at the beginning of the line.
+   * To disable an extension, add a semicolon `;` at the beginning of the line.
+   * If the extension line is missing, add the line: 
+     <CodeWithCopy>
+    
+     ```
+     extension=memcached.so
+     ```
+
+     </CodeWithCopy>
+
+3. Save the changes in the ini file.
+
+#### Increase Upload/Memory Limits
+
+If you need to increase memory and upload size limits:
+
+1. Open the `default.ini` file in an editor of your choice.
+2. Set the limits as needed, e.g:
+
+    <CodeWithCopy>
+
+    ```text
+    upload_max_filesize=40M
+    post_max_size=40M
+    memory_limit=256M
+    ```
+
+    </CodeWithCopy>
+
+
 ## Installation Instructions for Windows
 
 ### Get user credentials
