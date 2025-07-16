@@ -154,10 +154,6 @@ Each version of PHP can be installed individually or all versions at once.
 
 The **default.ini** file is important for configuring alt-php. It sets default PHP settings and can be used to enable default extensions. We do not modify this file on our side. You need to update **default.ini** yourself to adjust PHP settings based on your Endless Lifecycle Support (ELS) usage and specific requirements.
 
-PHP extensions can be enabled or disabled in different configuration files. 
-* If you need to enable or disable an extension by *default* across all systems, list it by updating the `default.ini`.
-* If you want to enable or disable an extension only for a *specific* PHP version or setup, start by editing that extension's individual `.ini` file.
-
 #### Enabling a module through `default.ini`
 
 To enable or disable extensions in your installed PHP version:
@@ -181,9 +177,7 @@ To enable or disable extensions in your installed PHP version:
 
 #### Enabling a module through the configuration files
 
-Typically, extensions with their own `.ini` files are enabled or disabled directly in those files, allowing more control for a specific PHP configuration.
-* If you're unsure which file to modify to enable a specific extension, it's recommended to first try enabling it in the extension's own `.ini` file.
-* If that does not work or you want to enable it on all systems by default, add it to `default.ini`.
+PHP extensions can also be enabled or disabled through their `.ini` configuration files. This method allows you to control which extensions are active for a specific PHP version or setup. If you're unsure which file to modify to enable a specific extension, start by checking the extension's own `.ini` file.
 
 1. Locate the extension’s `.ini` file (e.g., `memcached.ini`) in the directory:
 
@@ -192,21 +186,22 @@ Typically, extensions with their own `.ini` files are enabled or disabled direct
   ```
   /opt/alt/phpXY/etc/php.d.all/
   ```
+
   </CodeWithCopy>
 
-2. Open the file and find the lines starting with a semicolon `;` before the extension name (e.g., `;extension=memcached.so`). 
-   * The semicolon sign at the beginning of the line means that this extension is currently inactive. To enable an extension, remove the semicolon `;` at the beginning of the line.
-   * To disable an extension, add a semicolon `;` at the beginning of the line.
-   * If the extension line is missing, add the line: 
-     <CodeWithCopy>
-    
-     ```
-     extension=memcached.so
-     ```
+2. To enable the extension, copy the located `.ini` file to:
 
-     </CodeWithCopy>
+  <CodeWithCopy>
 
-3. Save the changes in the ini file.
+  ```
+  /opt/alt/phpXY/etc/php.d/
+  ```
+
+  </CodeWithCopy>
+
+  :::warning
+  If the same extension is present in multiple `.ini` configuration files within the `/opt/alt/phpXY/etc/php.d/` directory, you may see warnings in PHP logs and possibly on your site.
+  :::
 
 #### Increase Upload/Memory Limits
 
