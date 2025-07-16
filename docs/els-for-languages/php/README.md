@@ -150,6 +150,77 @@ Each version of PHP can be installed individually or all versions at once.
     { title: 'deb', content: 'apt-get install alt-php' }
   ]" />
 
+### Additional configurations (optional)
+
+The **default.ini** file is important for configuring alt-php. It sets default PHP settings and can be used to enable default extensions. We do not modify this file on our side. You need to update **default.ini** yourself to adjust PHP settings based on your Endless Lifecycle Support (ELS) usage and specific requirements.
+
+#### Enabling a module through `default.ini`
+
+To enable or disable extensions in your installed PHP version:
+
+1. Open the `default.ini` file, usually located in the PHP configuration directory, in an editor of your choice: 
+
+<CodeWithCopy>
+
+```
+/opt/alt/phpXY/etc/php.d/default.ini
+```
+
+</CodeWithCopy>
+
+2. Edit the list of extensions:
+   * To enable an extension, remove the semicolon `;` at the beginning of the line.
+   * To disable an extension, add a semicolon `;` at the beginning of the line.
+   * If the extension line is missing, add it in this format: `extension=extension_name.so` (replace `extension_name.so` with the actual extension name).
+
+3. Save the changes in the `default.ini` file.
+
+#### Enabling a module through the configuration files
+
+PHP extensions can also be enabled or disabled through their `.ini` configuration files. This method allows you to control which extensions are active for a specific PHP version or setup. If you're unsure which file to modify to enable a specific extension, start by checking the extension's own `.ini` file.
+
+1. Locate the extension’s `.ini` file (e.g., `memcached.ini`) in the directory:
+
+  <CodeWithCopy>
+
+  ```
+  /opt/alt/phpXY/etc/php.d.all/
+  ```
+
+  </CodeWithCopy>
+
+2. To enable the extension, copy the located `.ini` file to:
+
+  <CodeWithCopy>
+
+  ```
+  /opt/alt/phpXY/etc/php.d/
+  ```
+
+  </CodeWithCopy>
+
+  :::warning
+  If the same extension is present in multiple `.ini` configuration files within the `/opt/alt/phpXY/etc/php.d/` directory, you may see warnings in PHP logs and possibly on your site.
+  :::
+
+#### Increase Upload/Memory Limits
+
+If you need to increase memory and upload size limits:
+
+1. Open the `default.ini` file in an editor of your choice.
+2. Set the limits as needed, e.g:
+
+    <CodeWithCopy>
+
+    ```text
+    upload_max_filesize=40M
+    post_max_size=40M
+    memory_limit=256M
+    ```
+
+    </CodeWithCopy>
+
+
 ## Installation Instructions for Windows
 
 ### Get user credentials
