@@ -170,7 +170,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
 Fixes for the following vulnerabilities are available in ELS for AngularJS from TuxCare versions:
 
-| CVE ID | Severity | Vulnerable Version | Fixed Version |
+| CVE ID | Severity | Vulnerable Version | Safe Version |
 | --- | --- | --- | --- |
 | CVE-2024-21490 | High | >=1.3.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
 | CVE-2023-26118 | Medium | >=1.4.9 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
