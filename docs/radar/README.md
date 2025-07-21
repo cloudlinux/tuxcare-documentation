@@ -116,6 +116,12 @@ Then on your ePortal server, update /etc/eportal/config with the following:
 RADAR_PROXY_ENABLE = True
 ```
 
+If you are registered to the EU instance instead of the default US one, you should also add the following (remove/comment the line to revert to the US instance):
+
+```text
+RADAR_PROXY_BASEURL = 'https://eu.radar.tuxcare.com'
+```
+
 Then restart ePortal:
 
 ```text
@@ -140,4 +146,4 @@ If you need to manually run a scan instantly for any reason, you can run:
 su -s /bin/bash nobody -c "tuxcare-radar --config /etc/tuxcare-radar/radar.yaml"
 ```
 
-Then visit [https://radar.tuxcare.com](https://radar.tuxcare.com/) to view the results.
+Then visit [https://radar.tuxcare.com](https://radar.tuxcare.com/) (US) or [https://eu.radar.tuxcare.com](https://eu.radar.tuxcare.com/) (EU) to view the results.
