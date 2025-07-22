@@ -390,8 +390,8 @@ curl -X DELETE -u admin https://eportal.corp.com/admin/api/keys/test-key
 
 **GET /admin/api/patchsets/**
 
-Endpoint lists available patchsets for a feed and product.
-Sort order is from oldest to newest patchsets.
+Endpoint lists available patchsets for a specified feed and product, optionally filtered by distribution(s). The distro filter narrows results to only those patchsets that apply to the specified distributions.
+If no distro is provided, patchsets for all available distributions are returned. Results are returned from oldest to newest patchsets.
 
 Requires read permissions and accepts basic authorization.
 
@@ -400,6 +400,7 @@ Requires read permissions and accepts basic authorization.
 * `feed`: String, optional. Name of the feed to list patchsets for. `main` by default.
 * `product`: String, optional. Possible values are: `kernel`, `user`, `qemu`, `db`.
   Selects a patchstore for a specified product. `kernel` by default.
+* `distro`:	String (multi), optional.	Filters results by one or more Linux distributions. Can be passed multiple times, e.g., `?distro=centos7&distro=almalinux8`.
 
 **Response:**
 
@@ -408,7 +409,8 @@ Requires read permissions and accepts basic authorization.
   "result": [
     {
       "patchset": "patchset-name",
-      "status": "enabled" // possible values are: enabled, disabled, not-downloaded, undeployed
+      "status": "enabled", // possible values are: enabled, disabled, not-downloaded, undeployed
+      "distros": ["distro-1", "distro-2"]
     },
     ...
   ]
@@ -418,7 +420,7 @@ Requires read permissions and accepts basic authorization.
 **Example:**
 
 ```
-curl -u admin 'https://eportal.corp.com/admin/api/patchsets/?feed=main&product=kernel'
+curl -u admin 'https://eportal.corp.com/admin/api/patchsets/?feed=main&product=kernel&distro=almalinux8'
 ```
 
 
