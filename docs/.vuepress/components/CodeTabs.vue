@@ -113,20 +113,34 @@ pre {
   background-color: transparent;
   color: #2d2d2d;
   font-size: 14px;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  white-space: pre;
   max-width: 100%;
   line-height: 1.5;
   box-shadow: none;
+  overflow-x: auto;
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: #666 transparent;  /* Firefox */
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 4px;
 }
 
 code {
   color: #ccc;
   background: none;
   display: block;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  white-space: pre;
 }
 
 .copy-button {
