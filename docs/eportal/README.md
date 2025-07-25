@@ -1005,6 +1005,67 @@ The API key is personal, meaning it is tied to a specific user and inherits thei
 A user with read-only permissions can only manage their own keys,
 while an administrator has access to any user's API keys.
 
+## Overview page
+
+The Overview page provides a high-level summary of all selected servers.
+It includes data on server uptime, CPU architecture, OS and kernel distribution,
+and how many servers have KernelCare (KCare) or LibCare enabled.
+
+### Uptime distribution
+
+This section shows the uptime of servers where our agent is installed.
+Uptime refers to how long the server has been running without a reboot.
+
+The donut chart categorizes server uptime into:
+
+- **under 6 months**
+- **6 to 12 months**
+- **12 to 18 months**
+- **over 18 months**
+
+Additional metrics:
+
+- **Max uptime** — the longest uptime among servers with a reporting agent
+- **Average uptime** — average uptime across these servers
+- **Median uptime** — median uptime across these servers
+
+![Uptime distribution](/images/overview_uptime_distribution.png)
+
+### CPU arch distribution
+
+Shows the breakdown of CPU architectures detected on servers.
+If the architecture is not reported, it appears as `unknown`.
+
+![Architecture distribution](/images/overview_arch_distribution.png)
+
+### OS distribution
+
+This table displays the top 10 most common operating system distributions among the selected servers,
+along with how many of those servers have KernelCare (KCare) or LibCare enabled:
+
+- **KCare active** — server has KCare enabled and is actively reporting
+- **KCare silent** — server has KCare enabled, but is not currently reporting
+- **LibCare active** — server has LibCare enabled and is actively reporting
+- **LibCare silent** — server has LibCare enabled, but is not currently reporting
+
+If more than 10 OS types are detected, the rest are grouped under an **"Other"** row.
+A **Total** row summarizes all servers.
+
+![OS distribution](/images/overview_os_distribution.png)
+
+### Kernel distribution
+
+This section lists the top 10 kernel versions detected across the selected servers,
+along with how many servers are running each version with KCare enabled:
+
+- **KCare active** — server has KCare enabled and is actively reporting
+- **KCare silent** — server has KCare enabled, but is not currently reporting
+
+If more than 10 kernel versions are detected, the rest are grouped under an "Other" row.
+A **Total** row summarizes all servers.
+
+![Kernel distribution](/images/overview_kernel_distribution.png)
+
 ## How to setup ePortal to use HTTPS
 
 Some assumptions for a server where e-portal is deployed:
