@@ -15,6 +15,7 @@ import social from "./config-client/social";
 import Chat from "./components/Chat.vue";
 import CodeTabs from "./components/CodeTabs.vue";
 import CodeWithCopy from "./components/CodeWithCopy.vue";
+import TableTabs from "./components/TableTabs.vue";
 
 import CVETracker from './components/JavaSpringSolvedCveTable.vue'
 
@@ -27,6 +28,7 @@ export default defineClientConfig({
         app.component("CodeTabs", CodeTabs);
         app.component("CodeWithCopy", CodeWithCopy);
         app.component("CVETracker", CVETracker);
+        app.component("TableTabs", TableTabs);
     },
     layouts: {
         Layout,
