@@ -133,15 +133,15 @@ The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Ora
 1. Download the installer script:
 
     <CodeTabs :tabs="[
-      { title: 'RPM', content: 'wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-rpm-repo.sh' },
-      { title: 'DEB', content: 'wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh' }
+      { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-rpm-repo.sh` },
+      { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh` }
     ]" />
 
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds the yum repository, and adds a PGP key to the server.
 
     <CodeTabs :tabs="[
-      { title: 'RPM', content: 'sh install-els-alt-php-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX' },
-      { title: 'DEB', content: 'bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX' }
+      { title: 'RPM', content: `sh install-els-alt-php-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+      { title: 'DEB', content: `bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` }
     ]" />
 
 3. Verify that the installation was successful.
@@ -149,8 +149,8 @@ The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Ora
     To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual command:
 
     <CodeTabs :tabs="[
-      { title: 'RPM', content: 'yum upgrade' },
-      { title: 'DEB', content: 'apt upgrade' }
+      { title: 'RPM', content: `yum upgrade` },
+      { title: 'DEB', content: `apt upgrade` }
     ]" />
 
 4. Install PHP package. Each version of PHP can be installed individually or all versions at once.
@@ -158,22 +158,22 @@ The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Ora
    * Standard commands to install each version separately, for example, installing alt-php73:
 
      <CodeTabs :tabs="[
-       { title: 'RPM', content: 'yum install alt-php73*' },
-       { title: 'DEB', content: 'apt-get install alt-php73*' }
+       { title: 'RPM', content: `yum install alt-php73*` },
+       { title: 'DEB', content: `apt-get install alt-php73*` }
      ]" />
 
    * To install all versions at the same time:
 
      <CodeTabs :tabs="[
-       { title: 'RPM', content: 'yum groupinstall alt-php' },
-       { title: 'DEB', content: 'apt-get install alt-php' }
+       { title: 'RPM', content: `yum groupinstall alt-php` },
+       { title: 'DEB', content: `apt-get install alt-php` }
      ]" />
 
    * To find out which groups/meta-package are available for installation, use the following command:
  
      <CodeTabs :tabs="[
-       { title: 'RPM', content: 'sudo yum group list' },
-       { title: 'DEB', content: 'apt list -a | grep alt-php' }
+       { title: 'RPM', content: `sudo yum group list` },
+       { title: 'DEB', content: `apt list -a | grep alt-php` }
      ]" />
 
      For example:
@@ -230,8 +230,8 @@ The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Ora
    * To get a list of packages of a specific group or meta package, use the following command:
 
      <CodeTabs :tabs="[
-       { title: 'RPM', content: 'sudo yum groupinfo alt-phpXY' },
-       { title: 'DEB', content: 'apt-cache showpkg alt-phpXY' }
+       { title: 'RPM', content: `sudo yum groupinfo alt-phpXY` },
+       { title: 'DEB', content: `apt-cache showpkg alt-phpXY` }
      ]" />
 
      Replace `XY` with a version of alt-php. For example:
@@ -286,8 +286,8 @@ When you deploy an updated version of PHP through PHP ELS, using your system's r
 To check whether the package is installed and see its current version, use the following command based on your OS:
 
   <CodeTabs :tabs="[
-    { title: 'RPM', content: 'sudo yum list installed | grep php' },
-    { title: 'DEB', content: 'dpkg -l | grep php' }
+    { title: 'RPM', content: `sudo yum list installed | grep php` },
+    { title: 'DEB', content: `dpkg -l | grep php` }
   ]" />
 
   For example, alt-php73:
@@ -338,8 +338,8 @@ To check whether the package is installed and see its current version, use the f
 To display detailed information about the installed package, run the following command: 
     
   <CodeTabs :tabs="[
-    { title: 'RPM', content: 'yum info alt-php73' },
-    { title: 'DEB', content: 'alt-php73-cli' }
+    { title: 'RPM', content: `yum info alt-php73` },
+    { title: 'DEB', content: `alt-php73-cli` }
   ]" />
 
   An example output:
@@ -387,8 +387,8 @@ Dependencies for a successful installation of alt packages may vary depending on
   For example:
 
   <CodeTabs :tabs="[
-    { title: 'RPM', content: 'sudo yum deplist alt-php73 ' },
-    { title: 'DEB', content: 'sudo apt-cache depends alt-php74' }
+    { title: 'RPM', content: `sudo yum deplist alt-php73 ` },
+    { title: 'DEB', content: `sudo apt-cache depends alt-php74` }
   ]" />
 
   <CodeTabs :tabs="[
@@ -435,7 +435,7 @@ To update alt-php, you typically follow a process that involves using the packag
 1. Check for Updates:
 
     <CodeTabs :tabs="[
-      { title: 'RPM', content: 'sudo yum check-update' },
+      { title: 'RPM', content: `sudo yum check-update` },
       { title: 'DEB', content:
       `sudo apt-get update
       apt list --upgradable` }
@@ -497,22 +497,22 @@ To update alt-php, you typically follow a process that involves using the packag
    * Update all groups/meta-packages with names starting with "alt-php":
 
        <CodeTabs :tabs="[
-         { title: 'RPM', content: 'sudo yum update alt-php*' },
-         { title: 'DEB', content: 'sudo apt-get upgrade alt-php*' }
+         { title: 'RPM', content: `sudo yum update alt-php*` },
+         { title: 'DEB', content: `sudo apt-get upgrade alt-php*` }
        ]" />
 
    * Update a group/meta-package named "alt-php":
 
        <CodeTabs :tabs="[
-         { title: 'RPM', content: 'sudo yum groupupdate alt-php' },
-         { title: 'DEB', content: 'sudo apt-get upgrade alt-php' }
+         { title: 'RPM', content: `sudo yum groupupdate alt-php` },
+         { title: 'DEB', content: `sudo apt-get upgrade alt-php` }
        ]" />
 
    * You can specify a group/meta-package with a specific version of alt-php:
 
        <CodeTabs :tabs="[
-         { title: 'RPM', content: 'sudo yum groupupdate alt-phpXY' },
-         { title: 'DEB', content: 'sudo apt-get upgrade alt-phpXY' }
+         { title: 'RPM', content: `sudo yum groupupdate alt-phpXY` },
+         { title: 'DEB', content: `sudo apt-get upgrade alt-phpXY` }
        ]" />
 
      Replace `XY` with a version of alt-php. For example:
@@ -566,8 +566,8 @@ To update alt-php, you typically follow a process that involves using the packag
 To search for alt-php packages in repositories:
 
 <CodeTabs :tabs="[
-  { title: 'RPM', content: 'sudo yum search alt-package-name' },
-  { title: 'DEB', content: 'ssudo apt search alt-package-name' }
+  { title: 'RPM', content: `sudo yum search alt-package-name` },
+  { title: 'DEB', content: `ssudo apt search alt-package-name` }
 ]" />
 
 For example:
@@ -789,57 +789,7 @@ zlib
 
   </template>
 
-  <template #Enabling_a_module_through_the_CLI>
-
-<CodeWithCopy>
-
-```text
-/opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
-```
-
-</CodeWithCopy>
-
-**An example output:**
-
-```text
-[PHP Modules]
-bz2
-calendar
-Core
-ctype
-curl
-date
-exif
-filter
-ftp
-gettext
-gmp
-hash
-iconv
-igbinary
-libxml
-openssl
-pcntl
-pcre
-readline
-Reflection
-session
-shmop
-SimpleXML
-SPL
-sqlite3
-standard
-tokenizer
-xml
-zlib
-[Zend Modules]
-```
-
-  </template>
-
-</TableTabs>
-
-### Additional configurations (optional)
+  <template #Enabling_a_module>
 
 The **default.ini** file is important for configuring alt-php. It sets default PHP settings and can be used to enable default extensions. We do not modify this file on our side. You need to update **default.ini** yourself to adjust PHP settings based on your Endless Lifecycle Support (ELS) usage and specific requirements.
 
@@ -892,7 +842,55 @@ PHP extensions can also be enabled or disabled through their `.ini` configuratio
   If the same extension is present in multiple `.ini` configuration files within the `/opt/alt/phpXY/etc/php.d/` directory, you may see warnings in PHP logs and possibly on your site.
   :::
 
-#### Increase Upload/Memory Limits
+#### Enabling_a_module_through_the_CLI
+
+<CodeWithCopy>
+
+```text
+/opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
+[PHP Modules]
+bz2
+calendar
+Core
+ctype
+curl
+date
+exif
+filter
+ftp
+gettext
+gmp
+hash
+iconv
+igbinary
+libxml
+openssl
+pcntl
+pcre
+readline
+Reflection
+session
+shmop
+SimpleXML
+SPL
+sqlite3
+standard
+tokenizer
+xml
+zlib
+[Zend Modules]
+```
+
+  </template>
+
+  <template #Increase_upload_or_memory_limits>
 
 If you need to increase memory and upload size limits:
 
@@ -909,6 +907,9 @@ If you need to increase memory and upload size limits:
 
     </CodeWithCopy>
 
+  </template>
+
+</TableTabs>
 
 ## Installation Instructions for Windows
 
@@ -1109,8 +1110,8 @@ OVAL can be used with the OpenSCAP tool.
 1. Install OpenSCAP
 
     <CodeTabs :tabs="[
-      { title: 'RPM', content: 'yum install openscap openscap-utils scap-security-guide -y' },
-      { title: 'DEB', content: 'apt-get install libopenscap8 -y' }
+      { title: 'RPM', content: `yum install openscap openscap-utils scap-security-guide -y` },
+      { title: 'DEB', content: `apt-get install libopenscap8 -y` }
     ]" />
 
 2. Download an OVAL stream. For example, EL 8:
