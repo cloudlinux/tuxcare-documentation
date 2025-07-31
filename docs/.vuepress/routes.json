@@ -30,5 +30,16 @@
     "/els-for-languages/php/#download-tuxcare-php-windows": "/els-for-languages/php/#download-and-install-tuxcare-php-windows",
     "/els-for-languages/php/#configure-php": "/els-for-languages/php/#download-and-install-tuxcare-php-windows",
     "/els-for-languages/php/#add-php-to-the-system-path": "/els-for-languages/php/#download-and-install-tuxcare-php-windows",
-    "/els-for-os/#cloudlinux-6-els": "/els-for-os/"
+    "/els-for-os/#cloudlinux-6-els": "/els-for-os/",
+    "/els-for-languages/php/#additional-configurations-optional": "/els-for-languages/php/#Enabling_a_module",
+    "/els-for-languages/php/#enabling-a-module-through-default-ini": "/els-for-languages/php/#Enabling_a_module",
+    "/els-for-languages/php/#enabling-a-module-through-the-configuration-files": "/els-for-languages/php/#Enabling_a_module",
+    "/els-for-languages/php/#enabling-a-module-through-the-cli": "/els-for-languages/php/#Enabling_a_module",
+    "/els-for-languages/php/#listing-enabled-modules-on-a-specific-version": "/els-for-languages/php/#Listing_enabled_modules_on_a_specific_version",
+    "/els-for-languages/php/#location-of-default-ini": "/els-for-languages/php/#Location_of_default.ini",
+    "/els-for-languages/php/#location-of-ini-config-files": "/els-for-languages/php/#Location_of_ini_config_files",
+    "/els-for-languages/php/#running-code-on-a-specific-version-through-the-cli": "/els-for-languages/php/#Running_code_on_a_specific_version_through_the_CLI",
+    "/els-for-languages/php/#modules-and-pecl-extensions": "/els-for-languages/php/#Modules_and_pecl_extensions",
+    "/els-for-languages/php/#the-bin-files": "/els-for-languages/php/#The_bin_files",
+    "/els-for-languages/php/#how-to-use-php-els": "/els-for-languages/php/#Increase_upload_or_memory_limits"
 }
