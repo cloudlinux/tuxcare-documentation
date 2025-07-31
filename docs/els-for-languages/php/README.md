@@ -2,19 +2,76 @@
 
 Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
 
+## About ALT-PHP
+
+alt-php (also known as "CloudLinux PHP Selector") is a component provided by CloudLinux designed 
+for managing PHP versions on web servers and enabling users to choose PHP versions for their websites.
+
+Here are the key features and characteristics of alt-php:
+
+1. **Multiple PHP Versions** - alt-php allows the installation and usage of various PHP versions on a single web server. This enables users to select the PHP version that best suits their web applications.
+
+2. **User Segmentation** - alt-php allows hosting providers and web server administrators to provide different PHP versions for different users. Each user can choose the PHP version that suits their website.
+
+3. **Enhanced Compatibility** - alt-php is designed to ensure maximum compatibility with various web applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of PHP applications.
+
+4. **Updates and Support** - CloudLinux provides regular updates for alt-php, including bug fixes, performance improvements, and updates for new PHP versions. This helps ensure the security and currency of PHP usage.
+
+5. **Management Tools** - alt-php usually comes with a set of management tools, such as PHP Selector, allowing users to manage PHP versions and enable/disable various PHP extensions.
+
+alt-php provides a more flexible and convenient environment for working with different PHP versions on a single server, which is particularly useful in a web hosting environment where multiple users have varying requirements for PHP versions for their web applications.
+
 ## Supported OS and PHP versions
 
 **Supported architecture:** 64-bit.
 
+<TableTabs>
+
+  <template #Active_Support>
+
 | OS                                    | Package Type | OS Version                        | PHP Version |
 | :-----------------------------------: | :----------: | :-------------------------------: | :---------: | 
-| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 6.x, 7.x, 8.x, 9.x                | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 7.x, 8.x, 9.x                     | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | AlmaLinux                             | RPM          | 8.x, 9.x                          | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Ubuntu                                | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Debian				                        | DEB          | 10, 11, 12	                       | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Windows				                        | -            | Windows Server 2019, 2022, 2025	 | 5.6, 7.2, 7.3, 7.4 , 8.0, 8.1 |
 
 Other distros and architectures upon request.
+
+  </template>
+
+  <template #End_Of_Life>
+
+CloudLinux provides additional security support time of 
+php, python, ruby and nodejs after the end of support from the vendor.
+Below are tables with information about the time of security support from the vendor and from CloudLinux.
+
+*EOL - end of life
+
+*SST - security support time
+
+| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by CloudLinux    | SST by Cloudlinux after vendor's EOL (years) |
+|:-------:|:----------:|:-------------:|:---------------------:|:-----------------------:|:--------------------------------------------:|
+|   4.4   | 07.11.2005 |  08.07.2008   |          2.7          | [01.07.2023](https://blog.cloudlinux.com/php-4.4-end-of-life-0) | 14.9 |
+|   5.1   | 23.11.2005 |  24.08.2006   |          0.8          | [01.04.2024](https://blog.cloudlinux.com/php-5.1-end-of-life)   | 17.6 |
+|   5.2   | 01.11.2006 |  06.01.2011   |          4.2          | 
+|   5.3   | 29.06.2009 |  14.08.2014   |          5.1          |
+|   5.4   | 29.02.2012 |  14.09.2015   |          3.5          |
+|   5.5   | 19.06.2013 |  21.07.2016	 |          3.1          |
+|   5.6   |	27.08.2014 |  31.12.2018 	 |          4.3          |
+|   7.0   | 12.01.2015 |  10.01.2019 	 |          3.9          |
+|   7.1   | 30.11.2016 |  01.12.2019 	 |          3.0          |
+|   7.2   | 28.11.2017 |  30.11.2020 	 |          3.0          |
+|   7.3   | 04.12.2018 |  06.12.2021   |          3.0          |
+|   7.4   | 26.11.2019 |  28.11.2022	 |          3.0          |
+|   8.0   | 24.11.2020 |  26.11.2023	 |          3.0          |
+|   8.1   | 23.11.2021 |  25.11.2024	 |          3.0          |
+|   8.2   | 08.12.2022 |  08.12.2025	 |          3.0          |
+
+  </template>
+
+</TableTabs>
 
 ## Vulnerability Coverage and Target Response Times
 
@@ -63,21 +120,28 @@ TuxCare provides technical support according to the [support policy](https://tux
 
 ## Installation Instructions for Linux
 
+### Get user credentials
+
+1. Obtain the required license to get access to the service.
+2. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating your unique access link (tokenized URL). Anonymous access is restricted.
+
+### Install ALT-PHP
+
 The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Oracle Linux, AlmaLinux, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
 
 
 1. Download the installer script:
 
     <CodeTabs :tabs="[
-      { title: 'rpm', content: 'wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-rpm-repo.sh' },
-      { title: 'deb', content: 'wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh' }
+      { title: 'RPM', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-rpm-repo.sh` },
+      { title: 'DEB', content: `wget https://repo.alt.tuxcare.com/alt-php-els/install-els-alt-php-deb-repo.sh` }
     ]" />
 
 2. Run the installer script with keys. The installation script registers the server in the CLN with the key, adds the yum repository, and adds a PGP key to the server.
 
     <CodeTabs :tabs="[
-      { title: 'rpm', content: 'sh install-els-alt-php-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX' },
-      { title: 'deb', content: 'bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX' }
+      { title: 'RPM', content: `sh install-els-alt-php-rpm-repo.sh --license-key XXX-XXXXXXXXXXXX` },
+      { title: 'DEB', content: `bash install-els-alt-php-deb-repo.sh --license-key XXX-XXXXXXXXXXXX` }
     ]" />
 
 3. Verify that the installation was successful.
@@ -85,72 +149,647 @@ The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Ora
     To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available it means that installation was successful. After which, updates will be available for installation from the repository using the usual command:
 
     <CodeTabs :tabs="[
-      { title: 'rpm', content: 'yum upgrade' },
-      { title: 'deb', content: 'apt upgrade' }
+      { title: 'RPM', content: `yum upgrade` },
+      { title: 'DEB', content: `apt upgrade` }
     ]" />
 
-4. To display information about the installed package, run the following command: 
+4. Install PHP package. Each version of PHP can be installed individually or all versions at once.
+
+   * Standard commands to install each version separately, for example, installing alt-php73:
+
+     <CodeTabs :tabs="[
+       { title: 'RPM', content: `yum install alt-php73*` },
+       { title: 'DEB', content: `apt-get install alt-php73*` }
+     ]" />
+
+   * To install all versions at the same time:
+
+     <CodeTabs :tabs="[
+       { title: 'RPM', content: `yum groupinstall alt-php` },
+       { title: 'DEB', content: `apt-get install alt-php` }
+     ]" />
+
+   * To find out which groups/meta-package are available for installation, use the following command:
+ 
+     <CodeTabs :tabs="[
+       { title: 'RPM', content: `sudo yum group list` },
+       { title: 'DEB', content: `apt list -a | grep alt-php` }
+     ]" />
+
+     For example:
+
+     <CodeTabs :tabs="[
+     { title: 'RPM', content:
+     `sudo yum group list 
+     ............\n
+     Available Environment Groups:
+       Server with GUI
+       Server
+       Minimal Install
+       CloudLinux OS Admin (minimal)
+       CloudLinux OS Solo (minimal)
+       Workstation
+       Custom Operating System
+       Virtualization Host
+     Available Groups:
+       alt-nodejs
+       alt-nodejs10
+       alt-nodejs11
+       alt-nodejs12
+       alt-nodejs14
+       alt-nodejs6
+       alt-nodejs8
+       alt-nodejs9
+       alt-php
+       alt-php44
+       alt-php51
+       alt-php52
+     ..................
+       alt-ruby30
+       alt-ruby31
+       alt-ruby32` },
+     { title: 'DEB', content:
+     `apt list -a | grep alt-php 
+     ............
+     alt-php-config/unknown 1-51.1 amd64
+     alt-php-internal-bcmath/unknown 7.4.33-13.1 amd64
+     alt-php-internal-bcmath/unknown 7.4.13-3 amd64
+     alt-php-internal-cli/unknown,now 7.4.33-13.1 amd64 [installed,automatic]
+     alt-php-internal-cli/unknown 7.4.13-3 amd64
+     alt-php-internal-common/unknown,now 7.4.33-13.1 amd64 [installed,automatic]
+     alt-php-internal-common/unknown 7.4.13-3 amd64
+     .........
+     alt-php83-soap/unknown 8.3.0rc3-1 amd64
+     alt-php83-sodium/unknown 8.3.0rc3-1 amd64
+     alt-php83-tidy/unknown 8.3.0rc3-1 amd64
+     alt-php83-xml/unknown 8.3.0rc3-1 amd64
+     alt-php83/unknown 8.3.0rc3-1 amd64
+     alt-php/unknown 1-5 all` }
+     ]" />
+
+   * To get a list of packages of a specific group or meta package, use the following command:
+
+     <CodeTabs :tabs="[
+       { title: 'RPM', content: `sudo yum groupinfo alt-phpXY` },
+       { title: 'DEB', content: `apt-cache showpkg alt-phpXY` }
+     ]" />
+
+     Replace `XY` with a version of alt-php. For example:
+
+     <CodeTabs :tabs="[
+     { title: 'RPM', content:
+     `sudo yum groupinfo alt-php72 
+     ............\n
+     Group: alt-php72
+     Description: PHP 7.2.x packages for CloudLinux OS PHP Selector
+     Default Packages:
+       alt-php72
+       alt-php72-bcmath
+       alt-php72-brotli
+       alt-php72-cli
+       alt-php72-common
+       alt-php72-dba
+       alt-php72-devel
+       ................
+       alt-php72-xml
+       alt-php72-xmlrpc` },
+     { title: 'DEB', content:
+     `apt-cache showpkg alt-php72
+     ............
+     Dependencies:
+     7.2.34-34 - alt-php72-cli (5 7.2.34-34) alt-php72-common (5 7.2.34-34) libcurl4-openssl-dev (0 (null)) libreadline-dev (0 (null)) libwebp-dev (0 (null))
+     7.2.34-33 - alt-php72-cli (5 7.2.34-33) alt-php72-common (5 7.2.34-33) libcurl4-openssl-dev (0 (null)) libreadline-dev (0 (null)) libwebp-dev (0 (null))
+     7.2.34-19.2 - alt-pcre (0 (null)) alt-php72-cli (5 7.2.34-19.2) alt-php72-common (5 7.2.34-19.2) alt-php-config (2 1-45) alt-sqlite (0 (null)) libcurl4-openssl-dev (0 (null)) libreadline-dev (0 (null)) libwebp-dev (0 (null)) libxml2 (0 (null))` }
+     ]" />
+
+   ::: tip Important!
+   When executing the `apt` command, a warning may appear:
+
+   ```
+   WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+   ```
+
+   The `apt` commandline is designed as an end-user tool and it may change behavior between versions. 
+   While it tries not to break backward compatibility this is not guaranteed either if a change seems beneficial for interactive use.
+   All features of `apt` are available in dedicated APT tools like `apt-get` and `apt-cache` as well. 
+   `apt` just changes the default value of some options. Therefore, we recommend using these commands (potentially with some additional options enabled) as they keep backward compatibility as much as possible.
+   :::
+
+### Useful Commands and Usage of PHP ELS
+
+When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt) the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
+
+<TableTabs>
+
+  <template #Check_current_version_of_alt-php_packages>
+
+To check whether the package is installed and see its current version, use the following command based on your OS:
+
+  <CodeTabs :tabs="[
+    { title: 'RPM', content: `sudo yum list installed | grep php` },
+    { title: 'DEB', content: `dpkg -l | grep php` }
+  ]" />
+
+  For example, alt-php73:
+
+  <CodeTabs :tabs="[
+  { title: 'RPM', content:
+  `sudo yum list installed | grep php 
+  ............
+  alt-php-config.noarch                       1-54.el8                                               @cloudlinux-updates-testing
+  alt-php-internal.x86_64                     7.4.33-6.el8                                           @cloudlinux-updates-testing
+  alt-php-internal-cli.x86_64                 7.4.33-6.el8                                           @cloudlinux-updates-testing
+  alt-php-internal-common.x86_64              7.4.33-6.el8                                           @cloudlinux-updates-testing
+  alt-php-internal-intl.x86_64                7.4.33-6.el8                                           @cloudlinux-updates-testing
+  alt-php-internal-mbstring.x86_64            7.4.33-6.el8                                           @cloudlinux-updates-testing
+  alt-php-libc-client11.x86_64                2007f-3.el8                                            @cloudlinux-updates-testing
+  alt-php-ssa.x86_64                          0.4-3.el8                                              @AppStream\n
+  alt-php73.x86_64                            1:7.3.33-18.el8                                        @cloudlinux-updates-testing
+  alt-php73-apm-agent.x86_64                  1.9.0-1.el8                                            @cloudlinux-updates-testing
+  alt-php73-bcmath.x86_64                     1:7.3.33-18.el8                                        @cloudlinux-updates-testing
+  alt-php73-bcmath-debuginfo.x86_64           1:7.3.31-2.el8                                         @cloudlinux-updates-testing
+  alt-php73-brotli.x86_64                     0.5.0-2.el8                                            @cloudlinux-x86_64-server-8
+  .....................
+  alt-php73-xmlrpc-debuginfo.x86_64           1:7.3.31-2.el8                                         @cloudlinux-updates-testing` },
+  { title: 'DEB', content:
+  `dpkg -l | grep php  
+  ............
+  ii  alt-php-internal-cli                  7.4.33-13.1                       amd64        command-line interpreter for the PHP scripting language
+  ii  alt-php-internal-common               7.4.33-13.1                       amd64        documentation, examples and common module for PHP
+  ii  alt-php-internal-intl                 7.4.33-13.1                       amd64        Internationalisation module for PHP
+  ii  alt-php-internal-mbstring             7.4.33-13.1                       amd64        MBSTRING module for PHP
+  ii  alt-php-libc-client                   2007f-1                           amd64        Provides a common API for accessing mailboxes.
+  ii  alt-php73                             7.3.33-19                         amd64        server-side, HTML-embedded scripting language (metapackage)
+  ii  alt-php73-bcmath                      7.3.33-19                         amd64        Bcmath module for PHP
+  ii  alt-php73-cli                         7.3.33-19                         amd64        command-line interpreter for the PHP scripting language
+  ii  alt-php73-common                      7.3.33-19                         amd64        documentation, examples and common module for PHP
+  ii  alt-php73-dba                         7.3.33-19                         amd64        DBA module for PHP
+  ii  alt-php73-dev                         7.3.33-19                         amd64        Files for PHP7.0 module development
+  ii  alt-php73-enchant                     7.3.33-19                         amd64        Enchant module for PHP
+  ii  alt-php73-firebird                    7.3.33-19                         amd64        firebird module for PHP
+  ......................
+  ii  alt-php73-xmlrpc                      7.3.33-19                         amd64        XMLRPC-EPI module for PHP` }
+  ]" />
+
+  </template>
+
+  <template #Display_information_about_the_installed_alt-php_package>
+
+To display detailed information about the installed package, run the following command: 
     
+  <CodeTabs :tabs="[
+    { title: 'RPM', content: `yum info alt-php73` },
+    { title: 'DEB', content: `alt-php73-cli` }
+  ]" />
+
+  An example output:
+
+  <CodeTabs :tabs="[
+  { title: 'RPM', content: 
+  `Available Packages
+  Name        : alt-php73
+  Arch        : x86_64
+  Epoch       : 1
+  Version     : 7.3.33
+  Release     : 5.2.el7
+  Size        : 22 k
+  Repo        : alt-php-els/7
+  Summary     : PHP scripting language for creating dynamic web sites
+  URL         : http://www.php.net/
+  License     : PHP and LGPLv2 and LGPLv2+
+  Description : PHP is an HTML-embedded scripting language.` },
+  { title: 'DEB', content: 
+  `Package: alt-php73-cli
+  Source: php
+  Version: 7.3.18-1
+  Architecture: amd64
+  Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
+  Installed-Size: 51694
+  Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
+  Homepage: http://www.php.net/
+  Priority: optional
+  Section: libs
+  Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
+  Size: 10247916
+  SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
+  SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
+  MD5sum: d6c664d4f4b229c1e6727804888f6079
+  Description: command-line interpreter for the PHP scripting language.
+  Description-md5: 0d83f7bf7177d3376a59b73890c8494d` }
+  ]" />
+
+  </template>
+
+  <template #Find_out_what_dependencies_alt-php_packages_have>
+
+Dependencies for a successful installation of alt packages may vary depending on the specific packages and their versions. However, typically, the system automatically manages dependencies and provides the necessary packages when installing selected components:
+
+  For example:
+
+  <CodeTabs :tabs="[
+    { title: 'RPM', content: `sudo yum deplist alt-php73 ` },
+    { title: 'DEB', content: `sudo apt-cache depends alt-php74` }
+  ]" />
+
+  <CodeTabs :tabs="[
+  { title: 'RPM', content:
+  `sudo yum deplist alt-php73  
+  ............
+  package: alt-php73-1:7.3.15-1.2.el8.x86_64
+    dependency: /bin/sh
+    provider: bash-4.4.20-4.el8_6.x86_64
+    dependency: alt-libcurl
+    provider: alt-libcurl-7.64.0-2.el8.x86_64
+    dependency: alt-libxml2
+    provider: alt-libxml2-2.10.2-3.el8.x86_64
+  ..................
+  package: alt-php73-1:7.3.15-2.2.el8.x86_64
+    dependency: /bin/sh
+    provider: bash-4.4.20-4.el8_6.x86_64
+    dependency: alt-libcurl
+    provider: alt-libcurl-7.64.0-2.el8.x86_64
+  ..................` },
+  { title: 'DEB', content:
+  `sudo apt-cache depends alt-php74  
+  ............
+  alt-php74
+    Depends: alt-php74-cli
+    Depends: alt-php74-common
+    Depends: libreadline-dev
+    Depends: libwebp-dev` }
+  ]" />
+
+  During the installation process, the package manager, such as YUM or APT, 
+automatically handles dependencies, and you will usually see a list of packages that will be installed, 
+modified, or removed to satisfy dependency requirements.
+
+  If there are issues with dependencies, it can often be resolved by manually installing the missing packages. 
+It's important to pay attention to any error messages provided by the system and follow the suggested instructions.
+
+  </template>
+
+  <template #Update_alt_php>
+
+To update alt-php, you typically follow a process that involves using the package management tools provided by CloudLinux.
+
+1. Check for Updates:
+
     <CodeTabs :tabs="[
-      { title: 'rpm', content: 'yum info alt-php73' },
-      { title: 'deb', content: 'alt-php73-cli' }
+      { title: 'RPM', content: `sudo yum check-update` },
+      { title: 'DEB', content:
+      `sudo apt-get update
+      apt list --upgradable` }
     ]" />
 
-    **An example output:**
+   Example:
 
-    <CodeTabs :tabs="[
-    { title: 'rpm', content: 
-    `Available Packages
-    Name        : alt-php73
-    Arch        : x86_64
-    Epoch       : 1
-    Version     : 7.3.33
-    Release     : 5.2.el7
-    Size        : 22 k
-    Repo        : alt-php-els/7
-    Summary     : PHP scripting language for creating dynamic web sites
-    URL         : http://www.php.net/
-    License     : PHP and LGPLv2 and LGPLv2+
-    Description : PHP is an HTML-embedded scripting language.` },
-    { title: 'deb', content: 
-    `Package: alt-php73-cli
-    Source: php
-    Version: 7.3.18-1
-    Architecture: amd64
-    Maintainer: Sergey Fokin <sfokin@cloudlinux.com>
-    Installed-Size: 51694
-    Depends: libbz2-1.0, libc6 (>= 2.14), libcurl3 (>= 7.44.0), libgmp10, libreadline6 (>= 6.0), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), alt-php73-common (= 7.3.18-1), libcurl4-openssl-dev, libnghttp2-14
-    Homepage: http://www.php.net/
-    Priority: optional
-    Section: libs
-    Filename: pool/main/p/php/alt-php73-cli_7.3.18-1_amd64.deb
-    Size: 10247916
-    SHA256: 6f107e60684695b6261871a5540c4742eb6e86befe767ab313d1eacda023e5bb
-    SHA1: e8e7d6ab06470cbda5f5ef65a48c7c527ff52e9b
-    MD5sum: d6c664d4f4b229c1e6727804888f6079
-    Description: command-line interpreter for the PHP scripting language.
-    Description-md5: 0d83f7bf7177d3376a59b73890c8494d` }
-    ]" />    
+   <CodeTabs :tabs="[
+   { title: 'RPM', content:
+   `sudo yum check-update  
+   ............ \n
+   kernel.x86_64                                    1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
+   kernel-core.x86_64                               1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
+   kernel-modules.x86_64                            1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
+   kernel-tools.x86_64                              1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
+   kernel-tools-libs.x86_64                         1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
+   python3-perf.x86_64                              1:4.18.0-513.9.1.lve.el8                    cloudlinux-x86_64-server-8
+   Obsoleting Packages
+   alt-python-cllib.x86_64                          2.0.8-3.el8.cloudlinux                      cloudlinux-updates-testing
+       alt-python27-cllib.x86_64                    3.3.9-1.el8.cloudlinux                      @cloudlinux-updates-testing` },
+   { title: 'DEB', content:
+   `sudo apt-get update  
+   ............\n
+   Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+   Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease
+   Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+   Hit:4 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux/stable/20.04 focal InRelease
+   Hit:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+   Get:6 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux/testing/20.04 focal InRelease [1,168 B]
+   Hit:7 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux-ea4/stable/20.04 focal InRelease
+   Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2,604 kB]
+   Hit:9 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux-ea4/testing/20.04 focal InRelease
+   Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,994 kB]
+   Get:11 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [680 kB]
+   Get:12 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [914 kB]
+   Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [913 kB]
+   Get:14 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [633 kB]
+   Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [761 kB]
+   Get:16 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,139 kB]
+   Get:17 https://repo.cloudlinux.com/cloudlinux-ubuntu/cloudlinux/testing/20.04 focal/main amd64 Packages [84.8 kB]
+   Fetched 11.0 MB in 5s (2,182 kB/s)
+   Reading package lists... Done\n
+   apt list --upgradable\n 
+   ............
+   Listing... Done
+   alt-python27-cllib/unknown 3.3.9-1 amd64 [upgradable from: 3.3.8-1]
+   curl/focal-updates,focal-security 7.68.0-1ubuntu2.21 amd64 [upgradable from: 7.68.0-1ubuntu2.20]
+   libcurl3-gnutls/focal-updates,focal-security 7.68.0-1ubuntu2.21 amd64 [upgradable from: 7.68.0-1ubuntu2.20]
+   libcurl4-openssl-dev/focal-updates,focal-security 7.68.0-1ubuntu2.21 amd64 [upgradable from: 7.68.0-1ubuntu2.20]
+   libcurl4/focal-updates,focal-security 7.68.0-1ubuntu2.21 amd64 [upgradable from: 7.68.0-1ubuntu2.20]
+   librados2/focal-updates 15.2.17-0ubuntu0.20.04.5 amd64 [upgradable from: 15.2.17-0ubuntu0.20.04.4]
+   librbd1/focal-updates 15.2.17-0ubuntu0.20.04.5 amd64 [upgradable from: 15.2.17-0ubuntu0.20.04.4]
+   mod-hostinglimits/unknown 1.0-41 amd64 [upgradable from: 1.0-40]` }
+   ]" />
 
-#### How to install packages
 
-Each version of PHP can be installed individually or all versions at once.
+2. Update packages:
+    
+   * Update all groups/meta-packages with names starting with "alt-php":
 
-* Standard commands to install each version separately, for example, installing alt-php73:
+       <CodeTabs :tabs="[
+         { title: 'RPM', content: `sudo yum update alt-php*` },
+         { title: 'DEB', content: `sudo apt-get upgrade alt-php*` }
+       ]" />
 
-  <CodeTabs :tabs="[
-    { title: 'rpm', content: 'yum install alt-php73*' },
-    { title: 'deb', content: 'apt-get install alt-php73*' }
-  ]" />
+   * Update a group/meta-package named "alt-php":
 
-* To install all versions at the same time:
+       <CodeTabs :tabs="[
+         { title: 'RPM', content: `sudo yum groupupdate alt-php` },
+         { title: 'DEB', content: `sudo apt-get upgrade alt-php` }
+       ]" />
 
-  <CodeTabs :tabs="[
-    { title: 'rpm', content: 'yum groupinstall alt-php' },
-    { title: 'deb', content: 'apt-get install alt-php' }
-  ]" />
+   * You can specify a group/meta-package with a specific version of alt-php:
 
-### Additional configurations (optional)
+       <CodeTabs :tabs="[
+         { title: 'RPM', content: `sudo yum groupupdate alt-phpXY` },
+         { title: 'DEB', content: `sudo apt-get upgrade alt-phpXY` }
+       ]" />
+
+     Replace `XY` with a version of alt-php. For example:
+
+     <CodeTabs :tabs="[
+     { title: 'RPM', content:
+     `sudo yum groupupdate alt-php74  
+     ............ \n
+     Dependencies resolved.
+     ========================================================================================================================
+     Package                           Architecture    Version                    Repository                           Size
+     ========================================================================================================================
+     Installing group/module packages:
+     alt-php74                         x86_64          7.4.33-13.el8              cloudlinux-updates-testing           24 k
+     alt-php74-bcmath                  x86_64          7.4.33-13.el8              cloudlinux-updates-testing           34 k
+     alt-php74-brotli                  x86_64          0.5.0-2.el8                cloudlinux-x86_64-server-8          293 k
+     alt-php74-cli                     x86_64          7.4.33-13.el8              cloudlinux-updates-testing          9.3 M
+     alt-php74-common                  x86_64          7.4.33-13.el8              cloudlinux-updates-testing          480 k
+     .....................
+       libdav1d                          x86_64          0.5.2-1.el8                cloudlinux-updates-testing          346 k
+     svt-av1-libs                      x86_64          0.8.7-1.el8                cloudlinux-updates-testing          4.7 M
+     Installing Groups:
+     alt-php74\n
+     Transaction Summary
+     ========================================================================================================================
+     Install  53 Packages\n
+     Total download size: 38 M
+     Installed size: 139 M
+     Is this ok [y/N]:` },
+     { title: 'DEB', content:
+     `sudo apt-get upgrade alt-php83  
+     ............
+     Reading package lists... Done
+     Building dependency tree
+     Reading state information... Done
+     Calculating upgrade... Done
+     The following NEW packages will be installed:
+       alt-php83 alt-php83-cli alt-php83-common
+     The following packages will be upgraded:
+       alt-python27-cllib curl libcurl3-gnutls libcurl4 libcurl4-openssl-dev libpq5 librados2 librbd1 mod-hostinglimits
+     9 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+     Need to get 12.3 MB of archives.
+     After this operation, 44.7 MB of additional disk space will be used.
+     Do you want to continue? [Y/n]` }
+     ]" />
+
+  </template>
+
+  <template #Search_for_packages_in_repositories>
+
+To search for alt-php packages in repositories:
+
+<CodeTabs :tabs="[
+  { title: 'RPM', content: `sudo yum search alt-package-name` },
+  { title: 'DEB', content: `ssudo apt search alt-package-name` }
+]" />
+
+For example:
+
+<CodeTabs :tabs="[
+{ title: 'RPM', content:
+`sudo yum search alt-php73-firebird  
+............\n
+========================================================= Name Exactly Matched: alt-php73-firebird =========================================================
+alt-php73-firebird.x86_64 : Firebird and Interbase extensions
+======================================================== Name & Summary Matched: alt-php73-firebird ========================================================
+alt-php73-firebird-debuginfo.x86_64 : Debug information for package alt-php73-firebird` },
+{ title: 'DEB', content:
+`sudo apt search alt-php73-firebird  
+............ \n
+Sorting... Done
+Full Text Search... Done
+alt-php73-firebird/unknown,now 7.3.33-19 amd64 [installed]
+  firebird module for PHP` }
+]" />
+
+When using these commands, replace `alt-package-name` with the specific name of the package you are looking for or want to install.
+
+  </template>
+
+  <template #The_bin_files>
+
+<CodeWithCopy>
+
+```text
+ls -l /opt/alt/phpXY/usr/bin/
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
+bytekit          hphpa            pear             pecl             phar.phar        phpcb            php-config       phpcpd           phploc           phpunit-skelgen
+dbunit           lsphp            peardev          phar             php              php-cgi          phpcov           phpize           phpunit          ppw
+```
+
+  </template>
+
+  <template #Modules_and_pecl_extensions>
+
+<CodeWithCopy>
+
+```text
+ls /opt/alt/phpXY/usr/lib64/php/modules/
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
+ZendGuardLoader.so  imagick.so         oci8.so          stem.so
+amqp.so             imap.so            odbc.so          stomp.so
+apc.so              inclued.so         opcache.so       suhosin.so
+apcu.so             inotify.so         pdf.so           sybase_ct.so
+apm.so              interbase.so       pdo.so           sysvmsg.so
+ares.so             intl.so            pdo_dblib.so     sysvsem.so
+bcmath.so           ioncube_loader.so  pdo_firebird.so  sysvshm.so
+big_int.so          ixed.5.4.lin       pdo_mysql.so     tideways.so
+bitset.so           jsmin.so           pdo_oci.so       tidy.so
+brotli.so           json.so            pdo_odbc.so      timezonedb.so
+bz2_filter.so       ldap.so            pdo_pgsql.so     trader.so
+dba.so              libevent.so        pdo_sqlite.so    translit.so
+dbase.so            libsodium.so       pgsql.so         uploadprogress.so
+dbx.so              luasandbox.so      phalcon.so       uri_template.so
+dom.so              lzf.so             phar.so          uuid.so
+doublemetaphone.so  mailparse.so       posix.so         wddx.so
+eaccelerator.so     mbstring.so        propro.so        weakref.so
+eio.so              mcrypt.so          pspell.so        xcache.so
+enchant.so          memcache.so        quickhash.so     xcache_3.so
+fileinfo.so         memcached.so       radius.so        xdebug.so
+functional.so       mongo.so           raphf.so         xhprof.so
+gd.so               mongodb.so         rar.so           xmlreader.so
+gender.so           msgpack.so         recode.so        xmlrpc.so
+geoip.so            mssql.so           redis.so         xmlwriter.so
+geos.so             mysql.so           rsync.so         xrange.so
+gmagick.so          mysqli.so          snmp.so          xsl.so
+gnupg.so            mysqlnd.so         soap.so          yaf.so
+haru.so             ncurses.so         sockets.so       yaml.so
+hidef.so            nd_mysql.so        solr.so          yaz.so
+htscanner.so        nd_mysqli.so       spl_types.so     zip.so
+http.so             nd_pdo_mysql.so    ssh2.so          zmq.so
+igbinary.so         oauth.so           stats.so
+```
+
+  </template>
+
+  <template #Running_code_on_a_specific_version_through_the_CLI>
+
+<CodeWithCopy>
+
+```text
+/opt/alt/phpXY/usr/bin/php helloworld.php
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+
+```text
+Hello, World!
+```
+
+  </template>
+
+  <template #Location_of_ini_config_files>
+
+<CodeWithCopy>
+
+```text
+/opt/alt/phpXY/etc/php.d.all/
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
+40-leveldb.ini        mailparse.ini     redis.ini
+40-snuffleupagus.ini  mbstring.ini      rrd.ini
+40-vld.ini            mcrypt.ini        snmp.ini
+amqp.ini              memcache.ini      snuffleupagus-default.rules
+apcu.ini              memcached.ini     soap.ini
+bcmath.ini            mongodb.ini       sockets.ini
+dba.ini               mysqli.ini        sodium.ini
+dbase.ini             mysqlnd.ini       solr.ini
+dom.ini               nd_mysqli.ini     sourceguardian.ini
+eio.ini               nd_pdo_mysql.ini  sqlsrv.ini
+enchant.ini           newrelic.ini      ssh2.ini
+ffmpeg.ini            oauth.ini         stats.ini
+fileinfo.ini          oci8.ini          swoole.ini
+gd.ini                odbc.ini          sysvmsg.ini
+gearman.ini           opcache.ini       sysvsem.ini
+gender.ini            pdf.ini           sysvshm.ini
+geoip.ini             pdo.ini           tideways_xhprof.ini
+geos.ini              pdo_dblib.ini     tidy.ini
+gmagick.ini           pdo_firebird.ini  timezonedb.ini
+gnupg.ini             pdo_mysql.ini     trader.ini
+grpc.ini              pdo_oci.ini       uploadprogress.ini
+http.ini              pdo_odbc.ini      uuid.ini
+igbinary.ini          pdo_pgsql.ini     vips.ini
+imagick.ini           pdo_sqlite.ini    xdebug.ini
+imap.ini              pdo_sqlsrv.ini    xmlreader.ini
+inotify.ini           pgsql.ini         xmlrpc.ini
+intl.ini              phalcon4.ini      xmlwriter.ini
+ioncube_loader.ini    phar.ini          xsl.ini
+jsmin.ini             posix.ini         yaml.ini
+json.ini              propro.ini        yaz.ini
+ldap.ini              pspell.ini        zip.ini
+luasandbox.ini        psr.ini           zmq.ini
+lzf.ini               raphf.ini
+```
+
+  </template>
+
+  <template #Location_of_default.ini>
+
+<CodeWithCopy>
+
+```text
+ls /opt/alt/phpXY/etc/php.d/default.ini
+```
+
+</CodeWithCopy>
+
+  </template>
+
+  <template #Listing_enabled_modules_on_a_specific_version>
+
+<CodeWithCopy>
+
+```text
+/opt/alt/php73/usr/bin/php -m
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
+[PHP Modules]
+bz2
+calendar
+Core
+ctype
+curl
+date
+exif
+filter
+ftp
+gettext
+gmp
+hash
+iconv
+libxml
+openssl
+pcntl
+pcre
+readline
+Reflection
+session
+shmop
+SimpleXML
+SPL
+sqlite3
+standard
+tokenizer
+xml
+zlib
+[Zend Modules]
+```
+
+  </template>
+
+  <template #Enabling_a_module>
 
 The **default.ini** file is important for configuring alt-php. It sets default PHP settings and can be used to enable default extensions. We do not modify this file on our side. You need to update **default.ini** yourself to adjust PHP settings based on your Endless Lifecycle Support (ELS) usage and specific requirements.
 
@@ -203,7 +842,55 @@ PHP extensions can also be enabled or disabled through their `.ini` configuratio
   If the same extension is present in multiple `.ini` configuration files within the `/opt/alt/phpXY/etc/php.d/` directory, you may see warnings in PHP logs and possibly on your site.
   :::
 
-#### Increase Upload/Memory Limits
+#### Enabling_a_module_through_the_CLI
+
+<CodeWithCopy>
+
+```text
+/opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
+```
+
+</CodeWithCopy>
+
+**An example output:**
+
+```text
+[PHP Modules]
+bz2
+calendar
+Core
+ctype
+curl
+date
+exif
+filter
+ftp
+gettext
+gmp
+hash
+iconv
+igbinary
+libxml
+openssl
+pcntl
+pcre
+readline
+Reflection
+session
+shmop
+SimpleXML
+SPL
+sqlite3
+standard
+tokenizer
+xml
+zlib
+[Zend Modules]
+```
+
+  </template>
+
+  <template #Increase_upload_or_memory_limits>
 
 If you need to increase memory and upload size limits:
 
@@ -220,6 +907,9 @@ If you need to increase memory and upload size limits:
 
     </CodeWithCopy>
 
+  </template>
+
+</TableTabs>
 
 ## Installation Instructions for Windows
 
@@ -401,7 +1091,6 @@ This section contains information about available ELS for PHP OVAL streams that 
 
 Currently, we provide OVAL data for the following OS versions:
 
-* EL 6 (CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el6/oval.xml)
 * EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml)
 * EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [oval.xml](http://security.tuxcare.com/oval/els_alt_php/el9/oval.xml)
@@ -421,16 +1110,16 @@ OVAL can be used with the OpenSCAP tool.
 1. Install OpenSCAP
 
     <CodeTabs :tabs="[
-      { title: 'rpm', content: 'yum install openscap openscap-utils scap-security-guide -y' },
-      { title: 'deb', content: 'apt-get install libopenscap8 -y' }
+      { title: 'RPM', content: `yum install openscap openscap-utils scap-security-guide -y` },
+      { title: 'DEB', content: `apt-get install libopenscap8 -y` }
     ]" />
 
-2. Download an OVAL stream. For example, EL 6:
+2. Download an OVAL stream. For example, EL 8:
 
    <CodeWithCopy>
    
     ```text
-    wget https://security.tuxcare.com/oval/els_alt_php/el6/oval.xml
+    wget https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml
     ```
 
    </CodeWithCopy>
@@ -461,7 +1150,6 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 
 Currently, we provide CSAF data for the following OS versions:
 
-* EL 6 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el6/](https://security.tuxcare.com/csaf/v2/els_alt_php/el6/)
 * EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
 * EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el9/](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/)
@@ -482,7 +1170,6 @@ The CSAF files are published in JSON format which is easy to parse and integrate
 
 Currently, we provide errata for the following OS versions:
 
-* EL 6 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el6/](https://security.tuxcare.com/errata/els_alt_php/el6/)
 * EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
 * EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el9/](https://security.tuxcare.com/errata/els_alt_php/el9/)
@@ -497,241 +1184,231 @@ Currently, we provide errata for the following OS versions:
 
 ## PHP extensions list
 
-You can find the list of the supported add-ons [here](https://docs.cloudlinux.com/cloudlinuxos/alt-ea_packages/#bundled-php-extensions).
+PHP extensions are modules that extend the functionality of the PHP programming language. These extensions provide additional capabilities for working with various types of data, performing specific tasks, interacting with external resources and supporting various protocols.
 
-## How to use PHP-ELS
+The PHP core includes many built-in extensions that provide basic functionality, such as working with databases, string processing, working with images, and others. However, to support more specific tasks and third-party libraries, you can use additional PHP extensions.
 
-When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt) the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
+<TableTabs>
 
-### The *bin* files
+  <template #PHP_5.2_extensions>
+  
+   <div class="notranslate">
 
-<CodeWithCopy>
+   | |  |  |  | |
+   |-|-|-|-|-|
+   |Reflection <br>SPL <br>SimpleXML <br>apc <br>apm <br>ares <br>bcmath <br>bcompiler <br>big_int <br>bitset <br>bloomy <br>bz2 <br>bz2_filter <br>calendar <br>coin_acceptor <br>crack <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>enchant <br>exif <br>ffmpeg* | fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip <br>geos <br>gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>huffman <br>iconv <br>idn <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader| json <br>ldap <br>libxml <br>lzf <br>mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>msgpack <br>mssql <br>mysql <br>mysqli <br>ncurses <br>oauth <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird |  <br>pdo_mysql <br>pdo_oci* <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pgsql <br>phar <br>posix <br>pspell <br>quickhash <br>radius <br>rar <br>readline <br>recode <br>redis <br>rsync <br>session <br>shmop <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl_types <br>sqlite <br>ssh2 <br>standard <br>stats <br>stem | stomp <br>suhosin <br>sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>translit <br>uploadprogress <br>uuid <br>wddx <br>xcache <br>xcache_3 <br>xdebug <br>xhprof <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xsl <br>yaf <br>yaz <br>zend_optimizer <br>zip <br>zlib|
+   </div>
 
-```text
-ls -l /opt/alt/phpXY/usr/bin/
-```
+   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
-</CodeWithCopy>
+  </template>
 
-**An example output:**
+  <template #PHP_5.3_extensions>
 
-```text
-bytekit          hphpa            pear             pecl             phar.phar        phpcb            php-config       phpcpd           phploc           phpunit-skelgen
-dbunit           lsphp            peardev          phar             php              php-cgi          phpcov           phpize           phpunit          ppw
-```
+  <div class="notranslate">
 
-### *Modules* and *pecl* extensions
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |amqp<br> apc <br>apcu <br>apm <br>ares <br>bcmath <br>bcompiler <br>big_int <br>bitset <br>bloomy <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>clamav* <br>coin_acceptor <br>core <br>crack <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br> filter <br>ftp | functional <br> gd <br>gender <br>geoip <br> geos <br> gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>huffman <br>iconv <br>idn <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libevent <br>libxml <br>lzf | mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br> pdo_oci* <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pgsql | phalcon* <br>phar <br> posix <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br> solr <br>spl <br>spl_types <br>sqlite <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin | sybase_ct <br>sysvmsg <br> sysvsem <br> sysvshm <br>tidy <br> tideways <br>timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache* <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xsl <br> xhprof <br>yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
+  </div>
 
-<CodeWithCopy>
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
-```text
-ls /opt/alt/phpXY/usr/lib64/php/modules/
-```
+  </template>
 
-</CodeWithCopy>
+  <template #PHP_5.4_extensions>
 
-**An example output:**
+  <div class="notranslate">
 
-```text
-ZendGuardLoader.so  imagick.so         oci8.so          stem.so
-amqp.so             imap.so            odbc.so          stomp.so
-apc.so              inclued.so         opcache.so       suhosin.so
-apcu.so             inotify.so         pdf.so           sybase_ct.so
-apm.so              interbase.so       pdo.so           sysvmsg.so
-ares.so             intl.so            pdo_dblib.so     sysvsem.so
-bcmath.so           ioncube_loader.so  pdo_firebird.so  sysvshm.so
-big_int.so          ixed.5.4.lin       pdo_mysql.so     tideways.so
-bitset.so           jsmin.so           pdo_oci.so       tidy.so
-brotli.so           json.so            pdo_odbc.so      timezonedb.so
-bz2_filter.so       ldap.so            pdo_pgsql.so     trader.so
-dba.so              libevent.so        pdo_sqlite.so    translit.so
-dbase.so            libsodium.so       pgsql.so         uploadprogress.so
-dbx.so              luasandbox.so      phalcon.so       uri_template.so
-dom.so              lzf.so             phar.so          uuid.so
-doublemetaphone.so  mailparse.so       posix.so         wddx.so
-eaccelerator.so     mbstring.so        propro.so        weakref.so
-eio.so              mcrypt.so          pspell.so        xcache.so
-enchant.so          memcache.so        quickhash.so     xcache_3.so
-fileinfo.so         memcached.so       radius.so        xdebug.so
-functional.so       mongo.so           raphf.so         xhprof.so
-gd.so               mongodb.so         rar.so           xmlreader.so
-gender.so           msgpack.so         recode.so        xmlrpc.so
-geoip.so            mssql.so           redis.so         xmlwriter.so
-geos.so             mysql.so           rsync.so         xrange.so
-gmagick.so          mysqli.so          snmp.so          xsl.so
-gnupg.so            mysqlnd.so         soap.so          yaf.so
-haru.so             ncurses.so         sockets.so       yaml.so
-hidef.so            nd_mysql.so        solr.so          yaz.so
-htscanner.so        nd_mysqli.so       spl_types.so     zip.so
-http.so             nd_pdo_mysql.so    ssh2.so          zmq.so
-igbinary.so         oauth.so           stats.so
-```
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |aapm** <br>amqp <br> apc <br>apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>core <br>ctype <br>curl <br>clos_ssa <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>functional <br>gd <br> gender | geoip <br> geos <br>gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring| mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8* <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql <br>phalcon* <br>phar  | posix <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br> solr <br>sourceguardian <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin <br>sybase_ct <br>sysvmsg | sysvsem <br>sysvshm <br>tidy <br> tideways <br> timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache* <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray** <br>xsl <br> xhprof <br> jsmin <br> yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
+  </div>
 
-### Running code on a specific version through the CLI
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
-<CodeWithCopy>
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
 
-```text
-/opt/alt/phpXY/usr/bin/php helloworld.php
-```
+  </template>
 
-</CodeWithCopy>
+  <template #PHP_5.5_extensions>
 
-**An example output:**
+  <div class="notranslate">
 
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |aapm* <br>amqp <br> apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>clamav* <br>core <br>ctype <br>curl <br> clos_ssa <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br> diseval <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip | geos <br> gettext <br>gmagick <br>gmp <br>gnupg <br>gRPC <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>jsmin <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt | memcache <br>memcached <br>mhash <br>mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8* <br>odbc <br>opcache* <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql | phalcon* <br>phalcon3 <br>phar <br>posix <br>postal* <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br> solr <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin | sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br> tideways <br>timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray <br>xsl <br> xhprof <br>yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq |
+  </div>
 
-```text
-Hello, World!
-```
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
-### Location of *ini* config files
+  </template>
 
-<CodeWithCopy>
+  <template #PHP_5.6_extensions>
 
-```text
-/opt/alt/phpXY/etc/php.d.all/
-```
+  <div class="notranslate">
 
-</CodeWithCopy>
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |aapm* <br> amqp <br> apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>core <br>ctype <br>curl <br> clos_ssa* <br>date <br>dba <br> dbase <br>dbx <br>dom <br>doublemetaphone <br> diseval <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip <br>gettext | geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>haru <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash | mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8 <br>odbc <br>opcache* <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql <br>phalcon* <br>phalcon3 | phar <br>posix <br> postal* <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br> solr | suhosin <br>sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br>translit <br> tideways <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray <br>xsl <br> xhprof <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
+  </div>
 
-**An example output:**
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
-```text
-40-leveldb.ini        mailparse.ini     redis.ini
-40-snuffleupagus.ini  mbstring.ini      rrd.ini
-40-vld.ini            mcrypt.ini        snmp.ini
-amqp.ini              memcache.ini      snuffleupagus-default.rules
-apcu.ini              memcached.ini     soap.ini
-bcmath.ini            mongodb.ini       sockets.ini
-dba.ini               mysqli.ini        sodium.ini
-dbase.ini             mysqlnd.ini       solr.ini
-dom.ini               nd_mysqli.ini     sourceguardian.ini
-eio.ini               nd_pdo_mysql.ini  sqlsrv.ini
-enchant.ini           newrelic.ini      ssh2.ini
-ffmpeg.ini            oauth.ini         stats.ini
-fileinfo.ini          oci8.ini          swoole.ini
-gd.ini                odbc.ini          sysvmsg.ini
-gearman.ini           opcache.ini       sysvsem.ini
-gender.ini            pdf.ini           sysvshm.ini
-geoip.ini             pdo.ini           tideways_xhprof.ini
-geos.ini              pdo_dblib.ini     tidy.ini
-gmagick.ini           pdo_firebird.ini  timezonedb.ini
-gnupg.ini             pdo_mysql.ini     trader.ini
-grpc.ini              pdo_oci.ini       uploadprogress.ini
-http.ini              pdo_odbc.ini      uuid.ini
-igbinary.ini          pdo_pgsql.ini     vips.ini
-imagick.ini           pdo_sqlite.ini    xdebug.ini
-imap.ini              pdo_sqlsrv.ini    xmlreader.ini
-inotify.ini           pgsql.ini         xmlrpc.ini
-intl.ini              phalcon4.ini      xmlwriter.ini
-ioncube_loader.ini    phar.ini          xsl.ini
-jsmin.ini             posix.ini         yaml.ini
-json.ini              propro.ini        yaz.ini
-ldap.ini              pspell.ini        zip.ini
-luasandbox.ini        psr.ini           zmq.ini
-lzf.ini               raphf.ini
-```
+  </template>
 
-### Location of *default.ini*
+  <template #PHP_7.0_extensions>
 
-<CodeWithCopy>
+  <div class="notranslate">
 
-```text
-ls /opt/alt/phpXY/etc/php.d/default.ini
-```
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |aapm* <br>amqp <br> apcu <br>bcmath <br>bitset <br>brotli <br>bz2 <br>clos_ssa* <br> calendar <br>core <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dom <br> diseval <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br> gearman <br> gender <br> geos | geoip <br>gettext <br>gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libsodium <br>libxml <br>lzf <br> luasandbox*  <br>mailparse <br>mbstring <br>mcrypt | memcached <br> memcache <br>mongodb <br>mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8* <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br> psr <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pdo_sqlsrv <br> pdo_oci  <br>pgsql <br>phalcon3 <br>phar | posix <br> postal* <br>propro <br>pspell <br> phalcon4 <br>raphf <br>rar <br>readline <br> rrd <br>redis <br>reflection <br> recode <br>session <br>shmop <br>simplexml <br>snmp<br>snuffleupagus <br>soap <br>sockets <br>sourceguardian <br> sodium <br> solr <br>spl <br>sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>suhosin7 <br>sysvmsg | swoole <br> sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>vld* <br>wddx <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br> xray <br>xsl <br>yaml <br>yaz <br> yaf <br>zip <br>zlib <br>zmq|
+  </div>
 
-</CodeWithCopy>
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
-### Listing enabled modules on a specific version
+  ::: tip Note
+  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
+  Please find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
+  :::
 
-<CodeWithCopy>
+  </template>
 
-```text
-/opt/alt/php73/usr/bin/php -m
-```
+  <template #PHP_7.1_extensions>
 
-</CodeWithCopy>
+  <div class="notranslate">
 
-**An example output:**
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |aapm* <br>amqp <br> snuffleupagus <br> vld <br> apcu <br>bcmath <br>brotli <br>bz2 <br> clos_ssa* <br> calendar <br>core <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dom <br> diseval <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br>gearman <br>gender <br>geoip <br>gettext | geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br> json <br>ldap <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt <br>memcached | memcache <br> mongodb <br>mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8 <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql psr <br> <br>pdo_sqlite <br>pdo_sqlsrv <br>pgsql <br>phalcon3 <br>phar <br> pdf | pdo_oci <br> phalcon4 <br> posix <br>propro <br>pspell <br>psr* <br>raphf <br>rar <br>readline <br>redis <br>reflection <br>rrd <br> recode <br> solr <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl <br> sodium <br> sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>suhosin7 <br>sysvmsg | swoole <br> sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>wddx <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xsl <br>xray <br> yaz <br> yaml <br> yaf <br>zip <br>zlib <br>zmq|
+  </div>
+ 
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
-```text
-[PHP Modules]
-bz2
-calendar
-Core
-ctype
-curl
-date
-exif
-filter
-ftp
-gettext
-gmp
-hash
-iconv
-libxml
-openssl
-pcntl
-pcre
-readline
-Reflection
-session
-shmop
-SimpleXML
-SPL
-sqlite3
-standard
-tokenizer
-xml
-zlib
-[Zend Modules]
-```
+  ::: tip Note
+  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
+  Please find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
+  :::
 
-### Enabling a module through the CLI
+  </template>
 
-<CodeWithCopy>
+  <template #PHP_7.2_extensions>
 
-```text
-/opt/alt/php73/usr/bin/php -d "extension=igbinary.so" -m
-```
+  <div class="notranslate">
 
-</CodeWithCopy>
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |aapm* <br> jsmin <br> psr <br> rrd <br> yaz <br> amqp <br> snuffleupagus <br> vld <br> apcu <br>bcmath <br>brotli <br>bz2 <br>calendar <br> clos_ssa* <br> core <br>ctype <br>curl <br>date <br>dba <br>dom <br> dbase <br> diseval  <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br>gender <br>geoip <br>gettext | gearman <br> geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>json <br>ldap <br>libxml <br>lzf <br> luasandbox* <br> mcrypt <br> memcache <br> mailparse <br>mbstring <br>memcached <br>mongodb | mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8 <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdo <br>pdo_dblib <br>pdo_firebird <br> pdf <br> pdo_oci <br> phalcon4  <br> pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pdo_sqlsrv <br>pgsql <br>phalcon3 <br>phar | posix <br>propro <br>pspell <br>raphf <br>readline <br>redis <br>reflection <br> recode <br> sodium <br> sourceguardian <br> swoole  <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>spl <br>sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>sysvmsg <br>sysvsem | sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>wddx <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xsl <br> xdebug <br> yaf <br>yaml <br>zip <br>zlib <br>zmq <br> xray|
+  </div>
 
-**An example output:**
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
 
-```text
-[PHP Modules]
-bz2
-calendar
-Core
-ctype
-curl
-date
-exif
-filter
-ftp
-gettext
-gmp
-hash
-iconv
-igbinary
-libxml
-openssl
-pcntl
-pcre
-readline
-Reflection
-session
-shmop
-SimpleXML
-SPL
-sqlite3
-standard
-tokenizer
-xml
-zlib
-[Zend Modules]
-```
+  ::: tip Note 
+  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
+  You can find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
+  :::
+
+  </template>
+
+  <template #PHP_7.3_extensions>
+
+  <div class="notranslate">
+
+  | |  |  |  | | |
+  |-|-|-|-|-|-|
+  |ffmpeg* <br> aapm* <br>amqp <br> clos_ssa* <br> gearman <br> jsmin <br> mailparse <br> memcache <br> psr <br> rrd <br> solr <br> tideways_xhprof <br> zmq <br> snuffleupagus <br> vld <br> apcu <br> bz2 <br> brotli <br> calendar <br> core <br> ctype <br> curl <br> date <br> exif <br>enchant <br> filter <br> ftp <br> gettext <br> gmp <br>gnupg <br> hash <br> iconv <br> interbase <br> luasandbox* | libxml <br>mysqlnd <br>opcache <br> openssl <br> pcntl <br> pcre <br>pdo_pgsql <br> phar <br> readline <br> reflection <br> session <br> shmop <br> simplexml <br> sourceguardian <br> spl <br> sqlite3 <br>standard <br> snmp <br> stats <br> tokenizer | trader <br>xmlreader <br>bcmath <br>fileinfo <br> grpc <br>intl <br>lzf <br>nd_mysqli <br>pdf <br>pdo <br>posix <br>swoole <br>uploadprogress <br>xmlrpc <br>gd <br>http <br>ioncube_loader <br> mbstring | nd_pdo_mysql <br>pdo_dblib <br>pdo_sqlite <br>propro <br>soap <br>sysvmsg <br>uuid <br>xmlwriter <br>dbase <br>gender <br>igbinary <br>mcrypt <br>newrelic <br> pdo_firebird <br>pdo_sqlsrv <br>pspell <br>sockets <br>sysvsem <br>vips* <br>xsl | dba <br>geoip <br>imagick <br>json <br>memcached <br>oauth <br>pdo_mysql <br>pgsql <br> raphf <br>sodium <br>sysvshm <br>yaml <br>dom <br>geos <br>imap <br>ldap <br>mongodb <br>oci8 <br>pdo_oci | phalcon3 <br>recode <br>sqlsrv <br> tidy <br>wddx <br>yaz <br>eio <br>gmagick <br>inotify <br>leveldb <br>mysqli <br>odbc <br>pdo_odbc <br>phalcon4 <br>redis <br>ssh2 <br>timezonedb <br>xdebug <br>zip <br> xml <br> zlib <br> xray <br> yaf| 
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  :::tip Note
+  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
+  You can find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
+  :::
+
+  </template>
+
+  <template #PHP_7.4_extensions>
+
+  <div class="notranslate">
+
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |leveldb <br> sourceguardian <br> ffmpeg* <br> amqp <br> clos_ssa* <br> gearman <br> ioncube_ loader <br> jsmin <br> mailparse <br> mcrypt <br> memcache <br> psr <br> rrd <br> solr <br> ssh2 <br> tideways_xhprof <br> yaz <br> zmq <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> eio <br> enchant <br> exif <br> fileinfo <br> filter <br> ftp <br> gd <br> gender <br> geoip <br> geos | gettext <br> gmagick <br> gmp <br> gnupg <br> grpc <br> hash <br> http <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> json <br> ldap <br> libxml <br> luasandbox* <br> lzf <br> mbstring <br> memcached <br> mongodb | mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> snuffleupagus <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> pdo_pgsql <br> vld <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phalcon4 <br> phar <br> posix <br> propro <br> pspell <br> raphf <br> readline <br> redis <br> reflection <br>phalcon5 <br> session <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets <br> sodium <br> spl <br> sqlite3 <br> sqlsrv <br> standard | stats <br> swoole <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> xray <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc <br> xmlwriter <br> xsl <br> yaml <br> zip <br> zlib |
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  </template>
+
+  <template #PHP_8.0_extensions>
+
+  <div class="notranslate">
+
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |brotli <br> amqp <br> clos_ssa* <br> core <br> date <br> filter <br> gearman <br> geoip <br> gmagick <br> gnupg* <br> grpc <br> apcu <br> bcmath <br> bz2 <br> calendar <br> ctype <br> curl <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo | hash <br> igbinary <br> inotify <br> jsmin <br> json <br> libxml <br> mcrypt <br> memcache ftp <br> gd <br> gettext <br> gmp <br> iconv <br> imagick <br> imap <br> intl <br> ldap <br> lzf <br> mailparse <br> mbstring | mongodb <br> newrelic <br> oauth <br> oci8 <br> openssl <br> pcntl <br> pcre <br> pdo_oci <br> pdo_sqlsrv <br> readline <br> redis <br> reflection <br> rrd <br> session memcached <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> odbc <br> opcache <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_odbc | snuffleupagus <br> solr <br> SPL <br> sqlsrv <br> ssh2 <br> standard <br> swoole <br> tideways_xhprof <br> trader pdo_pgsql <br> pdo_sqlite <br> pgsql <br> phar <br> posix <br> pspell <br> psr <br> raphf <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets | uploadprogress <br> uuid <br> vips* <br> vld <br> xdebug <br> xmlrpc** <br> yaml <br> yaz <br> zip <br> zlib sodium <br> sqlite3 <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> xml <br> xmlreader <br> xmlwriter <br> xsl <br> zmq <br>sourceguardian <br> phalcon5 <br> xray |
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+  <template #PHP_8.1_extensions>
+
+  <div class="notranslate">
+
+  | |  |  |  | |
+  |-|-|-|-|-|
+  |amqp <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> clos_ssa*** <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo <br> filter <br> ftp | gd <br> geoip <br> gearman <br> gettext <br> gmagick <br> gmp <br> gnupg** <br> grpc <br> hash <br> ioncube_loader <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> jsmin <br> json <br> ldap <br> libxml <br> lzf <br> mailparse <br> mbstring <br> mcrypt | memcache <br> memcached <br> mongodb <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> phalcon5 <br> pdo_pgsql <br> pdo_firebird <br> pdo_sqlite <br> pdo_sqlsr | pgsql <br> phar <br> posix <br> process <br> pspell <br> psr <br> rrd <br> raphf <br> readline <br> redis <br> Reflection <br> session <br> shmop <br> SimpleXML v snmp <br> solr <br> sourceguardian <br> soap <br> sockets <br> sodium <br> SPL <br> sqlite3 <br> sqlsrv <br> ssh2 <br> standard <br> swoole | sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaf <br> yaml <br> zip <br> zlib <br> zmq <br> xray |
+  </div>
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+  <template #PHP_8.2_extensions>
+
+  | | | | | |
+  |-|-|-|-|-|
+  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> swoole** <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> vips* <br> xdebug** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+  <template #PHP_8.3_extensions>
+
+  | | | | | |
+  |-|-|-|-|-|
+  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> elastic_apm <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phalcon5 <br> phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> snuffleupagus <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc. 
+
+  </template>
+
+  <template #PHP_8.4_extensions>
+
+  | | | | | |
+  |-|-|-|-|-|
+  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> elastic_apm <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phalcon5 <br> phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> snuffleupagus <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
+
+  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+
+  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+
+  </template>
+
+</TableTabs>
 
 ### Conclusion
 
