@@ -145,11 +145,6 @@ License     : GPLv2
 Description : CentOS Server simulate els release files
 ```
 
-### CloudLinux 6 ELS
-
-:::tip
-You do not need ELS for CentOS 6 subscription if you are already using CloudLinux OS 6. You can find more information [here](https://docs.cloudlinux.com/cln/billing/#cloudlinux-os-6-extended-lifecycle-support).
-:::
 
 ### OracleLinux 6 ELS
 
@@ -590,54 +585,88 @@ Identifying the vulnerabilities that apply to your systems is an important task 
 
 OpenSCAP is an open source vulnerability scanner and compliance tool and it can be used to scan a system protected by TuxCare ELS. The following command show how to produce a vulnerability report for the system:
 
-1. Install els-define and OpenSCAP
+1. Install els-define and OpenSCAP:
 
-  * for rpm systems:
-  ```
-  yum install els-define openscap openscap-utils scap-security-guide -y
-  ```
-  * for deb systems:
-  ```
-  apt-get install els-define libopenscap8 -y
-  ```
-2. Download OVAL stream. For example, Ubuntu 18.04:
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum install els-define openscap openscap-utils scap-security-guide -y` },
+     { title: 'DEB', content: `apt-get install els-define libopenscap8 -y` }
+   ]" />
 
-```
-wget https://security.tuxcare.com/oval/els_os/ubuntu18.04els/oval.xml
-```
-3. Run scanning:
+2. Before running a scan, make sure the system is up to date and running the latest kernel:
 
-```
-oscap oval eval --results results.xml --report report.html oval.xml
-```
-4. Examine scan results report
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum update -y` },
+     { title: 'DEB', content: `apt-get update && apt-get upgrade -y` }
+   ]" />
 
-Following the example above scan results report will be saved to repot.html file in current directory. This file can then be downloaded for analysis or published directly with local web server, for example:
-```
-python3 -m http.server 8000
-```
-or for python2
-```
-python -m SimpleHTTPServer 8000
-```
+3. Reboot the system.
 
-Assuming the above command is run from the directory with report.html file, the webpage with the report can then be accessed on `http://<server-ip-addess>:8000/report.html`cve through a web browser.
+4. **RPM-based system only**: after reboot, remove older kernel versions:
 
-![](/images/available-cve-fixes-and-their-status.png)
+   <CodeTabs :tabs="[
+     { title: 'EL 6, EL 7', content: `package-cleanup --oldkernels --count=1 -y` },
+     { title: 'EL 8, EL 9', content: `dnf remove --oldinstallonly -y` }
+   ]" />
 
-The report includes a table with vulnerabilities and their status on examined system. Line as the following one reports that the system is vulnerable to the CVE-2023-2828:
+4. Download OVAL stream. For example, Ubuntu 18.04:
 
-```
-update oval:com.tuxcare.clsa:def:1688677755 true patch [CLSA-2023:1688677755], [CVE-2023-2828] Fix CVE(s): CVE-2023-2828
-```
+   <CodeWithCopy>
 
-The table also includes corresponding hyperlinks to advisory pages where the package and the version containing the fix can be found as well as the command to run on the target system in order to install the update.
+   ```
+   wget https://security.tuxcare.com/oval/els_os/ubuntu18.04els/oval.xml
+   ```
 
-Lines like the one below designate that the fix for corresponding CVE is allready installed on the system, and no further action is needed:
+   </CodeWithCopy>
 
-```
-oval:com.tuxcare.clsa:def:1694538670 false patch [CLSA-2023:1694538670], [CVE-2022-40433] Fix CVE(s): CVE-2022-40433
-```
+5. Run the scan:
+
+   <CodeWithCopy>
+
+   ```
+   oscap oval eval --results results.xml --report report.html oval.xml
+   ```
+
+   </CodeWithCopy>
+
+4. Examine scan results report.
+
+   Following the example above scan results report will be saved to report.html file in current directory. This file can then be downloaded for analysis or published directly with local web server, for example:
+
+   <CodeWithCopy>
+
+   ```
+   python3 -m http.server 8000
+   ```
+
+   </CodeWithCopy>
+
+   or for python2
+
+   <CodeWithCopy>
+
+   ```
+   python -m SimpleHTTPServer 8000
+   ```
+
+   </CodeWithCopy>
+
+   Assuming the above command is run from the directory with report.html file, the webpage with the report can then be accessed on `http://<server-ip-addess>:8000/report.html`cve through a web browser.
+
+   ![](/images/available-cve-fixes-and-their-status.png)
+
+   The report includes a table with vulnerabilities and their status on examined system. Line as the following one reports that the system is vulnerable to the CVE-2023-2828:
+
+   ```
+   update oval:com.tuxcare.clsa:def:1688677755 true patch [CLSA-2023:1688677755], [CVE-2023-2828] Fix CVE(s): CVE-2023-2828
+   ```
+
+   The table also includes corresponding hyperlinks to advisory pages where the package and the version containing the fix can be found as well as the command to run on the target system in order to install the update.
+
+   Lines like the one below designate that the fix for corresponding CVE is allready installed on the system, and no further action is needed:
+ 
+   ```
+   oval:com.tuxcare.clsa:def:1694538670 false patch [CLSA-2023:1694538670], [CVE-2022-40433] Fix CVE(s): CVE-2022-40433
+   ```
 
 ### How integrate the OVAL data with a new vulnerability scanner
 
@@ -683,7 +712,6 @@ Currently, we provide CSAF data for the following OS versions:
 * CentOS 8.4 ELS: [cve.tuxcare.com/rss_feed/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/releases/centos8.4els)
 * CentOS 8.5 ELS: [cve.tuxcare.com/rss_feed/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/releases/centos8.5els)
 * CentOS Stream 8 ELS: [cve.tuxcare.com/rss_feed/releases/centos8streamels](https://cve.tuxcare.com/rss_feed/releases/centos8streamels)
-* CloudLinux 6: [cve.tuxcare.com/rss_feed/releases/cloudlinux6els](https://cve.tuxcare.com/rss_feed/releases/cloudlinux6els)
 * Oracle Linux 6 ELS: [cve.tuxcare.com/rss_feed/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els)
 * Oracle Linux 7 ELS: [cve.tuxcare.com/rss_feed/releases/oraclelinux7els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els)
 * Red Hat Enterprise Linux 7 ELS: [cve.tuxcare.com/rss_feed/releases/rhel7els](https://cve.tuxcare.com/rss_feed/releases/rhel7els)
