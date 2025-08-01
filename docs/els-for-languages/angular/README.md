@@ -57,6 +57,9 @@ TuxCare provides technical support according to the [support policy](https://tux
 
 ## Connection to ELS for Angular Repository
 
+Please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for instructions.
+
+<!--  
 This guide outlines the steps needed to integrate the TuxCare ELS for Angular repository.
 
 ## Step 1: Get user credentials
@@ -87,8 +90,8 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
   ```text
   registry=https://registry.npmjs.org/
-  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
-  //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
+  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
+  //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
   ```
 
   </CodeWithCopy>
@@ -98,7 +101,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   :::
 
 4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages.
-<!--  
+
   **Angular 12**
   <details>
     <summary>Click to expand</summary>
@@ -380,46 +383,6 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
   </details>
 
-  **Angular 19**
-  <details>
-    <summary>Click to expand</summary>
-
-  <CodeWithCopy>
-
-  ```text
-  "dependencies": {
-      "@els-js/angular-19": "^0.0.1",
-      "@angular/common": "file:./node_modules/@els-js/angular-19/deps/@angular/common",
-      "@angular/compiler": "file:./node_modules/@els-js/angular-19/deps/@angular/compiler",
-      "@angular/core": "file:./node_modules/@els-js/angular-19/deps/@angular/core",
-      "@angular/forms": "file:./node_modules/@els-js/angular-19/deps/@angular/forms",
-      "@angular/platform-browser": "file:./node_modules/@els-js/angular-19/deps/@angular/platform-browser",
-      "@angular/platform-browser-dynamic": "file:./node_modules/@els-js/angular-19/deps/@angular/platform-browser-dynamic",
-      "@angular/router": "file:./node_modules/@els-js/angular-19/deps/@angular/router",
-      "rxjs": "file:./node_modules/@els-js/angular-19/deps/rxjs",
-      "tslib": "file:./node_modules/@els-js/angular-19/deps/tslib",
-      "zone.js": "file:./node_modules/@els-js/angular-19/deps/zone.js"
-  },
-  "devDependencies": {
-      "@angular-devkit/build-angular": "file:./node_modules/@els-js/angular-19/deps/@angular-devkit/build-angular",
-      "@angular/cli": "file:./node_modules/@els-js/angular-19/deps/@angular/cli",
-      "@angular/compiler-cli": "file:./node_modules/@els-js/angular-19/deps/@angular/compiler-cli",
-      "@types/jasmine": "file:./node_modules/@els-js/angular-19/deps/@types/jasmine",
-      "jasmine-core": "file:./node_modules/@els-js/angular-19/deps/jasmine-core",
-      "karma": "file:./node_modules/@els-js/angular-19/deps/karma",
-      "karma-chrome-launcher": "file:./node_modules/@els-js/angular-19/deps/karma-chrome-launcher",
-      "karma-coverage": "file:./node_modules/@els-js/angular-19/deps/karma-coverage",
-      "karma-jasmine": "file:./node_modules/@els-js/angular-19/deps/karma-jasmine",
-      "karma-jasmine-html-reporter": "file:./node_modules/@els-js/angular-19/deps/karma-jasmine-html-reporter",
-      "typescript": "file:./node_modules/@els-js/angular-19/deps/typescript"
-  }
-  ```
-    
-  </CodeWithCopy>
-
-  </details>
-  -->
-
 5. In your terminal, run the following command to install ELS for Angular:
 
   <CodeWithCopy>
@@ -439,3 +402,5 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
   ```
 
 6. You've successfully integrated the TuxCare ELS for Angular repository into your project.
+
+  -->
