@@ -33,6 +33,7 @@ alt-php provides a more flexible and convenient environment for working with dif
 | :-----------------------------------: | :----------: | :-------------------------------: | :---------: | 
 | CentOS, CloudLinux, OracleLinux, etc. | RPM          | 7.x, 8.x, 9.x                     | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | AlmaLinux                             | RPM          | 8.x, 9.x                          | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
+| Amazon Linux 2                        | RPM          | -                                 | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Ubuntu                                | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Debian				                        | DEB          | 10, 11, 12	                       | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
 | Windows				                        | -            | Windows Server 2019, 2022, 2025	 | 5.6, 7.2, 7.3, 7.4 , 8.0, 8.1 |
@@ -127,8 +128,19 @@ TuxCare provides technical support according to the [support policy](https://tux
 
 ### Install ALT-PHP
 
-The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Oracle Linux, AlmaLinux, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
+The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Oracle Linux, AlmaLinux, Amazon Linux 2, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
 
+:::tip
+**Amazon Linux 2-specific preprequisities**. Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two version of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
+
+<CodeWithCopy>
+
+```
+sudo yum install libvpx-1.3.0
+```
+</CodeWithCopy>
+
+:::
 
 1. Download the installer script:
 
@@ -384,12 +396,12 @@ To display detailed information about the installed package, run the following c
 
 Dependencies for a successful installation of alt packages may vary depending on the specific packages and their versions. However, typically, the system automatically manages dependencies and provides the necessary packages when installing selected components:
 
-  For example:
-
   <CodeTabs :tabs="[
     { title: 'RPM', content: `sudo yum deplist alt-php73 ` },
     { title: 'DEB', content: `sudo apt-cache depends alt-php74` }
   ]" />
+
+  For example:
 
   <CodeTabs :tabs="[
   { title: 'RPM', content:
@@ -428,7 +440,7 @@ It's important to pay attention to any error messages provided by the system and
 
   </template>
 
-  <template #Update_alt_php>
+  <template #Update_alt-php>
 
 To update alt-php, you typically follow a process that involves using the package management tools provided by CloudLinux.
 
@@ -793,7 +805,7 @@ zlib
 
 The **default.ini** file is important for configuring alt-php. It sets default PHP settings and can be used to enable default extensions. We do not modify this file on our side. You need to update **default.ini** yourself to adjust PHP settings based on your Endless Lifecycle Support (ELS) usage and specific requirements.
 
-#### Enabling a module through `default.ini`
+**Option 1: Enabling a module through `default.ini`**
 
 To enable or disable extensions in your installed PHP version:
 
@@ -814,7 +826,7 @@ To enable or disable extensions in your installed PHP version:
 
 3. Save the changes in the `default.ini` file.
 
-#### Enabling a module through the configuration files
+**Option 2: Enabling a module through the configuration files**
 
 PHP extensions can also be enabled or disabled through their `.ini` configuration files. This method allows you to control which extensions are active for a specific PHP version or setup. If you're unsure which file to modify to enable a specific extension, start by checking the extension's own `.ini` file.
 
@@ -842,7 +854,7 @@ PHP extensions can also be enabled or disabled through their `.ini` configuratio
   If the same extension is present in multiple `.ini` configuration files within the `/opt/alt/phpXY/etc/php.d/` directory, you may see warnings in PHP logs and possibly on your site.
   :::
 
-#### Enabling_a_module_through_the_CLI
+**Option 3: Enabling a module through the CLI**
 
 <CodeWithCopy>
 
@@ -1091,7 +1103,7 @@ This section contains information about available ELS for PHP OVAL streams that 
 
 Currently, we provide OVAL data for the following OS versions:
 
-* EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml)
+* EL 7 (CentOS, CloudLinux, OracleLinux, Amazon Linux 2, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml)
 * EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [oval.xml](http://security.tuxcare.com/oval/els_alt_php/el9/oval.xml)
 * Ubuntu 16.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu16.04/oval.xml)
@@ -1150,7 +1162,7 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 
 Currently, we provide CSAF data for the following OS versions:
 
-* EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
+* EL 7 (CentOS, CloudLinux, OracleLinux, Amazon Linux 2, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
 * EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el9/](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/)
 * Ubuntu 16.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/)
@@ -1170,7 +1182,7 @@ The CSAF files are published in JSON format which is easy to parse and integrate
 
 Currently, we provide errata for the following OS versions:
 
-* EL 7 (CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
+* EL 7 (CentOS, CloudLinux, OracleLinux, Amazon Linux 2, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
 * EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el9/](https://security.tuxcare.com/errata/els_alt_php/el9/)
 * Ubuntu 16.04: [security.tuxcare.com/errata/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu16.04/)
