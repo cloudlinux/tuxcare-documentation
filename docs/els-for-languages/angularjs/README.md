@@ -57,6 +57,10 @@ TuxCare provides technical support according to the [support policy](https://tux
 
 ## Connection to ELS for AngularJS Repository
 
+Please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for instructions.
+
+<!--  
+
 This guide outlines the steps needed to integrate the TuxCare ELS for AngularJS repository.
 
 ## Step 1: Get user credentials
@@ -86,7 +90,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
   ```text
   registry=https://registry.npmjs.org/
-  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
   ```
 
@@ -165,6 +169,8 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
   ```
 
 * You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
+
+-->
 
 ## Resolved CVEs
 
