@@ -2,7 +2,7 @@
 
 # FIPS packages for AlmaLinux Community
 
-Below are the instructions for installing the TuxCare FIPS 140-3 validated modules for AlmaLinux 9.6, they should be run as root.
+Below are the instructions for installing the TuxCare FIPS 140-3 validated modules for AlmaLinux and Rocky Linux 9.6, they should be run as root.
 
 **For commercial customers of our ESU product, please use the instructions [here](/enterprise-support-for-almalinux/#enabling-fips-140-3-mode) instead.**
 
@@ -25,14 +25,14 @@ $ uname -r
 5.14.0-570.21.1.el9_6.tuxcare.1.x86_64
 ```
 
-If you wish to stay on the FIPS validated kernel/openssl packages when a newer AlmaLinux package is available, you can use `dnf versionlock` like so:
+If you wish to stay on the FIPS validated kernel/openssl packages when a newer community package is available, you can use `dnf versionlock` like so:
 
 ```text
 # dnf -y install 'dnf-command(versionlock)'
 # dnf versionlock add openssl*tuxcare* kernel*tuxcare*
 ```
 
-To revert to the previous behaviour of getting updated kernel/openssl packages from AlmaLinux, run the following as root:
+To revert to the previous behaviour of getting updated kernel/openssl packages from the community, run the following as root:
 
 ```text
 # dnf versionlock delete openssl*tuxcare* kernel*tuxcare*
