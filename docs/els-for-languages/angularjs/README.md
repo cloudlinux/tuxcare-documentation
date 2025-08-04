@@ -59,8 +59,6 @@ TuxCare provides technical support according to the [support policy](https://tux
 
 Please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for instructions.
 
-<!--  
-
 This guide outlines the steps needed to integrate the TuxCare ELS for AngularJS repository.
 
 ## Step 1: Get user credentials
@@ -71,106 +69,116 @@ You need a username, password, and token in order to use TuxCare ELS AngularJS r
 
 TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-* Navigate to the root directory of your AngularJS project.
-* Create a `.npmrc` file or update it if it already exists.
+1. Navigate to the root directory of your AngularJS project.
+2. Create a `.npmrc` file or update it if it already exists.
 
-  **Example:**
+   **Example:**
 
-  ```text
-  my-angularjs-project/
-  ├── node_modules/
-  ├── package.json
-  ├── .npmrc         ⚠️ ← Create it here
-  └── package-lock.json
-  ```
+   ```text
+   my-angularjs-project/
+   ├── node_modules/
+   ├── package.json
+   ├── .npmrc         ⚠️ ← Create it here
+   └── package-lock.json
+   ```
 
-* Use an editor of your choice (e.g., VS Code) to add the following registry address line:
+3. Use an editor of your choice (e.g., VS Code) to add the following registry address line:
 
-  <CodeWithCopy>
+   <CodeWithCopy>
 
-  ```text
-  registry=https://registry.npmjs.org/
-  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-  //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
-  ```
+   ```text
+   registry=https://registry.npmjs.org/
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
+   ```
 
-  </CodeWithCopy>
+   </CodeWithCopy>
 
-  :::warning
-  Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
-  :::
+   :::warning
+   Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
+   :::
 
-* Update your `package.json` file to replace your AngularJS dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your AngularJS dependencies with the TuxCare packages:
 
-  **AngularJS 1.5**
+   <TableTabs label="Choose AngularJS version: " >
 
-  <CodeWithCopy>
+     <template #AngularJS_1.5>
 
-  ```text
-  "dependencies": {
-      "angular": "npm:@els-js/angularjs-1.5"
-  }
-  ```
+     <CodeWithCopy>
 
-  </CodeWithCopy>
+     ```text
+     "dependencies": {
+         "angular": "npm:@els-js/angular@1.5.11-tuxcare.1"
+     }
+     ```
 
-  **AngularJS 1.6**
+     </CodeWithCopy>
 
-  <CodeWithCopy>
+     </template>
 
-  ```text
-  "dependencies": {
-    "angular": "npm:@els-js/angularjs-1.6"
-  }
-  ```
+     <template #AngularJS_1.6>
 
-  </CodeWithCopy>
+     <CodeWithCopy>
 
-  **AngularJS 1.7**
+     ```text
+     "dependencies": {
+         "angular": "npm:@els-js/angular@1.6.10-tuxcare.1"
+     }
+     ```
 
-  <CodeWithCopy>
+     </CodeWithCopy>
 
-  ```text
-  "dependencies": {
-    "angular": "npm:@els-js/angularjs-1.7"
-  }
-  ```
+     </template>
 
-  </CodeWithCopy>
+     <template #AngularJS_1.7>
 
-  **AngularJS 1.8**
+     <CodeWithCopy>
+ 
+     ```text
+     "dependencies": {
+         "angular": "npm:@els-js/angular@1.7.9-tuxcare.1"
+    }
+     ```
 
-  <CodeWithCopy>
+     </CodeWithCopy>
 
-  ```text
-  "dependencies": {
-    "angular": "npm:@els-js/angularjs-1.8"
-  }
-  ```
+     </template>
 
-  </CodeWithCopy>
+     <template #AngularJS_1.8>
 
-* In your terminal, run the following command to install ELS for AngularJS dependencies:
+     <CodeWithCopy>
 
-  <CodeWithCopy>
+     ```text
+     "dependencies": {
+         "angular": "npm:@els-js/angular@1.8.3-tuxcare.1"
+     }
+     ```
 
-  ```text
-  npm install --userconfig .npmrc
-  ```
+     </CodeWithCopy>
 
-  </CodeWithCopy>
+     </template>
 
-  You will see an output like:
+   </TableTabs>
 
-  ```text
-  changed 1 package, and audited 5 packages in 892ms
+5. In your terminal, run the following command to install ELS for AngularJS dependencies:
 
-  2 vulnerabilities (1 moderate, 1 high)
-  ```
+   <CodeWithCopy>
 
-* You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
+   ```text
+   npm install --userconfig .npmrc
+   ```
 
--->
+   </CodeWithCopy>
+
+   You will see an output like:
+
+   ```text
+   added 1 package, and audited 2 packages in 796ms
+
+   found 0 vulnerabilities
+   ```
+
+6. You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
 
 ## Resolved CVEs
 
@@ -188,3 +196,4 @@ Fixes for the following vulnerabilities are available in ELS for AngularJS from 
 | CVE-2020-7676 | Medium | <1.8.0 | 1.5.11, 1.6.10, 1.7.9 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
