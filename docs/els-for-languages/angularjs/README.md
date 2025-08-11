@@ -108,7 +108,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
      ```text
      "dependencies": {
-         "angular": "npm:@els-js/angular@1.5.11-tuxcare.1"
+         "angular": "npm:@els-js/angular@1.5.11-tuxcare.2"
      }
      ```
 
@@ -122,7 +122,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
      ```text
      "dependencies": {
-         "angular": "npm:@els-js/angular@1.6.10-tuxcare.1"
+         "angular": "npm:@els-js/angular@1.6.10-tuxcare.2"
      }
      ```
 
@@ -136,7 +136,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
  
      ```text
      "dependencies": {
-         "angular": "npm:@els-js/angular@1.7.9-tuxcare.1"
+         "angular": "npm:@els-js/angular@1.7.9-tuxcare.2"
     }
      ```
 
@@ -150,7 +150,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
      ```text
      "dependencies": {
-         "angular": "npm:@els-js/angular@1.8.3-tuxcare.1"
+         "angular": "npm:@els-js/angular@1.8.3-tuxcare.2"
      }
      ```
 
@@ -186,14 +186,17 @@ Fixes for the following vulnerabilities are available in ELS for AngularJS from 
 
 | CVE ID | Severity | Vulnerable Version | Safe Version |
 | --- | --- | --- | --- |
+| CVE-2025-0716  | Medium | >=0.0.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2024-8372  | Medium | >=1.3.0-rc.4 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2024-8373  | Medium | >=0.0.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
 | CVE-2024-21490 | High | >=1.3.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
 | CVE-2023-26118 | Medium | >=1.4.9 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
 | CVE-2023-26117 | Medium | >=1.0.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
 | CVE-2023-26116 | Medium | >=1.2.21 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
 | CVE-2022-25869 | Medium | >=0.0.0| 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
 | CVE-2022-25844 | Medium | >=1.7.0 | 1.7.9, 1.8.3 |
-| CVE-2019-10768 | Critical | <1.7.9 | 1.7.9 |
-| CVE-2020-7676 | Medium | <1.8.0 | 1.5.11, 1.6.10, 1.7.9 |
+| CVE-2020-7676  | Medium | <1.8.0 | 1.5.11, 1.6.10, 1.7.9 |
+| CVE-2019-10768 | Critical | <1.7.9 | 1.5.11, 1.6.10, 1.7.9 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
