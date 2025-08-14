@@ -2,36 +2,36 @@
 
 # **Enterprise Support for AlmaLinux**
 
-This guide describes [Enterprise Support for AlmaLinux](https://tuxcare.com/almalinux-enterprise-support/) and how to set it up on your AlmaLinux system.
+This guide describes [TuxCare Enterprise Support](https://tuxcare.com/tuxcare-enterprise-support/) for AlmaLinux **and now Rocky Linux too!**
 
-## What is Enterprise Support for AlmaLinux?
+## What is TuxCare Enterprise Support?
 
-Enterprise Support for AlmaLinux provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, ensures long-term stability and FIPS 140-3 compliance with extended security support for select AlmaLinux minor releases, and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.
+TuxCare Enterprise Support provides a TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with 16 years of support coverage, ensures long-term stability and FIPS 140-3 compliance with extended security support for select minor releases, and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.
 
 Available services:
 
-* **Essential Support**: TuxCare-vetted repository of AlmaLinux updates with guaranteed uptime, expedited break-and-fix support and up to 16 years of support coverage
-* **Extended Security Updates** provide an extended period of security fixes for critical and high-risk vulnerabilities for select AlmaLinux minor versions, as well as the **full suite of five FIPS-validated modules** (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified AlmaLinux deployments. **The product also unlocks commercial use of the FIPS-validated packages.**
-* **Enhanced Support**: Enterprise-grade support for AlmaLinux and open-source applications with pay-as-you-go pricing in 5, 10, and 20-hour bundles
+* **Essential Support**: TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with guaranteed uptime, expedited break-and-fix support and up to 16 years of support coverage
+* **Extended Security Updates** provide an extended period of security fixes for critical and high-risk vulnerabilities for select minor versions, as well as the **full suite of five FIPS-validated modules** (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified Linux deployments. **The product also unlocks commercial use of the FIPS-validated packages.**
+* **Enhanced Support**: Enterprise-grade support for AlmaLinux, Rocky Linux and open-source applications with pay-as-you-go pricing in 5, 10, and 20-hour bundles
 
-Learn more at [https://tuxcare.com/almalinux-enterprise-support/](https://tuxcare.com/almalinux-enterprise-support/)
+Learn more at [https://tuxcare.com/tuxcare-enterprise-support/](https://tuxcare.com/tuxcare-enterprise-support/)
 
 ## **Extended Security Updates**
 
-Extended Security Updates (ESU) for AlmaLinux extend the lifecycle of specific AlmaLinux minor versions by delivering both prolonged security updates for High and Critical vulnerabilities as well as FIPS-compliant security patches enabling greater stability and security for AlmaLinux deployments.
+Extended Security Updates (ESU) for AlmaLinux and Rocky Linux extends the lifecycle of specific minor versions by delivering both prolonged security updates for High and Critical vulnerabilities as well as FIPS-compliant security patches enabling greater stability and security for your Linux deployments.
 
 ### ESU lifecycle
 
-AlmaLinux provides a 10-year lifecycle with a new minor release arriving every 6 months, bringing new features until the fifth year. Each of the minor releases is supported for 6 months. Customers who want to remain with the specific AlmaLinux minor release for longer can opt for Extended Security Updates (ESU).
+AlmaLinux and Rocky Linux provide a 10-year lifecycle with a new minor release arriving every 6 months, bringing new features until the fifth year. Each of the minor releases is supported for 6 months. Customers who want to remain with the specific AlmaLinux or Rocky Linux minor release for longer can opt for Extended Security Updates (ESU).
 
-ESU delivers an extended period of security fixes for critical and high-risk vulnerabilities for select AlmaLinux minor versions, as well as the full suite of five FIPS-validated modules (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified AlmaLinux deployments. The product also unlocks commercial use of the FIPS-validated packages.
+ESU delivers an extended period of security fixes for critical and high-risk vulnerabilities for select minor versions, as well as the full suite of five FIPS-validated modules (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified Linux deployments. The product also unlocks commercial use of the FIPS-validated packages.
 
-Extended Security Updates are currently available for AlmaLinux 9.2 and 9.6 with planned support for 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every six months and test/certify their applications against the next minor version at their own pace.
+Extended Security Updates are currently available for AlmaLinux 9.2, AlmaLinux 9.6, Rocky Linux 9.6, and planned support for 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every six months and test/certify their applications against the next minor version at their own pace.
 
 ![esu lifecycle](/images/esu_lifecycle_graph2.png)
 
 :::warning
-**Disclaimer**: AlmaLinux minor releases planned for ESU are subject to change. TuxCare reserves the right to change them at any time without prior notice.
+**Disclaimer**: Minor releases planned for ESU are subject to change. TuxCare reserves the right to change them at any time without prior notice.
 :::
 
 ### Vulnerability coverage
@@ -41,7 +41,7 @@ ESU provides security patches for High and Critical vulnerabilities (with a 7+ C
 
 ### FIPS-compliant security patches
 
-ESU enables continuous security for FIPS-certified AlmaLinux 9 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel, openssl, libcrypt, nss and gnutls packages](https://tuxcare.com/fips-for-almalinux/). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/). They are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged module. This module will undergo an expedited FIPS 140-3 re-validation to ensure it is attested to conform to FIPS 140-3 requirements.
+ESU enables continuous security for FIPS-certified AlmaLinux and Rocky Linux 9 deployments by offering FIPS-compliant security patches for the FIPS-validated [kernel, openssl, libcrypt, nss and gnutls packages](https://tuxcare.com/fips-for-almalinux/). These patches [do not change the validated cryptography](https://tuxcare.com/blog/the-dilemmas-of-fips-140-3-compliance/). They are suitable for organizations that don't require strict FIPS-certified implementations that are static and never patched (i.e. military or intelligence agencies). In case of a cryptographic vulnerability that will require a security patch that changes the validated cryptography, we will fix it by delivering a new packaged module. This module will undergo an expedited FIPS 140-3 re-validation to ensure it is attested to conform to FIPS 140-3 requirements.
 
 ### Target response times
 
@@ -87,8 +87,8 @@ https://repo.tuxcare.com/tuxcare/9.6/<TOKEN>/esu/x86_64/spdx-reports/tuxcare96-e
 
 ### RSS releases feeds
 
-* AlmaLinux 9.2 ESU: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu)
-* AlmaLinux 9.6 ESU: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.6esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.6esu)
+* ESU 9.2: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu)
+* ESU 9.6: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.6esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.6esu)
 
 ### Technical support
 
@@ -99,7 +99,7 @@ Technical Support for Extended Security Updates provides assistance with:
 * Package update problems (package conflicts, missing dependencies)
 * FIPS and CVE-related questions
 * ePortal issues
-* AlmaLinux kernel crash issues (root cause analysis)
+* Kernel crash issues (root cause analysis)
 
 ### GnuPG Keys
 
@@ -115,7 +115,7 @@ The TuxCare ESU/FIPS packages and repositories are cryptographically signed with
 
 **Requirements**
 
-* AlmaLinux 9.2 or 9.6 operating system (download images from [here](https://tuxcare.com/almalinux-enterprise-support/get-almalinux/))
+* AlmaLinux 9.2 or AlmaLinux/Rocky Linux 9.6 operating system (download images from [here](https://tuxcare.com/almalinux-enterprise-support/get-almalinux/))
 * x86_64 or aarch64 architecture
 * Extended Security Updates license key (should be obtained from [portal.tuxcare.com](https://portal.tuxcare.com))
 * Internet access
@@ -185,6 +185,10 @@ ESU customers can upgrade between ESU releases, for example from 9.2 to 9.6 by e
 
 ### Enabling FIPS 140-3 mode
 
+:::warning
+Note that Rocky Linux 9.6 is a *vendor-affirmed OE* and has not been through the same FIPS lab testing as AlmaLinux, however the FIPS *modules* are the exact same packages used for both operating systems.
+:::
+
 First please ensure you have installed the `tuxcare-release` package as described above. If you haven't already registered your ESU license using `tuxctl` the next step will also do that for you.
 
 To install the FIPS 140-3 validated ESU packages over the default ones and enable FIPS mode, please run these commands as root:
@@ -232,7 +236,7 @@ $ openssl list -providers | grep -A3 fips
 
 ### Uninstalling tuxctl
 
-To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux community repo's, you can run the following as root:
+To uninstall tuxctl, disable the ESU/FIPS functionality and revert to community repo's, you can run the following as root:
 
 ```text
 # dnf -y remove tuxcare-release
@@ -247,6 +251,15 @@ To uninstall tuxctl, disable the ESU/FIPS functionality and revert to AlmaLinux 
   -e 's|$tuxcare_releasever|$releasever|g' \
   -e '/^exclude/d' \
   /etc/yum.repos.d/almalinux*.repo
+
+# sed -i \
+  -e 's|https://repo.tuxcare.com/rockylinux/|http://dl.rockylinux.org/\$contentdir/|' \
+  -e 's|^# mirrorlist|mirrorlist|' \
+  -e 's|^baseurl|# baseurl|' \
+  -e 's|$tuxcare_releasever/$tuxcare_token|$releasever|g' \
+  -e 's|$tuxcare_releasever|$releasever|g' \
+  -e '/^exclude/d' \
+  /etc/yum.repos.d/rocky*.repo
 
 # reboot
 ```
@@ -281,7 +294,7 @@ Then run the following:
 
 This guide contains steps on how to upgrade from CentOS 7 or Stream 8 [ELS](https://tuxcare.com/endless-lifecycle-support/centos-stream-8-eol-support/) to AlmaLinux 9.2 [ESU](https://tuxcare.com/fips-for-almalinux/).
 
-You will require an ESU license key from [https://tuxcare.com/buy/almalinux/](https://tuxcare.com/buy/almalinux/) or talk to your Account Manager about our ELS-to-ESU migration bundle offer.
+You will require an ESU license key from [https://tuxcare.com/buy/almalinux/](https://tuxcare.com/buy/almalinux/) or [https://tuxcare.com/buy/rockylinux/](https://tuxcare.com/buy/rockylinux/) or talk to your Account Manager about our ELS-to-ESU migration bundle offer.
 
 :::warning
 Ensure that you have a non-root user who can SSH and elevate privileges to root using su/sudo as this process will disable root SSH login. FIPS mode will also disable non-RSA SSH keys. Console access is recommended.
@@ -368,17 +381,17 @@ In April 2023, TuxCare, a division of CloudLinux Inc., launched Enterprise Suppo
 
 **Overview of Services**
 
-There are two levels of support services for AlmaLinux:
+There are two levels of support services:
 
-**Essential Support** - a limited technical support offering that covers AlmaLinux installation/update issues (packaging, dependencies, repositories), migration issues (from CentOS/OracleLinux/RHEL to AlmaLinux), operating systems bugs/kernel crashes, a self-service portal, as well as an online knowledge base
+**Essential Support** - a limited technical support offering that covers AlmaLinux and Rocky Linux installation/update issues (packaging, dependencies, repositories), migration issues (from CentOS/OracleLinux/RHEL to AlmaLinux), operating systems bugs/kernel crashes, a self-service portal, as well as an online knowledge base
 
-**Enhanced Support** - an enterprise technical support service covering a range of open-source software running on AlmaLinux, a self-service portal, as well as an online knowledge base.
+**Enhanced Support** - an enterprise technical support service covering a range of open-source software, a self-service portal, as well as an online knowledge base.
 
 ### 2. Definitions
 
 **"Customer," "End User," "User," "You/Your"** shall mean an organization which has a valid license to the Product that is supported in accordance with this Program.
 
-**"Customer Technical Lead"** shall mean an employee or authorized contractor of Customer who shall complete required AlmaLinux product training, in order to serve as Customer's first line of internal support for the purpose of triaging AlmaLinux-related product issues, and who shall have authority to submit Technical Support Incidents and Service Requests to TuxCare Technical Support
+**"Customer Technical Lead"** shall mean an employee or authorized contractor of Customer who shall complete required AlmaLinux/Rocky Linux product training, in order to serve as Customer's first line of internal support for the purpose of triaging AlmaLinux or Rocky Linux-related product issues, and who shall have authority to submit Technical Support Incidents and Service Requests to TuxCare Technical Support
 
 **"Incident"** shall mean any event reported by the Customer, which is not part of the standard operation of a Product, and which causes, or may cause an interruption to, or a reduction in, the quality of service provided by the Product.
 
@@ -404,7 +417,7 @@ There are two levels of support services for AlmaLinux:
 
 | Feature | Essential Support | Enhanced Support |
 |------|:------|:------|
-|Support|<ul><li>AlmaLinux installation/update issues (packaging, dependencies, repositories)</li><li>Migration advice and recommendations</li><li>Operating system bugs / kernel crashes; root cause analysis</li></ul> ***Outside the scope: software upgrades, requests to perform migration***|Coverage, includes the following applications: <ul><li>Apps - Identity / Directory<ul><li>FreeIPA, Bind</li><li>openldap</li></ul></li><li>Apps - Infrastructure<ul><li>Ceph</li><li>Samba</li></ul></li><li>Containers (docker, podman)</li><li>VMs (KVM)</li><li>Apps - Package / Config management:<ul><li>Foreman</li><li>Ansible</li><li>Puppet</li><li>Chef</li></ul></li><li>Apps - Web servers<ul><li>nginx</li><li>apache</li><li>squid</li></ul></li><li>Apps - Data<ul><li>SQL Databases (MariaDB, Postgresql)</li><li>Redis, MySQL, InfluxDB, CouchDB</li></ul></li><li>Apps - Security / Compliance<ul><li>OpenSCAP</li></ul></li><li>Devops Apps:<ul><li>gitlab/git, jenkins, kubernetes</li></ul></li><li>Apps - event streaming<ul><li>Apache Kafka</li><li>Rabbitmq</li></ul></li><li>Migration advice and recommendations</li><li>Design & Architecture (e.g., review)</li><li>Data storage, backup assistance</li><li>Configuration assistance</li></ul> ***Outside the scope: code changes, software upgrades, requests to perform migration***|
+|Support|<ul><li>AlmaLinux/Rocky Linux installation/update issues (packaging, dependencies, repositories)</li><li>Migration advice and recommendations</li><li>Operating system bugs / kernel crashes; root cause analysis</li></ul> ***Outside the scope: software upgrades, requests to perform migration***|Coverage, includes the following applications: <ul><li>Apps - Identity / Directory<ul><li>FreeIPA, Bind</li><li>openldap</li></ul></li><li>Apps - Infrastructure<ul><li>Ceph</li><li>Samba</li></ul></li><li>Containers (docker, podman)</li><li>VMs (KVM)</li><li>Apps - Package / Config management:<ul><li>Foreman</li><li>Ansible</li><li>Puppet</li><li>Chef</li></ul></li><li>Apps - Web servers<ul><li>nginx</li><li>apache</li><li>squid</li></ul></li><li>Apps - Data<ul><li>SQL Databases (MariaDB, Postgresql)</li><li>Redis, MySQL, InfluxDB, CouchDB</li></ul></li><li>Apps - Security / Compliance<ul><li>OpenSCAP</li></ul></li><li>Devops Apps:<ul><li>gitlab/git, jenkins, kubernetes</li></ul></li><li>Apps - event streaming<ul><li>Apache Kafka</li><li>Rabbitmq</li></ul></li><li>Migration advice and recommendations</li><li>Design & Architecture (e.g., review)</li><li>Data storage, backup assistance</li><li>Configuration assistance</li></ul> ***Outside the scope: code changes, software upgrades, requests to perform migration***|
 |Incident Support|24/7/365 support through web ticketing system|24/7/365 support through web ticketing system and email|
 |Allowed Number of Customer Technical Leads|2 per 1000 hosts, with maximum 10|2 per 1000 hosts, with maximum 10|
 
@@ -412,7 +425,7 @@ There are two levels of support services for AlmaLinux:
 
 #### Accessing Technical Support
 
-TuxCare Technical Support is designed for enterprise clients with trained IT staff which provide initial ‘1st-line' support to triage incidents. Customer and TuxCare will agree on Customer Technical Leads with the client, who will be entitled to access TuxCare Technical Support services; Customer Technical Leads must complete AlmaLinux training requirements. Customer Technical Leads may submit Technical Support Incidents and Service Requests to:
+TuxCare Technical Support is designed for enterprise clients with trained IT staff which provide initial ‘1st-line' support to triage incidents. Customer and TuxCare will agree on Customer Technical Leads with the client, who will be entitled to access TuxCare Technical Support services; Customer Technical Leads must complete AlmaLinux/Rocky Linux training requirements. Customer Technical Leads may submit Technical Support Incidents and Service Requests to:
 
 1. Technical Support ticketing system: [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/)
 
@@ -448,7 +461,7 @@ $ curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | gre
 Or if you have access to the [ec2 console](https://console.aws.amazon.com/console/home) you can simply click your username at the top right of the page. Your Account ID is the 12 digits in the dropdown.
 :::
 
-All customers are entitled to access the Support knowledgebase, FAQs, and other self-service tools as may be offered by Enterprise Support for AlmaLinux.
+All customers are entitled to access the Support knowledgebase, FAQs, and other self-service tools as may be offered by TuxCare Enterprise Support.
 
 #### Response Time
 
@@ -508,14 +521,14 @@ Technical support covered by any of the TuxCare Support Programs shall not be pr
 * Incidents already resolved for the Customer (e.g., an incident that occurred on one installed copy of the Product after the same incident had been resolved for another copy of the Product)
 * Troubleshooting of all issues similar or identical to already resolved issues (i.e. the incidents to which a previously produced solution can be applied without additional guidance from TuxCare)
 * Incidents caused by Customer's hardware malfunction
-* Incidents caused by software platform incompatibility (including, but not limited to beta software, new versions of service packs or additions, whose compatibility with the Product has not been confirmed by AlmaLinux)
+* Incidents caused by software platform incompatibility (including, but not limited to beta software, new versions of service packs or additions, whose compatibility with the Product has not been confirmed with AlmaLinux/Rocky Linux)
 * Incidents caused by installing and running third-party applications (including, but not limited to the list of unsupported or incompatible applications published in the documentation)
 * Incidents for which the Customer cannot provide accurate information, as reasonably requested by TuxCare, in order to reproduce, investigate, and resolve the incident
 * Incidents which arise as a result of neglect or incorrect use of TuxCare instructions, which, if properly used, would have prevented the Incident
 
 ### Installing tuxctl (Essential Support)
 
-Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux version, currently 8.8, 8.10, 9.2, 9.4, 9.5, 9.6 and 10.0 are supported.
+Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux/Rocky Linux version, currently 8.8, 8.10, 9.2, 9.4, 9.5, 9.6 and 10.0 are supported.
 
 If you are unsure, run this to find your exact OS version:
 
@@ -525,6 +538,14 @@ $ cat /etc/almalinux-release
 AlmaLinux release 8.10 (Cerulean Leopard)
 ```
 
+Or:
+
+```text
+cat /etc/rocky-release
+
+Rocky Linux release 9.6 (Blue Onyx)
+```
+
 You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2, 9.4, 9.5, 9.6 or 10.0) then install it as root, for example:
 
 ```text
@@ -532,7 +553,7 @@ You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxc
 ```
 
 :::warning
-Be aware that installing tuxcare-release will modify any files that match the wildcard /etc/yum.repos.d/almalinux*
+Be aware that installing tuxcare-release will modify any files that match the wildcard `/etc/yum.repos.d/almalinux*.repo` and `/etc/yum.repos.d/rocky*.repo`
 :::
 
 The second step is to activate your license on the system. You should run the `tuxctl` tool as root with your Essential Support license key provided as a command line argument like so:
@@ -555,7 +576,7 @@ If you get a status code 403:
 Errors during downloading metadata for repository 'tuxcare-esu'
 ```
 
-Then you are using an ESA license key for an ESU release (9.2, 9.6 or 9.10) and can disable the ESU repository using:
+Then you are using an Essential Support license key for an Extended Security Updates release (9.2, 9.6 or 9.10) and can disable the ESU repository using:
 
 ```text
 dnf config-manager --set-disabled tuxcare-esu

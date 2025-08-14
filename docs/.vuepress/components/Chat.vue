@@ -2,7 +2,7 @@
   <div id="bot-ui">
     <!-- Conditionally show toggle button with highlight -->
     <div class="toggle-container" v-show="!(isMobile && showChat)">
-      <div v-if="!showChat" class="pulse-ring"></div>
+      <div v-if="shouldShowTooltip" class="pulse-ring"></div>
       <button
         class="chat-toggle"
         @click="toggleChat"
@@ -29,8 +29,9 @@
         </svg>
       </button>
       
-      <div v-if="!showChat" class="highlight-container">
+      <div v-if="shouldShowTooltip" class="highlight-container">
         <div class="tooltip-text">
+          <div class="tooltip-close" @click="dismissTooltip">×</div>
           <div class="tooltip-title"><b>Need help?</b></div>
           <div class="tooltip-subtitle">I'm an AI chatbot, trained to answer all your questions.</div>
         </div>
@@ -85,16 +86,22 @@ export default {
       isLoading: true,
       iframeUrl: "https://chatbot.cloudlinux.com/docs/tuxcare",
       windowWidth: 0, // Changed from window.innerWidth to avoid SSR error
+      showTooltip: true,
+      tooltipDismissDuration: 2 * 60 * 60 * 1000, // 2 hours in milliseconds
     };
   },
   computed: {
     isMobile() {
       return this.windowWidth < 768;
     },
+    shouldShowTooltip() {
+      return this.showTooltip && !this.showChat;
+    },
   },
   mounted() {
     window.addEventListener("resize", this.handleResize);
     this.handleResize(); // Set initial windowWidth on client-side
+    this.updateTooltipVisibility();
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.handleResize);
@@ -102,12 +109,42 @@ export default {
   methods: {
     toggleChat() {
       this.showChat = !this.showChat;
+      if (this.showChat) {
+        this.dismissTooltip();
+      }
     },
     handleResize() {
       this.windowWidth = window.innerWidth;
     },
     onIframeLoad() {
       this.isLoading = false;
+    },
+    dismissTooltip() {
+      const currentTime = new Date().getTime();
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('chatbot_tooltip_dismissed_time', currentTime.toString());
+      }
+      this.showTooltip = false;
+    },
+    updateTooltipVisibility() {
+      if (typeof localStorage === 'undefined') {
+        this.showTooltip = true;
+        return;
+      }
+      
+      const dismissedTime = localStorage.getItem('chatbot_tooltip_dismissed_time');
+      
+      if (dismissedTime) {
+        const currentTime = new Date().getTime();
+        if (currentTime - parseInt(dismissedTime) < this.tooltipDismissDuration) {
+          this.showTooltip = false;
+        } else {
+          localStorage.removeItem('chatbot_tooltip_dismissed_time');
+          this.showTooltip = true;
+        }
+      } else {
+        this.showTooltip = true;
+      }
     },
   },
 };
@@ -188,7 +225,7 @@ mobile-breakpoint = 768px
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  pointer-events: none;
+  pointer-events: auto;
   z-index: 10001;
   max-width: 90vw;
 }
@@ -206,14 +243,51 @@ mobile-breakpoint = 768px
   box-shadow: 0 0 15px $primary-color;
   overflow: visible;
   text-overflow: clip;
+  
+  /* Stop animation on hover */
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.tooltip-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  color: #666;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+  pointer-events: auto;
+
+  &:hover {
+    background: #f5f5f5;
+    transform: scale(1.1);
+    color: #333;
+  }
 }
 
 .tooltip-title {
   margin-bottom: 4px;
+  position: relative;
+  z-index: 2;
 }
 
 .tooltip-subtitle {
   white-space: nowrap;
+  position: relative;
+  z-index: 2;
 }
 
 .chat-container {
