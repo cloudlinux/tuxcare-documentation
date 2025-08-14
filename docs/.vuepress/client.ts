@@ -16,6 +16,7 @@ import Chat from "./components/Chat.vue";
 import CodeTabs from "./components/CodeTabs.vue";
 import CodeWithCopy from "./components/CodeWithCopy.vue";
 import TableTabs from "./components/TableTabs.vue";
+import ELSTechnology from "./components/ELSTechnology.vue";
 
 import CVETracker from './components/JavaSpringSolvedCveTable.vue'
 
@@ -29,6 +30,7 @@ export default defineClientConfig({
         app.component("CodeWithCopy", CodeWithCopy);
         app.component("CVETracker", CVETracker);
         app.component("TableTabs", TableTabs);
+        app.component("ELSTechnology", ELSTechnology);
     },
     layouts: {
         Layout,
