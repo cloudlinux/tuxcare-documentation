@@ -114,4 +114,35 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
    </CodeWithCopy>
 
+## Resolved CVEs
 
+Fixes for the following vulnerabilities are available in ELS for Python Libraries from TuxCare versions:
+
+| CVE ID         | Severity | Library | Vulnerable Version | Safe Version |
+| :------------: | :------: | :-----: | :----------------: | :----------: |
+| GHSA-56pw-mpj4-fxww |     | Pillow  | 9.4.0              | 10.0.1       |
+| CVE-2013-1424  |          | Matplotlib | 3.0.3           | 3.1.0        |
+| CVE-2014-1858  |          | Numpy   | 1.8.0              | 1.8.1        |
+| CVE-2019-6446  |          | Numpy   | 1.16.0             | 1.16.3       |
+| CVE-2021-41945 |          | Httpx   | 0.22.0             | 0.23.0       |
+| CVE-2023-4863  |          | Pillow  | 9.4.0	           | 10.0.1       |
+| CVE-2023-23934 |          | Werkzeug	| 1.0.1             | 2.2.3        |
+| CVE-2023-25577 |          | Werkzeug | 1.0.1	           | 2.2.3        |
+| CVE-2023-32681 |          | Requests | 2.30.0            | 2.31.0       |
+| CVE-2023-37276 |          | Aiohttp | 3.8.4              | 3.8.5        |
+| CVE-2023-44271 |          | Pillow  | 9.4.0              | 10.0.0       |
+| CVE-2023-47627 |          | Aiohttp | 3.8.5              | 3.8.6        |
+| CVE-2023-49082 |          | Aiohttp | 3.8.9              | 3.9.0        |
+| CVE-2023-50447 |          | Pillow  | 9.4.0              | 10.2.0       |
+| CVE-2024-8088  |          | Requests | 2.24.9            | 2.25.0       |
+| CVE-2024-9880  |          | Pandas  | 2.2.2              | 2.2.3        |
+| CVE-2024-24680 |          | Django  | 5.0.1              | 5.0.2        |
+| CVE-2024-27351 |          | Django  | 5.1.4              | 5.1.5        |
+| CVE-2024-28219 |          | Pillow  | 9.4.0              | 10.3.0       |
+| CVE-2024-35195 |          | Requests | 2.31.9	           | 2.32.0       |
+| CVE-2024-47081 |          | Requests	| 2.32.3		        | 2.32.4       |
+| CVE-2024-52304 |          | Aiohttp | 3.10.10            | 3.10.11      |
+| CVE-2024-56374 |          | Django  | 5.1.4              | 5.1.5        |
+| CVE-2025-48432 |          | Django  | 5.1.10             | 5.1.11       |
+
+If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
