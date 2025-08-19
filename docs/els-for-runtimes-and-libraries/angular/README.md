@@ -13,8 +13,7 @@ Angular versions 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, and 19 ar
 ## Connection to ELS for Angular Repository
 
 Please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for instructions.
-
-<!--  
+  
 This guide outlines the steps needed to integrate the TuxCare ELS for Angular repository.
 
 ## Step 1: Get user credentials
@@ -28,28 +27,28 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 1. Navigate to the root directory of your Angular project.
 2. Create a `.npmrc` file or update it if it already exists.
 
-  **Example:**
+   **Example:**
 
-  ```text
-  my-angular-project/
-  ├── src/
-  ├── angular.json
-  ├── package.json
-  ├── .npmrc         ⚠️ ← Create it here
-  └── tsconfig.json
-  ```
+   ```text
+   my-angular-project/
+   ├── src/
+   ├── angular.json
+   ├── package.json
+   ├── .npmrc         ⚠️ ← Create it here
+   └── tsconfig.json
+   ```
 
 3. Use an editor of your choice (e.g., VS Code) to add the following registry address line:
 
-  <CodeWithCopy>
+   <CodeWithCopy>
 
-  ```text
-  registry=https://registry.npmjs.org/
-  @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-  //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
-  ```
+   ```text
+   registry=https://registry.npmjs.org/
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
+   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   ```
 
-  </CodeWithCopy>
+   </CodeWithCopy>
 
   :::warning
   Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -57,6 +56,38 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
 4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages.
 
+   <TableTabs label="Choose Angular version: " >
+     <template #Angular_19>
+
+      :::tip
+      Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".
+      
+      To check whether your Angular project is configured with Server-Side Rendering, look for `@angular/ssr` listed in your original `package.json` file before replacing dependencies. If you see `@angular/ssr` listed, **SSR is ON**, otherwise **SSR is OFF**.
+      :::
+
+      <CodeTabs :tabs="[
+        { title: 'SSR ON', content: Angular19WithSSR },
+        { title: 'SSR OFF', content: Angular19WithoutSSR }
+      ]" />
+
+      :::tip
+      If you use any of the following **non-default Angular modules**, update their versions as shown below:
+       
+      * "@angular/animations": "npm:@els-js/angular-animations@19.2.14-tuxcare.1",
+      * "@angular/elements": "npm:@els-js/angular-elements@19.2.14-tuxcare.1",
+      * "@angular/language-service": "npm:@els-js/angular-language-service@19.2.14-tuxcare.1",
+      * "@angular/localize": "npm:@els-js/angular-localize@19.2.14-tuxcare.1",
+      * "@angular/upgrade": "npm:@els-js/angular-upgrade@19.2.14-tuxcare.1",
+      * "@angular/platform-server": "npm:@els-js/angular-platform-server@19.2.14-tuxcare.1",
+      * "@angular/service-worker": "npm:@els-js/angular-service-worker@19.2.14-tuxcare.1",
+       
+      After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+      :::
+     </template>
+   </TableTabs>
+
+
+<!--
   **Angular 12**
   <details>
     <summary>Click to expand</summary>
@@ -338,24 +369,113 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
   </details>
 
+  -->
+
 5. In your terminal, run the following command to install ELS for Angular:
 
-  <CodeWithCopy>
+   <CodeWithCopy>
   
-  ```text
-  npm install --userconfig .npmrc
-  ```
+   ```text
+   npm install --userconfig .npmrc
+   ```
   
-  </CodeWithCopy>
+   </CodeWithCopy>
 
-  You will see an output like:
+   You will see an output like:
 
-  ```text
-  added 12 packages, removed 931 packages, changed 22 packages, and audited 57 packages in 23s
+   ```text
+   added 4 packages, changed 9 packages, and audited 945 packages in 3s
 
-  found 0 vulnerabilities
-  ```
+   162 packages are looking for funding
+     run `npm fund` for details
+
+   found 0 vulnerabilities
+   ```
 
 6. You've successfully integrated the TuxCare ELS for Angular repository into your project.
 
-  -->
+<script setup>
+const Angular19WithSSR =
+`"dependencies": {
+   "@angular/common": "npm:@els-js/angular-common@19.2.14-tuxcare.1",
+   "@angular/compiler": "npm:@els-js/angular-compiler@19.2.14-tuxcare.1",
+   "@angular/core": "npm:@els-js/angular-core@19.2.14-tuxcare.1",
+   "@angular/forms": "npm:@els-js/angular-forms@19.2.14-tuxcare.1",
+   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@19.2.14-tuxcare.1",
+   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@19.2.14-tuxcare.1",
+   "@angular/platform-server": "npm:@els-js/angular-platform-server@19.2.14-tuxcare.1",
+   "@angular/router": "npm:@els-js/angular-router@19.2.14-tuxcare.1",
+   "@angular/ssr": "^19.2.15",
+   "express": "^4.18.2",
+   "rxjs": "~7.8.0",
+   "tslib": "^2.3.0",
+   "zone.js": "~0.15.0"
+ },
+ "devDependencies": {
+   "@angular-devkit/build-angular": "^19.2.15",
+   "@angular/cli": "^19.2.15",
+   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@19.2.14-tuxcare.1",
+   "@types/express": "^4.17.17",
+   "@types/jasmine": "~5.1.0",
+   "@types/node": "^18.18.0",
+   "jasmine-core": "~5.6.0",
+   "karma": "~6.4.0",
+   "karma-chrome-launcher": "~3.2.0",
+   "karma-coverage": "~2.2.0",
+   "karma-jasmine": "~5.1.0",
+   "karma-jasmine-html-reporter": "~2.1.0",
+   "typescript": "~5.7.2"
+ },
+ "overrides": {
+   "@angular/common": "npm:@els-js/angular-common@19.2.14-tuxcare.1",
+   "@angular/compiler": "npm:@els-js/angular-compiler@19.2.14-tuxcare.1",
+   "@angular/core": "npm:@els-js/angular-core@19.2.14-tuxcare.1",
+   "@angular/forms": "npm:@els-js/angular-forms@19.2.14-tuxcare.1",
+   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@19.2.14-tuxcare.1",
+   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@19.2.14-tuxcare.1",
+   "@angular/platform-server": "npm:@els-js/angular-platform-server@19.2.14-tuxcare.1",
+   "@angular/router": "npm:@els-js/angular-router@19.2.14-tuxcare.1",
+   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@19.2.14-tuxcare.1",
+   "@angular/localize": "npm:@els-js/angular-localize@19.2.14-tuxcare.1",
+   "@angular/service-worker": "npm:@els-js/angular-service-worker@19.2.14-tuxcare.1"
+ }`
+
+const Angular19WithoutSSR =
+`"dependencies": {
+   "@angular/common": "npm:@els-js/angular-common@19.2.14-tuxcare.1",
+   "@angular/compiler": "npm:@els-js/angular-compiler@19.2.14-tuxcare.1",
+   "@angular/core": "npm:@els-js/angular-core@19.2.14-tuxcare.1",
+   "@angular/forms": "npm:@els-js/angular-forms@19.2.14-tuxcare.1",
+   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@19.2.14-tuxcare.1",
+   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@19.2.14-tuxcare.1",
+   "@angular/router": "npm:@els-js/angular-router@19.2.14-tuxcare.1",
+   "rxjs": "~7.8.0",
+   "tslib": "^2.3.0",
+   "zone.js": "~0.15.0"
+ },
+ "devDependencies": {
+   "@angular-devkit/build-angular": "^19.2.15",
+   "@angular/cli": "^19.2.15",
+   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@19.2.14-tuxcare.1",
+   "@types/jasmine": "~5.1.0",
+   "jasmine-core": "~5.6.0",
+   "karma": "~6.4.0",
+   "karma-chrome-launcher": "~3.2.0",
+   "karma-coverage": "~2.2.0",
+   "karma-jasmine": "~5.1.0",
+   "karma-jasmine-html-reporter": "~2.1.0",
+   "typescript": "~5.7.2"
+ },
+ "overrides": {
+   "@angular/common": "npm:@els-js/angular-common@19.2.14-tuxcare.1",
+   "@angular/compiler": "npm:@els-js/angular-compiler@19.2.14-tuxcare.1",
+   "@angular/core": "npm:@els-js/angular-core@19.2.14-tuxcare.1",
+   "@angular/forms": "npm:@els-js/angular-forms@19.2.14-tuxcare.1",
+   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@19.2.14-tuxcare.1",
+   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@19.2.14-tuxcare.1",
+   "@angular/router": "npm:@els-js/angular-router@19.2.14-tuxcare.1",
+   "@angular/platform-server": "npm:@els-js/angular-platform-server@19.2.14-tuxcare.1",
+   "@angular/service-worker": "npm:@els-js/angular-service-worker@19.2.14-tuxcare.1",
+   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@19.2.14-tuxcare.1"
+ }`
+</script>
