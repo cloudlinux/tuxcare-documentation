@@ -45,7 +45,7 @@ export default {
                 "/els-for-runtimes-and-libraries/php/",
                 "/els-for-runtimes-and-libraries/python/",
                 "/els-for-runtimes-and-libraries/python-libraries/",
-                "/els-for-runtimes-and-libraries/spring-framework-and-spring-boot/",
+                "/els-for-runtimes-and-libraries/spring/",
             ]
         },
     ],

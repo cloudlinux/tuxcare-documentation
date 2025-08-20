@@ -87,7 +87,7 @@ const techData = [
       {
         name: "Spring",
         versions: "Multiple",
-        link: "./spring-framework-and-spring-boot/",
+        link: "./spring/",
       },
       {
         name: "OpenJDK",
