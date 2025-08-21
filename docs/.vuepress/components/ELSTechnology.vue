@@ -94,6 +94,62 @@ const techData = [
         versions: "7 | 8 | 11 | 17",
         link: "./openjdk/",
       },
+      {
+        name: "Log4j",
+        versions: "1.2.17 | 2.14.1",
+      },
+      {
+        name: "dom4j",
+        versions: "1.6.1",
+      },
+      {
+        name: "SnakeYAML",
+        versions: "1.26 | 1.30",
+      },
+      {
+        name: "Google Guava",
+        versions: "31.1-jre",
+      },
+      {
+        name: "Apache Struts",
+        versions: "2.5.33",
+      },
+      {
+        name: "Hibernate",
+        versions: "5.4.33 | 5.6.15 | 6.0.2 | 6.5.3",
+      },
+      {
+        name: "Apache Commons Collections",
+        versions: "3.2.2",
+      },
+      {
+        name: "Apache Tapestry",
+        versions: "5.7.3",
+      },
+      {
+        name: "Apache Spark",
+        versions: "2.4.8 | 3.4.4",
+      },
+      {
+        name: "Apache Lucene",
+        versions: "7.7.3 | 8.11.4",
+      },
+      {
+        name: "Apache Camel",
+        versions: "3.22.4 | 4.4.5 | 4.8.7",
+      },
+      {
+        name: "Apache Cocoon",
+        versions: "2.3.0",
+      },
+      {
+        name: "Apache Velocity",
+        versions: "1.7.0",
+      },
+      {
+        name: "Okio",
+        versions: "2.8.0",
+      },
     ],
   },
   {
@@ -104,6 +160,86 @@ const techData = [
         name: "AngularJS",
         versions: "1.5.x | 1.6.x | 1.7.x | 1.8.x",
         link: "./angularjs/",
+      },
+      {
+        name: "RequireJS",
+        versions: "2.3.x",
+      },
+      {
+        name: "Passport",
+        versions: "0.2.2",
+      },
+      {
+        name: "Lodash",
+        versions: "4.17.x",
+      },
+      {
+        name: "Loopback",
+        versions: "3.x | 2.x",
+      },
+      {
+        name: "YUI",
+        versions: "3.18.1",
+      },
+      {
+        name: "Next.js",
+        versions: "12.3.x",
+      },
+      {
+        name: "request",
+        versions: "2.88.0 | 2.88.2",
+      },
+      {
+        name: "tough-cookie",
+        versions: "2.4.3 | 2.5.0",
+      },
+      {
+        name: "crypto-js",
+        versions: "3.3.0",
+      },
+      {
+        name: "vue-template-compiler",
+        versions: "2.6.11",
+      },
+      {
+        name: "webpack",
+        versions: "4.41.2 | 4.46.0",
+      },
+      {
+        name: "@sentry/browser",
+        versions: "5.7.1",
+      },
+      {
+        name: "jsonwebtoken",
+        versions: "8.5.1",
+      },
+      {
+        name: "ip",
+        versions: "1.1.5,2.0.0",
+      },
+      {
+        name: "Quill",
+        versions: "1.3.7",
+      },
+      {
+        name: "undici",
+        versions: "5.28.4",
+      },
+      {
+        name: "rollup",
+        versions: "2.79.1 | 2.79.2",
+      },
+      {
+        name: "copy-anything",
+        versions: "2.0.6",
+      },
+      {
+        name: "picocolors",
+        versions: "0.2.1",
+      },
+      {
+        name: "formidable",
+        versions: "2.1.2",
       },
     ],
   },
@@ -119,7 +255,7 @@ const techData = [
       {
         name: "certifi",
         versions: "2021.10.8 | 2022.12.7 | 2023.7.22",
-        link: "./angularjs/",
+        link: "./python-libraries/",
       },
       {
         name: "setuptools",
@@ -186,6 +322,10 @@ const techData = [
         versions: "75.8.0",
         link: "./python-libraries/",
       },
+      {
+        name: "statsmodels",
+        versions: "0.14.4",
+      },
     ],
   },
   {
@@ -207,6 +347,16 @@ const techData = [
         name: ".NET",
         versions: "6",
         link: "./dotnet/",
+      },
+    ],
+  },
+    {
+    ecosystem: "Ruby",
+    ecosystemIcon: "/images/ruby.png",
+    projects: [
+      {
+        name: "Ruby",
+        versions: "3.1",
       },
     ],
   },
