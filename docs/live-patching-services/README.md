@@ -134,7 +134,7 @@ apt purge kernelcare
 
 This will also unlink the system from its activation key (provided there is network connectivity to the CLN Portal). However, you'll need to remove the license from the CLN Portal manually if you don't plan to use the service anymore. 
 
-### KernelCare Repository Structure Changelog
+### KernelCare repository structure changelog
 
 KernelCare repository structure changes are typically transparent to users, with necessary updates applied automatically during package upgrades.
 However, in highly customized environments, such as those using custom repo mirrors, manual intervention may be required to accommodate these changes.
