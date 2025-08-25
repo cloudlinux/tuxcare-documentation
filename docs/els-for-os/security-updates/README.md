@@ -6,7 +6,7 @@ TuxCare provides the following security updates for ELS for OS:
 * [Open Vulnerability and Assessment Language (OVAL)](#oval-patch-definitions)
 * [Common Security Advisory Framework (CSAF)](#common-security-advisory-framework)
 
-Released Fixes are available via [cve.tuxcare.com](https://cve.tuxcare.com/els/releases) and additionaly, can be found on [security.tuxcare.com](https://security.tuxcare.com).
+Released Fixes are available via [cve.tuxcare.com](https://cve.tuxcare.com/els/releases) and can additionally be found on [security.tuxcare.com](https://security.tuxcare.com).
 
 ## Errata advisories
 
@@ -14,7 +14,7 @@ TuxCare Endless Lifecycle Support provides qualified security and selected bug-f
 
 You can view the full list of released fixes on [cve.tuxcare.com](https://cve.tuxcare.com/els/releases).
 
-### CVE status definition
+## CVE status definition
 
 - Needs Triage: Vulnerability information received and pending initial review
 - In Research: Investigating the details of the vulnerability
@@ -93,9 +93,9 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
 
    </CodeWithCopy>
 
-4. Examine scan results report.
+4. Examine the scan results report.
 
-   Following the example above scan results report will be saved to report.html file in current directory. This file can then be downloaded for analysis or published directly with local web server, for example:
+   Following the example above scan results report will be saved to report.html file in current directory. This file can then be downloaded for analysis or published directly with a local web server, for example:
 
    <CodeWithCopy>
 
@@ -115,13 +115,13 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
 
    </CodeWithCopy>
 
-   Assuming the above command is run from the directory with report.html file, the webpage with the report can then be accessed on `http://<server-ip-addess>:8000/report.html`cve through a web browser.
+   Assuming the above command is run from the directory with the report.html file, the webpage with the report can then be accessed on `http://<server-ip-addess>:8000/report.html` through a web browser.
 
    **Note: the OpenSCAP report below is provided as an example. The results will vary depending on the OS and version you are scanning.**
 
    ![](/images/available-cve-fixes-and-their-status.png)
 
-   The report includes a table with vulnerabilities and their status on examined system. Line as the following one reports that the system is vulnerable to the CVE-2023-2828:
+   The report includes a table with vulnerabilities and their status on the examined system. Line, as the one below, reports that the system is vulnerable to CVE-2023-2828:
 
    ```
    update oval:com.tuxcare.clsa:def:1688677755 true patch [CLSA-2023:1688677755], [CVE-2023-2828] Fix CVE(s): CVE-2023-2828
@@ -129,17 +129,17 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
 
    The table also includes corresponding hyperlinks to advisory pages where the package and the version containing the fix can be found as well as the command to run on the target system in order to install the update.
 
-   Lines like the one below designate that the fix for corresponding CVE is allready installed on the system, and no further action is needed:
+   Lines like the one below designate that the fix for the corresponding CVE is already installed on the system, and no further action is needed:
  
    ```
    oval:com.tuxcare.clsa:def:1694538670 false patch [CLSA-2023:1694538670], [CVE-2022-40433] Fix CVE(s): CVE-2022-40433
    ```
 
-### How integrate the OVAL data with a new vulnerability scanner
+### How to integrate the OVAL data with a new vulnerability scanner
 
 Identifying the vulnerabilities that apply to your systems is an important task for IT and InfoSec teams, and at TuxCare we make it easy.
 
-To detect whether a system has TuxCare ELS installed, check for following file being present: `/etc/els-release`.
+To detect whether a system has TuxCare ELS installed, check for the following file being present: `/etc/els-release`.
 
 Once that is validated, you can use the corresponding to the operating system OVAL files from above to scan for vulnerabilities.
 

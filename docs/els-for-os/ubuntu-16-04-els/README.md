@@ -1,4 +1,4 @@
-# Ubuntu 16.04
+# Ubuntu 16.04 ELS
 
 ## Connection to ELS repository
 

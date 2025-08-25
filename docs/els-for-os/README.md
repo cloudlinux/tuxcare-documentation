@@ -12,7 +12,7 @@ Our ELS service is designed to provide solutions for organizations that are not 
 * [CentOS Stream 8](./centos-stream-8-els)
 * [Oracle Linux 6](./oracle-linux-6-els)
 * [Oracle Linux 7](./oracle-linux-7-els)
-* [Red Hat Enterprise Linux 7](./rhel-7-els)
+* [Red Hat Enterprise Linux 7](./red-hat-enterprise-linux-7-els)
 * [Ubuntu 16.04](./ubuntu-16-04-els)
 * [Ubuntu 18.04](./ubuntu-18-04-els)
 * [Ubuntu 20.04](./ubuntu-20-04-els)

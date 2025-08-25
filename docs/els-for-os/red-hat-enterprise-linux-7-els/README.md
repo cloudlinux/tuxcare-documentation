@@ -1,4 +1,4 @@
-# Red Hat Enterprise Linux 7
+# Red Hat Enterprise Linux 7 ELS
 
 ## Connection to ELS repository
 
