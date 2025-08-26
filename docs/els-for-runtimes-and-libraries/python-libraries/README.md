@@ -130,7 +130,9 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2022-23491      | High     | certifi      | 2021.10.8          | 2021.10.08.post2+tuxcare |
 | CVE-2023-4863       | High     | pillow       | 9.4.0              | 9.4.0.post2+tuxcare |
 | CVE-2023-23934      | Low      | werkzeug     | 1.0.1              | 1.0.1.post3+tuxcare |
-| CVE-2023-25577      | High     | Werkzeug     | 1.0.1	            | 1.0.1.post1+tuxcare<br>1.0.1.post2+tuxcare<br>1.0.1.post3+tuxcare |
+| CVE-2023-23969      | High     | django       | 4.0                | 4.0.post1+tuxcare |
+| CVE-2023-24580      | High     | django       | 4.0                | 4.0.post1+tuxcare |
+| CVE-2023-25577      | High     | werkzeug     | 1.0.1	            | 1.0.1.post1+tuxcare<br>1.0.1.post2+tuxcare<br>1.0.1.post3+tuxcare |
 | CVE-2023-30861      | High     | flask        | 1.1.2              | 1.1.2.post1+tuxcare |
 | CVE-2023-32681      | Medium   | requests     | 2.25.1             | 2.25.1.post1+tuxcare |
 | CVE-2023-32681      | Medium   | requests     | 2.30.0             | 2.30.0.post1+tuxcare |
