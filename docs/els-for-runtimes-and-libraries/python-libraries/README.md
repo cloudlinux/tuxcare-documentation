@@ -152,6 +152,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2024-12797      | N/A      | cryptography | 43.0.3             | 43.0.3.post1+tuxcare |
 | CVE-2024-22195      | Medium   | jinja2       | 2.11.3             | 2.11.3.post1+tuxcare<br>2.11.3.post2+tuxcare |
 | CVE-2024-24680      | High     | django       | 5.0.1              | 5.0.1.post1+tuxcare |
+| CVE-2024-27351      | Medium   | django       | 5.0.2              | 5.0.2.post1+tuxcare |
 | CVE-2024-28219      | Medium   | pillow       | 9.4.0              | 9.4.0.post3+tuxcare |
 | CVE-2024-34064      | Medium   | jinja2       | 2.11.3             | 2.11.3.post1+tuxcare<br>2.11.3.post2+tuxcare |
 | CVE-2024-39689      | High     | certifi      | 2022.12.7          | 2022.12.07.post2+tuxcare |
