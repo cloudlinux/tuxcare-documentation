@@ -9,7 +9,7 @@ To install the Endless Lifecycle Support repository on a server, you just need t
 In order to use Endless Lifecycle Support for Oracle Linux 7, you will need to open TCP port 443 to the following destinations:
 
 * [cln.cloudlinux.com](http://cln.cloudlinux.com)
-* [repo.cloudlinux.com](http://repo.cloudlinux.com)
+* [repo.tuxcare.com](http://repo.tuxcare.com)
 
 ## Installation of repositories
 
