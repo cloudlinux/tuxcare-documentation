@@ -169,6 +169,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2024-56374      | Medium   | django       | 5.1.4              | 5.1.4.post1+tuxcare |
 | CVE-2025-27516      | Medium   | jinja2	      | 2.11.3             | 2.11.3.post2+tuxcare |
 | CVE-2025-47273      | High     | setuptools   | 75.8.0             | 75.8.0.post1+tuxcare |
+| CVE-2025-50817      | N/A      | future       | 1.0.0              | 1.0.0.post1+tuxcare |
 
 **N/A (Not Available)** mean that the National Vulnerability Database (NVD) has registered this CVE, but an official CVSS severity score has not yet been assigned.
 
