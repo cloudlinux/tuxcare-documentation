@@ -126,6 +126,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | GHSA-56pw-mpj4-fxww | High     | pillow       | 9.4.0              | 9.4.0.post2+tuxcare |
 | GHSA-h4gh-qq45-vh27 | Medium   | cryptography | 42.0.8             | 42.0.8.post1+tuxcare |
 | CVE-2019-6446       | Critical | numpy        | 1.16.0             | 1.16.0.post1+tuxcare |
+| CVE-2020-7694       | Low      | uvicorn      | 0.11.6             | 0.11.6.post1+tuxcare |
 | CVE-2020-7695       | High     | uvicorn      | 0.11.6             | 0.11.6.post1+tuxcare |
 | CVE-2021-41945      | N/A      | httpx        | 0.22.0             | 0.22.0.post1+tuxcare |
 | CVE-2022-23491      | High     | certifi      | 2021.10.8          | 2021.10.08.post2+tuxcare |
