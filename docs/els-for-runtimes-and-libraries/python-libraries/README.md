@@ -129,6 +129,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2021-41945      | N/A      | httpx        | 0.22.0             | 0.22.0.post1+tuxcare |
 | CVE-2022-23491      | High     | certifi      | 2021.10.8          | 2021.10.08.post2+tuxcare |
 | CVE-2023-4863       | High     | pillow       | 9.4.0              | 9.4.0.post2+tuxcare |
+| CVE-2023-4863       | High     | pillow       | 9.5.0              | 9.5.0.post1+tuxcare |
 | CVE-2023-23934      | Low      | werkzeug     | 1.0.1              | 1.0.1.post3+tuxcare |
 | CVE-2023-23969      | High     | django       | 4.0                | 4.0.post1+tuxcare |
 | CVE-2023-24580      | High     | django       | 4.0                | 4.0.post1+tuxcare |
@@ -148,6 +149,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2024-5629       | N/A      | pymongo      | 3.13.0             | 3.13.0.post1+tuxcare |
 | CVE-2024-6345       | High     | setuptools   | 65.5.1             | 65.5.1.post1+tuxcare |
 | CVE-2024-6827       | High     | gunicorn     | 22.0.0             | 22.0.0.post1+tuxcare |
+| CVE-2024-7923       | Critical | gunicorn     | 20.1.0             | 20.1.0.post2+tuxcare |
 | CVE-2024-12797      | High     | cryptography | 42.0.8             | 42.0.8.post1+tuxcare |
 | CVE-2024-12797      | N/A      | cryptography | 43.0.1             | 43.0.1.post1+tuxcare |
 | CVE-2024-12797      | N/A      | cryptography | 43.0.3             | 43.0.3.post1+tuxcare |
