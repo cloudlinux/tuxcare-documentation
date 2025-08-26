@@ -145,6 +145,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2024-5629       | N/A      | pymongo      | 3.13.0             | 3.13.0.post1+tuxcare |
 | CVE-2024-6345       | High     | setuptools   | 65.5.1             | 65.5.1.post1+tuxcare |
 | CVE-2024-6827       | High     | gunicorn     | 22.0.0             | 22.0.0.post1+tuxcare |
+| CVE-2024-12797      | High     | cryptography | 42.0.8             | 42.0.8.post1+tuxcare |
 | CVE-2024-12797      | N/A      | cryptography | 43.0.1             | 43.0.1.post1+tuxcare |
 | CVE-2024-12797      | N/A      | cryptography | 43.0.3             | 43.0.3.post1+tuxcare |
 | CVE-2024-22195      | Medium   | jinja2       | 2.11.3             | 2.11.3.post1+tuxcare<br>2.11.3.post2+tuxcare |
