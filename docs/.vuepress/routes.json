@@ -88,5 +88,9 @@
     "/els-for-languages/spring-framework-and-spring-boot/#incident-reporting-and-response-timeframe": "/els-for-runtimes-and-libraries/#incident-reporting-and-response-timeframe",
     "/els-for-languages/spring-framework-and-spring-boot/#enhanced-transparency-visibility": "/els-for-runtimes-and-libraries/#enhanced-transparency-visibility",
     "/els-for-languages/spring-framework-and-spring-boot/#technical-support": "/els-for-runtimes-and-libraries/#technical-support",
-    "/els-for-languages/python-libraries/": "/els-for-runtimes-and-libraries/python-libraries/"
+    "/els-for-languages/python-libraries/": "/els-for-runtimes-and-libraries/python-libraries/",
+    "/els-for-runtimes-and-libraries/spring/#overview": "/els-for-runtimes-and-libraries/spring/#step-2-configure-registry",
+    "/els-for-runtimes-and-libraries/spring/#step-2-create-or-modify-your-build-tool-settings": "/els-for-runtimes-and-libraries/spring/#step-4-verify-and-build",
+    "/els-for-runtimes-and-libraries/spring/#verification": "/els-for-runtimes-and-libraries/spring/#step-4-verify-and-build"
+
 }
