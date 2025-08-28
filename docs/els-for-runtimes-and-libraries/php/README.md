@@ -29,15 +29,16 @@ alt-php provides a more flexible and convenient environment for working with dif
 
   <template #Active_Support>
 
-| OS                                     | Package Type | OS Version                        | PHP Version |
-| :------------------------------------: | :----------: | :-------------------------------: | :---------: | 
-| CentOS, CloudLinux, Oracle Linux, etc. | RPM          | 7.x, 8.x, 9.x                     | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| CentOS Stream                          | RPM          | 8.x                               | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| AlmaLinux                              | RPM          | 8.x, 9.x                          | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Amazon Linux 2                         | RPM          | -                                 | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Ubuntu                                 | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Debian				                         | DEB          | 10, 11, 12	                       | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Windows				                         | -            | Windows Server 2019, 2022, 2025	 | 5.6, 7.2, 7.3, 7.4 , 8.0, 8.1 |
+| OS                                                                       | Package Type | OS Version                        |
+| :----------------------------------------------------------------------: | :----------: | :-------------------------------: |
+| EL 7 ( Amazon Linux 2, CentOS, CloudLinux, Oracle Linux, etc.)           | RPM          | 7.x                        |
+| EL 8 ( AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                        |
+| EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 8.x                        |
+| Ubuntu                                                                   | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 |
+| Debian                                                                   | DEB          | 10, 11, 12	                      |
+| Windows                                                                  | -            | Windows Server 2019, 2022, 2025   |
+
+**For supported PHP versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-php/projects).**
 
 Other distros and architectures upon request.
 

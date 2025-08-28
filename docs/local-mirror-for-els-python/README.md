@@ -46,7 +46,7 @@ We provide the ability to create local mirrors of Python for ELS updates.
 
   </CodeWithCopy>
 
-* Use one of the suggested options to specify the OS. For the list of supported versions, please, refer to [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-python/projects).
+* Use one of the suggested options to specify the OS:
 
 | Option            | OS                                                                         |
 | :---------------: | :------------------------------------------------------------------------: |
