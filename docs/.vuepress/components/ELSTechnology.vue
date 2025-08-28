@@ -249,7 +249,7 @@ const techData = [
     projects: [
       {
         name: "Python",
-        versions: "2.7 | 3.3 | 3.4 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 | 3.12 | 3.13",
+        versions: "2.7 | 3.6 ",
         link: "./python/",
       },
       {
