@@ -29,8 +29,8 @@ We provide the ability to create local mirrors of PHP for ELS updates.
   <CodeWithCopy>
 
   ```
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/ . && \
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/ .
+  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/   alt-common
+  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/ alt-php-els
   ```
 
   </CodeWithCopy>
@@ -40,24 +40,24 @@ We provide the ability to create local mirrors of PHP for ELS updates.
   <CodeWithCopy>
 
   ```
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/el8/ . && \
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/el8/ .
+  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/rpm/el/8/   alt-common
+  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/rpm/el/8/ alt-php-els
   ```
 
   </CodeWithCopy>
 
-Use one of the suggested options to specify the OS:
+* Use one of the suggested options to specify the OS. For the list of supported versions, please, refer to [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-php/projects).
 
-| Option      | OS                                                                         |
-| :---------: | :------------------------------------------------------------------------: |
-| el7         | CentOS 7, CloudLinux 7, OracleLinux 7, Amazon Linux 2, etc.                |
-| el8         | AlmaLinux 8, CentOS 8, CentOS 8 Stream, CloudLinux 8, Oracle Linux 8, etc. |
-| el9         | AlmaLinux 9, CloudLinux 9, Oracle Linux 9, etc.                            |
-| ubuntu16.04 | Ubuntu 16.04                                                               |
-| ubuntu18.04 | Ubuntu 18.04                                                               |
-| ubuntu20.04 | Ubuntu 20.04                                                               |
-| ubuntu22.04 | Ubuntu 22.04                                                               |
-| ubuntu24.04 | Ubuntu 24.04                                                               |
-| debian10    | Debian 10                                                                  |
-| debian11    | Debian 11                                                                  |
-| debian12    | Debian 12                                                                  |
+| Option            | OS                                                                         |
+| :---------------: | :------------------------------------------------------------------------: |
+| rpm/el/7/         | CentOS 7, CloudLinux 7, OracleLinux 7, Amazon Linux 2, etc.                |
+| rpm/el/8/         | AlmaLinux 8, CentOS 8, CentOS 8 Stream, CloudLinux 8, Oracle Linux 8, etc. |
+| rpm/el/9/         | AlmaLinux 9, CloudLinux 9, Oracle Linux 9, etc.                            |
+| deb/ubuntu/16.04/ | Ubuntu 16.04                                                               |
+| deb/ubuntu/18.04/ | Ubuntu 18.04                                                               |
+| deb/ubuntu/20.04/ | Ubuntu 20.04                                                               |
+| deb/ubuntu/22.04/ | Ubuntu 22.04                                                               |
+| deb/ubuntu/24.04/ | Ubuntu 24.04                                                               |
+| deb/debian/10/    | Debian 10                                                                  |
+| deb/debian/11/    | Debian 11                                                                  |
+| deb/debian/12/    | Debian 12                                                                  |
