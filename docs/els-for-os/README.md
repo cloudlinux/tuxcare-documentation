@@ -25,8 +25,6 @@ TuxCare Endless Lifecycle Support, by default, provides security patches for Hig
 
 Custom coverage options are available, including a 10-pack of customer-directed patches for clients who need CVEs patched outside of the ELS scope. Specific details regarding these coverage options and their pricing can be obtained by contacting our sales team.
 
-More about [security updates](./security-updates/).
-
 ## Target response times
 
 Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
@@ -34,6 +32,50 @@ Aligning with many industry standards and regulatory requirements, TuxCare is co
 We aim to deliver security patches for critical and high-risk vulnerabilities (CVSS 7+) within 14 days from when the vulnerabilities become publicly disclosed. This rapid response time significantly reduces the window of opportunity for potential attackers and meets most security regulation requirements.
 
 Requests for customer-directed security patches for CVEs that are outside of the ELS scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 14 days.
+
+## Rollout Process
+
+For several platforms, TuxCare delivers security updates through a staged rollout repositories. This process may take up to 14 additional days after a patch is published to stable repositories.
+
+During the rollout period, updates are applied in the usual way with standard package manager commands. 
+
+**For example, standard update for kernel**:
+
+<CodeWithCopy>
+
+```
+yum update kernel*
+```
+
+</CodeWithCopy>
+
+If you need to apply the fix immediately without waiting for the rollout to complete, you can use the bypass repository. The necessary instructions are always provided on the release information page.
+
+**For example (packages in the 3rd rollout slot)**:
+
+<CodeWithCopy>
+
+```
+yum update kernel* --enablerepo=centos7els-rollout-3-bypass
+```
+
+</CodeWithCopy>
+
+You can track the status of vulnerabilities and their corresponding fixes via [cve.tuxcare.com](https://cve.tuxcare.com/):
+* [Vulnerabilities](https://cve.tuxcare.com/els/cve)
+* [Fixes](https://cve.tuxcare.com/els/releases)
+
+## CVE status definition
+
+- Needs Triage: Vulnerability information received and pending initial review
+- In Research: Investigating the details of the vulnerability
+- In Progress: Developing a fix for the identified vulnerability
+- In Testing: Testing the developed fix for the vulnerability
+- In Rollout: Releasing the fix in rollout repositories
+- Released: Fix has been fully released to all users
+- Ignored: This CVE is ignored for specific reasons (low score or another), detailed in the statement field
+- Not Vulnerable: The vulnerability does not affect our version
+- Already Fixed: The vulnerability has already been addressed by the vendor
 
 ## Supported packages
 

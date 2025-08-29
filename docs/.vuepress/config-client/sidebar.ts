@@ -40,7 +40,7 @@ export default {
                 "/els-for-os/ubuntu-16-04-els/",
                 "/els-for-os/ubuntu-18-04-els/",
                 "/els-for-os/ubuntu-20-04-els/",
-                "/els-for-os/security-updates/",
+                "/els-for-os/machine-readable-security-data/",
             ]
         },
     ],

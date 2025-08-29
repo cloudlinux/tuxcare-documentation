@@ -1,4 +1,4 @@
-# Security Updates
+# Machine-Readable Security Data (Errata, OVAL, CSAF)
 
 TuxCare provides the following security updates for ELS for OS:
 
@@ -13,18 +13,6 @@ Released Fixes are available via [cve.tuxcare.com](https://cve.tuxcare.com/els/r
 TuxCare Endless Lifecycle Support provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which CVEs are resolved and which bugs have been addressed.
 
 You can view the full list of released fixes on [cve.tuxcare.com](https://cve.tuxcare.com/els/releases).
-
-## CVE status definition
-
-- Needs Triage: Vulnerability information received and pending initial review
-- In Research: Investigating the details of the vulnerability
-- In Progress: Developing a fix for the identified vulnerability
-- In Testing: Testing the developed fix for the vulnerability
-- In Rollout: Releasing the fix in rollout repositories
-- Released: Fix has been fully released to all users
-- Ignored: This CVE is ignored for specific reasons (low score or another), detailed in the statement field
-- Not Vulnerable: The vulnerability does not affect our version
-- Already Fixed: The vulnerability has already been addressed by the vendor
 
 ## OVAL patch definitions
 
