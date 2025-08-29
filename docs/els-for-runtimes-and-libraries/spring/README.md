@@ -38,7 +38,7 @@ You may choose any arbitrary allowed value instead of `repository-id`, but you m
 1. Add the TuxCare Spring repository and plugins to your build configuration:
 
    <CodeTabs :tabs="[
-     { title: 'Maven (~/.m2/pom.xml)', content: mavenrepo },
+     { title: 'Maven (pom.xml)', content: mavenrepo },
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlerepo }
    ]" />
 
@@ -68,10 +68,10 @@ repositories {
 ```
 -->
 
-2. Update your Spring build dependencies. You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/).
+2. Update your Spring build dependencies. You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/). Example:
 
    <CodeTabs :tabs="[
-     { title: 'Maven (~/.m2/pom.xml)', content: mavendeps },
+     { title: 'Maven (pom.xml)', content: mavendeps },
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradledeps }
    ]" />
 
@@ -104,8 +104,8 @@ const mavencreds =
     <servers>
         <server>
           <id>tuxcare-registry</id>
-          <username>\${env.USERNAME}</username>
-          <password>\${env.PASSWORD}</password>
+          <username>USERNAME</username>
+          <password>PASSWORD</password>
         </server>
     </servers>
 </settings>`
@@ -167,7 +167,7 @@ const mavendeps =
 `<parent>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-parent</artifactId>
-  <version>2.7.18-spring-boot-2.7.27</version>
+  <version>2.7.18-tuxcare.8</version>
 </parent>
 
 <dependencies>
@@ -186,7 +186,7 @@ const mavendeps =
 const gradledeps =
 `plugins {
   id 'java'
-  id 'org.springframework.boot' version '2.7.18-spring-boot-2.7.27'
+  id 'org.springframework.boot' version '2.7.18-tuxcare.8'
   id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
