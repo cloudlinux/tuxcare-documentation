@@ -29,14 +29,16 @@ alt-php provides a more flexible and convenient environment for working with dif
 
   <template #Active_Support>
 
-| OS                                    | Package Type | OS Version                        | PHP Version |
-| :-----------------------------------: | :----------: | :-------------------------------: | :---------: | 
-| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 7.x, 8.x, 9.x                     | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| AlmaLinux                             | RPM          | 8.x, 9.x                          | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Amazon Linux 2                        | RPM          | -                                 | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Ubuntu                                | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Debian				                        | DEB          | 10, 11, 12	                       | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 |
-| Windows				                        | -            | Windows Server 2019, 2022, 2025	 | 5.6, 7.2, 7.3, 7.4 , 8.0, 8.1 |
+| OS                                                                       | Package Type | OS Version                        |
+| :----------------------------------------------------------------------: | :----------: | :-------------------------------: |
+| EL 7 ( Amazon Linux 2, CentOS, CloudLinux, Oracle Linux, etc.)           | RPM          | 7.x                        |
+| EL 8 ( AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                        |
+| EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 8.x                        |
+| Ubuntu                                                                   | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 |
+| Debian                                                                   | DEB          | 10, 11, 12	                      |
+| Windows                                                                  | -            | Windows Server 2019, 2022, 2025   |
+
+**For supported PHP versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-php/projects).**
 
 Other distros and architectures upon request.
 
@@ -83,7 +85,7 @@ Below are tables with information about the time of security support from the ve
 
 ### Install ALT-PHP
 
-The following steps are provided for both **RPM-based** (CentOS, CloudLinux, Oracle Linux, AlmaLinux, Amazon Linux 2, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
+The following steps are provided for both **RPM-based** (CentOS, CentOS Stream, CloudLinux, Oracle Linux, AlmaLinux, Amazon Linux 2, etc) and **DEB-based** (Debian, Ubuntu) systems. Please select the appropriate tab for your distribution.
 
 :::tip
 **Amazon Linux 2-specific preprequisities**. Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two version of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
@@ -1058,8 +1060,8 @@ This section contains information about available ELS for PHP OVAL streams that 
 
 Currently, we provide OVAL data for the following OS versions:
 
-* EL 7 (CentOS, CloudLinux, OracleLinux, Amazon Linux 2, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml)
-* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml)
+* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [oval.xml](http://security.tuxcare.com/oval/els_alt_php/el9/oval.xml)
 * Ubuntu 16.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu16.04/oval.xml)
 * Ubuntu 18.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu18.04/oval.xml)
@@ -1117,8 +1119,8 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 
 Currently, we provide CSAF data for the following OS versions:
 
-* EL 7 (CentOS, CloudLinux, OracleLinux, Amazon Linux 2, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
-* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
+* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
+* EL 8 (AlmaLinux, CentOS,CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el9/](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/)
 * Ubuntu 16.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/)
 * Ubuntu 18.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/)
@@ -1137,8 +1139,8 @@ The CSAF files are published in JSON format which is easy to parse and integrate
 
 Currently, we provide errata for the following OS versions:
 
-* EL 7 (CentOS, CloudLinux, OracleLinux, Amazon Linux 2, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
-* EL 8 (AlmaLinux, CentOS, CloudLinux, OracleLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
+* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el9/](https://security.tuxcare.com/errata/els_alt_php/el9/)
 * Ubuntu 16.04: [security.tuxcare.com/errata/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu16.04/)
 * Ubuntu 18.04: [security.tuxcare.com/errata/els_alt_php/ubuntu18.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu18.04/)
