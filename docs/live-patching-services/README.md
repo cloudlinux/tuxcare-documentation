@@ -139,26 +139,26 @@ This will also unlink the system from its activation key (provided there is netw
 KernelCare repository structure changes are typically transparent to users, with necessary updates applied automatically during package upgrades.
 However, in highly customized environments, such as those using custom repo mirrors, manual intervention may be required to accommodate these changes.
 
-* KernelCare 3.0-1
+#### KernelCare 3.0-1
 
 1. *RPM-only* - started using [RPM-GPG-KEY-KernelCare-rsa4096](https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare-rsa4096),
  which offers stronger cryptography. This change is mandatory for EL10 and remains compatible with older EL versions.
 
-- Old `gpgkey` param value example:
+Old `gpgkey` param value example:
 `gpgkey=https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare`
 
-- New `gpgkey` param value example:
+New `gpgkey` param value example:
 `gpgkey=https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare-rsa4096`
 
 2. *RPM-only* - The repository URL has changed to [kernelcare/el-sig202505](https://repo.cloudlinux.com/kernelcare/el-sig202505/), with packages signed using the new signature key.
 
-- Old `baseurl` param value example:
+Old `baseurl` param value example:
 `https://repo.cloudlinux.com/kernelcare/$releasever/$basearch`
 
-- New `baseurl` param value example:
+New `baseurl` param value example:
 `https://repo.cloudlinux.com/kernelcare/el-sig202505/$releasever/$basearch`
 
-* KernelCare 2.97-2
+#### KernelCare 2.97-2
 
 1. *Debian-only* - The repository URL has changed to [kernelcare/debian-sig202505](https://repo.cloudlinux.com/kernelcare/debian-sig202505/), with metadata signed using a stronger cryptographic key.
 
