@@ -134,6 +134,48 @@ apt purge kernelcare
 
 This will also unlink the system from its activation key (provided there is network connectivity to the CLN Portal). However, you'll need to remove the license from the CLN Portal manually if you don't plan to use the service anymore. 
 
+### KernelCare repository structure changelog
+
+KernelCare repository structure changes are typically transparent to users, with necessary updates applied automatically during package upgrades.
+However, in highly customized environments, such as those using custom repo mirrors, manual intervention may be required to accommodate these changes.
+
+#### KernelCare 3.0-1
+
+1. *RPM-only* - started using [RPM-GPG-KEY-KernelCare-rsa4096](https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare-rsa4096),
+ which offers stronger cryptography. This change is mandatory for EL10 and remains compatible with older EL versions.
+
+Old `gpgkey` param value example:
+`gpgkey=https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare`
+
+New `gpgkey` param value example:
+`gpgkey=https://repo.cloudlinux.com/kernelcare/RPM-GPG-KEY-KernelCare-rsa4096`
+
+2. *RPM-only* - The repository URL has changed to [kernelcare/el-sig202505](https://repo.cloudlinux.com/kernelcare/el-sig202505/), with packages signed using the new signature key.
+
+Old `baseurl` param value example:
+`https://repo.cloudlinux.com/kernelcare/$releasever/$basearch`
+
+New `baseurl` param value example:
+`https://repo.cloudlinux.com/kernelcare/el-sig202505/$releasever/$basearch`
+
+#### KernelCare 2.97-2
+
+1. *Debian-only* - The repository URL has changed to [kernelcare/debian-sig202505](https://repo.cloudlinux.com/kernelcare/debian-sig202505/), with metadata signed using a stronger cryptographic key.
+
+Old repo url example:
+`https://repo.cloudlinux.com/kernelcare/kernelcare-debian/12`
+
+New repo url example:
+`https://repo.cloudlinux.com/kernelcare/debian-sig202505/12`
+
+2. *Ubuntu-only* - The repository URL has changed to [kernelcare/ubuntu-sig202505](https://repo.cloudlinux.com/kernelcare/ubuntu-sig202505/), with metadata signed using a stronger cryptographic key.
+
+Old repo url example:
+`https://repo.cloudlinux.com/kernelcare-ubuntu/24.04`
+
+New repo url example:
+`https://repo.cloudlinux.com/kernelcare/ubuntu-sig202505/24.04`
+
 ### Switching from Ksplice 
 
 To switch from Ksplice to KernelCare SimplePatch, use the following script that uninstalls Ksplice and installs KernelCare SimplePatch instead. 

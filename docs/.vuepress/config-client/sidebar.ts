@@ -30,23 +30,42 @@ export default {
             collapsable: false,
             children: [
                 "/els-for-os/",
+                "/els-for-os/centos-6-els/",
+                "/els-for-os/centos-7-els/",
+                "/els-for-os/centos-8-els/",
+                "/els-for-os/centos-stream-8-els/",
+                "/els-for-os/oracle-linux-6-els/",
+                "/els-for-os/oracle-linux-7-els/",
+                "/els-for-os/red-hat-enterprise-linux-7-els/",
+                "/els-for-os/ubuntu-16-04-els/",
+                "/els-for-os/ubuntu-18-04-els/",
+                "/els-for-os/ubuntu-20-04-els/",
+                "/els-for-os/machine-readable-security-data/",
             ]
         },
     ],
-    '/els-for-languages/': [
+    '/els-for-runtimes-and-libraries/': [
         {
             collapsable: false,
             children: [
-                "/els-for-languages/",
-                "/els-for-languages/php/",
-                "/els-for-languages/python/",
-                "/els-for-languages/spring-framework-and-spring-boot/",
-                "/els-for-languages/dotnet/",
-                "/els-for-languages/angular/",
-                "/els-for-languages/angularjs/",
-                "/els-for-languages/apache-tomcat/",
-                "/els-for-languages/openjdk/",
-                "/els-for-languages/python-libraries/",
+                "/els-for-runtimes-and-libraries/",
+                "/els-for-runtimes-and-libraries/angular/",
+                "/els-for-runtimes-and-libraries/angularjs/",
+                "/els-for-runtimes-and-libraries/dotnet/",
+                "/els-for-runtimes-and-libraries/openjdk/",
+                "/els-for-runtimes-and-libraries/php/",
+                "/els-for-runtimes-and-libraries/python/",
+                "/els-for-runtimes-and-libraries/python-libraries/",
+                "/els-for-runtimes-and-libraries/spring/",
+            ]
+        },
+    ],
+    '/els-for-applications/': [
+        {
+            collapsable: false,
+            children: [
+                "/els-for-applications/",
+                "/els-for-applications/apache-tomcat/",
             ]
         },
     ],

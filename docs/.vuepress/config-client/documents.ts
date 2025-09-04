@@ -10,8 +10,8 @@ export default [
         link: "/radar/",
     },
     {
-        title: "Enterprise Support for AlmaLinux",
-        description: "provides a TuxCare-vetted repository of AlmaLinux updates with 16 years of support coverage, delivers an extension of an additional 4.5 years of security fixes for Critical and High-risk vulnerabilities and FIPS-compliant security patches for select AlmaLinux minor versions, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.",
+        title: "TuxCare Enterprise Support",
+        description: "provides a TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with 16 years of support coverage, delivers an extension of an additional 4.5 years of security fixes for Critical and High-risk vulnerabilities and FIPS-compliant security patches for select minor versions, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.",
         link: "/enterprise-support-for-almalinux/",
     },
     {
@@ -35,14 +35,19 @@ export default [
         link: "/eportal-api/",
     },
     {
-        title: "ELS for OS",
+        title: "ELS for Operating Systems",
         description: "allows you to continue running your Linux server after the operating system’s end of life.",
         link: "/els-for-os/",
     },
     {
-        title: "ELS for Languages",
-        description: "provides security fixes for programming languages and software development frameworks that have reached their end-of-life”",
-        link: "/els-for-languages/",
+        title: "ELS for Runtimes & Libraries",
+        description: "provides security fixes for language runtimes and software libraries beyond their official end-of-life date.",
+        link: "/els-for-runtimes-and-libraries/",
+    },
+    {
+        title: "ELS for Applications",
+        description: "provides security fixes for open-source applications after official support ends.",
+        link: "/els-for-applications/",
     },
     {
         title: "Subscription Management Portal",
@@ -51,7 +56,7 @@ export default [
     },
     {
         title: "Service Descriptions",
-        description: "AlmaCare service description",
+        description: "Technical support service description",
         link: "/service-descriptions/",
     }
 
