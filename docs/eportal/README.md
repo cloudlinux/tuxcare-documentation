@@ -201,6 +201,99 @@ Install ePortal:
 # apt update && apt install -y --no-install-recommends kcare-eportal
 ```
 
+### Docker image
+Simple run:
+
+```text
+docker run -d --rm --network=host kernelcare/eportal:latest
+```
+
+Run with persistent volume:
+
+```text
+docker run -d --rm --network=host \
+    -v eportal-volume:/var/lib/eportal/data/ \
+    kernelcare/eportal:latest
+```
+
+or mount:
+
+```text
+docker run -d --rm --network=host \
+    -v /var/lib/eportal/data:/var/lib/eportal/data/ \
+    kernelcare/eportal:latest
+````
+
+run with unprevileged user:
+
+**WARNING**: Volume or mount should be provided, and the owner of the host folder
+should be equal to the UID that is used with ```--user``` option.
+```--network=host``` option can't be used in this mode.
+
+```text
+docker run -d --rm \
+    -v /var/lib/eportal/data:/var/lib/eportal/data/ \
+    --user <uid of user> kernelcare/eportal:latest
+```
+
+The ePortal image uses several environment variables which are useful for the advanced configuration
+
+| Environment variable                     | Description                                                                          | Default value |
+| ---------------------------------------- | ------------------------------------------------------------------------------------ | ------------- |
+| EPORTAL_SERVER_STATS_PERIOD              | timeout in seconds when eportal send usage statistics                                | 1 day         |
+| EPORTAL_AUTO_UPDATE_PERIOD               | timeout in seconds when eportal tries to pull updates                                | 10 min        |
+| EPORTAL_LIMIT_PATCHSETS                  | process at most N latest patches from patchserver                                    | None (all)    |
+| EPORTAL_PROXY                            | proxy connection string                                                              | unset         |
+| EPORTAL_REDUCED_REPORT                   | do not send detailed stats to patchserver                                            | False         |
+| EPORTAL_NODE_URL                         | this node URL (replication setup)                                                    | unset         |
+| EPORTAL_LEADER_URL                       | leader node URL (replication setup)                                                  | unset         |
+| EPORTAL_REPLICATION_SHARED_KEY           | shared secret for replicas (replication setup)                                       | unset         |
+| EPORTAL_REPLICATION_CHECK_CERT           | whether to check node certificate                                                    | True          |
+| EPORTAL_REPLICATION_CLEAN_AGE            | replication log retention period in seconds                                          | 7 days        |
+| EPORTAL_REPLICATION_CLEAN_AGGRESSIVE_AGE | retention period for aggressive policy                                               | 1 hour        |
+| EPORTAL_REPLICATION_STANDBY              | passive mode for node (only receiving changes)                                       | False         |
+| EPORTAL_CACHE_MODE                       | pass patch request directly to patchserver without preliminary downloading patchsets | False         |
+| EPORTAL_PATCH_SOURCE_URL                 | patch source                                                                         | https://downloads.kernelcare.com/patch-download/ |
+| EPORTAL_PATCH_SOURCE_USER                | patch source user, if set, will overwrite patch source configuration in UI           | unset         |
+| EPORTAL_PATCH_SOURCE_PASSWORD            | patch source password                                                                | unset         |
+| EPORTAL_BUNITS                           | enable business units feature (multi tenancy)                                        | False         |
+| EPORTAL_BUNITS_LOGIN_SELECTOR            | allows to select business unit when logging in                                       | False         |
+| EPORTAL_RADAR_PROXY_ENABLE               | enable TuxCare RADAR proxying                                                        | False         |
+| EPORTAL_RADAR_PROXY_BASEURL              | TuxCare RADAR URL                                                                    | https://radar.tuxcare.com |
+| EPORTAL_SEND_CHECKIN_PERIOD              | servers check-ins report period in seconds                                           | 1 day         |
+
+
+For example, if you need to send reduced stats:
+
+```text
+docker run -d --rm --network=host \
+    -e EPORTAL_REDUCED_REPORT=1 \
+    -v eportal-volume:/var/lib/eportal/data/ \
+    kernelcare/eportal:latest
+```
+
+Users management command should be executed in the running container. For example, to create an admin user:
+
+```text
+docker exec <container-id> kc.eportal -a admin -p AdminPassword
+```
+
+#### Image upgrade and downgrade
+
+Typically, upgrading or downgrading ePortal image does not require any additional actions.
+
+Special cases of downgrading:
+  * Downgrade **from** versions <= 2.11-1 is not supported
+  * Downgrade **to** versions <= 2.11-1 requires additional steps.
+    For example, having data dir created with kernelcare/eportal:2.12-1,
+    you want to downgrade to kernelcare/eportal:2.8-1.
+    First, make a backup of eportal-volume, then proceed with
+```text
+    docker run --rm -v eportal-volume:/var/lib/eportal/data --entrypoint=python3.8 \
+        -it kernelcare/eportal:2.8-1 /var/lib/eportal/data/migration/migratedb.py
+```
+Then you can use kernelcare/eportal:2.8-1 image to run container as usual.
+
 ## Allowed hosts
 
 We must declare the list of allowed hosts in the configuration for security reasons. It help to avoid HTTP Host header attacks. According to your installation, you need to add this parameter into [ePortal config file](#config-files):
@@ -1389,7 +1482,7 @@ If you migrate from Debian-based to Debian-based system you can simply:
 * Stop ePortal on both hosts.
 * Copy `/var/lib/eportal` to a new host. Note: directory owner must stay as `eportal:eportal`.
 * Copy config `/etc/eportal/config` if it exists.
-* Run migration `/usr/share/kcare-eportal/migratedb.py --upgrade` on a new host.
+* Run migration `/usr/share/kcare-eportal/migratedb.py` on a new host.
 * Start ePortal on a new host.
 
 Migration from RHEL-based distro is more elaborate. Later we refer to a `$BASE_DIR` variable in scripts. You can export it for RHEL-based distros:
@@ -1449,13 +1542,29 @@ For Debian-based distros:
 [new-host ~]# chown -R eportal:eportal $BASE_DIR
 ```
 
-* Run migration `/usr/share/kcare-eportal/migratedb.py --upgrade` on a new host.
+* Run migration `/usr/share/kcare-eportal/migratedb.py` on a new host.
 
 * Start ePortal on the new host:
 
 ```text
 [new-host ~]# systemctl start eportal
 ```
+
+### Migration to docker container
+
+Let's suppose that we're going to use dockerized eportal on the same host.
+
+The easiest way to migrate is to reuse the data directory. It can be mounted when the container starts.
+
+```text
+docker run -d --rm --network=host -v /var/lib/eportal:/var/lib/eportal/data kernelcare/eportal:latest
+```
+
+If you prefer to use a named volume for data-dir then all data should be copied from ```/var/lib/eportal``` to the volume (see [Docker docs](https://docs.docker.com/reference/cli/docker/container/cp/))
+
+If you have custom configuration at ```/etc/eportal/config``` you can pass it using environment variables or
+mount this configuration file directly into the container like this ```-v /etc/eportal/config:/etc/eportal/config:ro```
+
 
 ## Backup and restore
 
@@ -1488,6 +1597,28 @@ For example:
 
 `download-missing` commands ensure patchset state on disk corresponds with a state
 in db.
+
+### Backup and restore for ePortal docker container
+
+Volume backup process can be performed according to the instructions given [here](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes).
+For example:
+```text
+docker run --rm --volumes-from eportal -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /var/lib/eportal/data/
+```
+
+or if you want to make a backup without patches (only configs and the database)
+```text
+docker run --rm --volumes-from eportal -v $(pwd):/backup ubuntu tar
+    --exclude '/var/lib/eportal/data/patches'
+    --exclude '/var/lib/eportal/data/arch'
+    --exclude '/var/lib/eportal/data/resources'
+    -cvf /backup/backup.tar /var/lib/eportal/data/
+```
+
+That backup could be restored like this
+```text
+docker run --rm --volumes-from eportal2 -v $(pwd):/backup ubuntu bash -c "cd / && tar xvf /backup/backup.tar"
+```
 
 ## Config files
 
