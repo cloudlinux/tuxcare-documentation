@@ -232,9 +232,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       * "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
       * "@angular/upgrade": "npm:@els-js/angular-upgrade@16.2.12-tuxcare.1",
       * "@angular/platform-server": "npm:@els-js/angular-platform-server@16.2.12-tuxcare.1",
-      * "@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.1",
-      * "@angular/platform-webworker": "npm:@els-js/angular-platform-webworker@16.2.12-tuxcare.1",
-      * "@angular/platform-webworker-dynamic": "npm:@els-js/angular-platform-webworker@16.2.12-tuxcare.1"
+      * "@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.1"
        
       After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
       :::
@@ -259,9 +257,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       * "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
       * "@angular/upgrade": "npm:@els-js/angular-upgrade@17.3.12-tuxcare.1",
       * "@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",
-      * "@angular/service-worker": "npm:@els-js/angular-service-worker@17.3.12-tuxcare.1",
-      * "@angular/platform-webworker": "npm:@els-js/angular-platform-webworker@17.3.12-tuxcare.1",
-      * "@angular/platform-webworker-dynamic": "npm:@els-js/angular-platform-webworker@17.3.12-tuxcare.1"
+      * "@angular/service-worker": "npm:@els-js/angular-service-worker@17.3.12-tuxcare.1"
        
       After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
       :::
@@ -286,7 +282,6 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
       * "@angular/language-service": "npm:@els-js/angular-language-service@18.2.13-tuxcare.1",
       * "@angular/upgrade": "npm:@els-js/angular-upgrade@18.2.13-tuxcare.1",
       * "@angular/elements": "npm:@els-js/angular-elements@18.2.13-tuxcare.1",
-      * "@angular/platform-webworker-dynamic": "npm:@els-js/angular-platform-webworker-dynamic@18.2.13-tuxcare.1",
       * "@angular/service-worker": "npm:@els-js/angular-service-worker@18.2.13-tuxcare.1",
        
       After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
@@ -325,7 +320,23 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
    </TableTabs>
 
-5. Run the following command to install ELS for Angular dependencies (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+5. Ensure your npm is up to date. 
+
+   :::tip
+   
+   Use npm version **9.6.3 or later** for security and compatibility reasons. To update npm globally on your system, you can run:
+
+   <CodeWithCopy>
+
+   ```text  
+   npm install -g npm@latest
+   ```
+
+   </CodeWithCopy>
+
+   :::
+
+6. Run the following command to install ELS for Angular dependencies (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
   
