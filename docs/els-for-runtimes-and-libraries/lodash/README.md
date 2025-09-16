@@ -10,13 +10,13 @@ ELS for Lodash is currently in active development. If you are interested in upda
 
 * Lodash 4.5.0, 4.17.x
 
-## Connection to ELS for Lodash Repository
+## Connection to ELS for Lodash Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Lodash repository.
+This guide outlines the steps needed to integrate the TuxCare ELS for the Lodash library.
 
 ## Step 1: Get user credentials
 
-You need a token in order to use TuxCare ELS Lodash repository. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS Lodash library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ## Step 2: Set Up ELS for Lodash
 
@@ -108,7 +108,7 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
 
    </TableTabs>
 
-5. Run the following command to install ELS for AngularJS dependencies (token for the TuxCare repository will be automatically picked up from your .npmrc file):
+5. Run the following command to install the ELS version of the Lodash library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -126,5 +126,5 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
    found 0 vulnerabilities
    ```
 
-6. You've successfully integrated the TuxCare ELS for Lodash repository into your project.
+6. You've successfully installed the Tuxcare ELS version of the Lodash library into your project.
 
