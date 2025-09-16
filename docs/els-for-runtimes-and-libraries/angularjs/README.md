@@ -12,8 +12,6 @@ ELS for AngularJS is currently in active development. If you are interested in u
 
 ## Connection to ELS for AngularJS Repository
 
-Please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for instructions.
-
 This guide outlines the steps needed to integrate the TuxCare ELS for AngularJS repository.
 
 ## Step 1: Get user credentials
