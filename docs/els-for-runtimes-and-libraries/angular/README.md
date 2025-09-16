@@ -1,6 +1,6 @@
 # Angular
 
-Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes for Angular versions that have reached its end of life. This allows you to continue running Angular applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes for Angular versions that have reached their end of life. This allows you to continue running Angular applications without vulnerability concerns, even after official support has ended.
 
 :::warning
 ELS for Angular is currently in active development. If you are interested in updates, adoption, or have specific requirements or feature requests, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
@@ -18,7 +18,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Angular re
 
 ## Step 1: Get user credentials
 
-You need a token in order to use TuxCare ELS Angular repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS Angular repository. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ## Step 2: Set Up ELS for Angular
 
