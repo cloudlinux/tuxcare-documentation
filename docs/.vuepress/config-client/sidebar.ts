@@ -52,6 +52,7 @@ export default {
                 "/els-for-runtimes-and-libraries/angular/",
                 "/els-for-runtimes-and-libraries/angularjs/",
                 "/els-for-runtimes-and-libraries/dotnet/",
+                "/els-for-runtimes-and-libraries/nodejs/",
                 "/els-for-runtimes-and-libraries/openjdk/",
                 "/els-for-runtimes-and-libraries/php/",
                 "/els-for-runtimes-and-libraries/python/",

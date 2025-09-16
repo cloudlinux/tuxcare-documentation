@@ -157,6 +157,11 @@ const techData = [
     ecosystemIcon: "/images/javascript.png",
     projects: [
       {
+        name: "Node.js",
+        versions: " 12 | 14 | 16 | 18 | 20",
+        link: "./nodejs/",
+      },
+      {
         name: "AngularJS",
         versions: "1.5.x | 1.6.x | 1.7.x | 1.8.x",
         link: "./angularjs/",
