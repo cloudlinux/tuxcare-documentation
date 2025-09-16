@@ -171,7 +171,8 @@ const techData = [
       },
       {
         name: "Lodash",
-        versions: "4.17.x",
+        versions: "4.5.0 | 4.17.x",
+        link: "./lodash/",
       },
       {
         name: "Loopback",
