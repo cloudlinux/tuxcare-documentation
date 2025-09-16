@@ -11,8 +11,6 @@ ELS for Angular is currently in active development. If you are interested in upd
 Angular versions 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, and 18 are supported.
 
 ## Connection to ELS for Angular Repository
-
-Please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for instructions.
   
 This guide outlines the steps needed to integrate the TuxCare ELS for Angular repository.
 
