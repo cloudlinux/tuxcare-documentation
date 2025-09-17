@@ -1,6 +1,6 @@
 # AngularJS
 
-Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fixes for AngularJS versions that have reached its end of life. This allows you to continue running AngularJS applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fixes for AngularJS versions that have reached their end of life. This allows you to continue running AngularJS applications without vulnerability concerns, even after official support has ended.
 
 :::warning
 ELS for AngularJS is currently in active development. If you are interested in updates, adoption, or have specific requirements or feature requests, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
@@ -12,13 +12,11 @@ ELS for AngularJS is currently in active development. If you are interested in u
 
 ## Connection to ELS for AngularJS Repository
 
-Please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for instructions.
-
 This guide outlines the steps needed to integrate the TuxCare ELS for AngularJS repository.
 
 ## Step 1: Get user credentials
 
-You need a username, password, and token in order to use TuxCare ELS AngularJS repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS AngularJS repository. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ## Step 2: Set Up ELS for AngularJS
 
@@ -115,12 +113,12 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
    </TableTabs>
 
-5. In your terminal, run the following command to install ELS for AngularJS dependencies:
+5. Run the following command to install ELS for AngularJS dependencies (token for the TuxCare repository will be automatically picked up from your .npmrc file):
 
    <CodeWithCopy>
 
    ```text
-   npm install --userconfig .npmrc
+   npm install
    ```
 
    </CodeWithCopy>
