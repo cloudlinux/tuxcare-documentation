@@ -2,9 +2,6 @@
 
 Endless Lifecycle Support (ELS) for Lodash from TuxCare provides security fixes for Lodash versions that have reached their end of life. This allows you to continue running Lodash applications without vulnerability concerns, even after official support has ended.
 
-:::warning
-ELS for Lodash is currently in active development. If you are interested in updates, adoption, or have specific requirements or feature requests, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
-:::
 
 ## Supported Lodash Versions
 
@@ -14,7 +11,7 @@ ELS for Lodash is currently in active development. If you are interested in upda
 
 This guide outlines the steps needed to integrate the TuxCare ELS for the Lodash library.
 
-## Step 1: Get user credentials
+## Step 1: Get Token
 
 You need a token in order to use TuxCare ELS Lodash library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 

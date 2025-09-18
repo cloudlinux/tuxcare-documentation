@@ -2,10 +2,6 @@
 
 Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fixes for AngularJS versions that have reached their end of life. This allows you to continue running AngularJS applications without vulnerability concerns, even after official support has ended.
 
-:::warning
-ELS for AngularJS is currently in active development. If you are interested in updates, adoption, or have specific requirements or feature requests, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
-:::
-
 ## Supported AngularJS Versions
 
 * AngularJS 1.5, 1.6, 1.7, 1.8
@@ -14,7 +10,7 @@ ELS for AngularJS is currently in active development. If you are interested in u
 
 This guide outlines the steps needed to integrate the TuxCare ELS for AngularJS repository.
 
-## Step 1: Get user credentials
+## Step 1: Get Token
 
 You need a token in order to use TuxCare ELS AngularJS repository. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
