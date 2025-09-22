@@ -20,35 +20,34 @@ You need a username and password in order to use TuxCare ELS Spring repository. 
 
 ### Step 2: Configure Registry
 
-Create or update your registry configuration. Open the appropriate configuration file for your build tool in a text editor, and add the following configuration:
+Add the TuxCare repository and plugin repository to your build configuration:
 
-  <CodeTabs :tabs="[
-    { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
-    { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
-  ]" />
+<CodeTabs :tabs="[
+  { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
+  { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
+]" />
 
 Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
 :::tip
-You may choose any arbitrary allowed value instead of `repository-id`, but you must use the same value in both snippets in your `settings.xml` and  `pom.xml` files.
+For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
 :::
 
 ### Step 3: Update Build Configuration
 
-1. Add the TuxCare Spring repository and plugins to your build configuration:
+Add the TuxCare Spring repository and plugins to your build configuration:
 
-   <CodeTabs :tabs="[
-     { title: 'Maven (pom.xml)', content: mavenrepo },
-     { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlerepo }
-   ]" />
+<CodeTabs :tabs="[
+  { title: 'Maven (pom.xml)', content: mavenrepo },
+  { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlerepo }
+]" />
 
-   :::tip
-   If you want to completely replace the official Spring repository, substitute it with TuxCare. If you prefer to keep both, add TuxCare after the official repository.
-   :::
+* To completely replace the official Spring repository, substitute it with the TuxCare repository.
+* To keep both, add TuxCare after the official one.
 
-   Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
-   * [Maven](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven)
-   * [Gradle](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle)
+Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
+* [Maven](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven)
+* [Gradle](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle)
 
 <!--
 **Gradle**
@@ -68,14 +67,27 @@ repositories {
 ```
 -->
 
-2. Update your Spring build dependencies. You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/). Example:
+### Step 4: Update Dependencies
 
-   <CodeTabs :tabs="[
-     { title: 'Maven (pom.xml)', content: mavendeps },
-     { title: 'Gradle (~/.gradle/gradle.properties)', content: gradledeps }
-   ]" />
+Update your Spring build dependencies. You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/).
 
-### Step 4: Verify and Build
+There are two main options for applying the TuxCare versions. In both approaches, Maven will automatically pull in the correct TuxCare builds for both your direct dependencies and their transitive dependencies:
+
+* **Option 1**: Set the TuxCare version as the parent in your `pom.xml`. It applies the version to all managed Spring dependencies in the project.
+
+  <CodeTabs :tabs="[
+    { title: 'Maven (pom.xml)', content: mavendeps },
+    { title: 'Gradle (~/.gradle/gradle.properties)', content: gradledeps }
+  ]" />
+
+* **Option 2**: Import the TuxCare parent as a BOM (Bill of Materials) inside a `<dependencyManagement>` block. This allows you more control if you want to override or mix dependency sources.
+
+  <CodeTabs :tabs="[
+    { title: 'Maven (pom.xml)', content: mavendeps2 },
+    { title: 'Gradle (~/.gradle/gradle.properties)', content: gradledeps }
+  ]" />
+
+### Step 5: Verify and Build
 
 To confirm that the TuxCare Spring repository has been set up successfully, include any library from the repository into your project and then run a build:
 
@@ -111,9 +123,9 @@ const mavencreds =
 </settings>`
 
 const gradlecreds =
-`tuxcare_resgistry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
-tuxcare_resgistry_user=USERNAME
-tuxcare_resgistry_password=PASSWORD`
+`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
+tuxcare_registry_user=USERNAME
+tuxcare_registry_password=PASSWORD`
 
  const mavenrepo =
  `<repositories>
@@ -132,68 +144,91 @@ tuxcare_resgistry_password=PASSWORD`
 
  const gradlerepo =
  `repositories {
+    maven {
+      url = uri(providers.gradleProperty("tuxcare_registry_url").get())
+      credentials {
+        username = providers.gradleProperty("tuxcare_registry_user").get()
+        password = providers.gradleProperty("tuxcare_registry_password").get()
+      }
+      authentication {
+        basic(BasicAuthentication)
+      }
+    }
+    mavenCentral()
+ }
+
+ pluginManagement {
+   repositories {
+   //...
    maven {
-     url = uri(providers.gradleProperty("tuxcare_resgistry_url").get())
+     url = uri(providers.gradleProperty("tuxcare_registry_url").get())
      credentials {
-       username = providers.gradleProperty("tuxcare_resgistry_user").get()
-       password = providers.gradleProperty("tuxcare_resgistry_password").get()
+       username = providers.gradleProperty("tuxcare_registry_user").get()
+       password = providers.gradleProperty("tuxcare_registry_password").get()
      }
      authentication {
        basic(BasicAuthentication)
      }
    }
    mavenCentral()
-}
-
-pluginManagement {
-  repositories {
-  //...
-  maven {
-    url = uri(providers.gradleProperty("tuxcare_resgistry_url").get())
-    credentials {
-      username = providers.gradleProperty("tuxcare_resgistry_user").get()
-      password = providers.gradleProperty("tuxcare_resgistry_password").get()
-    }
-    authentication {
-      basic(BasicAuthentication)
-    }
-  }
-  mavenCentral()
-  //...
-  }
-}`
+   //...
+   }
+ }`
 
 const mavendeps =
 `<parent>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-parent</artifactId>
-  <version>2.7.18-tuxcare.8</version>
-</parent>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-parent</artifactId>
+   <version>2.7.18-tuxcare.8</version>
+ </parent>
 
-<dependencies>
-  <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
-  </dependency>
-  <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-test</artifactId>
-    <scope>test</scope>
-  </dependency>
-</dependencies>
-`
+ <dependencies>
+   <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
+   </dependency>
+   <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-test</artifactId>
+     <scope>test</scope>
+   </dependency>
+ </dependencies>`
+
+const mavendeps2 =
+`<dependencyManagement>
+   <dependencies>
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-parent</artifactId>
+       <version>2.7.18-tuxcare.8</version>
+       <type>pom</type>
+       <scope>import</scope>
+     </dependency>
+   </dependencies>
+ </dependencyManagement>
+
+ <dependencies>
+   <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
+   </dependency>
+   <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-test</artifactId>
+     <scope>test</scope>
+   </dependency>
+ </dependencies>`
 
 const gradledeps =
 `plugins {
-  id 'java'
-  id 'org.springframework.boot' version '2.7.18-tuxcare.8'
-  id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-}
+   id 'java'
+   id 'org.springframework.boot' version '2.7.18-tuxcare.8'
+   id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+ }
 
-dependencies {
-  implementation "org.springframework.boot:spring-boot-starter-web"
-  implementation "org.springframework.boot:spring-boot-starter-security"
-  implementation "org.springframework.boot:spring-boot-starter-validation"
-}
-`
+ dependencies {
+   implementation "org.springframework.boot:spring-boot-starter-web"
+   implementation "org.springframework.boot:spring-boot-starter-security"
+   implementation "org.springframework.boot:spring-boot-starter-validation"
+ }`
 </script>
