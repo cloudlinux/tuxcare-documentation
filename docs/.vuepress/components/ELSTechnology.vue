@@ -189,6 +189,7 @@ const techData = [
       {
         name: "request",
         versions: "2.88.0 | 2.88.2",
+        link: "./request/",
       },
       {
         name: "tough-cookie",
