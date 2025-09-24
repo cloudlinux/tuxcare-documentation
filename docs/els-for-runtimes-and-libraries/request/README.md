@@ -60,7 +60,7 @@ TuxCare provides ELS for Request as an NPM package, hosted on a secure internal 
         "request": "npm:@els-js/request@2.88.0-tuxcare.2"
      },
      "overrides": {
-        "request": "npm:@els-js/request@2.88.0-tuxcare.2"
+        "form-data": "npm:@els-js/form-data@2.3.3-tuxcare.2"
      }
      ```
 
@@ -77,7 +77,7 @@ TuxCare provides ELS for Request as an NPM package, hosted on a secure internal 
         "request": "npm:@els-js/request@2.88.2-tuxcare.2"
      },
      "overrides": {
-        "request": "npm:@els-js/request@2.88.2-tuxcare.2"
+        "form-data": "npm:@els-js/form-data@2.3.3-tuxcare.2"
      }
      ```
 
@@ -90,7 +90,7 @@ TuxCare provides ELS for Request as an NPM package, hosted on a secure internal 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
    <CodeWithCopy>
-   
+
    ```text
    rm -rf node_modules package-lock.json && npm cache clean --force
    ```
@@ -110,9 +110,12 @@ TuxCare provides ELS for Request as an NPM package, hosted on a secure internal 
    Example output:
 
    ```text
-   added 49 packages, and audited 50 packages in 2s
+   added 49 packages, and audited 50 packages in 3s
 
-   2 critical severity vulnerabilities
+   3 packages are looking for funding
+   run `npm fund` for details
+
+   found 0 vulnerabilities
    ```
 
 7. You've successfully integrated the TuxCare ELS for Request repository into your project.
