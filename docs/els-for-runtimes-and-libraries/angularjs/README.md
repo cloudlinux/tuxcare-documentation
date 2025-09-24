@@ -109,7 +109,17 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
    </TableTabs>
 
-5. Run the following command to install ELS for AngularJS dependencies (token for the TuxCare repository will be automatically picked up from your .npmrc file):
+5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
+   
+   <CodeWithCopy>
+
+   ```text
+   rm -rf node_modules package-lock.json && npm cache clean --force
+   ```
+
+   </CodeWithCopy>
+
+6. Run the following command to install ELS for AngularJS dependencies (token for the TuxCare repository will be automatically picked up from your .npmrc file):
 
    <CodeWithCopy>
 
@@ -127,25 +137,26 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
    found 0 vulnerabilities
    ```
 
-6. You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
+7. You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
 
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for AngularJS from TuxCare versions:
 
-| CVE ID | Severity | Vulnerable Version | Safe Version |
-| --- | --- | --- | --- |
-| CVE-2025-0716  | Medium | >=0.0.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
-| CVE-2024-8372  | Medium | >=1.3.0-rc.4 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
-| CVE-2024-8373  | Medium | >=0.0.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
-| CVE-2024-21490 | High | >=1.3.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
-| CVE-2023-26118 | Medium | >=1.4.9 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
-| CVE-2023-26117 | Medium | >=1.0.0 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
-| CVE-2023-26116 | Medium | >=1.2.21 | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
-| CVE-2022-25869 | Medium | >=0.0.0| 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
-| CVE-2022-25844 | Medium | >=1.7.0 | 1.7.9, 1.8.3 |
-| CVE-2020-7676  | Medium | <1.8.0 | 1.5.11, 1.6.10, 1.7.9 |
-| CVE-2019-10768 | Critical | <1.7.9 | 1.5.11, 1.6.10, 1.7.9 |
+| CVE ID         | Severity |  Affected Libraries | Vulnerable Version | Safe Version |
+| :------------: | :------: | :-----------------: | :----------------: | :----------: |
+| CVE-2025-0716  | Medium   | AngularJS           | >=0.0.0            | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2024-8372  | Medium   | AngularJS           | >=1.3.0-rc.4       | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2024-8373  | Medium   | AngularJS           | >=0.0.0            | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2024-21490 | High     | AngularJS           | >=1.3.0            | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2024-33665 | Medium   | Angular Translate   | <2.19.1            | 2.19.1 |
+| CVE-2023-26118 | Medium   | AngularJS           | >=1.4.9            | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2023-26117 | Medium   | AngularJS           | >=1.0.0            | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2023-26116 | Medium   | AngularJS           | >=1.2.21           | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2022-25869 | Medium   | AngularJS           | >=0.0.0            | 1.5.11, 1.6.10, 1.7.9, 1.8.3 |
+| CVE-2022-25844 | Medium   | AngularJS           | >=1.7.0            | 1.7.9, 1.8.3 |
+| CVE-2020-7676  | Medium   | AngularJS           | <1.8.0             | 1.5.11, 1.6.10, 1.7.9 |
+| CVE-2019-10768 | Critical | AngularJS           | <1.7.9             | 1.5.11, 1.6.10, 1.7.9 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 

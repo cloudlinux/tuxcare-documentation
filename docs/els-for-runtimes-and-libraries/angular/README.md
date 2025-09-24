@@ -83,7 +83,8 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "karma-jasmine-html-reporter": "~2.0.0",
         "typescript": "~4.7.2"
       },
-      "overrides": {
+      "overrides": 
+      {
         "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
         "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
         "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
@@ -92,7 +93,16 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
         "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
         "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
-        "rxjs": "^7.4.0"
+        "rxjs": "^7.4.0",
+        "@babel/runtime": "7.26.10",
+        "esbuild": "0.25.0",
+        "webpack-dev-middleware": "5.3.4",
+        "webpack-dev-server": "5.2.1",
+        "webpack": "5.94.0",
+        "tmp": "^0.2.4",
+        "*": {
+          "tmp": "^0.2.4"
+        }
       }
       ```
 
@@ -153,7 +163,15 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@15.2.10-tuxcare.1",
         "@angular/router": "npm:@els-js/angular-router@15.2.10-tuxcare.1",
         "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@15.2.10-tuxcare.1",
-        "rxjs": "^7.4.0"
+        "rxjs": "^7.4.0",
+        "@babel/runtime": "7.26.10",
+        "esbuild": "0.25.0",
+        "webpack-dev-server": "5.2.1",
+        "webpack": "5.94.0",
+        "tmp": "^0.2.4",
+        "*": {
+          "tmp": "^0.2.4"
+        }
       }
       ```
 
@@ -205,7 +223,8 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "karma-jasmine-html-reporter": "~2.1.0",
         "typescript": "~5.1.3"
       },
-      "overrides": {
+      "overrides": 
+      {
         "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
         "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
         "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
@@ -214,7 +233,15 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
         "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
         "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1"
+        "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+        "rxjs": "^7.4.0",
+        "@babel/runtime": "7.26.10",
+        "esbuild": "0.25.0",
+        "webpack-dev-server": "5.2.1",
+        "tmp": "^0.2.4",
+        "*": {
+          "tmp": "^0.2.4"
+        }
       }
       ```
 
@@ -314,7 +341,17 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
    </TableTabs>
 
-5. Ensure your npm is up to date. 
+5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
+   
+   <CodeWithCopy>
+
+   ```text
+   rm -rf node_modules package-lock.json && npm cache clean --force
+   ```
+
+   </CodeWithCopy>
+
+6. Ensure your npm is up to date. 
 
    :::tip
    
@@ -330,7 +367,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
    :::
 
-6. Run the following command to install ELS for Angular dependencies (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+7. Run the following command to install ELS for Angular dependencies (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
   
@@ -343,17 +380,12 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
    You will see an output like:
 
    ```text
-   changed 8 packages, and audited 994 packages in 3s
-
-   128 packages are looking for funding
+   added 925 packages, and audited 926 packages in 3m
+ 
+   158 packages are looking for funding
      run `npm fund` for details
 
-   10 vulnerabilities (4 low, 6 moderate)
-
-   To address all issues (including breaking changes), run:
-     npm audit fix --force
-
-   Run `npm audit` for details.
+   found 0 vulnerabilities
    ```
 
 6. You've successfully integrated the TuxCare ELS for Angular repository into your project.
@@ -486,7 +518,12 @@ const Angular19WithoutSSR =
    "@angular/platform-server": "npm:@els-js/angular-platform-server@18.2.13-tuxcare.1",
    "@angular/router": "npm:@els-js/angular-router@18.2.13-tuxcare.1",
    "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
-   "rxjs": "^7.4.0"
+   "rxjs": "^7.4.0",
+   "esbuild": "^0.25.0",
+   "tmp": "^0.2.4",
+   "*": {
+     "tmp": "^0.2.4"
+   }
  }`
 
 const Angular18WithoutSSR =
@@ -526,7 +563,12 @@ const Angular18WithoutSSR =
    "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@18.2.13-tuxcare.1",
    "@angular/router": "npm:@els-js/angular-router@18.2.13-tuxcare.1",
    "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
-   "rxjs": "^7.4.0"
+   "rxjs": "^7.4.0",
+   "esbuild": "^0.25.0",
+   "tmp": "^0.2.4",
+   "*": {
+     "tmp": "^0.2.4"
+   }
  }`
 
 const Angular17WithSSR =
@@ -559,7 +601,8 @@ const Angular17WithSSR =
    "karma-jasmine-html-reporter": "~2.1.0",
    "typescript": "~5.4.2"
  },
- "overrides": {
+ "overrides": 
+ {
    "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
    "@angular/common": "npm:@els-js/angular-common@17.3.12-tuxcare.1",
    "@angular/compiler": "npm:@els-js/angular-compiler@17.3.12-tuxcare.1",
@@ -570,7 +613,14 @@ const Angular17WithSSR =
    "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
    "@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",
    "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
-   "rxjs": "^7.4.0"
+   "rxjs": "^7.4.0",
+   "esbuild": "0.25.0",
+   "webpack-dev-server": "5.2.1",
+   "http-proxy-middleware": "2.0.9",
+   "tmp": "^0.2.4",
+   "*": {
+     "tmp": "^0.2.4"
+   }
  }`
 
 const Angular17WithoutSSR =
@@ -600,7 +650,8 @@ const Angular17WithoutSSR =
    "karma-jasmine-html-reporter": "~2.1.0",
    "typescript": "~5.4.2"
  },
- "overrides": {
+ "overrides": 
+ {
    "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
    "@angular/common": "npm:@els-js/angular-common@17.3.12-tuxcare.1",
    "@angular/compiler": "npm:@els-js/angular-compiler@17.3.12-tuxcare.1",
@@ -609,6 +660,13 @@ const Angular17WithoutSSR =
    "@angular/platform-browser": "npm:@els-js/angular-platform-browser@17.3.12-tuxcare.1",
    "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
    "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
-   "rxjs": "^7.4.0"
+   "rxjs": "^7.4.0",
+   "esbuild": "0.25.0",
+   "webpack-dev-server": "5.2.1",
+   "http-proxy-middleware": "2.0.9",
+   "tmp": "^0.2.4",
+   "*": {
+     "tmp": "^0.2.4"
+   }
  }`
 </script>
