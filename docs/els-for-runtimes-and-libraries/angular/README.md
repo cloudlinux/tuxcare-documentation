@@ -390,6 +390,19 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
 6. You've successfully integrated the TuxCare ELS for Angular repository into your project.
 
+## How to Upgrade to a Newer Version of TuxCare Packages
+
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+
+  <CodeWithCopy>
+
+  ```text
+  rm -rf node_modules package-lock.json && npm cache clean --force
+  npm install
+  ```
+
+  </CodeWithCopy>
+
 <script setup>
 const Angular19WithSSR =
 `"dependencies": {

@@ -139,6 +139,31 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
 7. You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
 
+## How to Upgrade to a Newer Version of TuxCare Packages
+
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+
+* **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
+
+  <CodeWithCopy>
+
+  ```text
+  npm install angular@npm:@els-js/angular@1.8.3-tuxcare.3
+  ```
+
+  </CodeWithCopy>
+
+* **Option 2**. Update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+
+  <CodeWithCopy>
+
+  ```text
+  rm -rf node_modules package-lock.json && npm cache clean --force
+  npm install
+  ```
+
+  </CodeWithCopy>
+
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for AngularJS from TuxCare versions:
