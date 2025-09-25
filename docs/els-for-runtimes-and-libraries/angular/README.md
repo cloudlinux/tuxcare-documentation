@@ -205,7 +205,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
         "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
         "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
-        "rxjs": "~7.8.0",
+        "rxjs": "^7.4.0",
         "tslib": "^2.3.0",
         "zone.js": "~0.13.0"
       },

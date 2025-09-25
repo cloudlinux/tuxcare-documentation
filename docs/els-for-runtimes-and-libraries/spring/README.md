@@ -50,7 +50,7 @@ Here `your-username` and `your-password` are your credentials mentioned in the [
 <repositories>
     <repository>
         <id>repository-id</id>
-        <url>https://nexus-repo.corp.cloudlinux.com/repository/els_spring/</url>
+        <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
     </repository>
 </repositories>
 ```
@@ -64,7 +64,7 @@ Here `your-username` and `your-password` are your credentials mentioned in the [
 ```text
 repositories {
   maven {
-    url = uri("https://nexus-repo.corp.cloudlinux.com/repository/els_spring")
+    url = uri("https://nexus.repo.tuxcare.com/repository/els_spring/")
     credentials {
             username = findProperty('USERNAME')
             password = findProperty('PASSWORD')
