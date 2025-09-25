@@ -61,3 +61,4 @@ We provide the ability to create local mirrors of Python for ELS updates.
 | deb/debian/10/    | Debian 10                                                                  |
 | deb/debian/11/    | Debian 11                                                                  |
 | deb/debian/12/    | Debian 12                                                                  |
+| deb/debian/13/    | Debian 13                                                                  |

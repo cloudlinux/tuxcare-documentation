@@ -12,7 +12,7 @@ Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes 
 | EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               |
 | EL 9 (AlmaLinux)                                             | RPM          | 9.x                               |
 | Ubuntu                                                       | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 |
-| Debian                                                       | DEB          | 10, 11, 12                        |
+| Debian                                                       | DEB          | 10, 11, 12, 13                    |
 
 **For supported Python versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-python/projects).**
 

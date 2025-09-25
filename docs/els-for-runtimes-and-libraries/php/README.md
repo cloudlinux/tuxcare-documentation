@@ -36,7 +36,7 @@ alt-php provides a more flexible and convenient environment for working with dif
 | EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                        |
 | EL 10 ( AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                        |
 | Ubuntu                                                                   | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 |
-| Debian                                                                   | DEB          | 10, 11, 12	                      |
+| Debian                                                                   | DEB          | 10, 11, 12, 13                    |
 | Windows                                                                  | -            | Windows Server 2019, 2022, 2025   |
 
 **For supported PHP versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-php/projects).**
@@ -128,8 +128,8 @@ sudo yum install libvpx-1.3.0
    * Standard commands to install each version separately, for example, installing alt-php73:
 
      <CodeTabs :tabs="[
-       { title: 'RPM', content: `yum install alt-php73*` },
-       { title: 'DEB', content: `apt-get install alt-php73*` }
+       { title: 'RPM', content: `yum groupinstall alt-php73` },
+       { title: 'DEB', content: `apt-get install alt-php73-meta` }
      ]" />
 
    * To install all versions at the same time:
@@ -537,7 +537,7 @@ To search for alt-php packages in repositories:
 
 <CodeTabs :tabs="[
   { title: 'RPM', content: `sudo yum search alt-package-name` },
-  { title: 'DEB', content: `ssudo apt search alt-package-name` }
+  { title: 'DEB', content: `sudo apt search alt-package-name` }
 ]" />
 
 For example:
@@ -1073,6 +1073,7 @@ Currently, we provide OVAL data for the following OS versions:
 * Debian 10: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian10/oval.xml)
 * Debian 11: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian11/oval.xml)
 * Debian 12: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian12/oval.xml)
+* Debian 13: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian13/oval.xml)
 
 ### How to use OVAL
 
@@ -1133,6 +1134,7 @@ Currently, we provide CSAF data for the following OS versions:
 * Debian 10: [security.tuxcare.com/csaf/v2/els_alt_php/debian10/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian10/)
 * Debian 11: [security.tuxcare.com/csaf/v2/els_alt_php/debian11/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian11/)
 * Debian 12: [security.tuxcare.com/csaf/v2/els_alt_php/debian12/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian12/)
+* Debian 13: [security.tuxcare.com/csaf/v2/els_alt_php/debian13/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian13/)
 
 ### How to Use CSAF
 
@@ -1154,6 +1156,7 @@ Currently, we provide errata for the following OS versions:
 * Debian 10: [security.tuxcare.com/errata/els_alt_php/debian10/](https://security.tuxcare.com/errata/els_alt_php/debian10/)
 * Debian 11: [security.tuxcare.com/errata/els_alt_php/debian11/](https://security.tuxcare.com/errata/els_alt_php/debian11/)
 * Debian 12: [security.tuxcare.com/errata/els_alt_php/debian12/](https://security.tuxcare.com/errata/els_alt_php/debian12/)
+* Debian 13: [security.tuxcare.com/errata/els_alt_php/debian13/](https://security.tuxcare.com/errata/els_alt_php/debian13/)
 
 ## PHP extensions list
 
