@@ -194,6 +194,7 @@ const techData = [
       {
         name: "tough-cookie",
         versions: "2.4.3 | 2.5.0",
+        link: "./tough-cookie/",
       },
       {
         name: "crypto-js",

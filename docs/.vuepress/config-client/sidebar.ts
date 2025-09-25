@@ -59,6 +59,7 @@ export default {
                 "/els-for-runtimes-and-libraries/python-libraries/",
                 "/els-for-runtimes-and-libraries/request/",
                 "/els-for-runtimes-and-libraries/spring/",
+                "/els-for-runtimes-and-libraries/tough-cookie/",
             ]
         },
     ],
