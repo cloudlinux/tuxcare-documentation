@@ -59,9 +59,6 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
      ```text
      "dependencies": {
         "lodash": "npm:@els-js/lodash@4.5.0-tuxcare.2"
-     },
-     "overrides": {
-        "lodash": "npm:@els-js/lodash@4.5.0-tuxcare.2"
      }
      ```
 
@@ -75,9 +72,6 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-        "lodash": "npm:@els-js/lodash@4.17.15-tuxcare.2"
-     },
-     "overrides": {
         "lodash": "npm:@els-js/lodash@4.17.15-tuxcare.2"
      }
      ```
@@ -93,9 +87,6 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
      ```text
      "dependencies": {
         "lodash": "npm:@els-js/lodash@4.17.19-tuxcare.2"
-     },
-     "overrides": {
-        "lodash": "npm:@els-js/lodash@4.17.19-tuxcare.2"
      }
      ```
 
@@ -105,7 +96,17 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
 
    </TableTabs>
 
-5. Run the following command to install the ELS version of the Lodash library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
+   
+   <CodeWithCopy>
+
+   ```text
+   rm -rf node_modules package-lock.json && npm cache clean --force
+   ```
+
+   </CodeWithCopy>
+
+6. Run the following command to install the ELS version of the Lodash library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -123,5 +124,35 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
    found 0 vulnerabilities
    ```
 
-6. You've successfully installed the Tuxcare ELS version of the Lodash library into your project.
+7. You've successfully installed the Tuxcare ELS version of the Lodash library into your project.
 
+## Vulnerability Exploitability eXchange (VEX) 
+
+VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+
+TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/lodash/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/lodash/).
+
+## How to Upgrade to a Newer Version of TuxCare Packages
+
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+
+* **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
+
+  <CodeWithCopy>
+
+  ```text
+  npm install lodash@npm:@els-js/lodash@4.5.0-tuxcare.3
+  ```
+
+  </CodeWithCopy>
+
+* **Option 2**. Update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+
+  <CodeWithCopy>
+
+  ```text
+  rm -rf node_modules package-lock.json && npm cache clean --force
+  npm install
+  ```
+
+  </CodeWithCopy>
