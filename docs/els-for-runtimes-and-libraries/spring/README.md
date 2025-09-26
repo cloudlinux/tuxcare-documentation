@@ -39,7 +39,7 @@ Add the TuxCare Spring repository and plugins to your build configuration:
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavenrepo },
-  { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlerepo }
+  { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
 * To completely replace the official Spring repository, substitute it with the TuxCare repository.
@@ -71,20 +71,20 @@ repositories {
 
 Update your Spring build dependencies. You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/).
 
-There are two main options for applying the TuxCare versions. In both approaches, Maven will automatically pull in the correct TuxCare builds for both your direct dependencies and their transitive dependencies:
+There are two main options for applying the TuxCare versions. In both approaches, your build tool will automatically pull in the correct TuxCare builds for both your direct dependencies and their transitive dependencies:
 
 * **Option 1**: Set the TuxCare version as the parent in your `pom.xml`. It applies the version to all managed Spring dependencies in the project.
 
   <CodeTabs :tabs="[
     { title: 'Maven (pom.xml)', content: mavendeps },
-    { title: 'Gradle (~/.gradle/gradle.properties)', content: gradledeps }
+    { title: 'Gradle (build.gradle)', content: gradledeps }
   ]" />
 
-* **Option 2**: Import the TuxCare parent as a BOM (Bill of Materials) inside a `<dependencyManagement>` block. This allows you more control if you want to override or mix dependency sources.
+* **Option 2**: Import the TuxCare parent as a BOM (Bill of Materials) inside a `dependencyManagement` block. This allows you more control if you want to override or mix dependency sources.
 
   <CodeTabs :tabs="[
     { title: 'Maven (pom.xml)', content: mavendeps2 },
-    { title: 'Gradle (~/.gradle/gradle.properties)', content: gradledeps }
+    { title: 'Gradle (build.gradle)', content: gradledeps2 }
   ]" />
 
 ### Step 5: Verify and Build
@@ -231,4 +231,22 @@ const gradledeps =
    implementation "org.springframework.boot:spring-boot-starter-security"
    implementation "org.springframework.boot:spring-boot-starter-validation"
  }`
+
+ const gradledeps2 =
+ `plugins {
+    id 'java'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.boot:spring-boot-dependencies:2.7.18.tuxcare.8'
+    }
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation "org.springframework.boot:spring-boot-starter-validation"
+}`
 </script>
