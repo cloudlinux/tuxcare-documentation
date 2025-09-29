@@ -42,65 +42,64 @@ Add the TuxCare Spring repository and plugins to your build configuration:
   { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
-* To completely replace the official Spring repository, substitute it with the TuxCare repository.
+* To fully switch from the official Spring repository, replace it with the TuxCare repository.
 * To keep both, add TuxCare after the official one.
 
 Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
 * [Maven](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven)
 * [Gradle](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle)
 
-<!--
-**Gradle**
-
-* If you are using Gradle as your build automation tool, make sure to include the following configuration in your project setup:
-
-```text
-repositories {
-  maven {
-    url = uri("https://nexus-repo.corp.cloudlinux.com/repository/els_spring")
-    credentials {
-            username = findProperty('USERNAME')
-            password = findProperty('PASSWORD')
-    }
-  }
-}
-```
--->
-
 ### Step 4: Update Dependencies
 
-Update your Spring build dependencies. You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/).
+Replace Spring build dependencies in your build file with TuxCare-maintained ones. You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
 
-There are two main options for applying the TuxCare versions. In both approaches, your build tool will automatically pull in the correct TuxCare builds for both your direct dependencies and their transitive dependencies:
+There are two main options for applying the TuxCare versions. In both approaches, your build tool will automatically pull in the correct TuxCare builds for both your direct dependencies and their transitive dependencies.
 
-* **Option 1**: Set the TuxCare version as the parent in your `pom.xml`. It applies the version to all managed Spring dependencies in the project.
-
-  <CodeTabs :tabs="[
-    { title: 'Maven (pom.xml)', content: mavendeps },
-    { title: 'Gradle (build.gradle)', content: gradledeps }
-  ]" />
-
-* **Option 2**: Import the TuxCare parent as a BOM (Bill of Materials) inside a `dependencyManagement` block. This allows you more control if you want to override or mix dependency sources.
+* **Option 1**: Import the TuxCare parent as a POM (Project Object Model) inside a `dependencyManagement` block. This allows you more control if you want to override or mix dependency sources.
 
   <CodeTabs :tabs="[
     { title: 'Maven (pom.xml)', content: mavendeps2 },
     { title: 'Gradle (build.gradle)', content: gradledeps2 }
   ]" />
 
+* **Option 2**: Set the TuxCare version as the parent. It applies the version to all managed Spring dependencies in the project.
+
+  <CodeTabs :tabs="[
+    { title: 'Maven (pom.xml)', content: mavendeps },
+    { title: 'Gradle (build.gradle)', content: gradledeps }
+  ]" />
+
 ### Step 5: Verify and Build
 
-To confirm that the TuxCare Spring repository has been set up successfully, include any library from the repository into your project and then run a build:
+1. To confirm the TuxCare Spring repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
-<CodeTabs :tabs="[
-  { title: 'Maven', content: `mvn clean install` },
-  { title: 'Gradle', content: `./gradlew build` }
-]" />
+   <CodeTabs :tabs="[
+     { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
+     { title: 'Gradle', content: `./gradlew dependencies --configuration runtimeClasspath` }
+   ]" />
+
+2. After reviewing the dependencies, include any library from the repository into your project and then run a build:
+
+   <CodeTabs :tabs="[
+    { title: 'Maven', content: `mvn clean install` },
+    { title: 'Gradle', content: `./gradlew build` }
+   ]" />
 
 The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Spring repository.
 
-## Conclusion
+### Conclusion
 
 You've successfully integrated the TuxCare ELS for Spring repository into your project. You can now benefit from the secure and vetted Spring libraries it provides.
+
+## Vulnerability Exploitability eXchange (VEX)
+
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+
+TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
+
+## How to Upgrade to a Newer Version of TuxCare Packages
+
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update the version string in your Maven or Gradle build file.
 
 ## Resolved CVEs in ELS for Spring
 
