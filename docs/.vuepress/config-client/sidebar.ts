@@ -51,6 +51,7 @@ export default {
                 "/els-for-runtimes-and-libraries/",
                 "/els-for-runtimes-and-libraries/angular/",
                 "/els-for-runtimes-and-libraries/angularjs/",
+                "/els-for-runtimes-and-libraries/crypto-js/",
                 "/els-for-runtimes-and-libraries/dotnet/",
                 "/els-for-runtimes-and-libraries/lodash/",
                 "/els-for-runtimes-and-libraries/openjdk/",
