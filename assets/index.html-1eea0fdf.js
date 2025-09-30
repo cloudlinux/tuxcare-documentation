@@ -292,7 +292,7 @@ import{_ as m,S as u,n as c,p as d,a6 as i,q as e,C as r,A as l,J as n}from"./fr
   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
   "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
-  "rxjs": "~7.8.0",
+  "rxjs": "^7.4.0",
   "tslib": "^2.3.0",
   "zone.js": "~0.13.0"
 },
