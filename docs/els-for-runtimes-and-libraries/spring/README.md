@@ -51,23 +51,14 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace Spring build dependencies in your build file with TuxCare-maintained ones. You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+Replace the Spring build dependencies in your build file with the TuxCare-maintained versions. Set the TuxCare release as the parent version. Your build tool will fetch the TuxCare versions of both your dependencies and their transitive dependencies.
 
-There are two main options for applying the TuxCare versions. In both approaches, your build tool will automatically pull in the correct TuxCare builds for both your direct dependencies and their transitive dependencies.
+<CodeTabs :tabs="[
+  { title: 'Maven (pom.xml)', content: mavendeps },
+  { title: 'Gradle (build.gradle)', content: gradledeps }
+]" />
 
-* **Option 1**: Import the TuxCare parent as a POM (Project Object Model) inside a `dependencyManagement` block. This allows you more control if you want to override or mix dependency sources.
-
-  <CodeTabs :tabs="[
-    { title: 'Maven (pom.xml)', content: mavendeps2 },
-    { title: 'Gradle (build.gradle)', content: gradledeps2 }
-  ]" />
-
-* **Option 2**: Set the TuxCare version as the parent. It applies the version to all managed Spring dependencies in the project.
-
-  <CodeTabs :tabs="[
-    { title: 'Maven (pom.xml)', content: mavendeps },
-    { title: 'Gradle (build.gradle)', content: gradledeps }
-  ]" />
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
 
 ### Step 5: Verify and Build
 
