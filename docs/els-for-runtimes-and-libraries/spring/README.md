@@ -86,7 +86,7 @@ You've successfully integrated the TuxCare ELS for Spring repository into your p
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
+TuxCare provides VEX for Spring ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
