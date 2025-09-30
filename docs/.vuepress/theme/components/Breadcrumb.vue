@@ -23,6 +23,8 @@ const siteTitle = computed(() => site.value.title);
 const titleMap = {
   '/els-for-languages/': 'ELS for Languages',
   '/els-for-runtimes-and-libraries/': 'ELS for Runtimes & Libraries',
+  '/els-for-applications/': 'ELS for Applications',
+  '/els-for-os/': 'ELS for OS',
 };
 
 const breadCrumbs = computed(() => {

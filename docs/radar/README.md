@@ -52,6 +52,10 @@ apt-get update
 apt-get install tuxcare-radar
 ```
 
+:::warning
+If you do an in-place upgrade of your APT-based OS, you should change the version number in `/etc/apt/sources.list.d/tuxcare-radar.list` beforehand.
+:::
+
 ## Configuration
 
 You should have received your initial API key (something like `bc061b2b-c330-49f6-8953-849637d593ac`) along with your password.
@@ -73,6 +77,12 @@ enabled: true
 apikey: FILLME
 ```
 
+If you are registered to the EU instance instead of the default US one, you should also change the `base-url` like so:
+
+```text
+base-url: https://eu.radar.tuxcare.com
+```
+
 ## Tagging
 
 Tags are a powerful feature that let you easily identify and filter hosts based on tags. You can create tags to describe your environment, for example `prod`, `dev`, `staging` or the TuxCare products such as `esu`, `esa`, `kce`, or maybe location, such as `eu`, `us`, `apac`. To use tags, simply add them to /etc/tuxcare-radar/radar.yaml like so:
@@ -85,7 +95,7 @@ The next time a scan is run, the tags will appear in the asset overview.
 
 ## Firewall and Proxy Settings
 
-TuxCare Radar requires outbound connectivity on tcp/443 (TLS) to `radar.tuxcare.com` which by default is in the US. If you need your own private instance, or can only use a certain geographical location, please discuss with your Account Manager. IPv6 or IPv4 can be used. No inbound connectivity is required, tuxcare-radar does not open any listening ports.
+TuxCare Radar requires outbound connectivity on tcp/443 (TLS) to `radar.tuxcare.com` (default US instance) or `eu.radar.tuxcare.com` (EU instance). IPv6 or IPv4 can be used. No inbound connectivity is required, tuxcare-radar does not open any listening ports.
 
 To use via a proxy, set the `https_proxy` environment variable based on your infrastructure. For running the service from cron, you can use this:
 
@@ -144,6 +154,12 @@ If you need to manually run a scan instantly for any reason, you can run:
 
 ```text
 su -s /bin/bash nobody -c "tuxcare-radar --config /etc/tuxcare-radar/radar.yaml"
+```
+
+If you would like to run a CIS benchmark compliance scan, you can run the following as root:
+
+```text
+tuxcare-radar securescan --config /etc/tuxcare-radar/radar.yaml
 ```
 
 Then visit [https://radar.tuxcare.com](https://radar.tuxcare.com/) (US) or [https://eu.radar.tuxcare.com](https://eu.radar.tuxcare.com/) (EU) to view the results.

@@ -52,4 +52,20 @@ TuxCare provides technical support according to the:
 * Standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf) **(excluding .NET)**.
 * The **.NET-specific** [support policy](https://tuxcare.com/TuxCare-els-windows-support-policy.pdf).
 
-It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
+It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base. 
+
+## Vulnerability Exploitability eXchange (VEX) 
+
+VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+ 
+Why it matters: 
+
+- Context-aware vulnerability status (“affected”, “not affected”, “fixed”)
+- Cuts scanner noise to what truly matters
+- Automation-friendly for tooling and CI/CD
+  
+Language-specific: 
+
+- [Python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/)
+- [Java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
+- [JavaScript](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/)

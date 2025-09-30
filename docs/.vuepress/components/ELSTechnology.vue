@@ -171,7 +171,8 @@ const techData = [
       },
       {
         name: "Lodash",
-        versions: "4.17.x",
+        versions: "4.5.0 | 4.17.x",
+        link: "./lodash/",
       },
       {
         name: "Loopback",
@@ -188,10 +189,12 @@ const techData = [
       {
         name: "request",
         versions: "2.88.0 | 2.88.2",
+        link: "./request/",
       },
       {
         name: "tough-cookie",
         versions: "2.4.3 | 2.5.0",
+        link: "./tough-cookie/",
       },
       {
         name: "crypto-js",
@@ -249,7 +252,7 @@ const techData = [
     projects: [
       {
         name: "Python",
-        versions: "2.7 | 3.3 | 3.4 | 3.5 | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 | 3.12 | 3.13",
+        versions: "2.7 | 3.6 ",
         link: "./python/",
       },
       {
@@ -366,7 +369,7 @@ const techData = [
     projects: [
       {
         name: "Angular",
-        versions: "4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19",
+        versions: "14 | 15 | 16 | 17 | 18 ",
         link: "./angular/",
       },
     ],

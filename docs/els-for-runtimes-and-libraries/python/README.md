@@ -6,14 +6,17 @@ Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes 
 
 **Supported architecture:** 64-bit.
 
-| OS                                    | Package Type | OS Version                        | Python version |
-| :-----------------------------------: | :----------: | :-------------------------------: | :------------: |
-| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 6.x, 7.x, 8.x                     | 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 |
-| AlmaLinux                             | RPM          | 9.x                               | 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 |
-| Ubuntu                                | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 | 3.8, 3.11      |
-| Debian                                | DEB          | 10, 11, 12                        | 3.8, 3.11      |
+| Operating Systems                                            | Package Type | OS Version                        |
+| :----------------------------------------------------------: | :----------: | :-------------------------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                               |
+| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                               |
+| EL 9 (AlmaLinux)                                             | RPM          | 9.x                               |
+| Ubuntu                                                       | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 |
+| Debian                                                       | DEB          | 10, 11, 12, 13                    |
 
-*Other distros and architectures upon request.
+**For supported Python versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-python/projects).**
+
+* Other distros and architectures upon request.
 
 ## Installation Instructions for Linux
 
