@@ -117,8 +117,8 @@ const gradlecreds =
 tuxcare_registry_user=USERNAME
 tuxcare_registry_password=PASSWORD`
 
- const mavenrepo =
- `<repositories>
+const mavenrepo =
+`<repositories>
     <repository>
         <id>tuxcare-registry</id>
         <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
@@ -132,8 +132,8 @@ tuxcare_registry_password=PASSWORD`
   </pluginRepository>
 </pluginRepositories>`
 
- const gradlerepo =
- `repositories {
+const gradlerepo =
+`repositories {
     maven {
       url = uri(providers.gradleProperty("tuxcare_registry_url").get())
       credentials {
@@ -145,85 +145,85 @@ tuxcare_registry_password=PASSWORD`
       }
     }
     mavenCentral()
- }
+}
 
- pluginManagement {
-   repositories {
-   //...
-   maven {
-     url = uri(providers.gradleProperty("tuxcare_registry_url").get())
-     credentials {
-       username = providers.gradleProperty("tuxcare_registry_user").get()
-       password = providers.gradleProperty("tuxcare_registry_password").get()
-     }
-     authentication {
-       basic(BasicAuthentication)
-     }
-   }
-   mavenCentral()
-   //...
-   }
- }`
+pluginManagement {
+    repositories {
+    //...
+    maven {
+      url = uri(providers.gradleProperty("tuxcare_registry_url").get())
+      credentials {
+        username = providers.gradleProperty("tuxcare_registry_user").get()
+        password = providers.gradleProperty("tuxcare_registry_password").get()
+      }
+      authentication {
+        basic(BasicAuthentication)
+      }
+    }
+    mavenCentral()
+    //...
+    }
+}`
 
 const mavendeps =
 `<parent>
-   <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-parent</artifactId>
-   <version>2.7.18-tuxcare.8</version>
- </parent>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-parent</artifactId>
+  <version>2.7.18-tuxcare.8</version>
+</parent>
 
- <dependencies>
-   <dependency>
-     <groupId>org.springframework.boot</groupId>
-     <artifactId>spring-boot-starter-web</artifactId>
-   </dependency>
-   <dependency>
-     <groupId>org.springframework.boot</groupId>
-     <artifactId>spring-boot-starter-test</artifactId>
-     <scope>test</scope>
-   </dependency>
- </dependencies>`
+<dependencies>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+  </dependency>
+</dependencies>`
 
 const mavendeps2 =
 `<dependencyManagement>
-   <dependencies>
-     <dependency>
-       <groupId>org.springframework.boot</groupId>
-       <artifactId>spring-boot-starter-parent</artifactId>
-       <version>2.7.18-tuxcare.8</version>
-       <type>pom</type>
-       <scope>import</scope>
-     </dependency>
-   </dependencies>
- </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>2.7.18-tuxcare.8</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
 
- <dependencies>
-   <dependency>
-     <groupId>org.springframework.boot</groupId>
-     <artifactId>spring-boot-starter-web</artifactId>
-   </dependency>
-   <dependency>
-     <groupId>org.springframework.boot</groupId>
-     <artifactId>spring-boot-starter-test</artifactId>
-     <scope>test</scope>
-   </dependency>
- </dependencies>`
+<dependencies>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+  </dependency>
+</dependencies>`
 
 const gradledeps =
 `plugins {
-   id 'java'
-   id 'org.springframework.boot' version '2.7.18-tuxcare.8'
-   id 'io.spring.dependency-management' version '1.0.15.RELEASE'
- }
+  id 'java'
+  id 'org.springframework.boot' version '2.7.18-tuxcare.8'
+  id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
 
- dependencies {
-   implementation "org.springframework.boot:spring-boot-starter-web"
-   implementation "org.springframework.boot:spring-boot-starter-security"
-   implementation "org.springframework.boot:spring-boot-starter-validation"
- }`
+dependencies {
+  implementation "org.springframework.boot:spring-boot-starter-web"
+  implementation "org.springframework.boot:spring-boot-starter-security"
+  implementation "org.springframework.boot:spring-boot-starter-validation"
+}`
 
- const gradledeps2 =
- `plugins {
+const gradledeps2 =
+`plugins {
     id 'java'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
