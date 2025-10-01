@@ -62,8 +62,8 @@ ESU provides qualified security and selected bug-fix errata advisories across al
 
 Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities:
 
-* ESU 9.2 OVAL: [https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.2/almalinux9.2-esu-oval.xml)
-* ESU 9.6 OVAL: [https://repo.tuxcare.com/tuxcare/9.6/almalinux9.6-esu-oval.xml](https://repo.tuxcare.com/tuxcare/9.6/almalinux9.6-esu-oval.xml)
+* ESU 9.2 OVAL: [https://security.tuxcare.com/oval/els_os/almalinux9.2esu/oval.xml](https://security.tuxcare.com/oval/els_os/almalinux9.2esu/oval.xml)
+* ESU 9.6 OVAL: [https://security.tuxcare.com/oval/els_os/almalinux9.6esu/oval.xml](https://security.tuxcare.com/oval/els_os/almalinux9.6esu/oval.xml)
 
 ### CSAF data
 
