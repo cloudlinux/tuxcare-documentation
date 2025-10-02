@@ -162,29 +162,9 @@ const techData = [
         link: "./angularjs/",
       },
       {
-        name: "RequireJS",
-        versions: "2.3.x",
-      },
-      {
-        name: "Passport",
-        versions: "0.2.2",
-      },
-      {
         name: "Lodash",
         versions: "4.5.0 | 4.17.x",
         link: "./lodash/",
-      },
-      {
-        name: "Loopback",
-        versions: "3.x | 2.x",
-      },
-      {
-        name: "YUI",
-        versions: "3.18.1",
-      },
-      {
-        name: "Next.js",
-        versions: "12.3.x",
       },
       {
         name: "request",
@@ -199,6 +179,7 @@ const techData = [
       {
         name: "crypto-js",
         versions: "3.3.0",
+        link: "./crypto-js/",
       },
       {
         name: "vue-template-compiler",
@@ -214,11 +195,11 @@ const techData = [
       },
       {
         name: "jsonwebtoken",
-        versions: "8.5.1",
+        versions: "0.4.0 | 8.5.1",
       },
       {
         name: "ip",
-        versions: "1.1.5,2.0.0",
+        versions: "1.1.5 | 2.0.0",
       },
       {
         name: "Quill",
@@ -226,7 +207,7 @@ const techData = [
       },
       {
         name: "undici",
-        versions: "5.28.4",
+        versions: "5.28.5",
       },
       {
         name: "rollup",
@@ -244,6 +225,71 @@ const techData = [
         name: "formidable",
         versions: "2.1.2",
       },
+      {
+        name: "bootstrap",
+        versions: "4.6.2",
+      },
+      {
+        name: "braces",
+        versions: "2.3.2",
+      },
+      {
+        name: "dompurify",
+        versions: "2.3.0 | 2.4.3",
+      },
+      {
+        name: "express",
+        versions: "3.21.2",
+      },
+      {
+        name: "express-jwt",
+        versions: "0.1.3",
+      },
+      {
+        name: "form-data",
+        versions: "2.3.3",
+      },
+      {
+        name: "i18next",
+        versions: "23.16.8",
+      },
+      {
+        name: "jquery",
+        versions: "1.12.4",
+      },
+      {
+        name: "jsonpath-plus",
+        versions: "7.2.0",
+      },
+      {
+        name: "jspdf",
+        versions: "2.5.2",
+      },
+      {
+        name: "marked",
+        versions: "2.3.3",
+      },
+      {
+        name: "mongodb",
+        versions: "2.2.36",
+      },
+      {
+        name: "multer",
+        versions: "1.4.5-lts",
+      },
+      {
+        name: "node-forge",
+        versions: "0.10.0",
+      },
+      {
+        name: "mysql2",
+        versions: "2.3.3",
+      },
+      {
+        name: "ssr-window",
+        versions: "4.0.2",
+      },
+
     ],
   },
     {
