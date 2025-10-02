@@ -73,7 +73,7 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
 * **CentOS 7 ELS OVAL Stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos7els/oval.xml)
 * **CentOS 7 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos7els/](hhttps://security.tuxcare.com/csaf/v2/els_os/centos7els/)
-* **CentOS 7 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos6els](https://cve.tuxcare.com/rss_feed/els/releases/centos7els)
+* **CentOS 7 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos7els](https://cve.tuxcare.com/rss_feed/els/releases/centos7els)
 
 ## Deinstallation instructions for yum repositories
 
