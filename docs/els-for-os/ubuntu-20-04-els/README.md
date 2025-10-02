@@ -73,4 +73,4 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
 * **Ubuntu 20.04 ELS**: [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml)
 * **Ubuntu 20.04 ELS**: [security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/)
-* **Ubuntu 20.04 ELS**: [cve.tuxcare.com/rss_feed/els/els/releases/ubuntu20.04els](https://cve.tuxcare.com/rss_feed/els/els/releases/ubuntu20.04els)
+* **Ubuntu 20.04 ELS**: [cve.tuxcare.com/rss_feed/els/releases/ubuntu20.04els](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu20.04els)

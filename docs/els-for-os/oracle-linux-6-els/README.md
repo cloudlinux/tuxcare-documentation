@@ -80,7 +80,7 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
 * **Oracle Linux 6 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux6els/oval.xml)
 * **Oracle Linux 6 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/oraclelinux6els/](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux6els/)
-* **Oracle Linux 6 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/els/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux6els)
+* **Oracle Linux 6 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux6els)
 
 ## Deinstallation instructions for yum repositories
 
