@@ -48,7 +48,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace the Apache Tomcat build dependencies in your build file with the TuxCare-maintained versions. Set the TuxCare release as the parent version. Your build tool will fetch the TuxCare versions of both your dependencies and their transitive dependencies.
+Replace the Apache Tomcat dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -87,7 +87,7 @@ TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cycloned
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update the version string in your Maven or Gradle build file.
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
 <!-- data for Apache Tomcat instructions used in code blocks -->
 
@@ -109,23 +109,16 @@ const gradlecreds =
 tuxcare_registry_user=USERNAME
 tuxcare_registry_password=PASSWORD`
 
- const mavenrepo =
- `<repositories>
-    <repository>
-        <id>tuxcare-registry</id>
-        <url>https://nexus.repo.tuxcare.com/repository/els_tomcat/</url>
-    </repository>
-</repositories>
+const mavenrepo =
+`<repositories>
+  <repository>
+      <id>tuxcare-registry</id>
+      <url>https://nexus.repo.tuxcare.com/repository/els_tomcat/</url>
+  </repository>
+</repositories>`
 
-<pluginRepositories>
-  <pluginRepository>
-    <id>tuxcare-registry</id>
-    <url>https://nexus.repo.tuxcare.com/repository/els_tomcat/</url>
-  </pluginRepository>
-</pluginRepositories>`
-
- const gradlerepo =
- `repositories {
+const gradlerepo =
+`repositories {
     maven {
       url = uri(providers.gradleProperty("tuxcare_registry_url").get())
       credentials {
@@ -137,52 +130,25 @@ tuxcare_registry_password=PASSWORD`
       }
     }
     mavenCentral()
- }
-
- pluginManagement {
-   repositories {
-   //...
-   maven {
-     url = uri(providers.gradleProperty("tuxcare_registry_url").get())
-     credentials {
-       username = providers.gradleProperty("tuxcare_registry_user").get()
-       password = providers.gradleProperty("tuxcare_registry_password").get()
-     }
-     authentication {
-       basic(BasicAuthentication)
-     }
-   }
-   mavenCentral()
-   //...
-   }
- }`
+}`
 
 const mavendeps =
-`<parent>
-  <groupId>org.apache.tomcat</groupId>
-  <artifactId>tomcat</artifactId>
-  <version>9.0.75-tuxcare.1</version>
-</parent>
-
- <dependencies>
-  <dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat-catalina</artifactId>
-  </dependency>
-  <dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat-coyote</artifactId>
-  </dependency>
+`<dependencies>
+    <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>tomcat-catalina</artifactId>
+        <version>9.0.75-tuxcare.1</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>tomcat-coyote</artifactId>
+        <version>9.0.75-tuxcare.1</version>
+    </dependency>
 </dependencies>`
 
 const gradledeps =
-`plugins {
-  id 'java'
-  id 'org.apache.tomcat' version '9.0.75-tuxcare.1'
-}
-
-dependencies {
-  implementation "org.apache.tomcat:tomcat-catalina"
-  implementation "org.apache.tomcat:tomcat-coyote"
+`dependencies {
+    implementation "org.apache.tomcat:tomcat-catalina:9.0.75-tuxcare.1"
+    implementation "org.apache.tomcat:tomcat-coyote:9.0.75-tuxcare.1"
 }`
 </script>
