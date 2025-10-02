@@ -161,15 +161,15 @@ Currently, we provide CSAF data for the following OS versions:
 
 ## TuxCare ELS RSS releases feeds
 
-* CentOS 6 ELS: [cve.tuxcare.com/rss_feed/releases/centos6els](https://cve.tuxcare.com/rss_feed/releases/centos6els)
-* CentOS 7 ELS: [cve.tuxcare.com/rss_feed/releases/centos7els](https://cve.tuxcare.com/rss_feed/releases/centos7els)
-* CentOS 8.4 ELS: [cve.tuxcare.com/rss_feed/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/releases/centos8.4els)
-* CentOS 8.5 ELS: [cve.tuxcare.com/rss_feed/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/releases/centos8.5els)
-* CentOS Stream 8 ELS: [cve.tuxcare.com/rss_feed/releases/centos8streamels](https://cve.tuxcare.com/rss_feed/releases/centos8streamels)
-* Oracle Linux 6 ELS: [cve.tuxcare.com/rss_feed/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux6els)
-* Oracle Linux 7 ELS: [cve.tuxcare.com/rss_feed/releases/oraclelinux7els](https://cve.tuxcare.com/rss_feed/releases/oraclelinux7els)
-* Red Hat Enterprise Linux 7 ELS: [cve.tuxcare.com/rss_feed/releases/rhel7els](https://cve.tuxcare.com/rss_feed/releases/rhel7els)
-* Ubuntu 16.04 ELS: [cve.tuxcare.com/rss_feed/releases/ubuntu16.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu16.04els)
-* Ubuntu 18.04 ELS: [cve.tuxcare.com/rss_feed/releases/ubuntu18.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu18.04els)
-* Ubuntu 20.04 ELS: [cve.tuxcare.com/rss_feed/releases/ubuntu20.04els](https://cve.tuxcare.com/rss_feed/releases/ubuntu20.04els)
+* CentOS 6 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/centos6els](https://cve.tuxcare.com/rss_feed/els/releases/centos6els)
+* CentOS 7 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/centos7els](https://cve.tuxcare.com/rss_feed/els/releases/centos7els)
+* CentOS 8.4 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/els/releases/centos8.4els)
+* CentOS 8.5 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/els/releases/centos8.5els)
+* CentOS Stream 8 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/centos8streamels](https://cve.tuxcare.com/rss_feed/els/releases/centos8streamels)
+* Oracle Linux 6 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/oraclelinux6els](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux6els)
+* Oracle Linux 7 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/oraclelinux7els](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux7els)
+* Red Hat Enterprise Linux 7 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/rhel7els](https://cve.tuxcare.com/rss_feed/els/releases/rhel7els)
+* Ubuntu 16.04 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/ubuntu16.04els](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu16.04els)
+* Ubuntu 18.04 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/ubuntu18.04els](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu18.04els)
+* Ubuntu 20.04 ELS: [cve.tuxcare.com/rss_feed/els/els/releases/ubuntu20.04els](https://cve.tuxcare.com/rss_feed/els/els/releases/ubuntu20.04els)
 

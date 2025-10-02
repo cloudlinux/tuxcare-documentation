@@ -1,8 +1,6 @@
 # CloudLinux 7 ELS
 
-:::tip
 You do not need ELS for CentOS 7 subscription if you are already using CloudLinux OS 7. You can find more information [here](https://docs.cloudlinux.com/cln/billing/).
-:::
 
 ## Security Updates
 
