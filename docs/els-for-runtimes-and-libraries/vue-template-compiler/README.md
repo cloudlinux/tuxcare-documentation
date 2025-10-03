@@ -126,6 +126,6 @@ Fixes for the following vulnerabilities are available in ELS for vue-template-co
 
 | CVE ID        | CVE Type | Severity | Affected Libraries    | Vulnerable Version |
 | :------------:| :------: |:--------:|:---------------------:| :----------------: |
-| CVE-2024-6783 |          | Medium   | vue-template-compiler | >= 2.0.0 < 3.0.0     |
+| CVE-2024-6783 | Direct   | Medium   | vue-template-compiler | >= 2.0.0 < 3.0.0   |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

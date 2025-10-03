@@ -156,7 +156,6 @@ Fixes for the following vulnerabilities are available in ELS for JSON Web Token 
 | CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Version |
 | :------------: |:----------:|:--------:|:------------------:|:------------------:|
 | CVE-2015-9235  | Direct     | Critical | jsonwebtoken       | < 4.2.2            |
-| NSWG-ECO-17    |            |          |                    |                    |
 
   </template>
 
