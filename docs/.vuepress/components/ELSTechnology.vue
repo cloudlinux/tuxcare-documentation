@@ -218,6 +218,14 @@ const techData = [
         name: "Apache Santuario XML Security For Java",
         versions: "2.0.10 | 2.3.1",
       },
+      {
+        name: "Apache Commons IO",
+        versions: "2.7",
+      },
+      {
+        name: "Apache Commons Lang",
+        versions: "2.4 | 2.6 | 3.4 | 3.10 | 3.12.0",
+      },
     ],
   },
   {
