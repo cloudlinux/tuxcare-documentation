@@ -53,6 +53,8 @@ export default {
                 "/els-for-runtimes-and-libraries/angularjs/",
                 "/els-for-runtimes-and-libraries/crypto-js/",
                 "/els-for-runtimes-and-libraries/dotnet/",
+                "/els-for-runtimes-and-libraries/ip/",
+                "/els-for-runtimes-and-libraries/jsonwebtoken/",
                 "/els-for-runtimes-and-libraries/lodash/",
                 "/els-for-runtimes-and-libraries/openjdk/",
                 "/els-for-runtimes-and-libraries/php/",
@@ -61,6 +63,8 @@ export default {
                 "/els-for-runtimes-and-libraries/request/",
                 "/els-for-runtimes-and-libraries/spring/",
                 "/els-for-runtimes-and-libraries/tough-cookie/",
+                "/els-for-runtimes-and-libraries/vue-template-compiler/",
+                "/els-for-runtimes-and-libraries/webpack/",
             ]
         },
     ],
