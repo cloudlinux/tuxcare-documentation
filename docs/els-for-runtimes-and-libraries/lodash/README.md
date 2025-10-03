@@ -156,3 +156,38 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   ```
 
   </CodeWithCopy>
+
+## Resolved CVEs
+
+Fixes for the following vulnerabilities are available in ELS for Lodash from TuxCare versions:
+
+<TableTabs label="Choose Lodash version: " >
+
+  <template #Lodash__4.5.0>
+
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Version |
+| :------------: | :------: |:--------:| :-----------------: |:------------------:|
+| CVE-2021-23337  | Direct   |   High   | Lodash             |      <4.17.20      |
+
+  </template>
+
+  <template #Lodash__4.17.15>
+
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Version |
+| :------------: | :------: | :------: | :-----------------: | :----------------: |
+| CVE-2020-8203  | Direct   | High   | Lodash             | <4.17.20            |
+
+  </template>
+
+  <template #Lodash__4.17.19>
+
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Version |
+| :------------: | :------: | :------: | :-----------------: |:------------------:|
+| CVE-2020-8203  | Direct   | High   | Lodash             |      <4.17.20      |
+
+  </template>
+
+</TableTabs>
+
+
+If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

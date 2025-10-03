@@ -403,6 +403,68 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   </CodeWithCopy>
 
+## Resolved CVEs
+
+Fixes for the following vulnerabilities are available in ELS for Angular from TuxCare versions:
+
+<TableTabs label="Choose Angular version: " >
+
+<template #Angular__14>
+
+| CVE ID         | CVE Type | Severity |  Affected Library | Vulnerable Versions |
+| :------------: | :------: | :------: | :---------------: | :-----------------: |
+| CVE-2024-29180 | Transitive | High | webpack-dev-middleware | <=5.3.3 |
+| CVE-2025-27789 | Transitive | Moderate | @babel/runtime | <7.26.10 |
+| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild | <=0.24.2 |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |
+| CVE-2025-54798 | Transitive | Low | tmp | <=0.2.3 |
+
+  </template>
+
+<template #Angular__15>
+
+| CVE ID         | CVE Type | Severity |  Affected Library | Vulnerable Versions |
+| :------------: | :------: | :------: | :---------------: | :-----------------: |
+| CVE-2025-27789 | Transitive | Moderate | @babel/runtime | <7.26.10 |
+| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild | <=0.24.2 |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |
+| CVE-2025-54798 | Transitive | Low | tmp | <=0.2.3 |
+
+  </template>
+
+<template #Angular__16>
+
+| CVE ID         | CVE Type | Severity |  Affected Library | Vulnerable Versions |
+| :------------: | :------: | :------: | :---------------: | :-----------------: |
+| CVE-2025-27789 | Transitive | Moderate | @babel/runtime | <7.26.10 |
+| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild | <=0.24.2 |
+| CVE-2025-32997 | Transitive | Moderate | http-proxy-middleware | 1.3.0 - 2.0.8 |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE-2025-54798 | Transitive | Low | tmp | <=0.2.3 |
+
+  </template>
+
+<template #Angular__17>
+
+| CVE ID         | CVE Type | Severity |  Affected Library | Vulnerable Versions |
+| :------------: | :------: | :------: | :---------------: | :-----------------: |
+| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild | <=0.24.2 |
+| CVE-2025-32997 | Transitive | Moderate | http-proxy-middleware | 1.3.0 - 2.0.8 |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE-2025-54798 | Transitive | Low | tmp | <=0.2.3 |
+
+  </template>
+
+</TableTabs>
+
+If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
 <script setup>
 const Angular19WithSSR =
 `"dependencies": {
