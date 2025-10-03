@@ -19,19 +19,36 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Spring rep
 You need a username and password in order to use TuxCare ELS Spring repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
 
 ### Step 2: Configure Registry
+ 
+1. Navigate to the directory depending on your operating system.
+   * Windows
+   ```text
+   Maven: C:\Users\{username}\.m2
+   Gradle: C:\Users\{username}\.gradle
+   ```
+   * macOS
+   ```text
+   Maven: /Users/{username}/.m2
+   Gradle: /Users/{username}/.gradle
+   ```
+   * Linux
+   ```text
+   Maven: /home/{username}/.m2
+   Gradle: /home/{username}/.gradle
+   ```
 
-Add the TuxCare repository and plugin repository to your build configuration:
+2. Add the TuxCare repository and plugin repository to your build configuration.
 
-<CodeTabs :tabs="[
-  { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
-  { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
-]" />
+   :::tip
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   :::
 
-Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+   <CodeTabs :tabs="[
+     { title: 'Maven (settings.xml)', content: mavencreds },
+     { title: 'Gradle (gradle.properties)', content: gradlecreds }
+   ]" />
 
-:::tip
-For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
-:::
+   Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
