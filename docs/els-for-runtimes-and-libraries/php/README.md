@@ -1158,6 +1158,22 @@ Currently, we provide errata for the following OS versions:
 * Debian 12: [security.tuxcare.com/errata/els_alt_php/debian12/](https://security.tuxcare.com/errata/els_alt_php/debian12/)
 * Debian 13: [security.tuxcare.com/errata/els_alt_php/debian13/](https://security.tuxcare.com/errata/els_alt_php/debian13/)
 
+## RSS Feed
+
+* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el7](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el7)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el8)
+* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el9](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el9)
+* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/)
+* Ubuntu 16.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/)
+* Ubuntu 18.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu18.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu18.04/)
+* Ubuntu 20.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu20.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu20.04/)
+* Ubuntu 22.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu22.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu22.04/)
+* Ubuntu 24.04 [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu24.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu24.04/)
+* Debian 10: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian10/)
+* Debian 11: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian11/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/els_alt_php/debian11/)
+* Debian 12: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian12/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian12/)
+* Debian 13: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian13/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian13/)
+
 ## PHP extensions list
 
 PHP extensions are modules that extend the functionality of the PHP programming language. These extensions provide additional capabilities for working with various types of data, performing specific tasks, interacting with external resources and supporting various protocols.
