@@ -119,10 +119,6 @@ const techData = [
         versions: "2.4.8",
       },
       {
-        name: "Apache Velocity",
-        versions: "1.7.0",
-      },
-      {
         name: "Okio",
         versions: "2.8.0",
       },
@@ -217,6 +213,10 @@ const techData = [
       {
         name: "XMLUnit",
         versions: "2.9.1 | 2.9.0"
+      },
+      {
+        name: "Apache Santuario XML Security For Java",
+        versions: "2.0.10 | 2.3.1",
       },
     ],
   },
