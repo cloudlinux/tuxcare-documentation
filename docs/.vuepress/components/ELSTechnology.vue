@@ -189,7 +189,7 @@ const techData = [
       {
         name: "webpack",
         versions: "4.41.2 | 4.46.0",
-        link: "./webpack",
+        link: "./webpack/",
       },
       {
         name: "@sentry/browser",
@@ -198,12 +198,12 @@ const techData = [
       {
         name: "jsonwebtoken",
         versions: "0.4.0 | 8.5.1",
-        link: "./jsonwebtoken",
+        link: "./jsonwebtoken/",
       },
       {
         name: "ip",
         versions: "1.1.5 | 2.0.0",
-        link: "./ip",
+        link: "./ip/",
       },
       {
         name: "Quill",
