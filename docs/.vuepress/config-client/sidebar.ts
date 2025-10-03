@@ -65,6 +65,7 @@ export default {
                 "/els-for-runtimes-and-libraries/tough-cookie/",
                 "/els-for-runtimes-and-libraries/vue-template-compiler/",
                 "/els-for-runtimes-and-libraries/webpack/",
+                "/els-for-runtimes-and-libraries/sentry-browser/",
             ]
         },
     ],

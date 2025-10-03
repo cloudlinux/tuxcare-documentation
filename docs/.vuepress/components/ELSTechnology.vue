@@ -194,9 +194,10 @@ const techData = [
       {
         name: "@sentry/browser",
         versions: "5.7.1",
+        link: "./sentry-browser/",
       },
       {
-        name: "jsonwebtoken",
+        name: "jsonwebtsentoken",
         versions: "0.4.0 | 8.5.1",
         link: "./jsonwebtoken/",
       },
