@@ -17,7 +17,28 @@ You need username and password in order to use TuxCare ELS Apache Tomcat reposit
 
 ### Step 2: Configure Registry
 
-Add the TuxCare repository and plugin repository to your build configuration:
+1. Navigate to the directory depending on your operating system.
+   * Windows
+   ```text
+   Maven: C:\Users\{username}\.m2
+   Gradle: C:\Users\{username}\.gradle
+   ```
+   * macOS
+   ```text
+   Maven: /Users/{username}/.m2
+   Gradle: /Users/{username}/.gradle
+   ```
+   * Linux
+   ```text
+   Maven: /home/{username}/.m2
+   Gradle: /home/{username}/.gradle
+   ```
+
+2. Add the TuxCare repository and plugin repository to your build configuration.
+
+   :::tip
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   :::
 
 <CodeTabs :tabs="[
   { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
@@ -25,10 +46,6 @@ Add the TuxCare repository and plugin repository to your build configuration:
 ]" />
 
 Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
-
-:::tip
-For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
-:::
 
 ### Step 3: Update Build Configuration
 
