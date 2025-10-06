@@ -260,22 +260,27 @@ const techData = [
       {
         name: "vue-template-compiler",
         versions: "2.6.11",
+        link: "./vue-template-compiler/",
       },
       {
         name: "webpack",
         versions: "4.41.2 | 4.46.0",
+        link: "./webpack/",
       },
       {
         name: "@sentry/browser",
         versions: "5.7.1",
+        link: "./sentry-browser/",
       },
       {
         name: "jsonwebtoken",
         versions: "0.4.0 | 8.5.1",
+        link: "./jsonwebtoken/",
       },
       {
         name: "ip",
         versions: "1.1.5 | 2.0.0",
+        link: "./ip/",
       },
       {
         name: "Quill",
