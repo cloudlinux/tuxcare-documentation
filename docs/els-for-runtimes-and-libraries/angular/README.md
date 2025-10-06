@@ -488,18 +488,18 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 
 <template #Angular__13>
 
-| CVE ID         | CVE Type | Severity |  Affected Library | Vulnerable Versions |
-| :------------: | :------: | :------: | :---------------: | :-----------------: |
-| CVE-2024-29180 | Transitive | High | webpack-dev-middleware | <=5.3.3 |
-| CVE-2022-25883 | Transitive | High | semver | 7.0.0 - 7.5.1 |
-| CVE-2024-29415 | Transitive | High | ip | * |
-| CVE-2025-27789 | Transitive | Moderate | @babel/runtime | <7.26.10 |
-| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild | <=0.24.2 |
-| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
-| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server | <=5.2.0 |
+| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   |
+| :------------: | :------: | :------: | :---------------: |:----------------------:|
+| CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <=5.3.3         |
+| CVE-2022-25883 | Transitive | High | semver |     7.0.0 - 7.5.1      |
+| CVE-2024-29415 | Transitive | High | ip |        >= 0.0.0        |
+| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |        <7.26.10        |
+| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild |        <=0.24.2        |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <=5.2.0         |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <=5.2.0         |
 | CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |
-| CVE-2023-44270 | Transitive | Moderate | postcss | <8.4.31 |
-| CVE-2025-54798 | Transitive | Low | tmp | <=0.2.3 |
+| CVE-2023-44270 | Transitive | Moderate | postcss |        <8.4.31         |
+| CVE-2025-54798 | Transitive | Low | tmp |        <=0.2.3         |
 
   </template>
 
