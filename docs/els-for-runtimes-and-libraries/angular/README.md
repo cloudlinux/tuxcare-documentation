@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes
 
 ## Supported Angular Versions
 
-Angular versions 14, 15, 16, 17, and 18 are supported.
+Angular versions 13, 14, 15, 16, 17, and 18 are supported.
 
 ## Connection to ELS for Angular Repository
   
@@ -51,6 +51,82 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages.
 
    <TableTabs label="Choose Angular version: " >
+
+     <template #Angular_13>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
+        "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
+        "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
+        "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
+        "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
+        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
+        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
+        "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
+        "rxjs": "^7.4.0",
+        "tslib": "^2.3.0",
+        "zone.js": "~0.11.4"
+      },
+      "devDependencies": {
+        "@angular-devkit/build-angular": "^13.0.4",
+        "@angular/cli": "^13.0.4",
+        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
+        "@types/express": "^4.17.17",
+        "@types/jasmine": "~5.1.0",
+        "@types/node": "^18.18.0",
+        "jasmine-core": "~5.6.0",
+        "karma": "~6.4.0",
+        "karma-chrome-launcher": "~3.2.0",
+        "karma-coverage": "~2.2.0",
+        "karma-jasmine": "~5.1.0",
+        "karma-jasmine-html-reporter": "~2.1.0",
+        "typescript": "~4.5.5"
+      },
+      "overrides": {
+        "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
+        "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
+        "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
+        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
+        "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
+        "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
+        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
+        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
+        "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
+        "rxjs": "^7.4.0",
+        "@babel/runtime": "7.26.10",
+        "esbuild": "0.25.0",
+        "webpack-dev-middleware": "5.3.4",
+        "webpack-dev-server": "5.2.1",
+        "webpack": "5.94.0", 
+        "semver": "7.6.0",
+        "postcss": "8.4.32",
+        "tmp": "^0.2.4",
+        "*": {
+          "tmp": "^0.2.4",
+          "semver": "7.6.0",
+          "postcss": "8.4.32"
+        }
+      }
+      ```
+
+      </CodeWithCopy>
+
+      :::tip
+      If you use any of the following **non-default Angular modules**, update their versions as shown below:
+       
+      * "@angular/elements": "npm:@els-js/angular-elements@13.4.0-tuxcare.1",
+      * "@angular/upgrade": "npm:@els-js/angular-upgrade@13.4.0-tuxcare.1",
+      * "@angular/platform-server": "npm:@els-js/angular-platform-server@13.4.0-tuxcare.1",
+      * "@angular/localize": "npm:@els-js/angular-localize@13.4.0-tuxcare.1",
+      * "@angular/language-service": "npm:@els-js/angular-language-service@13.4.0-tuxcare.1",
+      * "@angular/service-worker": "npm:@els-js/angular-service-worker@13.4.0-tuxcare.1",
+       
+      After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+      :::
+     </template>
 
      <template #Angular_14>
 
@@ -234,6 +310,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
         "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
         "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+        "vite": "npm:@els-js/vite@4.5.5-tuxcare.1",
         "rxjs": "^7.4.0",
         "@babel/runtime": "7.26.10",
         "esbuild": "0.25.0",
@@ -408,6 +485,23 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 Fixes for the following vulnerabilities are available in ELS for Angular from TuxCare versions:
 
 <TableTabs label="Choose Angular version: " >
+
+<template #Angular__13>
+
+| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   |
+| :------------: | :------: | :------: | :---------------: |:----------------------:|
+| CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <=5.3.3         |
+| CVE-2022-25883 | Transitive | High | semver |     7.0.0 - 7.5.1      |
+| CVE-2024-29415 | Transitive | High | ip |        >= 0.0.0        |
+| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |        <7.26.10        |
+| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild |        <=0.24.2        |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <=5.2.0         |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <=5.2.0         |
+| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |
+| CVE-2023-44270 | Transitive | Moderate | postcss |        <8.4.31         |
+| CVE-2025-54798 | Transitive | Low | tmp |        <=0.2.3         |
+
+  </template>
 
 <template #Angular__14>
 
@@ -656,7 +750,7 @@ const Angular17WithSSR =
   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@17.3.12-tuxcare.1",
   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1", 
-  "@angular/ssr": "^17.3.17",
+  "@angular/ssr": "npm:@els-js/angular-ssr@17.3.12-tuxcare.1",
   "express": "^4.18.2", 
   "rxjs": "^7.4.0",
   "tslib": "^2.3.0",
@@ -688,6 +782,7 @@ const Angular17WithSSR =
   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
   "@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
+  "@angular/ssr": "npm:@els-js/angular-ssr@17.3.12-tuxcare.1",
   "rxjs": "^7.4.0",
   "esbuild": "0.25.0",
   "webpack-dev-server": "5.2.1",
