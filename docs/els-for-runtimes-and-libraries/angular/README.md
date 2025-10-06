@@ -284,7 +284,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "rxjs": "^7.4.0",
         "tslib": "^2.3.0",
         "zone.js": "~0.13.0"
-      },``
+      },
       "devDependencies": {
         "@angular-devkit/build-angular": "^16.2.12",
         "@angular/cli": "^16.2.12",

@@ -415,7 +415,7 @@ const techData = [
     projects: [
       {
         name: "Angular",
-        versions: "14 | 15 | 16 | 17 | 18 ",
+        versions: "13 | 14 | 15 | 16 | 17 | 18 ",
         link: "./angular/",
       },
     ],
@@ -519,8 +519,8 @@ function getFilteredProjects(item) {
   cursor: pointer;
   background-color: #fff;
   min-height: 2.5rem;
-  margin-bottom: 0.4rem;   
-  border-bottom: none; 
+  margin-bottom: 0.4rem;
+  border-bottom: none;
 }
 
 .ecosystem-tabs li.active {
@@ -572,7 +572,7 @@ function getFilteredProjects(item) {
   display: flex;
   align-items: center;
   border-bottom: none;
-  border-bottom: 1px solid #F48243; 
+  border-bottom: 1px solid #F48243;
 }
 
 .version-col li {
