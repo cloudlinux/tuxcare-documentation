@@ -113,5 +113,10 @@
     "/els-for-os/#tuxcare-els-rss-releases-feeds": "/els-for-os/machine-readable-security-data/#tuxcare-els-rss-releases-feeds",
     "/els-for-runtimes-and-libraries/angular/#step-1-get-user-credentials": "/els-for-runtimes-and-libraries/angular/#step-1-get-token",
     "/els-for-runtimes-and-libraries/angularjs/#step-1-get-user-credentials": "/els-for-runtimes-and-libraries/angularjs/#step-1-get-token",
-    "/els-for-runtimes-and-libraries/lodash/#step-1-get-user-credentials": "/els-for-runtimes-and-libraries/lodash/#step-1-get-token"
+    "/els-for-runtimes-and-libraries/lodash/#step-1-get-user-credentials": "/els-for-runtimes-and-libraries/lodash/#step-1-get-token",
+    "/els-for-runtimes-and-libraries/spring/#overview": "/els-for-runtimes-and-libraries/spring/#step-2-configure-registry",
+    "/els-for-runtimes-and-libraries/spring/#step-2-create-or-modify-your-build-tool-settings": "/els-for-runtimes-and-libraries/spring/#step-4-verify-and-build",
+    "/els-for-runtimes-and-libraries/spring/#verification": "/els-for-runtimes-and-libraries/spring/#step-4-verify-and-build",
+    "/els-for-runtimes-and-libraries/python/#rpm-based": "/els-for-runtimes-and-libraries/python/#installation-instructions-for-linux", 
+    "/els-for-runtimes-and-libraries/python/#deb-based": "/els-for-runtimes-and-libraries/python/#installation-instructions-for-linux"
 }

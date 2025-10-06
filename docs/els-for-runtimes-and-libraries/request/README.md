@@ -142,3 +142,31 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   ```
 
   </CodeWithCopy>
+
+## Resolved CVEs
+
+Fixes for the following vulnerabilities are available in ELS for Request from TuxCare versions:
+
+<TableTabs label="Choose Request version: " >
+
+<template #Request__2.88.0>
+
+| CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Version |
+| :------------: |:----------:|:--------:|:------------------:|:------------------:|
+| CVE-2025-7783  | Transitive | Critical |     Form-Data      |      < 2.5.4      |
+| CVE-2023-28155  |   Direct   |  Medium  |      Request       |      <=2.88.1      |
+
+  </template>
+
+<template #Request__2.88.2>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Version |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2025-7783  | Transitive | Critical |     Form-Data      |      < 2.5.4      |
+
+  </template>
+
+</TableTabs>
+
+
+If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

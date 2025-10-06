@@ -129,7 +129,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install tough-cookienpm:@els-js/tough-cookie@2.5.0-tuxcare.3
+  npm install tough-cookie@npm:@els-js/tough-cookie@2.5.0-tuxcare.3
   ```
 
   </CodeWithCopy>
