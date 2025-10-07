@@ -233,84 +233,14 @@ const techData = [
     ecosystemIcon: "/images/javascript.png",
     projects: [
       {
-        name: "AngularJS",
-        versions: "1.5.x | 1.6.x | 1.7.x | 1.8.x",
-        link: "./angularjs/",
-      },
-      {
-        name: "Lodash",
-        versions: "4.5.0 | 4.17.x",
-        link: "./lodash/",
-      },
-      {
-        name: "Request",
-        versions: "2.88.0 | 2.88.2",
-        link: "./request/",
-      },
-      {
-        name: "tough-cookie",
-        versions: "2.4.3 | 2.5.0",
-        link: "./tough-cookie/",
-      },
-      {
-        name: "CryptoJS",
-        versions: "3.3.0",
-        link: "./crypto-js/",
-      },
-      {
-        name: "vue-template-compiler",
-        versions: "2.6.11",
-        link: "./vue-template-compiler/",
-      },
-      {
-        name: "webpack",
-        versions: "4.41.2 | 4.46.0",
-        link: "./webpack/",
-      },
-      {
         name: "@sentry/browser",
         versions: "5.7.1",
         link: "./sentry-browser/",
       },
       {
-        name: "JSON Web Token (JWT)",
-        versions: "0.4.0 | 8.5.1",
-        link: "./jsonwebtoken/",
-      },
-      {
-        name: "ip",
-        versions: "1.1.5 | 2.0.0",
-        link: "./ip/",
-      },
-      {
-        name: "Quill",
-        versions: "1.3.7",
-        link: "./quill/",
-      },
-      {
-        name: "undici",
-        versions: "5.28.5",
-        link: "./undici/",
-      },
-      {
-        name: "Rollup",
-        versions: "2.79.1 | 2.79.2",
-        link: "./rollup/",
-      },
-      {
-        name: "copy-anything",
-        versions: "2.0.6",
-        link: "./copy-anything/",
-      },
-      {
-        name: "picocolors",
-        versions: "0.2.1",
-        link: "./picocolors/",
-      },
-      {
-        name: "formidable",
-        versions: "2.1.2",
-        link: "./formidable/",
+        name: "AngularJS",
+        versions: "1.5.x | 1.6.x | 1.7.x | 1.8.x",
+        link: "./angularjs/",
       },
       {
         name: "Bootstrap",
@@ -321,6 +251,16 @@ const techData = [
         name: "braces",
         versions: "2.3.2",
         link: "./braces/",
+      },
+      {
+        name: "copy-anything",
+        versions: "2.0.6",
+        link: "./copy-anything/",
+      },
+      {
+        name: "CryptoJS",
+        versions: "3.3.0",
+        link: "./crypto-js/",
       },
       {
         name: "DOMPurify",
@@ -338,6 +278,11 @@ const techData = [
         link: "./express-jwt/",
       },
       {
+        name: "formidable",
+        versions: "2.1.2",
+        link: "./formidable/",
+      },
+      {
         name: "Form-Data",
         versions: "2.3.3",
         link: "./form-data/",
@@ -348,9 +293,19 @@ const techData = [
         link: "./i18next/",
       },
       {
+        name: "ip",
+        versions: "1.1.5 | 2.0.0",
+        link: "./ip/",
+      },
+      {
         name: "jQuery",
         versions: "1.12.4",
         link: "./jquery/",
+      },
+      {
+        name: "JSON Web Token (JWT)",
+        versions: "0.4.0 | 8.5.1",
+        link: "./jsonwebtoken/",
       },
       {
         name: "JSONPath Plus",
@@ -361,6 +316,11 @@ const techData = [
         name: "jsPDF",
         versions: "2.5.2",
         link: "./jspdf/",
+      },
+      {
+        name: "Lodash",
+        versions: "4.5.0 | 4.17.x",
+        link: "./lodash/",
       },
       {
         name: "marked",
@@ -378,19 +338,59 @@ const techData = [
         link: "./multer/",
       },
       {
-        name: "node-forge",
-        versions: "0.10.0",
-        link: "./node-forge/",
-      },
-      {
         name: "MySQL2",
         versions: "2.3.3",
         link: "./mysql2/",
       },
       {
+        name: "node-forge",
+        versions: "0.10.0",
+        link: "./node-forge/",
+      },
+      {
+        name: "picocolors",
+        versions: "0.2.1",
+        link: "./picocolors/",
+      },
+      {
+        name: "Quill",
+        versions: "1.3.7",
+        link: "./quill/",
+      },
+      {
+        name: "Request",
+        versions: "2.88.0 | 2.88.2",
+        link: "./request/",
+      },
+      {
+        name: "Rollup",
+        versions: "2.79.1 | 2.79.2",
+        link: "./rollup/",
+      },
+      {
         name: "ssr-window",
         versions: "4.0.2",
         link: "./ssr-window/",
+      },
+      {
+        name: "tough-cookie",
+        versions: "2.4.3 | 2.5.0",
+        link: "./tough-cookie/",
+      },
+      {
+        name: "undici",
+        versions: "5.28.5",
+        link: "./undici/",
+      },
+      {
+        name: "vue-template-compiler",
+        versions: "2.6.11",
+        link: "./vue-template-compiler/",
+      },
+      {
+        name: "webpack",
+        versions: "4.41.2 | 4.46.0",
+        link: "./webpack/",
       },
 
     ],
