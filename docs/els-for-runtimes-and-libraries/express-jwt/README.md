@@ -96,7 +96,7 @@ TuxCare provides ELS for express-jwt as an NPM package, hosted on a secure inter
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for express-jwt ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/express-jwt/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/express-jwt/).
+TuxCare provides VEX for express-jwt ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/express/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/express/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

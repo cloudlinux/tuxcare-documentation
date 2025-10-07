@@ -93,7 +93,7 @@ TuxCare provides ELS for JSONPath Plus as an NPM package, hosted on a secure int
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for JSONPath Plus ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonpath-plus/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonpath-plus/).
+TuxCare provides VEX for JSONPath Plus ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonpath/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonpath/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

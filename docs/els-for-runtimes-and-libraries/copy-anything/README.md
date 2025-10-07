@@ -96,7 +96,7 @@ TuxCare provides ELS for copy-anything as an NPM package, hosted on a secure int
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for copy-anything ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/copy-anything/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/copy-anything/).
+TuxCare provides VEX for copy-anything ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/copy/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/copy/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
