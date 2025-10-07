@@ -89,12 +89,6 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
 
 7. You've successfully installed the Tuxcare ELS version of the jQuery library into your project.
 
-## Vulnerability Exploitability eXchange (VEX) 
-
-VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
-
-TuxCare provides VEX for jQuery ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jquery/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jquery/).
-
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
