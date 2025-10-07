@@ -285,6 +285,7 @@ const techData = [
       {
         name: "Quill",
         versions: "1.3.7",
+        link: "./quill/",
       },
       {
         name: "undici",
