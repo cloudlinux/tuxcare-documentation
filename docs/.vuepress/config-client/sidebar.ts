@@ -71,6 +71,7 @@ export default {
                 "/els-for-runtimes-and-libraries/marked/",
                 "/els-for-runtimes-and-libraries/mongodb/",
                 "/els-for-runtimes-and-libraries/multer/",
+                "/els-for-runtimes-and-libraries/mysql2/",
                 "/els-for-runtimes-and-libraries/node-forge/",
                 "/els-for-runtimes-and-libraries/openjdk/",
                 "/els-for-runtimes-and-libraries/ssr-window/",

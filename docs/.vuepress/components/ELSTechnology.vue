@@ -243,7 +243,7 @@ const techData = [
         link: "./lodash/",
       },
       {
-        name: "request",
+        name: "Request",
         versions: "2.88.0 | 2.88.2",
         link: "./request/",
       },
@@ -253,7 +253,7 @@ const techData = [
         link: "./tough-cookie/",
       },
       {
-        name: "crypto-js",
+        name: "CryptoJS",
         versions: "3.3.0",
         link: "./crypto-js/",
       },
@@ -273,7 +273,7 @@ const techData = [
         link: "./sentry-browser/",
       },
       {
-        name: "jsonwebtoken",
+        name: "JSON Web Token (JWT)",
         versions: "0.4.0 | 8.5.1",
         link: "./jsonwebtoken/",
       },
@@ -293,7 +293,7 @@ const techData = [
         link: "./undici/",
       },
       {
-        name: "rollup",
+        name: "Rollup",
         versions: "2.79.1 | 2.79.2",
         link: "./rollup/",
       },
@@ -313,7 +313,7 @@ const techData = [
         link: "./formidable/",
       },
       {
-        name: "bootstrap",
+        name: "Bootstrap",
         versions: "3.4.1 | 4.6.2",
         link: "./bootstrap/",
       },
@@ -323,7 +323,7 @@ const techData = [
         link: "./braces/",
       },
       {
-        name: "dompurify",
+        name: "DOMPurify",
         versions: "2.3.0 | 2.4.3",
         link: "./dompurify/",
       },
@@ -338,7 +338,7 @@ const techData = [
         link: "./express-jwt/",
       },
       {
-        name: "form-data",
+        name: "Form-Data",
         versions: "2.3.3",
         link: "./form-data/",
       },
@@ -348,17 +348,17 @@ const techData = [
         link: "./i18next/",
       },
       {
-        name: "jquery",
+        name: "jQuery",
         versions: "1.12.4",
         link: "./jquery/",
       },
       {
-        name: "jsonpath-plus",
+        name: "JSONPath Plus",
         versions: "7.2.0",
         link: "./jsonpath-plus/",
       },
       {
-        name: "jspdf",
+        name: "jsPDF",
         versions: "2.5.2",
         link: "./jspdf/",
       },
@@ -368,7 +368,7 @@ const techData = [
         link: "./marked/",
       },
       {
-        name: "mongodb",
+        name: "MongoDB",
         versions: "2.2.36",
         link: "./mongodb/",
       },
@@ -383,7 +383,7 @@ const techData = [
         link: "./node-forge/",
       },
       {
-        name: "mysql2",
+        name: "MySQL2",
         versions: "2.3.3",
         link: "./mysql2/",
       },
