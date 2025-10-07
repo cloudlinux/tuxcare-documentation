@@ -97,134 +97,167 @@ const techData = [
       {
         name: "Dom4j",
         versions: "1.6.1",
+        link: "./dom4j/",
       },
       {
         name: "SnakeYAML",
         versions: "1.23 | 1.26 | 1.29 | 1.30 | 1.33",
+        link: "./snakeyaml/",
       },
       {
         name: "Google Guava",
         versions: "20.0 | 30.1-jre | 31.1-jre",
+        link: "./google-guava/",
       },
       {
         name: "Apache Hadoop",
         versions: "2.7.3, 2.7.1",
+        link: "./apache-hadoop/",
       },
       {
         name: "Apache Struts",
         versions: "1.3.5 | 2.5.33",
+        link: "./apache-struts/",
       },
       {
         name: "Apache Spark",
         versions: "2.4.8",
+        link: "./apache-spark/",
       },
       {
         name: "Okio",
         versions: "2.8.0",
+        link: "./okio/",
       },
       {
         name: "Apache Commons BeanUtils",
         versions: "1.9.4",
+        link: "./apache-commons-beanutils/",
       },
       {
         name: "Apache Commons HttpClient",
         versions: "3.1",
+        link: "./apache-commons-httpclient/",
       },
       {
         name: "Apache CXF",
         versions: "3.5.9",
+        link: "./apache-cxf/",
       },
       {
         name: "DNSJava",
         versions: "2.1.7",
+        link: "./dnsjava/",
       },
       {
         name: "el-spec",
         versions: "3.0.0",
+        link: "./el-spec/",
       },
       {
         name: "Apache Hive",
         versions: "2.3.9",
+        link: "./apache-hive/",
       },
       {
         name: "Apache Kafka",
         versions: "3.2.3",
+        link: "./apache-kafka/",
       },
       {
         name: "Jackson",
         versions: "1.9.13",
+        link: "./jackson/",
       },
       {
         name: "Logback",
         versions: "1.2.13",
+        link: "./logback/",
       },
       {
         name: "Netty",
         versions: "4.1.115.Final | 4.1.63.Final",
+        link: "./netty/",
       },
       {
         name: "Nimbus JOSE + JWT",
         versions: "9.22 | 9.24.4",
+        link: "./nimbus-jose-jwt/",
       },
       {
         name: "Querydsl",
         versions: "5.1.0",
+        link: "./querydsl/",
       },
       {
         name: "Plexus Utils",
         versions: "1.5.8",
+        link: "./plexus-utils/",
       },
       {
         name: "PostgreSQL",
         versions: "42.5.0 | 42.2.16",
+        link: "./postgresql/",
       },
       {
         name: "Protobuf",
         versions: "2.5.0"
+        ,link: "./protobuf/",
       },
       {
         name: "Reload4j",
         versions: "1.2.17",
+        link: "./reload4j/",
       },
       {
         name: "Snappy Java",
         versions: "1.1.8.4",
+        link: "./snappy-java/",
       },
       {
         name: "Apache Tomcat",
         versions: "8.5.100 | 9.0.75",
+        link: "./apache-tomcat/",
       },
       {
         name: "Apache Thrift",
         versions: "0.9.3",
+        link: "./apache-thrift/",
       },
       {
         name: "Thymeleaf",
         versions: "3.0.15.RELEASE",
+        link: "./thymeleaf/",
       },
       {
         name: "Apache Velocity Engine",
         versions: "1.7",
+        link: "./apache-velocity-engine/",
       },
       {
         name: "Woodstox",
         versions: "5.0.3",
+        link: "./woodstox/",
       },
       {
         name: "XMLUnit",
         versions: "2.9.1 | 2.9.0"
+        ,link: "./xmlunit/",
       },
       {
         name: "Apache Santuario XML Security For Java",
         versions: "2.0.10 | 2.3.1",
+        link: "./apache-santuario-xml-security-for-java/",
       },
       {
         name: "Apache Commons IO",
         versions: "2.7",
+        link: "./apache-commons-io/",
       },
       {
         name: "Apache Commons Lang",
         versions: "2.4 | 2.6 | 3.4 | 3.10 | 3.12.0",
+        link: "./apache-commons-lang/",
       },
     ],
   },
