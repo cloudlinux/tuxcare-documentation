@@ -100,14 +100,14 @@ TuxCare provides VEX for node-forge ELS versions: [security.tuxcare.com/vex/cycl
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.2` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
-  npm install node-forge@npm:@els-js/node-forge@0.10.0-tuxcare.3
+  npm install node-forge@npm:@els-js/node-forge@0.10.0-tuxcare.2
   ```
 
   </CodeWithCopy>

@@ -100,14 +100,14 @@ TuxCare provides VEX for i18next ELS versions: [security.tuxcare.com/vex/cyclone
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
-  npm install i18next@npm:@els-js/i18next@23.16.8-tuxcare.3
+  npm install i18next@npm:@els-js/i18next@23.16.8-tuxcare.2
   ```
 
   </CodeWithCopy>

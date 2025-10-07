@@ -100,14 +100,14 @@ TuxCare provides VEX for ssr-window ELS versions: [security.tuxcare.com/vex/cycl
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.2` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+If you have already installed a package with a `tuxcare.2` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
-  npm install ssr-window@npm:@els-js/ssr-window@4.0.2-tuxcare.3
+  npm install ssr-window@npm:@els-js/ssr-window@4.0.2-tuxcare.2
   ```
 
   </CodeWithCopy>

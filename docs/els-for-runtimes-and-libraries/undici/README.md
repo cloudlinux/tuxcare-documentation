@@ -100,14 +100,14 @@ TuxCare provides VEX for undici ELS versions: [security.tuxcare.com/vex/cycloned
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
-  npm install undici@npm:@els-js/undici@5.28.5-tuxcare.3
+  npm install undici@npm:@els-js/undici@5.28.5-tuxcare.2
   ```
 
   </CodeWithCopy>

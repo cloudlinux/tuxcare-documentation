@@ -132,7 +132,7 @@ TuxCare provides VEX for Request ELS versions: [security.tuxcare.com/vex/cyclone
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), update the version strings in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), update the version strings in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
 
   <CodeWithCopy>
 

@@ -100,14 +100,14 @@ TuxCare provides VEX for copy-anything ELS versions: [security.tuxcare.com/vex/c
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
-  npm install copy-anything@npm:@els-js/copy-anything@2.0.6-tuxcare.3
+  npm install copy-anything@npm:@els-js/copy-anything@2.0.6-tuxcare.2
   ```
 
   </CodeWithCopy>
