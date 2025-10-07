@@ -134,14 +134,14 @@ TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cycloned
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
-  npm install lodash@npm:@els-js/lodash@4.5.0-tuxcare.3
+  npm install lodash@npm:@els-js/lodash@4.5.0-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -165,25 +165,25 @@ Fixes for the following vulnerabilities are available in ELS for Lodash from Tux
 
   <template #Lodash__4.5.0>
 
-| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Version |
-| :------------: | :------: |:--------:| :-----------------: |:------------------:|
-| CVE-2021-23337  | Direct   |   High   | Lodash             |      <4.17.20      |
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:| :-----------------: |:-------------------:|
+| CVE-2021-23337  | Direct   |   High   | Lodash             |      < 4.17.20      |
 
   </template>
 
   <template #Lodash__4.17.15>
 
-| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Version |
-| :------------: | :------: | :------: | :-----------------: | :----------------: |
-| CVE-2020-8203  | Direct   | High   | Lodash             | <4.17.20            |
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
+| :------------: | :------: | :------: | :-----------------: |:-------------------:|
+| CVE-2020-8203  | Direct   | High   | Lodash             |      < 4.17.20      |
 
   </template>
 
   <template #Lodash__4.17.19>
 
-| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Version |
-| :------------: | :------: | :------: | :-----------------: |:------------------:|
-| CVE-2020-8203  | Direct   | High   | Lodash             |      <4.17.20      |
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
+| :------------: | :------: | :------: | :-----------------: |:-------------------:|
+| CVE-2020-8203  | Direct   | High   | Lodash             |      < 4.17.20      |
 
   </template>
 

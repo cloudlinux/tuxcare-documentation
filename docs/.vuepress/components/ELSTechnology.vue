@@ -233,9 +233,89 @@ const techData = [
     ecosystemIcon: "/images/javascript.png",
     projects: [
       {
+        name: "@sentry/browser",
+        versions: "5.7.1",
+        link: "./sentry-browser/",
+      },
+      {
         name: "AngularJS",
         versions: "1.5.x | 1.6.x | 1.7.x | 1.8.x",
         link: "./angularjs/",
+      },
+      {
+        name: "Bootstrap",
+        versions: "3.4.1 | 4.6.2",
+        link: "./bootstrap/",
+      },
+      {
+        name: "braces",
+        versions: "2.3.2",
+        link: "./braces/",
+      },
+      {
+        name: "copy-anything",
+        versions: "2.0.6",
+        link: "./copy-anything/",
+      },
+      {
+        name: "CryptoJS",
+        versions: "3.3.0",
+        link: "./crypto-js/",
+      },
+      {
+        name: "DOMPurify",
+        versions: "2.3.0 | 2.4.3",
+        link: "./dompurify/",
+      },
+      {
+        name: "express",
+        versions: "3.21.2",
+        link: "./express/",
+      },
+      {
+        name: "express-jwt",
+        versions: "0.1.3",
+        link: "./express-jwt/",
+      },
+      {
+        name: "formidable",
+        versions: "2.1.2",
+        link: "./formidable/",
+      },
+      {
+        name: "Form-Data",
+        versions: "2.3.3",
+        link: "./form-data/",
+      },
+      {
+        name: "i18next",
+        versions: "23.16.8",
+        link: "./i18next/",
+      },
+      {
+        name: "ip",
+        versions: "1.1.5 | 2.0.0",
+        link: "./ip/",
+      },
+      {
+        name: "jQuery",
+        versions: "1.12.4",
+        link: "./jquery/",
+      },
+      {
+        name: "JSON Web Token (JWT)",
+        versions: "0.4.0 | 8.5.1",
+        link: "./jsonwebtoken/",
+      },
+      {
+        name: "JSONPath Plus",
+        versions: "7.2.0",
+        link: "./jsonpath-plus/",
+      },
+      {
+        name: "jsPDF",
+        versions: "2.5.2",
+        link: "./jspdf/",
       },
       {
         name: "Lodash",
@@ -243,9 +323,54 @@ const techData = [
         link: "./lodash/",
       },
       {
-        name: "request",
+        name: "marked",
+        versions: "4.0.9",
+        link: "./marked/",
+      },
+      {
+        name: "MongoDB",
+        versions: "2.2.36",
+        link: "./mongodb/",
+      },
+      {
+        name: "multer",
+        versions: "1.4.5-lts",
+        link: "./multer/",
+      },
+      {
+        name: "MySQL2",
+        versions: "2.3.3",
+        link: "./mysql2/",
+      },
+      {
+        name: "node-forge",
+        versions: "0.10.0",
+        link: "./node-forge/",
+      },
+      {
+        name: "picocolors",
+        versions: "0.2.1",
+        link: "./picocolors/",
+      },
+      {
+        name: "Quill",
+        versions: "1.3.7",
+        link: "./quill/",
+      },
+      {
+        name: "Request",
         versions: "2.88.0 | 2.88.2",
         link: "./request/",
+      },
+      {
+        name: "Rollup",
+        versions: "2.79.1 | 2.79.2",
+        link: "./rollup/",
+      },
+      {
+        name: "ssr-window",
+        versions: "4.0.2",
+        link: "./ssr-window/",
       },
       {
         name: "tough-cookie",
@@ -253,9 +378,9 @@ const techData = [
         link: "./tough-cookie/",
       },
       {
-        name: "crypto-js",
-        versions: "3.3.0",
-        link: "./crypto-js/",
+        name: "undici",
+        versions: "5.28.5",
+        link: "./undici/",
       },
       {
         name: "vue-template-compiler",
@@ -266,109 +391,6 @@ const techData = [
         name: "webpack",
         versions: "4.41.2 | 4.46.0",
         link: "./webpack/",
-      },
-      {
-        name: "@sentry/browser",
-        versions: "5.7.1",
-        link: "./sentry-browser/",
-      },
-      {
-        name: "jsonwebtoken",
-        versions: "0.4.0 | 8.5.1",
-        link: "./jsonwebtoken/",
-      },
-      {
-        name: "ip",
-        versions: "1.1.5 | 2.0.0",
-        link: "./ip/",
-      },
-      {
-        name: "Quill",
-        versions: "1.3.7",
-      },
-      {
-        name: "undici",
-        versions: "5.28.5",
-      },
-      {
-        name: "rollup",
-        versions: "2.79.1 | 2.79.2",
-      },
-      {
-        name: "copy-anything",
-        versions: "2.0.6",
-      },
-      {
-        name: "picocolors",
-        versions: "0.2.1",
-      },
-      {
-        name: "formidable",
-        versions: "2.1.2",
-      },
-      {
-        name: "bootstrap",
-        versions: "4.6.2",
-      },
-      {
-        name: "braces",
-        versions: "2.3.2",
-      },
-      {
-        name: "dompurify",
-        versions: "2.3.0 | 2.4.3",
-      },
-      {
-        name: "express",
-        versions: "3.21.2",
-      },
-      {
-        name: "express-jwt",
-        versions: "0.1.3",
-      },
-      {
-        name: "form-data",
-        versions: "2.3.3",
-      },
-      {
-        name: "i18next",
-        versions: "23.16.8",
-      },
-      {
-        name: "jquery",
-        versions: "1.12.4",
-      },
-      {
-        name: "jsonpath-plus",
-        versions: "7.2.0",
-      },
-      {
-        name: "jspdf",
-        versions: "2.5.2",
-      },
-      {
-        name: "marked",
-        versions: "2.3.3",
-      },
-      {
-        name: "mongodb",
-        versions: "2.2.36",
-      },
-      {
-        name: "multer",
-        versions: "1.4.5-lts",
-      },
-      {
-        name: "node-forge",
-        versions: "0.10.0",
-      },
-      {
-        name: "mysql2",
-        versions: "2.3.3",
-      },
-      {
-        name: "ssr-window",
-        versions: "4.0.2",
       },
 
     ],

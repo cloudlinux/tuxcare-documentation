@@ -121,7 +121,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 <details>
   <summary>Click to expand resolved CVEs in ELS for Python Libraries</summary>
 
-| CVE ID              | Severity | Library      | Vulnerable Version | Safe Version |
+| CVE ID              | Severity | Library      | Vulnerable Versions | Safe Version |
 | :-----------------: | :------: | :----------: | :----------------: | :----------: |
 | GHSA-56pw-mpj4-fxww | High     | pillow       | 9.4.0              | 9.4.0.post2+tuxcare |
 | GHSA-h4gh-qq45-vh27 | Medium   | cryptography | 42.0.8             | 42.0.8.post1+tuxcare |

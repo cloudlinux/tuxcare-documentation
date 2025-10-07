@@ -122,14 +122,14 @@ TuxCare provides VEX for tough-cookie ELS versions: [security.tuxcare.com/vex/cy
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`. For example:
 
   <CodeWithCopy>
 
   ```text
-  npm install tough-cookie@npm:@els-js/tough-cookie@2.5.0-tuxcare.3
+  npm install tough-cookie@npm:@els-js/tough-cookie@2.5.0-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -144,3 +144,30 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   ```
 
   </CodeWithCopy>
+ 
+## Resolved CVEs
+
+Fixes for the following vulnerabilities are available in ELS for tough-cookie from TuxCare versions:
+
+<TableTabs label="Choose tough-cookie version: " >
+
+<template #tough-cooke_2.4.3>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: |:--------:|:--------:|:------------------:|:-------------------:|
+| CVE-2023-26136  |  Direct  | Critical |    tough-cookie    |       < 4.1.3       |
+
+  </template>
+
+<template #tough-cookie_2.5.0>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2023-26136  |  Direct  | Critical |    tough-cookie    |       < 4.1.3       |
+
+  </template>
+
+</TableTabs>
+
+
+If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

@@ -1,30 +1,30 @@
-# @sentry/browser
+# marked
 
-Endless Lifecycle Support (ELS) for @sentry/browser from TuxCare provides security fixes for @sentry/browser versions that have reached their end of life. This allows you to continue running @sentry/browser applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for marked from TuxCare provides security fixes for marked versions that have reached their end of life. This allows you to continue running marked applications without vulnerability concerns, even after official support has ended.
 
-## Supported @sentry/browser Versions
+## Supported marked Versions
 
-* @sentry/browser 5.7.1
+* marked 4.0.9
 
-## Connection to ELS for @sentry/browser Library
+## Connection to ELS for marked Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the @sentry/browser library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the marked library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS @sentry/browser library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS marked library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for @sentry/browser
+## Step 2: Set Up ELS for marked
 
-TuxCare provides ELS for @sentry/browser as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for marked as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your @sentry/browser project.
+1. Navigate to the root directory of your marked project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-sentry-browser-project/
+   my-marked-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -47,13 +47,13 @@ TuxCare provides ELS for @sentry/browser as an NPM package, hosted on a secure i
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your @sentry/browser dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your marked dependencies with the TuxCare packages:
 
    <CodeWithCopy>
 
    ```text
    "dependencies": {
-     "@sentry/browser": "npm:@els-js/sentry-browser@5.7.1-tuxcare.2"
+     "marked": "npm:@els-js/marked@4.0.9-tuxcare.1"
    }
    ```
 
@@ -69,7 +69,7 @@ TuxCare provides ELS for @sentry/browser as an NPM package, hosted on a secure i
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the @sentry/browser library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the marked library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -82,18 +82,18 @@ TuxCare provides ELS for @sentry/browser as an NPM package, hosted on a secure i
    You will see an output like:
 
    ```text
-   added 7 packages, and audited 8 packages in 4s
-
-   found 0 vulnerabilities
+    added 1 package, and audited 2 packages in 792ms
+    
+    found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the @sentry/browser library into your project.
+7. You've successfully installed the Tuxcare ELS version of the marked library into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for @sentry/browser ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/sentry/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/sentry/).
+TuxCare provides VEX for marked ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/marked/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/marked/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -104,7 +104,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install sentry-browser@npm:@els-js/sentry-browser@5.7.1-tuxcare.2
+  npm install marked@npm:@els-js/marked@4.0.9-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -122,10 +122,11 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for vue-template-compiler from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for marked from TuxCare versions:
 
-| CVE ID              | CVE Type | Severity | Affected Libraries    | Vulnerable Versions |
-| :------------------:| :------: |:--------:|:---------------------:| :----------------: |
-| GHSA-593m-55hh-j8gv | Direct   | Moderate | @sentry/browser       | < 7.119.1, >= 8.0.0-alpha.1, < 8.33.0 |
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2022-21680 | Direct   | High     | marked            | < 4.0.10          |
+| CVE-2022-21681 | Direct   | High     | marked            | < 4.0.10          |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
