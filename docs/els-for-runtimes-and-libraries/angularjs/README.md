@@ -182,7 +182,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for AngularJS from TuxCare versions:
 
-| CVE ID         | Severity |  Affected Libraries | Vulnerable Version | Safe Version                 | Release Date |
+| CVE ID         | Severity |  Affected Libraries | Vulnerable Versions | Safe Version                 | Release Date |
 | :------------: | :------: | :-----------------: | :----------------: | :--------------------------: | :----------: |
 | CVE-2025-0716  | Medium   | AngularJS           | >=0.0.0            | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 10 Aug 2025  |
 | CVE-2025-2336  | Medium   | AngularJS           | >=1.3.1            | 1.8.3                        | 29 Sep 2025  |

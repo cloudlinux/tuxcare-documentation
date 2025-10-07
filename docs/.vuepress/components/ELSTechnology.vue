@@ -290,86 +290,107 @@ const techData = [
       {
         name: "undici",
         versions: "5.28.5",
+        link: "./undici/",
       },
       {
         name: "rollup",
         versions: "2.79.1 | 2.79.2",
+        link: "./rollup/",
       },
       {
         name: "copy-anything",
         versions: "2.0.6",
+        link: "./copy-anything/",
       },
       {
         name: "picocolors",
         versions: "0.2.1",
+        link: "./picocolors/",
       },
       {
         name: "formidable",
         versions: "2.1.2",
+        link: "./formidable/",
       },
       {
         name: "bootstrap",
-        versions: "4.6.2",
+        versions: "3.4.1 | 4.6.2",
+        link: "./bootstrap/",
       },
       {
         name: "braces",
         versions: "2.3.2",
+        link: "./braces/",
       },
       {
         name: "dompurify",
         versions: "2.3.0 | 2.4.3",
+        link: "./dompurify/",
       },
       {
         name: "express",
         versions: "3.21.2",
+        link: "./express/",
       },
       {
         name: "express-jwt",
         versions: "0.1.3",
+        link: "./express-jwt/",
       },
       {
         name: "form-data",
         versions: "2.3.3",
+        link: "./form-data/",
       },
       {
         name: "i18next",
         versions: "23.16.8",
+        link: "./i18next/",
       },
       {
         name: "jquery",
         versions: "1.12.4",
+        link: "./jquery/",
       },
       {
         name: "jsonpath-plus",
         versions: "7.2.0",
+        link: "./jsonpath-plus/",
       },
       {
         name: "jspdf",
         versions: "2.5.2",
+        link: "./jspdf/",
       },
       {
         name: "marked",
-        versions: "2.3.3",
+        versions: "4.0.9",
+        link: "./marked/",
       },
       {
         name: "mongodb",
         versions: "2.2.36",
+        link: "./mongodb/",
       },
       {
         name: "multer",
         versions: "1.4.5-lts",
+        link: "./multer/",
       },
       {
         name: "node-forge",
         versions: "0.10.0",
+        link: "./node-forge/",
       },
       {
         name: "mysql2",
         versions: "2.3.3",
+        link: "./mysql2/",
       },
       {
         name: "ssr-window",
         versions: "4.0.2",
+        link: "./ssr-window/",
       },
 
     ],

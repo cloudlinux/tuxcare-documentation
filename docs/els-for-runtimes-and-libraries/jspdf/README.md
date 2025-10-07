@@ -1,31 +1,30 @@
-# CryptoJS
+# jsPDF
 
-Endless Lifecycle Support (ELS) for CryptoJS from TuxCare provides security fixes for CryptoJS versions that have reached their end of life. This allows you to continue running CryptoJS applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for jsPDF from TuxCare provides security fixes for jsPDF versions that have reached their end of life. This allows you to continue running jsPDF applications without vulnerability concerns, even after official support has ended.
 
+## Supported jsPDF Versions
 
-## Supported CryptoJS Versions
+* jsPDF 2.5.2
 
-* CryptoJS 3.3.0
+## Connection to ELS for jsPDF Library
 
-## Connection to ELS for CryptoJS Library
-
-This guide outlines the steps needed to integrate the TuxCare ELS for the CryptoJS library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the jsPDF library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS CryptoJS library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS jsPDF library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for CryptoJS
+## Step 2: Set Up ELS for jsPDF
 
-TuxCare provides ELS for CryptoJS as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for jsPDF as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your CryptoJS project.
+1. Navigate to the root directory of your jsPDF project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-crypto-js-project/
+   my-jspdf-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -48,13 +47,13 @@ TuxCare provides ELS for CryptoJS as an NPM package, hosted on a secure internal
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your CryptoJS dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your jsPDF dependencies with the TuxCare packages:
 
    <CodeWithCopy>
 
    ```text
    "dependencies": {
-     "crypto-js": "npm:@els-js/crypto-js@3.3.0-tuxcare.2"
+     "jspdf": "npm:@els-js/jspdf@2.5.2-tuxcare.1"
    }
    ```
 
@@ -70,7 +69,7 @@ TuxCare provides ELS for CryptoJS as an NPM package, hosted on a secure internal
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the CryptoJS library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the jsPDF library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -83,29 +82,32 @@ TuxCare provides ELS for CryptoJS as an NPM package, hosted on a secure internal
    You will see an output like:
 
    ```text
-   added 1 package, and audited 2 packages in 815ms
+   added 15 packages, and audited 16 packages in 2s
+
+   1 package is looking for funding
+   run `npm fund` for details
 
    found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the CryptoJS library into your project.
+7. You've successfully installed the Tuxcare ELS version of the jsPDF library into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for CryptoJS ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/crypto/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/crypto/).
+TuxCare provides VEX for jsPDF ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jspdf/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jspdf/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.32`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
-  npm install crypto-js@npm:@els-js/crypto-js@3.3.0-tuxcare.2
+  npm install jspdf@npm:@els-js/jspdf@2.5.2-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -123,10 +125,10 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for CryptoJS from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for jsPDF from TuxCare versions:
 
-| CVE ID         | CVE Type | Severity | Affected Libraries |    Vulnerable Versions    |
-| :------------: | :------: |:--------:|:------------------:|:------------------------:|
-| CVE-2023-46233 | Direct   | Critical |       crypto-js       | <4.2.0 |
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2025-29907 | Direct   | High     | jspdf             | < 3.0.1           |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

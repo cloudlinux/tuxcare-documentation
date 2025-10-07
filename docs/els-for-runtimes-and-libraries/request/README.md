@@ -151,18 +151,18 @@ Fixes for the following vulnerabilities are available in ELS for Request from Tu
 
 <template #Request__2.88.0>
 
-| CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Version |
+| CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: |:----------:|:--------:|:------------------:|:------------------:|
-| CVE-2025-7783  | Transitive | Critical |     Form-Data      |      < 2.5.4      |
-| CVE-2023-28155  |   Direct   |  Medium  |      Request       |      <=2.88.1      |
+| CVE-2025-7783  | Transitive | Critical |     form-data      |      < 2.5.4      |
+| CVE-2023-28155  |   Direct   |  Medium  |      request       |      <=2.88.1      |
 
   </template>
 
 <template #Request__2.88.2>
 
-| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Version |
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2025-7783  | Transitive | Critical |     Form-Data      |      < 2.5.4      |
+| CVE-2025-7783  | Transitive | Critical |     form-data      |      < 2.5.4      |
 
   </template>
 

@@ -1,30 +1,30 @@
-# JSON Web Token (JWT)
+# Rollup
 
-Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides security fixes for JSON Web Token versions that have reached their end of life. This allows you to continue running JSON Web Token applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for rollup from TuxCare provides security fixes for Rollup versions that have reached their end of life. This allows you to continue running Rollup applications without vulnerability concerns, even after official support has ended.
 
-## Supported JSON Web Token Versions
+## Supported Rollup Versions
 
-* JSON Web Token 0.4.0, 8.5.1
+* Rollup 2.79.1, 2.79.2
 
-## Connection to ELS for JSON Web Token Library
+## Connection to ELS for Rollup Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the JSON Web Token library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the Rollup library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS JSON Web Token library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS Rollup library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for JSON Web Token
+## Step 2: Set Up ELS for Rollup
 
-TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your JSON Web Token project.
+1. Navigate to the root directory of your Rollup project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-jsonwebtoken-project/
+   my-rollup-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -47,17 +47,17 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your JSON Web Token dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your Rollup dependencies with the TuxCare packages:
 
-   <TableTabs label="Choose JSON Web Token version: " >
+   <TableTabs label="Choose Rollup version: " >
 
-     <template #JSON_Web_Token_0.4.0>
+     <template #rollup_2.79.1>
 
      <CodeWithCopy>
 
      ```text
      "dependencies": {
-       "jsonwebtoken": "npm:@els-js/jsonwebtoken@0.4.0-tuxcare.3"
+       "rollup": "npm:@els-js/rollup@2.79.1-tuxcare.2"
      }
      ```
 
@@ -65,13 +65,13 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
 
      </template>
 
-     <template #JSON_Web_Token_8.5.1>
+     <template #rollup_2.79.2>
 
      <CodeWithCopy>
 
      ```text
      "dependencies": {
-       "jsonwebtoken": "npm:@els-js/jsonwebtoken@8.5.1-tuxcare.2"
+       "rollup": "npm:@els-js/rollup@2.79.2-tuxcare.2"
      }
      ```
 
@@ -91,7 +91,7 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the JSON Web Token library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the Rollup library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -112,13 +112,13 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
    found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the JSON Web Token library into your project.
+7. You've successfully installed the Tuxcare ELS version of the Rollup library into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for JSON Web Token ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonwebtoken/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonwebtoken/).
+TuxCare provides VEX for Rollup ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/rollup/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/rollup/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -129,7 +129,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install jsonwebtoken@npm:@els-js/jsonwebtoken@8.5.1-tuxcare.2
+  npm install rollup@npm:@els-js/rollup@2.79.2-tuxcare.3
   ```
 
   </CodeWithCopy>
@@ -147,28 +147,10 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for JSON Web Token from TuxCare versions:
-
-<TableTabs label="Choose JSON Web Token version: " >
-
-<template #JSON_Web_Token_0.4.0>
-
-| CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: |:----------:|:--------:|:------------------:|:------------------:|
-| CVE-2015-9235  | Direct     | Critical | jsonwebtoken       | < 4.2.2            |
-
-  </template>
-
-<template #JSON_Web_Token_8.5.1>
+Fixes for the following vulnerabilities are available in ELS for Rollup from TuxCare versions:
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2022-23539 | Direct   | High     | jsonwebtoken       | < 8.5.1            |
-| CVE-2022-23540 | Direct   | High     | jsonwebtoken       | < 8.5.1            |
-| CVE-2022-23541 | Direct   | Medium   | jsonwebtoken       | < 8.5.1            |
-
-  </template>
-
-</TableTabs>
+| CVE-2024-47068 | Direct   | Medium   |       rollup       | <2.79.2, <3.29.5, <4.22.4 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

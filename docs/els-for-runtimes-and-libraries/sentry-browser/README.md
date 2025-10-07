@@ -124,7 +124,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for vue-template-compiler from TuxCare versions:
 
-| CVE ID              | CVE Type | Severity | Affected Libraries    | Vulnerable Version |
+| CVE ID              | CVE Type | Severity | Affected Libraries    | Vulnerable Versions |
 | :------------------:| :------: |:--------:|:---------------------:| :----------------: |
 | GHSA-593m-55hh-j8gv | Direct   | Moderate | @sentry/browser       | < 7.119.1, >= 8.0.0-alpha.1, < 8.33.0 |
 

@@ -150,7 +150,7 @@ Fixes for the following vulnerabilities are available in ELS for IP from TuxCare
 
 <template #ip_1.1.5>
 
-| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Version |
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :-------------:| :------: |:--------:|:------------------:| :----------------: |
 | CVE-2024-29415 | Direct   | High     | ip                 | <= 2.0.1           |
 
@@ -158,7 +158,7 @@ Fixes for the following vulnerabilities are available in ELS for IP from TuxCare
 
 <template #ip_2.0.0>
 
-| CVE ID         | CVE Type | Severity | Affected Libraries    | Vulnerable Version |
+| CVE ID         | CVE Type | Severity | Affected Libraries    | Vulnerable Versions |
 | :-------------:| :------: |:--------:|:---------------------:| :----------------: |
 | CVE-2024-29415 | Direct   | High     | ip                 | <= 2.0.1           |
 

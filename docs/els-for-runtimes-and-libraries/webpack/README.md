@@ -147,7 +147,7 @@ Fixes for the following vulnerabilities are available in ELS for Webpack from Tu
 
 <template #Webpack_4.41.2>
 
-| CVE ID         | CVE Type | Severity | Affected Libraries    | Vulnerable Version |
+| CVE ID         | CVE Type | Severity | Affected Libraries    | Vulnerable Versions |
 | :-------------:| :------: |:--------:|:---------------------:| :----------------: |
 | CVE-2024-43788 | Direct   | Medium   | webpack               | < 5.94.0           |
 
@@ -155,7 +155,7 @@ Fixes for the following vulnerabilities are available in ELS for Webpack from Tu
 
 <template #Webpack_4.46.0>
 
-| CVE ID         | CVE Type | Severity | Affected Libraries    | Vulnerable Version |
+| CVE ID         | CVE Type | Severity | Affected Libraries    | Vulnerable Versions |
 | :-------------:| :------: |:--------:|:---------------------:| :----------------: |
 | CVE-2024-43788 | Direct   | Medium   | webpack               | < 5.94.0           |
 
