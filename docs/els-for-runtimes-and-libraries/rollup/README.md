@@ -148,6 +148,6 @@ Fixes for the following vulnerabilities are available in ELS for Rollup from Tux
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2024-47068 | Direct   | Medium   |       rollup       | <2.79.2, <3.29.5, <4.22.4 |
+| CVE-2024-47068 | Direct   | Medium   |       rollup       | < 2.79.2, < 3.29.5, < 4.22.4 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
