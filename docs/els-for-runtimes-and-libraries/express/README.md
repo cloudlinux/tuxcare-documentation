@@ -82,12 +82,9 @@ TuxCare provides ELS for express as an NPM package, hosted on a secure internal 
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
+    added 98 packages, and audited 99 packages in 2s
 
-   1 package is looking for funding
-   run `npm fund` for details
-
-   found 0 vulnerabilities
+    28 vulnerabilities (5 low, 1 moderate, 17 high, 5 critical)
    ```
 
 7. You've successfully installed the Tuxcare ELS version of the express library into your project.

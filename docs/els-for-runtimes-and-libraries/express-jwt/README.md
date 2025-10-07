@@ -82,7 +82,7 @@ TuxCare provides ELS for express-jwt as an NPM package, hosted on a secure inter
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
+   added 16 packages, and audited 17 packages in 1s
 
    1 package is looking for funding
    run `npm fund` for details

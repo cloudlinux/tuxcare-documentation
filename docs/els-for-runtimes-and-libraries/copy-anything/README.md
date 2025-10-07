@@ -82,7 +82,7 @@ TuxCare provides ELS for copy-anything as an NPM package, hosted on a secure int
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
+   added 2 packages, and audited 3 packages in 1s
 
    1 package is looking for funding
    run `npm fund` for details

@@ -82,12 +82,12 @@ TuxCare provides ELS for jsPDF as an NPM package, hosted on a secure internal re
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
+    added 20 packages, and audited 21 packages in 2s
 
-   1 package is looking for funding
-   run `npm fund` for details
-
-   found 0 vulnerabilities
+    1 package is looking for funding
+    run `npm fund` for details
+    
+    2 moderate severity vulnerabilities
    ```
 
 7. You've successfully installed the Tuxcare ELS version of the jsPDF library into your project.

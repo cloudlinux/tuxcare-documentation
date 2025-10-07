@@ -82,12 +82,9 @@ TuxCare provides ELS for MongoDB as an NPM package, hosted on a secure internal 
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
-
-   1 package is looking for funding
-   run `npm fund` for details
-
-   found 0 vulnerabilities
+    added 12 packages, and audited 13 packages in 1s
+    
+    found 0 vulnerabilities
    ```
 
 7. You've successfully installed the Tuxcare ELS version of the MongoDB library into your project.

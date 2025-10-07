@@ -82,12 +82,9 @@ TuxCare provides ELS for JSONPath Plus as an NPM package, hosted on a secure int
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
+    added 1 package, and audited 2 packages in 819ms
 
-   1 package is looking for funding
-   run `npm fund` for details
-
-   found 0 vulnerabilities
+    found 0 vulnerabilities
    ```
 
 7. You've successfully installed the Tuxcare ELS version of the JSONPath Plus library into your project.

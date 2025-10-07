@@ -82,10 +82,7 @@ TuxCare provides ELS for Form-Data as an NPM package, hosted on a secure interna
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
-
-   1 package is looking for funding
-   run `npm fund` for details
+   added 6 packages, and audited 7 packages in 2s
 
    found 0 vulnerabilities
    ```

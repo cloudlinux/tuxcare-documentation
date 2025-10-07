@@ -82,12 +82,9 @@ TuxCare provides ELS for i18next as an NPM package, hosted on a secure internal 
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
+    added 2 packages, and audited 3 packages in 914ms
 
-   1 package is looking for funding
-   run `npm fund` for details
-
-   found 0 vulnerabilities
+    found 0 vulnerabilities
    ```
 
 7. You've successfully installed the Tuxcare ELS version of the i18next library into your project.

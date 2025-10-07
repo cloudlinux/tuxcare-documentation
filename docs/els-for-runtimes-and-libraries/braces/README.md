@@ -82,9 +82,9 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
+   added 79 packages, and audited 80 packages in 2s
 
-   1 package is looking for funding
+   2 packages are looking for funding
    run `npm fund` for details
 
    found 0 vulnerabilities

@@ -104,7 +104,7 @@ TuxCare provides ELS for Bootstrap as an NPM package, hosted on a secure interna
    You will see an output like:
 
    ```text
-   added 15 packages, and audited 16 packages in 2s
+   added 3 packages, and audited 4 packages in 2s
 
    1 package is looking for funding
    run `npm fund` for details
