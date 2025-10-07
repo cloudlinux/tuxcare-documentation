@@ -314,10 +314,9 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
         "rxjs": "^7.4.0",
         "@babel/runtime": "7.26.10",
         "esbuild": "0.25.0",
-        "webpack-dev-server": "5.2.1",
-        "tmp": "^0.2.4",
-        "*": {
-          "tmp": "^0.2.4"
+        "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
+        "external-editor": {
+            "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
         }
       }
       ```
@@ -692,9 +691,8 @@ const Angular19WithoutSSR =
   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
   "rxjs": "^7.4.0",
   "esbuild": "^0.25.0",
-  "tmp": "^0.2.4",
-  "*": {
-    "tmp": "^0.2.4"
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
   }
 }`
 
@@ -737,9 +735,8 @@ const Angular18WithoutSSR =
   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
   "rxjs": "^7.4.0",
   "esbuild": "^0.25.0",
-  "tmp": "^0.2.4",
-  "*": {
-    "tmp": "^0.2.4"
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
   }
 }`
 
@@ -789,10 +786,10 @@ const Angular17WithSSR =
   "rxjs": "^7.4.0",
   "esbuild": "0.25.0",
   "webpack-dev-server": "5.2.1",
-  "http-proxy-middleware": "2.0.9",
-  "tmp": "^0.2.4",
-  "*": {
-    "tmp": "^0.2.4"
+  "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1",
+  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
   }
 }`
 
@@ -836,10 +833,10 @@ const Angular17WithoutSSR =
   "rxjs": "^7.4.0",
   "esbuild": "0.25.0",
   "webpack-dev-server": "5.2.1",
-  "http-proxy-middleware": "2.0.9",
-  "tmp": "^0.2.4",
-  "*": {
-    "tmp": "^0.2.4"
+  "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1",
+  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
   }
 }`
 </script>
