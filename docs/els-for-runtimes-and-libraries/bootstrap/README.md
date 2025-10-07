@@ -154,16 +154,16 @@ Fixes for the following vulnerabilities are available in ELS for Bootstrap from 
 <template #bootstrap_3.4.1>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: |:--------:|:--------:|:------------------:|:------------------:|
-| CVE-2024-6484  | Rejected | -        |     bootstrap      |         Not vulnerable          |
+| :------------: |:--------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-6484  | Rejected | -        |     bootstrap      |          -          |
 
   </template>
 
 <template #bootstrap_4.6.2>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: |:--------:|:--------:|:------------------:|:------------------:|
-| CVE-2024-6531  | Rejected | -        |     bootstrap      |         Not vulnerable          |
+| :------------: |:--------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-6531  | Rejected | -        |     bootstrap      |          -          |
 
   </template>
 
