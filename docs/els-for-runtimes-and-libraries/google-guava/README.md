@@ -37,15 +37,15 @@ You need username and password in order to use TuxCare ELS Google Guava reposito
 2. Add the TuxCare repository and plugin repository to your build configuration.
 
    :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-google-guava-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
    :::
 
-<CodeTabs :tabs="[
-  { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
-  { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
-]" />
+   <CodeTabs :tabs="[
+     { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
+     { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
+   ]" />
 
-Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+   Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
@@ -67,12 +67,12 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Google Guava dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
   { title: 'Gradle (build.gradle)', content: gradledeps }
 ]" />
-
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_google-guava/) (anonymous access is restricted).
 
 ### Step 5: Verify and Build
 
@@ -100,7 +100,7 @@ You've successfully integrated the TuxCare ELS for Google Guava repository into 
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
+TuxCare provides VEX for Google Guava ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/com.google.guava/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/com.google.guava/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -114,7 +114,7 @@ const mavencreds =
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
     <servers>
         <server>
-          <id>tuxcare-google-guava-registry</id>
+          <id>tuxcare-registry</id>
           <username>USERNAME</username>
           <password>PASSWORD</password>
         </server>
@@ -122,15 +122,15 @@ const mavencreds =
 </settings>`
 
 const gradlecreds =
-`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_google-guava/
+`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
 tuxcare_registry_user=USERNAME
 tuxcare_registry_password=PASSWORD`
 
 const mavenrepo =
 `<repositories>
   <repository>
-      <id>tuxcare-google-guava-registry</id>
-      <url>https://nexus.repo.tuxcare.com/repository/els_google-guava/</url>
+      <id>tuxcare-registry</id>
+      <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
   </repository>
 </repositories>`
 
@@ -154,13 +154,13 @@ const mavendeps =
     <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>31.1-jre-tuxcare.1</version>
+        <version>31.1-jre.tuxcare.1</version>
     </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-    implementation "com.google.guava:guava:31.1-jre-tuxcare.1"
+    implementation("com.google.guava:guava:31.1-jre.tuxcare.1")
 }`
 </script>
 

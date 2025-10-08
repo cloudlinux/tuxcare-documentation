@@ -37,13 +37,13 @@ You need username and password in order to use TuxCare ELS Apache Struts reposit
 2. Add the TuxCare repository and plugin repository to your build configuration.
 
    :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-apache-struts-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
    :::
 
-<CodeTabs :tabs="[
-  { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
-  { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
-]" />
+   <CodeTabs :tabs="[
+     { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
+     { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
+   ]" />
 
 Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
@@ -67,12 +67,12 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Apache Struts dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
   { title: 'Gradle (build.gradle)', content: gradledeps }
 ]" />
-
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_apache-struts/) (anonymous access is restricted).
 
 ### Step 5: Verify and Build
 
@@ -100,7 +100,7 @@ You've successfully integrated the TuxCare ELS for Apache Struts repository into
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
+TuxCare provides VEX for Apache Struts ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.struts/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.struts/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -114,7 +114,7 @@ const mavencreds =
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
     <servers>
         <server>
-          <id>tuxcare-apache-struts-registry</id>
+          <id>tuxcare-registry</id>
           <username>USERNAME</username>
           <password>PASSWORD</password>
         </server>
@@ -122,15 +122,15 @@ const mavencreds =
 </settings>`
 
 const gradlecreds =
-`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_apache-struts/
+`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
 tuxcare_registry_user=USERNAME
 tuxcare_registry_password=PASSWORD`
 
 const mavenrepo =
 `<repositories>
   <repository>
-      <id>tuxcare-apache-struts-registry</id>
-      <url>https://nexus.repo.tuxcare.com/repository/els_apache-struts/</url>
+      <id>tuxcare-registry</id>
+      <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
   </repository>
 </repositories>`
 
@@ -153,14 +153,14 @@ const mavendeps =
 `<dependencies>
     <dependency>
         <groupId>org.apache.struts</groupId>
-        <artifactId>struts2-core</artifactId>
+        <artifactId>struts-core</artifactId>
         <version>1.3.5-tuxcare.1</version>
     </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-    implementation "org.apache.struts:struts2-core:1.3.5-tuxcare.1"
+    implementation("org.apache.struts:struts-core:1.3.5-tuxcare.1")
 }`
 </script>
 

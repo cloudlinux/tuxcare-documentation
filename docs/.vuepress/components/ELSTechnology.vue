@@ -111,7 +111,7 @@ const techData = [
       },
       {
         name: "Apache Hadoop",
-        versions: "2.7.3, 2.7.1",
+        versions: "2.7.1, 2.7.3",
         link: "./apache-hadoop/",
       },
       {
@@ -196,7 +196,7 @@ const techData = [
       },
       {
         name: "PostgreSQL",
-        versions: "42.5.0 | 42.2.16",
+        versions: "42.2.16 | 42.5.0",
         link: "./postgresql/",
       },
       {
@@ -217,7 +217,6 @@ const techData = [
       {
         name: "Apache Tomcat",
         versions: "8.5.100 | 9.0.75",
-        link: "./apache-tomcat/",
       },
       {
         name: "Apache Thrift",
@@ -245,11 +244,6 @@ const techData = [
         ,link: "./xmlunit/",
       },
       {
-        name: "Apache Santuario XML Security For Java",
-        versions: "2.0.10 | 2.3.1",
-        link: "./apache-santuario-xml-security-for-java/",
-      },
-      {
         name: "Apache Commons IO",
         versions: "2.7",
         link: "./apache-commons-io/",
@@ -258,6 +252,11 @@ const techData = [
         name: "Apache Commons Lang",
         versions: "2.4 | 2.6 | 3.4 | 3.10 | 3.12.0",
         link: "./apache-commons-lang/",
+      },
+      {
+        name: "Apache Santuario XML Security For Java",
+        versions: "2.0.10 | 2.3.1",
+        link: "./apache-santuario-xml-security-for-java/",
       },
     ],
   },

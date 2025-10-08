@@ -1,19 +1,18 @@
-# Dom4j
+# Apache Commons IO
 
-TuxCare's Endless Lifecycle Support (ELS) for Dom4j provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Dom4j core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Dom4j service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Dom4j applications.
+TuxCare's Endless Lifecycle Support (ELS) for Apache Commons IO provides security patches, and selected bug fixes, that are integral to the stable operation of applications using Commons IO.
 
 ## Supported Versions
 
-* Dom4j 1.6.1
+* Apache Commons IO 2.7
 
-## Connection to ELS for Dom4j Repository
+## Connection to ELS for Apache Commons IO Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Dom4j repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Apache Commons IO repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Dom4j repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need username and password in order to use TuxCare ELS Apache Commons IO repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -45,18 +44,18 @@ You need username and password in order to use TuxCare ELS Dom4j repository. Ano
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
    ]" />
 
-Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+   Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
-Add the TuxCare Dom4j repository and plugins to your build configuration:
+Add the TuxCare Apache Commons IO repository and plugins to your build configuration:
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavenrepo },
   { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
-* To fully switch from the official Dom4j repository, replace it with the TuxCare repository.
+* To fully switch from the official Apache Commons IO repository, replace it with the TuxCare repository.
 * To keep both, add TuxCare after the official one.
 
 Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
@@ -65,7 +64,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace the Dom4j dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
+Replace the Apache Commons IO dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
 You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
 
@@ -76,7 +75,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 
 ### Step 5: Verify and Build
 
-1. To confirm the TuxCare Dom4j repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+1. To confirm the TuxCare Apache Commons IO repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
@@ -90,78 +89,72 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
     { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Dom4j repository.
+The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Commons IO repository.
 
 ### Conclusion
 
-You've successfully integrated the TuxCare ELS for Dom4j repository into your project. You can now benefit from the secure and vetted Dom4j libraries it provides.
+You've successfully integrated the TuxCare ELS for Apache Commons IO repository into your project. You can now benefit from the secure and vetted Apache Commons IO libraries it provides.
 
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Dom4j ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/dom4j/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/dom4j/).
+TuxCare provides VEX for Apache Commons IO ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/commons-io/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/commons-io/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
-<!-- data for Dom4j instructions used in code blocks -->
-
 <script setup>
 const mavencreds =
 `<?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
-    <servers>
-        <server>
-          <id>tuxcare-registry</id>
-          <username>USERNAME</username>
-          <password>PASSWORD</password>
-        </server>
-    </servers>
+  <servers>
+    <server>
+      <id>tuxcare-registry</id>
+      <username>USERNAME</username>
+      <password>PASSWORD</password>
+    </server>
+  </servers>
 </settings>`
 
 const gradlecreds =
 `tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
-tuxcare_registry_user=USERNAME
-tuxcare_registry_password=PASSWORD`
++tuxcare_registry_user=USERNAME
++tuxcare_registry_password=PASSWORD`
 
 const mavenrepo =
 `<repositories>
   <repository>
-      <id>tuxcare-registry</id>
-      <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
+    <id>tuxcare-registry</id>
+    <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
   </repository>
 </repositories>`
 
 const gradlerepo =
 `repositories {
-    maven {
-      url = uri(providers.gradleProperty("tuxcare_registry_url").get())
-      credentials {
-        username = providers.gradleProperty("tuxcare_registry_user").get()
-        password = providers.gradleProperty("tuxcare_registry_password").get()
-      }
-      authentication {
-        basic(BasicAuthentication)
-      }
+  maven {
+    url = uri(providers.gradleProperty("tuxcare_registry_url").get())
+    credentials {
+      username = providers.gradleProperty("tuxcare_registry_user").get()
+      password = providers.gradleProperty("tuxcare_registry_password").get()
     }
-    mavenCentral()
+    authentication { basic(BasicAuthentication) }
+  }
+  mavenCentral()
 }`
 
 const mavendeps =
 `<dependencies>
     <dependency>
-        <groupId>dom4j</groupId>
-        <artifactId>dom4j</artifactId>
-        <version>1.6.1.tuxcare.1</version>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.7-tuxcare.1</version>
     </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-    implementation "dom4j:dom4j:1.6.1.tuxcare.1"
+  implementation("commons-io:commons-io:2.7-tuxcare.1")
 }`
 </script>
-
-
