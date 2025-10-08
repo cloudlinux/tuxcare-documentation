@@ -333,6 +333,11 @@ const techData = [
         link: "./mongodb/",
       },
       {
+        name: "Mongoose",
+        versions: "5.13.23",
+        link: "./mongoose/",
+      },
+      {
         name: "multer",
         versions: "1.4.5-lts",
         link: "./multer/",
@@ -341,6 +346,11 @@ const techData = [
         name: "MySQL2",
         versions: "2.3.3",
         link: "./mysql2/",
+      },
+      {
+        name: "next",
+        versions: "13.5.11",
+        link: "./next/",
       },
       {
         name: "node-forge",
