@@ -1,0 +1,570 @@
+import{_ as d,S as s,n as g,p as x,a6 as i,q as e,C as r,A as l,J as n}from"./framework-a770bce2.js";const m={start:"4"},o={class:"tip custom-block"},y=`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@18.2.13-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@18.2.13-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@18.2.13-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@18.2.13-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@18.2.13-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@18.2.13-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@18.2.13-tuxcare.1",
+  "@angular/platform-server": "npm:@els-js/angular-platform-server@18.2.13-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@18.2.13-tuxcare.1",
+  "@angular/ssr": "^18.2.20",
+  "express": "^4.18.2", 
+  "rxjs": "^7.4.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.14.10"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "^18.2.20",
+  "@angular/cli": "^18.2.20",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
+  "@types/express": "^4.17.17",
+  "@types/jasmine": "~5.1.0",
+  "@types/node": "^18.18.0",
+  "jasmine-core": "~5.2.0",
+  "karma": "~6.4.0",
+  "karma-chrome-launcher": "~3.2.0",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "~2.1.0",
+  "typescript": "~5.5.2"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@18.2.13-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@18.2.13-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@18.2.13-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@18.2.13-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@18.2.13-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@18.2.13-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@18.2.13-tuxcare.1",
+  "@angular/platform-server": "npm:@els-js/angular-platform-server@18.2.13-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@18.2.13-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "esbuild": "^0.25.0",
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
+  }
+}`,p=`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@18.2.13-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@18.2.13-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@18.2.13-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@18.2.13-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@18.2.13-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@18.2.13-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@18.2.13-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@18.2.13-tuxcare.1", 
+  "rxjs": "^7.4.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.14.10"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "^18.2.20",
+  "@angular/cli": "^18.2.20",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
+  "@types/jasmine": "~5.1.0",
+  "jasmine-core": "~5.2.0",
+  "karma": "~6.4.0",
+  "karma-chrome-launcher": "~3.2.0",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "~2.1.0",
+  "typescript": "~5.5.2"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@18.2.13-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@18.2.13-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@18.2.13-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@18.2.13-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@18.2.13-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@18.2.13-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@18.2.13-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@18.2.13-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "esbuild": "^0.25.0",
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
+  }
+}`,v=`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@17.3.12-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@17.3.12-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@17.3.12-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@17.3.12-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@17.3.12-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1", 
+  "@angular/ssr": "npm:@els-js/angular-ssr@17.3.12-tuxcare.1",
+  "express": "^4.18.2", 
+  "rxjs": "^7.4.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.14.3"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "^17.3.12",
+  "@angular/cli": "^17.3.12",
+  "@angular/compiler-cli": "^17.3.0", 
+  "@types/express": "^4.17.17",
+  "@types/jasmine": "~5.1.0",
+  "jasmine-core": "~5.1.0",
+  "karma": "~6.4.0",
+  "karma-chrome-launcher": "~3.2.0",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "~2.1.0",
+  "typescript": "~5.4.2"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@17.3.12-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@17.3.12-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@17.3.12-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@17.3.12-tuxcare.1", 
+  "@angular/localize": "npm:@els-js/angular-localize@17.3.12-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@17.3.12-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
+  "@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
+  "@angular/ssr": "npm:@els-js/angular-ssr@17.3.12-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "esbuild": "0.25.0",
+  "webpack-dev-server": "5.2.1",
+  "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1",
+  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
+  }
+}`,b=`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@17.3.12-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@17.3.12-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@17.3.12-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@17.3.12-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@17.3.12-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.14.3"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "^17.3.12",
+  "@angular/cli": "^17.3.12",
+  "@angular/compiler-cli": "^17.3.0",
+  "@types/jasmine": "~5.1.0",
+  "jasmine-core": "~5.1.0",
+  "karma": "~6.4.0",
+  "karma-chrome-launcher": "~3.2.0",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "~2.1.0",
+  "typescript": "~5.4.2"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@17.3.12-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@17.3.12-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@17.3.12-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@17.3.12-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@17.3.12-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "esbuild": "0.25.0",
+  "webpack-dev-server": "5.2.1",
+  "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1",
+  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
+  }
+}`,j={__name:"index.html",setup(f){return(h,t)=>{const a=s("CodeWithCopy"),c=s("CodeTabs"),u=s("TableTabs");return g(),x("div",null,[t[44]||(t[44]=i('<h1 id="angular" tabindex="-1"><a class="header-anchor" href="#angular" aria-hidden="true">#</a> Angular</h1><p>Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes for Angular versions that have reached their end of life. This allows you to continue running Angular applications without vulnerability concerns, even after official support has ended.</p><h2 id="supported-angular-versions" tabindex="-1"><a class="header-anchor" href="#supported-angular-versions" aria-hidden="true">#</a> Supported Angular Versions</h2><p>Angular versions 13, 14, 15, 16, 17, and 18 are supported.</p><h2 id="connection-to-els-for-angular-repository" tabindex="-1"><a class="header-anchor" href="#connection-to-els-for-angular-repository" aria-hidden="true">#</a> Connection to ELS for Angular Repository</h2><p>This guide outlines the steps needed to integrate the TuxCare ELS for Angular repository.</p><h2 id="step-1-get-token" tabindex="-1"><a class="header-anchor" href="#step-1-get-token" aria-hidden="true">#</a> Step 1: Get Token</h2><p>You need a token in order to use TuxCare ELS Angular repository. Anonymous access is disabled. To receive the token, please contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p><h2 id="step-2-set-up-els-for-angular" tabindex="-1"><a class="header-anchor" href="#step-2-set-up-els-for-angular" aria-hidden="true">#</a> Step 2: Set Up ELS for Angular</h2><p>TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.</p>',10)),e("ol",null,[t[2]||(t[2]=i(`<li><p>Navigate to the root directory of your Angular project.</p></li><li><p>Create a <code>.npmrc</code> file or update it if it already exists.</p><p><strong>Example:</strong></p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>my-angular-project/
+├── src/
+├── angular.json
+├── package.json
+├── .npmrc         ⚠️ ← Create it here
+└── tsconfig.json
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>`,2)),e("li",null,[t[1]||(t[1]=e("p",null,"Use an editor of your choice (e.g., VS Code) to add the following registry address line:",-1)),r(a,null,{default:l(()=>t[0]||(t[0]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`registry=https://registry.npmjs.org/
+@els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+//nexus.repo.tuxcare.com/repository/els_js/:_auth=\${TOKEN}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[0]})])]),t[45]||(t[45]=e("div",{class:"warning custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("Replace ${TOKEN} with the token you received from "),e("a",{href:"mailto:sales@tuxcare.com"},"sales@tuxcare.com"),n(".")])],-1)),e("ol",m,[e("li",null,[t[23]||(t[23]=e("p",null,[n("Update your "),e("code",null,"package.json"),n(" file to replace your Angular dependencies with the TuxCare packages.")],-1)),r(u,{label:"Choose Angular version: "},{Angular_18:l(()=>[t[3]||(t[3]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,'Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".'),e("p",null,[n("To check whether your Angular project is configured with Server-Side Rendering, look for "),e("code",null,"@angular/ssr"),n(" listed in your original "),e("code",null,"package.json"),n(" file before replacing dependencies. If you see "),e("code",null,"@angular/ssr"),n(" listed, "),e("strong",null,"SSR is ON"),n(", otherwise "),e("strong",null,"SSR is OFF"),n(".")])],-1)),r(c,{tabs:[{title:"SSR ON",content:y},{title:"SSR OFF",content:p}]},null,8,["tabs"]),t[4]||(t[4]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@18.2.13-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@18.2.13-tuxcare.1",'),e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@18.2.13-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@18.2.13-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_17:l(()=>[t[5]||(t[5]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,'Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".'),e("p",null,[n("To check whether your Angular project is configured with Server-Side Rendering, look for "),e("code",null,"@angular/ssr"),n(" listed in your original "),e("code",null,"package.json"),n(" file before replacing dependencies. If you see "),e("code",null,"@angular/ssr"),n(" listed, "),e("strong",null,"SSR is ON"),n(", otherwise "),e("strong",null,"SSR is OFF"),n(".")])],-1)),r(c,{tabs:[{title:"SSR ON",content:v},{title:"SSR OFF",content:b}]},null,8,["tabs"]),t[6]||(t[6]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@17.3.12-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@17.3.12-tuxcare.1"')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_16:l(()=>[r(a,null,{default:l(()=>t[7]||(t[7]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.13.0"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "^16.2.12",
+  "@angular/cli": "^16.2.12",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
+  "@types/jasmine": "~4.3.0",
+  "@types/node": "^18.7.0",
+  "jasmine-core": "~4.6.0",
+  "karma": "~6.4.0",
+  "karma-chrome-launcher": "~3.2.0",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "~2.1.0",
+  "typescript": "~5.1.3"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+  "vite": "npm:@els-js/vite@4.5.5-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "@babel/runtime": "7.26.10",
+  "esbuild": "0.25.0",
+  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
+  "external-editor": {
+    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
+  }
+}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[7]}),t[8]||(t[8]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@16.2.12-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@16.2.12-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.1"')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_15:l(()=>[r(a,null,{default:l(()=>t[9]||(t[9]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@15.2.10-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@15.2.10-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@15.2.10-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@15.2.10-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@15.2.10-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@15.2.10-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@15.2.10-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.12.0"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "^15.2.11",
+  "@angular/cli": "~15.2.11",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@15.2.10-tuxcare.1",
+  "@types/jasmine": "~4.3.0",
+  "jasmine-core": "~4.5.0",
+  "karma": "~6.4.0",
+  "karma-chrome-launcher": "~3.1.0",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "~2.0.0",
+  "typescript": "~4.9.4"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@15.2.10-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@15.2.10-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@15.2.10-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@15.2.10-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@15.2.10-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@15.2.10-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@15.2.10-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@15.2.10-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "@babel/runtime": "7.26.10",
+  "esbuild": "0.25.0",
+  "webpack-dev-server": "5.2.1",
+  "webpack": "5.94.0",
+  "tmp": "^0.2.4",
+  "*": {
+    "tmp": "^0.2.4"
+  }
+}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[9]}),t[10]||(t[10]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@15.2.10-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@15.2.10-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@15.2.10-tuxcare.1",'),e("li",null,'"@angular/localize": "npm:@els-js/angular-localize@15.2.10-tuxcare.1",'),e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@15.2.10-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@15.2.10-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_14:l(()=>[r(a,null,{default:l(()=>t[11]||(t[11]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.11.4"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "^14.2.13",
+  "@angular/cli": "~14.2.13",
+  "@angular/compiler-cli": "^14.2.0",
+  "@types/jasmine": "~4.0.0",
+  "jasmine-core": "~4.3.0",
+  "karma": "~6.4.0",
+  "karma-chrome-launcher": "~3.1.0",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "~2.0.0",
+  "typescript": "~4.7.2"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "@babel/runtime": "7.26.10",
+  "esbuild": "0.25.0",
+  "webpack-dev-middleware": "5.3.4",
+  "webpack-dev-server": "5.2.1",
+  "webpack": "5.94.0",
+  "tmp": "^0.2.4",
+  "*": {
+    "tmp": "^0.2.4"
+  }
+}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[11]}),t[12]||(t[12]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@14.3.0-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@14.3.0-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@14.3.0-tuxcare.1",'),e("li",null,'"@angular/localize": "npm:@els-js/angular-localize@14.3.0-tuxcare.1",'),e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@14.3.0-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@14.3.0-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_13:l(()=>[r(a,null,{default:l(()=>t[13]||(t[13]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.11.4"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "^13.0.4",
+  "@angular/cli": "^13.0.4",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
+  "@types/express": "^4.17.17",
+  "@types/jasmine": "~5.1.0",
+  "@types/node": "^18.18.0",
+  "jasmine-core": "~5.6.0",
+  "karma": "~6.4.0",
+  "karma-chrome-launcher": "~3.2.0",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "~2.1.0",
+  "typescript": "~4.5.5"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
+  "rxjs": "^7.4.0",
+  "@babel/runtime": "7.26.10",
+  "esbuild": "0.25.0",
+  "webpack-dev-middleware": "5.3.4",
+  "webpack-dev-server": "5.2.1",
+  "webpack": "5.94.0",
+  "semver": "7.6.0",
+  "postcss": "8.4.32",
+  "tmp": "^0.2.4",
+  "*": {
+    "tmp": "^0.2.4",
+    "semver": "7.6.0",
+    "postcss": "8.4.32"
+  }
+}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[13]}),t[14]||(t[14]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@13.4.0-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@13.4.0-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@13.4.0-tuxcare.1",'),e("li",null,'"@angular/localize": "npm:@els-js/angular-localize@13.4.0-tuxcare.1",'),e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@13.4.0-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@13.4.0-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_12:l(()=>[r(a,null,{default:l(()=>t[15]||(t[15]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@12.2.17-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@12.2.17-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@12.2.17-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@12.2.17-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@12.2.17-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@12.2.17-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@12.2.17-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@12.2.17-tuxcare.1",
+  "rxjs": "~6.6.0",
+  "tslib": "^2.3.0",
+  "zone.js": "~0.11.4"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "~12.2.18",
+  "@angular/cli": "~12.2.18",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@12.2.17-tuxcare.1",
+  "@types/jasmine": "~3.8.0",
+  "@types/node": "^12.11.1",
+  "jasmine-core": "~3.8.0",
+  "karma": "~6.3.0",
+  "karma-chrome-launcher": "~3.1.0",
+  "karma-coverage": "~2.0.3",
+  "karma-jasmine": "~4.0.0",
+  "karma-jasmine-html-reporter": "~1.7.0",
+  "typescript": "~4.2.4"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@12.2.17-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@12.2.17-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@12.2.17-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@12.2.17-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@12.2.17-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@12.2.17-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@12.2.17-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@12.2.17-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@12.2.17-tuxcare.1",
+  "rxjs": "~6.6.0",
+  "@babel/runtime": "7.26.10",
+  "esbuild": "0.25.0",
+  "webpack-dev-middleware": "5.3.4",
+  "webpack-dev-server": "5.2.1",
+  "webpack": "5.94.0",
+  "semver": "7.6.0",
+  "postcss": "8.4.32",
+  "tmp": "^0.2.4",
+  "minimatch": "3.0.6",
+  "loader-utils": "2.0.4",
+  "*": {
+    "tmp": "^0.2.4",
+    "semver": "7.6.0",
+    "postcss": "8.4.32",
+    "minimatch": "3.0.6",
+    "loader-utils": "2.0.4"
+  }
+}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[15]}),t[16]||(t[16]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@12.2.17-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@12.2.17-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@12.2.17-tuxcare.1",'),e("li",null,'"@angular/localize": "npm:@els-js/angular-localize@12.2.17-tuxcare.1",'),e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@12.2.17-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@12.2.17-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_11:l(()=>[r(a,null,{default:l(()=>t[17]||(t[17]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@11.2.14-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@11.2.14-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@11.2.14-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@11.2.14-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@11.2.14-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@11.2.14-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@11.2.14-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@11.2.14-tuxcare.1",
+  "rxjs": "^6.6.7",
+  "tslib": "^2.0.0",
+  "zone.js": "~0.11.4"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "0.1102.14",
+  "@angular/cli": "11.2.14",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@11.2.14-tuxcare.1",
+  "@types/jasmine": "3.10.3",
+  "@types/node": "^12.11.1",
+  "jasmine-core": "~3.10.0",
+  "karma": "~6.3.20",
+  "karma-chrome-launcher": "~3.1.0",
+  "karma-coverage": "~2.0.3",
+  "karma-jasmine": "~4.0.0",
+  "karma-jasmine-html-reporter": "~1.7.0",
+  "typescript": "4.0.8"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@11.2.14-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@11.2.14-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@11.2.14-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@11.2.14-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@11.2.14-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@11.2.14-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@11.2.14-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@11.2.14-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@11.2.14-tuxcare.1",
+  "rxjs": "^6.6.7"
+}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[17]}),t[18]||(t[18]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@11.2.14-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@11.2.14-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@11.2.14-tuxcare.1",'),e("li",null,'"@angular/localize": "npm:@els-js/angular-localize@11.2.14-tuxcare.1",'),e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@11.2.14-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@11.2.14-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_10:l(()=>[r(a,null,{default:l(()=>t[19]||(t[19]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@10.2.5-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@10.2.5-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@10.2.5-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@10.2.5-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@10.2.5-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@10.2.5-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@10.2.5-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@10.2.5-tuxcare.1",
+  "rxjs": "~6.6.7",
+  "tslib": "^2.0.0",
+  "zone.js": "~0.10.3"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "0.1002.4",
+  "@angular/cli": "10.2.4",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@10.2.5-tuxcare.1",
+  "@types/jasmine": "3.6.0",
+  "@types/node": "^12.11.1",
+  "jasmine-core": "~3.6.0",
+  "karma": "~5.0.0",
+  "karma-chrome-launcher": "~3.1.0",
+  "karma-coverage-istanbul-reporter": "~3.0.3",
+  "karma-jasmine": "~3.3.1",
+  "karma-jasmine-html-reporter": "~1.5.4",
+  "typescript": "4.0.8"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@10.2.5-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@10.2.5-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@10.2.5-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@10.2.5-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@10.2.5-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@10.2.5-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@10.2.5-tuxcare.1",
+  "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@10.2.5-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@10.2.5-tuxcare.1",
+  "rxjs": "~6.6.7"
+}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[19]}),t[20]||(t[20]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@10.2.5-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@10.2.5-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@10.2.5-tuxcare.1",'),e("li",null,'"@angular/localize": "npm:@els-js/angular-localize@10.2.5-tuxcare.1",'),e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@10.2.5-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@10.2.5-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_9:l(()=>[r(a,null,{default:l(()=>t[21]||(t[21]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
+  "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
+  "@angular/platform-browser-dynamic": "9.1.13",
+  "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
+  "rxjs": "~6.5.4",
+  "tslib": "^1.10.0",
+  "zone.js": "~0.10.2"
+},
+"devDependencies": {
+  "@angular-devkit/build-angular": "~0.901.15",
+  "@angular/cli": "~9.1.15",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
+  "@types/jasmine": "~3.5.0",
+  "@types/jasminewd2": "~2.0.3",
+  "@types/node": "^12.11.1",
+  "codelyzer": "^5.1.2",
+  "jasmine-core": "~3.5.0",
+  "jasmine-spec-reporter": "~4.2.1",
+  "karma": "~5.0.0",
+  "karma-chrome-launcher": "~3.1.0",
+  "karma-coverage-istanbul-reporter": "~2.1.0",
+  "karma-jasmine": "~3.0.1",
+  "karma-jasmine-html-reporter": "~1.4.2",
+  "protractor": "~5.4.3",
+  "ts-node": "~8.3.0",
+  "tslint": "~6.1.0",
+  "typescript": "~3.8.3"
+},
+"overrides": {
+  "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
+  "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
+  "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
+  "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
+  "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
+  "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
+  "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
+  "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
+  "rxjs": "~6.5.4"
+}
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[21]}),t[22]||(t[22]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@9.1.13-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@9.1.13-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@9.1.13-tuxcare.1",'),e("li",null,'"@angular/localize": "npm:@els-js/angular-localize@9.1.13-tuxcare.1",'),e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@9.1.13-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@9.1.13-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),_:1})]),e("li",null,[t[25]||(t[25]=e("p",null,[n("You need to remove the "),e("code",null,"node_modules"),n(" directory and the "),e("code",null,"package-lock.json"),n(" file, and also clear the "),e("code",null,"npm cache"),n(" before installing the patched packages. Use the following commands:")],-1)),r(a,null,{default:l(()=>t[24]||(t[24]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`rm -rf node_modules package-lock.json && npm cache clean --force
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"})])],-1)])),_:1,__:[24]})]),e("li",null,[t[29]||(t[29]=e("p",null,"Ensure your npm is up to date.",-1)),e("div",o,[t[27]||(t[27]=e("p",{class:"custom-block-title"},null,-1)),t[28]||(t[28]=e("p",null,[n("Use npm version "),e("strong",null,"9.6.3 or later"),n(" for security and compatibility reasons. To update npm globally on your system, you can run:")],-1)),r(a,null,{default:l(()=>t[26]||(t[26]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`npm install -g npm@latest
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"})])],-1)])),_:1,__:[26]})])]),e("li",null,[t[31]||(t[31]=e("p",null,[n("Run the following command to install ELS for Angular dependencies (token for the TuxCare repository will be automatically picked up from your "),e("code",null,".npmrc"),n(" file):")],-1)),r(a,null,{default:l(()=>t[30]||(t[30]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`npm install
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"})])],-1)])),_:1,__:[30]}),t[32]||(t[32]=i(`<p>You will see an output like:</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>added 925 packages, and audited 926 packages in 3m
+
+158 packages are looking for funding
+  run \`npm fund\` for details
+
+found 0 vulnerabilities
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,2))]),t[33]||(t[33]=e("li",null,[e("p",null,"You've successfully integrated the TuxCare ELS for Angular repository into your project.")],-1))]),t[46]||(t[46]=e("h2",{id:"how-to-upgrade-to-a-newer-version-of-tuxcare-packages",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#how-to-upgrade-to-a-newer-version-of-tuxcare-packages","aria-hidden":"true"},"#"),n(" How to Upgrade to a Newer Version of TuxCare Packages")],-1)),t[47]||(t[47]=e("p",null,[n("If you have already installed a package with a "),e("code",null,"tuxcare.1"),n(" suffix and want to upgrade to a newer release (for example, "),e("code",null,"tuxcare.3"),n("), you need to update the version string in your "),e("code",null,"package.json"),n(", remove installed files and clear npm cache to avoid conflicts:")],-1)),r(a,null,{default:l(()=>t[34]||(t[34]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`rm -rf node_modules package-lock.json && npm cache clean --force
+npm install
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[34]}),t[48]||(t[48]=e("h2",{id:"resolved-cves",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#resolved-cves","aria-hidden":"true"},"#"),n(" Resolved CVEs")],-1)),t[49]||(t[49]=e("p",null,"Fixes for the following vulnerabilities are available in ELS for Angular from TuxCare versions:",-1)),r(u,{label:"Choose Angular version: "},{Angular__17:l(()=>t[35]||(t[35]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-59052"),e("td",{style:{"text-align":"center"}},"Direct"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"@angular/platform-server"),e("td",{style:{"text-align":"center"}},"= 16.0.0-next.0 < 18.2.14"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-59052"),e("td",{style:{"text-align":"center"}},"Direct"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"@angular/ssr"),e("td",{style:{"text-align":"center"}},"= 17.0.0-next.0 < 18.2.21"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-67mh-4wv8-2f99"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"esbuild"),e("td",{style:{"text-align":"center"}},"<= 0.24.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-32997"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"http-proxy-middleware"),e("td",{style:{"text-align":"center"}},"1.3.0 - 2.0.8"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30360"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30359"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),Angular__16:l(()=>t[36]||(t[36]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-59052"),e("td",{style:{"text-align":"center"}},"Direct"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"@angular/platform-server"),e("td",{style:{"text-align":"center"}},"= 16.0.0-next.0 < 18.2.14"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-27789"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"@babel/runtime"),e("td",{style:{"text-align":"center"}},"< 7.26.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-67mh-4wv8-2f99"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"esbuild"),e("td",{style:{"text-align":"center"}},"<= 0.24.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-32997"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"http-proxy-middleware"),e("td",{style:{"text-align":"center"}},"1.3.0 - 2.0.8"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30360"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30359"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),Angular__15:l(()=>t[37]||(t[37]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-27789"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"@babel/runtime"),e("td",{style:{"text-align":"center"}},"< 7.26.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-67mh-4wv8-2f99"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"esbuild"),e("td",{style:{"text-align":"center"}},"<= 0.24.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30360"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30359"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-43788"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack"),e("td",{style:{"text-align":"center"}},"5.0.0-alpha.0 - 5.93.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),Angular__14:l(()=>t[38]||(t[38]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-29180"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"webpack-dev-middleware"),e("td",{style:{"text-align":"center"}},"<= 5.3.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-27789"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"@babel/runtime"),e("td",{style:{"text-align":"center"}},"< 7.26.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-67mh-4wv8-2f99"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"esbuild"),e("td",{style:{"text-align":"center"}},"<= 0.24.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30360"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30359"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-43788"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack"),e("td",{style:{"text-align":"center"}},"5.0.0-alpha.0 - 5.93.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),Angular__13:l(()=>t[39]||(t[39]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-29180"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"webpack-dev-middleware"),e("td",{style:{"text-align":"center"}},"<= 5.3.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25883"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"semver"),e("td",{style:{"text-align":"center"}},"7.0.0 - 7.5.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-29415"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ip"),e("td",{style:{"text-align":"center"}},"<= 2.0.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-27789"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"@babel/runtime"),e("td",{style:{"text-align":"center"}},"< 7.26.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-67mh-4wv8-2f99"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"esbuild"),e("td",{style:{"text-align":"center"}},"<= 0.24.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30360"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30359"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-43788"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack"),e("td",{style:{"text-align":"center"}},"5.0.0-alpha.0 - 5.93.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-44270"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},"< 8.4.31"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),Angular__12:l(()=>t[40]||(t[40]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-28154"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Critical"),e("td",{style:{"text-align":"center"}},"webpack"),e("td",{style:{"text-align":"center"}},">= 5.0.0, < 5.76.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24771"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24772"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-29180"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"webpack-dev-middleware"),e("td",{style:{"text-align":"center"}},"<=5.3.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25883"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"semver"),e("td",{style:{"text-align":"center"}},"7.0.0 - 7.5.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-29415"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ip"),e("td",{style:{"text-align":"center"}},"<= 2.0.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24773"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-0122"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-43788"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack"),e("td",{style:{"text-align":"center"}},">= 5.0.0-alpha.0, < 5.94.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-27789"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"@babel/runtime"),e("td",{style:{"text-align":"center"}},"< 7.26.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-67mh-4wv8-2f99"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"esbuild"),e("td",{style:{"text-align":"center"}},"<= 0.24.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30360"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-30359"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack-dev-server"),e("td",{style:{"text-align":"center"}},"<= 5.2.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-43788"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"webpack"),e("td",{style:{"text-align":"center"}},"5.0.0-alpha.0 - 5.93.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-44270"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},"< 8.4.31"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-gf8q-jrpm-jvxq"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-5rrq-pxf6-6jx5"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),Angular__11:l(()=>t[41]||(t[41]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37601"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Critical"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 2.0.0, < 2.0.3, < 1.4.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-7783"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Critical"),e("td",{style:{"text-align":"center"}},"form-data"),e("td",{style:{"text-align":"center"}},"< 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37603"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37599"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-23424"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ansi-html"),e("td",{style:{"text-align":"center"}},"< 0.0.8"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-47068"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"rollup"),e("td",{style:{"text-align":"center"}},">= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-3517"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"minimatch"),e("td",{style:{"text-align":"center"}},"< 3.0.5"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25858"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"terser"),e("td",{style:{"text-align":"center"}},"< 4.8.1, >= 5.0.0, < 5.14.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24771"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24772"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25883"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"semver"),e("td",{style:{"text-align":"center"}},"7.0.0 - 7.5.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-29415"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ip"),e("td",{style:{"text-align":"center"}},"<= 2.0.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-4068"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"braces"),e("td",{style:{"text-align":"center"}},"< 3.0.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-44270"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},"< 8.4.31"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-26136"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"tough-cookie"),e("td",{style:{"text-align":"center"}},"< 4.1.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24773"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-0122"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-27789"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"@babel/runtime"),e("td",{style:{"text-align":"center"}},"< 7.26.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-44270"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},"< 8.4.31"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-gf8q-jrpm-jvxq"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-5rrq-pxf6-6jx5"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),Angular__10:l(()=>t[42]||(t[42]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37601"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Critical"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 2.0.0, < 2.0.3, < 1.4.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-7783"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Critical"),e("td",{style:{"text-align":"center"}},"form-data"),e("td",{style:{"text-align":"center"}},"< 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25881"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"http-cache-semantics"),e("td",{style:{"text-align":"center"}},"< 4.1.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-29415"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ip"),e("td",{style:{"text-align":"center"}},"<= 2.0.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-4068"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"braces"),e("td",{style:{"text-align":"center"}},"< 3.0.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-23424"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ansi-html"),e("td",{style:{"text-align":"center"}},"< 0.0.8"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2020-7733"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ua-parser-js"),e("td",{style:{"text-align":"center"}},"< 0.7.22"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2020-7793"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ua-parser-js"),e("td",{style:{"text-align":"center"}},"< 0.7.23"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-27292"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ua-parser-js"),e("td",{style:{"text-align":"center"}},">= 0.7.14, < 0.7.24"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25927"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ua-parser-js"),e("td",{style:{"text-align":"center"}},"< 0.7.33, >= 0.8.0, < 1.0.33"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-3803"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"nth-check"),e("td",{style:{"text-align":"center"}},"< 2.0.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-47068"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"rollup"),e("td",{style:{"text-align":"center"}},">= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25858"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"terser"),e("td",{style:{"text-align":"center"}},"< 4.8.1, >= 5.0.0, < 5.14.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25883"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"semver"),e("td",{style:{"text-align":"center"}},"7.0.0 - 7.5.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24771"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24772"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-3517"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"minimatch"),e("td",{style:{"text-align":"center"}},"< 3.0.5"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37603"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37599"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-27789"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"@babel/runtime"),e("td",{style:{"text-align":"center"}},"< 7.26.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-36751"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"parse-uri"),e("td",{style:{"text-align":"center"}},"<= 1.0.9"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-28863"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"tar"),e("td",{style:{"text-align":"center"}},"< 6.2.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-26136"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"tough-cookie"),e("td",{style:{"text-align":"center"}},"< 4.1.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-44270"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},"< 8.4.31"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-23382"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},">= 8.0.0, < 8.2.13, < 7.0.36"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-23368"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},">= 7.0.0, < 7.0.36, >= 8.0.0, < 8.2.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24773"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-0122"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2020-15262"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"webpack-subresource-integrity"),e("td",{style:{"text-align":"center"}},"< 1.5.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-gf8q-jrpm-jvxq"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-5rrq-pxf6-6jx5"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2017-16137"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"debug"),e("td",{style:{"text-align":"center"}},"< 2.6.9, >= 3.0.0, < 3.1.0, >= 3.2.0, < 3.2.7, >= 4.0.0, < 4.3.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-47764"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"cookie"),e("td",{style:{"text-align":"center"}},"< 0.7.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),Angular__9:l(()=>t[43]||(t[43]=[e("table",null,[e("thead",null,[e("tr",null,[e("th",{style:{"text-align":"center"}},"CVE ID"),e("th",{style:{"text-align":"center"}},"CVE Type"),e("th",{style:{"text-align":"center"}},"Severity"),e("th",{style:{"text-align":"center"}},"Affected Library"),e("th",{style:{"text-align":"center"}},"Vulnerable Versions"),e("th",{style:{"text-align":"center"}},"Fixed in version")])]),e("tbody",null,[e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37601"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Critical"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 2.0.0, < 2.0.3, < 1.4.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-7783"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Critical"),e("td",{style:{"text-align":"center"}},"form-data"),e("td",{style:{"text-align":"center"}},"< 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-47068"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"rollup"),e("td",{style:{"text-align":"center"}},">= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37603"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-37599"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"loader-utils"),e("td",{style:{"text-align":"center"}},">= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-29415"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ip"),e("td",{style:{"text-align":"center"}},"<= 2.0.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25881"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"http-cache-semantics"),e("td",{style:{"text-align":"center"}},"< 4.1.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-23424"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ansi-html"),e("td",{style:{"text-align":"center"}},"< 0.0.8"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2020-7733"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ua-parser-js"),e("td",{style:{"text-align":"center"}},"< 0.7.22"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2020-7793"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ua-parser-js"),e("td",{style:{"text-align":"center"}},"< 0.7.23"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-27292"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ua-parser-js"),e("td",{style:{"text-align":"center"}},">= 0.7.14, < 0.7.24"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25927"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"ua-parser-js"),e("td",{style:{"text-align":"center"}},"< 0.7.33, >= 0.8.0, < 1.0.33"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-4068"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"braces"),e("td",{style:{"text-align":"center"}},"< 3.0.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-3517"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"minimatch"),e("td",{style:{"text-align":"center"}},"< 3.0.5"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24771"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24772"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-3803"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"nth-check"),e("td",{style:{"text-align":"center"}},"< 2.0.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25883"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"semver"),e("td",{style:{"text-align":"center"}},"7.0.0 - 7.5.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-25858"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"High"),e("td",{style:{"text-align":"center"}},"terser"),e("td",{style:{"text-align":"center"}},"< 4.8.1, >= 5.0.0, < 5.14.2"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-0842"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"xml2js"),e("td",{style:{"text-align":"center"}},"< 0.5.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2020-7608"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"yargs-parser"),e("td",{style:{"text-align":"center"}},">= 6.0.0, < 13.1.2, >= 14.0.0, < 15.0.1, <= 5.0.0, >= 16.0.0, < 18.1.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-28863"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"tar"),e("td",{style:{"text-align":"center"}},"< 6.2.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-24773"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.3.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2022-0122"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-36751"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"parse-uri"),e("td",{style:{"text-align":"center"}},"<= 1.0.9"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-44270"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},"< 8.4.31"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-23382"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},">= 8.0.0, < 8.2.13, < 7.0.36"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2021-23368"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"postcss"),e("td",{style:{"text-align":"center"}},">= 7.0.0, < 7.0.36, >= 8.0.0, < 8.2.10"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-26136"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Moderate"),e("td",{style:{"text-align":"center"}},"tough-cookie"),e("td",{style:{"text-align":"center"}},"< 4.1.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2023-42282"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"ip"),e("td",{style:{"text-align":"center"}},"= 2.0.0, < 1.1.9"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2017-16137"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"debug"),e("td",{style:{"text-align":"center"}},"< 2.6.9, >= 3.0.0, < 3.1.0, >= 3.2.0, < 3.2.7, >= 4.0.0, < 4.3.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2024-47764"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"cookie"),e("td",{style:{"text-align":"center"}},"< 0.7.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-gf8q-jrpm-jvxq"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"GHSA-5rrq-pxf6-6jx5"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"node-forge"),e("td",{style:{"text-align":"center"}},"< 1.0.0"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2025-54798"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"tmp"),e("td",{style:{"text-align":"center"}},"<= 0.2.3"),e("td",{style:{"text-align":"center"}},"tuxcare.1")]),e("tr",null,[e("td",{style:{"text-align":"center"}},"CVE-2020-15262"),e("td",{style:{"text-align":"center"}},"Transitive"),e("td",{style:{"text-align":"center"}},"Low"),e("td",{style:{"text-align":"center"}},"webpack-subresource-integrity"),e("td",{style:{"text-align":"center"}},"< 1.5.1"),e("td",{style:{"text-align":"center"}},"tuxcare.1")])])],-1)])),_:1}),t[50]||(t[50]=e("p",null,[n("If you are interested in the TuxCare Endless Lifecycle Support, contact "),e("a",{href:"mailto:sales@tuxcare.com"},"sales@tuxcare.com"),n(".")],-1))])}}},k=d(j,[["__file","index.html.vue"]]);export{k as default};
