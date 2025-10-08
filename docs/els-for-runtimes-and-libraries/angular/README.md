@@ -51,110 +51,111 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
 4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages.
 
    <TableTabs label="Choose Angular version: " >
-     
-     <template #Angular_18>
-  
-     :::tip
-     Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".
-  
-     To check whether your Angular project is configured with Server-Side Rendering, look for `@angular/ssr` listed in your original `package.json` file before replacing dependencies. If you see `@angular/ssr` listed, **SSR is ON**, otherwise **SSR is OFF**.
-     :::
-  
-     <CodeTabs :tabs="[
-     { title: 'SSR ON', content: Angular18WithSSR },
-     { title: 'SSR OFF', content: Angular18WithoutSSR }
-     ]" />
-  
-     :::tip
-     If you use any of the following **non-default Angular modules**, update their versions as shown below:
-  
-     * "@angular/language-service": "npm:@els-js/angular-language-service@18.2.13-tuxcare.1",
-     * "@angular/upgrade": "npm:@els-js/angular-upgrade@18.2.13-tuxcare.1",
-     * "@angular/elements": "npm:@els-js/angular-elements@18.2.13-tuxcare.1",
-     * "@angular/service-worker": "npm:@els-js/angular-service-worker@18.2.13-tuxcare.1",
-  
-     After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-     :::
-     </template>
- 
-     <template #Angular_17>
-  
-     :::tip
-     Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".
-  
-     To check whether your Angular project is configured with Server-Side Rendering, look for `@angular/ssr` listed in your original `package.json` file before replacing dependencies. If you see `@angular/ssr` listed, **SSR is ON**, otherwise **SSR is OFF**.
-     :::
-  
-     <CodeTabs :tabs="[
-     { title: 'SSR ON', content: Angular17WithSSR },
-     { title: 'SSR OFF', content: Angular17WithoutSSR }
-     ]" />
-  
-     :::tip
-     If you use any of the following **non-default Angular modules**, update their versions as shown below:
-  
-     * "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
-     * "@angular/upgrade": "npm:@els-js/angular-upgrade@17.3.12-tuxcare.1",
-     * "@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",
-     * "@angular/service-worker": "npm:@els-js/angular-service-worker@17.3.12-tuxcare.1"
-  
-     After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-     :::
-     </template>
+
+   <template #Angular_18>
+
+   :::tip
+   Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".
+
+   To check whether your Angular project is configured with Server-Side Rendering, look for `@angular/ssr` listed in your original `package.json` file before replacing dependencies. If you see `@angular/ssr` listed, **SSR is ON**, otherwise **SSR is OFF**.
+   :::
+
+   <CodeTabs :tabs="[
+   { title: 'SSR ON', content: Angular18WithSSR },
+   { title: 'SSR OFF', content: Angular18WithoutSSR }
+   ]" />
+
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+   * "@angular/language-service": "npm:@els-js/angular-language-service@18.2.13-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@18.2.13-tuxcare.1",
+   * "@angular/elements": "npm:@els-js/angular-elements@18.2.13-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@18.2.13-tuxcare.1",
+
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
+   </template>
+
+   <template #Angular_17>
+
+   :::tip
+   Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".
+
+   To check whether your Angular project is configured with Server-Side Rendering, look for `@angular/ssr` listed in your original `package.json` file before replacing dependencies. If you see `@angular/ssr` listed, **SSR is ON**, otherwise **SSR is OFF**.
+   :::
+
+   <CodeTabs :tabs="[
+   { title: 'SSR ON', content: Angular17WithSSR },
+   { title: 'SSR OFF', content: Angular17WithoutSSR }
+   ]" />
+
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+   * "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@17.3.12-tuxcare.1",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@17.3.12-tuxcare.1"
+
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
+   </template>
+
    <template #Angular_16>
 
-      <CodeWithCopy>
+   <CodeWithCopy>
 
-      ```text
-      "dependencies": {
-        "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
-        "rxjs": "^7.4.0",
-        "tslib": "^2.3.0",
-        "zone.js": "~0.13.0"
-      },
-      "devDependencies": {
-        "@angular-devkit/build-angular": "^16.2.12",
-        "@angular/cli": "^16.2.12",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
-        "@types/jasmine": "~4.3.0",
-        "@types/node": "^18.7.0",
-        "jasmine-core": "~4.6.0",
-        "karma": "~6.4.0",
-        "karma-chrome-launcher": "~3.2.0",
-        "karma-coverage": "~2.2.0",
-        "karma-jasmine": "~5.1.0",
-        "karma-jasmine-html-reporter": "~2.1.0",
-        "typescript": "~5.1.3"
-      },
-      "overrides": {
-        "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
-        "vite": "npm:@els-js/vite@4.5.5-tuxcare.1",
-        "rxjs": "^7.4.0",
-        "@babel/runtime": "7.26.10",
-        "esbuild": "0.25.0",
-        "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
-        "external-editor": {
-            "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
-        }
-      }
-      ```
+   ```text
+   "dependencies": {
+     "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+     "rxjs": "^7.4.0",
+     "tslib": "^2.3.0",
+     "zone.js": "~0.13.0"
+   },
+   "devDependencies": {
+     "@angular-devkit/build-angular": "^16.2.12",
+     "@angular/cli": "^16.2.12",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
+     "@types/jasmine": "~4.3.0",
+     "@types/node": "^18.7.0",
+     "jasmine-core": "~4.6.0",
+     "karma": "~6.4.0",
+     "karma-chrome-launcher": "~3.2.0",
+     "karma-coverage": "~2.2.0",
+     "karma-jasmine": "~5.1.0",
+     "karma-jasmine-html-reporter": "~2.1.0",
+     "typescript": "~5.1.3"
+   },
+   "overrides": {
+     "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+     "vite": "npm:@els-js/vite@4.5.5-tuxcare.1",
+     "rxjs": "^7.4.0",
+     "@babel/runtime": "7.26.10",
+     "esbuild": "0.25.0",
+     "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
+     "external-editor": {
+       "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
+     }
+   }
+   ```
 
-      </CodeWithCopy>
+   </CodeWithCopy>
 
    :::tip
    If you use any of the following **non-default Angular modules**, update their versions as shown below:
@@ -168,489 +169,489 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
    :::
    </template>
 
-    <template #Angular_15>
+   <template #Angular_15>
 
-      <CodeWithCopy>
+   <CodeWithCopy>
 
-      ```text
-      "dependencies": {
-        "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@15.2.10-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@15.2.10-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@15.2.10-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@15.2.10-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@15.2.10-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@15.2.10-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@15.2.10-tuxcare.1", 
-        "rxjs": "^7.4.0",
-        "tslib": "^2.3.0",
-        "zone.js": "~0.12.0"
-      },
-      "devDependencies": {
-        "@angular-devkit/build-angular": "^15.2.11",
-        "@angular/cli": "~15.2.11",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@15.2.10-tuxcare.1",
-        "@types/jasmine": "~4.3.0",
-        "jasmine-core": "~4.5.0",
-        "karma": "~6.4.0",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage": "~2.2.0",
-        "karma-jasmine": "~5.1.0",
-        "karma-jasmine-html-reporter": "~2.0.0",
-        "typescript": "~4.9.4"
-      },
-      "overrides": {
-        "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@15.2.10-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@15.2.10-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@15.2.10-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@15.2.10-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@15.2.10-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@15.2.10-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@15.2.10-tuxcare.1",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@15.2.10-tuxcare.1",
-        "rxjs": "^7.4.0",
-        "@babel/runtime": "7.26.10",
-        "esbuild": "0.25.0",
-        "webpack-dev-server": "5.2.1",
-        "webpack": "5.94.0",
-        "tmp": "^0.2.4",
-        "*": {
-          "tmp": "^0.2.4"
-        }
-      }
-      ```
+   ```text
+   "dependencies": {
+     "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@15.2.10-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@15.2.10-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@15.2.10-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@15.2.10-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@15.2.10-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@15.2.10-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@15.2.10-tuxcare.1",
+     "rxjs": "^7.4.0",
+     "tslib": "^2.3.0",
+     "zone.js": "~0.12.0"
+   },
+   "devDependencies": {
+     "@angular-devkit/build-angular": "^15.2.11",
+     "@angular/cli": "~15.2.11",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@15.2.10-tuxcare.1",
+     "@types/jasmine": "~4.3.0",
+     "jasmine-core": "~4.5.0",
+     "karma": "~6.4.0",
+     "karma-chrome-launcher": "~3.1.0",
+     "karma-coverage": "~2.2.0",
+     "karma-jasmine": "~5.1.0",
+     "karma-jasmine-html-reporter": "~2.0.0",
+     "typescript": "~4.9.4"
+   },
+   "overrides": {
+     "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@15.2.10-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@15.2.10-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@15.2.10-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@15.2.10-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@15.2.10-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@15.2.10-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@15.2.10-tuxcare.1",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@15.2.10-tuxcare.1",
+     "rxjs": "^7.4.0",
+     "@babel/runtime": "7.26.10",
+     "esbuild": "0.25.0",
+     "webpack-dev-server": "5.2.1",
+     "webpack": "5.94.0",
+     "tmp": "^0.2.4",
+     "*": {
+       "tmp": "^0.2.4"
+     }
+   }
+   ```
 
-      </CodeWithCopy>
+   </CodeWithCopy>
 
-      :::tip
-      If you use any of the following **non-default Angular modules**, update their versions as shown below:
-       
-      * "@angular/elements": "npm:@els-js/angular-elements@15.2.10-tuxcare.1",
-      * "@angular/upgrade": "npm:@els-js/angular-upgrade@15.2.10-tuxcare.1",
-      * "@angular/platform-server": "npm:@els-js/angular-platform-server@15.2.10-tuxcare.1",
-      * "@angular/localize": "npm:@els-js/angular-localize@15.2.10-tuxcare.1",
-      * "@angular/language-service": "npm:@els-js/angular-language-service@15.2.10-tuxcare.1",
-      * "@angular/service-worker": "npm:@els-js/angular-service-worker@15.2.10-tuxcare.1",
-       
-      After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-      :::
-     </template>
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
 
-    <template #Angular_14>
+   * "@angular/elements": "npm:@els-js/angular-elements@15.2.10-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@15.2.10-tuxcare.1",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@15.2.10-tuxcare.1",
+   * "@angular/localize": "npm:@els-js/angular-localize@15.2.10-tuxcare.1",
+   * "@angular/language-service": "npm:@els-js/angular-language-service@15.2.10-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@15.2.10-tuxcare.1",
 
-      <CodeWithCopy>
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
+   </template>
 
-      ```text
-      "dependencies": {
-        "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
-        "rxjs": "^7.4.0",
-        "tslib": "^2.3.0",
-        "zone.js": "~0.11.4"
-      },
-      "devDependencies": {
-        "@angular-devkit/build-angular": "^14.2.13",
-        "@angular/cli": "~14.2.13",
-        "@angular/compiler-cli": "^14.2.0",
-        "@types/jasmine": "~4.0.0",
-        "jasmine-core": "~4.3.0",
-        "karma": "~6.4.0",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage": "~2.2.0",
-        "karma-jasmine": "~5.1.0",
-        "karma-jasmine-html-reporter": "~2.0.0",
-        "typescript": "~4.7.2"
-      },
-      "overrides": {
-        "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
-        "rxjs": "^7.4.0",
-        "@babel/runtime": "7.26.10",
-        "esbuild": "0.25.0",
-        "webpack-dev-middleware": "5.3.4",
-        "webpack-dev-server": "5.2.1",
-        "webpack": "5.94.0",
-        "tmp": "^0.2.4",
-        "*": {
-          "tmp": "^0.2.4"
-        }
-      }
-      ```
+   <template #Angular_14>
 
-      </CodeWithCopy>
+   <CodeWithCopy>
 
-      :::tip
-      If you use any of the following **non-default Angular modules**, update their versions as shown below:
-       
-      * "@angular/elements": "npm:@els-js/angular-elements@14.3.0-tuxcare.1",
-      * "@angular/upgrade": "npm:@els-js/angular-upgrade@14.3.0-tuxcare.1",
-      * "@angular/platform-server": "npm:@els-js/angular-platform-server@14.3.0-tuxcare.1",
-      * "@angular/localize": "npm:@els-js/angular-localize@14.3.0-tuxcare.1",
-      * "@angular/language-service": "npm:@els-js/angular-language-service@14.3.0-tuxcare.1",
-      * "@angular/service-worker": "npm:@els-js/angular-service-worker@14.3.0-tuxcare.1",
-       
-      After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-      :::
-     </template>
+   ```text
+   "dependencies": {
+     "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
+     "rxjs": "^7.4.0",
+     "tslib": "^2.3.0",
+     "zone.js": "~0.11.4"
+   },
+   "devDependencies": {
+     "@angular-devkit/build-angular": "^14.2.13",
+     "@angular/cli": "~14.2.13",
+     "@angular/compiler-cli": "^14.2.0",
+     "@types/jasmine": "~4.0.0",
+     "jasmine-core": "~4.3.0",
+     "karma": "~6.4.0",
+     "karma-chrome-launcher": "~3.1.0",
+     "karma-coverage": "~2.2.0",
+     "karma-jasmine": "~5.1.0",
+     "karma-jasmine-html-reporter": "~2.0.0",
+     "typescript": "~4.7.2"
+   },
+   "overrides": {
+     "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
+     "rxjs": "^7.4.0",
+     "@babel/runtime": "7.26.10",
+     "esbuild": "0.25.0",
+     "webpack-dev-middleware": "5.3.4",
+     "webpack-dev-server": "5.2.1",
+     "webpack": "5.94.0",
+     "tmp": "^0.2.4",
+     "*": {
+       "tmp": "^0.2.4"
+     }
+   }
+   ```
+
+   </CodeWithCopy>
+
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+   * "@angular/elements": "npm:@els-js/angular-elements@14.3.0-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@14.3.0-tuxcare.1",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@14.3.0-tuxcare.1",
+   * "@angular/localize": "npm:@els-js/angular-localize@14.3.0-tuxcare.1",
+   * "@angular/language-service": "npm:@els-js/angular-language-service@14.3.0-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@14.3.0-tuxcare.1",
+
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
+   </template>
 
    <template #Angular_13>
 
-      <CodeWithCopy>
+   <CodeWithCopy>
 
-      ```text
-      "dependencies": {
-        "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
-        "rxjs": "^7.4.0",
-        "tslib": "^2.3.0",
-        "zone.js": "~0.11.4"
-      },
-      "devDependencies": {
-        "@angular-devkit/build-angular": "^13.0.4",
-        "@angular/cli": "^13.0.4",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
-        "@types/express": "^4.17.17",
-        "@types/jasmine": "~5.1.0",
-        "@types/node": "^18.18.0",
-        "jasmine-core": "~5.6.0",
-        "karma": "~6.4.0",
-        "karma-chrome-launcher": "~3.2.0",
-        "karma-coverage": "~2.2.0",
-        "karma-jasmine": "~5.1.0",
-        "karma-jasmine-html-reporter": "~2.1.0",
-        "typescript": "~4.5.5"
-      },
-      "overrides": {
-        "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
-        "rxjs": "^7.4.0",
-        "@babel/runtime": "7.26.10",
-        "esbuild": "0.25.0",
-        "webpack-dev-middleware": "5.3.4",
-        "webpack-dev-server": "5.2.1",
-        "webpack": "5.94.0", 
-        "semver": "7.6.0",
-        "postcss": "8.4.32",
-        "tmp": "^0.2.4",
-        "*": {
-          "tmp": "^0.2.4",
-          "semver": "7.6.0",
-          "postcss": "8.4.32"
-        }
-      }
-      ```
+   ```text
+   "dependencies": {
+     "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
+     "rxjs": "^7.4.0",
+     "tslib": "^2.3.0",
+     "zone.js": "~0.11.4"
+   },
+   "devDependencies": {
+     "@angular-devkit/build-angular": "^13.0.4",
+     "@angular/cli": "^13.0.4",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
+     "@types/express": "^4.17.17",
+     "@types/jasmine": "~5.1.0",
+     "@types/node": "^18.18.0",
+     "jasmine-core": "~5.6.0",
+     "karma": "~6.4.0",
+     "karma-chrome-launcher": "~3.2.0",
+     "karma-coverage": "~2.2.0",
+     "karma-jasmine": "~5.1.0",
+     "karma-jasmine-html-reporter": "~2.1.0",
+     "typescript": "~4.5.5"
+   },
+   "overrides": {
+     "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
+     "rxjs": "^7.4.0",
+     "@babel/runtime": "7.26.10",
+     "esbuild": "0.25.0",
+     "webpack-dev-middleware": "5.3.4",
+     "webpack-dev-server": "5.2.1",
+     "webpack": "5.94.0",
+     "semver": "7.6.0",
+     "postcss": "8.4.32",
+     "tmp": "^0.2.4",
+     "*": {
+       "tmp": "^0.2.4",
+       "semver": "7.6.0",
+       "postcss": "8.4.32"
+     }
+   }
+   ```
 
-      </CodeWithCopy>
+   </CodeWithCopy>
 
-     :::tip
-     If you use any of the following **non-default Angular modules**, update their versions as shown below:
-  
-     * "@angular/elements": "npm:@els-js/angular-elements@13.4.0-tuxcare.1",
-     * "@angular/upgrade": "npm:@els-js/angular-upgrade@13.4.0-tuxcare.1",
-     * "@angular/platform-server": "npm:@els-js/angular-platform-server@13.4.0-tuxcare.1",
-     * "@angular/localize": "npm:@els-js/angular-localize@13.4.0-tuxcare.1",
-     * "@angular/language-service": "npm:@els-js/angular-language-service@13.4.0-tuxcare.1",
-     * "@angular/service-worker": "npm:@els-js/angular-service-worker@13.4.0-tuxcare.1",
-  
-     After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-     :::
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+   * "@angular/elements": "npm:@els-js/angular-elements@13.4.0-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@13.4.0-tuxcare.1",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@13.4.0-tuxcare.1",
+   * "@angular/localize": "npm:@els-js/angular-localize@13.4.0-tuxcare.1",
+   * "@angular/language-service": "npm:@els-js/angular-language-service@13.4.0-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@13.4.0-tuxcare.1",
+
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
    </template>
 
    <template #Angular_12>
 
-      <CodeWithCopy>
+   <CodeWithCopy>
 
-      ```text
-      "dependencies": {
-        "@angular/animations": "npm:@els-js/angular-animations@12.2.17-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@12.2.17-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@12.2.17-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@12.2.17-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@12.2.17-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@12.2.17-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@12.2.17-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@12.2.17-tuxcare.1",
-        "rxjs": "~6.6.0",
-        "tslib": "^2.3.0",
-        "zone.js": "~0.11.4"
-      },
-      "devDependencies": {
-        "@angular-devkit/build-angular": "~12.2.18",
-        "@angular/cli": "~12.2.18",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@12.2.17-tuxcare.1",
-        "@types/jasmine": "~3.8.0",
-        "@types/node": "^12.11.1",
-        "jasmine-core": "~3.8.0",
-        "karma": "~6.3.0",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage": "~2.0.3",
-        "karma-jasmine": "~4.0.0",
-        "karma-jasmine-html-reporter": "~1.7.0",
-        "typescript": "~4.2.4"
-      },
-      "overrides": {
-        "@angular/animations": "npm:@els-js/angular-animations@12.2.17-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@12.2.17-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@12.2.17-tuxcare.1",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@12.2.17-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@12.2.17-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@12.2.17-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@12.2.17-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@12.2.17-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@12.2.17-tuxcare.1",
-        "rxjs": "~6.6.0",
-        "@babel/runtime": "7.26.10",
-        "esbuild": "0.25.0",
-        "webpack-dev-middleware": "5.3.4",
-        "webpack-dev-server": "5.2.1",
-        "webpack": "5.94.0",
-        "semver": "7.6.0",
-        "postcss": "8.4.32",
-        "tmp": "^0.2.4",
-        "minimatch": "3.0.6",
-        "loader-utils": "2.0.4",
-        "*": {
-          "tmp": "^0.2.4",
-          "semver": "7.6.0",
-          "postcss": "8.4.32",
-          "minimatch": "3.0.6",
-          "loader-utils": "2.0.4"
-        }
-      }
-      ```
+   ```text
+   "dependencies": {
+     "@angular/animations": "npm:@els-js/angular-animations@12.2.17-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@12.2.17-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@12.2.17-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@12.2.17-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@12.2.17-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@12.2.17-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@12.2.17-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@12.2.17-tuxcare.1",
+     "rxjs": "~6.6.0",
+     "tslib": "^2.3.0",
+     "zone.js": "~0.11.4"
+   },
+   "devDependencies": {
+     "@angular-devkit/build-angular": "~12.2.18",
+     "@angular/cli": "~12.2.18",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@12.2.17-tuxcare.1",
+     "@types/jasmine": "~3.8.0",
+     "@types/node": "^12.11.1",
+     "jasmine-core": "~3.8.0",
+     "karma": "~6.3.0",
+     "karma-chrome-launcher": "~3.1.0",
+     "karma-coverage": "~2.0.3",
+     "karma-jasmine": "~4.0.0",
+     "karma-jasmine-html-reporter": "~1.7.0",
+     "typescript": "~4.2.4"
+   },
+   "overrides": {
+     "@angular/animations": "npm:@els-js/angular-animations@12.2.17-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@12.2.17-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@12.2.17-tuxcare.1",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@12.2.17-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@12.2.17-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@12.2.17-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@12.2.17-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@12.2.17-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@12.2.17-tuxcare.1",
+     "rxjs": "~6.6.0",
+     "@babel/runtime": "7.26.10",
+     "esbuild": "0.25.0",
+     "webpack-dev-middleware": "5.3.4",
+     "webpack-dev-server": "5.2.1",
+     "webpack": "5.94.0",
+     "semver": "7.6.0",
+     "postcss": "8.4.32",
+     "tmp": "^0.2.4",
+     "minimatch": "3.0.6",
+     "loader-utils": "2.0.4",
+     "*": {
+       "tmp": "^0.2.4",
+       "semver": "7.6.0",
+       "postcss": "8.4.32",
+       "minimatch": "3.0.6",
+       "loader-utils": "2.0.4"
+     }
+   }
+   ```
 
-      </CodeWithCopy>
+   </CodeWithCopy>
 
-     :::tip
-     If you use any of the following **non-default Angular modules**, update their versions as shown below:
-  
-     * "@angular/elements": "npm:@els-js/angular-elements@12.2.17-tuxcare.1",
-     * "@angular/upgrade": "npm:@els-js/angular-upgrade@12.2.17-tuxcare.1",
-     * "@angular/platform-server": "npm:@els-js/angular-platform-server@12.2.17-tuxcare.1",
-     * "@angular/localize": "npm:@els-js/angular-localize@12.2.17-tuxcare.1",
-     * "@angular/language-service": "npm:@els-js/angular-language-service@12.2.17-tuxcare.1",
-     * "@angular/service-worker": "npm:@els-js/angular-service-worker@12.2.17-tuxcare.1",
-  
-     After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-     :::
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+   * "@angular/elements": "npm:@els-js/angular-elements@12.2.17-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@12.2.17-tuxcare.1",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@12.2.17-tuxcare.1",
+   * "@angular/localize": "npm:@els-js/angular-localize@12.2.17-tuxcare.1",
+   * "@angular/language-service": "npm:@els-js/angular-language-service@12.2.17-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@12.2.17-tuxcare.1",
+
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
    </template>
 
-      <template #Angular_11>
+   <template #Angular_11>
 
-      <CodeWithCopy>
+   <CodeWithCopy>
 
-      ```text
-      "dependencies": {
-        "@angular/animations": "npm:@els-js/angular-animations@11.2.14-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@11.2.14-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@11.2.14-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@11.2.14-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@11.2.14-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@11.2.14-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@11.2.14-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@11.2.14-tuxcare.1",
-        "rxjs": "^6.6.7",
-        "tslib": "^2.0.0",
-        "zone.js": "~0.11.4"
-      },
-      "devDependencies": {
-        "@angular-devkit/build-angular": "0.1102.14",
-        "@angular/cli": "11.2.14",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@11.2.14-tuxcare.1",
-        "@types/jasmine": "3.10.3",
-        "@types/node": "^12.11.1",
-        "jasmine-core": "~3.10.0",
-        "karma": "~6.3.20",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage": "~2.0.3",
-        "karma-jasmine": "~4.0.0",
-        "karma-jasmine-html-reporter": "~1.7.0",
-        "typescript": "4.0.8"
-      },
-      "overrides": {
-        "@angular/animations": "npm:@els-js/angular-animations@11.2.14-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@11.2.14-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@11.2.14-tuxcare.1",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@11.2.14-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@11.2.14-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@11.2.14-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@11.2.14-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@11.2.14-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@11.2.14-tuxcare.1",
-        "rxjs": "^6.6.7" 
-      }
-      ```
+   ```text
+   "dependencies": {
+     "@angular/animations": "npm:@els-js/angular-animations@11.2.14-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@11.2.14-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@11.2.14-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@11.2.14-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@11.2.14-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@11.2.14-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@11.2.14-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@11.2.14-tuxcare.1",
+     "rxjs": "^6.6.7",
+     "tslib": "^2.0.0",
+     "zone.js": "~0.11.4"
+   },
+   "devDependencies": {
+     "@angular-devkit/build-angular": "0.1102.14",
+     "@angular/cli": "11.2.14",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@11.2.14-tuxcare.1",
+     "@types/jasmine": "3.10.3",
+     "@types/node": "^12.11.1",
+     "jasmine-core": "~3.10.0",
+     "karma": "~6.3.20",
+     "karma-chrome-launcher": "~3.1.0",
+     "karma-coverage": "~2.0.3",
+     "karma-jasmine": "~4.0.0",
+     "karma-jasmine-html-reporter": "~1.7.0",
+     "typescript": "4.0.8"
+   },
+   "overrides": {
+     "@angular/animations": "npm:@els-js/angular-animations@11.2.14-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@11.2.14-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@11.2.14-tuxcare.1",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@11.2.14-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@11.2.14-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@11.2.14-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@11.2.14-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@11.2.14-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@11.2.14-tuxcare.1",
+     "rxjs": "^6.6.7"
+   }
+   ```
 
-      </CodeWithCopy>
+   </CodeWithCopy>
 
-    :::tip
-    If you use any of the following **non-default Angular modules**, update their versions as shown below:
-    
-    * "@angular/elements": "npm:@els-js/angular-elements@11.2.14-tuxcare.1",
-      * "@angular/upgrade": "npm:@els-js/angular-upgrade@11.2.14-tuxcare.1",
-      * "@angular/platform-server": "npm:@els-js/angular-platform-server@11.2.14-tuxcare.1",
-      * "@angular/localize": "npm:@els-js/angular-localize@11.2.14-tuxcare.1",
-      * "@angular/language-service": "npm:@els-js/angular-language-service@11.2.14-tuxcare.1",
-      * "@angular/service-worker": "npm:@els-js/angular-service-worker@11.2.14-tuxcare.1",
-    
-    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-    :::
-    </template>
-    
-    <template #Angular_10>
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
 
-      <CodeWithCopy>
+   * "@angular/elements": "npm:@els-js/angular-elements@11.2.14-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@11.2.14-tuxcare.1",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@11.2.14-tuxcare.1",
+   * "@angular/localize": "npm:@els-js/angular-localize@11.2.14-tuxcare.1",
+   * "@angular/language-service": "npm:@els-js/angular-language-service@11.2.14-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@11.2.14-tuxcare.1",
 
-      ```text
-      "dependencies": {
-        "@angular/animations": "npm:@els-js/angular-animations@10.2.5-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@10.2.5-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@10.2.5-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@10.2.5-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@10.2.5-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@10.2.5-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@10.2.5-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@10.2.5-tuxcare.1",
-        "rxjs": "~6.6.7",
-        "tslib": "^2.0.0",
-        "zone.js": "~0.10.3"
-      },
-      "devDependencies": {
-        "@angular-devkit/build-angular": "0.1002.4",
-        "@angular/cli": "10.2.4",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@10.2.5-tuxcare.1",
-        "@types/jasmine": "3.6.0",
-        "@types/node": "^12.11.1",
-        "jasmine-core": "~3.6.0",
-        "karma": "~5.0.0",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage-istanbul-reporter": "~3.0.3",
-        "karma-jasmine": "~3.3.1",
-        "karma-jasmine-html-reporter": "~1.5.4",
-        "typescript": "4.0.8"
-      },
-      "overrides": {
-        "@angular/animations": "npm:@els-js/angular-animations@10.2.5-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@10.2.5-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@10.2.5-tuxcare.1",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@10.2.5-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@10.2.5-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@10.2.5-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@10.2.5-tuxcare.1",
-        "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@10.2.5-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@10.2.5-tuxcare.1",
-        "rxjs": "~6.6.7"
-      }
-      ```
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
+   </template>
 
-      </CodeWithCopy>
+   <template #Angular_10>
 
-    :::tip
-    If you use any of the following **non-default Angular modules**, update their versions as shown below:
-    
-    * "@angular/elements": "npm:@els-js/angular-elements@10.2.5-tuxcare.1",
-    * "@angular/upgrade": "npm:@els-js/angular-upgrade@10.2.5-tuxcare.1",
-    * "@angular/platform-server": "npm:@els-js/angular-platform-server@10.2.5-tuxcare.1",
-    * "@angular/localize": "npm:@els-js/angular-localize@10.2.5-tuxcare.1",
-    * "@angular/language-service": "npm:@els-js/angular-language-service@10.2.5-tuxcare.1",
-    * "@angular/service-worker": "npm:@els-js/angular-service-worker@10.2.5-tuxcare.1",
-    
-    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-    :::
-    </template>
+   <CodeWithCopy>
 
-    <template #Angular_9>
+   ```text
+   "dependencies": {
+     "@angular/animations": "npm:@els-js/angular-animations@10.2.5-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@10.2.5-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@10.2.5-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@10.2.5-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@10.2.5-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@10.2.5-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@10.2.5-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@10.2.5-tuxcare.1",
+     "rxjs": "~6.6.7",
+     "tslib": "^2.0.0",
+     "zone.js": "~0.10.3"
+   },
+   "devDependencies": {
+     "@angular-devkit/build-angular": "0.1002.4",
+     "@angular/cli": "10.2.4",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@10.2.5-tuxcare.1",
+     "@types/jasmine": "3.6.0",
+     "@types/node": "^12.11.1",
+     "jasmine-core": "~3.6.0",
+     "karma": "~5.0.0",
+     "karma-chrome-launcher": "~3.1.0",
+     "karma-coverage-istanbul-reporter": "~3.0.3",
+     "karma-jasmine": "~3.3.1",
+     "karma-jasmine-html-reporter": "~1.5.4",
+     "typescript": "4.0.8"
+   },
+   "overrides": {
+     "@angular/animations": "npm:@els-js/angular-animations@10.2.5-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@10.2.5-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@10.2.5-tuxcare.1",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@10.2.5-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@10.2.5-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@10.2.5-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@10.2.5-tuxcare.1",
+     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@10.2.5-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@10.2.5-tuxcare.1",
+     "rxjs": "~6.6.7"
+   }
+   ```
 
-      <CodeWithCopy>
+   </CodeWithCopy>
 
-      ```text
-      "dependencies": {
-        "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
-        "@angular/platform-browser-dynamic": "9.1.13",
-        "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
-        "rxjs": "~6.5.4",
-        "tslib": "^1.10.0",
-        "zone.js": "~0.10.2"
-      },
-      "devDependencies": {
-        "@angular-devkit/build-angular": "~0.901.15",
-        "@angular/cli": "~9.1.15",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
-        "@types/jasmine": "~3.5.0",
-        "@types/jasminewd2": "~2.0.3",
-        "@types/node": "^12.11.1",
-        "codelyzer": "^5.1.2",
-        "jasmine-core": "~3.5.0",
-        "jasmine-spec-reporter": "~4.2.1",
-        "karma": "~5.0.0",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage-istanbul-reporter": "~2.1.0",
-        "karma-jasmine": "~3.0.1",
-        "karma-jasmine-html-reporter": "~1.4.2",
-        "protractor": "~5.4.3",
-        "ts-node": "~8.3.0",
-        "tslint": "~6.1.0",
-        "typescript": "~3.8.3"
-      },
-      "overrides": {
-        "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
-        "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
-        "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
-        "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
-        "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
-        "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
-        "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
-        "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
-        "rxjs": "~6.5.4"
-      }
-      ```
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
 
-      </CodeWithCopy>
+   * "@angular/elements": "npm:@els-js/angular-elements@10.2.5-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@10.2.5-tuxcare.1",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@10.2.5-tuxcare.1",
+   * "@angular/localize": "npm:@els-js/angular-localize@10.2.5-tuxcare.1",
+   * "@angular/language-service": "npm:@els-js/angular-language-service@10.2.5-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@10.2.5-tuxcare.1",
 
-     :::tip
-     If you use any of the following **non-default Angular modules**, update their versions as shown below:
-  
-     * "@angular/elements": "npm:@els-js/angular-elements@10.2.5-tuxcare.1",
-     * "@angular/upgrade": "npm:@els-js/angular-upgrade@10.2.5-tuxcare.1",
-     * "@angular/platform-server": "npm:@els-js/angular-platform-server@10.2.5-tuxcare.1",
-     * "@angular/localize": "npm:@els-js/angular-localize@10.2.5-tuxcare.1",
-     * "@angular/language-service": "npm:@els-js/angular-language-service@10.2.5-tuxcare.1",
-     * "@angular/service-worker": "npm:@els-js/angular-service-worker@10.2.5-tuxcare.1",
-  
-     After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-     :::
-     </template>
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
+   </template>
+
+   <template #Angular_9>
+
+   <CodeWithCopy>
+
+   ```text
+   "dependencies": {
+     "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
+     "@angular/platform-browser-dynamic": "9.1.13",
+     "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
+     "rxjs": "~6.5.4",
+     "tslib": "^1.10.0",
+     "zone.js": "~0.10.2"
+   },
+   "devDependencies": {
+     "@angular-devkit/build-angular": "~0.901.15",
+     "@angular/cli": "~9.1.15",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
+     "@types/jasmine": "~3.5.0",
+     "@types/jasminewd2": "~2.0.3",
+     "@types/node": "^12.11.1",
+     "codelyzer": "^5.1.2",
+     "jasmine-core": "~3.5.0",
+     "jasmine-spec-reporter": "~4.2.1",
+     "karma": "~5.0.0",
+     "karma-chrome-launcher": "~3.1.0",
+     "karma-coverage-istanbul-reporter": "~2.1.0",
+     "karma-jasmine": "~3.0.1",
+     "karma-jasmine-html-reporter": "~1.4.2",
+     "protractor": "~5.4.3",
+     "ts-node": "~8.3.0",
+     "tslint": "~6.1.0",
+     "typescript": "~3.8.3"
+   },
+   "overrides": {
+     "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
+     "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
+     "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
+     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
+     "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
+     "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
+     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
+     "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
+     "rxjs": "~6.5.4"
+   }
+   ```
+
+   </CodeWithCopy>
+
+   :::tip
+   If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+   * "@angular/elements": "npm:@els-js/angular-elements@9.1.13-tuxcare.1",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@9.1.13-tuxcare.1",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@9.1.13-tuxcare.1",
+   * "@angular/localize": "npm:@els-js/angular-localize@9.1.13-tuxcare.1",
+   * "@angular/language-service": "npm:@els-js/angular-language-service@9.1.13-tuxcare.1",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@9.1.13-tuxcare.1",
+
+   After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+   :::
+   </template>
 
    </TableTabs>
 
@@ -694,14 +695,14 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
 
    ```text
    added 925 packages, and audited 926 packages in 3m
- 
+
    158 packages are looking for funding
      run `npm fund` for details
 
    found 0 vulnerabilities
    ```
 
-6. You've successfully integrated the TuxCare ELS for Angular repository into your project.
+7. You've successfully integrated the TuxCare ELS for Angular repository into your project.
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -1195,8 +1196,7 @@ const Angular17WithoutSSR =
   "karma-jasmine-html-reporter": "~2.1.0",
   "typescript": "~5.4.2"
 },
-"overrides": 
-{
+"overrides": {
   "@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",
   "@angular/common": "npm:@els-js/angular-common@17.3.12-tuxcare.1",
   "@angular/compiler": "npm:@els-js/angular-compiler@17.3.12-tuxcare.1",
