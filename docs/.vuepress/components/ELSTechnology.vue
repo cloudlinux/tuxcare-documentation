@@ -405,43 +405,8 @@ const techData = [
         link: "./python/",
       },
       {
-        name: "certifi",
-        versions: "2021.10.8 | 2022.12.7 | 2023.7.22",
-        link: "./python-libraries/",
-      },
-      {
-        name: "setuptools",
-        versions: "65.5.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "gunicorn",
-        versions: "20.1.0 | 21.2.0 | 22.0.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "waitress",
-        versions: "2.1.2",
-        link: "./python-libraries/",
-      },
-      {
-        name: "idna",
-        versions: "2.1 | 2.8",
-        link: "./python-libraries/",
-      },
-      {
-        name: "cryptography",
-        versions: "42.0.8 | 43.0.1 | 43.0.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "Werkzeug",
-        versions: "1.0.1 | 2.2.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "sentry-sdk",
-        versions: "1.45.1",
+        name: "aiohttp",
+        versions: "3.8.1 | 3.8.4 | 3.8.5",
         link: "./python-libraries/",
       },
       {
@@ -450,13 +415,118 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "celery",
+        versions: "5.1.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "certifi",
+        versions: "2021.10.8 | 2022.12.7 | 2023.7.22",
+        link: "./python-libraries/",
+      },
+      {
+        name: "cryptography",
+        versions: "3.4.8 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "deepdiff",
+        versions: "6.2.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Django",
+        versions: "4.0 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9",
+        link: "./python-libraries/",
+      },
+      {
+        name: "dnspython",
+        versions: "2.3.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "fastapi",
+        versions: "0.63.0 | 0.104.1",
+        link: "./python-libraries/",
+      },
+      {
         name: "Flask",
-        versions: "1.1.2",
+        versions: "1.1.2 | 2.2.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "future",
+        versions: "1.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "GitPython",
+        versions: "3.1.31",
+        link: "./python-libraries/",
+      },
+      {
+        name: "gunicorn",
+        versions: "20.0.4 | 20.1.0 | 21.2.0 | 22.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "httpx",
+        versions: "0.22.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "idna",
+        versions: "2.1 | 2.8 | 3.6",
         link: "./python-libraries/",
       },
       {
         name: "Jinja2",
-        versions: "2.11.3",
+        versions: "2.11.3 | 3.0.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "numpy",
+        versions: "1.15.4 | 1.16.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "orjson",
+        versions: "3.8.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pandas",
+        versions: "2.2.0 | 2.2.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "paramiko",
+        versions: "3.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pdfkit",
+        versions: "0.6.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "piexif",
+        versions: "1.1.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Pillow",
+        versions: "9.4.0 | 9.5.0 | 11.2.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pydantic",
+        versions: "1.10.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "PyJWT",
+        versions: "2.3.0 | 2.8.0 | 2.10.1",
         link: "./python-libraries/",
       },
       {
@@ -465,18 +535,64 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "Pillow",
-        versions: "9.4.0",
+        name: "python-jose",
+        versions: "3.3.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "python-multipart",
+        versions: "0.0.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "redis",
+        versions: "4.5.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "requests",
+        versions: "2.25.1 | 2.30.0 | 2.31.0 | 2.32.3",
         link: "./python-libraries/",
       },
       {
         name: "setuptools",
-        versions: "75.8.0",
+        versions: "65.5.1 | 68.0.0 | 75.8.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "starlette",
+        versions: "0.27.0",
         link: "./python-libraries/",
       },
       {
         name: "statsmodels",
         versions: "0.14.4",
+        link: "./python-libraries/",
+      },
+      {
+        name: "tqdm",
+        versions: "4.66.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "urllib3",
+        versions: "1.26.20",
+        link: "./python-libraries/",
+      },
+      {
+        name: "uvicorn",
+        versions: "0.11.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "waitress",
+        versions: "2.1.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Werkzeug",
+        versions: "1.0.1 | 2.2.3",
+        link: "./python-libraries/",
       },
     ],
   },
@@ -518,7 +634,7 @@ const techData = [
     projects: [
       {
         name: "Angular",
-        versions: "13 | 14 | 15 | 16 | 17 | 18 ",
+        versions: "9 | 10 | 11| 12| 13 | 14 | 15 | 16 | 17 | 18 ",
         link: "./angular/",
       },
     ],

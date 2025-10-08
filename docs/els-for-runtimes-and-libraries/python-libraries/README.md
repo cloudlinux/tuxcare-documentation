@@ -4,19 +4,44 @@ Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides s
 
 ## Supported Python Libraries
 
-* **anyio**
-* **certifi**
-* **cryptography**
-* **Flask**
-* **gunicorn**
-* **idna**
-* **Jinja2**
-* **Pillow**
-* **pymongo**
-* **sentry-sdk**
-* **setuptools**
-* **waitress**
-* **Werkzeug**
+* **aiohttp** 3.8.1, 3.8.4, 3.8.5 
+* **anyio** 3.7.1
+* **celery** 5.1.2
+* **certifi** 2021.10.8, 2022.12.7, 2023.7.22
+* **cryptography** 3.4.8, 42.0.0, 42.0.8, 43.0.1, 43.0.3
+* **deepdiff** 6.2.3
+* **Django** 4.0, 5.0, 5.0.1, 5.0.2, 5.1, 5.1.4, 5.1.9
+* **dnspython** 2.3.0
+* **fastapi** 0.63.0, 0.104.1
+* **Flask** 1.1.2, 2.2.1
+* **future** 1.0.0
+* **GitPython** 3.1.31
+* **gunicorn** 20.0.4, 20.1.0, 21.2.0, 22.0.0
+* **httpx** 0.22.0
+* **idna** 2.1, 2.8, 3.6
+* **Jinja2** 2.11.3, 3.0.3
+* **numpy** 1.15.4, 1.16.0
+* **orjson** 3.8.5
+* **pandas** 2.2.0, 2.2.2
+* **paramiko** 3.0.0
+* **pdfkit** 0.6.1
+* **piexif** 1.1.3
+* **Pillow** 9.4.0, 9.5.0, 11.2.1
+* **pydantic** 1.10.5
+* **PyJWT** 2.3.0, 2.8.0, 2.10.1
+* **pymongo** 3.13.0
+* **python-jose** 3.3.0
+* **python-multipart** 0.0.6
+* **redis** 4.5.1
+* **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
+* **setuptools** 65.5.1, 68.0.0, 75.8.0
+* **starlette** 0.27.0
+* **statsmodels** 0.14.4
+* **tqdm** 4.66.1
+* **urllib3** 1.26.20
+* **uvicorn** 0.11.6
+* **waitress** 2.1.2
+* **Werkzeug** 1.0.1, 2.2.3
 
   **Supported architecture:** x86_64.
 
