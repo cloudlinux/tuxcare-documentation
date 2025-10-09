@@ -358,6 +358,11 @@ const techData = [
         link: "./node-forge/",
       },
       {
+        name: "pdfjs-dist",
+        versions: "2.16.105",
+        link: "./pdfjs-dist/",
+      },
+      {
         name: "picocolors",
         versions: "0.2.1",
         link: "./picocolors/",
