@@ -1,30 +1,30 @@
-# jsPDF
+# pdfjs-dist
 
-Endless Lifecycle Support (ELS) for jsPDF from TuxCare provides security fixes for jsPDF versions that have reached their end of life. This allows you to continue running jsPDF applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for pdfjs-dist from TuxCare provides security fixes for pdfjs-dist versions that have reached their end of life. This allows you to continue running pdfjs-dist applications without vulnerability concerns, even after official support has ended.
 
-## Supported jsPDF Versions
+## Supported pdfjs-dist Versions
 
-* jsPDF 2.5.2
+* pdfjs-dist 2.16.105
 
-## Connection to ELS for jsPDF Library
+## Connection to ELS for pdfjs-dist Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the jsPDF library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the pdfjs-dist library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS jsPDF library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS pdfjs-dist library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for jsPDF
+## Step 2: Set Up ELS for pdfjs-dist
 
-TuxCare provides ELS for jsPDF as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for pdfjs-dist as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your jsPDF project.
+1. Navigate to the root directory of your pdfjs-dist project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-jspdf-project/
+   my-pdfjs-dist-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -47,20 +47,20 @@ TuxCare provides ELS for jsPDF as an NPM package, hosted on a secure internal re
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your jsPDF dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your pdfjs-dist dependencies with the TuxCare packages:
 
    <CodeWithCopy>
 
    ```text
    "dependencies": {
-     "jspdf": "npm:@els-js/jspdf@2.5.2-tuxcare.1"
+     "pdfjs-dist": "npm:@els-js/pdfjs-dist@2.16.105-tuxcare.1"
    }
    ```
 
    </CodeWithCopy>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
-   
+
    <CodeWithCopy>
 
    ```text
@@ -69,7 +69,7 @@ TuxCare provides ELS for jsPDF as an NPM package, hosted on a secure internal re
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the jsPDF library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the pdfjs-dist library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -82,21 +82,18 @@ TuxCare provides ELS for jsPDF as an NPM package, hosted on a secure internal re
    You will see an output like:
 
    ```text
-    added 20 packages, and audited 21 packages in 2s
+    added 3 packages, and audited 4 packages in 3s
 
-    1 package is looking for funding
-    run `npm fund` for details
-    
-    2 moderate severity vulnerabilities
+    found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the jsPDF library into your project.
+7. You've successfully installed the Tuxcare ELS version of the pdfjs-dist library into your project.
 
-## Vulnerability Exploitability eXchange (VEX) 
+## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for jsPDF ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jspdf/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jspdf/).
+TuxCare provides VEX for pdfjs-dist ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/pdfjs/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/pdfjs/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -107,7 +104,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install jspdf@npm:@els-js/jspdf@2.5.2-tuxcare.2
+  npm install pdfjs-dist@npm:@els-js/pdfjs-dist@2.16.105-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -125,11 +122,10 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for jsPDF from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for pdfjs-dist from TuxCare versions:
 
-|     CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-|:--------------:| :------: |:--------:|:------------------:|:-------------------:|
-| CVE-2025-29907 | Direct   | High     | jspdf             |       < 3.0.1       |
-| CVE-2025-57810 | Direct   | High     | jspdf             |       < 3.0.2       |
+|     CVE ID     | CVE Type | Severity | Affected Libraries |            Vulnerable Versions            |
+|:--------------:| :------: |:--------:|:------------------:|:-----------------------------------------:|
+| CVE-2024-4367 | Direct   |   High   |      pdfjs-dist      |          Firefox < 126, Firefox ESR < 115.11 and Thunderbird < 115.11          |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
