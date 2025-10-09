@@ -441,7 +441,7 @@ const techData = [
       },
       {
         name: "cryptography",
-        versions: "3.4.8 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
+        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
         link: "./python-libraries/",
       },
       {
@@ -451,7 +451,7 @@ const techData = [
       },
       {
         name: "Django",
-        versions: "4.0 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9",
+        versions: "3.2.25 | 4.0 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9",
         link: "./python-libraries/",
       },
       {
@@ -467,6 +467,11 @@ const techData = [
       {
         name: "Flask",
         versions: "1.1.2 | 2.2.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "flask-cors",
+        versions: "4.0.2",
         link: "./python-libraries/",
       },
       {
