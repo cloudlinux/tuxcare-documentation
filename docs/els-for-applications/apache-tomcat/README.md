@@ -40,10 +40,10 @@ You need username and password in order to use TuxCare ELS Apache Tomcat reposit
    For Maven, you may choose any valid `<id>` value instead of `tuxcare-tomcat-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
    :::
 
-<CodeTabs :tabs="[
-  { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
-  { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
-]" />
+   <CodeTabs :tabs="[
+     { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
+     { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
+   ]" />
 
 Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
@@ -100,7 +100,7 @@ You've successfully integrated the TuxCare ELS for Apache Tomcat repository into
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
+TuxCare provides VEX for Apache Tomcat ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
