@@ -1475,7 +1475,7 @@ When the Sticky tag feature is enabled for particular servers, all such servers 
 
 ##### Support
 
-We offer unlimited, 24x7x365 support. [Submit a request](https://cloudlinux.zendesk.com/hc/requests/new) or email us at [support@cloudlinux.com](mailto:support@cloudlinux.com)
+We offer unlimited, 24x7x365 support. Submit a direct support request using [this form](https://support.tuxcare.com/hc/requests/new).
 
 * We answer all support questions within one business day and most within a couple of hours. To expedite the support, run the following command on your server (as root):
 
