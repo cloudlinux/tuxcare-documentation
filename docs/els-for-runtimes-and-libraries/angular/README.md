@@ -591,50 +591,82 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
    <CodeWithCopy>
 
    ```text
-   "dependencies": {
-     "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
-     "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
-     "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
-     "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
-     "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
-     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
-     "@angular/platform-browser-dynamic": "9.1.13",
-     "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
-     "rxjs": "~6.5.4",
-     "tslib": "^1.10.0",
-     "zone.js": "~0.10.2"
-   },
-   "devDependencies": {
-     "@angular-devkit/build-angular": "~0.901.15",
-     "@angular/cli": "~9.1.15",
-     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
-     "@types/jasmine": "~3.5.0",
-     "@types/jasminewd2": "~2.0.3",
-     "@types/node": "^12.11.1",
-     "codelyzer": "^5.1.2",
-     "jasmine-core": "~3.5.0",
-     "jasmine-spec-reporter": "~4.2.1",
-     "karma": "~5.0.0",
-     "karma-chrome-launcher": "~3.1.0",
-     "karma-coverage-istanbul-reporter": "~2.1.0",
-     "karma-jasmine": "~3.0.1",
-     "karma-jasmine-html-reporter": "~1.4.2",
-     "protractor": "~5.4.3",
-     "ts-node": "~8.3.0",
-     "tslint": "~6.1.0",
-     "typescript": "~3.8.3"
-   },
-   "overrides": {
-     "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
-     "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
-     "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
-     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
-     "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
-     "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
-     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
-     "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
-     "rxjs": "~6.5.4"
-   }
+    "dependencies": {
+      "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
+      "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
+      "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
+      "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
+      "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
+      "@angular/platform-browser-dynamic": "9.1.13",
+      "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
+      "rxjs": "~6.5.4",
+      "tslib": "^1.10.0",
+      "zone.js": "~0.10.2"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "~0.901.15",
+      "@angular/cli": "~9.1.15",
+      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
+      "@types/jasmine": "~3.5.0",
+      "@types/jasminewd2": "~2.0.3",
+      "@types/node": "^12.11.1",
+      "codelyzer": "^5.1.2",
+      "jasmine-core": "~3.5.0",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "npm:@els-js/karma@5.0.9-tuxcare.1",
+      "karma-chrome-launcher": "~3.1.0",
+      "karma-coverage-istanbul-reporter": "~2.1.0",
+      "karma-jasmine": "~3.0.1",
+      "karma-jasmine-html-reporter": "~1.4.2",
+      "protractor": "~5.4.3",
+      "ts-node": "~8.3.0",
+      "tslint": "~6.1.0",
+      "typescript": "~3.8.3"
+    },
+    "overrides": {
+      "@angular/animations": "npm:@els-js/angular-animations@9.1.13-tuxcare.1",
+      "@angular/common": "npm:@els-js/angular-common@9.1.13-tuxcare.1",
+      "@angular/compiler": "npm:@els-js/angular-compiler@9.1.13-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@9.1.13-tuxcare.1",
+      "@angular/core": "npm:@els-js/angular-core@9.1.13-tuxcare.1",
+      "@angular/forms": "npm:@els-js/angular-forms@9.1.13-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@9.1.13-tuxcare.1",
+      "@angular/router": "npm:@els-js/angular-router@9.1.13-tuxcare.1",
+      "ansi-html@0.0.7": "npm:@els-js/ansi-html@0.0.7-tuxcare.1",
+      "braces@2.3.2": "npm:@els-js/braces@2.3.2-tuxcare.1",
+      "cookie@0.4.2": "npm:@els-js/cookie@0.4.2-tuxcare.1",
+      "debug@4.1.1": "npm:@els-js/debug@4.1.1-tuxcare.1",
+      "form-data@2.3.3": "@els-js/form-data@2.3.3-tuxcare.2",
+      "http-cache-semantics@3.8.1": "npm:@els-js/http-cache-semantics@3.8.1-tuxcare.1",
+      "http-proxy-middleware@0.19.1": "@els-js/http-proxy-middleware@0.19.1-tuxcare.1",
+      "ip@1.1.5": "npm:@els-js/ip@1.1.5-tuxcare.2",
+      "loader-utils@2.0.0": "npm:@els-js/loader-utils@2.0.0-tuxcare.1",
+      "karma@5.0.9": "npm:@els-js/karma@5.0.9-tuxcare.1",
+      "micromatch@3.1.10": "npm:@els-js/micromatch@3.1.10-tuxcare.1",
+      "minimatch@3.0.4": "npm:@els-js/minimatch@3.0.4-tuxcare.1",
+      "nth-check@1.0.2": "npm:@els-js/nth-check@1.0.2-tuxcare.1",
+      "node-forge@0.10.0": "@els-js/node-forge@0.10.0-tuxcare.2",
+      "parseuri@0.0.6": "npm:@els-js/parseuri@0.0.6-tuxcare.1",
+      "postcss@7.0.27": "npm:@els-js/postcss@7.0.27-tuxcare.1",
+      "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.1",
+      "request@2.88.2": "npm:@els-js/request@2.88.2-tuxcare.2",
+      "rollup@2.1.0": "npm:@els-js/rollup@2.1.0-tuxcare.1",
+      "rxjs": "~6.5.4",
+      "semver@7.1.3": "npm:@els-js/semver@7.1.3-tuxcare.1",
+      "tar@4.4.19": "npm:@els-js/tar@4.4.19-tuxcare.1",
+      "terser@4.6.10": "npm:@els-js/terser@4.6.10-tuxcare.1",
+      "tough-cookie@2.5.0": "npm:@els-js/tough-cookie@2.5.0-tuxcare.2",
+      "tmp@0.0.30": "npm:@els-js/tmp@0.0.30-tuxcare.1",
+      "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
+      "tmp@0.2.1": "npm:@els-js/tmp@0.2.1-tuxcare.1",
+      "ua-parser-js@0.7.21": "npm:@els-js/ua-parser-js@0.7.21-tuxcare.1",
+      "webpack-dev-middleware@3.7.2": "npm:@els-js/webpack-dev-middleware@3.7.2-tuxcare.1",
+      "webpack-dev-server@3.11.0": "npm:@els-js/webpack-dev-server@3.11.0-tuxcare.1",
+      "webpack-subresource-integrity@1.4.0": "npm:@els-js/webpack-subresource-integrity@1.4.0-tuxcare.1",
+      "xml2js@0.4.23": "npm:@els-js/xml2js@0.4.23-tuxcare.1",
+      "yargs-parser@11.1.1": "npm:@els-js/yargs-parser@11.1.1-tuxcare.1"
+    }
    ```
 
    </CodeWithCopy>
@@ -899,6 +931,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |   CVE-2024-47068    | Transitive |   High   |            rollup             |            >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2            | tuxcare.1 |
 |   CVE-2022-37603    | Transitive | High |         loader-utils          |        >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1         | tuxcare.1 |
 |   CVE-2022-37599    | Transitive | High |         loader-utils          |        >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1         | tuxcare.1 |
+|   CVE-2024-21536    | Transitive | High |     http-proxy-middleware     |                       < 2.0.7, >= 3.0.0, < 3.0.3                       | tuxcare.1 |
 |   CVE-2024-29415    | Transitive |   High   |              ip               |                                <= 2.0.1                                | tuxcare.1 |
 |   CVE-2022-25881    | Transitive |   High   |     http-cache-semantics      |                                < 4.1.1                                 | tuxcare.1 |
 |   CVE-2021-23424    | Transitive |   High   |           ansi-html           |                                < 0.0.8                                 | tuxcare.1 |
@@ -913,8 +946,11 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |    CVE-2021-3803    | Transitive |   High   |           nth-check           |                                < 2.0.1                                 | tuxcare.1 |
 |   CVE-2022-25883    | Transitive |   High   |            semver             |                             7.0.0 - 7.5.1                              | tuxcare.1 |
 |   CVE-2022-25858    | Transitive |   High   |            terser             |                      < 4.8.1, >= 5.0.0, < 5.14.2                       | tuxcare.1 |
+|   CVE-2024-29180    | Transitive |   High   |    webpack-dev-middleware     |             >= 7.0.0, < 7.1.0, >= 6.0.0, < 6.1.2, <= 5.3.3             | tuxcare.1 |
 |    CVE-2023-0842    | Transitive | Moderate |            xml2js             |                                < 0.5.0                                 | tuxcare.1 |
 |   CVE-2020-7608     | Transitive | Moderate |         yargs-parser          | >= 6.0.0, < 13.1.2, >= 14.0.0, < 15.0.1, <= 5.0.0, >= 16.0.0, < 18.1.1 | tuxcare.1 |
+|   CVE-2021-23495     | Transitive | Moderate |             karma             |                                < 6.3.16                                | tuxcare.1 |
+|   CVE-2022-0437     | Transitive | Moderate |             karma             |                                < 6.3.14                                | tuxcare.1 |
 |   CVE-2024-28863    | Transitive | Moderate |              tar              |                                < 6.2.1                                 | tuxcare.1 |
 |   CVE-2022-24773    | Transitive | Moderate |          node-forge           |                                < 1.3.0                                 | tuxcare.1 |
 |    CVE-2022-0122    | Transitive | Moderate |          node-forge           |                                < 1.0.0                                 | tuxcare.1 |
@@ -923,6 +959,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |   CVE-2021-23382    | Transitive | Moderate |            postcss            |                      >= 8.0.0, < 8.2.13, < 7.0.36                      | tuxcare.1 |
 |   CVE-2021-23368    | Transitive | Moderate |            postcss            |                 >= 7.0.0, < 7.0.36, >= 8.0.0, < 8.2.10                 | tuxcare.1 |
 |   CVE-2023-26136    | Transitive | Moderate |         tough-cookie          |                                < 4.1.3                                 | tuxcare.1 |
+|   CVE-2023-26136    | Transitive | Moderate |         webpack-dev-server          |                                < 4.1.3                                 | tuxcare.1 |
 |   CVE-2023-42282    | Transitive |   Low    |              ip               |                            = 2.0.0, < 1.1.9                            | tuxcare.1 |
 |   CVE-2025-54798    | Transitive |   Low    |              tmp              |                                <= 0.2.3                                | tuxcare.1 |
 |   CVE-2017-16137    | Transitive |   Low    |             debug             |    < 2.6.9, >= 3.0.0, < 3.1.0, >= 3.2.0, < 3.2.7, >= 4.0.0, < 4.3.1    | tuxcare.1 |
