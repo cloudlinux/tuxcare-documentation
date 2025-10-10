@@ -34,6 +34,7 @@ export default {
                 "/els-for-os/centos-7-els/",
                 "/els-for-os/centos-8-els/",
                 "/els-for-os/centos-stream-8-els/",
+                "/els-for-os/debian-10-els/",
                 "/els-for-os/oracle-linux-6-els/",
                 "/els-for-os/oracle-linux-7-els/",
                 "/els-for-os/red-hat-enterprise-linux-7-els/",

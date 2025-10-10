@@ -62,7 +62,7 @@ In order to use Endless Lifecycle Support for CentOS 8, you will need to open TC
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./security-updates).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data/).
 
 * **CentOS 8.4 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml)
 * **CentOS 8.5 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml)
