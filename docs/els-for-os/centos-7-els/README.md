@@ -69,7 +69,7 @@ In order to use Endless Lifecycle Support for CentOS 7, you will need to open TC
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./security-updates).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
 
 * **CentOS 7 ELS OVAL Stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos7els/oval.xml)
 * **CentOS 7 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos7els/](hhttps://security.tuxcare.com/csaf/v2/els_os/centos7els/)
