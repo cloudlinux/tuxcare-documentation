@@ -235,10 +235,6 @@ export default {
                     icon: '/images/vue-template-compiler-logo.png',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/webpack/',
-                    icon: '/images/webpack-logo.png',
-                },
-                {
                     path: '/els-for-runtimes-and-libraries/sentry-browser/',
                     icon: '/images/sentry-browser-logo.png',
                 },
