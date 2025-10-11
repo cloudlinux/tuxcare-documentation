@@ -233,9 +233,9 @@ const techData = [
     ecosystemIcon: "/images/javascript.png",
     projects: [
       {
-        name: "@sentry/browser",
-        versions: "5.7.1",
-        link: "./sentry-browser/",
+        name: "Angular",
+        versions: "9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18",
+        link: "./angular/",
       },
       {
         name: "AngularJS",
@@ -407,7 +407,11 @@ const techData = [
         versions: "4.41.2 | 4.46.0",
         link: "./webpack/",
       },
-
+      {
+        name: "@sentry/browser",
+        versions: "5.7.1",
+        link: "./sentry-browser/",
+      },
     ],
   },
     {
@@ -645,17 +649,6 @@ const techData = [
       {
         name: "Ruby",
         versions: "3.1",
-      },
-    ],
-  },
-  {
-    ecosystem: "TypeScript",
-    ecosystemIcon: "/images/typescript.png",
-    projects: [
-      {
-        name: "Angular",
-        versions: "9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18",
-        link: "./angular/",
       },
     ],
   },

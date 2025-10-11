@@ -259,6 +259,7 @@ function ensureEndingSlash(path) {
 
 function resolveItem(item, pages, base, isNested) {
     if (typeof item === 'string') return resolvePage(pages, item, base)
+    else if (item.type === 'section-header') return item
     else if (Array.isArray(item)) return Object.assign(resolvePage(pages, item[0], base), {
         title: item[1]
     })

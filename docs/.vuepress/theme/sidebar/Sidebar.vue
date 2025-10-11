@@ -52,7 +52,6 @@ const page = usePageData()
 
 const sidebarItems = computed(() => resolveSidebarItems(page.value, route, propsItems.value))
 
-
  const openGroupIndex = ref(0)
 
 const refreshIndex = () => {
@@ -173,8 +172,10 @@ onUnmounted(() => {
     display block
 
   .sidebar-group-items
-    margin-left 2rem
+    margin-left 1rem
     margin-right 0.625rem
+    > li
+      margin-left 1rem
 
 @media (max-width: $mobileBreakpoint)
   .page
