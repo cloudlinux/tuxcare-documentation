@@ -87,6 +87,8 @@ export function isActive(route, path) {
  */
 
 export function resolvePage(pages, rawPath, base) {
+    const icon = rawPath.icon;
+    rawPath = rawPath.path || rawPath;
     if (base) {
         rawPath = resolvePath(rawPath, base)
     }
@@ -98,6 +100,7 @@ export function resolvePage(pages, rawPath, base) {
                 path: ensureExt(rawPath),
                 relativePath: `${rawPath.slice(1)}README.md`,
                 regularPath: rawPath,
+                icon,
             })
         }
     }
@@ -258,8 +261,8 @@ function ensureEndingSlash(path) {
  */
 
 function resolveItem(item, pages, base, isNested) {
-    if (typeof item === 'string') return resolvePage(pages, item, base)
-    else if (item.type === 'section-header') return item
+    if (item.type === 'section-header') return item
+    else if (typeof item === 'string' || item.path) return resolvePage(pages, item, base)
     else if (Array.isArray(item)) return Object.assign(resolvePage(pages, item[0], base), {
         title: item[1]
     })

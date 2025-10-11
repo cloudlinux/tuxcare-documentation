@@ -50,72 +50,198 @@ export default {
             children: [
                 "/els-for-runtimes-and-libraries/",
                 {
-                    icon: '/images/java.png',
                     title: 'Java',
                     type: 'section-header',
+                    icon: '/images/java.png',
                 },
-                "/els-for-runtimes-and-libraries/spring/",
                 {
-                    icon: '/images/python.png',
+                    path: '/els-for-runtimes-and-libraries/spring/',
+                    icon: '/images/spring-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/openjdk/',
+                    icon: '/images/openjdk-logo.png',
+                },
+                {
                     title: 'Python',
                     type: 'section-header',
+                    icon: '/images/python.png',
                 },
-                "/els-for-runtimes-and-libraries/python/",
-                "/els-for-runtimes-and-libraries/python-libraries/",
                 {
-                    icon: '/images/php.png',
+                    path: '/els-for-runtimes-and-libraries/python/',
+                    icon: '/images/python.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/python-libraries/',
+                    icon: '/images/python.png',
+                },
+                {
                     title: 'PHP',
                     type: 'section-header',
+                    icon: '/images/php-logo.png',
                 },
-                "/els-for-runtimes-and-libraries/php/",
                 {
-                    icon: '/images/csharp.png',
+                    path: '/els-for-runtimes-and-libraries/php/',
+                    icon: '/images/php-logo.png',
+                },
+                {
                     title: 'C#',
                     type: 'section-header',
+                    icon: '/images/csharp.png',
                 },
-                "/els-for-runtimes-and-libraries/dotnet/",
                 {
-                    icon: '/images/javascript.png',
+                    path: '/els-for-runtimes-and-libraries/dotnet/',
+                    icon: '/images/dotnet-logo.png',
+                },
+                {
                     title: 'JavaScript',
                     type: 'section-header',
+                    icon: '/images/javascript.png',
                 },
-                "/els-for-runtimes-and-libraries/angular/",
-                "/els-for-runtimes-and-libraries/angularjs/",
-                "/els-for-runtimes-and-libraries/bootstrap/",
-                "/els-for-runtimes-and-libraries/braces/",
-                "/els-for-runtimes-and-libraries/copy-anything/",
-                "/els-for-runtimes-and-libraries/crypto-js/",
-                "/els-for-runtimes-and-libraries/dompurify/",
-                "/els-for-runtimes-and-libraries/express/",
-                "/els-for-runtimes-and-libraries/express-jwt/",
-                "/els-for-runtimes-and-libraries/form-data/",
-                "/els-for-runtimes-and-libraries/formidable/",
-                "/els-for-runtimes-and-libraries/i18next/",
-                "/els-for-runtimes-and-libraries/ip/",
-                "/els-for-runtimes-and-libraries/jquery/",
-                "/els-for-runtimes-and-libraries/jsonwebtoken/",
-                "/els-for-runtimes-and-libraries/jsonpath-plus/",
-                "/els-for-runtimes-and-libraries/jspdf/",
-                "/els-for-runtimes-and-libraries/lodash/",
-                "/els-for-runtimes-and-libraries/marked/",
-                "/els-for-runtimes-and-libraries/mongodb/",
-                "/els-for-runtimes-and-libraries/mongoose/",
-                "/els-for-runtimes-and-libraries/multer/",
-                "/els-for-runtimes-and-libraries/mysql2/",
-                "/els-for-runtimes-and-libraries/next/",
-                "/els-for-runtimes-and-libraries/node-forge/",
-                "/els-for-runtimes-and-libraries/openjdk/",
-                "/els-for-runtimes-and-libraries/pdfjs-dist/",
-                "/els-for-runtimes-and-libraries/picocolors/",
-                "/els-for-runtimes-and-libraries/quill/",
-                "/els-for-runtimes-and-libraries/request/",
-                "/els-for-runtimes-and-libraries/rollup/",
-                "/els-for-runtimes-and-libraries/ssr-window/",
-                "/els-for-runtimes-and-libraries/tough-cookie/",
-                "/els-for-runtimes-and-libraries/undici/",
-                "/els-for-runtimes-and-libraries/vue-template-compiler/",
-                "/els-for-runtimes-and-libraries/webpack/",
-                "/els-for-runtimes-and-libraries/sentry-browser/",
+                {
+                    path: '/els-for-runtimes-and-libraries/angular/',
+                    icon: '/images/angular-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/angularjs/',
+                    icon: '/images/angular-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/bootstrap/',
+                    icon: '/images/bootstrap-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/braces/',
+                    icon: '/images/braces-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/copy-anything/',
+                    icon: '/images/copy-anything-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/crypto-js/',
+                    icon: '/images/crypto-js-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/dompurify/',
+                    icon: '/images/dompurify-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/express/',
+                    icon: '/images/express-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/express-jwt/',
+                    icon: '/images/express-jwt-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/form-data/',
+                    icon: '/images/form-data-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/formidable/',
+                    icon: '/images/formidable-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/i18next/',
+                    icon: '/images/i18next-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/ip/',
+                    icon: '/images/ip-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/jquery/',
+                    icon: '/images/jquery-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/jsonwebtoken/',
+                    icon: '/images/jsonwebtoken-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/jsonpath-plus/',
+                    icon: '/images/jsonpath-plus-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/jspdf/',
+                    icon: '/images/jspdf-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/lodash/',
+                    icon: '/images/lodash-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/marked/',
+                    icon: '/images/marked-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/mongodb/',
+                    icon: '/images/mongodb-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/mongoose/',
+                    icon: '/images/mongoose-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/multer/',
+                    icon: '/images/multer-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/mysql2/',
+                    icon: '/images/mysql2-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/next/',
+                    icon: '/images/next-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/node-forge/',
+                    icon: '/images/node-forge-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/pdfjs-dist/',
+                    icon: '/images/pdfjs-dist-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/picocolors/',
+                    icon: '/images/javascript.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/quill/',
+                    icon: '/images/quill-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/request/',
+                    icon: '/images/request-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/rollup/',
+                    icon: '/images/rollup-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/ssr-window/',
+                    icon: '/images/javascript.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/tough-cookie/',
+                    icon: '/images/tough-cookie-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/undici/',
+                    icon: '/images/undici-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/vue-template-compiler/',
+                    icon: '/images/vue-template-compiler-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/webpack/',
+                    icon: '/images/webpack-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/sentry-browser/',
+                    icon: '/images/sentry-browser-logo.png',
+                },
             ]
         },
     ],
