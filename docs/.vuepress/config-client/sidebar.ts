@@ -104,7 +104,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/angularjs/',
-                    icon: '/images/angular-logo.png',
+                    icon: '/images/angularjs-logo.png',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/bootstrap/',
