@@ -1,4 +1,4 @@
-# Ubuntu 20.04 ELS
+# Debian 10 ELS
 
 ## Connection to ELS repository
 
@@ -6,7 +6,7 @@ To install the Endless Lifecycle Support repository on a server, you just need t
 
 ### Outbound Firewall Settings
 
-In order to use Endless Lifecycle Support for Ubuntu 20.04, you will need to open TCP port 443 to the following destinations:
+In order to use Endless Lifecycle Support for Debian 10, you will need to open TCP port 443 to the following destinations:
 
 * [cln.cloudlinux.com](http://cln.cloudlinux.com)
 * [repo.tuxcare.com](http://repo.tuxcare.com)
@@ -18,7 +18,7 @@ In order to use Endless Lifecycle Support for Ubuntu 20.04, you will need to ope
    <CodeWithCopy>
 
    ```
-   wget https://repo.tuxcare.com/ubuntu20_04-els/install-ubuntu20.04-els-repo.sh
+   wget https://repo.tuxcare.com/debian10-els/install-debian10-els-repo.sh
    ```
 
    </CodeWithCopy>
@@ -28,7 +28,7 @@ In order to use Endless Lifecycle Support for Ubuntu 20.04, you will need to ope
    <CodeWithCopy>
 
    ```
-   bash install-ubuntu20.04-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
+   bash install-debian10-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
    ```
 
    </CodeWithCopy>
@@ -38,7 +38,7 @@ In order to use Endless Lifecycle Support for Ubuntu 20.04, you will need to ope
    <CodeWithCopy>
 
    ```
-   apt-cache show els-define
+   apt-cache show els-os-release
    ```
 
    </CodeWithCopy>
@@ -48,28 +48,30 @@ In order to use Endless Lifecycle Support for Ubuntu 20.04, you will need to ope
    Example:
  
    ```
-   root@localhost:~# apt-cache show els-define
-   Package: els-define
-   Version: 1-1.0.3
+   root@localhost:~# apt-cache show els-os-release
+   Package: els-os-release
+   Version: 1.0.0-2
    Architecture: amd64
-   Maintainer: Darya Malyavkina <dmalyavkina@cloudlinux.com>
-   Installed-Size: 10
+   Maintainer: Koba Karaputadze <kkaraputadze@cloudlinux.com>
+   Installed-Size: 17
+   Conflicts: els-define
+   Replaces: els-define
    Homepage: https://tuxcare.com/extended-lifecycle-support/
    Priority: optional
    Section: utils
-   Filename: pool/main/e/els-define/els-define_1-1.0.3_amd64.deb
-   Size: 1926
-   SHA256: eda90ec17fee27c862a923c3666591b5958e5a1bbebf33078cf1fd859d31edff
-   SHA1: b3cef5e330f25b2daaf30eb5f41f67809642d9be
-   MD5sum: 629b938770455731d05c3525a71b7653
-   Description: ELS define package for Ubuntu 20.04
-   Description-md5: 05246f694bf7646914c7d748ae3f6a15
+   Filename: pool/main/e/els-os-release/els-os-release_1.0.0-2_amd64.deb
+   Size: 5306
+   SHA256: be11d8bffaac9f70c8b19d2f9c96e64bb0a698593671d807e6fe75687863e3c8
+   SHA1: 47238eb136a07fb1b91fe531b6e4ebbd3207a6ab
+   MD5sum: b82dba173e67dfbfc83a6f414c866a59
+   Description: ELS os release package for deb systems
+   Description-md5: f3fdfd5cb5f71a4ebb6f1f40c8d57483
    ```
 
 ## Security Updates
 
 TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
 
-* **Ubuntu 20.04 ELS**: [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml)
-* **Ubuntu 20.04 ELS**: [security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/)
-* **Ubuntu 20.04 ELS**: [cve.tuxcare.com/rss_feed/els/releases/ubuntu20.04els](https://cve.tuxcare.com/rss_feed/els/releases/ubuntu20.04els)
+* **Debian 10 ELS**: [oval.xml](https://security.tuxcare.com/oval/els_os/debian10els/oval.xml)
+* **Debian 10 ELS**: [security.tuxcare.com/csaf/v2/els_os/debian10els/](https://security.tuxcare.com/csaf/v2/els_os/debian10els/)
+* **Debian 10 ELS**: [cve.tuxcare.com/rss_feed/els/releases/debian10els](https://cve.tuxcare.com/rss_feed/els/releases/debian10els)
