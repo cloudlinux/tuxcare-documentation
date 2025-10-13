@@ -10,6 +10,7 @@ Our ELS service is designed to provide solutions for organizations that are not 
 * [CentOS 7](./centos-7-els)
 * [CentOS 8](./centos-8-els)
 * [CentOS Stream 8](./centos-stream-8-els)
+* [Debian 10](./debian-10-els)
 * [Oracle Linux 6](./oracle-linux-6-els)
 * [Oracle Linux 7](./oracle-linux-7-els)
 * [Red Hat Enterprise Linux 7](./red-hat-enterprise-linux-7-els)
