@@ -403,11 +403,6 @@ const techData = [
         link: "./vue-template-compiler/",
       },
       {
-        name: "webpack",
-        versions: "4.41.2 | 4.46.0",
-        link: "./webpack/",
-      },
-      {
         name: "@sentry/browser",
         versions: "5.7.1",
         link: "./sentry-browser/",
