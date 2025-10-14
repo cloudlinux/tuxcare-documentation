@@ -97,17 +97,17 @@ const techData = [
       {
         name: "Dom4j",
         versions: "1.6.1",
-        link: "./dom4j/",
+        link: "./java-libraries/",
       },
       {
         name: "SnakeYAML",
         versions: "1.23 | 1.26 | 1.29 | 1.30 | 1.33",
-        link: "./snakeyaml/",
+        link: "./java-libraries/",
       },
       {
         name: "Google Guava",
         versions: "20.0 | 30.1-jre | 31.1-jre",
-        link: "./google-guava/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Hadoop",
@@ -127,37 +127,37 @@ const techData = [
       {
         name: "Okio",
         versions: "2.8.0",
-        link: "./okio/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Commons BeanUtils",
         versions: "1.9.4",
-        link: "./apache-commons-beanutils/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Commons HttpClient",
         versions: "3.1",
-        link: "./apache-commons-httpclient/",
+        link: "./java-librariest/",
       },
       {
         name: "Apache CXF",
         versions: "3.5.9",
-        link: "./apache-cxf/",
+        link: "./java-libraries/",
       },
       {
         name: "DNSJava",
         versions: "2.1.7",
-        link: "./dnsjava/",
+        link: "./java-libraries/",
       },
       {
         name: "el-spec",
         versions: "3.0.0",
-        link: "./el-spec/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Hive",
         versions: "2.3.9",
-        link: "./apache-hive/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Kafka",
@@ -172,27 +172,27 @@ const techData = [
       {
         name: "Logback",
         versions: "1.2.13",
-        link: "./logback/",
+        link: "./java-libraries/",
       },
       {
         name: "Netty",
         versions: "4.1.115.Final | 4.1.63.Final",
-        link: "./netty/",
+        link: "./java-libraries/",
       },
       {
         name: "Nimbus JOSE + JWT",
         versions: "9.22 | 9.24.4",
-        link: "./nimbus-jose-jwt/",
+        link: "./java-libraries/",
       },
       {
         name: "Querydsl",
         versions: "5.1.0",
-        link: "./querydsl/",
+        link: "./java-libraries/",
       },
       {
         name: "Plexus Utils",
         versions: "1.5.8",
-        link: "./plexus-utils/",
+        link: "./java-libraries/",
       },
       {
         name: "PostgreSQL",
@@ -207,12 +207,12 @@ const techData = [
       {
         name: "Reload4j",
         versions: "1.2.17",
-        link: "./reload4j/",
+        link: "./java-libraries/",
       },
       {
         name: "Snappy Java",
         versions: "1.1.8.4",
-        link: "./snappy-java/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Tomcat",
@@ -221,32 +221,32 @@ const techData = [
       {
         name: "Apache Thrift",
         versions: "0.9.3",
-        link: "./apache-thrift/",
+        link: "./java-libraries/",
       },
       {
         name: "Thymeleaf",
         versions: "3.0.15.RELEASE",
-        link: "./thymeleaf/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Velocity Engine",
         versions: "1.7",
-        link: "./apache-velocity-engine/",
+        link: "./java-libraries/",
       },
       {
         name: "Woodstox",
         versions: "5.0.3",
-        link: "./woodstox/",
+        link: "./java-libraries/",
       },
       {
         name: "XMLUnit",
         versions: "2.9.1 | 2.9.0"
-        ,link: "./xmlunit/",
+        ,link: "./java-libraries/",
       },
       {
         name: "Apache Commons IO",
         versions: "2.7",
-        link: "./apache-commons-io/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Commons Lang",
@@ -256,7 +256,7 @@ const techData = [
       {
         name: "Apache Santuario XML Security For Java",
         versions: "2.0.10 | 2.3.1",
-        link: "./apache-santuario-xml-security-for-java/",
+        link: "./java-libraries/",
       },
     ],
   },

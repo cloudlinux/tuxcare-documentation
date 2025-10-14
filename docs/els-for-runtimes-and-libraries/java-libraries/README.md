@@ -1,19 +1,47 @@
-# Dom4j
+# Java Libraries
 
-TuxCare's Endless Lifecycle Support (ELS) for Dom4j provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Dom4j core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Dom4j service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Dom4j applications.
+Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides security fixes for a variety of Java Libraries. This allows you to continue running your Java applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions
+## Supported Java Libraries
 
-* Dom4j 1.6.1
+* **Apache Commons BeanUtils** 1.9.4
+* **Apache Commons HttpClient** 3.1
+* **Apache Commons IO** 2.7
+* **Apache Commons Lang** 2.4, 2.6, 3.4, 3.10, 3.12.0
+* **Apache CXF** 3.5.9
+* **Apache Hive** 2.3.9
+* **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
+* **Apache Thrift** 0.9.3
+* **Apache Tomcat** 8.5.100, 9.0.75
+* **Apache Velocity Engine** 1.7
+* **DNSJava** 2.1.7
+* **Dom4j** 1.6.1
+* **el-spec** 3.0.0
+* **Google Guava** 20.0, 30.1-jre, 31.1-jre
+* **Logback** 1.2.13
+* **Netty** 4.1.115.Final, 4.1.63.Final
+* **Nimbus JOSE + JWT** 9.22, 9.24.4
+* **Okio** 2.8.0
+* **Plexus Utils** 1.5.8
+* **Querydsl** 5.1.0
+* **Reload4j** 1.2.17
+* **SnakeYAML** 1.23, 1.26, 1.29, 1.30, 1.33
+* **Snappy Java** 1.1.8.4
+* **Thymeleaf** 3.0.15.RELEASE
+* **Woodstox** 5.0.3
+* **XMLUnit** 2.9.1, 2.9.0
 
-## Connection to ELS for Dom4j Repository
+**Supported architecture:** x86_64.
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Dom4j repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
+Other libraries and architectures upon request.
+
+## Connection to ELS for Java Libraries Repository
+
+This guide outlines the steps needed to integrate the TuxCare ELS for Java Libraries repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Dom4j repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need username and password in order to use TuxCare ELS Java Libraries repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -40,23 +68,23 @@ You need username and password in order to use TuxCare ELS Dom4j repository. Ano
    For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
    :::
 
-   <CodeTabs :tabs="[
-     { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
-     { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
-   ]" />
+<CodeTabs :tabs="[
+  { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
+  { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
+]" />
 
 Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
-Add the TuxCare Dom4j repository and plugins to your build configuration:
+Add the TuxCare Java Libraries repository and plugins to your build configuration:
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavenrepo },
   { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
-* To fully switch from the official Dom4j repository, replace it with the TuxCare repository.
+* To fully switch from the official Java Libraries repository, replace it with the TuxCare repository.
 * To keep both, add TuxCare after the official one.
 
 Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
@@ -65,9 +93,8 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace the Dom4j dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
-
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+Replace the Java Libraries dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
+Replace the version with the specific ELS artifact you need; available versions are listed in your TuxCare Nexus at `https://nexus.repo.tuxcare.com/repository/els_spring/` (anonymous access is restricted).
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -76,7 +103,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 
 ### Step 5: Verify and Build
 
-1. To confirm the TuxCare Dom4j repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+1. To confirm the TuxCare Java Libraries repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
@@ -90,23 +117,23 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
     { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Dom4j repository.
+The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Java Libraries repository.
 
 ### Conclusion
 
-You've successfully integrated the TuxCare ELS for Dom4j repository into your project. You can now benefit from the secure and vetted Dom4j libraries it provides.
+You've successfully integrated the TuxCare ELS for Java Libraries repository into your project. You can now benefit from the secure and vetted Java libraries it provides.
 
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Dom4j ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/dom4j/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/dom4j/).
+TuxCare provides VEX for Java Libraries ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
-<!-- data for Dom4j instructions used in code blocks -->
+<!-- data for Java Libraries instructions used in code blocks -->
 
 <script setup>
 const mavencreds =
@@ -152,16 +179,14 @@ const gradlerepo =
 const mavendeps =
 `<dependencies>
     <dependency>
-        <groupId>dom4j</groupId>
-        <artifactId>dom4j</artifactId>
-        <version>1.6.1.tuxcare.1</version>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-core</artifactId>
+        <version>3.5.9.tuxcare.1</version>
     </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-    implementation "dom4j:dom4j:1.6.1.tuxcare.1"
+    implementation "org.apache.cxf:cxf-core:3.5.9.tuxcare.1"
 }`
 </script>
-
-
