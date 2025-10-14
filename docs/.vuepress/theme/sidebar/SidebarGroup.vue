@@ -10,7 +10,15 @@
           v-if="open || !collapsable"
       >
         <li v-for="child in item?.children">
-          <SidebarLink :closeSidebarDrawer="closeSidebarDrawer" :item="child"/>
+          <SidebarSectionHeader
+              v-if="child?.type === 'section-header'"
+              :item="child"
+          />
+          <SidebarLink
+              v-else
+              :closeSidebarDrawer="closeSidebarDrawer"
+              :item="child"
+          />
         </li>
       </ul>
     </DropdownTransition>
@@ -19,6 +27,7 @@
 
 <script setup>
 import SidebarLink from './SidebarLink.vue'
+import SidebarSectionHeader from './SidebarSectionHeader.vue'
 import DropdownTransition from "../components/DropdownTransition.vue";
 
 const props = defineProps({

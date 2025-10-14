@@ -145,4 +145,29 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   </CodeWithCopy>
 
+## Resolved CVEs
+
+Fixes for the following vulnerabilities are available in ELS for Bootstrap from TuxCare versions:
+
+<TableTabs label="Choose Bootstrap version: " >
+
+<template #bootstrap_3.4.1>
+
+|    CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+|:-------------:|:--------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-6485 |  Direct  |  Medium  |     bootstrap      |          >=1.4.0 <=3.4.1          |
+| CVE-2025-1647 |  Direct  |  Medium  |     bootstrap      |          >=3.4.1 <4.0.0          |
+
+  </template>
+
+<template #bootstrap_4.6.2>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: |:--------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-6531  | Rejected | -        |     bootstrap      |          -          |
+
+  </template>
+
+</TableTabs>
+
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

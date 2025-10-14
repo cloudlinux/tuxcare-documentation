@@ -127,8 +127,9 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for jsPDF from TuxCare versions:
 
-| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2025-29907 | Direct   | High     | jspdf             | < 3.0.1           |
+|     CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+|:--------------:| :------: |:--------:|:------------------:|:-------------------:|
+| CVE-2025-29907 | Direct   | High     | jspdf             |       < 3.0.1       |
+| CVE-2025-57810 | Direct   | High     | jspdf             |       < 3.0.2       |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

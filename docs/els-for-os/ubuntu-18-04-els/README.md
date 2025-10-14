@@ -68,7 +68,7 @@ In order to use Endless Lifecycle Support for Ubuntu 18.04, you will need to ope
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./security-updates).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
 
 * **Ubuntu 18.04 ELS**: [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu18.04els/oval.xml)
 * **Ubuntu 18.04 ELS**: [security.tuxcare.com/csaf/v2/els_os/ubuntu18.04els/](https://security.tuxcare.com/csaf/v2/els_os/ubuntu18.04els/)
