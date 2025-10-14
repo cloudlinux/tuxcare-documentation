@@ -65,27 +65,23 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-hadoop/',
-                    icon: '/images/java.png',
+                    icon: '/images/apache.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-struts/',
-                    icon: '/images/java.png',
+                    icon: '/images/apache.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-spark/',
-                    icon: '/images/java.png',
+                    icon: '/images/apache-spark.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-kafka/',
-                    icon: '/images/java.png',
-                },
-                {
-                    path: '/els-for-runtimes-and-libraries/apache-velocity-engine/',
-                    icon: '/images/java.png',
+                    icon: '/images/apache-kafka.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/postgresql/',
-                    icon: '/images/java.png',
+                    icon: '/images/postgresql.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/protobuf/',
@@ -93,11 +89,11 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/jackson/',
-                    icon: '/images/java.png',
+                    icon: '/images/jackson.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-commons-lang/',
-                    icon: '/images/java.png',
+                    icon: '/images/apache.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/java-libraries/',
