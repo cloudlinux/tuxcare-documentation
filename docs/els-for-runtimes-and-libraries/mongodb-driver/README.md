@@ -1,22 +1,22 @@
-# MongoDB
+# MongoDB Driver
 
-Endless Lifecycle Support (ELS) for MongoDB from TuxCare provides security fixes for MongoDB versions that have reached their end of life. This allows you to continue running MongoDB applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for MongoDB driver from TuxCare provides security fixes for MongoDB driver versions that have reached their end of life. This allows you to continue running MongoDB applications without vulnerability concerns, even after official support has ended.
 
-## Supported MongoDB Versions
+## Supported MongoDB Driver Versions
 
-* MongoDB 2.2.36
+* MongoDB Driver 2.2.36
 
-## Connection to ELS for MongoDB Library
+## Connection to ELS for MongoDB Driver
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the MongoDB library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the MongoDB Driver.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS MongoDB library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS MongoDB driver. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for MongoDB
+## Step 2: Set Up ELS for MongoDB Driver
 
-TuxCare provides ELS for MongoDB as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for MongoDB driver as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
 1. Navigate to the root directory of your MongoDB project.
 2. Create a `.npmrc` file or update it if it already exists.
@@ -69,7 +69,7 @@ TuxCare provides ELS for MongoDB as an NPM package, hosted on a secure internal 
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the MongoDB library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the MongoDB driver (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -87,7 +87,7 @@ TuxCare provides ELS for MongoDB as an NPM package, hosted on a secure internal 
     found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the MongoDB library into your project.
+7. You've successfully installed the Tuxcare ELS version of the MongoDB driver into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
