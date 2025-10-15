@@ -16,24 +16,35 @@ export default {
     const active = item?.type === 'auto'
         ? selfActive || item.children.some(c => isActive($route, item.basePath + '#' + c.slug))
         : selfActive;
-    const link = renderHeader(h, item?.path, item.title || item?.path, active, item.headers,closeSidebarDrawer,$router);
+    const link = renderHeader(h, item?.path, item.title || item?.path, active, item.headers, closeSidebarDrawer, $router, item?.icon);
     const configDepth = $page.value.frontmatter?.sidebarDepth != null
         ? $page.value.frontmatter?.sidebarDepth
         : 5;
     const maxDepth = configDepth == null ? 1 : configDepth;
     if (item?.type === 'auto') {
-      return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth,1,closeSidebarDrawer)]
+      return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth, 1, closeSidebarDrawer)]
     } else {
       if (item.headers && item.headers.length) {
         const children = groupHeaders(item.headers);
-        return [link, renderChildren(h, children, item?.path, $route, maxDepth, 1,closeSidebarDrawer)];
+        return [link, renderChildren(h, children, item?.path, $route, maxDepth, 1, closeSidebarDrawer)];
       }
-      return renderLink(h, item?.path, item.title || item?.path, active, item.children,0,closeSidebarDrawer);
+      return renderLink(h, item?.path, item.title || item?.path, active, item.children, 0, closeSidebarDrawer, item?.icon);
     }
   }
 }
 
-function renderLink(h, to, text, active, children, depth = 0,closeSidebarDrawer) {
+function renderLink(h, to, text, active, children, depth = 0, closeSidebarDrawer, icon) {
+  const linkContent = icon
+    ? [
+        h('img', {
+          src: icon,
+          class: 'sidebar-link-icon',
+          alt: text
+        }),
+        text
+      ]
+    : [text];
+
   const link = h(RouterLink, {
     'data-anchor': to,
     to,
@@ -42,9 +53,11 @@ function renderLink(h, to, text, active, children, depth = 0,closeSidebarDrawer)
     class: {
       active,
       'sidebar-link': true,
+      'sidebar-link--with-icon': !!icon,
       ['link-depth-level-' + depth]: true,
     },
-  }, () => [text]);
+  }, () => linkContent);
+
   return h('div', {
     class: {
       active,
@@ -59,7 +72,7 @@ function renderLink(h, to, text, active, children, depth = 0,closeSidebarDrawer)
   }, [link]);
 }
 
-function renderHeader(h, to, text, active, childHeaders,closeSidebarDrawer,$router) {
+function renderHeader(h, to, text, active, childHeaders, closeSidebarDrawer, $router, icon) {
   const hasDirectChildren = !!childHeaders && childHeaders.some(child => child.level !== 1);
   return h('div', {
     class: {
@@ -68,6 +81,7 @@ function renderHeader(h, to, text, active, childHeaders,closeSidebarDrawer,$rout
       'sidebar-header': true,
       'sidebar-link': true,
       'sidebar-header--empty': !hasDirectChildren,
+      'sidebar-header--with-icon': !!icon,
     },
     onClick: (e) => {
       const classes = e.target.classList;
@@ -75,10 +89,10 @@ function renderHeader(h, to, text, active, childHeaders,closeSidebarDrawer,$rout
       classes.toggle('collapsed')
       link && $router.push(link.getAttribute('href'))
     }
-  }, [renderLink(h, to, text, active, null,0,closeSidebarDrawer)])
+  }, [renderLink(h, to, text, active, null, 0, closeSidebarDrawer, icon)])
 }
 
-function renderChildren(h, children, path, route, maxDepth, depth = 1,closeSidebarDrawer) {
+function renderChildren(h, children, path, route, maxDepth, depth = 1, closeSidebarDrawer) {
   if (!children || depth > maxDepth) return null;
 
   return h('ul', {class: 'sidebar-sub-headers'}, children.map(c => {
@@ -136,6 +150,12 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1,closeSideb
     &:first-child
       margin-left 0
 
+.sidebar-link-icon
+  max-width 1.5rem
+  height auto
+  margin-right 0.5rem
+  vertical-align middle
+  display inline-block
 
 .sidebar-link
   font-weight 400
@@ -144,6 +164,10 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1,closeSideb
   margin 0
   line-height 1.4
   cursor pointer
+
+  &.sidebar-link--with-icon
+    display flex
+    align-items center
 
   &.sidebar-header
     background-image url("../../public/expand-more.svg")
@@ -165,7 +189,6 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1,closeSideb
       background-image url("../../public/expand-more-down.svg")
       background-size 1rem 0.5625rem
       background-position left 5px center
-
 
   &:hover
     color $accentColor

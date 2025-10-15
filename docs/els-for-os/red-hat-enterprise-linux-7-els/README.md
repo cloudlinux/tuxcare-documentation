@@ -50,11 +50,11 @@ In order to use Endless Lifecycle Support for Red Hat Enterprise Linux 7, you wi
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./security-updates).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
 
 * **Red Hat Enterprise Linux 7 ELS**: [oval.xml](https://security.tuxcare.com/oval/els_os/rhel7els/oval.xml)
 * **Red Hat Enterprise Linux 7 ELS**: [security.tuxcare.com/csaf/v2/els_os/rhel7els/](https://security.tuxcare.com/csaf/v2/els_os/rhel7els/)
-* **Red Hat Enterprise Linux 7 ELS**: [cve.tuxcare.com/rss_feed/releases/rhel7els](https://cve.tuxcare.com/rss_feed/releases/rhel7els)
+* **Red Hat Enterprise Linux 7 ELS**: [cve.tuxcare.com/rss_feed/els/releases/rhel7els](https://cve.tuxcare.com/rss_feed/els/releases/rhel7els)
 
 ## Deinstallation instructions for yum repositories
 

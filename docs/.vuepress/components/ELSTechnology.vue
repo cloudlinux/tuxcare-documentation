@@ -95,60 +95,136 @@ const techData = [
         link: "./openjdk/",
       },
       {
-        name: "Log4j",
-        versions: "1.2.17 | 2.14.1",
-      },
-      {
-        name: "dom4j",
+        name: "Dom4j",
         versions: "1.6.1",
       },
       {
         name: "SnakeYAML",
-        versions: "1.26 | 1.30",
+        versions: "1.23 | 1.26 | 1.29 | 1.30 | 1.33",
       },
       {
         name: "Google Guava",
-        versions: "31.1-jre",
+        versions: "20.0 | 30.1-jre | 31.1-jre",
+      },
+      {
+        name: "Apache Hadoop",
+        versions: "2.7.3, 2.7.1",
       },
       {
         name: "Apache Struts",
-        versions: "2.5.33",
-      },
-      {
-        name: "Hibernate",
-        versions: "5.4.33 | 5.6.15 | 6.0.2 | 6.5.3",
-      },
-      {
-        name: "Apache Commons Collections",
-        versions: "3.2.2",
-      },
-      {
-        name: "Apache Tapestry",
-        versions: "5.7.3",
+        versions: "1.3.5 | 2.5.33",
       },
       {
         name: "Apache Spark",
-        versions: "2.4.8 | 3.4.4",
-      },
-      {
-        name: "Apache Lucene",
-        versions: "7.7.3 | 8.11.4",
-      },
-      {
-        name: "Apache Camel",
-        versions: "3.22.4 | 4.4.5 | 4.8.7",
-      },
-      {
-        name: "Apache Cocoon",
-        versions: "2.3.0",
-      },
-      {
-        name: "Apache Velocity",
-        versions: "1.7.0",
+        versions: "2.4.8",
       },
       {
         name: "Okio",
         versions: "2.8.0",
+      },
+      {
+        name: "Apache Commons BeanUtils",
+        versions: "1.9.4",
+      },
+      {
+        name: "Apache Commons HttpClient",
+        versions: "3.1",
+      },
+      {
+        name: "Apache CXF",
+        versions: "3.5.9",
+      },
+      {
+        name: "DNSJava",
+        versions: "2.1.7",
+      },
+      {
+        name: "el-spec",
+        versions: "3.0.0",
+      },
+      {
+        name: "Apache Hive",
+        versions: "2.3.9",
+      },
+      {
+        name: "Apache Kafka",
+        versions: "3.2.3",
+      },
+      {
+        name: "Jackson",
+        versions: "1.9.13",
+      },
+      {
+        name: "Logback",
+        versions: "1.2.13",
+      },
+      {
+        name: "Netty",
+        versions: "4.1.115.Final | 4.1.63.Final",
+      },
+      {
+        name: "Nimbus JOSE + JWT",
+        versions: "9.22 | 9.24.4",
+      },
+      {
+        name: "Querydsl",
+        versions: "5.1.0",
+      },
+      {
+        name: "Plexus Utils",
+        versions: "1.5.8",
+      },
+      {
+        name: "PostgreSQL",
+        versions: "42.5.0 | 42.2.16",
+      },
+      {
+        name: "Protobuf",
+        versions: "2.5.0"
+      },
+      {
+        name: "Reload4j",
+        versions: "1.2.17",
+      },
+      {
+        name: "Snappy Java",
+        versions: "1.1.8.4",
+      },
+      {
+        name: "Apache Tomcat",
+        versions: "8.5.100 | 9.0.75",
+      },
+      {
+        name: "Apache Thrift",
+        versions: "0.9.3",
+      },
+      {
+        name: "Thymeleaf",
+        versions: "3.0.15.RELEASE",
+      },
+      {
+        name: "Apache Velocity Engine",
+        versions: "1.7",
+      },
+      {
+        name: "Woodstox",
+        versions: "5.0.3",
+      },
+      {
+        name: "XMLUnit",
+        versions: "2.9.1 | 2.9.0"
+      },
+      {
+        name: "Apache Santuario XML Security For Java",
+        versions: "2.0.10 | 2.3.1",
+      },
+      {
+        name: "Apache Commons IO",
+        versions: "2.7",
+      },
+      {
+        name: "Apache Commons Lang",
+        versions: "2.4 | 2.6 | 3.4 | 3.10 | 3.12.0",
       },
     ],
   },
@@ -157,9 +233,9 @@ const techData = [
     ecosystemIcon: "/images/javascript.png",
     projects: [
       {
-        name: "Node.js",
-        versions: " 12 | 14 | 16 | 18 | 20",
-        link: "./nodejs/",
+        name: "Angular",
+        versions: "9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18",
+        link: "./angular/",
       },
       {
         name: "AngularJS",
@@ -167,84 +243,174 @@ const techData = [
         link: "./angularjs/",
       },
       {
-        name: "RequireJS",
-        versions: "2.3.x",
+        name: "Bootstrap",
+        versions: "3.4.1 | 4.6.2",
+        link: "./bootstrap/",
       },
       {
-        name: "Passport",
-        versions: "0.2.2",
-      },
-      {
-        name: "Lodash",
-        versions: "4.17.x",
-      },
-      {
-        name: "Loopback",
-        versions: "3.x | 2.x",
-      },
-      {
-        name: "YUI",
-        versions: "3.18.1",
-      },
-      {
-        name: "Next.js",
-        versions: "12.3.x",
-      },
-      {
-        name: "request",
-        versions: "2.88.0 | 2.88.2",
-      },
-      {
-        name: "tough-cookie",
-        versions: "2.4.3 | 2.5.0",
-      },
-      {
-        name: "crypto-js",
-        versions: "3.3.0",
-      },
-      {
-        name: "vue-template-compiler",
-        versions: "2.6.11",
-      },
-      {
-        name: "webpack",
-        versions: "4.41.2 | 4.46.0",
-      },
-      {
-        name: "@sentry/browser",
-        versions: "5.7.1",
-      },
-      {
-        name: "jsonwebtoken",
-        versions: "8.5.1",
-      },
-      {
-        name: "ip",
-        versions: "1.1.5,2.0.0",
-      },
-      {
-        name: "Quill",
-        versions: "1.3.7",
-      },
-      {
-        name: "undici",
-        versions: "5.28.4",
-      },
-      {
-        name: "rollup",
-        versions: "2.79.1 | 2.79.2",
+        name: "braces",
+        versions: "2.3.2",
+        link: "./braces/",
       },
       {
         name: "copy-anything",
         versions: "2.0.6",
+        link: "./copy-anything/",
       },
       {
-        name: "picocolors",
-        versions: "0.2.1",
+        name: "CryptoJS",
+        versions: "3.3.0",
+        link: "./crypto-js/",
+      },
+      {
+        name: "DOMPurify",
+        versions: "2.3.0 | 2.4.3",
+        link: "./dompurify/",
+      },
+      {
+        name: "express",
+        versions: "3.21.2",
+        link: "./express/",
+      },
+      {
+        name: "express-jwt",
+        versions: "0.1.3",
+        link: "./express-jwt/",
       },
       {
         name: "formidable",
         versions: "2.1.2",
+        link: "./formidable/",
+      },
+      {
+        name: "Form-Data",
+        versions: "2.3.3",
+        link: "./form-data/",
+      },
+      {
+        name: "i18next",
+        versions: "23.16.8",
+        link: "./i18next/",
+      },
+      {
+        name: "ip",
+        versions: "1.1.5 | 2.0.0",
+        link: "./ip/",
+      },
+      {
+        name: "jQuery",
+        versions: "1.12.4",
+        link: "./jquery/",
+      },
+      {
+        name: "JSON Web Token (JWT)",
+        versions: "0.4.0 | 8.5.1",
+        link: "./jsonwebtoken/",
+      },
+      {
+        name: "JSONPath Plus",
+        versions: "7.2.0",
+        link: "./jsonpath-plus/",
+      },
+      {
+        name: "jsPDF",
+        versions: "2.5.2",
+        link: "./jspdf/",
+      },
+      {
+        name: "Lodash",
+        versions: "4.5.0 | 4.17.x",
+        link: "./lodash/",
+      },
+      {
+        name: "marked",
+        versions: "4.0.9",
+        link: "./marked/",
+      },
+      {
+        name: "MongoDB",
+        versions: "2.2.36",
+        link: "./mongodb/",
+      },
+      {
+        name: "Mongoose",
+        versions: "5.13.23",
+        link: "./mongoose/",
+      },
+      {
+        name: "multer",
+        versions: "1.4.5-lts",
+        link: "./multer/",
+      },
+      {
+        name: "MySQL2",
+        versions: "2.3.3",
+        link: "./mysql2/",
+      },
+      {
+        name: "next",
+        versions: "13.5.11",
+        link: "./next/",
+      },
+      {
+        name: "node-forge",
+        versions: "0.10.0",
+        link: "./node-forge/",
+      },
+      {
+        name: "Node.js",
+        versions: " 12 | 14 | 16 | 18 | 20",
+        link: "./nodejs/",
+      },
+      {
+        name: "pdfjs-dist",
+        versions: "2.16.105",
+        link: "./pdfjs-dist/",
+      },
+      {
+        name: "picocolors",
+        versions: "0.2.1",
+        link: "./picocolors/",
+      },
+      {
+        name: "Quill",
+        versions: "1.3.7",
+        link: "./quill/",
+      },
+      {
+        name: "Request",
+        versions: "2.88.0 | 2.88.2",
+        link: "./request/",
+      },
+      {
+        name: "Rollup",
+        versions: "2.79.1 | 2.79.2",
+        link: "./rollup/",
+      },
+      {
+        name: "ssr-window",
+        versions: "4.0.2",
+        link: "./ssr-window/",
+      },
+      {
+        name: "tough-cookie",
+        versions: "2.4.3 | 2.5.0",
+        link: "./tough-cookie/",
+      },
+      {
+        name: "undici",
+        versions: "5.28.5",
+        link: "./undici/",
+      },
+      {
+        name: "vue-template-compiler",
+        versions: "2.6.11",
+        link: "./vue-template-compiler/",
+      },
+      {
+        name: "@sentry/browser",
+        versions: "5.7.1",
+        link: "./sentry-browser/",
       },
     ],
   },
@@ -258,43 +424,8 @@ const techData = [
         link: "./python/",
       },
       {
-        name: "certifi",
-        versions: "2021.10.8 | 2022.12.7 | 2023.7.22",
-        link: "./python-libraries/",
-      },
-      {
-        name: "setuptools",
-        versions: "65.5.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "gunicorn",
-        versions: "20.1.0 | 21.2.0 | 22.0.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "waitress",
-        versions: "2.1.2",
-        link: "./python-libraries/",
-      },
-      {
-        name: "idna",
-        versions: "2.1 | 2.8",
-        link: "./python-libraries/",
-      },
-      {
-        name: "cryptography",
-        versions: "42.0.8 | 43.0.1 | 43.0.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "Werkzeug",
-        versions: "1.0.1 | 2.2.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "sentry-sdk",
-        versions: "1.45.1",
+        name: "aiohttp",
+        versions: "3.8.1 | 3.8.4 | 3.8.5",
         link: "./python-libraries/",
       },
       {
@@ -303,13 +434,123 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "celery",
+        versions: "5.1.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "certifi",
+        versions: "2021.10.8 | 2022.12.7 | 2023.7.22",
+        link: "./python-libraries/",
+      },
+      {
+        name: "cryptography",
+        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "deepdiff",
+        versions: "6.2.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Django",
+        versions: "3.2.25 | 4.0 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9",
+        link: "./python-libraries/",
+      },
+      {
+        name: "dnspython",
+        versions: "2.3.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "fastapi",
+        versions: "0.63.0 | 0.104.1",
+        link: "./python-libraries/",
+      },
+      {
         name: "Flask",
-        versions: "1.1.2",
+        versions: "1.1.2 | 2.2.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "flask-cors",
+        versions: "4.0.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "future",
+        versions: "1.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "GitPython",
+        versions: "3.1.31",
+        link: "./python-libraries/",
+      },
+      {
+        name: "gunicorn",
+        versions: "20.0.4 | 20.1.0 | 21.2.0 | 22.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "httpx",
+        versions: "0.22.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "idna",
+        versions: "2.1 | 2.8 | 3.6",
         link: "./python-libraries/",
       },
       {
         name: "Jinja2",
-        versions: "2.11.3",
+        versions: "2.11.3 | 3.0.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "numpy",
+        versions: "1.15.4 | 1.16.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "orjson",
+        versions: "3.8.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pandas",
+        versions: "2.2.0 | 2.2.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "paramiko",
+        versions: "3.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pdfkit",
+        versions: "0.6.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "piexif",
+        versions: "1.1.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Pillow",
+        versions: "9.4.0 | 9.5.0 | 11.2.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pydantic",
+        versions: "1.10.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "PyJWT",
+        versions: "2.3.0 | 2.8.0 | 2.10.1",
         link: "./python-libraries/",
       },
       {
@@ -318,18 +559,64 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "Pillow",
-        versions: "9.4.0",
+        name: "python-jose",
+        versions: "3.3.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "python-multipart",
+        versions: "0.0.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "redis",
+        versions: "4.5.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "requests",
+        versions: "2.25.1 | 2.30.0 | 2.31.0 | 2.32.3",
         link: "./python-libraries/",
       },
       {
         name: "setuptools",
-        versions: "75.8.0",
+        versions: "65.5.1 | 68.0.0 | 75.8.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "starlette",
+        versions: "0.27.0",
         link: "./python-libraries/",
       },
       {
         name: "statsmodels",
         versions: "0.14.4",
+        link: "./python-libraries/",
+      },
+      {
+        name: "tqdm",
+        versions: "4.66.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "urllib3",
+        versions: "1.26.20",
+        link: "./python-libraries/",
+      },
+      {
+        name: "uvicorn",
+        versions: "0.11.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "waitress",
+        versions: "2.1.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Werkzeug",
+        versions: "1.0.1 | 2.2.3",
+        link: "./python-libraries/",
       },
     ],
   },
@@ -362,17 +649,6 @@ const techData = [
       {
         name: "Ruby",
         versions: "3.1",
-      },
-    ],
-  },
-  {
-    ecosystem: "TypeScript",
-    ecosystemIcon: "/images/typescript.png",
-    projects: [
-      {
-        name: "Angular",
-        versions: "4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19",
-        link: "./angular/",
       },
     ],
   },
@@ -475,8 +751,8 @@ function getFilteredProjects(item) {
   cursor: pointer;
   background-color: #fff;
   min-height: 2.5rem;
-  margin-bottom: 0.4rem;   
-  border-bottom: none; 
+  margin-bottom: 0.4rem;
+  border-bottom: none;
 }
 
 .ecosystem-tabs li.active {
@@ -528,7 +804,7 @@ function getFilteredProjects(item) {
   display: flex;
   align-items: center;
   border-bottom: none;
-  border-bottom: 1px solid #F48243; 
+  border-bottom: 1px solid #F48243;
 }
 
 .version-col li {

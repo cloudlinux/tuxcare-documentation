@@ -33,9 +33,10 @@ alt-php provides a more flexible and convenient environment for working with dif
 | :----------------------------------------------------------------------: | :----------: | :-------------------------------: |
 | EL 7 ( Amazon Linux 2, CentOS, CloudLinux, Oracle Linux, etc.)           | RPM          | 7.x                        |
 | EL 8 ( AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                        |
-| EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 8.x                        |
+| EL 9 ( AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                        |
+| EL 10 ( AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                        |
 | Ubuntu                                                                   | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04 |
-| Debian                                                                   | DEB          | 10, 11, 12	                      |
+| Debian                                                                   | DEB          | 10, 11, 12, 13                    |
 | Windows                                                                  | -            | Windows Server 2019, 2022, 2025   |
 
 **For supported PHP versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-php/projects).**
@@ -127,8 +128,8 @@ sudo yum install libvpx-1.3.0
    * Standard commands to install each version separately, for example, installing alt-php73:
 
      <CodeTabs :tabs="[
-       { title: 'RPM', content: `yum install alt-php73*` },
-       { title: 'DEB', content: `apt-get install alt-php73*` }
+       { title: 'RPM', content: `yum groupinstall alt-php73` },
+       { title: 'DEB', content: `apt-get install alt-php73-meta` }
      ]" />
 
    * To install all versions at the same time:
@@ -536,7 +537,7 @@ To search for alt-php packages in repositories:
 
 <CodeTabs :tabs="[
   { title: 'RPM', content: `sudo yum search alt-package-name` },
-  { title: 'DEB', content: `ssudo apt search alt-package-name` }
+  { title: 'DEB', content: `sudo apt search alt-package-name` }
 ]" />
 
 For example:
@@ -1063,6 +1064,7 @@ Currently, we provide OVAL data for the following OS versions:
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el7/oval.xml)
 * EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.): [oval.xml](https://security.tuxcare.com/oval/els_alt_php/el8/oval.xml)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [oval.xml](http://security.tuxcare.com/oval/els_alt_php/el9/oval.xml)
+* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [oval.xml](http://security.tuxcare.com/oval/els_alt_php/el10/oval.xml)
 * Ubuntu 16.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu16.04/oval.xml)
 * Ubuntu 18.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu18.04/oval.xml)
 * Ubuntu 20.04: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/ubuntu20.04/oval.xml)
@@ -1071,6 +1073,7 @@ Currently, we provide OVAL data for the following OS versions:
 * Debian 10: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian10/oval.xml)
 * Debian 11: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian11/oval.xml)
 * Debian 12: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian12/oval.xml)
+* Debian 13: [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian13/oval.xml)
 
 ### How to use OVAL
 
@@ -1122,6 +1125,7 @@ Currently, we provide CSAF data for the following OS versions:
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el7/](https://security.tuxcare.com/csaf/v2/els_alt_php/el7/)
 * EL 8 (AlmaLinux, CentOS,CentOS Stream, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el8/](https://security.tuxcare.com/csaf/v2/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el9/](https://security.tuxcare.com/csaf/v2/els_alt_php/el9/)
+* EL 10 (AlmaLinux, CloudLinux, Oracle Linix, etc.): [security.tuxcare.com/csaf/v2/els_alt_php/el10/](https://security.tuxcare.com/csaf/v2/els_alt_php/el10/)
 * Ubuntu 16.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu16.04/)
 * Ubuntu 18.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu18.04/)
 * Ubuntu 20.04: [security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/](https://security.tuxcare.com/csaf/v2/els_alt_php/ubuntu20.04/)
@@ -1130,6 +1134,7 @@ Currently, we provide CSAF data for the following OS versions:
 * Debian 10: [security.tuxcare.com/csaf/v2/els_alt_php/debian10/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian10/)
 * Debian 11: [security.tuxcare.com/csaf/v2/els_alt_php/debian11/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian11/)
 * Debian 12: [security.tuxcare.com/csaf/v2/els_alt_php/debian12/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian12/)
+* Debian 13: [security.tuxcare.com/csaf/v2/els_alt_php/debian13/](https://security.tuxcare.com/csaf/v2/els_alt_php/debian13/)
 
 ### How to Use CSAF
 
@@ -1142,6 +1147,7 @@ Currently, we provide errata for the following OS versions:
 * EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [security.tuxcare.com/errata/els_alt_php/el7/](https://security.tuxcare.com/errata/els_alt_php/el7/)
 * EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el8/](https://security.tuxcare.com/errata/els_alt_php/el8/)
 * EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [security.tuxcare.com/errata/els_alt_php/el9/](https://security.tuxcare.com/errata/els_alt_php/el9/)
+* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [security.tuxcare.com/errata/els_alt_php/el10/](https://security.tuxcare.com/errata/els_alt_php/el10/)
 * Ubuntu 16.04: [security.tuxcare.com/errata/els_alt_php/ubuntu16.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu16.04/)
 * Ubuntu 18.04: [security.tuxcare.com/errata/els_alt_php/ubuntu18.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu18.04/)
 * Ubuntu 20.04: [security.tuxcare.com/errata/els_alt_php/ubuntu20.04/](https://security.tuxcare.com/errata/els_alt_php/ubuntu20.04/)
@@ -1150,6 +1156,23 @@ Currently, we provide errata for the following OS versions:
 * Debian 10: [security.tuxcare.com/errata/els_alt_php/debian10/](https://security.tuxcare.com/errata/els_alt_php/debian10/)
 * Debian 11: [security.tuxcare.com/errata/els_alt_php/debian11/](https://security.tuxcare.com/errata/els_alt_php/debian11/)
 * Debian 12: [security.tuxcare.com/errata/els_alt_php/debian12/](https://security.tuxcare.com/errata/els_alt_php/debian12/)
+* Debian 13: [security.tuxcare.com/errata/els_alt_php/debian13/](https://security.tuxcare.com/errata/els_alt_php/debian13/)
+
+## RSS Feed
+
+* EL 7 (CentOS, CloudLinux, Oracle Linux, Amazon Linux 2, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el7](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el7)
+* EL 8 (AlmaLinux, CentOS, CentOS Stream,  CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el8](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el8)
+* EL 9 (AlmaLinux, CentOS, CloudLinux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el9](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el9)
+* EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.): [cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/el10/)
+* Ubuntu 16.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu16.04/)
+* Ubuntu 18.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu18.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu18.04/)
+* Ubuntu 20.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu20.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu20.04/)
+* Ubuntu 22.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu22.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu22.04/)
+* Ubuntu 24.04 [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu24.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu24.04/)
+* Debian 10: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian10/)
+* Debian 11: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian11/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/els_alt_php/debian11/)
+* Debian 12: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian12/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian12/)
+* Debian 13: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian13/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian13/)
 
 ## PHP extensions list
 

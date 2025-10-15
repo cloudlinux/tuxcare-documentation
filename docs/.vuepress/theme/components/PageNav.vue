@@ -58,8 +58,12 @@ const resolveNext = (page, items) => find(page, items, 1)
 const find = (page, items, offset) => {
   const res = [];
   items.forEach(item => {
-    if (item.type === 'group') res.push(...item.children || [])
-    else res.push(item)
+    if (item.type === 'group') {
+      const children = (item.children || []).filter(child => child?.type !== 'section-header');
+      res.push(...children);
+    } else if (item.type !== 'section-header') {
+      res.push(item);
+    }
   });
   for (let i = 0; i < res.length; i++) {
     const cur = res[i]

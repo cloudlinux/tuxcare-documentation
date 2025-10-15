@@ -62,7 +62,7 @@ In order to use Endless Lifecycle Support for CentOS 8, you will need to open TC
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./security-updates).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data/).
 
 * **CentOS 8.4 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml)
 * **CentOS 8.5 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml)
@@ -70,8 +70,8 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 * **CentOS 8.4 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos8.4els/](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/)
 * **CentOS 8.5 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos8.5els/](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/)
 
-* **CentOS 8.4 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/releases/centos8.4els)
-* **CentOS 8.5 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/releases/centos8.5els)
+* **CentOS 8.4 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/els/releases/centos8.4els)
+* **CentOS 8.5 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos8.5els](https://cve.tuxcare.com/rss_feed/els/releases/centos8.5els)
 
 ## Deinstallation instructions for yum repositories
 

@@ -68,11 +68,11 @@ In order to use Endless Lifecycle Support for CentOS 6, you will need to open TC
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/security-updates).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
 
 * **CentOS 6 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/centos6els/oval.xml)
 * **CentOS 6 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos6els/](https://security.tuxcare.com/csaf/v2/els_os/centos6els/)
-* **CentOS 6 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/releases/centos6els](https://cve.tuxcare.com/rss_feed/releases/centos6els)
+* **CentOS 6 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos6els](https://cve.tuxcare.com/rss_feed/els/releases/centos6els)
 
 ## Deinstallation instructions for yum repositories
 
