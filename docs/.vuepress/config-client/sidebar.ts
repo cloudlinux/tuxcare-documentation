@@ -112,8 +112,12 @@ export default {
                     icon: '/images/bootstrap-logo.png',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/base64url/',
+                    icon: '/images/javascript.png',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/braces/',
-                    icon: '/images/braces-logo.png',
+                    icon: '/images/placeholder-logo.png',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/copy-anything/',
@@ -144,8 +148,16 @@ export default {
                     icon: '/images/formidable-logo.png',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/http-proxy-middleware/',
+                    icon: '/images/http-proxy-middleware.png',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/i18next/',
                     icon: '/images/i18next-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/ini/',
+                    icon: '/images/javascript.png',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/ip/',
@@ -170,6 +182,14 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/lodash/',
                     icon: '/images/lodash-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/micromatch/',
+                    icon: '/images/placeholder-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/minimatch/',
+                    icon: '/images/javascript.png',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/marked/',
@@ -232,12 +252,24 @@ export default {
                     icon: '/images/tough-cookie-logo.png',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/ua-parser-js/',
+                    icon: '/images/javascript.png',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/undici/',
                     icon: '/images/undici-logo.png',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/webpack-dev-server/',
+                    icon: '/images/webpack-dev-server.png',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/vue-template-compiler/',
                     icon: '/images/vue-template-compiler-logo.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/xml2js/',
+                    icon: '/images/javascript.png',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/sentry-browser/',

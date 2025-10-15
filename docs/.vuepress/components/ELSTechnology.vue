@@ -243,6 +243,11 @@ const techData = [
         link: "./angularjs/",
       },
       {
+        name: "base64url",
+        versions: "0.0.6",
+        link: "./base64url/",
+      },
+      {
         name: "Bootstrap",
         versions: "3.4.1 | 4.6.2",
         link: "./bootstrap/",
@@ -288,9 +293,19 @@ const techData = [
         link: "./form-data/",
       },
       {
+        name: "http-proxy-middleware",
+        versions: "2.0.8",
+        link: "./http-proxy-middleware/",
+      },
+      {
         name: "i18next",
         versions: "23.16.8",
         link: "./i18next/",
+      },
+      {
+        name: "ini",
+        versions: "1.3.5",
+        link: "./ini/",
       },
       {
         name: "ip",
@@ -321,6 +336,16 @@ const techData = [
         name: "Lodash",
         versions: "4.5.0 | 4.17.x",
         link: "./lodash/",
+      },
+      {
+        name: "micromatch",
+        versions: "3.1.10",
+        link: "./micromatch/",
+      },
+      {
+        name: "minimatch",
+        versions: "3.0.4",
+        link: "./minimatch/",
       },
       {
         name: "marked",
@@ -398,6 +423,16 @@ const techData = [
         link: "./tough-cookie/",
       },
       {
+        name: "UAParser.js",
+        versions: "0.7.21",
+        link: "./ua-parser-js/",
+      },
+      {
+        name: "webpack-dev-server",
+        versions: "4.15.1",
+        link: "./webpack-dev-server/",
+      },
+      {
         name: "undici",
         versions: "5.28.5",
         link: "./undici/",
@@ -406,6 +441,11 @@ const techData = [
         name: "vue-template-compiler",
         versions: "2.6.11",
         link: "./vue-template-compiler/",
+      },
+      {
+        name: "xml2js",
+        versions: "0.4.23",
+        link: "./xml2js/",
       },
       {
         name: "@sentry/browser",
