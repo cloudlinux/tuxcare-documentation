@@ -82,7 +82,7 @@ const activeTab = ref(0);
 const techData = [
   {
     ecosystem: "Java",
-    ecosystemIcon: "/images/java.png",
+    ecosystemIcon: "/images/java.webp",
     projects: [
       {
         name: "Spring",
@@ -230,7 +230,7 @@ const techData = [
   },
   {
     ecosystem: "JavaScript",
-    ecosystemIcon: "/images/javascript.png",
+    ecosystemIcon: "/images/javascript.webp",
     projects: [
       {
         name: "Angular",
@@ -411,7 +411,7 @@ const techData = [
   },
     {
     ecosystem: "Python",
-    ecosystemIcon: "/images/python.png",
+    ecosystemIcon: "/images/python.webp",
     projects: [
       {
         name: "Python",
@@ -617,7 +617,7 @@ const techData = [
   },
   {
     ecosystem: "PHP",
-    ecosystemIcon: "/images/php.png",
+    ecosystemIcon: "/images/php.webp",
     projects: [
       {
         name: "PHP",
@@ -628,7 +628,7 @@ const techData = [
   },
   {
     ecosystem: "C#",
-    ecosystemIcon: "/images/csharp.png",
+    ecosystemIcon: "/images/csharp.webp",
     projects: [
       {
         name: ".NET",
@@ -639,7 +639,7 @@ const techData = [
   },
     {
     ecosystem: "Ruby",
-    ecosystemIcon: "/images/ruby.png",
+    ecosystemIcon: "/images/ruby.webp",
     projects: [
       {
         name: "Ruby",
