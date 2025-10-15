@@ -200,6 +200,10 @@ export default {
                     icon: '/images/node-forge-logo.png',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/nodejs/',
+                    icon: '/images/nodejs.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/pdfjs-dist/',
                     icon: '/images/pdfjs-dist-logo.png',
                 },

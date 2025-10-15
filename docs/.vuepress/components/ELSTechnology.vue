@@ -358,6 +358,11 @@ const techData = [
         link: "./node-forge/",
       },
       {
+        name: "Node.js",
+        versions: " 12 | 14 | 16 | 18 | 20",
+        link: "./nodejs/",
+      },
+      {
         name: "pdfjs-dist",
         versions: "2.16.105",
         link: "./pdfjs-dist/",
