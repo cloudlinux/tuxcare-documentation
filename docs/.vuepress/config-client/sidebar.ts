@@ -176,7 +176,7 @@ export default {
                     icon: '/images/marked-logo.png',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/mongodb/',
+                    path: '/els-for-runtimes-and-libraries/mongodb-driver/',
                     icon: '/images/mongodb-logo.png',
                 },
                 {

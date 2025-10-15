@@ -328,9 +328,9 @@ const techData = [
         link: "./marked/",
       },
       {
-        name: "MongoDB",
+        name: "MongoDB Driver",
         versions: "2.2.36",
-        link: "./mongodb/",
+        link: "./mongodb-driver/",
       },
       {
         name: "Mongoose",
