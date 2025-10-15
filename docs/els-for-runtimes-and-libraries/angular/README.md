@@ -894,7 +894,6 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | CVE-2020-7733  | Transitive |   High   |         ua-parser-js          |                             < 0.7.22                             | tuxcare.1 |
 | CVE-2020-7793  | Transitive |   High   |         ua-parser-js          |                             < 0.7.23                             | tuxcare.1 |
 | CVE-2021-27292  | Transitive |   High   |         ua-parser-js          |                       >= 0.7.14, < 0.7.24                        | tuxcare.1 |
-|  CVE-2022-25927  | Transitive |   High   |         ua-parser-js          |                   < 0.7.33, >= 0.8.0, < 1.0.33                   | tuxcare.1 |
 |   CVE-2021-3803    | Transitive |   High   |           nth-check           |                             < 2.0.1                              | tuxcare.1 |
 |   CVE-2024-47068    | Transitive |   High   |            rollup             |         >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2         | tuxcare.1 |
 |   CVE-2022-25858    | Transitive |   High   |            terser             |                   < 4.8.1, >= 5.0.0, < 5.14.2                    | tuxcare.1 |
@@ -938,7 +937,6 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |    CVE-2020-7733    | Transitive |   High   |         ua-parser-js          |                                < 0.7.22                                | tuxcare.1 |
 |    CVE-2020-7793    | Transitive |   High   |         ua-parser-js          |                                < 0.7.23                                | tuxcare.1 |
 |   CVE-2021-27292    | Transitive |   High   |         ua-parser-js          |                          >= 0.7.14, < 0.7.24                           | tuxcare.1 |
-|   CVE-2022-25927    | Transitive |   High   |         ua-parser-js          |                      < 0.7.33, >= 0.8.0, < 1.0.33                      | tuxcare.1 |
 |    CVE-2024-4068    | Transitive |   High   |            braces             |                                < 3.0.3                                 | tuxcare.1 |
 |    CVE-2022-3517    | Transitive |   High   |           minimatch           |                                < 3.0.5                                 | tuxcare.1 |
 |   CVE-2022-24771    | Transitive |   High   |          node-forge           |                                < 1.3.0                                 | tuxcare.1 |
