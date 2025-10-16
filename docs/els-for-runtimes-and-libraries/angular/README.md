@@ -312,59 +312,56 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
    <CodeWithCopy>
 
    ```text
-   "dependencies": {
-     "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
-     "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
-     "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
-     "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
-     "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
-     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
-     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
-     "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
-     "rxjs": "^7.4.0",
-     "tslib": "^2.3.0",
-     "zone.js": "~0.11.4"
-   },
-   "devDependencies": {
-     "@angular-devkit/build-angular": "^13.0.4",
-     "@angular/cli": "^13.0.4",
-     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
-     "@types/express": "^4.17.17",
-     "@types/jasmine": "~5.1.0",
-     "@types/node": "^18.18.0",
-     "jasmine-core": "~5.6.0",
-     "karma": "~6.4.0",
-     "karma-chrome-launcher": "~3.2.0",
-     "karma-coverage": "~2.2.0",
-     "karma-jasmine": "~5.1.0",
-     "karma-jasmine-html-reporter": "~2.1.0",
-     "typescript": "~4.5.5"
-   },
-   "overrides": {
-     "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
-     "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
-     "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
-     "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
-     "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
-     "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
-     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
-     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
-     "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
-     "rxjs": "^7.4.0",
-     "@babel/runtime": "7.26.10",
-     "esbuild": "0.25.0",
-     "webpack-dev-middleware": "5.3.4",
-     "webpack-dev-server": "5.2.1",
-     "webpack": "5.94.0",
-     "semver": "7.6.0",
-     "postcss": "8.4.32",
-     "tmp": "^0.2.4",
-     "*": {
-       "tmp": "^0.2.4",
-       "semver": "7.6.0",
-       "postcss": "8.4.32"
-     }
-   }
+    "dependencies": {
+      "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
+      "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
+      "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
+      "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
+      "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
+      "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
+      "rxjs": "^7.4.0",
+      "tslib": "^2.3.0",
+      "zone.js": "~0.11.4"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "^13.0.4",
+      "@angular/cli": "^13.0.4",
+      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
+      "@types/express": "^4.17.17",
+      "@types/jasmine": "~5.1.0",
+      "@types/node": "^18.18.0",
+      "jasmine-core": "~5.6.0",
+      "karma": "~6.4.0",
+      "karma-chrome-launcher": "~3.2.0",
+      "karma-coverage": "~2.2.0",
+      "karma-jasmine": "~5.1.0",
+      "karma-jasmine-html-reporter": "~2.1.0",
+      "typescript": "~4.5.5"
+    },
+    "overrides": {
+      "@angular/animations": "npm:@els-js/angular-animations@13.4.0-tuxcare.1",
+      "@angular/common": "npm:@els-js/angular-common@13.4.0-tuxcare.1",
+      "@angular/compiler": "npm:@els-js/angular-compiler@13.4.0-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@13.4.0-tuxcare.1",
+      "@angular/core": "npm:@els-js/angular-core@13.4.0-tuxcare.1",
+      "@angular/forms": "npm:@els-js/angular-forms@13.4.0-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@13.4.0-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@13.4.0-tuxcare.1",
+      "@angular/router": "npm:@els-js/angular-router@13.4.0-tuxcare.1",
+      "rxjs": "^7.4.0",
+      "@babel/runtime": "7.26.10",
+      "esbuild": "0.25.0",
+      "ip@1.1.9": "npm:@els-js/ip@1.1.5-tuxcare.2",
+      "postcss@8.4.5": "npm:@els-js/postcss@8.3.6-tuxcare.1",
+      "semver@7.3.5": "npm:@els-js/semver@7.3.2-tuxcare.1",
+      "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
+      "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
+      "webpack@5.76.1": "npm:@els-js/webpack@5.76.1-tuxcare.1",
+      "webpack-dev-middleware@5.3.0": "npm:@els-js/webpack-dev-middleware@5.3.0-tuxcare.1",
+      "webpack-dev-server@4.7.3": "npm:@els-js/webpack-dev-server@4.7.3-tuxcare.1"
+    }
    ```
 
    </CodeWithCopy>
@@ -520,7 +517,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "request@2.88.2": "npm:@els-js/request@2.88.2-tuxcare.2",
       "rollup@2.38.4": "npm:@els-js/rollup@2.38.4-tuxcare.1",
       "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.1",
-      "postcss@8.2.15": "npm:@els-js/postcss@8.2.15-tuxcare.1",
+      "postcss@8.2.15": "npm:@els-js/postcss@8.3.6-tuxcare.1",
       "rxjs": "^6.6.7",
       "semver@7.3.4": "npm:@els-js/semver@7.3.2-tuxcare.1",
       "terser@4.8.1": "npm:@els-js/terser@4.8.1-tuxcare.1",
