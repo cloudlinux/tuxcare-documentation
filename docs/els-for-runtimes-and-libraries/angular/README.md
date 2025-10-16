@@ -1244,12 +1244,11 @@ const Angular17WithSSR =
   "@angular/ssr": "npm:@els-js/angular-ssr@17.3.12-tuxcare.1",
   "rxjs": "^7.4.0",
   "esbuild": "0.25.0",
-  "webpack-dev-server": "5.2.1",
-  "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1",
-  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
-  "external-editor": {
-    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
-  }
+  "rxjs": "^7.4.0",
+  "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
+  "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
+  "http-proxy-middleware@2.0.8": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1",
+  "webpack-dev-server@4.15.1": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1"
 }`
 
 const Angular17WithoutSSR =
@@ -1289,12 +1288,9 @@ const Angular17WithoutSSR =
   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
   "rxjs": "^7.4.0",
-  "esbuild": "0.25.0",
-  "webpack-dev-server": "5.2.1",
-  "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1",
-  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
-  "external-editor": {
-    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
-  }
+  "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
+  "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
+  "http-proxy-middleware@2.0.8": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1",
+  "webpack-dev-server@4.15.1": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1"
 }`
 </script>
