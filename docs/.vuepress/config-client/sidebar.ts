@@ -233,7 +233,7 @@ export default {
                     icon: '/images/marked-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/mongodb/',
+                    path: '/els-for-runtimes-and-libraries/mongodb-driver/',
                     icon: '/images/mongodb-logo.webp',
                 },
                 {
@@ -255,6 +255,10 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/node-forge/',
                     icon: '/images/node-forge-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/nodejs/',
+                    icon: '/images/nodejs.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/pdfjs-dist/',
