@@ -106,6 +106,30 @@ export default {
                     icon: '/images/python.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/celery/',
+                    icon: '/images/celery.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/django/',
+                    icon: '/images/django.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/fastapi/',
+                    icon: '/images/fastapi.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/flask/',
+                    icon: '/images/flask-werkzeug.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/starlette/',
+                    icon: '/images/python.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/werkzeug/',
+                    icon: '/images/flask-werkzeug.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/python-libraries/',
                     icon: '/images/python.webp',
                 },

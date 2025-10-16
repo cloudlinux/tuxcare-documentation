@@ -33,7 +33,7 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
 * **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
 
-:::note
+:::warning
 Note: SBOM support for certain components is in progress and will be available soon. To confirm current availability or expected timeframes, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
