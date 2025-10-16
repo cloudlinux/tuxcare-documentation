@@ -243,52 +243,50 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
    <CodeWithCopy>
 
    ```text
-   "dependencies": {
-     "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
-     "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
-     "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
-     "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
-     "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
-     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
-     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
-     "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
-     "rxjs": "^7.4.0",
-     "tslib": "^2.3.0",
-     "zone.js": "~0.11.4"
-   },
-   "devDependencies": {
-     "@angular-devkit/build-angular": "^14.2.13",
-     "@angular/cli": "~14.2.13",
-     "@angular/compiler-cli": "^14.2.0",
-     "@types/jasmine": "~4.0.0",
-     "jasmine-core": "~4.3.0",
-     "karma": "~6.4.0",
-     "karma-chrome-launcher": "~3.1.0",
-     "karma-coverage": "~2.2.0",
-     "karma-jasmine": "~5.1.0",
-     "karma-jasmine-html-reporter": "~2.0.0",
-     "typescript": "~4.7.2"
-   },
-   "overrides": {
-     "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
-     "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
-     "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
-     "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
-     "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
-     "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
-     "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
-     "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
-     "rxjs": "^7.4.0",
-     "@babel/runtime": "7.26.10",
-     "esbuild": "0.25.0",
-     "webpack-dev-middleware": "5.3.4",
-     "webpack-dev-server": "5.2.1",
-     "webpack": "5.94.0",
-     "tmp": "^0.2.4",
-     "*": {
-       "tmp": "^0.2.4"
-     }
-   }
+    "dependencies": {
+      "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
+      "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
+      "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
+      "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
+      "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
+      "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
+      "rxjs": "^7.4.0",
+      "tslib": "^2.3.0",
+      "zone.js": "~0.11.4"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "^14.2.13",
+      "@angular/cli": "~14.2.13",
+      "@angular/compiler-cli": "^14.2.0",
+      "@types/jasmine": "~4.0.0",
+      "jasmine-core": "~4.3.0",
+      "karma": "~6.4.0",
+      "karma-chrome-launcher": "~3.1.0",
+      "karma-coverage": "~2.2.0",
+      "karma-jasmine": "~5.1.0",
+      "karma-jasmine-html-reporter": "~2.0.0",
+      "typescript": "~4.7.2"
+    },
+    "overrides": {
+      "@angular/animations": "npm:@els-js/angular-animations@14.3.0-tuxcare.1",
+      "@angular/common": "npm:@els-js/angular-common@14.3.0-tuxcare.1",
+      "@angular/compiler": "npm:@els-js/angular-compiler@14.3.0-tuxcare.1",
+      "@angular/core": "npm:@els-js/angular-core@14.3.0-tuxcare.1",
+      "@angular/forms": "npm:@els-js/angular-forms@14.3.0-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@14.3.0-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@14.3.0-tuxcare.1",
+      "@angular/router": "npm:@els-js/angular-router@14.3.0-tuxcare.1",
+      "rxjs": "^7.4.0",
+      "@babel/runtime": "7.26.10",
+      "esbuild": "0.25.0",
+      "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
+      "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
+      "webpack@5.76.1": "npm:@els-js/webpack@5.76.1-tuxcare.1",
+      "webpack-dev-server@4.11.0": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
+      "webpack-dev-middleware@5.3.3": "npm:@els-js/webpack-dev-middleware@5.3.0-tuxcare.1"
+    }
    ```
 
    </CodeWithCopy>
