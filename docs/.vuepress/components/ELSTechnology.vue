@@ -268,6 +268,11 @@ const techData = [
         link: "./crypto-js/",
       },
       {
+        name: "debug",
+        versions: "4.1.1",
+        link: "./debug/",
+      },
+      {
         name: "DOMPurify",
         versions: "2.3.0 | 2.4.3",
         link: "./dompurify/",

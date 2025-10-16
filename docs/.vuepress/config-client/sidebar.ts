@@ -128,6 +128,10 @@ export default {
                     icon: '/images/crypto-js-logo.png',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/debug/',
+                    icon: '/images/placeholder-logo.png',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/dompurify/',
                     icon: '/images/dompurify-logo.png',
                 },
