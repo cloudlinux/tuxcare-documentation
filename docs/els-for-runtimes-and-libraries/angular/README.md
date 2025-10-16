@@ -1150,10 +1150,9 @@ const Angular19WithoutSSR =
   "@angular/router": "npm:@els-js/angular-router@18.2.13-tuxcare.1",
   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
   "rxjs": "^7.4.0",
-  "esbuild": "^0.25.0",
-  "external-editor": {
-    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
-  }
+  "esbuild": "0.25.0",
+  "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
+  "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1"
 }`
 
 const Angular18WithoutSSR =
@@ -1194,10 +1193,9 @@ const Angular18WithoutSSR =
   "@angular/router": "npm:@els-js/angular-router@18.2.13-tuxcare.1",
   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@18.2.13-tuxcare.1",
   "rxjs": "^7.4.0",
-  "esbuild": "^0.25.0",
-  "external-editor": {
-    "tmp": "npm:@els-js/tmp@0.0.33-tuxcare.1"
-  }
+  "esbuild": "0.25.0",
+  "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
+  "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1"
 }`
 
 const Angular17WithSSR =
