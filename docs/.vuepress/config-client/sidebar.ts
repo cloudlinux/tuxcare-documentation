@@ -177,6 +177,10 @@ export default {
                     icon: '/images/placeholder-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/cookie/',
+                    icon: '/images/cookie-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/copy-anything/',
                     icon: '/images/copy-anything-logo.webp',
                 },
@@ -233,6 +237,10 @@ export default {
                     icon: '/images/jsonwebtoken-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/karma/',
+                    icon: '/images/karma-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/jsonpath-plus/',
                     icon: '/images/jsonpath-plus-logo.webp',
                 },
@@ -265,6 +273,10 @@ export default {
                     icon: '/images/mongoose-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/nth-check/',
+                    icon: '/images/nth-check-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/multer/',
                     icon: '/images/multer-logo.webp',
                 },
@@ -289,6 +301,10 @@ export default {
                     icon: '/images/pdfjs-dist-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/postcss/',
+                    icon: '/images/postcss-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/picocolors/',
                     icon: '/images/javascript.webp',
                 },
@@ -305,8 +321,16 @@ export default {
                     icon: '/images/rollup-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/semver/',
+                    icon: '/images/semver-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/ssr-window/',
                     icon: '/images/javascript.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/terser/',
+                    icon: '/images/terser-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/tough-cookie/',
@@ -321,8 +345,16 @@ export default {
                     icon: '/images/undici-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/vite/',
+                    icon: '/images/vite-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/webpack-dev-server/',
                     icon: '/images/webpack-dev-server.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/webpack/',
+                    icon: '/images/webpack-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/webpack-subresource-integrity/',
