@@ -1,30 +1,30 @@
-# Form-Data
+# debug
 
-Endless Lifecycle Support (ELS) for Form-Data from TuxCare provides security fixes for Form-Data versions that have reached their end of life. This allows you to continue running Form-Data applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for debug from TuxCare provides security fixes for debug versions that have reached their end of life. This allows you to continue running debug applications without vulnerability concerns, even after official support has ended.
 
-## Supported Form-Data Versions
+## Supported debug Versions
 
-* Form-Data 2.3.3
+* debug 4.1.1
 
-## Connection to ELS for Form-Data Library
+## Connection to ELS for debug Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the Form-Data library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the debug library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS Form-Data library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS debug library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for Form-Data
+## Step 2: Set Up ELS for debug
 
-TuxCare provides ELS for Form-Data as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for debug as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your Form-Data project.
+1. Navigate to the root directory of your debug project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-form-data-project/
+   my-debug-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -47,13 +47,13 @@ TuxCare provides ELS for Form-Data as an NPM package, hosted on a secure interna
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your Form-Data dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your debug dependencies with the TuxCare packages:
 
    <CodeWithCopy>
 
    ```text
    "dependencies": {
-     "form-data": "npm:@els-js/form-data@2.3.3-tuxcare.2"
+     "debug": "npm:@els-js/debug@4.1.1-tuxcare.1"
    }
    ```
 
@@ -69,7 +69,7 @@ TuxCare provides ELS for Form-Data as an NPM package, hosted on a secure interna
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the Form-Data library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the debug library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -82,18 +82,18 @@ TuxCare provides ELS for Form-Data as an NPM package, hosted on a secure interna
    You will see an output like:
 
    ```text
-   added 6 packages, and audited 7 packages in 2s
-
-   found 0 vulnerabilities
+    added 1 package, and audited 2 packages in 792ms
+    
+    found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the Form-Data library into your project.
+7. You've successfully installed the Tuxcare ELS version of the debug library into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Form-Data ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/form-data/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/form-data/).
+TuxCare provides VEX for debug ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/debug/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/debug/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -104,7 +104,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install form-data@npm:@els-js/form-data@2.3.3-tuxcare.2
+  npm install debug@npm:@els-js/debug@4.1.1-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -122,10 +122,10 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for Form-Data from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for debug from TuxCare versions:
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2025-7783  | Direct   | Critical |     form-data      | < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3 |
+| CVE-2017-16137 | Direct   | Medium   | debug              | >= 2.0.0, < 2.6.9, >= 3.0.0, < 3.1.0 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

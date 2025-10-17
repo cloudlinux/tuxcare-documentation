@@ -169,8 +169,16 @@ export default {
                     icon: '/images/bootstrap-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/base64url/',
+                    icon: '/images/javascript.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/braces/',
-                    icon: '/images/braces-logo.webp',
+                    icon: '/images/placeholder-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/cookie/',
+                    icon: '/images/cookie-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/copy-anything/',
@@ -179,6 +187,10 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/crypto-js/',
                     icon: '/images/crypto-js-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/debug/',
+                    icon: '/images/placeholder-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/dompurify/',
@@ -201,8 +213,16 @@ export default {
                     icon: '/images/formidable-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/http-proxy-middleware/',
+                    icon: '/images/http-proxy-middleware.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/i18next/',
                     icon: '/images/i18next-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/ini/',
+                    icon: '/images/javascript.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/ip/',
@@ -217,6 +237,10 @@ export default {
                     icon: '/images/jsonwebtoken-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/karma/',
+                    icon: '/images/karma-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/jsonpath-plus/',
                     icon: '/images/jsonpath-plus-logo.webp',
                 },
@@ -229,6 +253,14 @@ export default {
                     icon: '/images/lodash-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/micromatch/',
+                    icon: '/images/placeholder-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/minimatch/',
+                    icon: '/images/javascript.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/marked/',
                     icon: '/images/marked-logo.webp',
                 },
@@ -239,6 +271,10 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/mongoose/',
                     icon: '/images/mongoose-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/nth-check/',
+                    icon: '/images/nth-check-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/multer/',
@@ -265,6 +301,10 @@ export default {
                     icon: '/images/pdfjs-dist-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/postcss/',
+                    icon: '/images/postcss-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/picocolors/',
                     icon: '/images/javascript.webp',
                 },
@@ -281,20 +321,56 @@ export default {
                     icon: '/images/rollup-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/semver/',
+                    icon: '/images/semver-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/ssr-window/',
                     icon: '/images/javascript.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/terser/',
+                    icon: '/images/terser-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/tough-cookie/',
                     icon: '/images/tough-cookie-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/ua-parser-js/',
+                    icon: '/images/javascript.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/undici/',
                     icon: '/images/undici-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/vite/',
+                    icon: '/images/vite-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/webpack-dev-server/',
+                    icon: '/images/webpack-dev-server.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/webpack/',
+                    icon: '/images/webpack-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/webpack-subresource-integrity/',
+                    icon: '/images/webpack-subresource-integrity-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/vue-template-compiler/',
                     icon: '/images/vue-template-compiler-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/xml2js/',
+                    icon: '/images/javascript.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/yargs-parser/',
+                    icon: '/images/yargs-parser-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/sentry-browser/',

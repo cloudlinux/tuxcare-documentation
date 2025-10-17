@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Request from TuxCare provides security fixes
 
 ## Supported Request Versions
 
-* Request 2.88.0, 2.88.2
+* Request 2.88.0
 
 ## Connection to ELS for Request Repository
 
@@ -49,10 +49,6 @@ TuxCare provides ELS for Request as an NPM package, hosted on a secure internal 
 
 4. Update your `package.json` file to replace your Request dependencies with the TuxCare packages:
 
-   <TableTabs label="Choose Request version: " >
-
-     <template #Request_2.88.0>
-
      <CodeWithCopy>
 
      ```text
@@ -67,29 +63,6 @@ TuxCare provides ELS for Request as an NPM package, hosted on a secure internal 
      ```
 
      </CodeWithCopy>
-
-     </template>
-
-     <template #Request_2.88.2>
-
-     <CodeWithCopy>
-
-     ```text
-     "dependencies": {
-        "request": "npm:@els-js/request@2.88.2-tuxcare.2"
-     },
-     "overrides": {
-        "request": {
-           "form-data": "npm:@els-js/form-data@2.3.3-tuxcare.2"
-        }
-     }
-     ```
-
-     </CodeWithCopy>
-
-     </template>
-
-   </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -147,26 +120,9 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for Request from TuxCare versions:
 
-<TableTabs label="Choose Request version: " >
-
-<template #Request__2.88.0>
-
 | CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: |:----------:|:--------:|:------------------:|:------------------:|
 | CVE-2025-7783  | Transitive | Critical |     form-data      |      < 2.5.4      |
 | CVE-2023-28155  |   Direct   |  Medium  |      request       |      <=2.88.1      |
-
-  </template>
-
-<template #Request__2.88.2>
-
-| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2025-7783  | Transitive | Critical |     form-data      |      < 2.5.4      |
-
-  </template>
-
-</TableTabs>
-
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

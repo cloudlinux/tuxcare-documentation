@@ -1,30 +1,30 @@
-# Rollup
+# cookie
 
-Endless Lifecycle Support (ELS) for rollup from TuxCare provides security fixes for Rollup versions that have reached their end of life. This allows you to continue running Rollup applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for cookie from TuxCare provides security fixes for cookie versions that have reached their end of life. This allows you to continue running cookie applications without vulnerability concerns, even after official support has ended.
 
-## Supported Rollup Versions
+## Supported cookie Versions
 
-* Rollup 2.1.0, 2.26.5, 2.38.4, 2.79.1, 2.79.2
+* cookie 0.3.1, 0.4.2
 
-## Connection to ELS for Rollup Library
+## Connection to ELS for cookie Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the Rollup library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the cookie library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS Rollup library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS cookie library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for Rollup
+## Step 2: Set Up ELS for cookie
 
-TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your Rollup project.
+1. Navigate to the root directory of your cookie project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-rollup-project/
+   my-cookie-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -47,17 +47,17 @@ TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal r
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your Rollup dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your cookie dependencies with the TuxCare packages:
 
-   <TableTabs label="Choose Rollup version: " >
+   <TableTabs label="Choose cookie version: " >
 
-     <template #rollup_2.1.0>
+     <template #cookie_0.3.1>
 
      <CodeWithCopy>
 
      ```text
      "dependencies": {
-       "rollup": "npm:@els-js/rollup@2.1.0-tuxcare.1"
+       "cookie": "npm:@els-js/cookie@0.3.1-tuxcare.1"
      }
      ```
 
@@ -65,55 +65,13 @@ TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal r
 
      </template>
 
-     <template #rollup_2.26.5>
+     <template #cookie_0.4.2>
 
      <CodeWithCopy>
 
      ```text
      "dependencies": {
-       "rollup": "npm:@els-js/rollup@2.26.5-tuxcare.1"
-     }
-     ```
-
-     </CodeWithCopy>
-
-     </template>
-
-     <template #rollup_2.38.4>
-
-     <CodeWithCopy>
-
-     ```text
-     "dependencies": {
-       "rollup": "npm:@els-js/rollup@2.38.4-tuxcare.1"
-     }
-     ```
-
-     </CodeWithCopy>
-
-     </template>
-
-     <template #rollup_2.79.1>
-
-     <CodeWithCopy>
-
-     ```text
-     "dependencies": {
-       "rollup": "npm:@els-js/rollup@2.79.1-tuxcare.2"
-     }
-     ```
-
-     </CodeWithCopy>
-
-     </template>
-
-     <template #rollup_2.79.2>
-
-     <CodeWithCopy>
-
-     ```text
-     "dependencies": {
-       "rollup": "npm:@els-js/rollup@2.79.2-tuxcare.2"
+       "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.1"
      }
      ```
 
@@ -133,7 +91,7 @@ TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal r
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the Rollup library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the cookie library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -146,18 +104,18 @@ TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal r
    You will see an output like:
 
    ```text
-    added 2 packages, and audited 3 packages in 2s
+    added 1 package, and audited 2 packages in 792ms
     
     found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the Rollup library into your project.
+7. You've successfully installed the Tuxcare ELS version of the cookie library into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Rollup ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/rollup/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/rollup/).
+TuxCare provides VEX for cookie ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/cookie/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/cookie/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -168,7 +126,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install rollup@npm:@els-js/rollup@2.79.2-tuxcare.2
+  npm install cookie@npm:@els-js/cookie@0.4.2-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -186,10 +144,26 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for Rollup from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for cookie from TuxCare versions:
+
+<TableTabs label="Choose cookie version: " >
+
+<template #cookie_0.3.1>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2024-47068 | Direct   | Medium   |       rollup       | < 2.79.2, < 3.29.5, < 4.22.4 |
+| CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
+
+  </template>
+
+<template #cookie_0.4.2>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
+
+  </template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
