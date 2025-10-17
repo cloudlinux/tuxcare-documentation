@@ -81,7 +81,7 @@ Note: The following steps use the .NET SDK installation as an example. If you ar
 :::
 
 * Once the installer is downloaded, double-click the file to run it. You’ll see a dialog window. Follow the on-screen instructions:
-  ![image](/images/els-dotnet-installation.png)
+  ![image](/images/els-dotnet-installation.webp)
   * Accept the **license agreement**.
   * Click **Install** and wait for the process to complete. It should only take a few minutes.
   * Once the installation is finished, click **Close**.
