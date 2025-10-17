@@ -6,17 +6,17 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
 
 **Supported architecture:** x86_64.
 
-| OS                                    | Package Type | OS Version    | OpenJDK version |
-| :-----------------------------------: | :----------: | :-----------: | :------------: |
-| CentOS, CloudLinux, OracleLinux, etc. | RPM          | 6.x, 7.x, 8.x | 8 |
-| AlmaLinux                             | RPM          | 8.x, 9.x      | 8 |
-
+| OS                                                      | Package Type | OS Version    | OpenJDK version |
+| :-----------------------------------------------------: | :----------: | :-----------: | :-------------: |
+| EL 6 (CentOS, CloudLinux, OracleLinux, etc.)            | RPM          | 6.x           | 8               |
+| EL 7 (CentOS, CloudLinux, OracleLinux, etc.)            | RPM          | 7.x           | 8               |
+| EL 8 (CloudLinux, CentOS, AlmaLinux, OracleLinux, etc.) | RPM          | 8.x           | 8, 11           |
+| AlmaLinux                                               | RPM          | 9.x           | 8               |
+ 
 
 *Other versions and architectures upon request.
 
 ## Installation Instructions
-
-These steps are suitable for RPM-based systems (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc).
 
 :::tip
 This installation method is suitable for both non-containerized systems and containerized environments (such as Docker containers based on supported OS versions).
@@ -27,7 +27,7 @@ This installation method is suitable for both non-containerized systems and cont
    <CodeWithCopy>
 
    ```text
-   wget https://repo.tuxcare.com/java-els/els-openjdk-release-install.x86_64.rpm
+   wget https://repo.tuxcare.com/openjdk-els/els-openjdk-release-install.x86_64.rpm
    ```
 
    </CodeWithCopy>
@@ -37,7 +37,7 @@ This installation method is suitable for both non-containerized systems and cont
    <CodeWithCopy>
 
    ```text
-   yum install ./els-openjdk-release-install.x86_64.rpm 
+   yum install ./els-openjdk-release-install.x86_64.rpm --license-key XXX-XXXXXXXXXXXX
    ```
    </CodeWithCopy>
 
@@ -46,15 +46,19 @@ This installation method is suitable for both non-containerized systems and cont
    <CodeWithCopy>
 
    ```text
-   yum repolist | grep java-els
+   yum repolist | grep openjdk-els
    ```
 
    </CodeWithCopy>
    
    You can now install OpenJDK versions supported by TuxCare’s Endless Lifecycle Support (ELS).
 
-4. Install OpenJDK, for example, OpenJDK 8:
+4. Install OpenJDK.
 
+   <TableTabs label="OpenJDK version: " >
+
+   <template #8>
+  
    <CodeWithCopy>
 
    ```text
@@ -62,6 +66,22 @@ This installation method is suitable for both non-containerized systems and cont
    ```
 
    </CodeWithCopy>
+
+   </template>
+
+   <template #11>
+  
+   <CodeWithCopy>
+
+   ```text
+   yum install java-11-openjdk
+   ```
+
+   </CodeWithCopy>
+
+   </template>
+
+   </TableTabs>
 
 5. Verify the installation:
 
