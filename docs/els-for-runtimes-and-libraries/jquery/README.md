@@ -120,9 +120,9 @@ Fixes for the following vulnerabilities are available in ELS for jQuery from Tux
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2020-11022 | Direct   | Medium   |       jquery       | >= 1.2 < 3.5.0    |
-| CVE-2015-9251  | Direct   | Medium   |       jquery       | < 3.0.0           |
 | CVE-2020-11023 | Direct   | Medium   |       jquery       | >= 1.0.3 < 3.5.0  |
+| CVE-2020-11022 | Direct   | Medium   |       jquery       | >= 1.2 < 3.5.0    |
 | CVE-2019-11358 | Direct   | Medium   |       jquery       | < 3.4.0           |
+| CVE-2015-9251  | Direct   | Medium   |       jquery       | < 3.0.0           |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

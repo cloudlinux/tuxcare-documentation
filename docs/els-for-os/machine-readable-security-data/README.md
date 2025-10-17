@@ -108,7 +108,7 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
 
    **Note: the OpenSCAP report below is provided as an example. The results will vary depending on the OS and version you are scanning.**
 
-   ![](/images/available-cve-fixes-and-their-status.png)
+   ![](/images/available-cve-fixes-and-their-status.webp)
 
    The report includes a table with vulnerabilities and their status on the examined system. Line, as the one below, reports that the system is vulnerable to CVE-2023-2828:
 
