@@ -299,7 +299,7 @@ const techData = [
       },
       {
         name: "http-proxy-middleware",
-        versions: "2.0.8",
+        versions: "0.19.1 | 2.0.8",
         link: "./http-proxy-middleware/",
       },
       {
@@ -434,8 +434,13 @@ const techData = [
       },
       {
         name: "webpack-dev-server",
-        versions: "4.15.1",
+        versions: "3.11.0 | 4.7.3 | 4.15.1",
         link: "./webpack-dev-server/",
+      },
+      {
+        name: "webpack-subresource-integrity",
+        versions: "1.4.0",
+        link: "./webpack-subresource-integrity/",
       },
       {
         name: "undici",
@@ -451,6 +456,11 @@ const techData = [
         name: "xml2js",
         versions: "0.4.23",
         link: "./xml2js/",
+      },
+      {
+        name: "yargs-parser",
+        versions: "11.1.1",
+        link: "./yargs-parser/",
       },
       {
         name: "@sentry/browser",

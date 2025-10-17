@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for http-proxy-middleware from TuxCare provides 
 
 ## Supported http-proxy-middleware Versions
 
-* http-proxy-middleware 2.0.8
+* http-proxy-middleware 0.19.1, 2.0.8
 
 ## Connection to ELS for http-proxy-middleware Library
 
@@ -49,15 +49,37 @@ TuxCare provides ELS for http-proxy-middleware as an NPM package, hosted on a se
 
 4. Update your `package.json` file to replace your http-proxy-middleware dependencies with the TuxCare packages:
 
-   <CodeWithCopy>
+   <TableTabs label="Choose http-proxy-middleware version: " >
 
-   ```text
-   "dependencies": {
-     "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1"
-   }
-   ```
+     <template #http-proxy-middleware_0.19.1>
 
-   </CodeWithCopy>
+     <CodeWithCopy>
+
+     ```text
+     "dependencies": {
+       "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@0.19.1-tuxcare.1"
+     }
+     ```
+
+     </CodeWithCopy>
+
+     </template>
+
+     <template #http-proxy-middleware_2.0.8>
+
+     <CodeWithCopy>
+
+     ```text
+     "dependencies": {
+       "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1"
+     }
+     ```
+
+     </CodeWithCopy>
+
+     </template>
+
+   </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -124,8 +146,24 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for http-proxy-middleware from TuxCare versions:
 
+<TableTabs label="Choose http-proxy-middleware version: " >
+
+<template #http-proxy-middleware_0.19.1>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2024-21536 | Direct   | High     | http-proxy-middleware | < 2.0.7, >= 3.0.0, < 3.0.3 |
+
+  </template>
+
+<template #http-proxy-middleware_2.0.8>
+
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
 | CVE-2025-32997 | Direct   | Medium   | http-proxy-middleware | < 2.0.9, 3.x < 3.0.5 |
+
+  </template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for webpack-dev-server from TuxCare provides sec
 
 ## Supported webpack-dev-server Versions
 
-* webpack-dev-server 4.15.1
+* webpack-dev-server 3.11.0, 4.7.3, 4.15.1
 
 ## Connection to ELS for webpack-dev-server Library
 
@@ -49,15 +49,51 @@ TuxCare provides ELS for webpack-dev-server as an NPM package, hosted on a secur
 
 4. Update your `package.json` file to replace your webpack-dev-server dependencies with the TuxCare packages:
 
-   <CodeWithCopy>
+   <TableTabs label="Choose webpack-dev-server version: " >
 
-   ```text
-   "dependencies": {
-     "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1"
-   }
-   ```
+     <template #webpack-dev-server_3.11.0>
 
-   </CodeWithCopy>
+     <CodeWithCopy>
+
+     ```text
+     "dependencies": {
+       "webpack-dev-server": "npm:@els-js/webpack-dev-server@3.11.0-tuxcare.1"
+     }
+     ```
+
+     </CodeWithCopy>
+
+     </template>
+
+     <template #webpack-dev-server_4.7.3>
+
+     <CodeWithCopy>
+
+     ```text
+     "dependencies": {
+       "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.7.3-tuxcare.1"
+     }
+     ```
+
+     </CodeWithCopy>
+
+     </template>
+
+     <template #webpack-dev-server_4.15.1>
+
+     <CodeWithCopy>
+
+     ```text
+     "dependencies": {
+       "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1"
+     }
+     ```
+
+     </CodeWithCopy>
+
+     </template>
+
+   </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
