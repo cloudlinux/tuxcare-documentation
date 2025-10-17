@@ -10,17 +10,17 @@ Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides s
 
 Other versions and architectures upon request.
 
-## Connection to ELS for Python Libraries Repository
+## Connection to ELS for Celery Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Python Libraries repository.
+This guide outlines the steps needed to integrate the TuxCare ELS for Celery repository.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Python Libraries repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Celery repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-### Step 2: Set Up ELS for Python Libraries
+### Step 2: Set Up ELS for Celery
 
-To use TuxCare's ELS for Python libraries, follow one of the options below:
+To use TuxCare's ELS for Celery, follow one of the options below:
 
 #### Option 1: Install a Package with ELS Repository via Command Line
 
@@ -100,7 +100,7 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for Python Libraries from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for Celery from TuxCare versions:
 
 | CVE ID              | Severity | Library | Vulnerable Versions | Safe Version |
 | :-----------------: | :------: | :----: | :----------------: | :----------: |
