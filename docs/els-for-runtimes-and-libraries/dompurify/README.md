@@ -152,10 +152,10 @@ Fixes for the following vulnerabilities are available in ELS for DOMPurify from 
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2025-26791 | Direct   | Medium   | dompurify         | < 3.2.4           |
 | CVE-2024-48910 | Direct   | Critical | dompurify         | < 2.4.2           |
 | CVE-2024-47875 | Direct   | Medium   | dompurify         | < 2.5.0, >= 3.0.0 < 3.1.3 |
 | CVE-2024-45801 | Direct   | Medium   | dompurify         | < 2.5.4, >= 3.0.0 < 3.1.3 |
-| CVE-2025-26791 | Direct   | Medium   | dompurify         | < 3.2.4           |
 
   </template>
 
@@ -163,9 +163,9 @@ Fixes for the following vulnerabilities are available in ELS for DOMPurify from 
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2025-26791 | Direct   | Medium   | dompurify         | < 3.2.4           |
 | CVE-2024-47875 | Direct   | Medium   | dompurify         | < 2.5.0, >= 3.0.0 < 3.1.3 |
 | CVE-2024-45801 | Direct   | Medium   | dompurify         | < 2.5.4, >= 3.0.0 < 3.1.3 |
-| CVE-2025-26791 | Direct   | Medium   | dompurify         | < 3.2.4           |
 
   </template>
 

@@ -898,24 +898,24 @@ TuxCare provides a Windows Installer that allows you to install and manage ELS P
 4. Provide you access credentials:
    *  **Register** - if this is your first time using the installer or you're installing on a new system, choose the "Register" option. You’ll be asked to provide your license key or authentication token. You can also save your token for future use.
     
-   ![image](/images/php-installer-token.png)
+   ![image](/images/php-installer-token.webp)
 
    *  **Use previous token** - if you’ve already registered on this machine and chose to save your credentials, the installer will detect and use the saved token automatically. You won’t need to enter your credentials again unless the token is missing or expired. 
 
 5. Select a PHP version and tick the checkbox next to it. **Only 1 version can be installed per installation**.
   
-   ![image](/images/php-installer-version.png)
+   ![image](/images/php-installer-version.webp)
 
    :::tip
    If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
    
-   ![image](/images/php-installer-versions-2.png)
+   ![image](/images/php-installer-versions-2.webp)
    :::
 
 6. Choose Installation Path. By default, the installer will use `C:\Program Files`. Click **Change** if you want to install to a different location.
 7. Click **Load** to fetch the required PHP archive. Once the archive is loaded, a list of available PHP modules will appear. Select the modules you need and click **Continue** to confirm.
 
-   ![image](/images/php-installer-load.png)
+   ![image](/images/php-installer-load.webp)
 
 8. During installation, the installer will create a folder with PHP configuration and selected modules, and add TuxCare PHP to the **System PATH** (advanced settings).
 
@@ -925,19 +925,19 @@ TuxCare provides a Windows Installer that allows you to install and manage ELS P
     1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
     2. Click **Advanced system settings**.
 
-      ![image](/images/php-windows-advanced-settings.png)
+      ![image](/images/php-windows-advanced-settings.webp)
 
     3. Click on **Environment Variables**.
 
-      ![image](/images/php-windows-environment-variables.png)
+      ![image](/images/php-windows-environment-variables.webp)
 
     4. Under *System variables*, find **Path** and click **Edit**.
 
-      ![image](/images/php-windows-add-path.png)
+      ![image](/images/php-windows-add-path.webp)
 
     5. You will see your PHP `C:\PHP` directory added.
 
-      ![image](/images/php-windows-add-path-2.png)
+      ![image](/images/php-windows-add-path-2.webp)
    </details>
 
 9. Wait for the installation process to complete.

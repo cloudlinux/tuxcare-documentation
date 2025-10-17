@@ -163,9 +163,9 @@ Fixes for the following vulnerabilities are available in ELS for JSON Web Token 
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2022-23539 | Direct   | High     | jsonwebtoken       | < 8.5.1            |
-| CVE-2022-23540 | Direct   | High     | jsonwebtoken       | < 8.5.1            |
 | CVE-2022-23541 | Direct   | Medium   | jsonwebtoken       | < 8.5.1            |
+| CVE-2022-23540 | Direct   | High     | jsonwebtoken       | < 8.5.1            |
+| CVE-2022-23539 | Direct   | High     | jsonwebtoken       | < 8.5.1            |
 
   </template>
 

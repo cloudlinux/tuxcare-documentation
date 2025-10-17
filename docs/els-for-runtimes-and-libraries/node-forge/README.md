@@ -126,7 +126,7 @@ Fixes for the following vulnerabilities are available in ELS for node-forge from
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2022-24771 | Direct   | High     | node-forge        | < 1.3.0           |
 | CVE-2022-24772 | Direct   | High     | node-forge        | < 1.3.0           |
+| CVE-2022-24771 | Direct   | High     | node-forge        | < 1.3.0           |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

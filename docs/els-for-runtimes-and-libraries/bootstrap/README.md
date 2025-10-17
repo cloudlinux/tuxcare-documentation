@@ -155,8 +155,8 @@ Fixes for the following vulnerabilities are available in ELS for Bootstrap from 
 
 |    CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 |:-------------:|:--------:|:--------:|:------------------:|:-------------------:|
-| CVE-2024-6485 |  Direct  |  Medium  |     bootstrap      |          >=1.4.0 <=3.4.1          |
 | CVE-2025-1647 |  Direct  |  Medium  |     bootstrap      |          >=3.4.1 <4.0.0          |
+| CVE-2024-6485 |  Direct  |  Medium  |     bootstrap      |          >=1.4.0 <=3.4.1          |
 
   </template>
 

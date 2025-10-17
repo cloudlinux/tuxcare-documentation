@@ -82,7 +82,7 @@ const activeTab = ref(0);
 const techData = [
   {
     ecosystem: "Java",
-    ecosystemIcon: "/images/java.png",
+    ecosystemIcon: "/images/java.webp",
     projects: [
       {
         name: "Spring",
@@ -230,7 +230,7 @@ const techData = [
   },
   {
     ecosystem: "JavaScript",
-    ecosystemIcon: "/images/javascript.png",
+    ecosystemIcon: "/images/javascript.webp",
     projects: [
       {
         name: "Angular",
@@ -416,7 +416,7 @@ const techData = [
   },
     {
     ecosystem: "Python",
-    ecosystemIcon: "/images/python.png",
+    ecosystemIcon: "/images/python.webp",
     projects: [
       {
         name: "Python",
@@ -436,7 +436,7 @@ const techData = [
       {
         name: "celery",
         versions: "5.1.2",
-        link: "./python-libraries/",
+        link: "./celery/",
       },
       {
         name: "certifi",
@@ -456,7 +456,7 @@ const techData = [
       {
         name: "Django",
         versions: "3.2.25 | 4.0 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9",
-        link: "./python-libraries/",
+        link: "./django/",
       },
       {
         name: "dnspython",
@@ -466,12 +466,12 @@ const techData = [
       {
         name: "fastapi",
         versions: "0.63.0 | 0.104.1",
-        link: "./python-libraries/",
+        link: "./fastapi/",
       },
       {
         name: "Flask",
         versions: "1.1.2 | 2.2.1",
-        link: "./python-libraries/",
+        link: "./flask/",
       },
       {
         name: "flask-cors",
@@ -586,7 +586,7 @@ const techData = [
       {
         name: "starlette",
         versions: "0.27.0",
-        link: "./python-libraries/",
+        link: "./starlette/",
       },
       {
         name: "statsmodels",
@@ -616,13 +616,13 @@ const techData = [
       {
         name: "Werkzeug",
         versions: "1.0.1 | 2.2.3",
-        link: "./python-libraries/",
+        link: "./werkzeug/",
       },
     ],
   },
   {
     ecosystem: "PHP",
-    ecosystemIcon: "/images/php.png",
+    ecosystemIcon: "/images/php.webp",
     projects: [
       {
         name: "PHP",
@@ -633,7 +633,7 @@ const techData = [
   },
   {
     ecosystem: "C#",
-    ecosystemIcon: "/images/csharp.png",
+    ecosystemIcon: "/images/csharp.webp",
     projects: [
       {
         name: ".NET",
@@ -644,7 +644,7 @@ const techData = [
   },
     {
     ecosystem: "Ruby",
-    ecosystemIcon: "/images/ruby.png",
+    ecosystemIcon: "/images/ruby.webp",
     projects: [
       {
         name: "Ruby",
