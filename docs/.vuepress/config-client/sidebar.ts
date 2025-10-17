@@ -97,6 +97,42 @@ export default {
                     icon: '/images/openjdk-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/apache-hadoop/',
+                    icon: '/images/apache.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/apache-struts/',
+                    icon: '/images/apache.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/apache-spark/',
+                    icon: '/images/apache-spark.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/apache-kafka/',
+                    icon: '/images/apache-kafka.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/postgresql/',
+                    icon: '/images/postgresql.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/protobuf/',
+                    icon: '/images/java.png',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/jackson/',
+                    icon: '/images/jackson.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/apache-commons-lang/',
+                    icon: '/images/apache.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/java-libraries/',
+                    icon: '/images/java.png',
+                },
+                {
                     title: 'Python',
                     type: 'section-header',
                     icon: '/images/python.webp',
