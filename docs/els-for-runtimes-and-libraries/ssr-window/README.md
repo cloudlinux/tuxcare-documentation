@@ -93,7 +93,7 @@ TuxCare provides ELS for ssr-window as an NPM package, hosted on a secure intern
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for ssr-window ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ssr/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ssr/).
+TuxCare provides VEX for ssr-window ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ssr-window/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ssr-window/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

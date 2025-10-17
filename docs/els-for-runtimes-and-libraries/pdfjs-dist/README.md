@@ -93,7 +93,7 @@ TuxCare provides ELS for pdfjs-dist as an NPM package, hosted on a secure intern
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for pdfjs-dist ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/pdfjs/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/pdfjs/).
+TuxCare provides VEX for pdfjs-dist ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/pdfjs-dist/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/pdfjs-dist/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

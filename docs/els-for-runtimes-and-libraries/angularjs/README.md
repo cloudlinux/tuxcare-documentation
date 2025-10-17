@@ -153,6 +153,12 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
 7. You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
 
+## Vulnerability Exploitability eXchange (VEX)
+
+VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+
+TuxCare provides VEX for AngularJS ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/angular/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/angular/).
+
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), there are two options:

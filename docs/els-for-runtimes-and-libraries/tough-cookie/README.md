@@ -118,7 +118,7 @@ TuxCare provides ELS for tough-cookie as an NPM package, hosted on a secure inte
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for tough-cookie ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/tough/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/tough/).
+TuxCare provides VEX for tough-cookie ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/tough-cookie/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/tough-cookie/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
