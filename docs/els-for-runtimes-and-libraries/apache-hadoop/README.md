@@ -150,11 +150,22 @@ const gradlerepo =
 }`
 
 const mavendeps =
-`<dependencies>
+`<dependencyManagement>
+    <dependencies>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-project</artifactId>
+                <version>2.7.3.tuxcare.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<dependencies>
     <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-common</artifactId>
-        <version>2.7.1.tuxcare.1</version>
     </dependency>
 </dependencies>`
 

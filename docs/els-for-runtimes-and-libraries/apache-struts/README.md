@@ -69,10 +69,27 @@ Replace the Apache Struts dependencies in your build file with the TuxCare-maint
 
 You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
 
-<CodeTabs :tabs="[
-  { title: 'Maven (pom.xml)', content: mavendeps },
-  { title: 'Gradle (build.gradle)', content: gradledeps }
-]" />
+<TableTabs label="Choose an extension: " >
+
+  <template #1.3.5>
+  
+  <CodeTabs :tabs="[
+    { title: 'Maven (pom.xml)', content: mavendeps },
+    { title: 'Gradle (build.gradle)', content: gradledeps }
+  ]" />
+
+  </template>
+
+  <template #2.5.33>
+  
+  <CodeTabs :tabs="[
+    { title: 'Maven (pom.xml)', content: mavendeps2 },
+    { title: 'Gradle (build.gradle)', content: gradledeps2 }
+  ]" />
+
+  </template>
+
+</TableTabs>
 
 ### Step 5: Verify and Build
 
@@ -162,6 +179,30 @@ const gradledeps =
 `dependencies {
     implementation("org.apache.struts:struts-core:1.3.5-tuxcare.1")
 }`
+
+const mavendeps2 =
+`<dependencyManagement>
+    <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-bom</artifactId>
+            <version>2.5.33-tuxcare.1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+</dependencyManagement>
+
+<dependencies>
+    <dependency>
+        <groupId>org.apache.struts</groupId>
+        <artifactId>struts2-core</artifactId>
+    </dependency>
+</dependencies>`
+
+const gradledeps2 =
+`dependencies {
+    implementation("org.apache.struts:struts2-core:2.5.33-tuxcare.1")
+}`
+
 </script>
 
 
