@@ -37,7 +37,7 @@ This installation method is suitable for both non-containerized systems and cont
    <CodeWithCopy>
 
    ```text
-   yum install ./els-openjdk-release-install.x86_64.rpm 
+   yum install ./els-openjdk-release-install.x86_64.rpm --license-key XXX-XXXXXXXXXXXX
    ```
    </CodeWithCopy>
 
