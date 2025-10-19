@@ -51,9 +51,7 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
 
   * **Option 1: TuxCare Patcher (Automated)**
 
-    If you already have braces listed in your `package.json` with the standard version (without the tuxcare suffix), you can use the TuxCare Patcher to automatically update your configuration.
-
-    For example, if your `package.json` contains:
+    If you already have dependencies listed in your `package.json`, for example:
 
     ```text
     "dependencies": {
@@ -61,7 +59,7 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
     }
     ```
 
-    Run the command to install the Patcher in your system (you only need to do this once), then run the patcher command to install the patched versions:
+    Install the Patcher globally, then run the patcher command:
 
     <CodeWithCopy>
 
@@ -72,7 +70,7 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
 
     </CodeWithCopy>
 
-    The patcher will automatically update your `package.json` to include both the TuxCare dependency and the necessary overrides:
+    The patcher will automatically update your `package.json` to:
 
     ```text
     "dependencies": {
@@ -138,9 +136,9 @@ TuxCare provides VEX for braces ELS versions: [security.tuxcare.com/vex/cycloned
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are three options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are several options:
 
-* **Option 1**. Use the TuxCare Patcher to automatically scan your `package.json` and upgrade all TuxCare packages to the latest versions:
+* **Option 1**. Run TuxCare Patcher to update all TuxCare packages in your `package.json`:
 
   <CodeWithCopy>
 
