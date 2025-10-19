@@ -49,7 +49,41 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
 
 4. Update your `package.json` file to replace your braces dependencies with the TuxCare packages. You can do this in two ways:
 
-   * **Option 1: Manual Update**
+  * **Option 1: TuxCare Patcher (Automated)**
+
+    If you already have braces listed in your `package.json` with the standard version (without the tuxcare suffix), you can use the TuxCare Patcher to automatically update your configuration.
+
+    For example, if your `package.json` contains:
+
+    ```text
+    "dependencies": {
+      "braces": "^2.3.2"
+    }
+    ```
+
+    Run the command to install the Patcher in your system (you only need to do this once), then run the patcher command to install the TuxCare versions:
+
+    <CodeWithCopy>
+
+    ```text
+    npm install -g @els-js/patcher --userconfig ./.npmrc
+    els-patch
+    ```
+
+    </CodeWithCopy>
+
+    The patcher will automatically update your `package.json` to include both the TuxCare dependency and the necessary overrides:
+
+    ```text
+    "dependencies": {
+      "braces": "npm:@els-js/braces@2.3.2-tuxcare.1"
+    },
+    "overrides": {
+      "braces@2.3.2": "npm:@els-js/braces@2.3.2-tuxcare.1"
+    }
+    ```
+    
+  * **Option 2: Manual Update**
 
      Manually update your `package.json` file to use the TuxCare package:
 
@@ -62,39 +96,6 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
      ```
 
      </CodeWithCopy>
-
-   * **Option 2: TuxCare Patcher (Automated)**
-
-     If you already have braces listed in your `package.json` with the standard version (without the tuxcare suffix), you can use the TuxCare Patcher to automatically update your configuration.
-
-     For example, if your `package.json` contains:
-
-     ```text
-     "dependencies": {
-       "braces": "2.3.2"
-     }
-     ```
-
-     Simply run the TuxCare Patcher command:
-
-     <CodeWithCopy>
-
-     ```text
-     npx @els-js/patcher
-     ```
-
-     </CodeWithCopy>
-
-     The patcher will automatically update your `package.json` to include both the TuxCare dependency and the necessary overrides:
-
-     ```text
-     "dependencies": {
-       "braces": "npm:@els-js/braces@2.3.2-tuxcare.1"
-     },
-     "overrides": {
-       "braces@2.3.2": "npm:@els-js/braces@2.3.2-tuxcare.1"
-     }
-     ```
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -139,23 +140,22 @@ TuxCare provides VEX for braces ELS versions: [security.tuxcare.com/vex/cycloned
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are three options:
 
-* **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
+* **Option 1**. Use the TuxCare Patcher to automatically scan your `package.json` and upgrade all TuxCare packages to the latest versions:
+
+  <CodeWithCopy>
+
+  ```text
+  els-patch --upgrade
+  ```
+
+  </CodeWithCopy>
+
+* **Option 2**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
   npm install braces@npm:@els-js/braces@2.3.2-tuxcare.2
-  ```
-
-  </CodeWithCopy>
-
-* **Option 2**. Use the TuxCare Patcher to automatically scan your `package.json` and upgrade all TuxCare packages to the latest versions:
-
-  <CodeWithCopy>
-
-  ```text
-  npx @els-js/patcher --upgrade
-  npm install
   ```
 
   </CodeWithCopy>
