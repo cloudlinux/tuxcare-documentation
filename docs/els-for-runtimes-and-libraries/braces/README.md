@@ -61,7 +61,7 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
     }
     ```
 
-    Run the command to install the Patcher in your system (you only need to do this once), then run the patcher command to install the TuxCare versions:
+    Run the command to install the Patcher in your system (you only need to do this once), then run the patcher command to install the patched versions:
 
     <CodeWithCopy>
 
