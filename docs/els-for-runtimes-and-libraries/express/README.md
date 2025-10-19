@@ -126,9 +126,9 @@ Fixes for the following vulnerabilities are available in ELS for express from Tu
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2024-29041 | Direct   | Medium   | express           | < 4.19.2, >= 5.0.0-alpha.1 < 5.0.0-beta.3 |
-| CVE-2024-9266  | Direct   | Medium   | express           | >= 3.4.5 < 4.0.0 |
 | CVE-2024-43796 | Direct   | Medium   | express           | < 4.20.0 |
+| CVE-2024-29041 | Direct   | Medium   | express           | < 4.19.2, >= 5.0.0-alpha.1 < 5.0.0-beta.3 |
 | CVE-2024-10491 | Direct   | Medium   | express           | <= 3.21.4 |
+| CVE-2024-9266  | Direct   | Medium   | express           | >= 3.4.5 < 4.0.0 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

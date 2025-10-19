@@ -48,28 +48,27 @@ In order to use Endless Lifecycle Support for Ubuntu 20.04, you will need to ope
    Example:
  
    ```
-   [els@ubuntu20 ~]# apt-cache show els-os-release
-   Package: els-os-release
-   Version: 1.0.0-1
+   root@localhost:~# apt-cache show els-define
+   Package: els-define
+   Version: 1-1.0.3
    Architecture: amd64
-   Maintainer: Koba Karaputadze <kkaraputadze@cloudlinux.com>
-   Installed-Size: 16
-   Depends: els-define
+   Maintainer: Darya Malyavkina <dmalyavkina@cloudlinux.com>
+   Installed-Size: 10
    Homepage: https://tuxcare.com/extended-lifecycle-support/
    Priority: optional
    Section: utils
-   Filename: pool/main/e/els-os-release/els-os-release_1.0.0-1_amd64.deb
-   Size: 4326
-   SHA256: 74f7983c4a3e5c92f954e7af4048f2327e54beed9d06c2ad81baeb7e0b0af86d
-   SHA1: b33baa2e0ed955043178863e05e05ebddb0254c6
-   MD5sum: 57f60465595890e8fd374bd6d87a5d40
-   Description: ELS os release package for Ubuntu 20.04
-   Description-md5: 409266c8048d396eedc5dacdff306abc
+   Filename: pool/main/e/els-define/els-define_1-1.0.3_amd64.deb
+   Size: 1926
+   SHA256: eda90ec17fee27c862a923c3666591b5958e5a1bbebf33078cf1fd859d31edff
+   SHA1: b3cef5e330f25b2daaf30eb5f41f67809642d9be
+   MD5sum: 629b938770455731d05c3525a71b7653
+   Description: ELS define package for Ubuntu 20.04
+   Description-md5: 05246f694bf7646914c7d748ae3f6a15
    ```
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./security-updates).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
 
 * **Ubuntu 20.04 ELS**: [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml)
 * **Ubuntu 20.04 ELS**: [security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/)

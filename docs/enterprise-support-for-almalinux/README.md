@@ -63,7 +63,7 @@ ESU provides qualified security and selected bug-fix errata advisories across al
 Leveraging Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities:
 
 * ESU 9.2 OVAL: [https://security.tuxcare.com/oval/els_os/almalinux9.2esu/oval.xml](https://security.tuxcare.com/oval/els_os/almalinux9.2esu/oval.xml)
-* ESU 9.6 OVAL: [https://security.tuxcare.com/oval/els_os/almalinux9.6esu/oval.xml](https://security.tuxcare.com/oval/els_os/almalinux9.6esu/oval.xml)
+* ESU 9.6 OVAL: [https://security.tuxcare.com/oval/els_os/tuxcare9.6esu/oval.xml](https://security.tuxcare.com/oval/els_os/tuxcare9.6esu/oval.xml)
 
 ### CSAF data
 
@@ -71,8 +71,8 @@ Vulnerability scanner vendors may prefer the Common Security Advisory Framework 
 
 * ESU 9.2 CSAF advisories: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/advisories/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/advisories/)
 * ESU 9.2 CSAF VEX documents: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/vex/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.2esu/vex/)
-* ESU 9.6 CSAF advisories: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.6esu/advisories/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.6esu/advisories/)
-* ESU 9.6 CSAF VEX documents: [https://security.tuxcare.com/csaf/v2/els_os/almalinux9.6esu/vex/](https://security.tuxcare.com/csaf/v2/els_os/almalinux9.6esu/vex/)
+* ESU 9.6 CSAF advisories: [https://security.tuxcare.com/csaf/v2/els_os/tuxcare9.6esu/advisories/](https://security.tuxcare.com/csaf/v2/els_os/tuxcare9.6esu/advisories/)
+* ESU 9.6 CSAF VEX documents: [https://security.tuxcare.com/csaf/v2/els_os/tuxcare9.6esu/vex/](https://security.tuxcare.com/csaf/v2/els_os/tuxcare9.6esu/vex/)
 * Provider metadata: [https://csaf.data.security.tuxcare.com/](https://csaf.data.security.tuxcare.com/)
 
 ### Secure Bill Of Materials
@@ -88,7 +88,7 @@ https://repo.tuxcare.com/tuxcare/9.6/<TOKEN>/esu/x86_64/spdx-reports/tuxcare96-e
 ### RSS releases feeds
 
 * ESU 9.2: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu)
-* ESU 9.6: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.6esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.6esu)
+* ESU 9.6: [https://cve.tuxcare.com/rss_feed/releases/tuxcare9.6esu](https://cve.tuxcare.com/rss_feed/releases/tuxcare9.6esu)
 
 ### Technical support
 
