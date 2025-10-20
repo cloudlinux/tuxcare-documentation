@@ -188,24 +188,24 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for AngularJS from TuxCare versions:
 
-| CVE ID         | Severity |  Affected Libraries | Vulnerable Versions |        Safe Versions         | Release Date |
-| :------------: | :------: | :-----------------: |:-------------------:|:----------------------------:| :----------: |
-| CVE-2025-4690  | Medium   | Angular Sanitize    |       >=0.0.0       |         1.8.2, 1.8.3         | 29 Sep 2025  |
-| CVE-2025-4690  | Medium   | AngularJS           |       >=0.0.0       |            1.8.3             | 29 Sep 2025  |
-| CVE-2025-2336  | Medium   | AngularJS           |       >=1.3.1       |            1.8.3             | 29 Sep 2025  |
-| CVE-2025-2336  | Medium   | Angular Sanitize    |       >=1.3.1       |         1.8.2, 1.8.3         | 29 Sep 2025  |
-| CVE-2025-0716  | Medium   | AngularJS           |       >=0.0.0       | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 10 Aug 2025  |
-| CVE-2024-8373  | Medium   | AngularJS           |       >=0.0.0       | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 29 Sep 2025  |
-| CVE-2024-8372  | Medium   | AngularJS           |    >=1.3.0-rc.4     | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 10 Aug 2025  |
-| CVE-2024-33665 | Medium   | Angular Translate   |       <2.19.1       |            2.19.1            | 23 Sep 2025  |
-| CVE-2024-21490 | High     | AngularJS           |       >=1.3.0       | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 15 Jun 2025  |
-| CVE-2023-26118 | Medium   | AngularJS           |       >=1.4.9       | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 15 Jun 2025  |
-| CVE-2023-26117 | Medium   | AngularJS           |       >=1.0.0       | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 16 Sep 2025  |
-| CVE-2023-26116 | Medium   | AngularJS           |      >=1.2.21       | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 15 Jun 2025  |
-| CVE-2022-25869 | Medium   | AngularJS           |       >=0.0.0       | 1.5.11, 1.6.10, 1.7.9, 1.8.3 | 21 Aug 2025  |
-| CVE-2022-25844 | Medium   | AngularJS           |       >=1.7.0       |         1.7.9, 1.8.3         | 21 Aug 2025  |
-| CVE-2020-7676  | Medium   | AngularJS           |       <1.8.0        |    1.5.11, 1.6.10, 1.7.9     | 21 Aug 2025  |
-| CVE-2019-10768 | Critical | AngularJS           |       <1.7.9        |    1.5.11, 1.6.10, 1.7.9     | 21 Aug 2025  |
+|     CVE ID     | Severity | Affected Libraries | Vulnerable Versions | Release Date |
+| :------------: | :------: | :----------------: | :-----------------: | :----------: |
+|  CVE-2025-4690 |  Medium  |  Angular Sanitize  |       >=0.0.0       |  29 Sep 2025 |
+|  CVE-2025-4690 |  Medium  |      AngularJS     |       >=0.0.0       |  29 Sep 2025 |
+|  CVE-2025-2336 |  Medium  |      AngularJS     |       >=1.3.1       |  29 Sep 2025 |
+|  CVE-2025-2336 |  Medium  |  Angular Sanitize  |       >=1.3.1       |  29 Sep 2025 |
+|  CVE-2025-0716 |  Medium  |      AngularJS     |       >=0.0.0       |  10 Aug 2025 |
+|  CVE-2024-8373 |  Medium  |      AngularJS     |       >=0.0.0       |  29 Sep 2025 |
+|  CVE-2024-8372 |  Medium  |      AngularJS     |     >=1.3.0-rc.4    |  10 Aug 2025 |
+| CVE-2024-33665 |  Medium  |  Angular Translate |       <2.19.1       |  23 Sep 2025 |
+| CVE-2024-21490 |   High   |      AngularJS     |       >=1.3.0       |  15 Jun 2025 |
+| CVE-2023-26118 |  Medium  |      AngularJS     |       >=1.4.9       |  15 Jun 2025 |
+| CVE-2023-26117 |  Medium  |      AngularJS     |       >=1.0.0       |  16 Sep 2025 |
+| CVE-2023-26116 |  Medium  |      AngularJS     |       >=1.2.21      |  15 Jun 2025 |
+| CVE-2022-25869 |  Medium  |      AngularJS     |       >=0.0.0       |  21 Aug 2025 |
+| CVE-2022-25844 |  Medium  |      AngularJS     |       >=1.7.0       |  21 Aug 2025 |
+|  CVE-2020-7676 |  Medium  |      AngularJS     |        <1.8.0       |  21 Aug 2025 |
+| CVE-2019-10768 | Critical |      AngularJS     |        <1.7.9       |  21 Aug 2025 |
 
 
 
