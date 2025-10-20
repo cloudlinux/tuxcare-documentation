@@ -429,7 +429,7 @@ const techData = [
       },
       {
         name: "Request",
-        versions: "2.88.0 | 2.88.2",
+        versions: "2.88.0",
         link: "./request/",
       },
       {
