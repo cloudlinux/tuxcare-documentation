@@ -1402,6 +1402,6 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
 </TableTabs>
 
-### Conclusion
+## Conclusion
 
 As you can see, each version is entirely self-contained, and changing configurations in one will not impact the others, a desired feature in hosting environments.
