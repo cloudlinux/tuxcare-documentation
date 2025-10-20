@@ -46,6 +46,12 @@ Note: This feature is under consideration for future development and may be avai
 
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
+## Support Duration
+
+TuxCare provides continuous security patching for all supported end-of-life (EOL) technologies for as long as your organization requires them, eliminating the need for rushed or disruptive upgrades.
+
+All updates are delivered at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
+
 ## Technical Support
 
 TuxCare provides technical support according to the:
