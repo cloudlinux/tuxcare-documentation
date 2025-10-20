@@ -93,7 +93,7 @@ TuxCare provides ELS for vue-template-compiler as an NPM package, hosted on a se
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for vue-template-compiler ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue/).
+TuxCare provides VEX for vue-template-compiler ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue-template-compiler/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue-template-compiler/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

@@ -243,6 +243,11 @@ const techData = [
         link: "./angularjs/",
       },
       {
+        name: "base64url",
+        versions: "0.0.6",
+        link: "./base64url/",
+      },
+      {
         name: "Bootstrap",
         versions: "3.4.1 | 4.6.2",
         link: "./bootstrap/",
@@ -253,6 +258,11 @@ const techData = [
         link: "./braces/",
       },
       {
+        name: "cookie",
+        versions: "0.3.1 | 0.4.2",
+        link: "./cookie/",
+      },
+      {
         name: "copy-anything",
         versions: "2.0.6",
         link: "./copy-anything/",
@@ -261,6 +271,11 @@ const techData = [
         name: "CryptoJS",
         versions: "3.3.0",
         link: "./crypto-js/",
+      },
+      {
+        name: "debug",
+        versions: "4.1.1",
+        link: "./debug/",
       },
       {
         name: "DOMPurify",
@@ -288,9 +303,19 @@ const techData = [
         link: "./form-data/",
       },
       {
+        name: "http-proxy-middleware",
+        versions: "0.19.1 | 2.0.8",
+        link: "./http-proxy-middleware/",
+      },
+      {
         name: "i18next",
         versions: "23.16.8",
         link: "./i18next/",
+      },
+      {
+        name: "ini",
+        versions: "1.3.5",
+        link: "./ini/",
       },
       {
         name: "ip",
@@ -308,6 +333,11 @@ const techData = [
         link: "./jsonwebtoken/",
       },
       {
+        name: "karma",
+        versions: "4.1.0 | 5.0.9",
+        link: "./karma/",
+      },
+      {
         name: "JSONPath Plus",
         versions: "7.2.0",
         link: "./jsonpath-plus/",
@@ -323,6 +353,16 @@ const techData = [
         link: "./lodash/",
       },
       {
+        name: "micromatch",
+        versions: "3.1.10",
+        link: "./micromatch/",
+      },
+      {
+        name: "minimatch",
+        versions: "3.0.4",
+        link: "./minimatch/",
+      },
+      {
         name: "marked",
         versions: "4.0.9",
         link: "./marked/",
@@ -336,6 +376,11 @@ const techData = [
         name: "Mongoose",
         versions: "5.13.23",
         link: "./mongoose/",
+      },
+      {
+        name: "nth-check",
+        versions: "1.0.2",
+        link: "./nth-check/",
       },
       {
         name: "multer",
@@ -368,6 +413,11 @@ const techData = [
         link: "./pdfjs-dist/",
       },
       {
+        name: "PostCSS",
+        versions: "7.0.39 | 8.2.15 | 8.3.6",
+        link: "./postcss/",
+      },
+      {
         name: "picocolors",
         versions: "0.2.1",
         link: "./picocolors/",
@@ -379,13 +429,18 @@ const techData = [
       },
       {
         name: "Request",
-        versions: "2.88.0 | 2.88.2",
+        versions: "2.88.0",
         link: "./request/",
       },
       {
         name: "Rollup",
-        versions: "2.79.1 | 2.79.2",
+        versions: "2.1.0 | 2.26.5 | 2.38.4 | 2.79.1 | 2.79.2",
         link: "./rollup/",
+      },
+      {
+        name: "semver",
+        versions: "7.1.3 | 7.3.2",
+        link: "./semver/",
       },
       {
         name: "ssr-window",
@@ -393,9 +448,39 @@ const techData = [
         link: "./ssr-window/",
       },
       {
+        name: "terser",
+        versions: "4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
+        link: "./terser/",
+      },
+      {
         name: "tough-cookie",
         versions: "2.4.3 | 2.5.0",
         link: "./tough-cookie/",
+      },
+      {
+        name: "UAParser.js",
+        versions: "0.7.21",
+        link: "./ua-parser-js/",
+      },
+      {
+        name: "Vite",
+        versions: "4.5.5",
+        link: "./vite/",
+      },
+      {
+        name: "webpack-dev-server",
+        versions: "3.11.0 | 4.7.3 | 4.15.1",
+        link: "./webpack-dev-server/",
+      },
+      {
+        name: "webpack",
+        versions: "5.55.0 | 5.76.1",
+        link: "./webpack/",
+      },
+      {
+        name: "webpack-subresource-integrity",
+        versions: "1.4.0",
+        link: "./webpack-subresource-integrity/",
       },
       {
         name: "undici",
@@ -406,6 +491,16 @@ const techData = [
         name: "vue-template-compiler",
         versions: "2.6.11",
         link: "./vue-template-compiler/",
+      },
+      {
+        name: "xml2js",
+        versions: "0.4.23",
+        link: "./xml2js/",
+      },
+      {
+        name: "yargs-parser",
+        versions: "11.1.1",
+        link: "./yargs-parser/",
       },
       {
         name: "@sentry/browser",

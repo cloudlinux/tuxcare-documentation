@@ -94,7 +94,7 @@ TuxCare provides ELS for CryptoJS as an NPM package, hosted on a secure internal
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for CryptoJS ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/crypto/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/crypto/).
+TuxCare provides VEX for CryptoJS ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/crypto-js/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/crypto-js/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
