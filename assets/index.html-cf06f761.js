@@ -7,19 +7,19 @@ import{_ as u,S as i,n as o,p as c,a6 as s,q as e,C as a,A as n,J as l}from"./fr
 @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
 //nexus.repo.tuxcare.com/repository/els_js/:_auth=\${TOKEN}
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[0]}),t[2]||(t[2]=e("div",{class:"warning custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[l("Replace ${TOKEN} with the token you received from "),e("a",{href:"mailto:sales@tuxcare.com"},"sales@tuxcare.com"),l(".")])],-1))]),e("li",null,[t[8]||(t[8]=e("p",null,[l("Update your "),e("code",null,"package.json"),l(" file to replace your AngularJS dependencies with the TuxCare packages:")],-1)),a(d,{label:"Choose AngularJS version: "},{"AngularJS_1.5.11":n(()=>[a(r,null,{default:n(()=>t[3]||(t[3]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-    "angular": "npm:@els-js/angular@1.5.11-tuxcare.2"
+    "angular": "npm:@els-js/angular@1.5.11-tuxcare.4"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[3]})]),"AngularJS_1.6.10":n(()=>[a(r,null,{default:n(()=>t[4]||(t[4]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-    "angular": "npm:@els-js/angular@1.6.10-tuxcare.2"
+    "angular": "npm:@els-js/angular@1.6.10-tuxcare.4"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[4]})]),"AngularJS_1.7.9":n(()=>[a(r,null,{default:n(()=>t[5]||(t[5]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-    "angular": "npm:@els-js/angular@1.7.9-tuxcare.2"
+    "angular": "npm:@els-js/angular@1.7.9-tuxcare.3"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[5]})]),"AngularJS_1.8.2":n(()=>[a(r,null,{default:n(()=>t[6]||(t[6]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-    "angular": "npm:@els-js/angular@1.8.2-tuxcare.1"
+    "angular": "npm:@els-js/angular@1.8.2-tuxcare.3"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[6]})]),"AngularJS_1.8.3":n(()=>[a(r,null,{default:n(()=>t[7]||(t[7]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-    "angular": "npm:@els-js/angular@1.8.3-tuxcare.2"
+    "angular": "npm:@els-js/angular@1.8.3-tuxcare.4"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[7]})]),_:1})]),e("li",null,[t[10]||(t[10]=e("p",null,[l("You need to remove the "),e("code",null,"node_modules"),l(" directory and the "),e("code",null,"package-lock.json"),l(" file, and also clear the "),e("code",null,"npm cache"),l(" before installing the patched packages. Use the following commands:")],-1)),a(r,null,{default:n(()=>t[9]||(t[9]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`rm -rf node_modules package-lock.json && npm cache clean --force
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"})])],-1)])),_:1,__:[9]})]),e("li",null,[t[12]||(t[12]=e("p",null,"Run the following command to install ELS for AngularJS dependencies (token for the TuxCare repository will be automatically picked up from your .npmrc file):",-1)),a(r,null,{default:n(()=>t[11]||(t[11]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`npm install
