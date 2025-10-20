@@ -182,7 +182,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/copy-anything/',
-                    icon: '/images/copy-anything-logo.webp',
+                    icon: '/images/javascript.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/crypto-js/',
@@ -226,7 +226,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/ip/',
-                    icon: '/images/ip-logo.webp',
+                    icon: '/images/javascript.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/jquery/',
@@ -370,7 +370,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/yargs-parser/',
-                    icon: '/images/yargs-parser-logo.webp',
+                    icon: '/images/javascript.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/sentry-browser/',
