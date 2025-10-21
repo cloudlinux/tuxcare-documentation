@@ -38,6 +38,24 @@ KernelCare is available for both x86-64 (Intel and AMD) and ARM64 architectures.
 
 Customers can find detailed information about supported kernels, Linux distributions, specific vulnerabilities, and live patches provided by KernelCare SimplePatch for each of the supported Linux distributions at [https://patches.kernelcare.com/](https://patches.kernelcare.com/). 
 
+### Third-party modules and tainted kernels
+
+KernelCare Enterprise can apply live patches to systems that run third-party or out-of-tree (OOT) kernel modules, such as DRBD, NVIDIA, or proprietary device drivers.
+
+KernelCare patches are built to preserve the kernel ABI. Exported symbols, function signatures, and structure layouts remain unchanged, which allows external modules to continue working through the same interfaces after patching.
+
+#### Possible interactions
+
+In rare situations, conflicts may occur if an external module:
+- injects instrumentation such as kprobes or ftrace hooks into a function being patched
+- executes long-running code inside a function at the moment it is being replaced
+  
+KernelCare includes safety checks that detect busy or unsafe patch sites and defer patching until they are safe to update.
+
+#### Support policy
+
+- TuxCare provides support for all officially supported kernels regardless of taint status.
+
 ### End-of-life (EOL) policy 
 
 TuxCare will stop supporting live patching for specific distros if there are no security advisories provided by the distro's vendor for the last 365 days. In this case, all customers running the affected distributions are notified about the upcoming EOL. Existing live patches for EOL distributions are available for the next 6 years after the EOL date. 
