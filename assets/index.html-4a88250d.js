@@ -7,7 +7,7 @@ import{_ as d,S as o,n as u,p as c,a6 as i,q as e,C as a,A as l,J as n}from"./fr
 @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
 //nexus.repo.tuxcare.com/repository/els_js/:_auth=\${TOKEN}
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[0]}),t[2]||(t[2]=e("div",{class:"warning custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("Replace ${TOKEN} with the token you received from "),e("a",{href:"mailto:sales@tuxcare.com"},"sales@tuxcare.com"),n(".")])],-1))]),e("li",null,[t[5]||(t[5]=e("p",null,[n("Update your "),e("code",null,"package.json"),n(" file to replace your JSON Web Token dependencies with the TuxCare packages:")],-1)),a(r,{label:"Choose JSON Web Token version: "},{"JSON_Web_Token_0.4.0":l(()=>[a(s,null,{default:l(()=>t[3]||(t[3]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-  "jsonwebtoken": "npm:@els-js/jsonwebtoken@0.4.0-tuxcare.3"
+  "jsonwebtoken": "npm:@els-js/jsonwebtoken@0.4.0-tuxcare.4"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[3]})]),"JSON_Web_Token_8.5.1":l(()=>[a(s,null,{default:l(()=>t[4]||(t[4]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
   "jsonwebtoken": "npm:@els-js/jsonwebtoken@8.5.1-tuxcare.2"

@@ -10,7 +10,7 @@ import{_ as o,S as i,n as u,p as c,a6 as s,q as e,C as l,A as r,J as t}from"./fr
   "webpack-dev-server": "npm:@els-js/webpack-dev-server@3.11.0-tuxcare.1"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[3]})]),"webpack-dev-server_4.7.3":r(()=>[l(n,null,{default:r(()=>a[4]||(a[4]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.7.3-tuxcare.1"
+  "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.7.3-tuxcare.2"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[4]})]),"webpack-dev-server_4.15.1":r(()=>[l(n,null,{default:r(()=>a[5]||(a[5]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
   "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1"
