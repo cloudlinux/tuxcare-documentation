@@ -118,7 +118,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/protobuf/',
-                    icon: '/images/java.png',
+                    icon: '/images/java.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/jackson/',
@@ -130,7 +130,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/java-libraries/',
-                    icon: '/images/java.png',
+                    icon: '/images/java.webp',
                 },
                 {
                     title: 'Python',
