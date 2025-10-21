@@ -129,3 +129,4 @@ Fixes for the following vulnerabilities are available in ELS for nth-check from 
 | CVE-2021-3803  | Direct   | High     | nth-check         | < 2.0.1            |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

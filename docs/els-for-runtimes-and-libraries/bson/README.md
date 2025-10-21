@@ -1,30 +1,30 @@
-# webpack
+# bson
 
-Endless Lifecycle Support (ELS) for webpack from TuxCare provides security fixes for webpack versions that have reached their end of life. This allows you to continue running webpack applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for bson from TuxCare provides security fixes for bson versions that have reached their end of life. This allows you to continue running bson applications without vulnerability concerns, even after official support has ended.
 
-## Supported webpack Versions
+## Supported bson Versions
 
-* webpack 5.55.0, 5.76.1
+* bson 0.5.7, 1.0.9
 
-## Connection to ELS for webpack Library
+## Connection to ELS for bson Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the webpack library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the bson library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS webpack library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS bson library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for webpack
+## Step 2: Set Up ELS for bson
 
-TuxCare provides ELS for webpack as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for bson as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your webpack project.
+1. Navigate to the root directory of your bson project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-webpack-project/
+   my-bson-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -47,17 +47,17 @@ TuxCare provides ELS for webpack as an NPM package, hosted on a secure internal 
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your webpack dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your bson dependencies with the TuxCare packages:
 
-   <TableTabs label="Choose webpack version: " >
+   <TableTabs label="Choose bson version: " >
 
-     <template #webpack_5.55.0>
+     <template #bson_0.5.7>
 
      <CodeWithCopy>
 
      ```text
      "dependencies": {
-       "webpack": "npm:@els-js/webpack@5.55.0-tuxcare.1"
+       "bson": "npm:@els-js/bson@0.5.7-tuxcare.1"
      }
      ```
 
@@ -65,13 +65,13 @@ TuxCare provides ELS for webpack as an NPM package, hosted on a secure internal 
 
      </template>
 
-     <template #webpack_5.76.1>
+     <template #bson_1.0.9>
 
      <CodeWithCopy>
 
      ```text
      "dependencies": {
-       "webpack": "npm:@els-js/webpack@5.76.1-tuxcare.1"
+       "bson": "npm:@els-js/bson@1.0.9-tuxcare.1"
      }
      ```
 
@@ -91,7 +91,7 @@ TuxCare provides ELS for webpack as an NPM package, hosted on a secure internal 
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the webpack library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the bson library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -109,13 +109,13 @@ TuxCare provides ELS for webpack as an NPM package, hosted on a secure internal 
     found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the webpack library into your project.
+7. You've successfully installed the Tuxcare ELS version of the bson library into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for webpack ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/webpack/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/webpack/).
+TuxCare provides VEX for bson ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/bson/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/bson/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -126,7 +126,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install webpack@npm:@els-js/webpack@5.76.1-tuxcare.2
+  npm install bson@npm:@els-js/bson@1.0.9-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -144,28 +144,27 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for webpack from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for bson from TuxCare versions:
 
-<TableTabs label="Choose webpack version: " >
+<TableTabs label="Choose bson version: " >
 
-<template #webpack_5.55.0>
+<template #bson_0.5.7>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2023-28154 | Direct   | Critical | webpack           | > 5.0.0 < 5.76.0  |
-| CVE-2024-43788 | Direct   | Medium   | webpack           | < 5.94.0           |
+| CVE-2020-7610  | Direct   | Critical | bson               | >= 1.0.0, < 1.1.4 |
+| CVE-2018-13863 | Direct   | High     | bson               | >= 0.5.0, < 1.0.5 |
 
   </template>
 
-<template #webpack_5.76.1>
+<template #bson_1.0.9>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2024-43788 | Direct   | Medium   | webpack           | < 5.94.0           |
+| CVE-2020-7610  | Direct   | Critical | bson               | >= 1.0.0, < 1.1.4 |
 
   </template>
 
 </TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-

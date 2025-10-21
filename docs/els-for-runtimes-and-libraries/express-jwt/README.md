@@ -132,3 +132,4 @@ Fixes for the following vulnerabilities are available in ELS for express-jwt fro
 | CVE-2020-15084 | Direct   | Critical | express-jwt       | <= 5.3.3          |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

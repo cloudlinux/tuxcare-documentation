@@ -133,3 +133,4 @@ Fixes for the following vulnerabilities are available in ELS for jsPDF from TuxC
 | CVE-2025-29907 | Direct   | High     | jspdf             |       < 3.0.1       |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

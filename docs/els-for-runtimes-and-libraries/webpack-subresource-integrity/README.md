@@ -129,3 +129,4 @@ Fixes for the following vulnerabilities are available in ELS for webpack-subreso
 | CVE-2020-15262 | Direct   | Low      | webpack-subresource-integrity | < 1.5.1            |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

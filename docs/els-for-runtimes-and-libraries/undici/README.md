@@ -129,3 +129,4 @@ Fixes for the following vulnerabilities are available in ELS for undici from Tux
 | AIKIDO-2024-10065 | Direct   | Medium   | undici            | 4.4.0 - 6.14.1    |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

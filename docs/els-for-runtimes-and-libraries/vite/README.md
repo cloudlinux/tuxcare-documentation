@@ -136,3 +136,4 @@ Fixes for the following vulnerabilities are available in ELS for Vite from TuxCa
 | CVE-2025-58752 | Direct   | Low      | vite               | < 5.4.20, >= 6.0.0 < 6.3.6, >= 7.0.0 < 7.0.7, >= 7.1.0 < 7.1.5 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

@@ -129,3 +129,4 @@ Fixes for the following vulnerabilities are available in ELS for ssr-window from
 | AIKIDO-2025-10093 | Direct   | High     | ssr-window        | 2.0.0-beta.1 - 4.0.2 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

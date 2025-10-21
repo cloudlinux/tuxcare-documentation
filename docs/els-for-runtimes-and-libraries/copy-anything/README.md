@@ -132,3 +132,4 @@ Fixes for the following vulnerabilities are available in ELS for copy-anything f
 | AIKIDO-2025-10177 | Direct   | Medium   | copy-anything     | 1.0.0 - 4.0.3     |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

@@ -173,6 +173,10 @@ export default {
                     icon: '/images/javascript.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/bson/',
+                    icon: '/images/bson-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/braces/',
                     icon: '/images/placeholder-logo.webp',
                 },
