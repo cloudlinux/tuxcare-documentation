@@ -137,7 +137,7 @@ const techData = [
       {
         name: "Apache Commons HttpClient",
         versions: "3.1",
-        link: "./java-librariest/",
+        link: "./java-libraries/",
       },
       {
         name: "Apache CXF",

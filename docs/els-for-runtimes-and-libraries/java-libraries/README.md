@@ -102,8 +102,6 @@ Check [your TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/
     { title: 'Gradle (build.gradle)', content: gradledeps2 }
   ]" />
 
-* Example of **parent POM** usage:
-
 * If no BOM or parent POM is provided, **update dependency versions directly** using the latest `.tuxcare` patches for your dependency versions.
 
   <CodeTabs :tabs="[
