@@ -71,7 +71,7 @@ TuxCare provides ELS for webpack-dev-server as an NPM package, hosted on a secur
 
      ```text
      "dependencies": {
-       "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.7.3-tuxcare.1"
+       "webpack-dev-server": "npm:@els-js/webpack-dev-server@4.7.3-tuxcare.2"
      }
      ```
 

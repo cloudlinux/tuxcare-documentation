@@ -282,7 +282,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
       "webpack@5.76.1": "npm:@els-js/webpack@5.76.1-tuxcare.1",
       "webpack-dev-server@4.11.0": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1",
-      "webpack-dev-middleware@5.3.3": "npm:@els-js/webpack-dev-middleware@5.3.0-tuxcare.1"
+      "webpack-dev-middleware@5.3.3": "npm:@els-js/webpack-dev-middleware@5.3.0-tuxcare.2"
     }
    ```
 
@@ -350,12 +350,12 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "esbuild": "0.25.0",
       "ip@1.1.9": "npm:@els-js/ip@1.1.5-tuxcare.2",
       "postcss@8.4.5": "npm:@els-js/postcss@8.3.6-tuxcare.1",
-      "semver@7.3.5": "npm:@els-js/semver@7.3.2-tuxcare.1",
+      "semver@7.3.5": "npm:@els-js/semver@7.3.2-tuxcare.2",
       "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
       "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
       "webpack@5.76.1": "npm:@els-js/webpack@5.76.1-tuxcare.1",
-      "webpack-dev-middleware@5.3.0": "npm:@els-js/webpack-dev-middleware@5.3.0-tuxcare.1",
-      "webpack-dev-server@4.7.3": "npm:@els-js/webpack-dev-server@4.7.3-tuxcare.1"
+      "webpack-dev-middleware@5.3.0": "npm:@els-js/webpack-dev-middleware@5.3.0-tuxcare.2",
+      "webpack-dev-server@4.7.3": "npm:@els-js/webpack-dev-server@4.7.3-tuxcare.2"
     }
    ```
 
@@ -430,7 +430,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.1",
       "postcss@8.3.6": "npm:@els-js/postcss@8.3.6-tuxcare.1",
       "rxjs": "~6.6.0",
-      "semver@7.3.5": "npm:@els-js/semver@7.3.2-tuxcare.1",
+      "semver@7.3.5": "npm:@els-js/semver@7.3.2-tuxcare.2",
       "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
       "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
       "webpack@5.50.0": "npm:@els-js/webpack@5.50.0-tuxcare.1",
@@ -514,7 +514,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.1",
       "postcss@8.2.15": "npm:@els-js/postcss@8.3.6-tuxcare.1",
       "rxjs": "^6.6.7",
-      "semver@7.3.4": "npm:@els-js/semver@7.3.2-tuxcare.1",
+      "semver@7.3.4": "npm:@els-js/semver@7.3.2-tuxcare.2",
       "terser@4.8.1": "npm:@els-js/terser@4.8.1-tuxcare.1",
       "terser@5.5.1": "npm:@els-js/terser@5.3.0-tuxcare.1",
       "tough-cookie@2.5.0": "npm:@els-js/tough-cookie@2.5.0-tuxcare.2",
@@ -604,7 +604,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "request@2.88.2": "npm:@els-js/request@2.88.2-tuxcare.2",
       "rollup@2.26.5": "npm:@els-js/rollup@2.26.5-tuxcare.1",
       "rxjs": "~6.6.7",
-      "semver@7.3.2": "npm:@els-js/semver@7.3.2-tuxcare.1",
+      "semver@7.3.2": "npm:@els-js/semver@7.3.2-tuxcare.2",
       "tar@4.4.19": "npm:@els-js/tar@4.4.19-tuxcare.1",
       "terser@4.8.1": "npm:@els-js/terser@4.8.1-tuxcare.1",
       "terser@5.3.0": "npm:@els-js/terser@5.3.0-tuxcare.1",
@@ -701,7 +701,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "request@2.88.2": "npm:@els-js/request@2.88.2-tuxcare.2",
       "rollup@2.1.0": "npm:@els-js/rollup@2.1.0-tuxcare.1",
       "rxjs": "~6.5.4",
-      "semver@7.1.3": "npm:@els-js/semver@7.1.3-tuxcare.1",
+      "semver@7.1.3": "npm:@els-js/semver@7.1.3-tuxcare.2",
       "tar@4.4.19": "npm:@els-js/tar@4.4.19-tuxcare.1",
       "terser@4.6.10": "npm:@els-js/terser@4.6.10-tuxcare.1",
       "tough-cookie@2.5.0": "npm:@els-js/tough-cookie@2.5.0-tuxcare.2",

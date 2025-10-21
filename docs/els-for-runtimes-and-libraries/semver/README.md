@@ -57,7 +57,7 @@ TuxCare provides ELS for semver as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-       "semver": "npm:@els-js/semver@7.1.3-tuxcare.1"
+       "semver": "npm:@els-js/semver@7.1.3-tuxcare.2"
      }
      ```
 
@@ -71,7 +71,7 @@ TuxCare provides ELS for semver as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-       "semver": "npm:@els-js/semver@7.3.2-tuxcare.1"
+       "semver": "npm:@els-js/semver@7.3.2-tuxcare.2"
      }
      ```
 
