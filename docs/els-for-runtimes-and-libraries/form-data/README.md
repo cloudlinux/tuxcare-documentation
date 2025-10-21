@@ -129,3 +129,4 @@ Fixes for the following vulnerabilities are available in ELS for Form-Data from 
 | CVE-2025-7783  | Direct   | Critical |     form-data      | < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

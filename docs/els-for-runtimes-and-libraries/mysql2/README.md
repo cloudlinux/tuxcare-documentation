@@ -131,3 +131,4 @@ Fixes for the following vulnerabilities are available in ELS for MySQL2 from Tux
 | CVE-2024-21508 | Direct   | Critical | mysql2            | < 3.9.4           |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

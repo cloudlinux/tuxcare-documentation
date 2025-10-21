@@ -135,3 +135,4 @@ Fixes for the following vulnerabilities are available in ELS for multer from Tux
 | CVE-2025-7338 | Direct   | High     |       multer       |          >= 1.4.4-lts.1, < 2.0.2          |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

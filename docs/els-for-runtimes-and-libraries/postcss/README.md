@@ -189,3 +189,4 @@ Fixes for the following vulnerabilities are available in ELS for PostCSS from Tu
 </TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

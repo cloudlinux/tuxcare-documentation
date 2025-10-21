@@ -130,3 +130,4 @@ Fixes for the following vulnerabilities are available in ELS for JSONPath Plus f
 | CVE-2024-21534 | Direct   | Critical | jsonpath-plus     | 0.1.0 - 10.1.0    |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

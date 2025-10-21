@@ -129,3 +129,4 @@ Fixes for the following vulnerabilities are available in ELS for picocolors from
 | AIKIDO-2024-10093 | Direct   | Low      | picocolors        | 0.1.0 - 1.0.0     |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
