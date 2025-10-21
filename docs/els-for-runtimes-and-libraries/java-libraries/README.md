@@ -93,7 +93,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 **Replace your dependencies (both direct and transitive, as needed) with the TuxCare-maintained ones, then rebuild your project.**
 
-Check [your TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted) for the specific artifacts you need. If a BOM (Bill of Materials) or a parent POM is available, it’s recommended to use it to manage versions:
+Check [your TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted) for the specific artifacts you need. If a BOM (Bill of Materials) is available, it’s recommended to use it to manage versions:
 
 * Example of **BOM (Bill of Materials)** usage:
   
@@ -102,7 +102,7 @@ Check [your TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/
     { title: 'Gradle (build.gradle)', content: gradledeps2 }
   ]" />
 
-* If no BOM or parent POM is provided, **update dependency versions directly** using the latest `.tuxcare` patches for your dependency versions.
+* If no BOM is provided, **update dependency versions directly** using the latest `.tuxcare` patches for your dependency versions.
 
   <CodeTabs :tabs="[
     { title: 'Maven (pom.xml)', content: mavendeps },
