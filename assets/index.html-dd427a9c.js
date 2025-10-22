@@ -7,16 +7,16 @@ import{_ as d,S as o,n as u,p as c,a6 as a,q as e,C as r,A as n,J as l}from"./fr
 @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
 //nexus.repo.tuxcare.com/repository/els_js/:_auth=\${TOKEN}
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[0]}),t[2]||(t[2]=e("div",{class:"warning custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[l("Replace ${TOKEN} with the token you received from "),e("a",{href:"mailto:sales@tuxcare.com"},"sales@tuxcare.com"),l(".")])],-1))]),e("li",null,[t[7]||(t[7]=e("p",null,[l("Update your "),e("code",null,"package.json"),l(" file to replace your terser dependencies with the TuxCare packages:")],-1)),r(i,{label:"Choose terser version: "},{"terser_4.6.10":n(()=>[r(s,null,{default:n(()=>t[3]||(t[3]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-  "terser": "npm:@els-js/terser@4.6.10-tuxcare.1"
+  "terser": "npm:@els-js/terser@4.6.10-tuxcare.2"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[3]})]),"terser_4.8.1":n(()=>[r(s,null,{default:n(()=>t[4]||(t[4]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
   "terser": "npm:@els-js/terser@4.8.1-tuxcare.1"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[4]})]),"terser_5.3.0":n(()=>[r(s,null,{default:n(()=>t[5]||(t[5]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-  "terser": "npm:@els-js/terser@5.3.0-tuxcare.1"
+  "terser": "npm:@els-js/terser@5.3.0-tuxcare.2"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[5]})]),"terser_5.5.1":n(()=>[r(s,null,{default:n(()=>t[6]||(t[6]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-  "terser": "npm:@els-js/terser@5.5.1-tuxcare.1"
+  "terser": "npm:@els-js/terser@5.5.1-tuxcare.2"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[6]})]),_:1})]),e("li",null,[t[9]||(t[9]=e("p",null,[l("You need to remove the "),e("code",null,"node_modules"),l(" directory and the "),e("code",null,"package-lock.json"),l(" file, and also clear the "),e("code",null,"npm cache"),l(" before installing the patched packages. Use the following commands:")],-1)),r(s,null,{default:n(()=>t[8]||(t[8]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`rm -rf node_modules package-lock.json && npm cache clean --force
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"})])],-1)])),_:1,__:[8]})]),e("li",null,[t[11]||(t[11]=e("p",null,[l("Run the following command to install the ELS version of the terser library (token for the TuxCare repository will be automatically picked up from your "),e("code",null,".npmrc"),l(" file):")],-1)),r(s,null,{default:n(()=>t[10]||(t[10]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`npm install
