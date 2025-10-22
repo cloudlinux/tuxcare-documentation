@@ -57,7 +57,7 @@ TuxCare provides ELS for terser as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-       "terser": "npm:@els-js/terser@4.6.10-tuxcare.1"
+       "terser": "npm:@els-js/terser@4.6.10-tuxcare.2"
      }
      ```
 
@@ -85,7 +85,7 @@ TuxCare provides ELS for terser as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-       "terser": "npm:@els-js/terser@5.3.0-tuxcare.1"
+       "terser": "npm:@els-js/terser@5.3.0-tuxcare.2"
      }
      ```
 
@@ -99,7 +99,7 @@ TuxCare provides ELS for terser as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-       "terser": "npm:@els-js/terser@5.5.1-tuxcare.1"
+       "terser": "npm:@els-js/terser@5.5.1-tuxcare.2"
      }
      ```
 
