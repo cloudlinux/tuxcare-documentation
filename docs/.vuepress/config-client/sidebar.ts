@@ -97,10 +97,6 @@ export default {
                     icon: '/images/openjdk-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/apache-hadoop/',
-                    icon: '/images/apache.webp',
-                },
-                {
                     path: '/els-for-runtimes-and-libraries/apache-struts/',
                     icon: '/images/apache.webp',
                 },
@@ -113,7 +109,11 @@ export default {
                     icon: '/images/apache-kafka.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/postgresql/',
+                    path: '/els-for-runtimes-and-libraries/apache-velocity-engine/',
+                    icon: '/images/apache.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/postgresql-driver/',
                     icon: '/images/postgresql.webp',
                 },
                 {
@@ -424,6 +424,14 @@ export default {
             collapsable: false,
             children: [
                 "/els-for-applications/",
+                {
+                    path: '/els-for-applications/apache-hadoop/',
+                    icon: '/images/apache.webp',
+                },
+                {
+                    path: '/els-for-applications/apache-hive/',
+                    icon: '/images/apache.webp',
+                },
                 {
                     path: '/els-for-applications/apache-tomcat/',
                     icon: '/images/tomcat.webp',

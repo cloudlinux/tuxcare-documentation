@@ -110,11 +110,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Hadoop",
-        versions: "2.7.1, 2.7.3",
-        link: "./apache-hadoop/",
-      },
-      {
         name: "Apache Struts",
         versions: "1.3.5 | 2.5.33",
         link: "./apache-struts/",
@@ -155,11 +150,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Hive",
-        versions: "2.3.9",
-        link: "./java-libraries/",
-      },
-      {
         name: "Apache Kafka",
         versions: "3.2.3",
         link: "./apache-kafka/",
@@ -195,9 +185,9 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "PostgreSQL",
+        name: "PostgreSQL driver",
         versions: "42.2.16 | 42.5.0",
-        link: "./postgresql/",
+        link: "./postgresql-driver/",
       },
       {
         name: "Protobuf",
@@ -215,10 +205,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Tomcat",
-        versions: "8.5.100 | 9.0.75",
-      },
-      {
         name: "Apache Thrift",
         versions: "0.9.3",
         link: "./java-libraries/",
@@ -231,7 +217,7 @@ const techData = [
       {
         name: "Apache Velocity Engine",
         versions: "1.7",
-        link: "./java-libraries/",
+        link: "./apache-velocity-engine/",
       },
       {
         name: "Woodstox",
