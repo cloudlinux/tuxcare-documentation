@@ -2,6 +2,8 @@
 
 # Endless Lifecycle Support for Open-Source Applications
 
+* [Apache Hadoop](./apache-hadoop)
+* [Apache Hive](./apache-hive)
 * [Apache Tomcat](./apache-tomcat)
 
 ## Vulnerability Coverage and Target Response Times

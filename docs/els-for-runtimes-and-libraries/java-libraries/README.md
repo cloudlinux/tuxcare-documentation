@@ -7,13 +7,9 @@ Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides s
 * **Apache Commons BeanUtils** 1.9.4
 * **Apache Commons HttpClient** 3.1
 * **Apache Commons IO** 2.7
-* **Apache Commons Lang** 2.4, 2.6, 3.4, 3.10, 3.12.0
 * **Apache CXF** 3.5.9
-* **Apache Hive** 2.3.9
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
 * **Apache Thrift** 0.9.3
-* **Apache Tomcat** 8.5.100, 9.0.75
-* **Apache Velocity Engine** 1.7
 * **DNSJava** 2.1.7
 * **Dom4j** 1.6.1
 * **el-spec** 3.0.0
