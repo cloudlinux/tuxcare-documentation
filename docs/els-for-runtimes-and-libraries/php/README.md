@@ -1404,4 +1404,9 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
 ## Conclusion
 
-As you can see, each version is entirely self-contained, and changing configurations in one will not impact the others, a desired feature in hosting environments.
+As you can see, each version is entirely self-contained, and changing configurations in one will not impact the others, a desired feature in hosting environments. 
+
+## PHP Changelog 
+
+To stay informed about the latest updates, fixes, and enhancements for ALT-PHP, please refer to the [CloudLinux Changelog](https://changelog.cloudlinux.com/).
+All PHP ELS package updates are published there as part of the CloudLinux update stream.
