@@ -90,6 +90,9 @@
 </template>
 
 <script>
+// Import DataTables CSS
+import 'datatables.net-dt/css/dataTables.dataTables.min.css';
+
 export default {
   name: 'ResolvedCveTable',
   props: {
@@ -116,7 +119,7 @@ export default {
   },
   computed: {
     apiUrl() {
-      return `https://spring-els-cves.cl-edu.com/api/v1/resolved-cves?project=${this.project}`
+      return `http://localhost:34458/api/v1/resolved-cves?project=${this.project}`
     },
     filteredCveData() {
       if (this.hide_none) {
@@ -188,11 +191,6 @@ export default {
     initializeDataTable() {
       if (typeof window === 'undefined' || !this.jQueryLoaded || !window.jQuery || !window.jQuery.fn.DataTable) return;
       
-      // Skip DataTables initialization on mobile (screen width < 768px)
-      if (window.innerWidth < 768) {
-        return
-      }
-
       // Custom sorting for severity column
       window.jQuery.fn.dataTable.ext.type.detect.unshift(function(data) {
         return data && typeof data === 'string' && data.includes('severity-') ? 'severity-sort' : null
@@ -214,14 +212,20 @@ export default {
         this.dataTable.destroy()
       }
 
-      // Initialize DataTable
+      // Initialize DataTable with responsive features
       this.dataTable = window.jQuery(this.$refs.cveTable).DataTable({
         order: [[1, 'desc'], [2, 'desc']], // Sort by severity, then score
         pageLength: 10,
         lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
-        responsive: false,
-        scrollX: false,
-        autoWidth: true,
+        scrollX: true, // Enable horizontal scrolling on mobile
+        autoWidth: false, // Better control over column widths
+        // Use DataTables 2.x layout option for proper inline controls
+        layout: {
+          topStart: 'pageLength',
+          topEnd: 'search',
+          bottomStart: 'info',
+          bottomEnd: 'paging'
+        },
         columnDefs: [
           {
             targets: '_all',
@@ -249,15 +253,14 @@ export default {
           lengthMenu: "Show _MENU_ entries",
           info: "Showing _START_ to _END_ of _TOTAL_ CVEs",
           emptyTable: "No resolved CVEs found"
-        },
-        dom: '<"table-controls"lf>rt<"table-footer"ip>'
+        }
       })
     }
   }
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 
 .cve-tracker
   background-color white
@@ -269,20 +272,20 @@ export default {
   max-width 98%
 
 // Hide Score column
-.cve-table
+.cve-tracker .cve-table
   th.col-score
     display none
   td.col-score
     display none
 
 // Loading States
-.loading-container
+.cve-tracker .loading-container
   display flex
   flex-direction column
   align-items center
   justify-content center
   padding 3rem 0
-.loading-spinner
+.cve-tracker .loading-spinner
   width 3rem
   height 3rem
   border 3px solid #e3e3e3
@@ -294,24 +297,24 @@ export default {
     transform rotate(0deg)
   100%
     transform rotate(360deg)
-.loading-text
+.cve-tracker .loading-text
   margin-top 1rem
   color #666
   font-size 0.9rem
 
 // Error States
-.error-container
+.cve-tracker .error-container
   background-color #fef2f2
   border 1px solid #fecaca
   color #dc2626
   padding 1rem
   border-radius 8px
-.error-title
+.cve-tracker .error-title
   font-weight 600
   margin-bottom 0.5rem
-.error-message
+.cve-tracker .error-message
   margin-bottom 0.75rem
-.retry-button
+.cve-tracker .retry-button
   background-color #3b82f6
   color white
   padding 0.5rem 1rem
@@ -324,50 +327,50 @@ export default {
     background-color #2563eb
 
 // Stats Grid
-.stats-grid
+.cve-tracker .stats-grid
   display grid
   grid-template-columns repeat(2, 1fr)
   gap 1rem
   margin-bottom 1.5rem
   @media (min-width: 768px)
     grid-template-columns repeat(4, 1fr)
-.stat-card
+.cve-tracker .stat-card
   padding 1rem
   border-radius 8px
   color white
   text-align center
-.stat-total
+.cve-tracker .stat-total
   background-color #2563eb
-.stat-critical
+.cve-tracker .stat-critical
   background-color #dc2626
-.stat-medium
+.cve-tracker .stat-medium
   background-color #d97706
-.stat-low
+.cve-tracker .stat-low
   background-color #16a34a
-.stat-none
+.cve-tracker .stat-none
   background-color #6b7280
-.stat-number
+.cve-tracker .stat-number
   font-size 1.5rem
   font-weight bold
   line-height 1
-.stat-label
+.cve-tracker .stat-label
   font-size 0.75rem
   opacity 0.9
   margin-top 0.25rem
 
 // Table Styles
-.table-container
+.cve-tracker .table-container
   background-color white
   border-radius 8px
   box-shadow 0 1px 3px rgba(0, 0, 0, 0.1)
   border 1px solid #e5e7eb
   width 100%
   max-width 100%
-.table-wrapper
+.cve-tracker .table-wrapper
   width 100%
-  overflow-x hidden
+  overflow-x auto
   -webkit-overflow-scrolling touch
-.cve-table
+.cve-tracker .cve-table
   width 100%
   font-size 0.8rem
   border-collapse collapse
@@ -393,7 +396,7 @@ export default {
     background-color #f9fafb
 
 // Content styling
-.cve-code
+.cve-tracker .cve-code
   background-color #f3f4f6
   padding 0.125rem 0.375rem
   border-radius 3px
@@ -404,7 +407,7 @@ export default {
   overflow hidden
   text-overflow ellipsis
   white-space nowrap
-.version-vulnerable
+.cve-tracker .version-vulnerable
   background-color #fef2f2
   color #dc2626
   padding 0.125rem 0.375rem
@@ -416,7 +419,7 @@ export default {
   overflow hidden
   text-overflow ellipsis
   white-space nowrap
-.version-fixed
+.cve-tracker .version-fixed
   background-color #f0fdf4
   color #16a34a
   padding 0.125rem 0.375rem
@@ -428,21 +431,21 @@ export default {
   overflow hidden
   text-overflow ellipsis
   white-space nowrap
-.package-name
+.cve-tracker .package-name
   font-weight 500
   color #111827
   font-size 0.75rem
   word-wrap break-word
   line-height 1.3
   display block
-.group-text
+.cve-tracker .group-text
   font-size 0.75rem
   word-wrap break-word
   line-height 1.3
   display block
 
 // Severity badges
-.severity-badge
+.cve-tracker .severity-badge
   display inline-flex
   align-items center
   padding 0.125rem 0.5rem
@@ -452,25 +455,25 @@ export default {
   text-transform uppercase
   letter-spacing 0.025em
   white-space nowrap
-.severity-critical
+.cve-tracker .severity-critical
   background-color #dc2626
   color white
-.severity-high
+.cve-tracker .severity-high
   background-color #ea580c
   color white
-.severity-medium
+.cve-tracker .severity-medium
   background-color #ca8a04
   color white
-.severity-low
+.cve-tracker .severity-low
   background-color #16a34a
   color white
-.severity-none
+.cve-tracker .severity-none
   background-color #6b7280
   color white
 
 // Mobile optimizations
 @media (max-width: 768px)
-  .cve-table
+  .cve-tracker .cve-table
     font-size 0.7rem
     thead th
       padding 0.375rem 0.5rem
@@ -478,36 +481,80 @@ export default {
     tbody td
       padding 0.375rem 0.5rem
       font-size 0.7rem
-@media (max-width: 767px)
-  .table-wrapper
-    overflow-x auto
 
-// DataTables custom styling
-.cve-tracker :deep(.table-controls)
+// DataTables Sorting Icons - Critical for sorting visibility
+.cve-tracker table.dataTable thead th.sorting,
+.cve-tracker table.dataTable thead th.sorting_asc,
+.cve-tracker table.dataTable thead th.sorting_desc
+  cursor pointer
+  position relative
+  padding-right 26px !important
+
+.cve-tracker table.dataTable thead th.sorting:before,
+.cve-tracker table.dataTable thead th.sorting:after,
+.cve-tracker table.dataTable thead th.sorting_asc:before,
+.cve-tracker table.dataTable thead th.sorting_asc:after,
+.cve-tracker table.dataTable thead th.sorting_desc:before,
+.cve-tracker table.dataTable thead th.sorting_desc:after
+  position absolute
+  display block
+  opacity 0.3
+  right 10px
+  line-height 9px
+  font-size 0.8em
+
+.cve-tracker table.dataTable thead th.sorting:before,
+.cve-tracker table.dataTable thead th.sorting_asc:before,
+.cve-tracker table.dataTable thead th.sorting_desc:before
+  content: '▲'
+  top 10px
+
+.cve-tracker table.dataTable thead th.sorting:after,
+.cve-tracker table.dataTable thead th.sorting_asc:after,
+.cve-tracker table.dataTable thead th.sorting_desc:after
+  content: '▼'
+  top 19px
+
+.cve-tracker table.dataTable thead th.sorting_asc:before
+  opacity 1
+  color white
+
+.cve-tracker table.dataTable thead th.sorting_desc:after
+  opacity 1
+  color white
+
+// DataTables 2.x default layout styling - minimal overrides
+.cve-tracker :deep(.dt-layout-row)
   display flex
-  flex-direction column
+  align-items center
+  justify-content space-between
   gap 1rem
   margin-bottom 1rem
-  @media (min-width: 768px)
-    flex-direction row
-    align-items center
-    justify-content space-between
-.cve-tracker :deep(.table-footer)
+  &:last-child
+    margin-bottom 0
+    margin-top 1rem
+
+.cve-tracker :deep(.dt-layout-cell)
   display flex
-  flex-direction column
-  gap 1rem
-  margin-top 1rem
-  @media (min-width: 768px)
-    flex-direction row
-    align-items center
-    justify-content space-between
-.cve-tracker :deep(.dataTables_length),
-.cve-tracker :deep(.dataTables_filter),
-.cve-tracker :deep(.dataTables_info),
-.cve-tracker :deep(.dataTables_paginate)
+  align-items center
+
+.cve-tracker :deep(.dt-length label),
+.cve-tracker :deep(.dt-search label)
+  display flex
+  align-items center
+  gap 0.5rem
+  margin 0
+  white-space nowrap
+  font-size 0.875rem
+
+.cve-tracker :deep(.dt-info),
+.cve-tracker :deep(.dt-paging)
   color #374151
   font-size 0.875rem
-.cve-tracker :deep(.dataTables_filter input)
+
+.cve-tracker :deep(.dataTables_filter input),
+.cve-tracker :deep(.dt-search input),
+.cve-tracker :deep(.dt-input)
   border 1px solid #d1d5db
   border-radius 6px
   padding 0.5rem 0.75rem
@@ -516,7 +563,8 @@ export default {
     outline none
     border-color #3b82f6
     box-shadow 0 0 0 3px rgba(59, 130, 246, 0.1)
-.cve-tracker :deep(.dataTables_length select)
+.cve-tracker :deep(.dataTables_length select),
+.cve-tracker :deep(.dt-length select)
   border 1px solid #d1d5db
   border-radius 6px
   padding 0.5rem 0.75rem
@@ -525,7 +573,8 @@ export default {
     outline none
     border-color #3b82f6
     box-shadow 0 0 0 3px rgba(59, 130, 246, 0.1)
-.cve-tracker :deep(.dataTables_paginate .paginate_button)
+.cve-tracker :deep(.dataTables_paginate .paginate_button),
+.cve-tracker :deep(.dt-paging button)
   padding 0.5rem 0.75rem
   font-size 0.875rem
   border 1px solid #d1d5db
@@ -536,7 +585,8 @@ export default {
   &:hover
     background-color #f9fafb
     text-decoration none
-.cve-tracker :deep(.dataTables_paginate .paginate_button.current)
+.cve-tracker :deep(.dataTables_paginate .paginate_button.current),
+.cve-tracker :deep(.dt-paging button.current)
   background-color #3b82f6
   color white
   border-color #3b82f6
