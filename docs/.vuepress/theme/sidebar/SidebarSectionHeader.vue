@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="sidebar-section-header">
-    <img :src="item.icon" class="language-logo" alt="language-logo" />
+    <img :src="item.icon" class="language-logo" alt="language-logo" loading="lazy" />
     <span class="language-title">{{ item.title }}</span>
   </div>
 </template>

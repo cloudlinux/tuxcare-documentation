@@ -39,7 +39,8 @@ function renderLink(h, to, text, active, children, depth = 0, closeSidebarDrawer
         h('img', {
           src: icon,
           class: 'sidebar-link-icon',
-          alt: text
+          alt: text,
+          loading: 'lazy'
         }),
         text
       ]
