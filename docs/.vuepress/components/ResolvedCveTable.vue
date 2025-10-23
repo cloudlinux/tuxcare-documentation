@@ -119,7 +119,7 @@ export default {
   },
   computed: {
     apiUrl() {
-      return `http://localhost:34458/api/v1/resolved-cves?project=${this.project}`
+      return `https://spring-els-cves.cl-edu.com/api/v1/resolved-cves?project=${this.project}`
     },
     filteredCveData() {
       if (this.hide_none) {
