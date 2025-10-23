@@ -437,7 +437,7 @@ const techData = [
       },
       {
         name: "PostCSS",
-        versions: "7.0.39 | 8.2.15 | 8.3.6",
+        versions: "7.0.39 | 8.3.6",
         link: "./postcss/",
       },
       {

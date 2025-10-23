@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for PostCSS from TuxCare provides security fixes
 
 ## Supported PostCSS Versions
 
-* PostCSS 7.0.39, 8.2.15, 8.3.6
+* PostCSS 7.0.39, 8.3.6
 
 ## Connection to ELS for PostCSS Library
 
@@ -57,21 +57,7 @@ TuxCare provides ELS for PostCSS as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "postcss": "npm:@els-js/postcss@7.0.39-tuxcare.1"
-     }
-     ```
-
-     </CodeWithCopy>
-
-     </template>
-
-     <template #postcss_8.2.15>
-
-     <CodeWithCopy>
-
-     ```text
-     "dependencies": {
-       "postcss": "npm:@els-js/postcss@8.2.15-tuxcare.1"
+       "postcss": "npm:@els-js/postcss@7.0.39-tuxcare.2"
      }
      ```
 
@@ -85,7 +71,7 @@ TuxCare provides ELS for PostCSS as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "postcss": "npm:@els-js/postcss@8.3.6-tuxcare.1"
+       "postcss": "npm:@els-js/postcss@8.3.6-tuxcare.2"
      }
      ```
 
@@ -163,14 +149,6 @@ Fixes for the following vulnerabilities are available in ELS for PostCSS from Tu
 <TableTabs label="Choose PostCSS version: " >
 
 <template #postcss_7.0.39>
-
-| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2023-44270 | Direct   | Medium   | postcss           | < 8.4.31           |
-
-  </template>
-
-<template #postcss_8.2.15>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
