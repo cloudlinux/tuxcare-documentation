@@ -111,7 +111,9 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs in ELS for Spring
 
-<CVETracker />
+<ClientOnly>
+  <ResolvedCveTable project="spring-els" />
+</ClientOnly>
 
 
 <!-- data for spring instructions used in code blocks -->

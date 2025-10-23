@@ -18,7 +18,7 @@
       <!-- Stats Cards -->
       <div class="stats-grid">
         <div class="stat-card stat-total">
-          <div class="stat-number">{{ cveData.total }}</div>
+          <div class="stat-number">{{ filteredCveData.total }}</div>
           <div class="stat-label">Total Resolved</div>
         </div>
         <div class="stat-card stat-critical">
@@ -32,6 +32,10 @@
         <div class="stat-card stat-low">
           <div class="stat-number">{{ stats.low }}</div>
           <div class="stat-label">Low</div>
+        </div>
+        <div v-if="!hide_none && stats.none > 0" class="stat-card stat-none">
+          <div class="stat-number">{{ stats.none }}</div>
+          <div class="stat-label">None</div>
         </div>
       </div>
       <!-- Table Container -->
@@ -51,13 +55,13 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="cve in cveData.data" :key="cve.cve_name">
+                <tr v-for="cve in filteredCveData.data" :key="cve.cve_name">
                   <td class="col-cve">
                     <code class="cve-code">{{ cve.cve_name }}</code>
                   </td>
                   <td class="col-severity">
                     <span :class="getSeverityClass(cve.severity_name)" class="severity-badge">
-                      {{ cve.severity_name || 'Unknown' }}
+                      {{ cve.severity_name }}
                     </span>
                   </td>
                   <td class="col-score">
@@ -87,11 +91,15 @@
 
 <script>
 export default {
-  name: 'CVETracker',
+  name: 'ResolvedCveTable',
   props: {
-    apiUrl: {
+    project: {
       type: String,
-      default: 'https://spring-els-cves.cl-edu.com/api/v1/resolved-cves'
+      required: true
+    },
+    hide_none: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -102,33 +110,60 @@ export default {
         total: 0,
         data: []
       },
-      dataTable: null
+      dataTable: null,
+      jQueryLoaded: false
     }
   },
   computed: {
+    apiUrl() {
+      return `https://spring-els-cves.cl-edu.com/api/v1/resolved-cves?project=${this.project}`
+    },
+    filteredCveData() {
+      if (this.hide_none) {
+        const filteredData = this.cveData.data.filter(item => (item.severity_name || '').toLowerCase() !== 'none');
+        return {
+          ...this.cveData,
+          data: filteredData,
+          total: filteredData.length
+        };
+      }
+      return this.cveData;
+    },
     stats() {
-      const stats = { critical: 0, high: 0, medium: 0, low: 0, unknown: 0 }
-      this.cveData.data.forEach(item => {
-        const severity = (item.severity_name || 'unknown').toLowerCase()
+      const stats = { critical: 0, high: 0, medium: 0, low: 0, none: 0 };
+      this.filteredCveData.data.forEach(item => {
+        const severity = (item.severity_name || '').toLowerCase();
         if (stats.hasOwnProperty(severity)) {
-          stats[severity]++
-        } else {
-          stats.unknown++
+          stats[severity]++;
         }
-      })
-      return stats
+      });
+      return stats;
     }
   },
-  mounted() {
-    this.fetchCVEData()
+  async mounted() {
+    if (typeof window !== 'undefined') {
+      // Dynamically import jQuery and DataTables on client-side only
+      try {
+        const jQuery = (await import('jquery')).default;
+        window.$ = window.jQuery = jQuery;
+        await import('datatables.net');
+        await import('datatables.net-dt');
+        this.jQueryLoaded = true;
+      } catch (err) {
+        console.error('Failed to load jQuery/DataTables:', err);
+      }
+      this.fetchCVEData()
+    }
   },
   beforeDestroy() {
-    if (this.dataTable) {
+    if (this.dataTable && typeof window !== 'undefined') {
       this.dataTable.destroy()
     }
   },
   methods: {
     async fetchCVEData() {
+      if (typeof window === 'undefined') return;
+      
       this.loading = true
       this.error = null
       try {
@@ -139,29 +174,20 @@ export default {
         this.cveData = await response.json()
         this.loading = false
         this.$nextTick(() => {
-          this.waitForjQueryAndInitialize()
+          this.initializeDataTable()
         })
       } catch (err) {
         this.error = err.message
         this.loading = false
       }
     },
-    waitForjQueryAndInitialize() {
-      const checkjQuery = () => {
-        if (window.jQuery && window.jQuery.fn && window.jQuery.fn.DataTable) {
-          this.initializeDataTable()
-        } else {
-          // Retry after 1 second
-          setTimeout(checkjQuery, 1000)
-        }
-      }
-      checkjQuery()
-    },
     getSeverityClass(severity) {
-      const severityLower = (severity || 'unknown').toLowerCase()
-      return `severity-${severityLower}`
+      const severityLower = (severity || '').toLowerCase()
+      return severityLower ? `severity-${severityLower}` : ''
     },
     initializeDataTable() {
+      if (typeof window === 'undefined' || !this.jQueryLoaded || !window.jQuery || !window.jQuery.fn.DataTable) return;
+      
       // Skip DataTables initialization on mobile (screen width < 768px)
       if (window.innerWidth < 768) {
         return
@@ -174,11 +200,11 @@ export default {
       window.jQuery.fn.dataTable.ext.type.order['severity-sort-pre'] = function(data) {
         const severity = data.replace(/<[^>]*>/g, '').toLowerCase().trim()
         const severityOrder = {
-          'critical': 4,
-          'high': 3,
-          'medium': 2,
-          'low': 1,
-          'unknown': 0
+          'critical': 5,
+          'high': 4,
+          'medium': 3,
+          'low': 2,
+          'none': 1
         }
         return severityOrder[severity] !== undefined ? severityOrder[severity] : 0
       }
@@ -249,15 +275,6 @@ export default {
   td.col-score
     display none
 
-.cve-tracker
-  background-color white
-  padding 1rem
-  border none
-  border-radius 0
-  font-family -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
-  width 98%
-  max-width 98%
-
 // Loading States
 .loading-container
   display flex
@@ -327,6 +344,8 @@ export default {
   background-color #d97706
 .stat-low
   background-color #16a34a
+.stat-none
+  background-color #6b7280
 .stat-number
   font-size 1.5rem
   font-weight bold
@@ -445,7 +464,7 @@ export default {
 .severity-low
   background-color #16a34a
   color white
-.severity-unknown
+.severity-none
   background-color #6b7280
   color white
 
