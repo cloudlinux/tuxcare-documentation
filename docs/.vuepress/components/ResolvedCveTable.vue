@@ -374,7 +374,7 @@ export default {
   width 100%
   font-size 0.8rem
   border-collapse collapse
-  table-layout auto
+  table-layout fixed
   thead th
     background-color #0d1e30
     color white
@@ -394,6 +394,21 @@ export default {
     white-space normal
   tbody tr:hover
     background-color #f9fafb
+
+// Column width distribution for dynamic stretching
+.cve-tracker .cve-table
+  .col-cve
+    width 15%
+  .col-severity
+    width 12%
+  .col-group
+    width 18%
+  .col-package
+    width 20%
+  .col-vulnerable
+    width 17%
+  .col-fixed
+    width 18%
 
 // Content styling
 .cve-tracker .cve-code
