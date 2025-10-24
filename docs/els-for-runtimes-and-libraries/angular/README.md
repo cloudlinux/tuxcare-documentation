@@ -108,14 +108,14 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
 
    ```text
     "dependencies": {
-      "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-      "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
-      "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
-      "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
-      "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
-      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
-      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
-      "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+      "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",
+      "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.2",
+      "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.2",
+      "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.2",
+      "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.2",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.2",
+      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.2",
+      "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.2",
       "rxjs": "^7.4.0",
       "tslib": "^2.3.0",
       "zone.js": "~0.13.0"
@@ -123,7 +123,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
     "devDependencies": {
       "@angular-devkit/build-angular": "^16.2.12",
       "@angular/cli": "^16.2.12",
-      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.2",
       "@types/jasmine": "~4.3.0",
       "@types/node": "^18.7.0",
       "jasmine-core": "~4.6.0",
@@ -135,15 +135,15 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "typescript": "~5.1.3"
     },
     "overrides": {
-      "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-      "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
-      "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
-      "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
-      "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
-      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
-      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
-      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
-      "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+      "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",
+      "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.2",
+      "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.2",
+      "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.2",
+      "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.2",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.2",
+      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.2",
+      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.2",
+      "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.2",
       "@babel/runtime": "7.26.10",
       "esbuild": "0.25.0",
       "rxjs": "^7.4.0",
@@ -159,10 +159,10 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
    :::tip
    If you use any of the following **non-default Angular modules**, update their versions as shown below:
 
-   * "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-   * "@angular/upgrade": "npm:@els-js/angular-upgrade@16.2.12-tuxcare.1",
-   * "@angular/platform-server": "npm:@els-js/angular-platform-server@16.2.12-tuxcare.1",
-   * "@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.1"
+   * "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@16.2.12-tuxcare.2",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@16.2.12-tuxcare.2",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.2"
 
    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
    :::
