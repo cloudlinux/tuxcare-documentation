@@ -182,14 +182,14 @@ import{_ as d,S as s,n as g,p as m,a6 as i,q as e,C as r,A as l,J as n}from"./fr
 @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
 //nexus.repo.tuxcare.com/repository/els_js/:_auth=\${TOKEN}
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[0]})])]),t[45]||(t[45]=e("div",{class:"warning custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("Replace ${TOKEN} with the token you received from "),e("a",{href:"mailto:sales@tuxcare.com"},"sales@tuxcare.com"),n(".")])],-1)),e("ol",x,[e("li",null,[t[23]||(t[23]=e("p",null,[n("Update your "),e("code",null,"package.json"),n(" file to replace your Angular dependencies with the TuxCare packages.")],-1)),r(u,{label:"Choose Angular version: "},{Angular_18:l(()=>[t[3]||(t[3]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,'Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".'),e("p",null,[n("To check whether your Angular project is configured with Server-Side Rendering, look for "),e("code",null,"@angular/ssr"),n(" listed in your original "),e("code",null,"package.json"),n(" file before replacing dependencies. If you see "),e("code",null,"@angular/ssr"),n(" listed, "),e("strong",null,"SSR is ON"),n(", otherwise "),e("strong",null,"SSR is OFF"),n(".")])],-1)),r(c,{tabs:[{title:"SSR ON",content:p},{title:"SSR OFF",content:y}]},null,8,["tabs"]),t[4]||(t[4]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/language-service": "npm:@els-js/angular-language-service@18.2.13-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@18.2.13-tuxcare.1",'),e("li",null,'"@angular/elements": "npm:@els-js/angular-elements@18.2.13-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@18.2.13-tuxcare.1",')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_17:l(()=>[t[5]||(t[5]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,'Use "SSR ON" if your project is configured with Server-Side Rendering, otherwise use "SSR OFF".'),e("p",null,[n("To check whether your Angular project is configured with Server-Side Rendering, look for "),e("code",null,"@angular/ssr"),n(" listed in your original "),e("code",null,"package.json"),n(" file before replacing dependencies. If you see "),e("code",null,"@angular/ssr"),n(" listed, "),e("strong",null,"SSR is ON"),n(", otherwise "),e("strong",null,"SSR is OFF"),n(".")])],-1)),r(c,{tabs:[{title:"SSR ON",content:v},{title:"SSR OFF",content:b}]},null,8,["tabs"]),t[6]||(t[6]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/animations": "npm:@els-js/angular-animations@17.3.12-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@17.3.12-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@17.3.12-tuxcare.1"')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_16:l(()=>[r(a,null,{default:l(()=>t[7]||(t[7]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,` "dependencies": {
-   "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-   "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
-   "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
-   "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
-   "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
-   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
-   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
-   "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+   "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",
+   "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.2",
+   "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.2",
+   "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.2",
+   "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.2",
+   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.2",
+   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.2",
+   "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.2",
    "rxjs": "^7.4.0",
    "tslib": "^2.3.0",
    "zone.js": "~0.13.0"
@@ -197,7 +197,7 @@ import{_ as d,S as s,n as g,p as m,a6 as i,q as e,C as r,A as l,J as n}from"./fr
  "devDependencies": {
    "@angular-devkit/build-angular": "^16.2.12",
    "@angular/cli": "^16.2.12",
-   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
+   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.2",
    "@types/jasmine": "~4.3.0",
    "@types/node": "^18.7.0",
    "jasmine-core": "~4.6.0",
@@ -209,15 +209,15 @@ import{_ as d,S as s,n as g,p as m,a6 as i,q as e,C as r,A as l,J as n}from"./fr
    "typescript": "~5.1.3"
  },
  "overrides": {
-   "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-   "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
-   "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
-   "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
-   "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
-   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
-   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
-   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
-   "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+   "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",
+   "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.2",
+   "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.2",
+   "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.2",
+   "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.2",
+   "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.2",
+   "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.2",
+   "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.2",
+   "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.2",
    "@babel/runtime": "7.26.10",
    "esbuild": "0.25.0",
    "rxjs": "^7.4.0",
@@ -226,7 +226,7 @@ import{_ as d,S as s,n as g,p as m,a6 as i,q as e,C as r,A as l,J as n}from"./fr
    "vite@4.5.5": "npm:@els-js/vite@4.5.5-tuxcare.1",
    "webpack-dev-server@4.15.1": "npm:@els-js/webpack-dev-server@4.15.1-tuxcare.1"
  },
-`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[7]}),t[8]||(t[8]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@16.2.12-tuxcare.1",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@16.2.12-tuxcare.1",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.1"')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_15:l(()=>[r(a,null,{default:l(()=>t[9]||(t[9]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,` "dependencies": {
+`)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[7]}),t[8]||(t[8]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"}),e("p",null,[n("If you use any of the following "),e("strong",null,"non-default Angular modules"),n(", update their versions as shown below:")]),e("ul",null,[e("li",null,'"@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",'),e("li",null,'"@angular/upgrade": "npm:@els-js/angular-upgrade@16.2.12-tuxcare.2",'),e("li",null,'"@angular/platform-server": "npm:@els-js/angular-platform-server@16.2.12-tuxcare.2",'),e("li",null,'"@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.2"')]),e("p",null,[n("After adding these aliases, make sure the same modules are also listed in the "),e("code",null,"overrides"),n(" section, just like the default ones.")])],-1))]),Angular_15:l(()=>[r(a,null,{default:l(()=>t[9]||(t[9]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,` "dependencies": {
    "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
    "@angular/common": "npm:@els-js/angular-common@15.2.10-tuxcare.1",
    "@angular/compiler": "npm:@els-js/angular-compiler@15.2.10-tuxcare.1",
