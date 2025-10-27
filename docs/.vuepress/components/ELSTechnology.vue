@@ -491,6 +491,11 @@ const techData = [
         link: "./vite/",
       },
       {
+        name: "vue",
+        versions: "2.7.16",
+        link: "./vue/",
+      },
+      {
         name: "webpack-dev-server",
         versions: "3.11.0 | 4.7.3 | 4.15.1",
         link: "./webpack-dev-server/",

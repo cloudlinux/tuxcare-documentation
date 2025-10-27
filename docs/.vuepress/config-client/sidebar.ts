@@ -389,6 +389,10 @@ export default {
                     icon: '/images/vite-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/vue/',
+                    icon: '/images/vue-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/webpack-dev-server/',
                     icon: '/images/webpack-dev-server.webp',
                 },
