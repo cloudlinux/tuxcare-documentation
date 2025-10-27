@@ -1240,7 +1240,6 @@ const Angular17WithSSR =
   "@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
   "@angular/ssr": "npm:@els-js/angular-ssr@17.3.12-tuxcare.1",
-  "rxjs": "^7.4.0",
   "esbuild": "0.25.0",
   "rxjs": "^7.4.0",
   "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
