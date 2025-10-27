@@ -431,6 +431,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "postcss@8.3.6": "npm:@els-js/postcss@8.3.6-tuxcare.2",
       "rxjs": "~6.6.0",
       "semver@7.3.5": "npm:@els-js/semver@7.3.2-tuxcare.2",
+      "terser@5.7.1": "npm:@els-js/terser@5.5.1-tuxcare.2",
       "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
       "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
       "webpack@5.50.0": "npm:@els-js/webpack@5.50.0-tuxcare.2",
