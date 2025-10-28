@@ -98,7 +98,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-struts/',
-                    icon: '/images/apache.webp',
+                    icon: '/images/strut-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-spark/',
@@ -110,7 +110,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-velocity-engine/',
-                    icon: '/images/apache.webp',
+                    icon: '/images/velocity-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/postgresql-driver/',
@@ -118,11 +118,11 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/protobuf/',
-                    icon: '/images/java.webp',
+                    icon: '/images/protobuf-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/jackson/',
-                    icon: '/images/jackson.webp',
+                    icon: '/images/jackson-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-commons-lang/',
@@ -155,7 +155,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/flask/',
-                    icon: '/images/flask-werkzeug.webp',
+                    icon: '/images/flask-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/numpy/',
@@ -163,11 +163,11 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/starlette/',
-                    icon: '/images/python.webp',
+                    icon: '/images/starlette-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/werkzeug/',
-                    icon: '/images/flask-werkzeug.webp',
+                    icon: '/images/werkzeug-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/python-libraries/',
