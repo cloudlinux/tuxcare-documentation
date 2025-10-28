@@ -53,7 +53,7 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
 
    ```text
    "dependencies": {
-     "braces": "npm:@els-js/braces@2.3.2-tuxcare.1"
+     "braces": "npm:@els-js/braces@2.3.2-tuxcare.2"
    }
    ```
 
