@@ -158,6 +158,10 @@ export default {
                     icon: '/images/flask-werkzeug.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/numpy/',
+                    icon: '/images/numpy.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/starlette/',
                     icon: '/images/python.webp',
                 },

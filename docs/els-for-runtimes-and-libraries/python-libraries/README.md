@@ -17,7 +17,6 @@ Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides s
 * **httpx** 0.22.0
 * **idna** 2.1, 2.8, 3.6
 * **Jinja2** 2.11.3, 3.0.3
-* **numpy** 1.15.4, 1.16.0
 * **orjson** 3.8.5
 * **pandas** 2.2.0, 2.2.2
 * **paramiko** 3.0.0
@@ -29,7 +28,7 @@ Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides s
 * **pymongo** 3.13.0
 * **python-jose** 3.3.0
 * **python-multipart** 0.0.6
-* **redis** 4.5.1
+* **redis-py** 4.5.1
 * **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
 * **setuptools** 65.5.1, 68.0.0, 75.8.0
 * **statsmodels** 0.14.4
