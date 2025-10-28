@@ -632,9 +632,9 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "numpy",
+        name: "NumPy",
         versions: "1.15.4 | 1.16.0",
-        link: "./python-libraries/",
+        link: "./numpy/",
       },
       {
         name: "orjson",
@@ -692,7 +692,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "redis",
+        name: "redis-py",
         versions: "4.5.1",
         link: "./python-libraries/",
       },
