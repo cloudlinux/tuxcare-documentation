@@ -393,6 +393,10 @@ export default {
                     icon: '/images/vue-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/vue-template-compiler/',
+                    icon: '/images/vue-template-compiler-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/webpack-dev-server/',
                     icon: '/images/webpack-dev-server.webp',
                 },
@@ -403,10 +407,6 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/webpack-subresource-integrity/',
                     icon: '/images/webpack-subresource-integrity-logo.webp',
-                },
-                {
-                    path: '/els-for-runtimes-and-libraries/vue-template-compiler/',
-                    icon: '/images/vue-template-compiler-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/xml2js/',
