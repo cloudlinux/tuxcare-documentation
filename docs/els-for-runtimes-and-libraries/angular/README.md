@@ -108,14 +108,14 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
 
    ```text
     "dependencies": {
-      "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-      "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
-      "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
-      "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
-      "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
-      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
-      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
-      "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+      "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",
+      "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.2",
+      "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.2",
+      "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.2",
+      "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.2",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.2",
+      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.2",
+      "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.2",
       "rxjs": "^7.4.0",
       "tslib": "^2.3.0",
       "zone.js": "~0.13.0"
@@ -123,7 +123,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
     "devDependencies": {
       "@angular-devkit/build-angular": "^16.2.12",
       "@angular/cli": "^16.2.12",
-      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.2",
       "@types/jasmine": "~4.3.0",
       "@types/node": "^18.7.0",
       "jasmine-core": "~4.6.0",
@@ -135,15 +135,15 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "typescript": "~5.1.3"
     },
     "overrides": {
-      "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-      "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.1",
-      "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.1",
-      "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.1",
-      "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.1",
-      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.1",
-      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.1",
-      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.1",
-      "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.1",
+      "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",
+      "@angular/common": "npm:@els-js/angular-common@16.2.12-tuxcare.2",
+      "@angular/compiler": "npm:@els-js/angular-compiler@16.2.12-tuxcare.2",
+      "@angular/core": "npm:@els-js/angular-core@16.2.12-tuxcare.2",
+      "@angular/forms": "npm:@els-js/angular-forms@16.2.12-tuxcare.2",
+      "@angular/platform-browser": "npm:@els-js/angular-platform-browser@16.2.12-tuxcare.2",
+      "@angular/platform-browser-dynamic": "npm:@els-js/angular-platform-browser-dynamic@16.2.12-tuxcare.2",
+      "@angular/compiler-cli": "npm:@els-js/angular-compiler-cli@16.2.12-tuxcare.2",
+      "@angular/router": "npm:@els-js/angular-router@16.2.12-tuxcare.2",
       "@babel/runtime": "7.26.10",
       "esbuild": "0.25.0",
       "rxjs": "^7.4.0",
@@ -159,10 +159,10 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
    :::tip
    If you use any of the following **non-default Angular modules**, update their versions as shown below:
 
-   * "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.1",
-   * "@angular/upgrade": "npm:@els-js/angular-upgrade@16.2.12-tuxcare.1",
-   * "@angular/platform-server": "npm:@els-js/angular-platform-server@16.2.12-tuxcare.1",
-   * "@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.1"
+   * "@angular/animations": "npm:@els-js/angular-animations@16.2.12-tuxcare.2",
+   * "@angular/upgrade": "npm:@els-js/angular-upgrade@16.2.12-tuxcare.2",
+   * "@angular/platform-server": "npm:@els-js/angular-platform-server@16.2.12-tuxcare.2",
+   * "@angular/service-worker": "npm:@els-js/angular-service-worker@16.2.12-tuxcare.2"
 
    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
    :::
@@ -431,6 +431,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "postcss@8.3.6": "npm:@els-js/postcss@8.3.6-tuxcare.2",
       "rxjs": "~6.6.0",
       "semver@7.3.5": "npm:@els-js/semver@7.3.2-tuxcare.2",
+      "terser@5.7.1": "npm:@els-js/terser@5.5.1-tuxcare.2",
       "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
       "tmp@0.2.5": "npm:@els-js/tmp@0.2.1-tuxcare.1",
       "webpack@5.50.0": "npm:@els-js/webpack@5.50.0-tuxcare.2",
@@ -565,7 +566,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "@types/jasmine": "3.6.0",
       "@types/node": "^12.11.1",
       "jasmine-core": "~3.6.0",
-      "karma": "npm:@els-js/karma@5.0.9-tuxcare.1",
+      "karma": "npm:@els-js/karma@5.0.9-tuxcare.2",
       "karma-chrome-launcher": "~3.1.0",
       "karma-coverage-istanbul-reporter": "~3.0.3",
       "karma-jasmine": "~3.3.1",
@@ -591,7 +592,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "http-cache-semantics@3.8.1": "npm:@els-js/http-cache-semantics@3.8.1-tuxcare.2",
       "http-proxy-middleware@0.19.1": "npm:@els-js/http-proxy-middleware@0.19.1-tuxcare.1",
       "ip@1.1.5": "npm:@els-js/ip@1.1.5-tuxcare.2",
-      "karma@5.0.9": "npm:@els-js/karma@5.0.9-tuxcare.1",
+      "karma@5.0.9": "npm:@els-js/karma@5.0.9-tuxcare.2",
       "loader-utils@1.2.3": "npm:@els-js/loader-utils@1.2.3-tuxcare.1",
       "loader-utils@2.0.0": "npm:@els-js/loader-utils@2.0.0-tuxcare.1",
       "micromatch@3.1.10": "npm:@els-js/micromatch@3.1.10-tuxcare.1",
@@ -662,7 +663,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "codelyzer": "^5.1.2",
       "jasmine-core": "~3.5.0",
       "jasmine-spec-reporter": "~4.2.1",
-      "karma": "npm:@els-js/karma@5.0.9-tuxcare.1",
+      "karma": "npm:@els-js/karma@5.0.9-tuxcare.2",
       "karma-chrome-launcher": "~3.1.0",
       "karma-coverage-istanbul-reporter": "~2.1.0",
       "karma-jasmine": "~3.0.1",
@@ -690,7 +691,7 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
       "http-proxy-middleware@0.19.1": "npm:@els-js/http-proxy-middleware@0.19.1-tuxcare.1",
       "ip@1.1.5": "npm:@els-js/ip@1.1.5-tuxcare.2",
       "loader-utils@2.0.0": "npm:@els-js/loader-utils@2.0.0-tuxcare.1",
-      "karma@5.0.9": "npm:@els-js/karma@5.0.9-tuxcare.1",
+      "karma@5.0.9": "npm:@els-js/karma@5.0.9-tuxcare.2",
       "micromatch@3.1.10": "npm:@els-js/micromatch@3.1.10-tuxcare.1",
       "minimatch@3.0.4": "npm:@els-js/minimatch@3.0.4-tuxcare.1",
       "nth-check@1.0.2": "npm:@els-js/nth-check@1.0.2-tuxcare.1",
@@ -1240,7 +1241,6 @@ const Angular17WithSSR =
   "@angular/platform-server": "npm:@els-js/angular-platform-server@17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-js/angular-router@17.3.12-tuxcare.1",
   "@angular/ssr": "npm:@els-js/angular-ssr@17.3.12-tuxcare.1",
-  "rxjs": "^7.4.0",
   "esbuild": "0.25.0",
   "rxjs": "^7.4.0",
   "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",

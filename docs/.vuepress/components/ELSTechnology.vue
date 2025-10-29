@@ -491,6 +491,11 @@ const techData = [
         link: "./vite/",
       },
       {
+        name: "vue",
+        versions: "2.7.16",
+        link: "./vue/",
+      },
+      {
         name: "webpack-dev-server",
         versions: "3.11.0 | 4.7.3 | 4.15.1",
         link: "./webpack-dev-server/",
@@ -627,9 +632,9 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "numpy",
+        name: "NumPy",
         versions: "1.15.4 | 1.16.0",
-        link: "./python-libraries/",
+        link: "./numpy/",
       },
       {
         name: "orjson",
@@ -687,7 +692,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "redis",
+        name: "redis-py",
         versions: "4.5.1",
         link: "./python-libraries/",
       },

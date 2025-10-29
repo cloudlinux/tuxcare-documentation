@@ -98,7 +98,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-struts/',
-                    icon: '/images/apache.webp',
+                    icon: '/images/strut-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-spark/',
@@ -110,7 +110,7 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-velocity-engine/',
-                    icon: '/images/apache.webp',
+                    icon: '/images/velocity-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/postgresql-driver/',
@@ -118,11 +118,11 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/protobuf/',
-                    icon: '/images/java.webp',
+                    icon: '/images/protobuf-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/jackson/',
-                    icon: '/images/jackson.webp',
+                    icon: '/images/jackson-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-commons-lang/',
@@ -155,15 +155,19 @@ export default {
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/flask/',
-                    icon: '/images/flask-werkzeug.webp',
+                    icon: '/images/flask-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/numpy/',
+                    icon: '/images/numpy.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/starlette/',
-                    icon: '/images/python.webp',
+                    icon: '/images/starlette-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/werkzeug/',
-                    icon: '/images/flask-werkzeug.webp',
+                    icon: '/images/werkzeug-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/python-libraries/',
@@ -389,6 +393,14 @@ export default {
                     icon: '/images/vite-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/vue/',
+                    icon: '/images/vue-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/vue-template-compiler/',
+                    icon: '/images/vue-template-compiler-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/webpack-dev-server/',
                     icon: '/images/webpack-dev-server.webp',
                 },
@@ -399,10 +411,6 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/webpack-subresource-integrity/',
                     icon: '/images/webpack-subresource-integrity-logo.webp',
-                },
-                {
-                    path: '/els-for-runtimes-and-libraries/vue-template-compiler/',
-                    icon: '/images/vue-template-compiler-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/xml2js/',

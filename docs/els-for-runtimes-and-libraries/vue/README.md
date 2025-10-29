@@ -1,30 +1,30 @@
-# braces
+# Vue
 
-Endless Lifecycle Support (ELS) for braces from TuxCare provides security fixes for braces versions that have reached their end of life. This allows you to continue running braces applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Vue from TuxCare provides security fixes for Vue versions that have reached their end of life. This allows you to continue running Vue applications without vulnerability concerns, even after official support has ended.
 
-## Supported braces Versions
+## Supported Vue Versions
 
-* braces 2.3.2
+* Vue 2.7.16
 
-## Connection to ELS for braces Library
+## Connection to ELS for Vue Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the braces library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the Vue library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS braces library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS Vue library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for braces
+## Step 2: Set Up ELS for Vue
 
-TuxCare provides ELS for braces as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for Vue as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your braces project.
+1. Navigate to the root directory of your Vue project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-braces-project/
+   my-vue-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -47,13 +47,13 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your braces dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your Vue dependencies with the TuxCare packages:
 
    <CodeWithCopy>
 
    ```text
    "dependencies": {
-     "braces": "npm:@els-js/braces@2.3.2-tuxcare.2"
+     "vue": "npm:@els-js/vue@2.7.16-tuxcare.1"
    }
    ```
 
@@ -69,7 +69,7 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the braces library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the Vue library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -82,21 +82,18 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
    You will see an output like:
 
    ```text
-   added 79 packages, and audited 80 packages in 2s
-
-   2 packages are looking for funding
-   run `npm fund` for details
-
-   found 0 vulnerabilities
+    added 1 package, and audited 2 packages in 792ms
+    
+    found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the braces library into your project.
+7. You've successfully installed the Tuxcare ELS version of the Vue library into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for braces ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/braces/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/braces/).
+TuxCare provides VEX for Vue ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -107,7 +104,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install braces@npm:@els-js/braces@2.3.2-tuxcare.2
+  npm install vue@npm:@els-js/vue@2.7.16-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -125,10 +122,11 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for braces from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for Vue from TuxCare versions:
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2024-4068  | Direct   | High     | braces            | < 3.0.3           |
+| CVE-2024-6783  | Direct   | Medium   | Vue                | >= 2.0.0 < 3.0.0 |
+| CVE-2024-9506  | Direct   | Low      | Vue                | >= 2.0.0 < 3.0.0 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

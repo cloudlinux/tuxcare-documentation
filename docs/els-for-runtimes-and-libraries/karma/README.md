@@ -71,7 +71,7 @@ TuxCare provides ELS for karma as an NPM package, hosted on a secure internal re
 
      ```text
      "dependencies": {
-       "karma": "npm:@els-js/karma@5.0.9-tuxcare.1"
+       "karma": "npm:@els-js/karma@5.0.9-tuxcare.2"
      }
      ```
 
