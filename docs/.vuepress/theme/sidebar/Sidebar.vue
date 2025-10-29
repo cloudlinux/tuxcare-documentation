@@ -100,8 +100,10 @@ const isAtBottom = () => {
   const scrollHeight = document.documentElement.scrollHeight
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
   const clientHeight = document.documentElement.clientHeight
-  // Consider "at bottom" if within 100px of the bottom
-  return scrollHeight - scrollTop - clientHeight < 100
+  // Consider "at bottom" if within 10% of viewport height from the bottom
+  // This scales better across different screen sizes
+  const threshold = clientHeight * 0.1
+  return scrollHeight - scrollTop - clientHeight < threshold
 }
 
 // Update sidebar active state based on the topmost visible heading
