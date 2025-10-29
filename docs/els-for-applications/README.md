@@ -2,6 +2,8 @@
 
 # Endless Lifecycle Support for Open-Source Applications
 
+* [Apache Hadoop](./apache-hadoop)
+* [Apache Hive](./apache-hive)
 * [Apache Tomcat](./apache-tomcat)
 
 ## Vulnerability Coverage and Target Response Times
@@ -33,17 +35,23 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 * **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
 
 :::warning
-Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+Note: SBOM support for certain components is in progress and will be available soon. To confirm current availability or expected timeframes, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
 * **Enhanced Metadata in Standard Formats:** Each SBOM is provided in universally recognized formats such as SPDX and VEX. These include enhanced metadata like artifact analysis, package health, and vulnerability impact data, ensuring that you have the most detailed and actionable information at your fingertips.
 * **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
 
 :::warning
-Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
+
+## Support Duration
+
+TuxCare provides continuous security patching for all supported end-of-life (EOL) technologies for as long as your organization requires them, eliminating the need for rushed or disruptive upgrades.
+
+All updates are delivered at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
 
 ## Technical Support
 

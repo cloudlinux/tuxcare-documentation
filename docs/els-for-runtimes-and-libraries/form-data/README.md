@@ -93,7 +93,7 @@ TuxCare provides ELS for Form-Data as an NPM package, hosted on a secure interna
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Form-Data ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/form/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/form/).
+TuxCare provides VEX for Form-Data ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/form-data/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/form-data/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -129,3 +129,4 @@ Fixes for the following vulnerabilities are available in ELS for Form-Data from 
 | CVE-2025-7783  | Direct   | Critical |     form-data      | < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

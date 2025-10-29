@@ -53,7 +53,7 @@ TuxCare provides ELS for ssr-window as an NPM package, hosted on a secure intern
 
    ```text
    "dependencies": {
-     "ssr-window": "npm:@els-js/ssr-window@4.0.2-tuxcare.2"
+     "ssr-window": "npm:@els-js/ssr-window@4.0.2-tuxcare.3"
    }
    ```
 
@@ -93,11 +93,11 @@ TuxCare provides ELS for ssr-window as an NPM package, hosted on a secure intern
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for ssr-window ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ssr/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ssr/).
+TuxCare provides VEX for ssr-window ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ssr-window/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ssr-window/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.2` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
 
 * **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
@@ -129,3 +129,4 @@ Fixes for the following vulnerabilities are available in ELS for ssr-window from
 | AIKIDO-2025-10093 | Direct   | High     | ssr-window        | 2.0.0-beta.1 - 4.0.2 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

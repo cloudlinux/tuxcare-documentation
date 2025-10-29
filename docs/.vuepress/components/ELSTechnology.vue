@@ -97,134 +97,152 @@ const techData = [
       {
         name: "Dom4j",
         versions: "1.6.1",
+        link: "./java-libraries/",
       },
       {
         name: "SnakeYAML",
         versions: "1.23 | 1.26 | 1.29 | 1.30 | 1.33",
+        link: "./java-libraries/",
       },
       {
         name: "Google Guava",
         versions: "20.0 | 30.1-jre | 31.1-jre",
-      },
-      {
-        name: "Apache Hadoop",
-        versions: "2.7.3, 2.7.1",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Struts",
         versions: "1.3.5 | 2.5.33",
+        link: "./apache-struts/",
       },
       {
         name: "Apache Spark",
         versions: "2.4.8",
+        link: "./apache-spark/",
       },
       {
         name: "Okio",
         versions: "2.8.0",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Commons BeanUtils",
         versions: "1.9.4",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Commons HttpClient",
         versions: "3.1",
+        link: "./java-libraries/",
       },
       {
         name: "Apache CXF",
         versions: "3.5.9",
+        link: "./java-libraries/",
       },
       {
         name: "DNSJava",
         versions: "2.1.7",
+        link: "./java-libraries/",
       },
       {
         name: "el-spec",
         versions: "3.0.0",
-      },
-      {
-        name: "Apache Hive",
-        versions: "2.3.9",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Kafka",
         versions: "3.2.3",
+        link: "./apache-kafka/",
       },
       {
         name: "Jackson",
         versions: "1.9.13",
+        link: "./jackson/",
       },
       {
         name: "Logback",
         versions: "1.2.13",
+        link: "./java-libraries/",
       },
       {
         name: "Netty",
         versions: "4.1.115.Final | 4.1.63.Final",
+        link: "./java-libraries/",
       },
       {
         name: "Nimbus JOSE + JWT",
         versions: "9.22 | 9.24.4",
+        link: "./java-libraries/",
       },
       {
         name: "Querydsl",
         versions: "5.1.0",
+        link: "./java-libraries/",
       },
       {
         name: "Plexus Utils",
         versions: "1.5.8",
+        link: "./java-libraries/",
       },
       {
-        name: "PostgreSQL",
-        versions: "42.5.0 | 42.2.16",
+        name: "PostgreSQL driver",
+        versions: "42.2.16 | 42.5.0",
+        link: "./postgresql-driver/",
       },
       {
         name: "Protobuf",
         versions: "2.5.0"
+        ,link: "./protobuf/",
       },
       {
         name: "Reload4j",
         versions: "1.2.17",
+        link: "./java-libraries/",
       },
       {
         name: "Snappy Java",
         versions: "1.1.8.4",
-      },
-      {
-        name: "Apache Tomcat",
-        versions: "8.5.100 | 9.0.75",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Thrift",
         versions: "0.9.3",
+        link: "./java-libraries/",
       },
       {
         name: "Thymeleaf",
         versions: "3.0.15.RELEASE",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Velocity Engine",
         versions: "1.7",
+        link: "./apache-velocity-engine/",
       },
       {
         name: "Woodstox",
         versions: "5.0.3",
+        link: "./java-libraries/",
       },
       {
         name: "XMLUnit",
         versions: "2.9.1 | 2.9.0"
-      },
-      {
-        name: "Apache Santuario XML Security For Java",
-        versions: "2.0.10 | 2.3.1",
+        ,link: "./java-libraries/",
       },
       {
         name: "Apache Commons IO",
         versions: "2.7",
+        link: "./java-libraries/",
       },
       {
         name: "Apache Commons Lang",
         versions: "2.4 | 2.6 | 3.4 | 3.10 | 3.12.0",
+        link: "./apache-commons-lang/",
+      },
+      {
+        name: "Apache Santuario XML Security For Java",
+        versions: "2.0.10 | 2.3.1",
+        link: "./java-libraries/",
       },
     ],
   },
@@ -243,6 +261,16 @@ const techData = [
         link: "./angularjs/",
       },
       {
+        name: "base64url",
+        versions: "0.0.6",
+        link: "./base64url/",
+      },
+      {
+        name: "bson",
+        versions: "0.5.7 | 1.0.9",
+        link: "./bson/",
+      },
+      {
         name: "Bootstrap",
         versions: "3.4.1 | 4.6.2",
         link: "./bootstrap/",
@@ -253,6 +281,11 @@ const techData = [
         link: "./braces/",
       },
       {
+        name: "cookie",
+        versions: "0.3.1 | 0.4.2",
+        link: "./cookie/",
+      },
+      {
         name: "copy-anything",
         versions: "2.0.6",
         link: "./copy-anything/",
@@ -261,6 +294,11 @@ const techData = [
         name: "CryptoJS",
         versions: "3.3.0",
         link: "./crypto-js/",
+      },
+      {
+        name: "debug",
+        versions: "4.1.1",
+        link: "./debug/",
       },
       {
         name: "DOMPurify",
@@ -288,9 +326,19 @@ const techData = [
         link: "./form-data/",
       },
       {
+        name: "http-proxy-middleware",
+        versions: "0.19.1 | 2.0.8",
+        link: "./http-proxy-middleware/",
+      },
+      {
         name: "i18next",
         versions: "23.16.8",
         link: "./i18next/",
+      },
+      {
+        name: "ini",
+        versions: "1.3.5",
+        link: "./ini/",
       },
       {
         name: "ip",
@@ -308,6 +356,11 @@ const techData = [
         link: "./jsonwebtoken/",
       },
       {
+        name: "karma",
+        versions: "4.1.0 | 5.0.9",
+        link: "./karma/",
+      },
+      {
         name: "JSONPath Plus",
         versions: "7.2.0",
         link: "./jsonpath-plus/",
@@ -323,6 +376,16 @@ const techData = [
         link: "./lodash/",
       },
       {
+        name: "micromatch",
+        versions: "3.1.10",
+        link: "./micromatch/",
+      },
+      {
+        name: "minimatch",
+        versions: "3.0.4",
+        link: "./minimatch/",
+      },
+      {
         name: "marked",
         versions: "4.0.9",
         link: "./marked/",
@@ -336,6 +399,11 @@ const techData = [
         name: "Mongoose",
         versions: "5.13.23",
         link: "./mongoose/",
+      },
+      {
+        name: "nth-check",
+        versions: "1.0.2",
+        link: "./nth-check/",
       },
       {
         name: "multer",
@@ -368,6 +436,11 @@ const techData = [
         link: "./pdfjs-dist/",
       },
       {
+        name: "PostCSS",
+        versions: "7.0.39 | 8.3.6",
+        link: "./postcss/",
+      },
+      {
         name: "picocolors",
         versions: "0.2.1",
         link: "./picocolors/",
@@ -379,13 +452,18 @@ const techData = [
       },
       {
         name: "Request",
-        versions: "2.88.0 | 2.88.2",
+        versions: "2.88.0",
         link: "./request/",
       },
       {
         name: "Rollup",
-        versions: "2.79.1 | 2.79.2",
+        versions: "2.1.0 | 2.26.5 | 2.38.4 | 2.79.1 | 2.79.2",
         link: "./rollup/",
+      },
+      {
+        name: "semver",
+        versions: "7.1.3 | 7.3.2",
+        link: "./semver/",
       },
       {
         name: "ssr-window",
@@ -393,9 +471,44 @@ const techData = [
         link: "./ssr-window/",
       },
       {
+        name: "terser",
+        versions: "4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
+        link: "./terser/",
+      },
+      {
         name: "tough-cookie",
         versions: "2.4.3 | 2.5.0",
         link: "./tough-cookie/",
+      },
+      {
+        name: "UAParser.js",
+        versions: "0.7.21",
+        link: "./ua-parser-js/",
+      },
+      {
+        name: "Vite",
+        versions: "4.5.5",
+        link: "./vite/",
+      },
+      {
+        name: "vue",
+        versions: "2.7.16",
+        link: "./vue/",
+      },
+      {
+        name: "webpack-dev-server",
+        versions: "3.11.0 | 4.7.3 | 4.15.1",
+        link: "./webpack-dev-server/",
+      },
+      {
+        name: "webpack",
+        versions: "5.55.0 | 5.76.1",
+        link: "./webpack/",
+      },
+      {
+        name: "webpack-subresource-integrity",
+        versions: "1.4.0",
+        link: "./webpack-subresource-integrity/",
       },
       {
         name: "undici",
@@ -406,6 +519,16 @@ const techData = [
         name: "vue-template-compiler",
         versions: "2.6.11",
         link: "./vue-template-compiler/",
+      },
+      {
+        name: "xml2js",
+        versions: "0.4.23",
+        link: "./xml2js/",
+      },
+      {
+        name: "yargs-parser",
+        versions: "11.1.1",
+        link: "./yargs-parser/",
       },
       {
         name: "@sentry/browser",
@@ -509,9 +632,9 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "numpy",
+        name: "NumPy",
         versions: "1.15.4 | 1.16.0",
-        link: "./python-libraries/",
+        link: "./numpy/",
       },
       {
         name: "orjson",
@@ -569,7 +692,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "redis",
+        name: "redis-py",
         versions: "4.5.1",
         link: "./python-libraries/",
       },

@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for rollup from TuxCare provides security fixes 
 
 ## Supported Rollup Versions
 
-* Rollup 2.79.1, 2.79.2
+* Rollup 2.1.0, 2.26.5, 2.38.4, 2.79.1, 2.79.2
 
 ## Connection to ELS for Rollup Library
 
@@ -50,6 +50,48 @@ TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal r
 4. Update your `package.json` file to replace your Rollup dependencies with the TuxCare packages:
 
    <TableTabs label="Choose Rollup version: " >
+
+     <template #rollup_2.1.0>
+
+     <CodeWithCopy>
+
+     ```text
+     "dependencies": {
+       "rollup": "npm:@els-js/rollup@2.1.0-tuxcare.1"
+     }
+     ```
+
+     </CodeWithCopy>
+
+     </template>
+
+     <template #rollup_2.26.5>
+
+     <CodeWithCopy>
+
+     ```text
+     "dependencies": {
+       "rollup": "npm:@els-js/rollup@2.26.5-tuxcare.1"
+     }
+     ```
+
+     </CodeWithCopy>
+
+     </template>
+
+     <template #rollup_2.38.4>
+
+     <CodeWithCopy>
+
+     ```text
+     "dependencies": {
+       "rollup": "npm:@els-js/rollup@2.38.4-tuxcare.1"
+     }
+     ```
+
+     </CodeWithCopy>
+
+     </template>
 
      <template #rollup_2.79.1>
 

@@ -18,6 +18,12 @@ Our ELS service is designed to provide solutions for organizations that are not 
 * [Ubuntu 18.04](./ubuntu-18-04-els)
 * [Ubuntu 20.04](./ubuntu-20-04-els)
 
+## Support Duration
+
+TuxCare provides continuous security patching for all supported end-of-life (EOL) technologies for as long as your organization requires them, eliminating the need for rushed or disruptive upgrades.
+
+All updates are delivered at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
+
 ## Vulnerability coverage
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.

@@ -27,7 +27,7 @@ This installation method is suitable for both non-containerized systems and cont
    <CodeWithCopy>
 
    ```text
-   wget https://repo.tuxcare.com/openjdk-els/els-openjdk-release-install.x86_64.rpm
+   wget https://repo.tuxcare.com/openjdk-els/install-openjdk-els-repo.sh
    ```
 
    </CodeWithCopy>
@@ -37,7 +37,7 @@ This installation method is suitable for both non-containerized systems and cont
    <CodeWithCopy>
 
    ```text
-   yum install ./els-openjdk-release-install.x86_64.rpm --license-key XXX-XXXXXXXXXXXX
+   sh install-openjdk-els-repo.sh --license-key XXXXXXXXXXX
    ```
    </CodeWithCopy>
 

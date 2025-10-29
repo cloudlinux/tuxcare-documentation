@@ -93,7 +93,7 @@ TuxCare provides ELS for node-forge as an NPM package, hosted on a secure intern
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for node-forge ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/node/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/node/).
+TuxCare provides VEX for node-forge ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/node-forge/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/node-forge/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -130,3 +130,4 @@ Fixes for the following vulnerabilities are available in ELS for node-forge from
 | CVE-2022-24771 | Direct   | High     | node-forge        | < 1.3.0           |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

@@ -57,7 +57,7 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
 
      ```text
      "dependencies": {
-       "jsonwebtoken": "npm:@els-js/jsonwebtoken@0.4.0-tuxcare.3"
+       "jsonwebtoken": "npm:@els-js/jsonwebtoken@0.4.0-tuxcare.4"
      }
      ```
 

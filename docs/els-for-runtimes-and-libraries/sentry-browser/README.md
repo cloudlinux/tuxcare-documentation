@@ -93,7 +93,7 @@ TuxCare provides ELS for @sentry/browser as an NPM package, hosted on a secure i
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for @sentry/browser ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/sentry/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/sentry/).
+TuxCare provides VEX for @sentry/browser ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/sentry-browser/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/sentry-browser/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

@@ -78,3 +78,78 @@ CODE
   </template>
 
 </TableTabs>
+
+## Components: ResolvedCveTable
+
+**Description**:
+
+- Displays a dynamic table of resolved CVEs (Common Vulnerabilities and Exposures) for TuxCare ELS projects.
+- Fetches real-time data from the TuxCare CVE API and presents it in an interactive, sortable, and searchable table.
+- Shows statistics dashboard with total resolved CVEs and breakdown by severity (Critical+High, Medium, Low, None).
+- Includes DataTables functionality for desktop users (search, sort, pagination).
+- Mobile-optimized: DataTables disabled on screens < 768px for better mobile experience.
+- Must be wrapped in `<ClientOnly>` tags for proper SSR compatibility.
+
+**Features**:
+
+- **Stats Cards**: Visual summary of CVE counts by severity
+- **Sortable Table**: Click column headers to sort (default: severity desc, then score desc)
+- **Search**: Filter CVEs by any field (CVE name, package, version, etc.)
+- **Pagination**: Choose 10, 25, 50, 100, or All entries per page
+- **Severity Color Coding**: Critical (red), High (orange), Medium (amber), Low (green), None (gray)
+- **Error Handling**: Displays error message with retry button if data fetch fails
+- **Loading State**: Shows spinner while fetching data
+
+**Props**:
+
+- `project` (String, **required**): Project identifier key for the API endpoint
+- `hide_none` (Boolean, optional, default: `false`): Whether to filter out CVEs with "None" severity
+
+**Available Projects**:
+
+| Project | Key | Description |
+|---------|-----|-------------|
+| Spring Framework ELS | `spring-els` | Extended Lifecycle Support |
+| Apache Tomcat | `apache-tomcat` | Web server |
+| Apache Hadoop | `apache-hadoop` | Distributed computing |
+| Apache Struts | `apache-struts` | Web framework |
+| Apache Spark | `apache-spark` | Analytics engine |
+| Apache Kafka | `apache-kafka` | Event streaming |
+| PostgreSQL Driver | `postgresql-driver` | JDBC driver |
+| Protocol Buffers | `protobuf` | Serialization library |
+| Apache Commons Lang | `commons-lang` | Utility library |
+| Jackson | `jackson` | JSON processing |
+
+**Usage example**:
+
+- Basic usage (show all CVEs including "None" severity):
+
+  ```markdown
+  <ClientOnly>
+    <ResolvedCveTable project="spring-els" />
+  </ClientOnly>
+  ```
+
+- Hide "None" severity CVEs:
+
+  ```markdown
+  <ClientOnly>
+    <ResolvedCveTable project="apache-tomcat" :hide_none="true" />
+  </ClientOnly>
+  ```
+
+- For Apache Kafka:
+
+  ```markdown
+  <ClientOnly>
+    <ResolvedCveTable project="apache-kafka" />
+  </ClientOnly>
+  ```
+
+**Important Notes**:
+
+- **Always wrap in `<ClientOnly>` tags** to prevent server-side rendering issues.
+- The component requires an active internet connection to fetch CVE data from the API.
+- Table columns: CVE Name, Severity, Group, Package, Vulnerable Version, Fixed Version.
+- Score column is hidden but used for secondary sorting.
+- On mobile devices, the table displays without DataTables features for better UX.
