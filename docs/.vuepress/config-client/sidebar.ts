@@ -281,16 +281,16 @@ export default {
                     icon: '/images/jsonwebtoken-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/karma/',
-                    icon: '/images/karma-logo.webp',
-                },
-                {
                     path: '/els-for-runtimes-and-libraries/jsonpath-plus/',
                     icon: '/images/jsonpath-plus-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/jspdf/',
                     icon: '/images/jspdf-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/karma/',
+                    icon: '/images/karma-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/lodash/',

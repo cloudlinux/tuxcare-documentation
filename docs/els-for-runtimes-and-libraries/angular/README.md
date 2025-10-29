@@ -48,7 +48,24 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
-4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages.
+4. Update your `package.json` file to replace your Angular dependencies with the TuxCare packages. You can do this in two ways:
+
+  * **Option 1: TuxCare Patcher (Automated)**
+
+    If you already have dependencies listed in your `package.json`, install the Patcher globally, then run the patcher command:
+
+    <CodeWithCopy>
+
+    ```text
+    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+    tuxcare-patch-js
+    ```
+
+    </CodeWithCopy>
+
+    The patcher will automatically update your `dependencies` and `overrides` to use the corresponding `@els-js/*` packages based on your Angular version selection below.
+
+  * **Option 2: Manual Update**
 
    <TableTabs label="Choose Angular version: " >
 
@@ -787,7 +804,19 @@ Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sal
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you have two options:
+
+* **Option 1**. Run TuxCare Patcher to update all TuxCare packages in your `package.json`:
+
+  <CodeWithCopy>
+
+  ```text
+  tuxcare-patch-js --upgrade
+  ```
+
+  </CodeWithCopy>
+
+* **Option 2**. Manually update the version string(s) in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
 
   <CodeWithCopy>
 

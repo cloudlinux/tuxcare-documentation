@@ -47,9 +47,45 @@ TuxCare provides ELS for http-proxy-middleware as an NPM package, hosted on a se
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your http-proxy-middleware dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your http-proxy-middleware dependencies with the TuxCare packages. You can do this in two ways:
 
-   <TableTabs label="Choose http-proxy-middleware version: " >
+  * **Option 1: TuxCare Patcher (Automated)**
+
+    If you already have dependencies listed in your `package.json`, for example:
+
+    ```text
+    "dependencies": {
+      "http-proxy-middleware": "^2.0.8"
+    }
+    ```
+
+    Install the Patcher globally, then run the patcher command:
+
+    <CodeWithCopy>
+
+    ```text
+    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+    tuxcare-patch-js
+    ```
+
+    </CodeWithCopy>
+
+    The patcher will automatically update your `package.json` to:
+
+    ```text
+    "dependencies": {
+      "http-proxy-middleware": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1"
+    },
+    "overrides": {
+      "http-proxy-middleware@2.0.8": "npm:@els-js/http-proxy-middleware@2.0.8-tuxcare.1"
+    }
+    ```
+    
+  * **Option 2: Manual Update**
+
+     Manually update your `package.json` file to use the TuxCare package:
+
+    <TableTabs label="Choose http-proxy-middleware version: " >
 
      <template #http-proxy-middleware_0.19.1>
 
@@ -79,7 +115,7 @@ TuxCare provides ELS for http-proxy-middleware as an NPM package, hosted on a se
 
      </template>
 
-   </TableTabs>
+    </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
