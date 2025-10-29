@@ -95,6 +95,15 @@ const throttle = (func, delay) => {
   }
 }
 
+// Check if user has scrolled to the bottom of the page
+const isAtBottom = () => {
+  const scrollHeight = document.documentElement.scrollHeight
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+  const clientHeight = document.documentElement.clientHeight
+  // Consider "at bottom" if within 100px of the bottom
+  return scrollHeight - scrollTop - clientHeight < 100
+}
+
 // Update sidebar active state based on the topmost visible heading
 const updateSidebarActiveState = () => {
   const sidebar = document.querySelector('.sidebar')
@@ -102,6 +111,7 @@ const updateSidebarActiveState = () => {
 
   const sidebarAnchors = sidebar.querySelectorAll('a')
   const sidebarAnchorsContainer = sidebar.querySelectorAll('.collapsible.sidebar-sub-header')
+  const pageAnchors = document.querySelectorAll('.header-anchor')
   
   // Get all visible headings sorted by their position (topmost first)
   const sortedVisibleHeadings = Array.from(visibleHeadings.value).sort((a, b) => {
@@ -110,12 +120,33 @@ const updateSidebarActiveState = () => {
     return aRect.top - bRect.top
   })
 
-  // Select the topmost visible heading
-  const topmostHeading = sortedVisibleHeadings[0]
-  
-  if (!topmostHeading) return
+  let targetHeading = null
 
-  const currentAnchor = topmostHeading.getAttribute('data-anchor')
+  // If at bottom of page, select the last heading that's above the viewport center
+  if (isAtBottom() && pageAnchors.length > 0) {
+    const viewportCenter = window.innerHeight / 2
+    const allAnchorsArray = Array.from(pageAnchors)
+    
+    // Find all headings that are above the viewport center
+    const headingsAboveCenter = allAnchorsArray.filter(anchor => {
+      const rect = anchor.getBoundingClientRect()
+      return rect.top < viewportCenter
+    })
+    
+    // Select the last one (closest to bottom)
+    if (headingsAboveCenter.length > 0) {
+      targetHeading = headingsAboveCenter[headingsAboveCenter.length - 1]
+    }
+  }
+  
+  // If not at bottom or no heading found, use the topmost visible heading
+  if (!targetHeading && sortedVisibleHeadings.length > 0) {
+    targetHeading = sortedVisibleHeadings[0]
+  }
+  
+  if (!targetHeading) return
+
+  const currentAnchor = targetHeading.getAttribute('data-anchor')
   
   // Update active class on sidebar links
   sidebarAnchors.forEach(a => a.classList.remove('active'))
