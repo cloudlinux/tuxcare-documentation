@@ -64,8 +64,8 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
     <CodeWithCopy>
 
     ```text
-    npm install -g @els-js/patcher --userconfig ./.npmrc
-    els-patch
+    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+    tuxcare-patch-js
     ```
 
     </CodeWithCopy>
@@ -74,10 +74,10 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
 
     ```text
     "dependencies": {
-      "braces": "npm:@els-js/braces@2.3.2-tuxcare.1"
+      "braces": "npm:@els-js/braces@2.3.2-tuxcare.2"
     },
     "overrides": {
-      "braces@2.3.2": "npm:@els-js/braces@2.3.2-tuxcare.1"
+      "braces@2.3.2": "npm:@els-js/braces@2.3.2-tuxcare.2"
     }
     ```
     
@@ -89,7 +89,7 @@ TuxCare provides ELS for braces as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-       "braces": "npm:@els-js/braces@2.3.2-tuxcare.1"
+       "braces": "npm:@els-js/braces@2.3.2-tuxcare.2"
      }
      ```
 
@@ -143,7 +143,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  els-patch --upgrade
+  tuxcare-patch-js --upgrade
   ```
 
   </CodeWithCopy>
