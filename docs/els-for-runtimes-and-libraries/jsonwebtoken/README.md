@@ -47,9 +47,45 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your JSON Web Token dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your JSON Web Token dependencies with the TuxCare packages. You can do this in two ways:
 
-   <TableTabs label="Choose JSON Web Token version: " >
+  * **Option 1: TuxCare Patcher (Automated)**
+
+    If you already have dependencies listed in your `package.json`, for example:
+
+    ```text
+    "dependencies": {
+      "jsonwebtoken": "^8.5.1"
+    }
+    ```
+
+    Install the Patcher globally, then run the patcher command:
+
+    <CodeWithCopy>
+
+    ```text
+    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+    tuxcare-patch-js
+    ```
+
+    </CodeWithCopy>
+
+    The patcher will automatically update your `package.json` to:
+
+    ```text
+    "dependencies": {
+      "jsonwebtoken": "npm:@els-js/jsonwebtoken@8.5.1-tuxcare.2"
+    },
+    "overrides": {
+      "jsonwebtoken@8.5.1": "npm:@els-js/jsonwebtoken@8.5.1-tuxcare.2"
+    }
+    ```
+    
+  * **Option 2: Manual Update**
+
+     Manually update your `package.json` file to use the TuxCare package:
+
+    <TableTabs label="Choose JSON Web Token version: " >
 
      <template #JSON_Web_Token_0.4.0>
 
@@ -79,7 +115,7 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
 
      </template>
 
-   </TableTabs>
+    </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -122,9 +158,19 @@ TuxCare provides VEX for JSON Web Token ELS versions: [security.tuxcare.com/vex/
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are several options:
 
-* **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
+* **Option 1**. Run TuxCare Patcher to update all TuxCare packages in your `package.json`:
+
+  <CodeWithCopy>
+
+  ```text
+  tuxcare-patch-js --upgrade
+  ```
+
+  </CodeWithCopy>
+
+* **Option 2**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
@@ -134,12 +180,11 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   </CodeWithCopy>
 
-* **Option 2**. Update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+* **Option 3**. Manually update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
 
   <CodeWithCopy>
 
   ```text
-  rm -rf node_modules package-lock.json && npm cache clean --force
   npm install
   ```
 

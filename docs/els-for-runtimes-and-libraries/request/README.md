@@ -47,22 +47,60 @@ TuxCare provides ELS for Request as an NPM package, hosted on a secure internal 
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your Request dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your Request dependencies with the TuxCare packages. You can do this in two ways:
 
-     <CodeWithCopy>
+  * **Option 1: TuxCare Patcher (Automated)**
 
-     ```text
-     "dependencies": {
-       "request": "npm:@els-js/request@2.88.0-tuxcare.2"
-     },
-     "overrides": {
-       "request": {
-         "form-data": "npm:@els-js/form-data@2.3.3-tuxcare.2"
-       }
-     }
-     ```
+    If you already have dependencies listed in your `package.json`, for example:
 
-     </CodeWithCopy>
+    ```text
+    "dependencies": {
+      "request": "^2.88.0"
+    }
+    ```
+
+    Install the Patcher globally, then run the patcher command:
+
+    <CodeWithCopy>
+
+    ```text
+    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+    tuxcare-patch-js
+    ```
+
+    </CodeWithCopy>
+
+    The patcher will automatically update your `package.json` to:
+
+    ```text
+    "dependencies": {
+      "request": "npm:@els-js/request@2.88.0-tuxcare.2"
+    },
+    "overrides": {
+      "request": {
+        "form-data": "npm:@els-js/form-data@2.3.3-tuxcare.2"
+      }
+    }
+    ```
+    
+  * **Option 2: Manual Update**
+
+     Manually update your `package.json` file to use the TuxCare package:
+
+    <CodeWithCopy>
+
+    ```text
+    "dependencies": {
+      "request": "npm:@els-js/request@2.88.0-tuxcare.2"
+    },
+    "overrides": {
+      "request": {
+        "form-data": "npm:@els-js/form-data@2.3.3-tuxcare.2"
+      }
+    }
+    ```
+
+    </CodeWithCopy>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -105,12 +143,33 @@ TuxCare provides VEX for Request ELS versions: [security.tuxcare.com/vex/cyclone
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), update the version strings in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are several options:
+
+* **Option 1**. Run TuxCare Patcher to update all TuxCare packages in your `package.json`:
 
   <CodeWithCopy>
 
   ```text
-  rm -rf node_modules package-lock.json && npm cache clean --force
+  tuxcare-patch-js --upgrade
+  ```
+
+  </CodeWithCopy>
+
+* **Option 2**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
+
+  <CodeWithCopy>
+
+  ```text
+  npm install request@npm:@els-js/request@2.88.0-tuxcare.2
+  ```
+
+  </CodeWithCopy>
+
+* **Option 3**. Manually update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+
+  <CodeWithCopy>
+
+  ```text
   npm install
   ```
 

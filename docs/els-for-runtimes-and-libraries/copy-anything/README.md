@@ -47,7 +47,43 @@ TuxCare provides ELS for copy-anything as an NPM package, hosted on a secure int
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your copy-anything dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your copy-anything dependencies with the TuxCare packages. You can do this in two ways:
+
+  * **Option 1: TuxCare Patcher (Automated)**
+
+    If you already have dependencies listed in your `package.json`, for example:
+
+    ```text
+    "dependencies": {
+      "copy-anything": "^2.0.6"
+    }
+    ```
+
+    Install the Patcher globally, then run the patcher command:
+
+    <CodeWithCopy>
+
+    ```text
+    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+    tuxcare-patch-js
+    ```
+
+    </CodeWithCopy>
+
+    The patcher will automatically update your `package.json` to:
+
+    ```text
+    "dependencies": {
+      "copy-anything": "npm:@els-js/copy-anything@2.0.6-tuxcare.2"
+    },
+    "overrides": {
+      "copy-anything@2.0.6": "npm:@els-js/copy-anything@2.0.6-tuxcare.2"
+    }
+    ```
+    
+  * **Option 2: Manual Update**
+
+     Manually update your `package.json` file to use the TuxCare package:
 
    <CodeWithCopy>
 
@@ -100,9 +136,19 @@ TuxCare provides VEX for copy-anything ELS versions: [security.tuxcare.com/vex/c
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are two options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are several options:
 
-* **Option 1**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
+* **Option 1**. Run TuxCare Patcher to update all TuxCare packages in your `package.json`:
+
+  <CodeWithCopy>
+
+  ```text
+  tuxcare-patch-js --upgrade
+  ```
+
+  </CodeWithCopy>
+
+* **Option 2**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
@@ -112,12 +158,11 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   </CodeWithCopy>
 
-* **Option 2**. Update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+* **Option 3**. Manually update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
 
   <CodeWithCopy>
 
   ```text
-  rm -rf node_modules package-lock.json && npm cache clean --force
   npm install
   ```
 
