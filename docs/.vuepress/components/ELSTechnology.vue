@@ -282,7 +282,7 @@ const techData = [
       },
       {
         name: "cookie",
-        versions: "0.3.1 | 0.4.2",
+        versions: "0.4.2",
         link: "./cookie/",
       },
       {

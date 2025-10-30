@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for cookie from TuxCare provides security fixes 
 
 ## Supported cookie Versions
 
-* cookie 0.3.1, 0.4.2
+* cookie 0.4.2
 
 ## Connection to ELS for cookie Library
 
@@ -85,37 +85,15 @@ TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal r
 
      Manually update your `package.json` file to use the TuxCare package:
 
-    <TableTabs label="Choose cookie version: " >
+   <CodeWithCopy>
 
-     <template #cookie_0.3.1>
+   ```text
+   "dependencies": {
+     "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.2"
+   }
+   ```
 
-     <CodeWithCopy>
-
-     ```text
-     "dependencies": {
-       "cookie": "npm:@els-js/cookie@0.3.1-tuxcare.1"
-     }
-     ```
-
-     </CodeWithCopy>
-
-     </template>
-
-     <template #cookie_0.4.2>
-
-     <CodeWithCopy>
-
-     ```text
-     "dependencies": {
-       "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.1"
-     }
-     ```
-
-     </CodeWithCopy>
-
-     </template>
-
-    </TableTabs>
+   </CodeWithCopy>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -191,25 +169,9 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for cookie from TuxCare versions:
 
-<TableTabs label="Choose cookie version: " >
-
-<template #cookie_0.3.1>
-
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
 | CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
-
-  </template>
-
-<template #cookie_0.4.2>
-
-| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
-
-  </template>
-
-</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
