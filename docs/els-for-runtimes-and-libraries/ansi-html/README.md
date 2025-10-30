@@ -1,30 +1,30 @@
-# cookie
+# ansi-html
 
-Endless Lifecycle Support (ELS) for cookie from TuxCare provides security fixes for cookie versions that have reached their end of life. This allows you to continue running cookie applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for ansi-html from TuxCare provides security fixes for ansi-html versions that have reached their end of life. This allows you to continue running ansi-html applications without vulnerability concerns, even after official support has ended.
 
-## Supported cookie Versions
+## Supported ansi-html Versions
 
-* cookie 0.4.2
+* ansi-html 0.0.7
 
-## Connection to ELS for cookie Library
+## Connection to ELS for ansi-html Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the cookie library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the ansi-html library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS cookie library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS ansi-html library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for cookie
+## Step 2: Set Up ELS for ansi-html
 
-TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for ansi-html as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your cookie project.
+1. Navigate to the root directory of your ansi-html project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-cookie-project/
+   my-ansi-html-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -47,7 +47,7 @@ TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal r
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your cookie dependencies with the TuxCare packages. You can do this in two ways:
+4. Update your `package.json` file to replace your ansi-html dependencies with the TuxCare packages. You can do this in two ways:
 
   * **Option 1: TuxCare Patcher (Automated)**
 
@@ -55,7 +55,7 @@ TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal r
 
     ```text
     "dependencies": {
-      "cookie": "^0.4.2"
+      "ansi-html": "^0.0.7"
     }
     ```
 
@@ -74,10 +74,10 @@ TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal r
 
     ```text
     "dependencies": {
-      "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.2"
+      "ansi-html": "npm:@els-js/ansi-html@0.0.7-tuxcare.1"
     },
     "overrides": {
-      "cookie@0.4.2": "npm:@els-js/cookie@0.4.2-tuxcare.2"
+      "ansi-html@0.0.7": "npm:@els-js/ansi-html@0.0.7-tuxcare.1"
     }
     ```
     
@@ -89,7 +89,7 @@ TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal r
 
    ```text
    "dependencies": {
-     "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.2"
+     "ansi-html": "npm:@els-js/ansi-html@0.0.7-tuxcare.1"
    }
    ```
 
@@ -105,7 +105,7 @@ TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal r
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the cookie library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the ansi-html library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -123,13 +123,13 @@ TuxCare provides ELS for cookie as an NPM package, hosted on a secure internal r
     found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the cookie library into your project.
+7. You've successfully installed the Tuxcare ELS version of the ansi-html library into your project.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
 VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for cookie ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/cookie/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/cookie/).
+TuxCare provides VEX for ansi-html ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ansi-html/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/ansi-html/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -150,7 +150,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install cookie@npm:@els-js/cookie@0.4.2-tuxcare.2
+  npm install ansi-html@npm:@els-js/ansi-html@0.0.7-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -160,6 +160,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
+  rm -rf node_modules package-lock.json && npm cache clean --force
   npm install
   ```
 
@@ -167,11 +168,10 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for cookie from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for ansi-html from TuxCare versions:
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
+| CVE-2021-23424 | Direct   | High     | ansi-html          | < 0.0.8            |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-
