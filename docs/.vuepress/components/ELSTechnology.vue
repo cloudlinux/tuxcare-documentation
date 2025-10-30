@@ -261,6 +261,11 @@ const techData = [
         link: "./angularjs/",
       },
       {
+        name: "ansi-html",
+        versions: "0.0.7",
+        link: "./ansi-html/",
+      },
+      {
         name: "base64url",
         versions: "0.0.6",
         link: "./base64url/",

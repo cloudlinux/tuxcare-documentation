@@ -205,6 +205,10 @@ export default {
                     icon: '/images/angularjs-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/ansi-html/',
+                    icon: '/images/javascript.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/bootstrap/',
                     icon: '/images/bootstrap-logo.webp',
                 },
