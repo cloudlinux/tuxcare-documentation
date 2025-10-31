@@ -817,7 +817,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 * **Option 1: TuxCare Patcher (Automated). Recommended for projects with multiple TuxCare dependencies.**
 
-  The TuxCare Patcher automatically detects all TuxCare packages in your `package.json` and updates them to the latest available versions.
+  The TuxCare Patcher automatically detects all TuxCare dependencies in your `package.json` and updates them to the latest available versions.
 
   <CodeWithCopy>
 
@@ -829,7 +829,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 * **Option 2: Manual Update via CLI (Single Dependency)**
 
-  For projects with a single TuxCare dependency, you can use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
+  If you want to update one TuxCare dependency, you can use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
@@ -841,7 +841,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 * **Option 3: Manual Update via package.json (Multiple Dependencies)**
 
-  For projects with multiple TuxCare dependencies, manually update the version string(s) in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
+  If you want to update several TuxCare dependencies, manually update the version strings in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
 
   <CodeWithCopy>
 

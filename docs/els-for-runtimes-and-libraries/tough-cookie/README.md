@@ -49,73 +49,73 @@ TuxCare provides ELS for tough-cookie as an NPM package, hosted on a secure inte
 
 4. Update your `package.json` file to replace your tough-cookie dependencies with the TuxCare packages. You can do this in two ways:
 
-  * **Option 1: TuxCare Patcher (Automated)**
+   * **Option 1: TuxCare Patcher (Automated)**
 
-    If you already have dependencies listed in your `package.json`, for example:
-
-    ```text
-    "dependencies": {
-      "tough-cookie": "^2.5.0"
-    }
-    ```
-
-    Install the Patcher globally, then run the patcher command:
-
-    <CodeWithCopy>
-
-    ```text
-    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
-    tuxcare-patch-js
-    ```
-
-    </CodeWithCopy>
-
-    The patcher will automatically update your `package.json` to:
-
-    ```text
-    "dependencies": {
-      "tough-cookie": "npm:@els-js/tough-cookie@2.5.0-tuxcare.2"
-    },
-    "overrides": {
-      "tough-cookie@2.5.0": "npm:@els-js/tough-cookie@2.5.0-tuxcare.2"
-    }
-    ```
-    
-  * **Option 2: Manual Update**
-
-     Manually update your `package.json` file to use the TuxCare package:
-
-    <TableTabs label="Choose tough-cookie version: " >
-
-     <template #tough-cookie_2.4.3>
+     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the tough-cookie version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
 
      <CodeWithCopy>
 
      ```text
-     "dependencies": {
-       "tough-cookie": "npm:@els-js/tough-cookie@2.4.3-tuxcare.2"
-     }
+     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+     tuxcare-patch-js
      ```
 
      </CodeWithCopy>
 
-     </template>
+     The patcher will update your `package.json`, for example, from:
 
-     <template #tough-cookie_2.5.0>
+     ```text
+     "dependencies": {
+       "tough-cookie": "^2.5.0"
+     }
+     ```
 
-     <CodeWithCopy>
+     to:
 
      ```text
      "dependencies": {
        "tough-cookie": "npm:@els-js/tough-cookie@2.5.0-tuxcare.2"
+     },
+     "overrides": {
+       "tough-cookie@2.5.0": "npm:@els-js/tough-cookie@2.5.0-tuxcare.2"
      }
      ```
+    
+   * **Option 2: Manual Update**
 
-     </CodeWithCopy>
+     Manually update your `package.json` file by replacing your tough-cookie dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     </template>
+     <TableTabs label="Choose tough-cookie version: " >
 
-    </TableTabs>
+      <template #tough-cookie_2.4.3>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "tough-cookie": "npm:@els-js/tough-cookie@2.4.3-tuxcare.2"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+      <template #tough-cookie_2.5.0>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "tough-cookie": "npm:@els-js/tough-cookie@2.5.0-tuxcare.2"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+     </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -158,9 +158,11 @@ TuxCare provides VEX for tough-cookie ELS versions: [security.tuxcare.com/vex/cy
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), there are several options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you can use one of the following methods:
 
-* **Option 1**. Run TuxCare Patcher to update all TuxCare packages in your `package.json`:
+* **Option 1: TuxCare Patcher (Automated). Recommended for projects with multiple TuxCare dependencies.**
+
+  The TuxCare Patcher automatically detects all TuxCare dependencies in your `package.json` and updates them to the latest available versions.
 
   <CodeWithCopy>
 
@@ -170,7 +172,9 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   </CodeWithCopy>
 
-* **Option 2**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`. For example:
+* **Option 2: Manual Update via CLI (Single Dependency)**
+
+  If you want to update a single TuxCare dependency, use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
@@ -180,11 +184,14 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   </CodeWithCopy>
 
-* **Option 3**. Manually update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+* **Option 3: Manual Update via package.json (Multiple Dependencies)**
+
+  If you want to update several TuxCare dependencies, manually update the version strings in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
 
   <CodeWithCopy>
 
   ```text
+  rm -rf node_modules package-lock.json && npm cache clean --force
   npm install
   ```
 
