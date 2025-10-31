@@ -47,117 +47,117 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your AngularJS dependencies with the TuxCare packages. You can do this in two ways:
+4. Replace your AngularJS dependencies with TuxCare ones. You can use one of the following methods:
 
-  * **Option 1: TuxCare Patcher (Automated)**
+   * **Option 1: TuxCare Patcher (Automated)**
 
-    If you already have dependencies listed in your `package.json`, for example:
+     Install the Patcher globally and run the following commands. The TuxCare Patcher automatically detects the AngularJS version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
 
-    ```text
-    "dependencies": {
-      "angular": "^1.8.3"
-    }
-    ```
+     If you already have dependencies listed in your `package.json`, for example:
 
-    Install the Patcher globally, then run the patcher command:
+     ```text
+     "dependencies": {
+       "angular": "^1.8.3"
+     }
+     ```
 
-    <CodeWithCopy>
+     <CodeWithCopy>
 
-    ```text
-    npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
-    tuxcare-patch-js
-    ```
+     ```text
+     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+     tuxcare-patch-js
+     ```
 
-    </CodeWithCopy>
+     </CodeWithCopy>
 
-    The patcher will automatically update your `package.json` to:
+     The patcher will automatically update your `package.json` to:
 
-    ```text
-    "dependencies": {
-      "angular": "npm:@els-js/angular@1.8.3-tuxcare.4"
-    },
-    "overrides": {
-      "angular@1.8.3": "npm:@els-js/angular@1.8.3-tuxcare.4"
-    }
-    ```
+     ```text
+     "dependencies": {
+       "angular": "npm:@els-js/angular@1.8.3-tuxcare.4"
+     },
+     "overrides": {
+       "angular@1.8.3": "npm:@els-js/angular@1.8.3-tuxcare.4"
+     }
+     ```
     
-  * **Option 2: Manual Update**
+   * **Option 2: Manual Update**
 
-     Manually update your `package.json` file to use the TuxCare package:
+     Manually update your `package.json` file by replacing your AngularJS dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     <TableTabs label="Choose AngularJS version: " >
+      <TableTabs label="Choose AngularJS version: " >
 
-     <template #AngularJS_1.5.11>
+      <template #AngularJS_1.5.11>
 
-     <CodeWithCopy>
+      <CodeWithCopy>
 
-     ```text
-     "dependencies": {
-         "angular": "npm:@els-js/angular@1.5.11-tuxcare.4"
-     }
-     ```
+      ```text
+      "dependencies": {
+          "angular": "npm:@els-js/angular@1.5.11-tuxcare.4"
+      }
+      ```
 
-     </CodeWithCopy>
+      </CodeWithCopy>
 
-     </template>
+      </template>
 
-     <template #AngularJS_1.6.10>
+      <template #AngularJS_1.6.10>
 
-     <CodeWithCopy>
+      <CodeWithCopy>
 
-     ```text
-     "dependencies": {
-         "angular": "npm:@els-js/angular@1.6.10-tuxcare.4"
-     }
-     ```
+      ```text
+      "dependencies": {
+          "angular": "npm:@els-js/angular@1.6.10-tuxcare.4"
+      }
+      ```
 
-     </CodeWithCopy>
+      </CodeWithCopy>
 
-     </template>
+      </template>
 
-     <template #AngularJS_1.7.9>
+      <template #AngularJS_1.7.9>
 
-     <CodeWithCopy>
+      <CodeWithCopy>
  
-     ```text
-     "dependencies": {
-         "angular": "npm:@els-js/angular@1.7.9-tuxcare.3"
-    }
-     ```
+      ```text
+      "dependencies": {
+          "angular": "npm:@els-js/angular@1.7.9-tuxcare.3"
+      }
+      ```
 
-     </CodeWithCopy>
+      </CodeWithCopy>
 
-     </template>
+      </template>
 
-     <template #AngularJS_1.8.2>
+      <template #AngularJS_1.8.2>
 
-     <CodeWithCopy>
+      <CodeWithCopy>
 
-     ```text
-     "dependencies": {
-         "angular": "npm:@els-js/angular@1.8.2-tuxcare.3"
-     }
-     ```
+      ```text
+      "dependencies": {
+          "angular": "npm:@els-js/angular@1.8.2-tuxcare.3"
+      }
+      ```
 
-     </CodeWithCopy>    
+      </CodeWithCopy>    
 
-     </template> 
+      </template> 
 
-     <template #AngularJS_1.8.3>
+      <template #AngularJS_1.8.3>
 
-     <CodeWithCopy>
+      <CodeWithCopy>
 
-     ```text
-     "dependencies": {
-         "angular": "npm:@els-js/angular@1.8.3-tuxcare.4"
-     }
-     ```
+      ```text
+      "dependencies": {
+          "angular": "npm:@els-js/angular@1.8.3-tuxcare.4"
+      }
+      ```
 
-     </CodeWithCopy>
+      </CodeWithCopy>
 
-     </template>
+      </template>
 
-    </TableTabs>
+     </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -197,9 +197,15 @@ TuxCare provides VEX for AngularJS ELS versions: [security.tuxcare.com/vex/cyclo
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.4`), there are several options:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.4`), you can use one of the following methods:
 
-* **Option 1**. Run TuxCare Patcher to update all TuxCare packages in your `package.json`:
+* **Option 1: TuxCare Patcher (Automated)**
+
+  :::tip
+  This method is recommended for projects with multiple TuxCare dependencies.
+  :::
+
+  The TuxCare Patcher automatically detects all TuxCare packages in your `package.json` and updates them to the latest available versions.
 
   <CodeWithCopy>
 
@@ -209,7 +215,9 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   </CodeWithCopy>
 
-* **Option 2**. Run the `npm install` command with the specific version. This will automatically update both `package.json` and `package-lock.json`:
+* **Option 2: Manual Update via CLI (Single Dependency)**
+
+  For projects with a single TuxCare dependency, you can use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
@@ -219,11 +227,14 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   </CodeWithCopy>
 
-* **Option 3**. Manually update the version string in your `package.json`, remove installed files and clear npm cache to avoid conflicts:
+* **Option 3: Manual Update via package.json (Multiple Dependencies)**
+
+  For projects with multiple TuxCare dependencies, manually update the version string(s) in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
 
   <CodeWithCopy>
 
   ```text
+  rm -rf node_modules package-lock.json && npm cache clean --force
   npm install
   ```
 
