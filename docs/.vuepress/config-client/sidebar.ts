@@ -301,6 +301,10 @@ export default {
                     icon: '/images/lodash-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/marked/',
+                    icon: '/images/marked-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/micromatch/',
                     icon: '/images/placeholder-logo.webp',
                 },
@@ -309,20 +313,12 @@ export default {
                     icon: '/images/javascript.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/marked/',
-                    icon: '/images/marked-logo.webp',
-                },
-                {
                     path: '/els-for-runtimes-and-libraries/mongodb-driver/',
                     icon: '/images/mongodb-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/mongoose/',
                     icon: '/images/mongoose-logo.webp',
-                },
-                {
-                    path: '/els-for-runtimes-and-libraries/nth-check/',
-                    icon: '/images/nth-check-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/multer/',
@@ -343,6 +339,10 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/nodejs/',
                     icon: '/images/nodejs.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/nth-check/',
+                    icon: '/images/nth-check-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/pdfjs-dist/',
