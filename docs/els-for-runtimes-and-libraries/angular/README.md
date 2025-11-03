@@ -553,7 +553,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "minimatch@3.0.4": "npm:@els-js/minimatch@3.0.4-tuxcare.1",
        "node-forge@0.10.0": "npm:@els-js/node-forge@0.10.0-tuxcare.2",
        "request@2.88.2": "npm:@els-js/request@2.88.2-tuxcare.2",
-       "rollup@2.38.4": "npm:@els-js/rollup@2.38.4-tuxcare.1",
+       "rollup@2.38.4": "npm:@els-js/rollup@2.38.4-tuxcare.2",
        "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.2",
        "postcss@8.2.15": "npm:@els-js/postcss@8.3.6-tuxcare.2",
        "rxjs": "^6.6.7",
@@ -645,7 +645,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "postcss@7.0.21": "npm:@els-js/postcss@7.0.39-tuxcare.2",
        "postcss@7.0.32": "npm:@els-js/postcss@7.0.39-tuxcare.2",
        "request@2.88.2": "npm:@els-js/request@2.88.2-tuxcare.2",
-       "rollup@2.26.5": "npm:@els-js/rollup@2.26.5-tuxcare.1",
+       "rollup@2.26.5": "npm:@els-js/rollup@2.26.5-tuxcare.2",
        "rxjs": "~6.6.7",
        "semver@7.3.2": "npm:@els-js/semver@7.3.2-tuxcare.2",
        "tar@4.4.19": "npm:@els-js/tar@4.4.19-tuxcare.1",
@@ -742,7 +742,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "postcss@7.0.27": "npm:@els-js/postcss@7.0.39-tuxcare.2",
        "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.2",
        "request@2.88.2": "npm:@els-js/request@2.88.2-tuxcare.2",
-       "rollup@2.1.0": "npm:@els-js/rollup@2.1.0-tuxcare.1",
+       "rollup@2.1.0": "npm:@els-js/rollup@2.1.0-tuxcare.2",
        "rxjs": "~6.5.4",
        "semver@7.1.3": "npm:@els-js/semver@7.1.3-tuxcare.2",
        "tar@4.4.19": "npm:@els-js/tar@4.4.19-tuxcare.1",
@@ -964,7 +964,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |   CVE-2022-37603    | Transitive | High |      loader-utils      | >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1 |    tuxcare.1     |
 |   CVE-2022-37599    | Transitive | High |      loader-utils      | >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1 |    tuxcare.1     |
 |   CVE-2021-23424    | Transitive |   High   |       ansi-html        |    < 0.0.8     |    tuxcare.1     |
-|   CVE-2024-47068    | Transitive |   High   |         rollup         |    >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2     |    tuxcare.1     |
+|   CVE-2024-47068    | Transitive |   High   |         rollup         |    >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2     |    tuxcare.2     |
 |    CVE-2022-3517    | Transitive |   High   |       minimatch        |                         < 3.0.5                         |    tuxcare.1     |
 |   CVE-2022-25858    | Transitive |   High   |         terser         |               < 4.8.1, >= 5.0.0, < 5.14.2               |    tuxcare.2     |
 |   CVE-2022-24771    | Transitive |   High   |       node-forge       |                         < 1.3.0                         |    tuxcare.2     |
@@ -998,7 +998,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | CVE-2020-7793  | Transitive |   High   |         ua-parser-js          |                             < 0.7.23                             |    tuxcare.1     |
 | CVE-2021-27292  | Transitive |   High   |         ua-parser-js          |                       >= 0.7.14, < 0.7.24                        |    tuxcare.1     |
 |   CVE-2021-3803    | Transitive |   High   |           nth-check           |                             < 2.0.1                              |    tuxcare.1     |
-|   CVE-2024-47068    | Transitive |   High   |            rollup             |         >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2         |    tuxcare.1     |
+|   CVE-2024-47068    | Transitive |   High   |            rollup             |         >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2         |    tuxcare.2     |
 |   CVE-2022-25858    | Transitive |   High   |            terser             |                   < 4.8.1, >= 5.0.0, < 5.14.2                    |    tuxcare.2     |
 |   CVE-2022-25883    | Transitive |   High   |            semver             |                          7.0.0 - 7.5.1                           |    tuxcare.2     |
 |   CVE-2022-24771    | Transitive |   High   |          node-forge           |                             < 1.3.0                              |    tuxcare.2     |
@@ -1030,7 +1030,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |:-------------------:| :------: |:--------:|:-----------------------------:|:----------------------------------------------------------------------:|:----------------:|
 |   CVE-2022-37601    | Transitive | Critical |         loader-utils          |                       >= 2.0.0, < 2.0.3, < 1.4.1                       |    tuxcare.1     |
 |    CVE-2025-7783    | Transitive | Critical |           form-data           |             < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4              |    tuxcare.2     |
-|   CVE-2024-47068    | Transitive |   High   |            rollup             |            >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2            |    tuxcare.1     |
+|   CVE-2024-47068    | Transitive |   High   |            rollup             |            >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2            |    tuxcare.2     |
 |   CVE-2022-37603    | Transitive | High |         loader-utils          |        >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1         |    tuxcare.1     |
 |   CVE-2022-37599    | Transitive | High |         loader-utils          |        >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1         |    tuxcare.1     |
 |   CVE-2024-21536    | Transitive | High |     http-proxy-middleware     |                       < 2.0.7, >= 3.0.0, < 3.0.3                       |    tuxcare.1     |
