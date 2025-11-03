@@ -93,7 +93,7 @@ TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal r
 
       ```text
       "dependencies": {
-        "rollup": "npm:@els-js/rollup@2.1.0-tuxcare.1"
+        "rollup": "npm:@els-js/rollup@2.1.0-tuxcare.2"
       }
       ```
 
@@ -107,7 +107,7 @@ TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal r
 
       ```text
       "dependencies": {
-        "rollup": "npm:@els-js/rollup@2.26.5-tuxcare.1"
+        "rollup": "npm:@els-js/rollup@2.26.5-tuxcare.2"
       }
       ```
 
@@ -121,7 +121,7 @@ TuxCare provides ELS for Rollup as an NPM package, hosted on a secure internal r
 
       ```text
       "dependencies": {
-        "rollup": "npm:@els-js/rollup@2.38.4-tuxcare.1"
+        "rollup": "npm:@els-js/rollup@2.38.4-tuxcare.2"
       }
       ```
 
@@ -197,7 +197,7 @@ TuxCare provides VEX for Rollup ELS versions: [security.tuxcare.com/vex/cycloned
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you can use one of the following methods:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.2`), you can use one of the following methods:
 
 * **Option 1: TuxCare Patcher (Automated). Recommended for projects with multiple TuxCare dependencies.**
 
