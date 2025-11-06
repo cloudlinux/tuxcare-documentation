@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Next.js from TuxCare provides security fixes
 
 ## Supported Next.js Versions
 
-* Next.js 13.5.11
+* Next.js 12.3.7, 13.5.11
 
 ## Connection to ELS for Next.js Library
 
@@ -66,7 +66,7 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "next": "^13.5.11"
+       "next": "^12.3.7"
      }
      ```
 
@@ -74,10 +74,10 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "next": "npm:@els-js/next@13.5.11-tuxcare.1"
+       "next": "npm:@els-js/next@12.3.7-tuxcare.1"
      },
      "overrides": {
-       "next@13.5.11": "npm:@els-js/next@13.5.11-tuxcare.1"
+       "next@12.3.7": "npm:@els-js/next@12.3.7-tuxcare.1"
      }
      ```
     
@@ -85,15 +85,37 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
 
      Manually update your `package.json` file by replacing your Next.js dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     <CodeWithCopy>
+     <TableTabs label="Choose Next.js version: " >
 
-     ```text
-     "dependencies": {
-       "next": "npm:@els-js/next@13.5.11-tuxcare.1"
-     }
-     ```
+       <template #next_12.3.7>
 
-     </CodeWithCopy>
+       <CodeWithCopy>
+
+       ```text
+       "dependencies": {
+         "next": "npm:@els-js/next@12.3.7-tuxcare.1"
+       }
+       ```
+
+       </CodeWithCopy>
+
+       </template>
+
+       <template #next_13.5.11>
+
+       <CodeWithCopy>
+
+       ```text
+       "dependencies": {
+         "next": "npm:@els-js/next@13.5.11-tuxcare.2"
+       }
+       ```
+
+       </CodeWithCopy>
+
+       </template>
+
+     </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -179,11 +201,39 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for Next.js from TuxCare versions:
 
+<TableTabs label="Choose Next.js version: " >
+
+<template #next_12.3.7>
+
 |     CVE ID     | CVE Type | Severity | Affected Libraries |      Vulnerable Versions       |
 |:--------------:| :------: |:--------:|:------------------:|:------------------------------:|
 | CVE-2025-57822 | Direct   | High     |        next        | < 14.2.32, >= 15.0.0, < 15.4.7 |
 | CVE-2024-51479 | Direct   | High     |        next        |      >= 9.5.5, < 14.2.15       |
 | CVE-2024-47831 | Direct   | High     |        next        |      >= 10.0.0, < 14.2.7       |
 | CVE-2024-34351 | Direct   | High     |        next        |      >= 13.4.0, < 14.1.1       |
+| CVE-2023-46298 | Direct   | High     |        next        |            < 13.4.20           |
+| CVE-2025-57752 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
+| CVE-2025-55173 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
+| CVE-2025-48068 | Direct   | Low      |        next        | >= 13.0.0 < 14.2.30, >= 15.0.0 < 15.2.2 |
+| CVE-2025-32421 | Direct   | Low      |        next        | < 14.2.24, >= 15.0.0 < 15.1.6 |
+
+  </template>
+
+<template #next_13.5.11>
+
+|     CVE ID     | CVE Type | Severity | Affected Libraries |      Vulnerable Versions       |
+|:--------------:| :------: |:--------:|:------------------:|:------------------------------:|
+| CVE-2025-57822 | Direct   | High     |        next        | < 14.2.32, >= 15.0.0, < 15.4.7 |
+| CVE-2024-51479 | Direct   | High     |        next        |      >= 9.5.5, < 14.2.15       |
+| CVE-2024-47831 | Direct   | High     |        next        |      >= 10.0.0, < 14.2.7       |
+| CVE-2024-34351 | Direct   | High     |        next        |      >= 13.4.0, < 14.1.1       |
+| CVE-2025-57752 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
+| CVE-2025-55173 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
+| CVE-2025-48068 | Direct   | Low      |        next        | >= 13.0.0 < 14.2.30, >= 15.0.0 < 15.2.2 |
+| CVE-2025-32421 | Direct   | Low      |        next        | < 14.2.24, >= 15.0.0 < 15.1.6 |
+
+  </template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

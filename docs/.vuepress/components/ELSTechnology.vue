@@ -422,7 +422,7 @@ const techData = [
       },
       {
         name: "next",
-        versions: "13.5.11",
+        versions: "12.3.7 | 13.5.11",
         link: "./next/",
       },
       {
