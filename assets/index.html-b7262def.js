@@ -21,7 +21,7 @@ tuxcare-patch-js
   "next": "npm:@els-js/next@12.3.7-tuxcare.1"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[7]})]),"next_13.5.11":l(()=>[a(s,null,{default:l(()=>t[8]||(t[8]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`"dependencies": {
-  "next": "npm:@els-js/next@13.5.11-tuxcare.2"
+  "next": "npm:@els-js/next@13.5.11-tuxcare.3"
 }
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"}),e("div",{class:"line-number"}),e("div",{class:"line-number"})])],-1)])),_:1,__:[8]})]),_:1})])])]),e("li",null,[t[13]||(t[13]=e("p",null,[n("You need to remove the "),e("code",null,"node_modules"),n(" directory and the "),e("code",null,"package-lock.json"),n(" file, and also clear the "),e("code",null,"npm cache"),n(" before installing the patched packages. Use the following commands:")],-1)),a(s,null,{default:l(()=>t[12]||(t[12]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`rm -rf node_modules package-lock.json && npm cache clean --force
 `)]),e("div",{class:"line-numbers","aria-hidden":"true"},[e("div",{class:"line-number"})])],-1)])),_:1,__:[12]})]),e("li",null,[t[15]||(t[15]=e("p",null,[n("Run the following command to install the ELS version of the Next.js library (token for the TuxCare repository will be automatically picked up from your "),e("code",null,".npmrc"),n(" file):")],-1)),a(s,null,{default:l(()=>t[14]||(t[14]=[e("div",{class:"language-text line-numbers-mode","data-ext":"text"},[e("pre",{class:"language-text"},[e("code",null,`npm install
