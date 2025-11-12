@@ -501,6 +501,11 @@ const techData = [
         link: "./vue/",
       },
       {
+        name: "vue-template-compiler",
+        versions: "2.6.11",
+        link: "./vue-template-compiler/",
+      },
+      {
         name: "webpack-dev-server",
         versions: "3.11.0 | 4.7.3 | 4.15.1",
         link: "./webpack-dev-server/",
@@ -519,11 +524,6 @@ const techData = [
         name: "undici",
         versions: "5.28.5",
         link: "./undici/",
-      },
-      {
-        name: "vue-template-compiler",
-        versions: "2.6.11",
-        link: "./vue-template-compiler/",
       },
       {
         name: "xml2js",
