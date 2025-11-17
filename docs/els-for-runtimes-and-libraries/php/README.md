@@ -1170,7 +1170,7 @@ Currently, we provide errata for the following OS versions:
 * Ubuntu 22.04: [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu22.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu22.04/)
 * Ubuntu 24.04 [cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu24.04/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/ubuntu24.04/)
 * Debian 10: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian10/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian10/)
-* Debian 11: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian11/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/els_alt_php/debian11/)
+* Debian 11: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian11/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian11/)
 * Debian 12: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian12/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian12/)
 * Debian 13: [cve.tuxcare.com/rss_feed/els-alt-php/releases/debian13/](https://cve.tuxcare.com/rss_feed/els-alt-php/releases/debian13/)
 
