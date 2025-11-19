@@ -528,7 +528,7 @@ Technical support covered by any of the TuxCare Support Programs shall not be pr
 
 ### Installing tuxctl (Essential Support)
 
-Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux/Rocky Linux version, currently 8.8, 8.10, 9.2, 9.4, 9.5, 9.6 and 10.0 are supported.
+Similarly to the ESU instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl), Essential Support customers should install tuxcare-release and register their server using tuxctl. The main difference is the choice of OS version - you must install the RPM specifically for your AlmaLinux/Rocky Linux version, currently 8.8, 8.10, 9.2, 9.4, 9.5, 9.6, 9.7, 10.0 and 10.1 are supported.
 
 If you are unsure, run this to find your exact OS version:
 
@@ -546,7 +546,7 @@ cat /etc/rocky-release
 Rocky Linux release 9.6 (Blue Onyx)
 ```
 
-You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2, 9.4, 9.5, 9.6 or 10.0) then install it as root, for example:
+You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2, 9.4, 9.5, 9.6, 9.7, 10.0 or 10.1) then install it as root, for example:
 
 ```text
 # dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-8.10.noarch.rpm
@@ -562,10 +562,10 @@ The second step is to activate your license on the system. You should run the `t
 # tuxctl --license-key XXXXXXXXXX
 ```
 
-Essential Support customers can upgrade to a new minor version, for example from 9.5 to 9.6 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
+Essential Support customers can upgrade to a new minor version, for example from 9.6 to 9.7 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
 
 ```text
-# echo 9.6 > /etc/dnf/vars/tuxcare_releasever
+# echo 9.7 > /etc/dnf/vars/tuxcare_releasever
 # dnf upgrade
 ```
 
