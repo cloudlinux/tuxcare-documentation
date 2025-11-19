@@ -239,7 +239,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "karma-coverage": "~2.2.0",
        "karma-jasmine": "~5.1.0",
        "karma-jasmine-html-reporter": "~2.0.0",
-       "typescript": "~4.9.4"
+       "typescript": "~4.9.4"``
      },
      "overrides": {
        "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
@@ -860,208 +860,208 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 
 <template #Angular__17>
 
-| CVE ID         | CVE Type | Severity |     Affected Library     |    Vulnerable Versions    | Fixed in version |
-| :------------: | :------: | :------: |:------------------------:|:-------------------------:|:----------------:|
-| CVE-2025-59052 |   Direct   |   High   | @angular/platform-server | = 16.0.0-next.0 < 18.2.14 | tuxcare.1 |
-| CVE-2025-59052 |   Direct   |   High   |       @angular/ssr       | = 17.0.0-next.0 < 18.2.21 | tuxcare.1 |
-| CVE-2025-32997 | Transitive | Moderate |  http-proxy-middleware   |       1.3.0 - 2.0.8       | tuxcare.1 |
-| CVE-2025-30360 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          | tuxcare.1 |
-| CVE-2025-30359 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          | tuxcare.1 |
-| CVE-2025-54798 | Transitive | Low |           tmp            |         <= 0.2.3          | tuxcare.1 |
+| CVE ID         | CVE Type | Severity |     Affected Library     |    Vulnerable Versions    |
+| :------------: | :------: | :------: |:------------------------:|:-------------------------:|
+| CVE-2025-59052 |   Direct   |   High   | @angular/platform-server | = 16.0.0-next.0 < 18.2.14 |
+| CVE-2025-59052 |   Direct   |   High   |       @angular/ssr       | = 17.0.0-next.0 < 18.2.21 |
+| CVE-2025-32997 | Transitive | Moderate |  http-proxy-middleware   |       1.3.0 - 2.0.8       |
+| CVE-2025-30360 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          |
+| CVE-2025-30359 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          |
+| CVE-2025-54798 | Transitive | Low |           tmp            |         <= 0.2.3          |
 
   </template>
 
 <template #Angular__16>
 
-| CVE ID         |  CVE Type  | Severity |     Affected Library     |    Vulnerable Versions    | Fixed in version |
-| :------------: |:----------:|:--------:|:------------------------:|:-------------------------:|:----------------:|
-| CVE-2025-59052 |   Direct   |   High   | @angular/platform-server | = 16.0.0-next.0 < 18.2.14 | tuxcare.1 |
-| CVE-2025-27789 | Transitive | Moderate |      @babel/runtime      |         < 7.26.10         | tuxcare.1 |
-| CVE-2025-32997 | Transitive | Moderate |  http-proxy-middleware   |       1.3.0 - 2.0.8       | tuxcare.1 |
-| CVE-2025-30360 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          | tuxcare.1 |
-| CVE-2025-30359 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          | tuxcare.1 |
-| CVE-2025-54798 | Transitive |   Low    |           tmp            |         <= 0.2.3          | tuxcare.1 |
+| CVE ID         |  CVE Type  | Severity |     Affected Library     |    Vulnerable Versions    |
+| :------------: |:----------:|:--------:|:------------------------:|:-------------------------:|
+| CVE-2025-59052 |   Direct   |   High   | @angular/platform-server | = 16.0.0-next.0 < 18.2.14 |
+| CVE-2025-27789 | Transitive | Moderate |      @babel/runtime      |         < 7.26.10         |
+| CVE-2025-32997 | Transitive | Moderate |  http-proxy-middleware   |       1.3.0 - 2.0.8       |
+| CVE-2025-30360 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          |
+| CVE-2025-30359 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          |
+| CVE-2025-54798 | Transitive |   Low    |           tmp            |         <= 0.2.3          |
 
   </template>
 
 <template #Angular__15>
 
-| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   | Fixed in version |
-| :------------: | :------: | :------: | :---------------: |:----------------------:|:----------------:|
-| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        | tuxcare.1 |
-| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        | tuxcare.1 |
-| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        | tuxcare.1 |
-| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 | tuxcare.1 |
-| CVE-2025-54798 | Transitive | Low | tmp |        <= 0.2.3        | tuxcare.1 |
+| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   |
+| :------------: | :------: | :------: | :---------------: |:----------------------:|
+| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
+| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |
+| CVE-2025-54798 | Transitive | Low | tmp |        <= 0.2.3        |
 
   </template>
 
 <template #Angular__14>
 
-| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   | Fixed in version |
-| :------------: | :------: | :------: | :---------------: |:----------------------:|:----------------:|
-| CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <= 5.3.3        |    tuxcare.2     |
-| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |    tuxcare.1     |
-| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |    tuxcare.1     |
-| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |    tuxcare.1     |
-| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |    tuxcare.1     |
-| CVE-2025-54798 | Transitive | Low | tmp |        <= 0.2.3        |    tuxcare.1     |
+| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   |
+| :------------: | :------: | :------: | :---------------: |:----------------------:|
+| CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <= 5.3.3        |
+| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
+| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |
+| CVE-2025-54798 | Transitive | Low | tmp |        <= 0.2.3        |
 
   </template>
 
 <template #Angular__13>
 
-| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   | Fixed in version |
-| :------------: | :------: | :------: | :---------------: |:----------------------:|:----------------:|
-| CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <= 5.3.3        |    tuxcare.2     |
-| CVE-2022-25883 | Transitive | High | semver |     7.0.0 - 7.5.1      |    tuxcare.2     |
-| CVE-2024-29415 | Transitive | High | ip |        <= 2.0.1        |    tuxcare.2     |
-| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |    tuxcare.1     |
-| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |    tuxcare.1     |
-| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |    tuxcare.1     |
-| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |    tuxcare.1     |
-| CVE-2023-44270 | Transitive | Moderate | postcss |        < 8.4.31        |    tuxcare.2     |
-| CVE-2025-54798 | Transitive | Low | tmp |        <= 0.2.3        |    tuxcare.1     |
+| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   |
+| :------------: | :------: | :------: | :---------------: |:----------------------:|
+| CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <= 5.3.3        |
+| CVE-2022-25883 | Transitive | High | semver |     7.0.0 - 7.5.1      |
+| CVE-2024-29415 | Transitive | High | ip |        <= 2.0.1        |
+| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |
+| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
+| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
+| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |
+| CVE-2023-44270 | Transitive | Moderate | postcss |        < 8.4.31        |
+| CVE-2025-54798 | Transitive | Low | tmp |        <= 0.2.3        |
 
   </template>
 
 <template #Angular__12>
 
-|        CVE ID        | CVE Type | Severity |    Affected Library    |    Vulnerable Versions     | Fixed in version |
-|:--------------------:| :------: |:--------:|:----------------------:|:--------------------------:|:----------------:|
-|    CVE-2023-28154    | Transitive | Critical |        webpack         |     >= 5.0.0, < 5.76.0     |    tuxcare.1     |
-|    CVE-2022-24771    | Transitive |   High   |       node-forge       |          < 1.3.0           |    tuxcare.2     |
-|    CVE-2022-24772    | Transitive |   High   |       node-forge       |          < 1.3.0           |    tuxcare.1     |
-|    CVE-2024-29180    | Transitive |   High   | webpack-dev-middleware |          <=5.3.3           |    tuxcare.2     |
-|    CVE-2022-25883    | Transitive |   High   |         semver         |       7.0.0 - 7.5.1        |    tuxcare.2     |
-|    CVE-2024-29415    | Transitive |   High   |           ip           |          <= 2.0.1          |    tuxcare.2     |
-|    CVE-2022-24773    | Transitive | Moderate |       node-forge       |          < 1.3.0           |    tuxcare.2     |
-|    CVE-2022-0122     | Transitive | Moderate |       node-forge       |          < 1.0.0           |    tuxcare.2     |
-|    CVE-2024-43788    | Transitive | Moderate |        webpack         | >= 5.0.0-alpha.0, < 5.94.0 |    tuxcare.1     |
-|    CVE-2025-27789    | Transitive | Moderate |     @babel/runtime     |         < 7.26.10          |    tuxcare.1     |
-|    CVE-2025-30360    | Transitive | Moderate |   webpack-dev-server   |          <= 5.2.0          |    tuxcare.1     |
-|    CVE-2025-30359    | Transitive | Moderate |   webpack-dev-server   |          <= 5.2.0          |    tuxcare.1     |
-|    CVE-2024-43788    | Transitive | Moderate |        webpack         |   5.0.0-alpha.0 - 5.93.0   |    tuxcare.1     |
-|    CVE-2023-44270    | Transitive | Moderate |        postcss         |          < 8.4.31          |    tuxcare.2     |
-|    CVE-2025-54798    | Transitive |   Low    |          tmp           |          <= 0.2.3          |    tuxcare.1     |
-| GHSA-gf8q-jrpm-jvxq  | Transitive |   Low    |       node-forge       |          < 1.0.0           |    tuxcare.1     |
-| GHSA-5rrq-pxf6-6jx5  | Transitive |   Low    |       node-forge       |          < 1.0.0           |    tuxcare.1     |
+|        CVE ID        | CVE Type | Severity |    Affected Library    |    Vulnerable Versions     |
+|:--------------------:| :------: |:--------:|:----------------------:|:--------------------------:|
+|    CVE-2023-28154    | Transitive | Critical |        webpack         |     >= 5.0.0, < 5.76.0     |
+|    CVE-2022-24771    | Transitive |   High   |       node-forge       |          < 1.3.0           |
+|    CVE-2022-24772    | Transitive |   High   |       node-forge       |          < 1.3.0           |
+|    CVE-2024-29180    | Transitive |   High   | webpack-dev-middleware |          <=5.3.3           |
+|    CVE-2022-25883    | Transitive |   High   |         semver         |       7.0.0 - 7.5.1        |
+|    CVE-2024-29415    | Transitive |   High   |           ip           |          <= 2.0.1          |
+|    CVE-2022-24773    | Transitive | Moderate |       node-forge       |          < 1.3.0           |
+|    CVE-2022-0122     | Transitive | Moderate |       node-forge       |          < 1.0.0           |
+|    CVE-2024-43788    | Transitive | Moderate |        webpack         | >= 5.0.0-alpha.0, < 5.94.0 |
+|    CVE-2025-27789    | Transitive | Moderate |     @babel/runtime     |         < 7.26.10          |
+|    CVE-2025-30360    | Transitive | Moderate |   webpack-dev-server   |          <= 5.2.0          |
+|    CVE-2025-30359    | Transitive | Moderate |   webpack-dev-server   |          <= 5.2.0          |
+|    CVE-2024-43788    | Transitive | Moderate |        webpack         |   5.0.0-alpha.0 - 5.93.0   |
+|    CVE-2023-44270    | Transitive | Moderate |        postcss         |          < 8.4.31          |
+|    CVE-2025-54798    | Transitive |   Low    |          tmp           |          <= 0.2.3          |
+| GHSA-gf8q-jrpm-jvxq  | Transitive |   Low    |       node-forge       |          < 1.0.0           |
+| GHSA-5rrq-pxf6-6jx5  | Transitive |   Low    |       node-forge       |          < 1.0.0           |
 
   </template>
 
 <template #Angular__11>
 
-|       CVE ID        | CVE Type | Severity |    Affected Library    |                   Vulnerable Versions                   | Fixed in version |
-|:-------------------:| :------: |:--------:|:----------------------:|:-------------------------------------------------------:|:----------------:|
-|   CVE-2022-37601    | Transitive | Critical |      loader-utils      |               >= 2.0.0, < 2.0.3, < 1.4.1                |    tuxcare.1     |
-|   CVE-2025-7783    | Transitive | Critical |       form-data        |      < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4      |    tuxcare.2     |
-|   CVE-2022-37603    | Transitive | High |      loader-utils      | >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1 |    tuxcare.1     |
-|   CVE-2022-37599    | Transitive | High |      loader-utils      | >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1 |    tuxcare.1     |
-|   CVE-2021-23424    | Transitive |   High   |       ansi-html        |    < 0.0.8     |    tuxcare.1     |
-|   CVE-2024-47068    | Transitive |   High   |         rollup         |    >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2     |    tuxcare.2     |
-|    CVE-2022-3517    | Transitive |   High   |       minimatch        |                         < 3.0.5                         |    tuxcare.1     |
-|   CVE-2022-25858    | Transitive |   High   |         terser         |               < 4.8.1, >= 5.0.0, < 5.14.2               |    tuxcare.2     |
-|   CVE-2022-24771    | Transitive |   High   |       node-forge       |                         < 1.3.0                         |    tuxcare.2     |
-|   CVE-2022-24772    | Transitive |   High   |       node-forge       |                         < 1.3.0                         |    tuxcare.1     |
-|   CVE-2022-25883    | Transitive |   High   |         semver         |                      7.0.0 - 7.5.1                      |    tuxcare.2     |
-|   CVE-2024-29415    | Transitive |   High   |           ip           |                        <= 2.0.1                         |    tuxcare.2     |
-|   CVE-2024-4068    | Transitive |   High   |         braces         |                         < 3.0.3                         |    tuxcare.2     |
-|   CVE-2023-44270    | Transitive | Moderate |        postcss         |                        < 8.4.31                         |    tuxcare.2     |
-|   CVE-2023-26136    | Transitive | Moderate |      tough-cookie      |                         < 4.1.3                         |    tuxcare.2     |
-|   CVE-2022-24773    | Transitive | Moderate |       node-forge       |                         < 1.3.0                         |    tuxcare.2     |
-|    CVE-2022-0122    | Transitive | Moderate |       node-forge       |                         < 1.0.0                         |    tuxcare.2     |
-|   CVE-2025-27789    | Transitive | Moderate |     @babel/runtime     |                        < 7.26.10                        |    tuxcare.1     |
-|   CVE-2023-44270    | Transitive | Moderate |        postcss         |                        < 8.4.31                         |    tuxcare.2     |
-|   CVE-2025-54798    | Transitive |   Low    |          tmp           |                        <= 0.2.3                         |    tuxcare.1     |
-| GHSA-gf8q-jrpm-jvxq | Transitive |   Low    |       node-forge       |                         < 1.0.0                         |    tuxcare.1     |
-| GHSA-5rrq-pxf6-6jx5 | Transitive |   Low    |       node-forge       |                         < 1.0.0                         |    tuxcare.1     |
+|       CVE ID        | CVE Type | Severity |    Affected Library    |                   Vulnerable Versions                   |
+|:-------------------:| :------: |:--------:|:----------------------:|:-------------------------------------------------------:|
+|   CVE-2022-37601    | Transitive | Critical |      loader-utils      |               >= 2.0.0, < 2.0.3, < 1.4.1                |
+|   CVE-2025-7783    | Transitive | Critical |       form-data        |      < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4      |
+|   CVE-2022-37603    | Transitive | High |      loader-utils      | >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1 |
+|   CVE-2022-37599    | Transitive | High |      loader-utils      | >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1 |
+|   CVE-2021-23424    | Transitive |   High   |       ansi-html        |    < 0.0.8     |
+|   CVE-2024-47068    | Transitive |   High   |         rollup         |    >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2     |
+|    CVE-2022-3517    | Transitive |   High   |       minimatch        |                         < 3.0.5                         |
+|   CVE-2022-25858    | Transitive |   High   |         terser         |               < 4.8.1, >= 5.0.0, < 5.14.2               |
+|   CVE-2022-24771    | Transitive |   High   |       node-forge       |                         < 1.3.0                         |
+|   CVE-2022-24772    | Transitive |   High   |       node-forge       |                         < 1.3.0                         |
+|   CVE-2022-25883    | Transitive |   High   |         semver         |                      7.0.0 - 7.5.1                      |
+|   CVE-2024-29415    | Transitive |   High   |           ip           |                        <= 2.0.1                         |
+|   CVE-2024-4068    | Transitive |   High   |         braces         |                         < 3.0.3                         |
+|   CVE-2023-44270    | Transitive | Moderate |        postcss         |                        < 8.4.31                         |
+|   CVE-2023-26136    | Transitive | Moderate |      tough-cookie      |                         < 4.1.3                         |
+|   CVE-2022-24773    | Transitive | Moderate |       node-forge       |                         < 1.3.0                         |
+|    CVE-2022-0122    | Transitive | Moderate |       node-forge       |                         < 1.0.0                         |
+|   CVE-2025-27789    | Transitive | Moderate |     @babel/runtime     |                        < 7.26.10                        |
+|   CVE-2023-44270    | Transitive | Moderate |        postcss         |                        < 8.4.31                         |
+|   CVE-2025-54798    | Transitive |   Low    |          tmp           |                        <= 0.2.3                         |
+| GHSA-gf8q-jrpm-jvxq | Transitive |   Low    |       node-forge       |                         < 1.0.0                         |
+| GHSA-5rrq-pxf6-6jx5 | Transitive |   Low    |       node-forge       |                         < 1.0.0                         |
 
   </template>
 
 <template #Angular__10>
 
-|     CVE ID     | CVE Type | Severity |       Affected Library        |                       Vulnerable Versions                        | Fixed in version |
-|:--------------:| :------: |:--------:|:-----------------------------:|:----------------------------------------------------------------:|:----------------:|
-|   CVE-2022-37601    | Transitive | Critical |         loader-utils          |                    >= 2.0.0, < 2.0.3, < 1.4.1                    |    tuxcare.1     |
-|   CVE-2025-7783    | Transitive | Critical |           form-data           |          < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4           |    tuxcare.2     |
-|   CVE-2022-25881    | Transitive |   High   |     http-cache-semantics      |                             < 4.1.1                              |    tuxcare.2     |
-|   CVE-2024-29415    | Transitive |   High   |              ip               |                             <= 2.0.1                             |    tuxcare.2     |
-|   CVE-2024-4068    | Transitive |   High   |         braces         |                         < 3.0.3                         |    tuxcare.2     |
-|   CVE-2021-23424    | Transitive |   High   |       ansi-html        |    < 0.0.8     |    tuxcare.1     |
-| CVE-2020-7733  | Transitive |   High   |         ua-parser-js          |                             < 0.7.22                             |    tuxcare.1     |
-| CVE-2020-7793  | Transitive |   High   |         ua-parser-js          |                             < 0.7.23                             |    tuxcare.1     |
-| CVE-2021-27292  | Transitive |   High   |         ua-parser-js          |                       >= 0.7.14, < 0.7.24                        |    tuxcare.1     |
-|   CVE-2021-3803    | Transitive |   High   |           nth-check           |                             < 2.0.1                              |    tuxcare.1     |
-|   CVE-2024-47068    | Transitive |   High   |            rollup             |         >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2         |    tuxcare.2     |
-|   CVE-2022-25858    | Transitive |   High   |            terser             |                   < 4.8.1, >= 5.0.0, < 5.14.2                    |    tuxcare.2     |
-|   CVE-2022-25883    | Transitive |   High   |            semver             |                          7.0.0 - 7.5.1                           |    tuxcare.2     |
-|   CVE-2022-24771    | Transitive |   High   |          node-forge           |                             < 1.3.0                              |    tuxcare.2     |
-|   CVE-2022-24772    | Transitive |   High   |          node-forge           |                             < 1.3.0                              |    tuxcare.1     |
-|    CVE-2022-3517    | Transitive |   High   |           minimatch           |                             < 3.0.5                              |    tuxcare.1     |
-|   CVE-2022-37603    | Transitive | High |         loader-utils          |     >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1      |    tuxcare.1     |
-|   CVE-2022-37599    | Transitive | High |         loader-utils          |     >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1      |    tuxcare.1     |
-|   CVE-2025-27789    | Transitive | Moderate |     @babel/runtime     |                        < 7.26.10                        |    tuxcare.1     |
-|   CVE-2024-36751    | Transitive | Moderate |           parse-uri           |                             <= 1.0.9                             |    tuxcare.2     |
-|   CVE-2024-28863    | Transitive | Moderate |              tar              |                             < 6.2.1                              |    tuxcare.1     |
-|   CVE-2023-26136    | Transitive | Moderate |         tough-cookie          |                             < 4.1.3                              |    tuxcare.2     |
-|   CVE-2023-44270    | Transitive | Moderate |            postcss            |                             < 8.4.31                             |    tuxcare.2     |
-|   CVE-2021-23382    | Transitive | Moderate |            postcss            |                   >= 8.0.0, < 8.2.13, < 7.0.36                   |    tuxcare.2     |
-|   CVE-2021-23368    | Transitive | Moderate |            postcss            |              >= 7.0.0, < 7.0.36, >= 8.0.0, < 8.2.10              |    tuxcare.2     |
-|   CVE-2022-24773    | Transitive | Moderate |          node-forge           |                             < 1.3.0                              |    tuxcare.2     |
-|    CVE-2022-0122    | Transitive | Moderate |          node-forge           |                             < 1.0.0                              |    tuxcare.2     |
-|   CVE-2025-54798    | Transitive |   Low    |              tmp              |                             <= 0.2.3                             |    tuxcare.1     |
-| CVE-2020-15262 | Transitive |   Low    | webpack-subresource-integrity |                             < 1.5.1                              |    tuxcare.1     |
-| GHSA-gf8q-jrpm-jvxq | Transitive |   Low    |          node-forge           |                             < 1.0.0                              |    tuxcare.1     |
-| GHSA-5rrq-pxf6-6jx5 | Transitive |   Low    |          node-forge           |                             < 1.0.0                              |    tuxcare.1     |
-| CVE-2017-16137 | Transitive |   Low    |             debug             | < 2.6.9, >= 3.0.0, < 3.1.0, >= 3.2.0, < 3.2.7, >= 4.0.0, < 4.3.1 |    tuxcare.1     |
-| CVE-2024-47764 | Transitive |   Low    |            cookie             | < 0.7.0 |    tuxcare.2     |
+|     CVE ID     | CVE Type | Severity |       Affected Library        |                       Vulnerable Versions                        |
+|:--------------:| :------: |:--------:|:-----------------------------:|:----------------------------------------------------------------:|
+|   CVE-2022-37601    | Transitive | Critical |         loader-utils          |                    >= 2.0.0, < 2.0.3, < 1.4.1                    |
+|   CVE-2025-7783    | Transitive | Critical |           form-data           |          < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4           |
+|   CVE-2022-25881    | Transitive |   High   |     http-cache-semantics      |                             < 4.1.1                              |
+|   CVE-2024-29415    | Transitive |   High   |              ip               |                             <= 2.0.1                             |
+|   CVE-2024-4068    | Transitive |   High   |         braces         |                         < 3.0.3                         |
+|   CVE-2021-23424    | Transitive |   High   |       ansi-html        |    < 0.0.8     |
+| CVE-2020-7733  | Transitive |   High   |         ua-parser-js          |                             < 0.7.22                             |
+| CVE-2020-7793  | Transitive |   High   |         ua-parser-js          |                             < 0.7.23                             |
+| CVE-2021-27292  | Transitive |   High   |         ua-parser-js          |                       >= 0.7.14, < 0.7.24                        |
+|   CVE-2021-3803    | Transitive |   High   |           nth-check           |                             < 2.0.1                              |
+|   CVE-2024-47068    | Transitive |   High   |            rollup             |         >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2         |
+|   CVE-2022-25858    | Transitive |   High   |            terser             |                   < 4.8.1, >= 5.0.0, < 5.14.2                    |
+|   CVE-2022-25883    | Transitive |   High   |            semver             |                          7.0.0 - 7.5.1                           |
+|   CVE-2022-24771    | Transitive |   High   |          node-forge           |                             < 1.3.0                              |
+|   CVE-2022-24772    | Transitive |   High   |          node-forge           |                             < 1.3.0                              |
+|    CVE-2022-3517    | Transitive |   High   |           minimatch           |                             < 3.0.5                              |
+|   CVE-2022-37603    | Transitive | High |         loader-utils          |     >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1      |
+|   CVE-2022-37599    | Transitive | High |         loader-utils          |     >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1      |
+|   CVE-2025-27789    | Transitive | Moderate |     @babel/runtime     |                        < 7.26.10                        |
+|   CVE-2024-36751    | Transitive | Moderate |           parse-uri           |                             <= 1.0.9                             |
+|   CVE-2024-28863    | Transitive | Moderate |              tar              |                             < 6.2.1                              |
+|   CVE-2023-26136    | Transitive | Moderate |         tough-cookie          |                             < 4.1.3                              |
+|   CVE-2023-44270    | Transitive | Moderate |            postcss            |                             < 8.4.31                             |
+|   CVE-2021-23382    | Transitive | Moderate |            postcss            |                   >= 8.0.0, < 8.2.13, < 7.0.36                   |
+|   CVE-2021-23368    | Transitive | Moderate |            postcss            |              >= 7.0.0, < 7.0.36, >= 8.0.0, < 8.2.10              |
+|   CVE-2022-24773    | Transitive | Moderate |          node-forge           |                             < 1.3.0                              |
+|    CVE-2022-0122    | Transitive | Moderate |          node-forge           |                             < 1.0.0                              |
+|   CVE-2025-54798    | Transitive |   Low    |              tmp              |                             <= 0.2.3                             |
+| CVE-2020-15262 | Transitive |   Low    | webpack-subresource-integrity |                             < 1.5.1                              |
+| GHSA-gf8q-jrpm-jvxq | Transitive |   Low    |          node-forge           |                             < 1.0.0                              |
+| GHSA-5rrq-pxf6-6jx5 | Transitive |   Low    |          node-forge           |                             < 1.0.0                              |
+| CVE-2017-16137 | Transitive |   Low    |             debug             | < 2.6.9, >= 3.0.0, < 3.1.0, >= 3.2.0, < 3.2.7, >= 4.0.0, < 4.3.1 |
+| CVE-2024-47764 | Transitive |   Low    |            cookie             | < 0.7.0 |
 
   </template>
 
 <template #Angular__9>
 
-|       CVE ID        | CVE Type | Severity |       Affected Library        |                          Vulnerable Versions                           | Fixed in version |
-|:-------------------:| :------: |:--------:|:-----------------------------:|:----------------------------------------------------------------------:|:----------------:|
-|   CVE-2022-37601    | Transitive | Critical |         loader-utils          |                       >= 2.0.0, < 2.0.3, < 1.4.1                       |    tuxcare.1     |
-|    CVE-2025-7783    | Transitive | Critical |           form-data           |             < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4              |    tuxcare.2     |
-|   CVE-2024-47068    | Transitive |   High   |            rollup             |            >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2            |    tuxcare.2     |
-|   CVE-2022-37603    | Transitive | High |         loader-utils          |        >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1         |    tuxcare.1     |
-|   CVE-2022-37599    | Transitive | High |         loader-utils          |        >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1         |    tuxcare.1     |
-|   CVE-2024-21536    | Transitive | High |     http-proxy-middleware     |                       < 2.0.7, >= 3.0.0, < 3.0.3                       |    tuxcare.1     |
-|   CVE-2024-29415    | Transitive |   High   |              ip               |                                <= 2.0.1                                |    tuxcare.2     |
-|   CVE-2022-25881    | Transitive |   High   |     http-cache-semantics      |                                < 4.1.1                                 |    tuxcare.2     |
-|   CVE-2021-23424    | Transitive |   High   |           ansi-html           |                                < 0.0.8                                 |    tuxcare.1     |
-|    CVE-2020-7733    | Transitive |   High   |         ua-parser-js          |                                < 0.7.22                                |    tuxcare.1     |
-|    CVE-2020-7793    | Transitive |   High   |         ua-parser-js          |                                < 0.7.23                                |    tuxcare.1     |
-|   CVE-2021-27292    | Transitive |   High   |         ua-parser-js          |                          >= 0.7.14, < 0.7.24                           |    tuxcare.1     |
-|    CVE-2024-4068    | Transitive |   High   |            braces             |                                < 3.0.3                                 |    tuxcare.2     |
-|    CVE-2022-3517    | Transitive |   High   |           minimatch           |                                < 3.0.5                                 |    tuxcare.1     |
-|   CVE-2022-24771    | Transitive |   High   |          node-forge           |                                < 1.3.0                                 |    tuxcare.2     |
-|   CVE-2022-24772    | Transitive |   High   |          node-forge           |                                < 1.3.0                                 |    tuxcare.1     |
-|    CVE-2021-3803    | Transitive |   High   |           nth-check           |                                < 2.0.1                                 |    tuxcare.1     |
-|   CVE-2022-25883    | Transitive |   High   |            semver             |                             7.0.0 - 7.5.1                              |    tuxcare.2     |
-|   CVE-2022-25858    | Transitive |   High   |            terser             |                      < 4.8.1, >= 5.0.0, < 5.14.2                       |    tuxcare.2     |
-|   CVE-2024-29180    | Transitive |   High   |    webpack-dev-middleware     |             >= 7.0.0, < 7.1.0, >= 6.0.0, < 6.1.2, <= 5.3.3             |    tuxcare.2     |
-|    CVE-2023-0842    | Transitive | Moderate |            xml2js             |                                < 0.5.0                                 |    tuxcare.1     |
-|   CVE-2020-7608     | Transitive | Moderate |         yargs-parser          | >= 6.0.0, < 13.1.2, >= 14.0.0, < 15.0.1, <= 5.0.0, >= 16.0.0, < 18.1.1 |    tuxcare.2     |
-|   CVE-2021-23495     | Transitive | Moderate |             karma             |                                < 6.3.16                                |    tuxcare.2     |
-|   CVE-2022-0437     | Transitive | Moderate |             karma             |                                < 6.3.14                                |    tuxcare.2     |
-|   CVE-2024-28863    | Transitive | Moderate |              tar              |                                < 6.2.1                                 |    tuxcare.2     |
-|   CVE-2022-24773    | Transitive | Moderate |          node-forge           |                                < 1.3.0                                 |    tuxcare.2     |
-|    CVE-2022-0122    | Transitive | Moderate |          node-forge           |                                < 1.0.0                                 |    tuxcare.2     |
-|   CVE-2024-36751    | Transitive | Moderate |           parse-uri           |                                <= 1.0.9                                |    tuxcare.2     |
-|   CVE-2023-44270    | Transitive | Moderate |            postcss            |                                < 8.4.31                                |    tuxcare.2     |
-|   CVE-2021-23382    | Transitive | Moderate |            postcss            |                      >= 8.0.0, < 8.2.13, < 7.0.36                      |    tuxcare.2     |
-|   CVE-2021-23368    | Transitive | Moderate |            postcss            |                 >= 7.0.0, < 7.0.36, >= 8.0.0, < 8.2.10                 |    tuxcare.2     |
-|   CVE-2023-26136    | Transitive | Moderate |         tough-cookie          |                                < 4.1.3                                 |    tuxcare.2     |
-|   CVE-2025-30359    | Transitive | Moderate |         webpack-dev-server          |                                < 4.1.3                                 |    tuxcare.1     |
-|   CVE-2024-29415    | Transitive |   Low    |              ip               |                            = 2.0.0, < 1.1.9                            |    tuxcare.2     |
-|   CVE-2025-54798    | Transitive |   Low    |              tmp              |                                <= 0.2.3                                |    tuxcare.1     |
-|   CVE-2017-16137    | Transitive |   Low    |             debug             |    < 2.6.9, >= 3.0.0, < 3.1.0, >= 3.2.0, < 3.2.7, >= 4.0.0, < 4.3.1    |    tuxcare.1     |
-|   CVE-2024-47764    | Transitive |   Low    |            cookie             |                                < 0.7.0                                 |    tuxcare.2     |
-| GHSA-gf8q-jrpm-jvxq | Transitive |   Low    |          node-forge           |                                < 1.0.0                                 |    tuxcare.1     |
-| GHSA-5rrq-pxf6-6jx5 | Transitive |   Low    |          node-forge           |                                < 1.0.0                                 |    tuxcare.1     |
-|   CVE-2020-15262    | Transitive |   Low    | webpack-subresource-integrity |                                < 1.5.1                                 |    tuxcare.1     |
+|       CVE ID        | CVE Type | Severity |       Affected Library        |                          Vulnerable Versions                           |
+|:-------------------:| :------: |:--------:|:-----------------------------:|:----------------------------------------------------------------------:|
+|   CVE-2022-37601    | Transitive | Critical |         loader-utils          |                       >= 2.0.0, < 2.0.3, < 1.4.1                       |
+|    CVE-2025-7783    | Transitive | Critical |           form-data           |             < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4              |
+|   CVE-2024-47068    | Transitive |   High   |            rollup             |            >= 4.0.0, < 4.22.4, >= 3.0.0, < 3.29.5, < 2.79.2            |
+|   CVE-2022-37603    | Transitive | High |         loader-utils          |        >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1         |
+|   CVE-2022-37599    | Transitive | High |         loader-utils          |        >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1         |
+|   CVE-2024-21536    | Transitive | High |     http-proxy-middleware     |                       < 2.0.7, >= 3.0.0, < 3.0.3                       |
+|   CVE-2024-29415    | Transitive |   High   |              ip               |                                <= 2.0.1                                |
+|   CVE-2022-25881    | Transitive |   High   |     http-cache-semantics      |                                < 4.1.1                                 |
+|   CVE-2021-23424    | Transitive |   High   |           ansi-html           |                                < 0.0.8                                 |
+|    CVE-2020-7733    | Transitive |   High   |         ua-parser-js          |                                < 0.7.22                                |
+|    CVE-2020-7793    | Transitive |   High   |         ua-parser-js          |                                < 0.7.23                                |
+|   CVE-2021-27292    | Transitive |   High   |         ua-parser-js          |                          >= 0.7.14, < 0.7.24                           |
+|    CVE-2024-4068    | Transitive |   High   |            braces             |                                < 3.0.3                                 |
+|    CVE-2022-3517    | Transitive |   High   |           minimatch           |                                < 3.0.5                                 |
+|   CVE-2022-24771    | Transitive |   High   |          node-forge           |                                < 1.3.0                                 |
+|   CVE-2022-24772    | Transitive |   High   |          node-forge           |                                < 1.3.0                                 |
+|    CVE-2021-3803    | Transitive |   High   |           nth-check           |                                < 2.0.1                                 |
+|   CVE-2022-25883    | Transitive |   High   |            semver             |                             7.0.0 - 7.5.1                              |
+|   CVE-2022-25858    | Transitive |   High   |            terser             |                      < 4.8.1, >= 5.0.0, < 5.14.2                       |
+|   CVE-2024-29180    | Transitive |   High   |    webpack-dev-middleware     |             >= 7.0.0, < 7.1.0, >= 6.0.0, < 6.1.2, <= 5.3.3             |
+|    CVE-2023-0842    | Transitive | Moderate |            xml2js             |                                < 0.5.0                                 |
+|   CVE-2020-7608     | Transitive | Moderate |         yargs-parser          | >= 6.0.0, < 13.1.2, >= 14.0.0, < 15.0.1, <= 5.0.0, >= 16.0.0, < 18.1.1 |
+|   CVE-2021-23495     | Transitive | Moderate |             karma             |                                < 6.3.16                                |
+|   CVE-2022-0437     | Transitive | Moderate |             karma             |                                < 6.3.14                                |
+|   CVE-2024-28863    | Transitive | Moderate |              tar              |                                < 6.2.1                                 |
+|   CVE-2022-24773    | Transitive | Moderate |          node-forge           |                                < 1.3.0                                 |
+|    CVE-2022-0122    | Transitive | Moderate |          node-forge           |                                < 1.0.0                                 |
+|   CVE-2024-36751    | Transitive | Moderate |           parse-uri           |                                <= 1.0.9                                |
+|   CVE-2023-44270    | Transitive | Moderate |            postcss            |                                < 8.4.31                                |
+|   CVE-2021-23382    | Transitive | Moderate |            postcss            |                      >= 8.0.0, < 8.2.13, < 7.0.36                      |
+|   CVE-2021-23368    | Transitive | Moderate |            postcss            |                 >= 7.0.0, < 7.0.36, >= 8.0.0, < 8.2.10                 |
+|   CVE-2023-26136    | Transitive | Moderate |         tough-cookie          |                                < 4.1.3                                 |
+|   CVE-2025-30359    | Transitive | Moderate |         webpack-dev-server          |                                < 4.1.3                                 |
+|   CVE-2024-29415    | Transitive |   Low    |              ip               |                            = 2.0.0, < 1.1.9                            |
+|   CVE-2025-54798    | Transitive |   Low    |              tmp              |                                <= 0.2.3                                |
+|   CVE-2017-16137    | Transitive |   Low    |             debug             |    < 2.6.9, >= 3.0.0, < 3.1.0, >= 3.2.0, < 3.2.7, >= 4.0.0, < 4.3.1    |
+|   CVE-2024-47764    | Transitive |   Low    |            cookie             |                                < 0.7.0                                 |
+| GHSA-gf8q-jrpm-jvxq | Transitive |   Low    |          node-forge           |                                < 1.0.0                                 |
+| GHSA-5rrq-pxf6-6jx5 | Transitive |   Low    |          node-forge           |                                < 1.0.0                                 |
+|   CVE-2020-15262    | Transitive |   Low    | webpack-subresource-integrity |                                < 1.5.1                                 |
 
   </template>
 
