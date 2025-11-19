@@ -864,7 +864,6 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | :------------: | :------: | :------: |:------------------------:|:-------------------------:|:----------------:|
 | CVE-2025-59052 |   Direct   |   High   | @angular/platform-server | = 16.0.0-next.0 < 18.2.14 | tuxcare.1 |
 | CVE-2025-59052 |   Direct   |   High   |       @angular/ssr       | = 17.0.0-next.0 < 18.2.21 | tuxcare.1 |
-| GHSA-67mh-4wv8-2f99 | Transitive | Moderate |         esbuild          |         <= 0.24.2         | tuxcare.1 |
 | CVE-2025-32997 | Transitive | Moderate |  http-proxy-middleware   |       1.3.0 - 2.0.8       | tuxcare.1 |
 | CVE-2025-30360 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          | tuxcare.1 |
 | CVE-2025-30359 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          | tuxcare.1 |
@@ -878,7 +877,6 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | :------------: |:----------:|:--------:|:------------------------:|:-------------------------:|:----------------:|
 | CVE-2025-59052 |   Direct   |   High   | @angular/platform-server | = 16.0.0-next.0 < 18.2.14 | tuxcare.1 |
 | CVE-2025-27789 | Transitive | Moderate |      @babel/runtime      |         < 7.26.10         | tuxcare.1 |
-| GHSA-67mh-4wv8-2f99 | Transitive | Moderate |         esbuild          |         <= 0.24.2         | tuxcare.1 |
 | CVE-2025-32997 | Transitive | Moderate |  http-proxy-middleware   |       1.3.0 - 2.0.8       | tuxcare.1 |
 | CVE-2025-30360 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          | tuxcare.1 |
 | CVE-2025-30359 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          | tuxcare.1 |
@@ -891,7 +889,6 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   | Fixed in version |
 | :------------: | :------: | :------: | :---------------: |:----------------------:|:----------------:|
 | CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        | tuxcare.1 |
-| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild |       <= 0.24.2        | tuxcare.1 |
 | CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        | tuxcare.1 |
 | CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        | tuxcare.1 |
 | CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 | tuxcare.1 |
@@ -905,7 +902,6 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | :------------: | :------: | :------: | :---------------: |:----------------------:|:----------------:|
 | CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <= 5.3.3        |    tuxcare.2     |
 | CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |    tuxcare.1     |
-| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild |       <= 0.24.2        |    tuxcare.1     |
 | CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |    tuxcare.1     |
 | CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |    tuxcare.1     |
 | CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |    tuxcare.1     |
@@ -921,7 +917,6 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | CVE-2022-25883 | Transitive | High | semver |     7.0.0 - 7.5.1      |    tuxcare.2     |
 | CVE-2024-29415 | Transitive | High | ip |        <= 2.0.1        |    tuxcare.2     |
 | CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |    tuxcare.1     |
-| GHSA-67mh-4wv8-2f99 | Transitive | Moderate | esbuild |       <= 0.24.2        |    tuxcare.1     |
 | CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |    tuxcare.1     |
 | CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |    tuxcare.1     |
 | CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |    tuxcare.1     |
@@ -944,7 +939,6 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |    CVE-2022-0122     | Transitive | Moderate |       node-forge       |          < 1.0.0           |    tuxcare.2     |
 |    CVE-2024-43788    | Transitive | Moderate |        webpack         | >= 5.0.0-alpha.0, < 5.94.0 |    tuxcare.1     |
 |    CVE-2025-27789    | Transitive | Moderate |     @babel/runtime     |         < 7.26.10          |    tuxcare.1     |
-| GHSA-67mh-4wv8-2f99  | Transitive | Moderate |        esbuild         |         <= 0.24.2          |    tuxcare.1     |
 |    CVE-2025-30360    | Transitive | Moderate |   webpack-dev-server   |          <= 5.2.0          |    tuxcare.1     |
 |    CVE-2025-30359    | Transitive | Moderate |   webpack-dev-server   |          <= 5.2.0          |    tuxcare.1     |
 |    CVE-2024-43788    | Transitive | Moderate |        webpack         |   5.0.0-alpha.0 - 5.93.0   |    tuxcare.1     |
