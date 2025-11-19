@@ -239,7 +239,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "karma-coverage": "~2.2.0",
        "karma-jasmine": "~5.1.0",
        "karma-jasmine-html-reporter": "~2.0.0",
-       "typescript": "~4.9.4"``
+       "typescript": "~4.9.4"
      },
      "overrides": {
        "@angular/animations": "npm:@els-js/angular-animations@15.2.10-tuxcare.1",
