@@ -321,6 +321,11 @@ const techData = [
         link: "./express-jwt/",
       },
       {
+        name: "fastify",
+        versions: "3.29.5",
+        link: "./fastify/",
+      },
+      {
         name: "formidable",
         versions: "2.1.2",
         link: "./formidable/",
@@ -411,6 +416,11 @@ const techData = [
         link: "./nth-check/",
       },
       {
+        name: "passport",
+        versions: "0.5.3",
+        link: "./passport/",
+      },
+      {
         name: "multer",
         versions: "1.4.5-lts",
         link: "./multer/",
@@ -479,6 +489,11 @@ const techData = [
         name: "terser",
         versions: "4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
         link: "./terser/",
+      },
+      {
+        name: "tailwindcss",
+        versions: "2.1.1",
+        link: "./tailwindcss/",
       },
       {
         name: "tough-cookie",
