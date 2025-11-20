@@ -253,6 +253,10 @@ export default {
                     icon: '/images/express-jwt-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/fastify/',
+                    icon: '/images/fastify-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/form-data/',
                     icon: '/images/form-data-logo.webp',
                 },
@@ -345,6 +349,10 @@ export default {
                     icon: '/images/nth-check-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/passport/',
+                    icon: '/images/javascript.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/pdfjs-dist/',
                     icon: '/images/pdfjs-dist-logo.webp',
                 },
@@ -379,6 +387,10 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/terser/',
                     icon: '/images/terser-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes-and-libraries/tailwindcss/',
+                    icon: '/images/tailwindcss-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/tough-cookie/',
