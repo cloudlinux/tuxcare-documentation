@@ -419,55 +419,92 @@ sysctl -p /etc/sysconfig/kcare/sysctl.conf
 
 ### UEFI Secure Boot Support 
 
-::: tip Note: 
-This feature is an early stage of adoption. Not all the distribution will be able to support it. 
-::: 
+KernelCare supports systems with Secure Boot enabled in UEFI firmware. The KernelCare Agent uses a certificate that must be added to the Secure Boot trust chain to sign kernel modules. You can use the automated setup method (recommended), which uses a certificate embedded in a Microsoft-signed helper binary, or manually add a public certificate to the MOK database.
 
-This new functionality lets KernelCare SimplePatch work on systems with secure boot set up in their UEFI firmware. We are going to add a public certificate to the MOK (Machine Owner Keys) database that KernelCare SimplePatch will use to sign modules. 
+#### Automated Setup (Recommended)
 
-The latest KernelCare SimplePatch package contains a public certificate and will be available in the `/usr/libexec/kcare/kernelcare_pub.der`. For older versions, it could be downloaded from the [https://patches.kernelcare.com/kernelcare_pub.der](https://patches.kernelcare.com/kernelcare_pub.der) to that location.
-For example: 
+The automated setup method uses a Microsoft-signed helper binary that automatically injects the KernelCare certificate into the Secure Boot trust chain at boot time. This eliminates the need for manual MOK enrollment. The KernelCare Agent package (version 3.0-2 or later) includes this helper binary and a setup script that configures it.
+
+**Supported Distributions:**
+
+The automated setup method is supported on RPM-based distributions (RHEL, CentOS, AlmaLinux, Rocky Linux, Oracle Linux, CloudLinux, Amazon Linux) with EFI boot, shim installed, and Secure Boot enabled. Not available for Debian/Ubuntu.
+
+**Setup steps:**
+
+1. Update the KernelCare Agent to version 3.0-2 or later.
+
+2. Run the setup script as root:
+
+```bash
+$ /usr/share/kcare/secure_boot/setup_kcare_certs.sh
 ```
-curl -o /usr/libexec/kcare/kernelcare_pub.der https://patches.kernelcare.com/kernelcare_pub.der 
+
+The script verifies the EFI system partition and shim bootloader are present, then places the helper binary in the appropriate location.
+
+3. Reboot the system. The helper binary will automatically inject the certificate during the boot process.
+
+#### Manual Setup
+
+**Supported Distributions:**
+
+This method of adding a certificate with `mokutil` is supported on systems that use UEFI Secure Boot with the standard shim and MOK stack.
+
+If you need to set up the certificate manually or are using an older KernelCare Agent version:
+
+1. The latest KernelCare Agent package contains a public certificate at `/usr/libexec/kcare/kernelcare_pub.der`. For older versions, download it to that location:
+
+```bash
+curl -o /usr/libexec/kcare/kernelcare_pub.der https://patches.kernelcare.com/kernelcare_pub.der
 ```
-Use `mokutil` as root to add this new MOK to the UEFI firmware.
-``` 
-mokutil --import /usr/libexec/kcare/kernelcare_pub.der 
-input password: 
-input password again:
+
+2. Use `mokutil` as root to add this MOK to the UEFI firmware:
+
+```bash
+$ mokutil --import /usr/libexec/kcare/kernelcare_pub.der
+ input password:
+ input password again:
 ```
-It doesn't have a MOK password, and `mokutil` will ask you to create one. The password is temporary and will be used on the next boot. 
 
-1. Reboot your machine to enter the MOK manager EFI utility. 
+If you don't have a MOK password, `mokutil` will ask you to create one. The password is temporary and will be used on the next boot.
 
-2. First, go down to 'Enroll Mok':
-![](/images/uefi-enroll-mok.png)
+3. Reboot your machine to enter the MOK manager EFI utility.
 
-3. Then the firmware gives you the option of viewing the new MOK or continuing. Let's continue. 
-![](/images/uefi-continue.png) 
+   First, go down to the 'Enroll Mok':
 
-4. It then asks you to confirm the enrollment. 
-![](/images/uefi-yes.png) 
+![alt text](/images/uefi-enroll-mok.png "Select Enroll MOK")
 
-5. Then you will need to enter the password you used when running `mokutil --import`. 
-![](/images/uefi-password.png) 
+Then the firmware gives you the option of viewing the new MOK or continuing. Let's continue.
 
-6. Finally, the firmware will ask you to reboot. 
-![](/images/uefi-ok.png) 
+![alt text](/images/uefi-continue.png "Select Continue")
 
-7. Verify the key has been loaded by finding it in the output of the following command:
+It then asks you to confirm the enrollment.
+
+![alt text](/images/uefi-yes.png "Select Yes")
+
+Then you will need to enter the password you used when running `mokutil --import`.
+
+![alt text](/images/uefi-password.png "Enter the password")
+
+Finally, the firmware will ask you to reboot.
+
+![alt text](/images/uefi-ok.png  "Select OK")
+
+#### Verification
+
+After completing either setup method and rebooting, verify the certificate was enrolled successfully:
+
+```bash
+$ mokutil --list-enrolled | egrep -i 'SHA1|Issuer'
 ```
-mokutil --list-enrolled | egrep -i 'SHA1|Issuer'
+
+In some cases, the enrolled key may not appear in the mokutil output but can be verified with:
+
+```bash
+$ dmesg | grep -i 'cloud linux'
+[   0.722149] EFI: Loaded cert 'Cloud Linux Software, Inc: Kernel Module Signing Key: 12ff0613c0f80cfba3b2f8eba71ebc27c5a76170' linked to '.system_keyring'
 ```
-In some cases the enrolled key will not be shown but could be verified by the following command:
-```
-dmesg | grep -i 'cloud linux' [   0.722149] EFI: Loaded cert 'Cloud Linux Software, Inc: Kernel Module Signing Key: 12ff0613c0f80cfba3b2f8eba71ebc27c5a76170' linked to '.system_keyring'
-``` 
 
-That's it. Now you should be able to apply patches as usual. 
-
-
-To get more information about signing kernel modules for secure boot, [see](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/signing-a-kernel-and-modules-for-secure-boot_managing-monitoring-and-updating-the-kernel). 
+After successful verification, KernelCare should be able to apply patches as usual on systems with Secure Boot enabled. 
 
 ### Live patching and FIPS compliance 
 
@@ -1183,73 +1220,94 @@ $ wget https://patches.kernelcare.com/oval/com.kernelcare.${ID}.${VERSION_ID}.xm
 $ oscap oval eval --report report.htm com.kernelcare.${ID}.${VERSION_ID}.xml
 ```
 
-#### UEFI Secure Boot Support
+#### UEFI Secure Boot Support 
 
-:::tip Note
-This feature is an early stage of adoption. Not all the distribution will be able to support it.
-:::
+KernelCare supports systems with Secure Boot enabled in UEFI firmware. The KernelCare Agent uses a certificate that must be added to the Secure Boot trust chain to sign kernel modules. You can use the automated setup method (recommended), which uses a certificate embedded in a Microsoft-signed helper binary, or manually add a public certificate to the MOK database.
 
-This new functionality lets KernelCare work on systems with secure boot set up in their UEFI firmware. We are going to add a public certificate to the MOK (Machine Owner Keys) database that KernelCare will use to sign modules.
+#### Automated Setup (Recommended)
 
-The latest KernelCare package contains a public certificate and will be available in the `/usr/libexec/kcare/kernelcare_pub.der`. For older versions, it could be downloaded from the [https://patches.kernelcare.com/kernelcare_pub.der](https://patches.kernelcare.com/kernelcare_pub.der) to that location.
+The automated setup method uses a Microsoft-signed helper binary that automatically injects the KernelCare certificate into the Secure Boot trust chain at boot time. This eliminates the need for manual MOK enrollment. The KernelCare Agent package (version 3.0-2 or later) includes this helper binary and a setup script that configures it.
 
-For example:
+**Supported Distributions:**
 
-```text
-# curl -o /usr/libexec/kcare/kernelcare_pub.der https://patches.kernelcare.com/kernelcare_pub.der
+The automated setup method is supported on RPM-based distributions (RHEL, CentOS, AlmaLinux, Rocky Linux, Oracle Linux, CloudLinux, Amazon Linux) with EFI boot, shim installed, and Secure Boot enabled. Not available for Debian/Ubuntu.
+
+**Setup steps:**
+
+1. Update the KernelCare Agent to version 3.0-2 or later.
+
+2. Run the setup script as root:
+
+```bash
+$ /usr/share/kcare/secure_boot/setup_kcare_certs.sh
 ```
 
-1. Use `mokutil` as root to add this new MOK to the UEFI firmware.
+The script verifies the EFI system partition and shim bootloader are present, then places the helper binary in the appropriate location.
 
-```text
-# mokutil --import /usr/libexec/kcare/kernelcare_pub.der
+3. Reboot the system. The helper binary will automatically inject the certificate during the boot process.
 
-input password:
-input password again:
+#### Manual Setup
+
+**Supported Distributions:**
+
+This method of adding a certificate with `mokutil` is supported on systems that use UEFI Secure Boot with the standard shim and MOK stack.
+
+If you need to set up the certificate manually or are using an older KernelCare Agent version:
+
+1. The latest KernelCare Agent package contains a public certificate at `/usr/libexec/kcare/kernelcare_pub.der`. For older versions, download it to that location:
+
+```bash
+curl -o /usr/libexec/kcare/kernelcare_pub.der https://patches.kernelcare.com/kernelcare_pub.der
 ```
 
-It doesn't have a MOK password, and `mokutil` will ask you to create one. The password is temporary and will be used on the next boot.
+2. Use `mokutil` as root to add this MOK to the UEFI firmware:
 
-2. Reboot your machine to enter the MOK manager EFI utility.
+```bash
+$ mokutil --import /usr/libexec/kcare/kernelcare_pub.der
+ input password:
+ input password again:
+```
 
-First, go down to 'Enroll Mok':
+If you don't have a MOK password, `mokutil` will ask you to create one. The password is temporary and will be used on the next boot.
 
-![enroll mok](/images/uefi-enroll-mok.png "Select Enroll MOK")
+3. Reboot your machine to enter the MOK manager EFI utility.
+
+   First, go down to the 'Enroll Mok':
+
+![alt text](/images/uefi-enroll-mok.png "Select Enroll MOK")
 
 Then the firmware gives you the option of viewing the new MOK or continuing. Let's continue.
 
-![select continue](/images/uefi-continue.png "Select Continue")
+![alt text](/images/uefi-continue.png "Select Continue")
 
 It then asks you to confirm the enrollment.
 
-![yes](/images/uefi-yes.png "Select Yes")
+![alt text](/images/uefi-yes.png "Select Yes")
 
 Then you will need to enter the password you used when running `mokutil --import`.
 
-![enter password](/images/uefi-password.png "Enter the password")
+![alt text](/images/uefi-password.png "Enter the password")
 
 Finally, the firmware will ask you to reboot.
 
-![select ok](/images/uefi-ok.png  "Select OK")
+![alt text](/images/uefi-ok.png  "Select OK")
 
-3. Verify the key has been loaded by finding it in the output of the following command:
+#### Verification
 
-```text
-# mokutil --list-enrolled | egrep -i 'SHA1|Issuer'
+After completing either setup method and rebooting, verify the certificate was enrolled successfully:
+
+```bash
+$ mokutil --list-enrolled | egrep -i 'SHA1|Issuer'
 ```
 
-In some cases the enrolled key will not be shown but could be verified by the following command:
+In some cases, the enrolled key may not appear in the mokutil output but can be verified with:
 
-```text
-# dmesg | grep -i 'cloud linux'
-
+```bash
+$ dmesg | grep -i 'cloud linux'
 [   0.722149] EFI: Loaded cert 'Cloud Linux Software, Inc: Kernel Module Signing Key: 12ff0613c0f80cfba3b2f8eba71ebc27c5a76170' linked to '.system_keyring'
 ```
 
-That's it. Now you should be able to apply patches as usual.
-
-To get more information about signing kernel modules for secure boot, see
-[https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/signing-kernel-modules-for-secure-boot_managing-monitoring-and-updating-the-kernel](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/signing-kernel-modules-for-secure-boot_managing-monitoring-and-updating-the-kernel).
+After successful verification, KernelCare should be able to apply patches as usual on systems with Secure Boot enabled. 
 
 #### Live patching and FIPS compliance
 
