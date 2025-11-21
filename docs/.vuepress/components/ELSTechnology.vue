@@ -436,6 +436,11 @@ const techData = [
         link: "./next/",
       },
       {
+        name: "node-fetch",
+        versions: "1.7.3 | 2.6.1",
+        link: "./node-fetch/",
+      },
+      {
         name: "node-forge",
         versions: "0.10.0",
         link: "./node-forge/",
