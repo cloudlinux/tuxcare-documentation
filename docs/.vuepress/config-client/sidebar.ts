@@ -440,6 +440,10 @@ export default {
                     path: '/els-for-runtimes-and-libraries/sentry-browser/',
                     icon: '/images/sentry-browser-logo.webp',
                 },
+                {
+                    path: '/els-for-runtimes-and-libraries/javascript-libraries/',
+                    icon: '/images/javascript.webp',
+                },
             ]
         },
     ],
