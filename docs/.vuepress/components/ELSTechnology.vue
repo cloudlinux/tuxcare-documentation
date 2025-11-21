@@ -261,99 +261,14 @@ const techData = [
         link: "./angularjs/",
       },
       {
-        name: "ansi-html",
-        versions: "0.0.7",
-        link: "./ansi-html/",
-      },
-      {
-        name: "base64url",
-        versions: "0.0.6",
-        link: "./base64url/",
-      },
-      {
-        name: "bson",
-        versions: "0.5.7 | 1.0.9",
-        link: "./bson/",
-      },
-      {
         name: "Bootstrap",
         versions: "3.4.1 | 4.6.2",
         link: "./bootstrap/",
       },
       {
-        name: "braces",
-        versions: "2.3.2",
-        link: "./braces/",
-      },
-      {
-        name: "cookie",
-        versions: "0.4.2",
-        link: "./cookie/",
-      },
-      {
-        name: "copy-anything",
-        versions: "2.0.6",
-        link: "./copy-anything/",
-      },
-      {
-        name: "CryptoJS",
-        versions: "3.3.0",
-        link: "./crypto-js/",
-      },
-      {
-        name: "debug",
-        versions: "4.1.1",
-        link: "./debug/",
-      },
-      {
-        name: "DOMPurify",
-        versions: "2.3.0 | 2.4.3",
-        link: "./dompurify/",
-      },
-      {
-        name: "express",
-        versions: "3.21.2",
-        link: "./express/",
-      },
-      {
-        name: "express-jwt",
-        versions: "0.1.3",
-        link: "./express-jwt/",
-      },
-      {
         name: "fastify",
         versions: "3.29.5",
         link: "./fastify/",
-      },
-      {
-        name: "formidable",
-        versions: "2.1.2",
-        link: "./formidable/",
-      },
-      {
-        name: "Form-Data",
-        versions: "2.3.3",
-        link: "./form-data/",
-      },
-      {
-        name: "http-proxy-middleware",
-        versions: "0.19.1 | 2.0.8",
-        link: "./http-proxy-middleware/",
-      },
-      {
-        name: "i18next",
-        versions: "23.16.8",
-        link: "./i18next/",
-      },
-      {
-        name: "ini",
-        versions: "1.3.5",
-        link: "./ini/",
-      },
-      {
-        name: "ip",
-        versions: "1.1.5 | 2.0.0",
-        link: "./ip/",
       },
       {
         name: "jQuery",
@@ -371,34 +286,9 @@ const techData = [
         link: "./karma/",
       },
       {
-        name: "JSONPath Plus",
-        versions: "7.2.0",
-        link: "./jsonpath-plus/",
-      },
-      {
-        name: "jsPDF",
-        versions: "2.5.2",
-        link: "./jspdf/",
-      },
-      {
         name: "Lodash",
         versions: "4.5.0 | 4.17.x",
         link: "./lodash/",
-      },
-      {
-        name: "micromatch",
-        versions: "3.1.10",
-        link: "./micromatch/",
-      },
-      {
-        name: "minimatch",
-        versions: "3.0.4",
-        link: "./minimatch/",
-      },
-      {
-        name: "marked",
-        versions: "4.0.9",
-        link: "./marked/",
       },
       {
         name: "MongoDB Driver",
@@ -411,19 +301,9 @@ const techData = [
         link: "./mongoose/",
       },
       {
-        name: "nth-check",
-        versions: "1.0.2",
-        link: "./nth-check/",
-      },
-      {
         name: "passport",
         versions: "0.5.3",
         link: "./passport/",
-      },
-      {
-        name: "multer",
-        versions: "1.4.5-lts",
-        link: "./multer/",
       },
       {
         name: "MySQL2",
@@ -441,19 +321,9 @@ const techData = [
         link: "./node-fetch/",
       },
       {
-        name: "node-forge",
-        versions: "0.10.0",
-        link: "./node-forge/",
-      },
-      {
         name: "Node.js",
         versions: " 12 | 14 | 16 | 18 | 20",
         link: "./nodejs/",
-      },
-      {
-        name: "pdfjs-dist",
-        versions: "2.16.105",
-        link: "./pdfjs-dist/",
       },
       {
         name: "PostCSS",
@@ -461,54 +331,9 @@ const techData = [
         link: "./postcss/",
       },
       {
-        name: "picocolors",
-        versions: "0.2.1",
-        link: "./picocolors/",
-      },
-      {
-        name: "Quill",
-        versions: "1.3.7",
-        link: "./quill/",
-      },
-      {
-        name: "Request",
-        versions: "2.88.0",
-        link: "./request/",
-      },
-      {
-        name: "Rollup",
-        versions: "2.1.0 | 2.26.5 | 2.38.4 | 2.79.1 | 2.79.2",
-        link: "./rollup/",
-      },
-      {
-        name: "semver",
-        versions: "7.1.3 | 7.3.2",
-        link: "./semver/",
-      },
-      {
-        name: "ssr-window",
-        versions: "4.0.2",
-        link: "./ssr-window/",
-      },
-      {
-        name: "terser",
-        versions: "4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
-        link: "./terser/",
-      },
-      {
         name: "tailwindcss",
         versions: "2.1.1",
         link: "./tailwindcss/",
-      },
-      {
-        name: "tough-cookie",
-        versions: "2.4.3 | 2.5.0",
-        link: "./tough-cookie/",
-      },
-      {
-        name: "UAParser.js",
-        versions: "0.7.21",
-        link: "./ua-parser-js/",
       },
       {
         name: "Vite",
@@ -536,29 +361,9 @@ const techData = [
         link: "./webpack/",
       },
       {
-        name: "webpack-subresource-integrity",
-        versions: "1.4.0",
-        link: "./webpack-subresource-integrity/",
-      },
-      {
         name: "undici",
         versions: "5.28.5",
         link: "./undici/",
-      },
-      {
-        name: "xml2js",
-        versions: "0.4.23",
-        link: "./xml2js/",
-      },
-      {
-        name: "yargs-parser",
-        versions: "11.1.1",
-        link: "./yargs-parser/",
-      },
-      {
-        name: "@sentry/browser",
-        versions: "5.7.1",
-        link: "./sentry-browser/",
       },
     ],
   },
