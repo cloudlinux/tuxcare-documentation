@@ -337,6 +337,10 @@ export default {
                     icon: '/images/next-logo.webp',
                 },
                 {
+                    path: '/els-for-runtimes-and-libraries/node-fetch/',
+                    icon: '/images/node-fetch-logo.webp',
+                },
+                {
                     path: '/els-for-runtimes-and-libraries/node-forge/',
                     icon: '/images/node-forge-logo.webp',
                 },

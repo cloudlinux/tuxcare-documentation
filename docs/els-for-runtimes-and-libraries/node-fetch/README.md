@@ -1,32 +1,31 @@
-# jQuery
+# node-fetch
 
-Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes for jQuery versions that have reached their end of life. This allows you to continue running jQuery applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for node-fetch from TuxCare provides security fixes for node-fetch versions that have reached their end of life. This allows you to continue running node-fetch applications without vulnerability concerns, even after official support has ended.
 
-## Supported jQuery Versions
+## Supported node-fetch Versions
 
-* jQuery 1.12.4
-* jQuery 2.2.4
-* jQuery 3.4.1
+* node-fetch 1.7.3
+* node-fetch 2.6.1
 
-## Connection to ELS for jQuery Library
+## Connection to ELS for node-fetch Library
 
-This guide outlines the steps needed to integrate the TuxCare ELS for the jQuery library.
+This guide outlines the steps needed to integrate the TuxCare ELS for the node-fetch library.
 
 ## Step 1: Get Token
 
-You need a token in order to use TuxCare ELS jQuery library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a token in order to use TuxCare ELS node-fetch library. Anonymous access is disabled. To receive the token, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Step 2: Set Up ELS for jQuery
+## Step 2: Set Up ELS for node-fetch
 
-TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
+TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure internal registry. Follow the steps below to add it to your project and get started.
 
-1. Navigate to the root directory of your jQuery project.
+1. Navigate to the root directory of your node-fetch project.
 2. Create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
    ```text
-   my-jquery-project/
+   my-node-fetch-project/
    ├── node_modules/
    ├── package.json
    ├── .npmrc         ⚠️ ← Create it here
@@ -49,11 +48,11 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your jQuery dependencies with the TuxCare packages. You can do this in two ways:
+4. Update your `package.json` file to replace your node-fetch dependencies with the TuxCare packages. You can do this in two ways:
 
    * **Option 1: TuxCare Patcher (Automated)**
 
-     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the jQuery version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
+     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the node-fetch version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
 
      <CodeWithCopy>
 
@@ -68,7 +67,7 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
     
      ```text
      "dependencies": {
-       "jquery": "^1.12.4"
+       "node-fetch": "^2.6.1"
      }
      ```
     
@@ -76,26 +75,26 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-       "jquery": "npm:@els-js/jquery@1.12.4-tuxcare.1"
+       "node-fetch": "npm:@els-js/node-fetch@2.6.1-tuxcare.1"
      },
      "overrides": {
-       "jquery@1.12.4": "npm:@els-js/jquery@1.12.4-tuxcare.1"
+       "node-fetch@2.6.1": "npm:@els-js/node-fetch@2.6.1-tuxcare.1"
      }
      ```
     
    * **Option 2: Manual Update**
 
-     Manually update your `package.json` file by replacing your jQuery dependencies with the TuxCare packages. This method gives you full control over which packages to update.
+     Manually update your `package.json` file by replacing your node-fetch dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     <TableTabs label="Choose jQuery version: " >
+     <TableTabs label="Choose node-fetch version: " >
 
-      <template #jQuery_1.12.4>
+      <template #node-fetch_1.7.3>
 
       <CodeWithCopy>
 
       ```text
       "dependencies": {
-        "jquery": "npm:@els-js/jquery@1.12.4-tuxcare.1"
+        "node-fetch": "npm:@els-js/node-fetch@1.7.3-tuxcare.1"
       }
       ```
 
@@ -103,27 +102,13 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
 
       </template>
 
-      <template #jQuery_2.2.4>
+      <template #node-fetch_2.6.1>
 
       <CodeWithCopy>
 
       ```text
       "dependencies": {
-        "jquery": "npm:@els-js/jquery@2.2.4-tuxcare.1"
-      }
-      ```
-
-      </CodeWithCopy>
-
-      </template>
-
-      <template #jQuery_3.4.1>
-
-      <CodeWithCopy>
-
-      ```text
-      "dependencies": {
-        "jquery": "npm:@els-js/jquery@3.4.1-tuxcare.1"
+        "node-fetch": "npm:@els-js/node-fetch@2.6.1-tuxcare.1"
       }
       ```
 
@@ -143,7 +128,7 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the jQuery library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the node-fetch library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -161,7 +146,7 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
     found 0 vulnerabilities
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the jQuery library into your project.
+7. You've successfully installed the Tuxcare ELS version of the node-fetch library into your project.
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
@@ -186,7 +171,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install jquery@npm:@els-js/jquery@1.12.4-tuxcare.2
+  npm install node-fetch@npm:@els-js/node-fetch@2.6.1-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -206,41 +191,27 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for jQuery from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for node-fetch from TuxCare versions:
 
-<TableTabs label="Choose jQuery version: " >
+<TableTabs label="Choose node-fetch version: " >
 
-<template #jQuery_1.12.4>
+<template #node-fetch_1.7.3>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2020-11023 | Direct   | Medium   |       jquery       | >= 1.0.3 < 3.5.0  |
-| CVE-2020-11022 | Direct   | Medium   |       jquery       | >= 1.2 < 3.5.0    |
-| CVE-2019-11358 | Direct   | Medium   |       jquery       | < 3.4.0           |
-| CVE-2015-9251  | Direct   | Medium   |       jquery       | < 3.0.0           |
+| CVE-2022-0235  | Direct   | High     | node-fetch         | < 2.6.7, >= 3.0.0 < 3.1.1 |
 
   </template>
 
-<template #jQuery_2.2.4>
+<template #node-fetch_2.6.1>
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2020-11023 | Direct   | Medium   |       jquery       | >= 1.0.3 < 3.5.0  |
-| CVE-2020-11022 | Direct   | Medium   |       jquery       | >= 1.2 < 3.5.0    |
-| CVE-2019-11358 | Direct   | Medium   |       jquery       | < 3.4.0           |
-| CVE-2015-9251  | Direct   | Medium   |       jquery       | < 3.0.0           |
-
-  </template>
-
-<template #jQuery_3.4.1>
-
-| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2020-11023 | Direct   | Medium   |       jquery       | >= 1.0.3 < 3.5.0  |
-| CVE-2020-11022 | Direct   | Medium   |       jquery       | >= 1.2 < 3.5.0    |
+| CVE-2022-0235  | Direct   | High     | node-fetch         | < 2.6.7, >= 3.0.0 < 3.1.1 |
 
   </template>
 
 </TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+

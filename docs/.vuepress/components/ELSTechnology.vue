@@ -357,7 +357,7 @@ const techData = [
       },
       {
         name: "jQuery",
-        versions: "1.12.4",
+        versions: "1.12.4 | 2.2.4 | 3.4.1",
         link: "./jquery/",
       },
       {
@@ -434,6 +434,11 @@ const techData = [
         name: "next",
         versions: "12.3.7 | 13.5.11",
         link: "./next/",
+      },
+      {
+        name: "node-fetch",
+        versions: "1.7.3 | 2.6.1",
+        link: "./node-fetch/",
       },
       {
         name: "node-forge",
