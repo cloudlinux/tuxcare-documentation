@@ -9,13 +9,16 @@ Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides s
 * **bson** 0.5.7, 1.0.9
 * **braces** 2.3.2
 * **copy-anything** 2.0.6
+* **cookie** 0.4.2
 * **crypto-js** 3.3.0
 * **debug** 4.1.1
 * **dompurify** 2.3.0, 2.4.3
 * **express** 3.21.2
+* **express-jwt** 0.1.3
 * **form-data** 2.3.3
 * **formidable** 2.1.2
 * **http-proxy-middleware** 0.19.1, 2.0.8
+* **i18next** 23.16.8
 * **ini** 1.3.5
 * **ip** 1.1.5, 2.0.0
 * **jsonpath-plus** 7.2.0
@@ -37,6 +40,7 @@ Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides s
 * **terser** 4.6.10, 4.8.1, 5.3.0, 5.5.1
 * **tough-cookie** 2.4.3, 2.5.0
 * **ua-parser-js** 0.7.21
+* **webpack-subresource-integrity** 1.4.0
 * **xml2js** 0.4.23
 * **yargs-parser** 11.1.1
 
@@ -234,6 +238,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2020-15084 | Direct   | Critical | express-jwt        | <= 5.3.3           |
 | CVE-2020-7610  | Direct   | Critical | bson               | >= 1.0.0, < 1.1.4 |
 | CVE-2020-7788  | Direct   | Critical | ini                | < 1.3.6            |
 | CVE-2023-26136 | Direct   | Critical | tough-cookie       | < 4.1.3            |
@@ -254,6 +259,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2024-21536 | Direct   | High     | http-proxy-middleware | < 2.0.7, >= 3.0.0, < 3.0.3 |
 | CVE-2024-29415 | Direct   | High     | ip                | <= 2.0.1           |
 | CVE-2024-4068  | Direct   | High     | braces            | < 3.0.3            |
+| AIKIDO-2024-10543 | Direct   | High     | i18next           | 17.0.2 - 24.1.1    |
 | CVE-2024-4367  | Direct   | High     | pdfjs-dist        | Firefox < 126, Firefox ESR < 115.11 and Thunderbird < 115.11 |
 | CVE-2025-1302  | Direct   | High     | jsonpath-plus     | < 10.3.0           |
 | CVE-2025-29907 | Direct   | High     | jspdf             | < 3.0.1            |
@@ -273,6 +279,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2023-28155 | Direct   | Medium   | request           | <= 2.88.1          |
 | CVE-2024-10491 | Direct   | Medium   | express           | <= 3.21.4          |
 | CVE-2024-29041 | Direct   | Medium   | express           | < 4.19.2, >= 5.0.0-alpha.1 < 5.0.0-beta.3 |
+| CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
 | CVE-2024-4067  | Direct   | Medium   | micromatch        | < 4.0.8            |
 | CVE-2024-43796 | Direct   | Medium   | express           | < 4.20.0           |
 | CVE-2024-45801 | Direct   | Medium   | dompurify         | < 2.5.4, >= 3.0.0 < 3.1.3 |
@@ -286,7 +293,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | GHSA-593m-55hh-j8gv | Direct   | Moderate | @sentry/browser   | < 7.119.1, >= 8.0.0-alpha.1, < 8.33.0 |
 | GHSA-rvg8-pwq2-xj7q | Direct   | Moderate | base64url         | < 3.0.0            |
 | CVE-2025-46653 | Direct   | Low      | formidable        | >= 2.1.0, < 3.5.3  |
-| CVE-2020-15262 | Direct   | Low      | webpack-subresource-integrity | < 1.5.1 |
+| CVE-2020-15262 | Direct   | Low      | webpack-subresource-integrity | < 1.5.1            |
 | AIKIDO-2024-10030 | Direct   | Low      | Quill             | 0.0.1 - 1.3.7      |
 | AIKIDO-2024-10093 | Direct   | Low      | picocolors        | 0.1.0 - 1.0.0      |
 
