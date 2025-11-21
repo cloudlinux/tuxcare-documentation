@@ -357,7 +357,7 @@ const techData = [
       },
       {
         name: "jQuery",
-        versions: "1.12.4",
+        versions: "1.12.4 | 2.2.4 | 3.4.1",
         link: "./jquery/",
       },
       {
