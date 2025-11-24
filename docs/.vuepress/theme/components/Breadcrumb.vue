@@ -25,6 +25,7 @@ const titleMap = {
   '/els-for-runtimes-and-libraries/': 'ELS for Runtimes & Libraries',
   '/els-for-applications/': 'ELS for Applications',
   '/els-for-os/': 'ELS for OS',
+  '/els-for-runtimes/': 'ELS for Runtimes',
 };
 
 const breadCrumbs = computed(() => {

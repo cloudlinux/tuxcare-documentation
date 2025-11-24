@@ -118,5 +118,10 @@
     "/els-for-runtimes-and-libraries/spring/#step-2-create-or-modify-your-build-tool-settings": "/els-for-runtimes-and-libraries/spring/#step-4-verify-and-build",
     "/els-for-runtimes-and-libraries/spring/#verification": "/els-for-runtimes-and-libraries/spring/#step-4-verify-and-build",
     "/els-for-runtimes-and-libraries/python/#rpm-based": "/els-for-runtimes-and-libraries/python/#installation-instructions-for-linux", 
-    "/els-for-runtimes-and-libraries/python/#deb-based": "/els-for-runtimes-and-libraries/python/#installation-instructions-for-linux"
+    "/els-for-runtimes-and-libraries/python/#deb-based": "/els-for-runtimes-and-libraries/python/#installation-instructions-for-linux",
+    "/els-for-runtimes-and-libraries/openjdk/": "/els-for-runtimes/openjdk/",
+    "/els-for-runtimes-and-libraries/dotnet/": "/els-for-runtimes/dotnet/",
+    "/els-for-runtimes-and-libraries/python/": "/els-for-runtimes/python/",
+    "/els-for-runtimes-and-libraries/php/": "/els-for-runtimes/php/",
+    "/els-for-runtimes-and-libraries/nodejs/": "/els-for-runtimes/nodejs/"
 }

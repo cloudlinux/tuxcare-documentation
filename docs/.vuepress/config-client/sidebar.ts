@@ -78,6 +78,34 @@ export default {
             ]
         },
     ],
+    '/els-for-runtimes/': [
+        {
+            collapsable: false,
+            children: [
+                "/els-for-runtimes/",
+                {
+                    path: '/els-for-runtimes/openjdk/',
+                    icon: '/images/openjdk-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes/python/',
+                    icon: '/images/python.webp',
+                },
+                {
+                    path: '/els-for-runtimes/php/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes/dotnet/',
+                    icon: '/images/dotnet-logo.webp',
+                },
+                {
+                    path: '/els-for-runtimes/nodejs/',
+                    icon: '/images/nodejs.webp',
+                },
+            ]
+        },
+    ],
     '/els-for-runtimes-and-libraries/': [
         {
             collapsable: false,
@@ -91,10 +119,6 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/spring/',
                     icon: '/images/spring-logo.webp',
-                },
-                {
-                    path: '/els-for-runtimes-and-libraries/openjdk/',
-                    icon: '/images/openjdk-logo.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/apache-struts/',
@@ -138,10 +162,6 @@ export default {
                     icon: '/images/python.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/python/',
-                    icon: '/images/python.webp',
-                },
-                {
                     path: '/els-for-runtimes-and-libraries/celery/',
                     icon: '/images/celery.webp',
                 },
@@ -172,24 +192,6 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/python-libraries/',
                     icon: '/images/python.webp',
-                },
-                {
-                    title: 'PHP',
-                    type: 'section-header',
-                    icon: '/images/php-logo.webp',
-                },
-                {
-                    path: '/els-for-runtimes-and-libraries/php/',
-                    icon: '/images/php-logo.webp',
-                },
-                {
-                    title: 'C#',
-                    type: 'section-header',
-                    icon: '/images/csharp.webp',
-                },
-                {
-                    path: '/els-for-runtimes-and-libraries/dotnet/',
-                    icon: '/images/dotnet-logo.webp',
                 },
                 {
                     title: 'JavaScript',
@@ -339,10 +341,6 @@ export default {
                 {
                     path: '/els-for-runtimes-and-libraries/node-forge/',
                     icon: '/images/node-forge-logo.webp',
-                },
-                {
-                    path: '/els-for-runtimes-and-libraries/nodejs/',
-                    icon: '/images/nodejs.webp',
                 },
                 {
                     path: '/els-for-runtimes-and-libraries/nth-check/',
