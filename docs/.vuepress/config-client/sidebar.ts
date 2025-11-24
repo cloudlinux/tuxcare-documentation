@@ -252,7 +252,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/passport/',
-                    icon: '/images/javascript.webp',
+                    icon: '/images/passport-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/postcss/',
