@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-fe76ce46","path":"/els-for-runtimes-and-libraries/duration-of-support/","title":"","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Supported Projects and Duration of Support","slug":"supported-projects-and-duration-of-support","link":"#supported-projects-and-duration-of-support","children":[]}]}');export{t as data};
