@@ -45,6 +45,11 @@ export default [
         link: "/els-for-runtimes-and-libraries/",
     },
     {
+        title: "ELS for Runtimes",
+        description: "provides security fixes for language runtimes beyond their official end-of-life date.",
+        link: "/els-for-runtimes/",
+    },
+    {
         title: "ELS for Applications",
         description: "provides security fixes for open-source applications after official support ends.",
         link: "/els-for-applications/",

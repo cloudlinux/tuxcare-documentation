@@ -17,6 +17,7 @@ import CodeTabs from "./components/CodeTabs.vue";
 import CodeWithCopy from "./components/CodeWithCopy.vue";
 import TableTabs from "./components/TableTabs.vue";
 import ELSTechnology from "./components/ELSTechnology.vue";
+import ELSRTechnology from "./components/ELSRTechnology.vue";
 
 import ResolvedCveTable from './components/ResolvedCveTable.vue'
 
@@ -31,6 +32,7 @@ export default defineClientConfig({
         app.component("ResolvedCveTable", ResolvedCveTable);
         app.component("TableTabs", TableTabs);
         app.component("ELSTechnology", ELSTechnology);
+        app.component("ELSRTechnology", ELSRTechnology);
     },
     layouts: {
         Layout,

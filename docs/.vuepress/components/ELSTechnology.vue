@@ -90,11 +90,6 @@ const techData = [
         link: "./spring/",
       },
       {
-        name: "OpenJDK",
-        versions: "7 | 8 | 11 | 17",
-        link: "./openjdk/",
-      },
-      {
         name: "Dom4j",
         versions: "1.6.1",
         link: "./java-libraries/",
@@ -446,11 +441,6 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "Node.js",
-        versions: " 12 | 14 | 16 | 18 | 20",
-        link: "./nodejs/",
-      },
-      {
         name: "pdfjs-dist",
         versions: "2.16.105",
         link: "./javascript-libraries/",
@@ -566,11 +556,6 @@ const techData = [
     ecosystem: "Python",
     ecosystemIcon: "/images/python.webp",
     projects: [
-      {
-        name: "Python",
-        versions: "2.7 | 3.6 ",
-        link: "./python/",
-      },
       {
         name: "aiohttp",
         versions: "3.8.1 | 3.8.4 | 3.8.5",
@@ -765,38 +750,6 @@ const techData = [
         name: "Werkzeug",
         versions: "1.0.1 | 2.2.3",
         link: "./werkzeug/",
-      },
-    ],
-  },
-  {
-    ecosystem: "PHP",
-    ecosystemIcon: "/images/php.webp",
-    projects: [
-      {
-        name: "PHP",
-        versions: "5.2 | 5.3 | 5.4 | 5.5 | 5.6 | 7.0 | 7.1 | 7.2 | 7.3 | 7.4 | 8.0 | 8.1 | 8.2 | 8.3 | 8.4",
-        link: "./php/",
-      },
-    ],
-  },
-  {
-    ecosystem: "C#",
-    ecosystemIcon: "/images/csharp.webp",
-    projects: [
-      {
-        name: ".NET",
-        versions: "6",
-        link: "./dotnet/",
-      },
-    ],
-  },
-    {
-    ecosystem: "Ruby",
-    ecosystemIcon: "/images/ruby.webp",
-    projects: [
-      {
-        name: "Ruby",
-        versions: "3.1",
       },
     ],
   },
