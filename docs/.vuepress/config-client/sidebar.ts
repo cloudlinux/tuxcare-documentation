@@ -251,10 +251,6 @@ export default {
                     icon: '/images/node-fetch-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/nth-check/',
-                    icon: '/images/nth-check-logo.webp',
-                },
-                {
                     path: '/els-for-libraries/passport/',
                     icon: '/images/javascript.webp',
                 },
