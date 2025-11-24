@@ -1,26 +1,26 @@
-# FastAPI
+# NumPy
 
-Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides security fixes for FastAPI. This allows you to continue running your FastAPI applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for NumPy. This allows you to continue running your NumPy applications without vulnerability concerns, even after official support has ended.
 
-## Supported FastAPI Versions
+## Supported NumPy Versions
 
-* **FastAPI** 0.63.0, 0.104.1
+* **NumPy** 1.15.4, 1.16.0
 
   **Supported architecture:** x86_64.
 
 Other versions and architectures upon request.
 
-## Connection to ELS for FastAPI Repository
+## Connection to ELS for NumPy Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for FastAPI repository.
+This guide outlines the steps needed to integrate the TuxCare ELS for NumPy repository.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for FastAPI repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for NumPy repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-### Step 2: Set Up ELS for FastAPI
+### Step 2: Set Up ELS for NumPy
 
-To use TuxCare's ELS for FastAPI, follow one of the options below:
+To use TuxCare's ELS for NumPy, follow one of the options below:
 
 #### Option 1: Install a Package with ELS Repository via Command Line
 
@@ -31,7 +31,7 @@ You can install or upgrade a package directly using the ELS repository with your
 ```text
 pip install --upgrade \
   -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
-  fastapi
+  numpy
 ```
 
 </CodeWithCopy>
@@ -58,7 +58,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeWithCopy>
 
    ```text
-   pip install --upgrade fastapi
+   pip install --upgrade numpy
    ```
 
    </CodeWithCopy>
@@ -68,7 +68,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeWithCopy>
 
    ```text
-   pip install fastapi==0.63.0.post1+tuxcare
+   pip install numpy==1.15.4.post2+tuxcare
    ```
 
    </CodeWithCopy>
@@ -93,18 +93,18 @@ If you want to keep using public PyPI and fetch only specific patched packages f
    <CodeWithCopy>
 
    ```text
-   pip install fastapi==0.63.0.post1+tuxcare
+   pip install numpy==1.15.4.post2+tuxcare
    ```
 
    </CodeWithCopy>
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for FastAPI from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for NumPy from TuxCare versions:
 
-| CVE ID              | Severity | Library | Vulnerable Versions | Safe Version |
-| :-----------------: | :------: | :----: | :----------------: | :----------: |
-| CVE-2024-24762      | High     | fastapi | 0.104.1            | 0.104.1.post1+tuxcare |
-| CVE-2021-32677      | High     | fastapi | 0.63.0             | 0.63.0.post1+tuxcare |
+| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
+| :------------: | :------: | :-----: | :-----------------: | :------------------: |
+| CVE-2021-34141 | Medium   | numpy   | < 1.22.0            | 1.15.4.post2+tuxcare |
+| CVE-2019-6446  | Critical | numpy   | <= 1.16.0           | 1.16.0.post1+tuxcare<br>1.15.4.post1+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

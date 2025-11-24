@@ -1,6 +1,6 @@
 # JavaScript Libraries
 
-Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides security fixes for a variety of JavaScript Libraries. This allows you to continue running your JavaScript applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for a variety of JavaScript Libraries. This allows you to continue running your JavaScript applications without vulnerability concerns, even after official support has ended.
 
 ## Supported JavaScript Libraries
 

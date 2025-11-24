@@ -45,7 +45,7 @@ docs/
 ├── .vuepress/           # VuePress config and components
 ├── els-for-os/          # Endless Lifecycle Support for OS
 ├── els-for-runtimes/    # ELS for Runtimes
-├── els-for-runtimes-and-libraries/  # ELS for languages/frameworks
+├── els-for-libraries/   # ELS for languages/frameworks
 ├── els-for-applications/  # ELS for applications
 ├── enterprise-support-for-almalinux/
 ├── eportal/             # Enterprise portal docs

@@ -40,9 +40,9 @@ export default [
         link: "/els-for-os/",
     },
     {
-        title: "ELS for Runtimes & Libraries",
-        description: "provides security fixes for language runtimes and software libraries beyond their official end-of-life date.",
-        link: "/els-for-runtimes-and-libraries/",
+        title: "ELS for Libraries",
+        description: "provides security fixes for software libraries beyond their official end-of-life date.",
+        link: "/els-for-libraries/",
     },
     {
         title: "ELS for Runtimes",

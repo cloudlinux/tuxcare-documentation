@@ -1,26 +1,26 @@
-# Werkzeug
+# Celery
 
-Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides security fixes for Werkzeug. This allows you to continue running your Werkzeug applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for Celery. This allows you to continue running your Celery applications without vulnerability concerns, even after official support has ended.
 
-## Supported Werkzeug Versions
+## Supported Celery Versions
 
-* **Werkzeug** 1.0.1, 2.2.3
+* **Celery** 5.1.2
 
   **Supported architecture:** x86_64.
 
 Other versions and architectures upon request.
 
-## Connection to ELS for Werkzeug Repository
+## Connection to ELS for Celery Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Werkzeug repository.
+This guide outlines the steps needed to integrate the TuxCare ELS for Celery repository.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Werkzeug repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Celery repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-### Step 2: Set Up ELS for Werkzeug
+### Step 2: Set Up ELS for Celery
 
-To use TuxCare's ELS for Werkzeug, follow one of the options below:
+To use TuxCare's ELS for Celery, follow one of the options below:
 
 #### Option 1: Install a Package with ELS Repository via Command Line
 
@@ -31,7 +31,7 @@ You can install or upgrade a package directly using the ELS repository with your
 ```text
 pip install --upgrade \
   -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
-  werkzeug
+  celery
 ```
 
 </CodeWithCopy>
@@ -58,7 +58,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeWithCopy>
 
    ```text
-   pip install --upgrade werkzeug
+   pip install --upgrade celery
    ```
 
    </CodeWithCopy>
@@ -68,7 +68,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeWithCopy>
 
    ```text
-   pip install Werkzeug==1.0.1.post1+tuxcare
+   pip install celery==5.1.2.post1+tuxcare
    ```
 
    </CodeWithCopy>
@@ -93,21 +93,17 @@ If you want to keep using public PyPI and fetch only specific patched packages f
    <CodeWithCopy>
 
    ```text
-   pip install werkzeug==1.0.1.post1+tuxcare
+   pip install celery==5.1.2.post1+tuxcare
    ```
 
    </CodeWithCopy>
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for Werkzeug from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for Celery from TuxCare versions:
 
-| CVE ID              | Severity | Library  | Vulnerable Versions | Safe Version |
-| :-----------------: | :------: | :------: | :----------------: | :----------: |
-| CVE-2024-49767      | High     | werkzeug | 1.0.1              | 1.0.1.post1+tuxcare<br>1.0.1.post3+tuxcare |
-| CVE-2024-49766      | Medium   | werkzeug | 1.0.1              | 1.0.1.post1+tuxcare<br>1.0.1.post2+tuxcare<br>1.0.1.post3+tuxcare |
-| CVE-2024-34069      | High     | werkzeug | 1.0.1              | 1.0.1.post2+tuxcare |
-| CVE-2023-25577      | High     | werkzeug | 1.0.1              | 1.0.1.post1+tuxcare<br>1.0.1.post2+tuxcare<br>1.0.1.post3+tuxcare |
-| CVE-2023-23934      | Low      | werkzeug | 1.0.1              | 1.0.1.post3+tuxcare |
+| CVE ID              | Severity | Library | Vulnerable Versions | Safe Version |
+| :-----------------: | :------: | :----: | :----------------: | :----------: |
+| CVE-2021-23727      | High     | celery | 5.1.2              | 5.1.2.post1+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
