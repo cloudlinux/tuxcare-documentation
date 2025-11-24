@@ -5,6 +5,8 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
 ## Supported jQuery Versions
 
 * jQuery 1.12.4
+* jQuery 2.2.4
+* jQuery 3.4.1
 
 ## Connection to ELS for jQuery Library
 
@@ -85,15 +87,51 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
 
      Manually update your `package.json` file by replacing your jQuery dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-    <CodeWithCopy>
+     <TableTabs label="Choose jQuery version: " >
 
-    ```text
-    "dependencies": {
-      "jquery": "npm:@els-js/jquery@1.12.4-tuxcare.1"
-    }
-    ```
+      <template #jQuery_1.12.4>
 
-    </CodeWithCopy>
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@1.12.4-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+      <template #jQuery_2.2.4>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@2.2.4-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+      <template #jQuery_3.4.1>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@3.4.1-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+     </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -170,11 +208,39 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for jQuery from TuxCare versions:
 
+<TableTabs label="Choose jQuery version: " >
+
+<template #jQuery_1.12.4>
+
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
 | CVE-2020-11023 | Direct   | Medium   |       jquery       | >= 1.0.3 < 3.5.0  |
 | CVE-2020-11022 | Direct   | Medium   |       jquery       | >= 1.2 < 3.5.0    |
 | CVE-2019-11358 | Direct   | Medium   |       jquery       | < 3.4.0           |
 | CVE-2015-9251  | Direct   | Medium   |       jquery       | < 3.0.0           |
+
+  </template>
+
+<template #jQuery_2.2.4>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2020-11023 | Direct   | Medium   |       jquery       | >= 1.0.3 < 3.5.0  |
+| CVE-2020-11022 | Direct   | Medium   |       jquery       | >= 1.2 < 3.5.0    |
+| CVE-2019-11358 | Direct   | Medium   |       jquery       | < 3.4.0           |
+| CVE-2015-9251  | Direct   | Medium   |       jquery       | < 3.0.0           |
+
+  </template>
+
+<template #jQuery_3.4.1>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2020-11023 | Direct   | Medium   |       jquery       | >= 1.0.3 < 3.5.0  |
+| CVE-2020-11022 | Direct   | Medium   |       jquery       | >= 1.2 < 3.5.0    |
+
+  </template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
