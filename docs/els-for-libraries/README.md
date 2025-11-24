@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD029 MD024 MD036 -->
 
-# Endless Lifecycle Support for Runtimes and Libraries
+# Endless Lifecycle Support for Libraries
 
 <ELSTechnology />
 
@@ -15,20 +15,19 @@ TuxCare will make commercially reasonable efforts to adhere to the following gui
 * **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
 * **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
 * **Low-severity CVEs:** Patches provided within 90 days.
-  * **For .NET patches may be provided upon custom request.** 
 * TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
 
 ## Incident Reporting and Response Timeframe
 
 Customers can report vulnerabilities by submitting a ticket through the [TuxCare Support Portal](https://tuxcare.com/support-portal/). TuxCare commits to providing an initial response to any reported issue within 3 days.
 
-Requests for customer-directed security patches for CVEs that are outside of the ELS for Runtimes & Libraries scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 60 days.
+Requests for customer-directed security patches for CVEs that are outside of the ELS for Libraries scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 60 days.
 
 Handling Multiple Vulnerabilities: In cases where several CVEs are reported simultaneously for fixing, TuxCare will discuss and agree upon resolution timelines separately with the customer.
 
 ## Enhanced Transparency & Visibility
 
-TuxCare's commitment to transparency and visibility is foundational to our ELS for Runtimes & Libraries offering. We aim to provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
+TuxCare's commitment to transparency and visibility is foundational to our ELS for Libraries offering. We aim to provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
 * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
 * **Software Bill of Materials (SBOM)**: We provide complete visibility into the software supply chain with a comprehensive inventory of every package in the codebase, ensuring transparency and accountability in your software ecosystem.
@@ -55,8 +54,7 @@ All updates are delivered at a fixed price for the full term of your contract, e
 ## Technical Support
 
 TuxCare provides technical support according to the:
-* Standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf) **(excluding .NET)**.
-* The **.NET-specific** [support policy](https://tuxcare.com/TuxCare-els-windows-support-policy.pdf).
+* Standard [support policy](https://tuxcare.com/TuxCare-support-policy.pdf)
 
 It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base. 
 

@@ -106,54 +106,54 @@ export default {
             ]
         },
     ],
-    '/els-for-runtimes-and-libraries/': [
+    '/els-for-libraries/': [
         {
             collapsable: false,
             children: [
-                "/els-for-runtimes-and-libraries/",
+                "/els-for-libraries/",
                 {
                     title: 'Java',
                     type: 'section-header',
                     icon: '/images/java.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/spring/',
+                    path: '/els-for-libraries/spring/',
                     icon: '/images/spring-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/apache-struts/',
+                    path: '/els-for-libraries/apache-struts/',
                     icon: '/images/strut-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/apache-spark/',
+                    path: '/els-for-libraries/apache-spark/',
                     icon: '/images/apache-spark.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/apache-kafka/',
+                    path: '/els-for-libraries/apache-kafka/',
                     icon: '/images/apache-kafka.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/apache-velocity-engine/',
+                    path: '/els-for-libraries/apache-velocity-engine/',
                     icon: '/images/velocity-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/postgresql-driver/',
+                    path: '/els-for-libraries/postgresql-driver/',
                     icon: '/images/postgresql.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/protobuf/',
+                    path: '/els-for-libraries/protobuf/',
                     icon: '/images/protobuf-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/jackson/',
+                    path: '/els-for-libraries/jackson/',
                     icon: '/images/jackson-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/apache-commons-lang/',
+                    path: '/els-for-libraries/apache-commons-lang/',
                     icon: '/images/apache.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/java-libraries/',
+                    path: '/els-for-libraries/java-libraries/',
                     icon: '/images/java.webp',
                 },
                 {
@@ -162,35 +162,35 @@ export default {
                     icon: '/images/python.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/celery/',
+                    path: '/els-for-libraries/celery/',
                     icon: '/images/celery.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/django/',
+                    path: '/els-for-libraries/django/',
                     icon: '/images/django.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/fastapi/',
+                    path: '/els-for-libraries/fastapi/',
                     icon: '/images/fastapi.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/flask/',
+                    path: '/els-for-libraries/flask/',
                     icon: '/images/flask-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/numpy/',
+                    path: '/els-for-libraries/numpy/',
                     icon: '/images/numpy.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/starlette/',
+                    path: '/els-for-libraries/starlette/',
                     icon: '/images/starlette-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/werkzeug/',
+                    path: '/els-for-libraries/werkzeug/',
                     icon: '/images/werkzeug-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/python-libraries/',
+                    path: '/els-for-libraries/python-libraries/',
                     icon: '/images/python.webp',
                 },
                 {
@@ -199,99 +199,99 @@ export default {
                     icon: '/images/javascript.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/angular/',
+                    path: '/els-for-libraries/angular/',
                     icon: '/images/angular-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/angularjs/',
+                    path: '/els-for-libraries/angularjs/',
                     icon: '/images/angularjs-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/bootstrap/',
+                    path: '/els-for-libraries/bootstrap/',
                     icon: '/images/bootstrap-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/fastify/',
+                    path: '/els-for-libraries/fastify/',
                     icon: '/images/fastify-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/jquery/',
+                    path: '/els-for-libraries/jquery/',
                     icon: '/images/jquery-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/jsonwebtoken/',
+                    path: '/els-for-libraries/jsonwebtoken/',
                     icon: '/images/jsonwebtoken-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/karma/',
+                    path: '/els-for-libraries/karma/',
                     icon: '/images/karma-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/lodash/',
+                    path: '/els-for-libraries/lodash/',
                     icon: '/images/lodash-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/mongodb-driver/',
+                    path: '/els-for-libraries/mongodb-driver/',
                     icon: '/images/mongodb-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/mongoose/',
+                    path: '/els-for-libraries/mongoose/',
                     icon: '/images/mongoose-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/mysql2/',
+                    path: '/els-for-libraries/mysql2/',
                     icon: '/images/mysql2-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/next/',
+                    path: '/els-for-libraries/next/',
                     icon: '/images/next-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/node-fetch/',
+                    path: '/els-for-libraries/node-fetch/',
                     icon: '/images/node-fetch-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/nth-check/',
+                    path: '/els-for-libraries/nth-check/',
                     icon: '/images/nth-check-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/passport/',
+                    path: '/els-for-libraries/passport/',
                     icon: '/images/javascript.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/postcss/',
+                    path: '/els-for-libraries/postcss/',
                     icon: '/images/postcss-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/tailwindcss/',
+                    path: '/els-for-libraries/tailwindcss/',
                     icon: '/images/tailwindcss-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/undici/',
+                    path: '/els-for-libraries/undici/',
                     icon: '/images/undici-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/vite/',
+                    path: '/els-for-libraries/vite/',
                     icon: '/images/vite-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/vue/',
+                    path: '/els-for-libraries/vue/',
                     icon: '/images/vue-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/vue-template-compiler/',
+                    path: '/els-for-libraries/vue-template-compiler/',
                     icon: '/images/vue-template-compiler-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/webpack-dev-server/',
+                    path: '/els-for-libraries/webpack-dev-server/',
                     icon: '/images/webpack-dev-server.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/webpack/',
+                    path: '/els-for-libraries/webpack/',
                     icon: '/images/webpack-logo.webp',
                 },
                 {
-                    path: '/els-for-runtimes-and-libraries/javascript-libraries/',
+                    path: '/els-for-libraries/javascript-libraries/',
                     icon: '/images/javascript.webp',
                 },
             ]

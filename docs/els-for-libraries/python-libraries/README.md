@@ -1,6 +1,6 @@
 # Python Libraries
 
-Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides security fixes for a variety of Python Libraries. This allows you to continue running your Python applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for a variety of Python Libraries. This allows you to continue running your Python applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Python Libraries
 

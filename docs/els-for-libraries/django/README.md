@@ -1,6 +1,6 @@
 # Django
 
-Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides security fixes for Django. This allows you to continue running your Django applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for Django. This allows you to continue running your Django applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Django Versions
 

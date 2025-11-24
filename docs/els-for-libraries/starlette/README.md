@@ -1,26 +1,26 @@
-# NumPy
+# Starlette
 
-Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides security fixes for NumPy. This allows you to continue running your NumPy applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for Starlette. This allows you to continue running your Starlette applications without vulnerability concerns, even after official support has ended.
 
-## Supported NumPy Versions
+## Supported Starlette Versions
 
-* **NumPy** 1.15.4, 1.16.0
+* **Starlette** 0.27.0
 
   **Supported architecture:** x86_64.
 
 Other versions and architectures upon request.
 
-## Connection to ELS for NumPy Repository
+## Connection to ELS for Starlette Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for NumPy repository.
+This guide outlines the steps needed to integrate the TuxCare ELS for Starlette repository.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for NumPy repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Starlette repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-### Step 2: Set Up ELS for NumPy
+### Step 2: Set Up ELS for Starlette
 
-To use TuxCare's ELS for NumPy, follow one of the options below:
+To use TuxCare's ELS for Starlette, follow one of the options below:
 
 #### Option 1: Install a Package with ELS Repository via Command Line
 
@@ -31,7 +31,7 @@ You can install or upgrade a package directly using the ELS repository with your
 ```text
 pip install --upgrade \
   -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
-  numpy
+  starlette
 ```
 
 </CodeWithCopy>
@@ -58,7 +58,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeWithCopy>
 
    ```text
-   pip install --upgrade numpy
+   pip install --upgrade starlette
    ```
 
    </CodeWithCopy>
@@ -68,7 +68,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeWithCopy>
 
    ```text
-   pip install numpy==1.15.4.post2+tuxcare
+   pip install starlette==0.27.0.post1+tuxcare
    ```
 
    </CodeWithCopy>
@@ -93,18 +93,17 @@ If you want to keep using public PyPI and fetch only specific patched packages f
    <CodeWithCopy>
 
    ```text
-   pip install numpy==1.15.4.post2+tuxcare
+   pip install starlette==0.27.0.post1+tuxcare
    ```
 
    </CodeWithCopy>
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for NumPy from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for Starlette from TuxCare versions:
 
-| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
-| :------------: | :------: | :-----: | :-----------------: | :------------------: |
-| CVE-2021-34141 | Medium   | numpy   | < 1.22.0            | 1.15.4.post2+tuxcare |
-| CVE-2019-6446  | Critical | numpy   | <= 1.16.0           | 1.16.0.post1+tuxcare<br>1.15.4.post1+tuxcare |
+| CVE ID              | Severity | Library   | Vulnerable Versions | Safe Version |
+| :-----------------: | :------: | :-------: | :----------------: | :----------: |
+| CVE-2024-47874      | High     | starlette | 0.27.0             | 0.27.0.post1+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

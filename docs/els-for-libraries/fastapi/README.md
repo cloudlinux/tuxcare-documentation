@@ -1,26 +1,26 @@
-# Flask
+# FastAPI
 
-Endless Lifecycle Support (ELS) for Runtimes & Libraries from TuxCare provides security fixes for Flask. This allows you to continue running your Flask applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for FastAPI. This allows you to continue running your FastAPI applications without vulnerability concerns, even after official support has ended.
 
-## Supported Flask Versions
+## Supported FastAPI Versions
 
-* **Flask** 1.1.2, 2.2.1
+* **FastAPI** 0.63.0, 0.104.1
 
   **Supported architecture:** x86_64.
 
 Other versions and architectures upon request.
 
-## Connection to ELS for Flask Repository
+## Connection to ELS for FastAPI Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Flask repository.
+This guide outlines the steps needed to integrate the TuxCare ELS for FastAPI repository.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Flask repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for FastAPI repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-### Step 2: Set Up ELS for Flask
+### Step 2: Set Up ELS for FastAPI
 
-To use TuxCare's ELS for Flask, follow one of the options below:
+To use TuxCare's ELS for FastAPI, follow one of the options below:
 
 #### Option 1: Install a Package with ELS Repository via Command Line
 
@@ -31,12 +31,12 @@ You can install or upgrade a package directly using the ELS repository with your
 ```text
 pip install --upgrade \
   -i https://<username>:<password>@nexus.repo.tuxcare.com/repository/els_python/simple \
-  flask
+  fastapi
 ```
 
 </CodeWithCopy>
 
-**Replace `<username>` and `<password>` with the credentials provided by sales.**
+**Replace `<username>` and `<password>` - with the credentials provided by sales.**
 
 #### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
 
@@ -58,7 +58,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeWithCopy>
 
    ```text
-   pip install --upgrade flask
+   pip install --upgrade fastapi
    ```
 
    </CodeWithCopy>
@@ -68,7 +68,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
    <CodeWithCopy>
 
    ```text
-   pip install flask==1.1.2.post1+tuxcare
+   pip install fastapi==0.63.0.post1+tuxcare
    ```
 
    </CodeWithCopy>
@@ -93,18 +93,18 @@ If you want to keep using public PyPI and fetch only specific patched packages f
    <CodeWithCopy>
 
    ```text
-   pip install flask==1.1.2.post1+tuxcare
+   pip install fastapi==0.63.0.post1+tuxcare
    ```
 
    </CodeWithCopy>
 
 ## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for Flask from TuxCare versions:
+Fixes for the following vulnerabilities are available in ELS for FastAPI from TuxCare versions:
 
 | CVE ID              | Severity | Library | Vulnerable Versions | Safe Version |
 | :-----------------: | :------: | :----: | :----------------: | :----------: |
-| CVE-2023-30861      | High     | flask  | 2.2.1              | 2.2.1.post1+tuxcare |
-| CVE-2023-30861      | High     | flask  | 1.1.2              | 1.1.2.post1+tuxcare |
+| CVE-2024-24762      | High     | fastapi | 0.104.1            | 0.104.1.post1+tuxcare |
+| CVE-2021-32677      | High     | fastapi | 0.63.0             | 0.63.0.post1+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
