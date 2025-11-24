@@ -263,17 +263,17 @@ const techData = [
       {
         name: "ansi-html",
         versions: "0.0.7",
-        link: "./ansi-html/",
+        link: "./javascript-libraries/",
       },
       {
         name: "base64url",
         versions: "0.0.6",
-        link: "./base64url/",
+        link: "./javascript-libraries/",
       },
       {
         name: "bson",
         versions: "0.5.7 | 1.0.9",
-        link: "./bson/",
+        link: "./javascript-libraries/",
       },
       {
         name: "Bootstrap",
@@ -283,42 +283,42 @@ const techData = [
       {
         name: "braces",
         versions: "2.3.2",
-        link: "./braces/",
+        link: "./javascript-libraries/",
       },
       {
         name: "cookie",
         versions: "0.4.2",
-        link: "./cookie/",
+        link: "./javascript-libraries/",
       },
       {
         name: "copy-anything",
         versions: "2.0.6",
-        link: "./copy-anything/",
+        link: "./javascript-libraries/",
       },
       {
         name: "CryptoJS",
         versions: "3.3.0",
-        link: "./crypto-js/",
+        link: "./javascript-libraries/",
       },
       {
         name: "debug",
         versions: "4.1.1",
-        link: "./debug/",
+        link: "./javascript-libraries/",
       },
       {
         name: "DOMPurify",
         versions: "2.3.0 | 2.4.3",
-        link: "./dompurify/",
+        link: "./javascript-libraries/",
       },
       {
         name: "express",
         versions: "3.21.2",
-        link: "./express/",
+        link: "./javascript-libraries/",
       },
       {
         name: "express-jwt",
         versions: "0.1.3",
-        link: "./express-jwt/",
+        link: "./javascript-libraries/",
       },
       {
         name: "fastify",
@@ -328,32 +328,32 @@ const techData = [
       {
         name: "formidable",
         versions: "2.1.2",
-        link: "./formidable/",
+        link: "./javascript-libraries/",
       },
       {
         name: "Form-Data",
         versions: "2.3.3",
-        link: "./form-data/",
+        link: "./javascript-libraries/",
       },
       {
         name: "http-proxy-middleware",
         versions: "0.19.1 | 2.0.8",
-        link: "./http-proxy-middleware/",
+        link: "./javascript-libraries/",
       },
       {
         name: "i18next",
         versions: "23.16.8",
-        link: "./i18next/",
+        link: "./javascript-libraries/",
       },
       {
         name: "ini",
         versions: "1.3.5",
-        link: "./ini/",
+        link: "./javascript-libraries/",
       },
       {
         name: "ip",
         versions: "1.1.5 | 2.0.0",
-        link: "./ip/",
+        link: "./javascript-libraries/",
       },
       {
         name: "jQuery",
@@ -373,12 +373,12 @@ const techData = [
       {
         name: "JSONPath Plus",
         versions: "7.2.0",
-        link: "./jsonpath-plus/",
+        link: "./javascript-libraries/",
       },
       {
         name: "jsPDF",
         versions: "2.5.2",
-        link: "./jspdf/",
+        link: "./javascript-libraries/",
       },
       {
         name: "Lodash",
@@ -388,17 +388,17 @@ const techData = [
       {
         name: "micromatch",
         versions: "3.1.10",
-        link: "./micromatch/",
+        link: "./javascript-libraries/",
       },
       {
         name: "minimatch",
         versions: "3.0.4",
-        link: "./minimatch/",
+        link: "./javascript-libraries/",
       },
       {
         name: "marked",
         versions: "4.0.9",
-        link: "./marked/",
+        link: "./javascript-libraries/",
       },
       {
         name: "MongoDB Driver",
@@ -413,7 +413,7 @@ const techData = [
       {
         name: "nth-check",
         versions: "1.0.2",
-        link: "./nth-check/",
+        link: "./javascript-libraries/",
       },
       {
         name: "passport",
@@ -423,7 +423,7 @@ const techData = [
       {
         name: "multer",
         versions: "1.4.5-lts",
-        link: "./multer/",
+        link: "./javascript-libraries/",
       },
       {
         name: "MySQL2",
@@ -443,7 +443,7 @@ const techData = [
       {
         name: "node-forge",
         versions: "0.10.0",
-        link: "./node-forge/",
+        link: "./javascript-libraries/",
       },
       {
         name: "Node.js",
@@ -453,7 +453,7 @@ const techData = [
       {
         name: "pdfjs-dist",
         versions: "2.16.105",
-        link: "./pdfjs-dist/",
+        link: "./javascript-libraries/",
       },
       {
         name: "PostCSS",
@@ -463,37 +463,37 @@ const techData = [
       {
         name: "picocolors",
         versions: "0.2.1",
-        link: "./picocolors/",
+        link: "./javascript-libraries/",
       },
       {
         name: "Quill",
         versions: "1.3.7",
-        link: "./quill/",
+        link: "./javascript-libraries/",
       },
       {
         name: "Request",
         versions: "2.88.0",
-        link: "./request/",
+        link: "./javascript-libraries/",
       },
       {
         name: "Rollup",
         versions: "2.1.0 | 2.26.5 | 2.38.4 | 2.79.1 | 2.79.2",
-        link: "./rollup/",
+        link: "./javascript-libraries/",
       },
       {
         name: "semver",
         versions: "7.1.3 | 7.3.2",
-        link: "./semver/",
+        link: "./javascript-libraries/",
       },
       {
         name: "ssr-window",
         versions: "4.0.2",
-        link: "./ssr-window/",
+        link: "./javascript-libraries/",
       },
       {
         name: "terser",
         versions: "4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
-        link: "./terser/",
+        link: "./javascript-libraries/",
       },
       {
         name: "tailwindcss",
@@ -503,12 +503,12 @@ const techData = [
       {
         name: "tough-cookie",
         versions: "2.4.3 | 2.5.0",
-        link: "./tough-cookie/",
+        link: "./javascript-libraries/",
       },
       {
         name: "UAParser.js",
         versions: "0.7.21",
-        link: "./ua-parser-js/",
+        link: "./javascript-libraries/",
       },
       {
         name: "Vite",
@@ -538,7 +538,7 @@ const techData = [
       {
         name: "webpack-subresource-integrity",
         versions: "1.4.0",
-        link: "./webpack-subresource-integrity/",
+        link: "./javascript-libraries/",
       },
       {
         name: "undici",
@@ -548,17 +548,17 @@ const techData = [
       {
         name: "xml2js",
         versions: "0.4.23",
-        link: "./xml2js/",
+        link: "./javascript-libraries/",
       },
       {
         name: "yargs-parser",
         versions: "11.1.1",
-        link: "./yargs-parser/",
+        link: "./javascript-libraries/",
       },
       {
         name: "@sentry/browser",
         versions: "5.7.1",
-        link: "./sentry-browser/",
+        link: "./javascript-libraries/",
       },
     ],
   },
