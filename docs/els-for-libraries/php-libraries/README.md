@@ -44,10 +44,10 @@ You need a username and password in order to use TuxCare ELS for PHP Libraries r
 
 2. Use either the Composer CLI or edit `auth.json` directly. The repository may appear under the `nexus.repo.tuxcare.com` or `nexus-repo.corp.cloudlinux.com` host—use whichever is assigned with your credentials.
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
-    { title: 'auth.json', content: authjson }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
+     { title: 'auth.json', content: authjson }
+   ]" />
 
 **Replace `USERNAME` and `PASSWORD` with the credentials you received in Step 1.**
 
