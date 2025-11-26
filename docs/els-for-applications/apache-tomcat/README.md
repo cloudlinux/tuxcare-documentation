@@ -3,175 +3,256 @@
 TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat core components such as Coyote, Catalina, Jasper etc.. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 Our ELS for Apache Tomcat service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat applications.
 
+This guide outlines the steps needed for Apache Tomcat server setup and configuration.
+
+:::tip
+Apache Tomcat is also available for installation as a library for Maven and Gradle projects. See [ELS for Apache Tomcat Libraries](/els-for-libraries/apache-tomcat/) for integration instructions.
+:::
+
 ## Supported Versions
 
-* Apache Tomcat 9.0.75, 9.0.83, 8.5.100
+* Apache Tomcat 8.5.100, 9.0.75, 9.0.83
 
-## Connection to ELS for Apache Tomcat Repository
+## Prerequisities
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Apache Tomcat repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
+* **Java Development Kit (JDK)**
 
-### Step 1: Get user credentials
+  Ensure you have a compatible version of Java Development Kit (JDK) installed. Apache Tomcat 8.5.x and 9.0.x require JDK 8 or later. To verify if JDK is already installed on your system, open a terminal or command prompt and run:
 
-You need username and password in order to use TuxCare ELS Apache Tomcat repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+  <CodeWithCopy>
 
-### Step 2: Configure Registry
+  ```text
+  java -version
+  ```
 
-1. Navigate to the directory depending on your operating system.
-   * Windows
+  </CodeWithCopy>
+
+  If JDK is installed, you should see version information. If not, you'll need to install it.
+
+* **Repository Access**
+
+  You need username and password to access the TuxCare ELS Apache Tomcat repository. Anonymous access is disabled. 
+  To obtain credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).   Once you have credentials, you can access the repository at: [https://nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/)
+
+## Installation
+
+### Create Tomcat User (Linux Only)
+
+* For security purposes, create a dedicated tomcat group:
+
+  <CodeWithCopy>
+
+  ```text
+  sudo groupadd tomcat
+  ```
+
+  </CodeWithCopy>
+
+* And a new tomcat user as a member of the tomcat group, with a home directory of `/opt/tomcat` and with a shell of `/bin/false`:
+
+  <CodeWithCopy>
+
+  ```text
+  sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+  ```
+
+  </CodeWithCopy>
+
+### Download Apache Tomcat
+
+Download the archive file from the TuxCare repository manually or via terminal using your credentials:
+
+<CodeWithCopy>
+
+```text
+curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_tomcat/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/apache-tomcat-8.5.100-tuxcare.3.tar.gz
+```
+
+</CodeWithCopy>
+
+Replace `USERNAME` and `PASSWORD` with your actual credentials, and adjust the version number as needed.
+
+### Extract the Archive
+
+**Linux/macOS:**
+
+Unpack the downloaded file into a directory of your choice (e.g., `/opt/tomcat`). 
+
+<CodeWithCopy>
+
+```text
+sudo tar -xvzf ~/v8.5.100-tuxcare.3/bin/apache-tomcat-8.5.100-tuxcare.3.tar.gz -C /opt/tomcat --strip-components=1
+```
+
+</CodeWithCopy>
+
+**Windows:**
+
+Extract the downloaded `.zip` file to your desired location (e.g., `C:\Tomcat`).
+
+### Update Permissions
+
+The tomcat user that we set up needs to have access to the Tomcat installation. We’ll set that up now.
+
+Change to the directory where we unpacked the Tomcat installation:
+
+<CodeWithCopy>
+
+```text
+cd /opt/tomcat
+```
+
+</CodeWithCopy>
+
+Give the tomcat group ownership over the entire installation directory:
+
+<CodeWithCopy>
+
+```text
+sudo chgrp -R tomcat /opt/tomcat
+```
+
+</CodeWithCopy>
+
+Next, give the tomcat group read access to the conf directory and all of its contents, and execute access to the directory itself:
+
+<CodeWithCopy>
+
+```text
+sudo chmod -R g+r conf
+sudo chmod g+x conf
+```
+
+</CodeWithCopy>
+
+Make the tomcat user the owner of the webapps, work, temp, and logs directories:
+
+<CodeWithCopy>
+
+```text
+sudo chown -R tomcat webapps/ work/ temp/ logs/
+```
+
+</CodeWithCopy>
+
+### Configure Environment Variables
+
+**Linux/macOS:**
+
+Add the following to your `~/.bashrc` or `~/.bash_profile`:
+
+<CodeWithCopy>
+
+```text
+export CATALINA_HOME=/opt/tomcat
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+```
+
+</CodeWithCopy>
+
+Then reload:
+
+<CodeWithCopy>
+
+```text
+source ~/.bashrc
+```
+
+</CodeWithCopy>
+
+**Windows:**
+
+1. Right-click *This PC* → *Properties* → *Advanced system settings* → *Environment Variables*
+2. Add new system variable:
+   - Variable name: `CATALINA_HOME`
+   - Variable value: `C:\Tomcat` (or your installation path)
+
+### Start Tomcat
+
+**Linux/macOS:**
+
+<CodeWithCopy>
+
+```text
+sudo -u tomcat /opt/tomcat/bin/startup.sh
+```
+
+</CodeWithCopy>
+
+**Windows:**
+
+Double-click `startup.bat` in the `bin` directory.
+
+### Verify Installation
+
+Open a web browser and visit `http://localhost:8080/`. You should see the default Tomcat homepage.
+
+Alternatively, use curl:
+
+<CodeWithCopy>
+
+```text
+curl http://localhost:8080
+```
+
+</CodeWithCopy>
+
+You should see HTML output containing:
+
+<CodeWithCopy>
+
+```text
+<h2>If you're seeing this, you've successfully installed Tomcat. Congratulations!</h2>
+```
+
+</CodeWithCopy>
+
+### Stop Tomcat
+
+**Linux/macOS:**
+
+<CodeWithCopy>
+
+```text
+sudo -u tomcat /opt/tomcat/bin/shutdown.sh
+```
+
+</CodeWithCopy>
+
+**Windows:**
+
+Double-click `shutdown.bat` in the `bin` directory.
+
+## Upgrading to a Newer TuxCare Version
+
+To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.3`):
+
+1. **Download and extract new version** following Steps 2-3 in the Installation section.
+
+2. **Start Tomcat:**
+
+   <CodeWithCopy>
+
    ```text
-   Maven: C:\Users\{username}\.m2
-   Gradle: C:\Users\{username}\.gradle
-   ```
-   * macOS
-   ```text
-   Maven: /Users/{username}/.m2
-   Gradle: /Users/{username}/.gradle
-   ```
-   * Linux
-   ```text
-   Maven: /home/{username}/.m2
-   Gradle: /home/{username}/.gradle
+   sudo -u tomcat /opt/tomcat/bin/startup.sh
    ```
 
-2. Add the TuxCare repository and plugin repository to your build configuration.
+   </CodeWithCopy>
 
-   :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-tomcat-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
-   :::
+### Logs Location
 
-   <CodeTabs :tabs="[
-     { title: 'Maven (~/.m2/settings.xml)', content: mavencreds },
-     { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
-   ]" />
-
-Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
-
-### Step 3: Update Build Configuration
-
-Add the TuxCare Apache Tomcat repository and plugins to your build configuration:
-
-<CodeTabs :tabs="[
-  { title: 'Maven (pom.xml)', content: mavenrepo },
-  { title: 'Gradle (build.gradle)', content: gradlerepo }
-]" />
-
-* To fully switch from the official Apache Tomcat repository, replace it with the TuxCare repository.
-* To keep both, add TuxCare after the official one.
-
-Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
-* [Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)
-* [Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)
-
-### Step 4: Update Dependencies
-
-Replace the Apache Tomcat dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
-
-<CodeTabs :tabs="[
-  { title: 'Maven (pom.xml)', content: mavendeps },
-  { title: 'Gradle (build.gradle)', content: gradledeps }
-]" />
-
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_tomcat/) (anonymous access is restricted).
-
-### Step 5: Verify and Build
-
-1. To confirm the TuxCare Apache Tomcat repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
-
-   <CodeTabs :tabs="[
-     { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
-     { title: 'Gradle', content: `./gradlew dependencies --configuration runtimeClasspath` }
-   ]" />
-
-2. After reviewing the dependencies, include any library from the repository into your project and then run a build:
-
-   <CodeTabs :tabs="[
-    { title: 'Maven', content: `mvn clean install` },
-    { title: 'Gradle', content: `./gradlew build` }
-   ]" />
-
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Tomcat repository.
-
-### Conclusion
-
-You've successfully integrated the TuxCare ELS for Apache Tomcat repository into your project. You can now benefit from the secure and vetted Apache Tomcat libraries it provides.
+Check logs for detailed error information:
+- **Linux/macOS:** `/opt/tomcat/logs/catalina.out`
+- **Windows:** `C:\Tomcat\logs\catalina.[date].log`
 
 ## Vulnerability Exploitability eXchange (VEX)
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that indicates whether a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
 TuxCare provides VEX for Apache Tomcat ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
-
-## How to Upgrade to a Newer Version of TuxCare Packages
-
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
 ## Resolved CVEs in ELS for Apache Tomcat
 
 <ClientOnly>
   <ResolvedCveTable project="apache-tomcat" />
 </ClientOnly>
-
-<!-- data for Apache Tomcat instructions used in code blocks -->
-
-<script setup>
-const mavencreds =
-`<?xml version="1.0" encoding="UTF-8"?>
-<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
-    <servers>
-        <server>
-          <id>tuxcare-tomcat-registry</id>
-          <username>USERNAME</username>
-          <password>PASSWORD</password>
-        </server>
-    </servers>
-</settings>`
-
-const gradlecreds =
-`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_tomcat/
-tuxcare_registry_user=USERNAME
-tuxcare_registry_password=PASSWORD`
-
-const mavenrepo =
-`<repositories>
-  <repository>
-      <id>tuxcare-tomcat-registry</id>
-      <url>https://nexus.repo.tuxcare.com/repository/els_tomcat/</url>
-  </repository>
-</repositories>`
-
-const gradlerepo =
-`repositories {
-    maven {
-      url = uri(providers.gradleProperty("tuxcare_registry_url").get())
-      credentials {
-        username = providers.gradleProperty("tuxcare_registry_user").get()
-        password = providers.gradleProperty("tuxcare_registry_password").get()
-      }
-      authentication {
-        basic(BasicAuthentication)
-      }
-    }
-    mavenCentral()
-}`
-
-const mavendeps =
-`<dependencies>
-    <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-catalina</artifactId>
-        <version>9.0.75-tuxcare.1</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-coyote</artifactId>
-        <version>9.0.75-tuxcare.1</version>
-    </dependency>
-</dependencies>`
-
-const gradledeps =
-`dependencies {
-    implementation "org.apache.tomcat:tomcat-catalina:9.0.75-tuxcare.1"
-    implementation "org.apache.tomcat:tomcat-coyote:9.0.75-tuxcare.1"
-}`
-</script>
