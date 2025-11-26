@@ -149,6 +149,10 @@ export default {
                     icon: '/images/jackson-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/hibernate/',
+                    icon: '/images/hibernate.webp',
+                },
+                {
                     path: '/els-for-libraries/apache-commons-lang/',
                     icon: '/images/apache.webp',
                 },
