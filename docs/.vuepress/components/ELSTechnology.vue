@@ -753,6 +753,27 @@ const techData = [
       },
     ],
   },
+  {
+    ecosystem: "PHP",
+    ecosystemIcon: "/images/php-logo.webp",
+    projects: [
+      {
+        name: "Laravel",
+        versions: "8 | 10 | 11",
+        link: "./php-libraries/",
+      },
+      {
+        name: "Livewire",
+        versions: "3.x",
+        link: "./php-libraries/",
+      },
+      {
+        name: "Symfony Process",
+        versions: "5.x | 6.x",
+        link: "./php-libraries/",
+      },
+    ],
+  },
 ];
 
 const filteredData = computed(() => {
