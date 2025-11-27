@@ -95,12 +95,6 @@ The build tool you're using should be able to identify and resolve dependencies 
 
 You've successfully integrated the TuxCare ELS for Hibernate repository into your project. You can now benefit from the secure and vetted Hibernate libraries it provides.
 
-## Vulnerability Exploitability eXchange (VEX)
-
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
-
-TuxCare provides VEX for Hibernate ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.hibernate/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.hibernate/).
-
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
@@ -147,15 +141,15 @@ const gradlerepo =
 const mavendeps =
 `<dependencies>
     <dependency>
-        <groupId>org.hibernate.orm.tooling</groupId>
-        <artifactId>hibernate-enhance-maven-plugin</artifactId>
-        <version>5.6.15.Final-tuxcare.1</version>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.6.15.Final-tuxcare.1</version>
     </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-  implementation("org.hibernate.orm.tooling:hibernate-enhance-maven-plugin:5.6.15.Final-tuxcare.1")
+  implementation("org.hibernate:hibernate-core:5.6.15.Final-tuxcare.1")
 }`
 </script>
 
