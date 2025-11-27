@@ -16,7 +16,7 @@
     <!-- Success State -->
     <div v-else>
       <!-- Stats Cards -->
-      <div class="stats-grid">
+      <div class="stats-grid" :class="`stats-grid-${visibleCardCount}`">
         <div class="stat-card stat-total">
           <div class="stat-number">{{ filteredCveData.total }}</div>
           <div class="stat-label">Total Resolved</div>
@@ -141,6 +141,11 @@ export default {
         }
       });
       return stats;
+    },
+    visibleCardCount() {
+      // Always show 4 cards (Total, Critical+High, Medium, Low)
+      // Add 1 more if None card should be visible
+      return (!this.hide_none && this.stats.none > 0) ? 5 : 4;
     }
   },
   async mounted() {
@@ -329,9 +334,17 @@ export default {
 // Stats Grid
 .cve-tracker .stats-grid
   display grid
-  grid-template-columns repeat(3, 1fr)
   gap 1rem
   margin-bottom 1.5rem
+
+// Mobile: 3 columns or number of cards, whichever is lower
+.cve-tracker .stats-grid-4
+  grid-template-columns repeat(3, 1fr)
+  @media (min-width: 768px)
+    grid-template-columns repeat(4, 1fr)
+
+.cve-tracker .stats-grid-5
+  grid-template-columns repeat(3, 1fr)
   @media (min-width: 768px)
     grid-template-columns repeat(5, 1fr)
 .cve-tracker .stat-card
