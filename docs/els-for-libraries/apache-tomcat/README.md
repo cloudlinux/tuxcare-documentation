@@ -5,7 +5,7 @@ Our ELS for Apache Tomcat service is designed to provide solutions for organizat
 
 ## Supported Versions
 
-* Apache Tomcat 9.0.75, 9.0.83, 8.5.100
+* Apache Tomcat 8.5.100, 9.0.75, 9.0.83
 
 ## Connection to ELS for Apache Tomcat Repository
 
