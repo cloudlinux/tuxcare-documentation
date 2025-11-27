@@ -102,7 +102,7 @@ export default {
     },
     hide_none: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   data() {
@@ -329,11 +329,11 @@ export default {
 // Stats Grid
 .cve-tracker .stats-grid
   display grid
-  grid-template-columns repeat(2, 1fr)
+  grid-template-columns repeat(3, 1fr)
   gap 1rem
   margin-bottom 1.5rem
   @media (min-width: 768px)
-    grid-template-columns repeat(4, 1fr)
+    grid-template-columns repeat(5, 1fr)
 .cve-tracker .stat-card
   padding 1rem
   border-radius 8px
