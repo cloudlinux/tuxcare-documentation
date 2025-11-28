@@ -194,6 +194,15 @@ export default {
                     icon: '/images/python.webp',
                 },
                 {
+                    title: 'PHP',
+                    type: 'section-header',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/php-libraries/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
                     title: 'JavaScript',
                     type: 'section-header',
                     icon: '/images/javascript.webp',

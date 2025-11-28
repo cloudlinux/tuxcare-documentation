@@ -73,3 +73,4 @@ Language-specific:
 - [Python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/)
 - [Java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
 - [JavaScript](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/)
+- [PHP](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/)
