@@ -33,7 +33,7 @@
           <div class="stat-number">{{ stats.low }}</div>
           <div class="stat-label">Low</div>
         </div>
-        <div v-if="!hide_none && stats.none > 0" class="stat-card stat-none">
+        <div v-if="false" class="stat-card stat-none">
           <div class="stat-number">{{ stats.none }}</div>
           <div class="stat-label">None</div>
         </div>
@@ -102,7 +102,7 @@ export default {
     },
     hide_none: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   data() {
@@ -144,8 +144,8 @@ export default {
     },
     visibleCardCount() {
       // Always show 4 cards (Total, Critical+High, Medium, Low)
-      // Add 1 more if None card should be visible
-      return (!this.hide_none && this.stats.none > 0) ? 5 : 4;
+      // None card is temporarily hidden
+      return 4;
     }
   },
   async mounted() {
