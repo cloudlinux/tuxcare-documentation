@@ -129,6 +129,10 @@ export default {
                     icon: '/images/apache-spark.webp',
                 },
                 {
+                    path: '/els-for-libraries/apache-tomcat/',
+                    icon: '/images/tomcat.webp',
+                },
+                {
                     path: '/els-for-libraries/apache-kafka/',
                     icon: '/images/apache-kafka.webp',
                 },

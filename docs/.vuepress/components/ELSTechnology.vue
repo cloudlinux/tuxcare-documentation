@@ -115,6 +115,11 @@ const techData = [
         link: "./apache-spark/",
       },
       {
+        name: "Apache Tomcat",
+        versions: "8.5.100 | 9.0.75 | 9.0.83",
+        link: "./apache-tomcat/",
+      },
+      {
         name: "Okio",
         versions: "2.8.0",
         link: "./java-libraries/",
