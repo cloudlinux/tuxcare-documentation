@@ -102,7 +102,7 @@ export default {
     },
     hide_none: {
       type: Boolean,
-      default: false
+      default: true
     }
   },
   data() {
