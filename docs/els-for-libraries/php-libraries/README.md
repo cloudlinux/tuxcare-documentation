@@ -1,6 +1,6 @@
 # PHP Libraries
 
-Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for for various PHP packages that have reached their end-of-life. This allows you to continue running your PHP applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for various PHP packages that have reached their end-of-life. This allows you to continue running your PHP applications without vulnerability concerns, even after official support has ended.
 
 ## Supported PHP Libraries
 
@@ -16,7 +16,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for PHP Librar
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for PHP Libraries repository. Anonymous access is disabled. To receive the credentials please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for PHP Libraries repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -42,29 +42,27 @@ You need a username and password in order to use TuxCare ELS for PHP Libraries r
 
         </CodeWithCopy>
 
-2. Use either the Composer CLI or edit `auth.json` directly. The repository may appear under the `nexus.repo.tuxcare.com` or `nexus-repo.corp.cloudlinux.com` host—use whichever is assigned with your credentials.
+2. Use either the Composer CLI or edit `auth.json` directly to set the repository as `nexus.repo.tuxcare.com`.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
      { title: 'auth.json', content: authjson }
    ]" />
 
-**Replace `USERNAME` and `PASSWORD` with the credentials you received in Step 1.**
+   Replace `USERNAME` and `PASSWORD` with the credentials you received in [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Register the TuxCare repository
 
-Add the shared `els_php_custom1` Composer repository either by editing `composer.json` or via CLI:
+Add the shared `els_php_custom1` Composer repository either via CLI or by editing `composer.json`:
 
   <CodeTabs :tabs="[
-    { title: 'composer.json', content: composerjson },
-    { title: 'One-liner', content:cli }
+    { title: 'Composer CLI', content:cli },
+    { title: 'composer.json', content: composerjson }
   ]" />
-
-The same URL is reachable via `https://nexus-repo.corp.cloudlinux.com/repository/els_php_custom1/` for environments still using the CloudLinux host name.
 
 ### Step 4: Install or update packages
 
-* After Composer recognizes the repository, require the TuxCare-maintained release that matches your project:
+* After Composer recognizes the repository, run the `composer require` command to install the TuxCare-maintained release that matches your project:
 
     <CodeWithCopy>
 
@@ -74,7 +72,9 @@ The same URL is reachable via `https://nexus-repo.corp.cloudlinux.com/repository
 
     </CodeWithCopy>
 
-    Replace the VERSION with the needed package (`laravel/framework`, `livewire/livewire`, or `symfony/process`) and the exact build listed in your TuxCare Nexus account.
+    Replace:
+    * `vendor/package` with the needed package (`laravel/framework`, `livewire/livewire`, or `symfony/process`)
+    * `VERSION-pN+tuxcare` with the exact version listed in your TuxCare Nexus account provided by sales. `pN` stands for TuxCare patch number.
 
 * To upgrade to a newer TuxCare build, keep the repository configured and run:
 
@@ -90,7 +90,7 @@ The same URL is reachable via `https://nexus-repo.corp.cloudlinux.com/repository
 
 ## Package-specific guidance
 
-Sample require commands:
+Please refer to these examples of `require` commands to install the needed libraries. Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.
 
 * Laravel
 
@@ -102,14 +102,12 @@ Sample require commands:
 
     </CodeWithCopy>
 
-    **Reference projects**: [Laravel 10 example](https://github.com/cloudlinux/els-php-laravel10-demo), [Laravel 8 example](https://github.com/cloudlinux/els-php-laravel8-demo).
-
 * Livewire
 
     <CodeWithCopy>
 
     ```text
-    composer require livewire/livewire:3.6.3-1+tuxcare
+    composer require livewire/livewire:3.6.3-p1+tuxcare
     ```
 
     </CodeWithCopy>
@@ -119,12 +117,10 @@ Sample require commands:
     <CodeWithCopy>
 
     ```text
-    composer require symfony/process:6.4.13-1+tuxcare
+    composer require symfony/process:6.4.13-p1+tuxcare
     ```
 
     </CodeWithCopy>
-
-Use the build identifiers displayed in your Nexus project to ensure you receive the most recent patched release.
 
 ### Conclusion
 
@@ -154,32 +150,32 @@ Then run `composer update` to apply the changes.
 
 Fixes for the following vulnerabilities are available in ELS for PHP Libraries from TuxCare versions:
 
-<TableTabs label="Choose Lodash version: " >
+<TableTabs label="Choose your version: " >
 
   <template #Laravel_framework>
 
-| CVE ID | Severity | Vulnerable versions | Fixed in version |
-|--------|----------|---------------------|------------------|
-| CVE-2025-27515 | Medium | >= 11.0.0, < 11.44.1 | 11.44.0-p1+tuxcare |
-| CVE-2025-27515 | Medium | < 10.48.29 | 10.48.28-p1+tuxcare |
-| CVE-2025-27515 | Medium | <= 8.83.29 | 8.83.29-p1+tuxcare |
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
+|----------------|----------|----------------------|---------------------|
+| CVE-2025-27515 | Medium   | >= 11.0.0, < 11.44.1 | 11.44.0-p1+tuxcare  |
+| CVE-2025-27515 | Medium   | < 10.48.29           | 10.48.28-p1+tuxcare |
+| CVE-2025-27515 | Medium   | <= 8.83.29           | 8.83.29-p1+tuxcare  |
 
   </template>
 
   <template #Livewire>
 
-| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
-| :------------: | :------: | :------: | :-----------------: |:-------------------:|
-| CVE-2020-8203  | Direct   | High   | Lodash             |      < 4.17.20      |
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version |
+|----------------|----------|----------------------|------------------|
+| CVE-2025-54068 | Critical |	< 3.6.4              | 3.6.3-p1+tuxcare |
 
   </template>
 
   <template #Symfony_process>
 
-| CVE ID | Severity | Vulnerable versions | Fixed in version |
-|--------|----------|---------------------|------------------|
-| CVE-2025-27515 | Critical | < 6.4.14 | 6.4.13-p1+tuxcare |
-| CVE-2025-27515 | Critical | < 5.4.46 | 5.4.45-p1+tuxcare |
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
+|----------------|----------|----------------------|-------------------|
+| CVE-2025-27515 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
+| CVE-2025-27515 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
 
   </template>
 
@@ -191,17 +187,13 @@ If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@t
 
 const authjson =
 `{
-    "http-basic": {
-        "nexus.repo.tuxcare.com": {
-        "username": "USERNAME",
-        "password": "PASSWORD"
-        },
-        "nexus-repo.corp.cloudlinux.com": {
-        "username": "USERNAME",
-        "password": "PASSWORD"
-        }
+  "http-basic": {
+    "nexus.repo.tuxcare.com": {
+      "username": "USERNAME",
+      "password": "PASSWORD"
     }
-    }`
+  }
+}`
 
 const composerjson =
 `{
