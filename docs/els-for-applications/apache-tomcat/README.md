@@ -11,7 +11,7 @@ Apache Tomcat is also available for installation as a library for Maven and Grad
 
 ## Supported Versions
 
-* Apache Tomcat 8.5.100, 9.0.75, 9.0.83
+* Apache Tomcat 8.5.100, 9.0.50, 9.0.83
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ Apache Tomcat is also available for installation as a library for Maven and Grad
 You need username and password to access the TuxCare ELS Apache Tomcat repository. Anonymous access is disabled. 
 To obtain credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-Once you have credentials, you can access the repository at: [https://nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/)
+Once you have credentials, you can access the repository at: [nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/).
 
 ## Linux Installation
 
@@ -69,35 +69,25 @@ Once you have credentials, you can access the repository at: [https://nexus.repo
    <CodeWithCopy>
 
    ```text
-   curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_tomcat/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/apache-tomcat-8.5.100-tuxcare.3.tar.gz
+   curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_tomcat/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/tomcat-8.5.100-tuxcare.3.tar.gz
    ```
 
    </CodeWithCopy>
 
    Replace `USERNAME` and `PASSWORD` with your actual credentials.
 
-2. The archive provided by TuxCare contains a container archive with metadata and the actual Tomcat package. Extract the container archive:
-
-   <CodeWithCopy>
-
-   ```text
-   tar -xvzf v8.5.100-tuxcare.3.tar.gz
-   ```
-
-   </CodeWithCopy>
-
-3. Create the `/opt/tomcat` directory and extract the Apache Tomcat archive into it:
+2. Create the `/opt/tomcat` directory and extract the Apache Tomcat archive into it:
 
    <CodeWithCopy>
 
    ```text
    sudo mkdir -p /opt/tomcat
-   sudo tar -xvzf v8.5.100-tuxcare.3/bin/apache-tomcat-8.5.100-tuxcare.3.tar.gz -C /opt/tomcat --strip-components=1
+   sudo tar -xvzf tomcat-8.5.100-tuxcare.3.tar.gz -C /opt/tomcat --strip-components=1
    ```
 
    </CodeWithCopy>
 
-4. Change to the Tomcat installation directory:
+3. Change to the Tomcat installation directory:
 
    <CodeWithCopy>
 
@@ -204,11 +194,7 @@ Update permissions so that the `tomcat` user has access to the Tomcat installati
 
     </CodeWithCopy>
 
-    Successful output should include:
-
-    ```text
-    <h2>If you're seeing this, you've successfully installed Tomcat.</h2>
-    ```
+    Successful output will be an HTML page from Tomcat.
 
 3. To stop Tomcat run: 
 
@@ -224,33 +210,25 @@ Update permissions so that the `tomcat` user has access to the Tomcat installati
 
 ### Step 1: Download Apache Tomcat
 
-Download the Apache Tomcat archive from [https://nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/) using your credentials. The archive provided by TuxCare contains a container archive with metadata and the actual Tomcat package.
+Download the Apache Tomcat .zip archive from [https://nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/) using your credentials.
 
 ### Step 2: Extract and Install
 
-1. Extract the downloaded archive.
-
-2. Inside the extracted directory, find the actual Tomcat archive, for example, version 8.5.100:
-
-   ```text
-   bin\apache-tomcat-8.5.100-tuxcare.3.zip
-   ```
-
-3. Extract it to the installation directory, e.g., `C:\Tomcat`.
+1. Extract the downloaded archive, for example, apache-tomcat-8.5.100-tuxcare.3.zip, to the installation directory, e.g., `C:\Tomcat`.
 
 ### Step 3: Configure Environment Variables
 
 1. Right-click *This PC* → *Properties* → *Advanced system settings* → *Environment Variables*.
 
-2. Add a new system variable named `CATALINA_HOME` with the value `C:\Tomcat` (or your installation path).
+2. Add a new system variable named `CATALINA_HOME` with the value `C:\Tomcat\apache-tomcat-8.5.100-tuxcare.3` (or your installation path).
 
 ### Step 4: Run Tomcat
 
-1. Start Tomcat by double-clicking `C:\Tomcat\bin\startup.bat`
+1. Start Tomcat by double-clicking `C:\Tomcat\apache-tomcat-8.5.100-tuxcare.3\bin\startup.bat`.
 
 2. Verify installation. Go to [http://localhost:8080/](http://localhost:8080/) in your browser. You should see the default Tomcat homepage.
 
-3. Stop Tomcat by double-clicking `C:\Tomcat\bin\shutdown.bat`.
+3. Stop Tomcat by double-clicking `C:\Tomcat\apache-tomcat-8.5.100-tuxcare.3\bin\shutdown.bat`.
 
 ## Upgrading to a Newer TuxCare Version
 
