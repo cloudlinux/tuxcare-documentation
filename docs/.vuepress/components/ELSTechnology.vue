@@ -765,17 +765,17 @@ const techData = [
       {
         name: "Laravel",
         versions: "8 | 10 | 11",
-        link: "./php-libraries/",
+        link: "./laravel/",
       },
       {
         name: "Livewire",
         versions: "3.x",
-        link: "./php-libraries/",
+        link: "./livewire/",
       },
       {
         name: "Symfony Process",
         versions: "5.x | 6.x",
-        link: "./php-libraries/",
+        link: "./symfony-process/",
       },
     ],
   },

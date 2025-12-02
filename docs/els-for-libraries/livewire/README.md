@@ -8,13 +8,13 @@ Endless Lifecycle Support (ELS) for Livewire from TuxCare provides security fixe
 
 Other versions upon request.
 
-## Connection to ELS for PHP Libraries Repository
+## Connection to ELS for Livewire Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for PHP Libraries repository into your Livewire application. The repository provides trusted PHP libraries that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Livewire repository into your Livewire application. The repository provides trusted Livewire packages that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for PHP Libraries repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Livewire repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -40,7 +40,7 @@ You need a username and password in order to use TuxCare ELS for PHP Libraries r
 
         </CodeWithCopy>
 
-2. Use either the Composer CLI or edit `auth.json` directly add your credentials for `nexus.repo.tuxcare.com`.
+2. Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
@@ -67,7 +67,7 @@ Install the TuxCare-maintained Livewire release that matches your project:
   { title: 'composer.json', content: livewirejson }
 ]" />
 
-**Please check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
 If you edited `composer.json` manually, run `composer update` to install the package:
 
@@ -85,7 +85,7 @@ Composer will resolve dependencies against the TuxCare repository and install th
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for PHP Libraries ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/).
+TuxCare provides VEX for Livewire ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/livewire/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/livewire/).
 
 ## How to Upgrade to a Newer Version
 
