@@ -215,10 +215,6 @@ export default {
                     icon: '/images/symfony-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/php-libraries/',
-                    icon: '/images/php-logo.webp',
-                },
-                {
                     title: 'JavaScript',
                     type: 'section-header',
                     icon: '/images/javascript.webp',
