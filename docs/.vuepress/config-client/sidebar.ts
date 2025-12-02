@@ -203,8 +203,16 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/php-libraries/',
-                    icon: '/images/php-logo.webp',
+                    path: '/els-for-libraries/laravel/',
+                    icon: '/images/laravel-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/livewire/',
+                    icon: '/images/livewire-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/symfony-process/',
+                    icon: '/images/symfony-logo.webp',
                 },
                 {
                     title: 'JavaScript',
