@@ -6,7 +6,7 @@ Our ELS for Apache Tomcat service is designed to provide solutions for organizat
 This guide outlines the steps needed for Apache Tomcat server setup and configuration.
 
 :::tip
-Apache Tomcat is also available for installation as a library for Maven and Gradle projects. See [ELS for Apache Tomcat Libraries](/els-for-libraries/apache-tomcat/) for integration instructions.
+Apache Tomcat is also available for installation as a library for Maven and Gradle projects. You can find the corresponding instructions [here](/els-for-libraries/apache-tomcat/).
 :::
 
 ## Supported Versions
