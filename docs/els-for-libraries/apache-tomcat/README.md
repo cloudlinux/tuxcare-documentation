@@ -3,6 +3,10 @@
 TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat core components such as Coyote, Catalina, Jasper etc.. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 Our ELS for Apache Tomcat service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat applications.
 
+:::tip
+Apache Tomcat is also available for installation as a standalone server. You can find the corresponding instructions [here](/els-for-applications/apache-tomcat/).
+:::
+
 ## Supported Versions
 
 * Apache Tomcat 8.5.100, 9.0.75, 9.0.83
