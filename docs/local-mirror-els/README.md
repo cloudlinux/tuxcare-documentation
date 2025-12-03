@@ -309,6 +309,8 @@ rsync -avSHP --delete rsync://repo.tuxcare.com/ALMALINUX/9.2/ .
 
 ### TuxCare 9.6 ESU
 
+These instructions apply to AlmaLinux 9.6 and Rocky Linux 9.6.
+
 To create a local mirror of the [tuxcare-base and tuxcare-esu](https://repo.tuxcare.com/tuxcare/9.6/) repositories with security updates via `rsync`, use the following:
 
 <CodeWithCopy>
