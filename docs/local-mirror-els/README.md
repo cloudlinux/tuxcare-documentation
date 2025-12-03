@@ -306,3 +306,58 @@ rsync -avSHP --delete rsync://repo.tuxcare.com/ALMALINUX/9.2/ .
 ```
 
 </CodeWithCopy>
+
+### TuxCare 9.6 ESU
+
+To create a local mirror of the [tuxcare-base and tuxcare-esu](https://repo.tuxcare.com/tuxcare/9.6/) repositories with security updates via `rsync`, use the following:
+
+<CodeWithCopy>
+
+```
+rsync://repo.tuxcare.com/TUXCARE96ESU/
+```
+
+</CodeWithCopy>
+
+To create a local mirror of the TuxCare 9.6 repository, use the following:
+
+<CodeWithCopy>
+
+```
+rsync://repo.tuxcare.com/TUXCARE/9.6/
+```
+
+</CodeWithCopy>
+
+For example:
+
+<CodeWithCopy>
+
+```
+rsync -avSHP --delete rsync://repo.tuxcare.com/TUXCARE96ESU/ .
+rsync -avSHP --delete rsync://repo.tuxcare.com/TUXCARE/9.6/ .
+```
+
+</CodeWithCopy>
+
+:::tip Note
+When configuring machines to use a local mirror for the TuxCare 9.6 ESU repository, set `priority=1` in the `tuxcare-esu` repo so ESU packages override the standard repos.
+
+Example `/etc/yum.repos.d/tuxcare-esu.repo` file for TuxCare 9.6 ESU:
+
+<CodeWithCopy>
+
+```
+[tuxcare-esu96]
+name=TuxCare Enterprise Support for AlmaLinux 9.6 - ESU (local mirror)
+baseurl=https://mirror.corp.lan/tuxcare/9.6/esu/x86_64/
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TuxCare
+priority=1
+```
+
+</CodeWithCopy>
+
+:::
