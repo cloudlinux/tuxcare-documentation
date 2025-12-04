@@ -236,6 +236,10 @@ export default {
                     icon: '/images/bootstrap-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/express/',
+                    icon: '/images/express-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/fastify/',
                     icon: '/images/fastify-logo.webp',
                 },

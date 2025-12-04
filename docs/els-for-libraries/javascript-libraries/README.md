@@ -13,7 +13,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **crypto-js** 3.3.0
 * **debug** 4.1.1
 * **dompurify** 2.3.0, 2.4.3
-* **express** 3.21.2
 * **express-jwt** 0.1.3
 * **form-data** 2.3.3
 * **formidable** 2.1.2
@@ -106,7 +105,7 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
 
       ```text
       "dependencies": {
-        "express": "^3.21.2"
+        "cookie": "^0.4.2"
       }
       ```
 
@@ -114,10 +113,10 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
 
       ```text
       "dependencies": {
-        "express": "npm:@els-js/express@3.21.2-tuxcare.1"
+        "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.2"
       },
       "overrides": {
-        "express@3.21.2": "npm:@els-js/express@3.21.2-tuxcare.1"
+        "cookie@0.4.2": "npm:@els-js/cookie@0.4.2-tuxcare.2"
       }
       ```
     
@@ -129,7 +128,7 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
 
       ```text
       "dependencies": {
-        "express": "npm:@els-js/express@3.21.2-tuxcare.1"
+        "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.2"
       }
       ```
 
@@ -214,7 +213,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install express@npm:@els-js/express@3.21.2-tuxcare.2
+  npm install cookie@npm:@els-js/cookie@0.4.2-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -277,15 +276,11 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2020-7608  | Direct   | Medium   | yargs-parser      | < 5.0.1, ≥ 6.0.0 < 13.1.2, ≥ 14.0.0 < 15.0.1, ≥ 16.0.0 < 18.1.1 |
 | CVE-2023-0842  | Direct   | Medium   | xml2js            | 0.4.23             |
 | CVE-2023-28155 | Direct   | Medium   | request           | <= 2.88.1          |
-| CVE-2024-10491 | Direct   | Medium   | express           | <= 3.21.4          |
-| CVE-2024-29041 | Direct   | Medium   | express           | < 4.19.2, >= 5.0.0-alpha.1 < 5.0.0-beta.3 |
 | CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
 | CVE-2024-4067  | Direct   | Medium   | micromatch        | < 4.0.8            |
-| CVE-2024-43796 | Direct   | Medium   | express           | < 4.20.0           |
 | CVE-2024-45801 | Direct   | Medium   | dompurify         | < 2.5.4, >= 3.0.0 < 3.1.3 |
 | CVE-2024-47068 | Direct   | Medium   | rollup            | < 2.79.2, < 3.29.5, < 4.22.4 |
 | CVE-2024-47875 | Direct   | Medium   | dompurify         | < 2.5.0, >= 3.0.0 < 3.1.3 |
-| CVE-2024-9266  | Direct   | Medium   | express           | >= 3.4.5 < 4.0.0   |
 | CVE-2025-26791 | Direct   | Medium   | dompurify         | < 3.2.4            |
 | CVE-2025-30359 | Direct   | Medium   | webpack-dev-server | < 5.2.1            |
 | CVE-2025-32997 | Direct   | Medium   | http-proxy-middleware | < 2.0.9, 3.x < 3.0.5 |
