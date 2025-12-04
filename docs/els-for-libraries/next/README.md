@@ -74,10 +74,10 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "next": "npm:@els-js/next@12.3.7-tuxcare.1"
+       "next": "npm:@els-js/next@12.3.7-tuxcare.2"
      },
      "overrides": {
-       "next@12.3.7": "npm:@els-js/next@12.3.7-tuxcare.1"
+       "next@12.3.7": "npm:@els-js/next@12.3.7-tuxcare.2"
      }
      ```
     
@@ -93,7 +93,7 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
 
        ```text
        "dependencies": {
-         "next": "npm:@els-js/next@12.3.7-tuxcare.1"
+         "next": "npm:@els-js/next@12.3.7-tuxcare.2"
        }
        ```
 
@@ -107,7 +107,7 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
 
        ```text
        "dependencies": {
-         "next": "npm:@els-js/next@13.5.11-tuxcare.3"
+         "next": "npm:@els-js/next@13.5.11-tuxcare.4"
        }
        ```
 
@@ -179,7 +179,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install next@npm:@els-js/next@13.5.11-tuxcare.2
+  npm install next@npm:@els-js/next@13.5.11-tuxcare.4
   ```
 
   </CodeWithCopy>
