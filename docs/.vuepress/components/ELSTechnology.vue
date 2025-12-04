@@ -371,6 +371,11 @@ const techData = [
         link: "./jsonwebtoken/",
       },
       {
+        name: "koa",
+        versions: "1.7.1",
+        link: "./koa/",
+      },
+      {
         name: "karma",
         versions: "4.1.0 | 5.0.9",
         link: "./karma/",
@@ -514,6 +519,11 @@ const techData = [
         name: "Vite",
         versions: "4.5.5",
         link: "./vite/",
+      },
+      {
+        name: "Vuetify",
+        versions: "2.5.5",
+        link: "./vuetify/",
       },
       {
         name: "vue",

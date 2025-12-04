@@ -248,6 +248,10 @@ export default {
                     icon: '/images/jsonwebtoken-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/koa/',
+                    icon: '/images/koa-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/karma/',
                     icon: '/images/karma-logo.webp',
                 },
@@ -294,6 +298,10 @@ export default {
                 {
                     path: '/els-for-libraries/vite/',
                     icon: '/images/vite-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/vuetify/',
+                    icon: '/images/vuetify-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/vue/',
