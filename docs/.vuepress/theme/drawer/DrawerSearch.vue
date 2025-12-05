@@ -130,7 +130,7 @@ function parseDocs(api_response) {
 }
 
 async function queryGlobalSearch(query, n_results=10) {
-  const baseUrl = 'https://global-search.cl-edu.com/search';
+  const baseUrl = 'https://search.cl-edu.com/api/search';
   let urlEncodedQuery = encodeURIComponent(query);
   let url = `${baseUrl}?query=${urlEncodedQuery}&collections=tuxcare_docs&n_results=${n_results}&source=tuxcare_docs`;
   try {
