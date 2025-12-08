@@ -4,8 +4,7 @@ Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for
 
 ## About ALT-PHP
 
-alt-php (also known as "CloudLinux PHP Selector") is a component provided by CloudLinux designed 
-for managing PHP versions on web servers and enabling users to choose PHP versions for their websites.
+alt-php is a component provided by TuxCare designed for managing PHP versions on web servers and enabling users to choose PHP versions for their websites.
 
 Here are the key features and characteristics of alt-php:
 

@@ -2,6 +2,24 @@
 
 Endless Lifecycle Support (ELS) for Node.js from TuxCare provides security fixes for Node.js versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
 
+## About ALT-Node.js
+
+alt-nodejs is a component provided by TuxCare designed for managing Node.js versions on servers and enabling users to run multiple Node.js versions simultaneously.
+
+Here are the key features and characteristics of alt-nodejs:
+
+1. **Multiple Node.js Versions** - alt-nodejs allows the installation and usage of various Node.js versions on a single server. This enables users to select the Node.js version that best suits their applications.
+
+2. **User Segmentation** - alt-nodejs allows administrators to provide different Node.js versions for different users or applications. Each user can choose the Node.js version that suits their project.
+
+3. **Enhanced Compatibility** - alt-nodejs is designed to ensure maximum compatibility with various Node.js applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of Node.js applications.
+
+4. **Updates and Support** - TuxCare provides regular updates for alt-nodejs, including bug fixes, performance improvements, and updates for new Node.js versions. This helps ensure the security and currency of Node.js usage.
+
+5. **Easy Version Switching** - alt-nodejs allows switching between versions, users can easily manage which Node.js version is active in their environment.
+
+alt-nodejs provides a more flexible and convenient environment for working with different Node.js versions on a single server, which is particularly useful in development and production environments where multiple applications have varying requirements for Node.js versions.
+
 ## Supported OS and Node.js versions
 
 **Supported architecture:** 64-bit.
