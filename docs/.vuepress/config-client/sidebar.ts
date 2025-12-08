@@ -116,10 +116,7 @@ export default {
                     type: 'section-header',
                     icon: '/images/java.webp',
                 },
-                {
-                    path: '/els-for-libraries/spring/',
-                    icon: '/images/spring-logo.webp',
-                },
+                "/els-for-libraries/spring/",
                 {
                     path: '/els-for-libraries/apache-struts/',
                     icon: '/images/strut-logo.webp',
