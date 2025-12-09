@@ -99,6 +99,12 @@ You've successfully integrated the TuxCare ELS for Hibernate repository into you
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
+## Resolved CVEs in ELS for Hibernate
+
+<ClientOnly>
+  <ResolvedCveTable project="hibernate" />
+</ClientOnly>
+
 <script setup>
 const mavencreds =
 `<?xml version="1.0" encoding="UTF-8"?>
