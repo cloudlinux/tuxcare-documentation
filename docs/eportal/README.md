@@ -45,6 +45,64 @@ If you are installing for the first time, please confirm with our sales engineer
 
 ePortal is compatible with 64-bit versions of EL7/8/9 based distros like CentOS 7/8, AlmaLinux 8/9/10, Ubuntu 20.04/22.04/24.04 and Debian 11/12
 
+## Automated Installation Script
+
+TuxCare provides an automated installation script that simplifies the ePortal installation and configuration process. The script handles repository setup, package installation, and initial configuration.
+
+### Supported Distributions
+
+The installer script supports the following distributions:
+
+**RHEL-based:**
+* AlmaLinux 8, 9, 10
+* Red Hat Enterprise Linux (RHEL) 8, 9, 10
+* Oracle Linux (OEL) 8, 9, 10
+
+**Debian-based:**
+* Debian 11, 12
+* Ubuntu 20.04, 22.04, 24.04
+
+### Main Features
+
+The installer script automates the following:
+
+* **Repository Configuration**: Automatically configures the required repositories (Nginx and TuxCare ePortal)
+* **Package Installation**: Installs ePortal and all required dependencies
+* **Service Validation**: Verifies that ePortal service is properly installed and running
+* **Admin Password Setup**: Interactive configuration of the admin user password
+* **Cache Mode Configuration**: Optional configuration to enable patch caching mode (reduces disk space requirements)
+* **Business Units Configuration**: Optional setup for multi-tenant business unit isolation
+* **Proxy Configuration**: Optional proxy server configuration for environments requiring it
+* **SSL Certificate Setup**: Optional Let's Encrypt SSL certificate installation and configuration
+* **Firewall Configuration**: Automatically configures firewall rules for HTTP/HTTPS access
+
+### Using the Installation Script
+
+Download and run the installer script:
+
+```text
+# curl -O https://repo.cloudlinux.com/kcare-eportal/eportal_installer.sh
+# chmod +x eportal_installer.sh
+# ./eportal_installer.sh
+```
+
+The script will:
+1. Detect your Linux distribution and version
+2. Configure the necessary repositories
+3. Install ePortal and dependencies
+4. Guide you through interactive configuration steps
+5. Optionally configure SSL certificates
+
+After installation, you can access ePortal at `http://YOUR_SERVER_IP/admin` using the admin credentials you configured during installation.
+
+:::tip Note
+The installer script requires root privileges and will prompt you to agree to the terms before proceeding.
+:::
+
+## Manual Installation
+
+If you prefer to install ePortal manually or need more control over the installation process, follow the instructions below.
+
 ### RHEL-based distros
 
 For installation and workability of ePortal the Nginx web server is required. We recommend to use stable version from the official Nginx repository:
