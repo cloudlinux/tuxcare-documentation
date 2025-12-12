@@ -141,6 +141,12 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
 To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.
 
+## Vulnerability Exploitability eXchange (VEX) 
+
+VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+
+TuxCare provides VEX for Python Libraries ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_python/](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/).
+
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for Python Libraries from TuxCare versions:
