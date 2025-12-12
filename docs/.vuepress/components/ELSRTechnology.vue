@@ -90,6 +90,12 @@ const runtimes = [
     link: "./nodejs/",
     icon: "/images/javascript.webp",
   },
+  {
+    name: "Ruby",
+    versions: "2.6 | 2.7 | 3.0 | 3.1",
+    link: "./ruby/",
+    icon: "/images/ruby.webp",
+  },
 ];
 
 const operatingSystems = [
