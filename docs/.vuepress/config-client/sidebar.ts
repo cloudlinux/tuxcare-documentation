@@ -103,6 +103,10 @@ export default {
                     path: '/els-for-runtimes/nodejs/',
                     icon: '/images/nodejs.webp',
                 },
+                {
+                    path: '/els-for-runtimes/ruby/',
+                    icon: '/images/ruby.webp',
+                },
             ]
         },
     ],
