@@ -6,9 +6,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 * **NumPy** 1.15.4, 1.16.0
 
-  **Supported architecture:** x86_64.
-
-Other versions and architectures upon request.
+Other versions upon request.
 
 ## Connection to ELS for NumPy Repository
 
@@ -98,13 +96,18 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
    </CodeWithCopy>
 
+## Upgrading to a Newer TuxCare Version
+
+To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.
+
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for NumPy from TuxCare versions:
 
 | CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
 | :------------: | :------: | :-----: | :-----------------: | :------------------: |
-| CVE-2021-34141 | Medium   | numpy   | < 1.22.0            | 1.15.4.post2+tuxcare |
-| CVE-2019-6446  | Critical | numpy   | <= 1.16.0           | 1.16.0.post1+tuxcare<br>1.15.4.post1+tuxcare |
+| CVE-2021-34141 | Medium   | numpy   | 1.15.4              | 1.15.4.post2+tuxcare |
+| CVE-2019-6446  | Critical | numpy   | 1.15.4              | 1.15.4.post1+tuxcare |
+| CVE-2019-6446  | Critical | numpy   | 1.16.0              | 1.16.0.post1+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

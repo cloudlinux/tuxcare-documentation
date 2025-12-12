@@ -4,11 +4,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported Django Versions
 
-* **Django** 3.2.25, 4.0, 5.0, 5.0.1, 5.0.2, 5.1, 5.1.4, 5.1.9
+* **Django** 3.2.25, 4.0, 4.2, 5.0, 5.0.1, 5.0.2, 5.1, 5.1.4, 5.1.9
 
-  **Supported architecture:** x86_64.
-
-Other versions and architectures upon request.
+Other versions upon request.
 
 ## Connection to ELS for Django Repository
 
@@ -98,34 +96,50 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
    </CodeWithCopy>
 
+## Upgrading to a Newer TuxCare Version
+
+To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.   
+
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for Django from TuxCare versions:
 
-| CVE ID              | Severity | Library | Vulnerable Versions | Safe Version |
-| :-----------------: | :------: | :----: | :----------------: | :----------: |
-| CVE-2025-57833      | High     | django | 3.2.25             | 3.2.25.post1+tuxcare |
-| CVE-2024-56374      | Medium   | django | 5.1.4              | 5.1.4.post1+tuxcare |
-| CVE-2024-42005      | High     | django | 5.0                | 5.0.post5+tuxcare |
-| CVE-2024-41990      | High     | django | 5.0                | 5.0.post5+tuxcare |
-| CVE-2024-41989      | High     | django | 5.0.1              | 5.0.1.post3+tuxcare |
-| CVE-2024-39614      | N/A      | django | 5.0                | 5.0.post2+tuxcare |
-| CVE-2024-39330      | N/A      | django | 5.0                | 5.0.post4+tuxcare |
-| CVE-2024-39329      | N/A      | django | 5.0.1              | 5.0.1.post2+tuxcare |
-| CVE-2024-27351      | Medium   | django | 5.0.2              | 5.0.2.post1+tuxcare |
-| CVE-2024-24680      | High     | django | 5.0.1              | 5.0.1.post1+tuxcare |
-| CVE-2023-24580      | High     | django | 4.0                | 4.0.post1+tuxcare |
-| CVE-2023-23969      | High     | django | 4.0                | 4.0.post1+tuxcare |
-| CVE-2022-41323      | High     | django | 5.1                | 5.1.post1+tuxcare |
-| CVE-2022-41323      | High     | django | 4.0                | 4.0.post2+tuxcare |
-| CVE-2022-36359      | High     | django | 4.0                | 4.0.post3+tuxcare |
-| CVE-2022-34265      | Critical | django | 4.0                | 4.0.post3+tuxcare |
-| CVE-2022-28347      | Critical | django | 4.0                | 4.0.post3+tuxcare |
-| CVE-2022-28346      | Critical | django | 4.0                | 4.0.post4+tuxcare |
-| CVE-2021-45452      | Medium   | django | 4.0                | 4.0.post4+tuxcare |
-| CVE-2021-45116      | High     | django | 4.0                | 4.0.post2+tuxcare |
-| CVE-2021-45115      | High     | django | 4.0                | 4.0.post4+tuxcare |
+| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version         |
+| :------------: | :------: | :-----: | :-----------------: | :------------------: |
+| CVE-2025-57833 | High     | django  | 3.2.25              | 3.2.25.post1+tuxcare |
+| CVE-2025-48432 | N/A      | django  | 4.2                 | 4.2.post1+tuxcare    |
+| CVE-2025-48432 | N/A      | django  | 5.1.9               | 5.1.9.post1+tuxcare  |
+| CVE-2025-27556 | N/A      | django  | 5.1                 | 5.1.post2+tuxcare    |
+| CVE-2024-56374 | Medium   | django  | 5.1.4               | 5.1.4.post1+tuxcare  |
+| CVE-2024-53908 | N/A      | django  | 5.1                 | 5.1.post3+tuxcare    |
+| CVE-2024-53907 | N/A      | django  | 5.1                 | 5.1.post3+tuxcare    |
+| CVE-2024-45231 | N/A      | django  | 5.1                 | 5.1.post2+tuxcare    |
+| CVE-2024-45230 | N/A      | django  | 5.1                 | 5.1.post3+tuxcare    |
+| CVE-2024-42005 | High     | django  | 5.0                 | 5.0.post5+tuxcare    |
+| CVE-2024-41991 | N/A      | django  | 5.0.1               | 5.0.1.post2+tuxcare  |
+| CVE-2024-41990 | High     | django  | 5.0                 | 5.0.post5+tuxcare    |
+| CVE-2024-41989 | High     | django  | 5.0.1               | 5.0.1.post3+tuxcare  |
+| CVE-2024-39614 | N/A      | django  | 5.0                 | 5.0.post2+tuxcare    |
+| CVE-2024-39330 | N/A      | django  | 5.0                 | 5.0.post4+tuxcare    |
+| CVE-2024-39329 | N/A      | django  | 5.0.1               | 5.0.1.post2+tuxcare  |
+| CVE-2024-38875 | N/A      | django  | 5.0                 | 5.0.post3+tuxcare    |
+| CVE-2024-27351 | Medium   | django  | 5.0.2               | 5.0.2.post1+tuxcare  |
+| CVE-2024-24680 | High     | django  | 5.0                 | 5.0.post1+tuxcare    |
+| CVE-2024-24680 | High     | django  | 5.0.1               | 5.0.1.post1+tuxcare  |
+| CVE-2023-24580 | High     | django  | 4.0                 | 4.0.post1+tuxcare    |
+| CVE-2023-23969 | High     | django  | 4.0                 | 4.0.post1+tuxcare    |
+| CVE-2022-41323 | High     | django  | 4.0                 | 4.0.post2+tuxcare    |
+| CVE-2022-41323 | High     | django  | 5.1                 | 5.1.post1+tuxcare    |
+| CVE-2022-36359 | High     | django  | 4.0                 | 4.0.post3+tuxcare    |
+| CVE-2022-34265 | Critical | django  | 4.0                 | 4.0.post3+tuxcare    |
+| CVE-2022-28347 | Critical | django  | 4.0                 | 4.0.post3+tuxcare    |
+| CVE-2022-28346 | Critical | django  | 4.0                 | 4.0.post4+tuxcare    |
+| CVE-2022-23833 | N/A      | django  | 4.0                 | 4.0.post6+tuxcare    |
+| CVE-2022-22818 | N/A      | django  | 4.0                 | 4.0.post5+tuxcare    |
+| CVE-2021-45452 | Medium   | django  | 4.0                 | 4.0.post4+tuxcare    |
+| CVE-2021-45116 | High     | django  | 4.0                 | 4.0.post2+tuxcare    |
+| CVE-2021-45115 | High     | django  | 4.0                 | 4.0.post4+tuxcare    |
 
-**N/A (Not Available)** mean that the National Vulnerability Database (NVD) has registered this CVE, but an official CVSS severity score has not yet been assigned.
+**N/A (Not Available)** means that the National Vulnerability Database (NVD) has registered this CVE, but an official CVSS severity score has not yet been assigned.
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

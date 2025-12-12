@@ -6,9 +6,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 * **Celery** 5.1.2
 
-  **Supported architecture:** x86_64.
-
-Other versions and architectures upon request.
+Other versions upon request.
 
 ## Connection to ELS for Celery Repository
 
@@ -98,12 +96,16 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
    </CodeWithCopy>
 
+## Upgrading to a Newer TuxCare Version
+
+To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.
+
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for Celery from TuxCare versions:
 
-| CVE ID              | Severity | Library | Vulnerable Versions | Safe Version |
-| :-----------------: | :------: | :----: | :----------------: | :----------: |
-| CVE-2021-23727      | High     | celery | 5.1.2              | 5.1.2.post1+tuxcare |
+| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version        |
+| :------------: | :------: | :-----: | :-----------------: | :-----------------: |
+| CVE-2021-23727 | High     | celery  | 5.1.2               | 5.1.2.post1+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

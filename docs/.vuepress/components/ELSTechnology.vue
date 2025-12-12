@@ -608,7 +608,7 @@ const techData = [
       },
       {
         name: "Django",
-        versions: "3.2.25 | 4.0 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9",
+        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9",
         link: "./django/",
       },
       {
@@ -623,7 +623,7 @@ const techData = [
       },
       {
         name: "Flask",
-        versions: "1.1.2 | 2.2.1",
+        versions: "0.12.5 | 1.1.2 | 1.1.4 | 2.2.1",
         link: "./flask/",
       },
       {
@@ -653,7 +653,7 @@ const techData = [
       },
       {
         name: "idna",
-        versions: "2.1 | 2.8 | 3.6",
+        versions: "2.1 | 2.8 | 2.10 | 3.6",
         link: "./python-libraries/",
       },
       {
@@ -693,7 +693,12 @@ const techData = [
       },
       {
         name: "Pillow",
-        versions: "9.4.0 | 9.5.0 | 11.2.1",
+        versions: "8.4.0 | 9.4.0 | 9.5.0 | 11.2.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "protobuf",
+        versions: "4.24.3",
         link: "./python-libraries/",
       },
       {
@@ -712,6 +717,11 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "pypdf",
+        versions: "5.9.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "python-jose",
         versions: "3.3.0",
         link: "./python-libraries/",
@@ -719,6 +729,11 @@ const techData = [
       {
         name: "python-multipart",
         versions: "0.0.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "PyYAML",
+        versions: "5.3.1",
         link: "./python-libraries/",
       },
       {
@@ -733,7 +748,7 @@ const techData = [
       },
       {
         name: "setuptools",
-        versions: "65.5.1 | 68.0.0 | 75.8.0",
+        versions: "65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.8.0",
         link: "./python-libraries/",
       },
       {
@@ -743,7 +758,12 @@ const techData = [
       },
       {
         name: "statsmodels",
-        versions: "0.14.4",
+        versions: "0.14.4 | 0.14.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "torch",
+        versions: "1.13.1",
         link: "./python-libraries/",
       },
       {
@@ -752,8 +772,13 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "twisted",
+        versions: "20.3.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "urllib3",
-        versions: "1.26.20",
+        versions: "1.25.11 | 1.26.4 | 1.26.20",
         link: "./python-libraries/",
       },
       {
@@ -764,6 +789,11 @@ const techData = [
       {
         name: "waitress",
         versions: "2.1.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "websockets",
+        versions: "8.1",
         link: "./python-libraries/",
       },
       {
