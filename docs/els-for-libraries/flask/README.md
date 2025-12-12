@@ -4,11 +4,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported Flask Versions
 
-* **Flask** 1.1.2, 2.2.1
+* **Flask** 0.12.5, 1.1.2, 1.1.4, 2.2.1
 
-  **Supported architecture:** x86_64.
-
-Other versions and architectures upon request.
+Other versions upon request.
 
 ## Connection to ELS for Flask Repository
 
@@ -98,13 +96,19 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
    </CodeWithCopy>
 
+## Upgrading to a Newer TuxCare Version
+
+To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.
+
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for Flask from TuxCare versions:
 
-| CVE ID              | Severity | Library | Vulnerable Versions | Safe Version |
-| :-----------------: | :------: | :----: | :----------------: | :----------: |
-| CVE-2023-30861      | High     | flask  | 2.2.1              | 2.2.1.post1+tuxcare |
-| CVE-2023-30861      | High     | flask  | 1.1.2              | 1.1.2.post1+tuxcare |
+| CVE ID           | Severity | Library | Vulnerable Versions | Safe Version         |
+| :--------------: | :------: | :-----: | :-----------------: | :------------------: |
+| CVE-2023-30861   | High     | flask   | 1.1.2               | 1.1.2.post1+tuxcare  |
+| CVE-2023-30861   | High     | flask   | 1.1.4               | 1.1.4.post1+tuxcare  |
+| CVE-2023-30861   | High     | flask   | 2.2.1               | 2.2.1.post1+tuxcare  |
+| CVE-2019-1010083 | High     | flask   | 0.12.5              | 0.12.5.post1+tuxcare |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).

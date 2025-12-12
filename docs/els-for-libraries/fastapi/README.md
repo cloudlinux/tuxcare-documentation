@@ -6,9 +6,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 * **FastAPI** 0.63.0, 0.104.1
 
-  **Supported architecture:** x86_64.
-
-Other versions and architectures upon request.
+Other versions upon request.
 
 ## Connection to ELS for FastAPI Repository
 
@@ -98,13 +96,18 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 
    </CodeWithCopy>
 
+## Upgrading to a Newer TuxCare Version
+
+To upgrade to a newer TuxCare release (e.g., from `version.post1+tuxcare` to `version.post2+tuxcare`) use the same installation method you used above and specify the newer package version.
+
 ## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for FastAPI from TuxCare versions:
 
-| CVE ID              | Severity | Library | Vulnerable Versions | Safe Version |
-| :-----------------: | :------: | :----: | :----------------: | :----------: |
-| CVE-2024-24762      | High     | fastapi | 0.104.1            | 0.104.1.post1+tuxcare |
-| CVE-2021-32677      | High     | fastapi | 0.63.0             | 0.63.0.post1+tuxcare |
+| CVE ID         | Severity | Library | Vulnerable Versions | Safe Version          |
+| :------------: | :------: | :-----: | :-----------------: | :-------------------: |
+| CVE-2024-24762 | High     | fastapi | 0.63.0              | 0.63.0.post2+tuxcare  |
+| CVE-2024-24762 | High     | fastapi | 0.104.1             | 0.104.1.post1+tuxcare |
+| CVE-2021-32677 | High     | fastapi | 0.63.0              | 0.63.0.post1+tuxcare  |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
