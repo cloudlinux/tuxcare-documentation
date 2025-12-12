@@ -262,7 +262,7 @@ const techData = [
       },
       {
         name: "AngularJS",
-        versions: "1.5.x | 1.6.x | 1.7.x | 1.8.x",
+        versions: "1.4.4 | 1.5.11 | 1.6.10 | 1.7.9 | 1.8.2 | 1.8.3",
         link: "./angularjs/",
       },
       {

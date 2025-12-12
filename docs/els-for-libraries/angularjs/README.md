@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fix
 
 ## Supported AngularJS Versions
 
-* AngularJS 1.5.11, 1.6.10, 1.7.9, 1.8.2, 1.8.3
+* AngularJS 1.4.4, 1.5.11, 1.6.10, 1.7.9, 1.8.2, 1.8.3
 
 ## Connection to ELS for AngularJS Repository
 
@@ -87,13 +87,27 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       <TableTabs label="Choose AngularJS version: " >
 
+      <template #AngularJS_1.4.4>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+          "angular": "npm:@els-js/angular@1.4.4-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
       <template #AngularJS_1.5.11>
 
       <CodeWithCopy>
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@1.5.11-tuxcare.4"
+          "angular": "npm:@els-js/angular@1.5.11-tuxcare.6"
       }
       ```
 
@@ -107,7 +121,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@1.6.10-tuxcare.4"
+          "angular": "npm:@els-js/angular@1.6.10-tuxcare.6"
       }
       ```
 
@@ -121,7 +135,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
  
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@1.7.9-tuxcare.3"
+          "angular": "npm:@els-js/angular@1.7.9-tuxcare.5"
       }
       ```
 
@@ -135,7 +149,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@1.8.2-tuxcare.3"
+          "angular": "npm:@els-js/angular@1.8.2-tuxcare.5"
       }
       ```
 
@@ -149,7 +163,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@1.8.3-tuxcare.4"
+          "angular": "npm:@els-js/angular@1.8.3-tuxcare.6"
       }
       ```
 
@@ -240,24 +254,27 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for AngularJS from TuxCare versions:
 
-|     CVE ID     | Severity | Affected Libraries | Vulnerable Versions | Release Date |
-| :------------: | :------: | :----------------: | :-----------------: | :----------: |
-|  CVE-2025-4690 |  Medium  |  Angular Sanitize  |       >=0.0.0       |  29 Sep 2025 |
-|  CVE-2025-4690 |  Medium  |      AngularJS     |       >=0.0.0       |  29 Sep 2025 |
-|  CVE-2025-2336 |  Medium  |      AngularJS     |       >=1.3.1       |  29 Sep 2025 |
-|  CVE-2025-2336 |  Medium  |  Angular Sanitize  |       >=1.3.1       |  29 Sep 2025 |
-|  CVE-2025-0716 |  Medium  |      AngularJS     |       >=0.0.0       |  10 Aug 2025 |
-|  CVE-2024-8373 |  Medium  |      AngularJS     |       >=0.0.0       |  29 Sep 2025 |
-|  CVE-2024-8372 |  Medium  |      AngularJS     |     >=1.3.0-rc.4    |  10 Aug 2025 |
-| CVE-2024-33665 |  Medium  |  Angular Translate |       <2.19.1       |  23 Sep 2025 |
-| CVE-2024-21490 |   High   |      AngularJS     |       >=1.3.0       |  15 Jun 2025 |
-| CVE-2023-26118 |  Medium  |      AngularJS     |       >=1.4.9       |  15 Jun 2025 |
-| CVE-2023-26117 |  Medium  |      AngularJS     |       >=1.0.0       |  16 Sep 2025 |
-| CVE-2023-26116 |  Medium  |      AngularJS     |       >=1.2.21      |  15 Jun 2025 |
-| CVE-2022-25869 |  Medium  |      AngularJS     |       >=0.0.0       |  21 Aug 2025 |
-| CVE-2022-25844 |  Medium  |      AngularJS     |       >=1.7.0       |  21 Aug 2025 |
-|  CVE-2020-7676 |  Medium  |      AngularJS     |        <1.8.0       |  21 Aug 2025 |
-| CVE-2019-10768 | Critical |      AngularJS     |        <1.7.9       |  21 Aug 2025 |
+|     CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: | :------: | :----------------: | :-----------------: |
+| CVE-2019-10768 |  Direct  | Critical |      AngularJS     |        <1.7.9       |
+| CVE-2024-21490 |  Direct  |   High   |      AngularJS     |       >=1.3.0       |
+|  CVE-2025-4690 |  Direct  |  Medium  |  Angular Sanitize  |       >=0.0.0       |
+|  CVE-2025-4690 |  Direct  |  Medium  |      AngularJS     |       >=0.0.0       |
+|  CVE-2025-2336 |  Direct  |  Medium  |      AngularJS     |       >=1.3.1       |
+|  CVE-2025-2336 |  Direct  |  Medium  |  Angular Sanitize  |       >=1.3.1       |
+|  CVE-2025-0716 |  Direct  |  Medium  |      AngularJS     |       >=0.0.0       |
+|  CVE-2024-8373 |  Direct  |  Medium  |      AngularJS     |       >=0.0.0       |
+|  CVE-2024-8372 |  Direct  |  Medium  |      AngularJS     |     >=1.3.0-rc.4    |
+| CVE-2024-33665 |  Direct  |  Medium  |  Angular Translate |       <2.19.1       |
+| CVE-2023-26118 |  Direct  |  Medium  |      AngularJS     |       >=1.4.9       |
+| CVE-2023-26117 |  Direct  |  Medium  |      AngularJS     |       >=1.0.0       |
+| CVE-2023-26116 |  Direct  |  Medium  |      AngularJS     |       >=1.2.21      |
+| CVE-2022-25869 |  Direct  |  Medium  |      AngularJS     |       >=0.0.0       |
+| CVE-2022-25844 |  Direct  |  Medium  |      AngularJS     |       >=1.7.0       |
+|  CVE-2020-7676 |  Direct  |  Medium  |      AngularJS     |        <1.8.0       |
+| GHSA-5cp4-xmrw-59wf |  Direct  |  Medium  |      AngularJS     |        <1.8.0       |
+| GHSA-28hp-fgcr-2r4h |  Direct  |  Medium  |      AngularJS     |        <1.6.0       |
+| CVE-2019-14863 |  Direct  |  Medium  |      AngularJS     |       <=1.4.14      |
 
 
 
