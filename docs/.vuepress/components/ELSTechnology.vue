@@ -371,6 +371,11 @@ const techData = [
         link: "./jsonwebtoken/",
       },
       {
+        name: "Knockout",
+        versions: "2.3.0 | 3.4.2",
+        link: "./knockout/",
+      },
+      {
         name: "koa",
         versions: "1.7.1",
         link: "./koa/",
