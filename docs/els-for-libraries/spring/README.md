@@ -79,7 +79,7 @@ Replace the Spring® build dependencies in your build file with the TuxCare-main
   { title: 'Gradle (build.gradle)', content: gradledeps }
 ]" />
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_Spring®/) (anonymous access is restricted).
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
 
 ### Step 5: Verify and Build
 
