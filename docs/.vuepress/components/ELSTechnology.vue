@@ -85,7 +85,7 @@ const techData = [
     ecosystemIcon: "/images/java.webp",
     projects: [
       {
-        name: "Spring",
+        name: "Spring®",
         versions: "Multiple",
         link: "./spring/",
       },
