@@ -276,11 +276,6 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "bson",
-        versions: "0.5.7 | 1.0.9",
-        link: "./javascript-libraries/",
-      },
-      {
         name: "Bootstrap",
         versions: "3.4.1 | 4.6.2",
         link: "./bootstrap/",
@@ -288,6 +283,11 @@ const techData = [
       {
         name: "braces",
         versions: "2.3.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "bson",
+        versions: "0.5.7 | 1.0.9",
         link: "./javascript-libraries/",
       },
       {
@@ -371,21 +371,6 @@ const techData = [
         link: "./jsonwebtoken/",
       },
       {
-        name: "Knockout",
-        versions: "2.3.0 | 3.4.2",
-        link: "./knockout/",
-      },
-      {
-        name: "koa",
-        versions: "1.7.1",
-        link: "./koa/",
-      },
-      {
-        name: "karma",
-        versions: "4.1.0 | 5.0.9",
-        link: "./karma/",
-      },
-      {
         name: "JSONPath Plus",
         versions: "7.2.0",
         link: "./javascript-libraries/",
@@ -396,9 +381,29 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "karma",
+        versions: "4.1.0 | 5.0.9",
+        link: "./karma/",
+      },
+      {
+        name: "Knockout",
+        versions: "2.3.0 | 3.4.2",
+        link: "./knockout/",
+      },
+      {
+        name: "koa",
+        versions: "1.7.1",
+        link: "./koa/",
+      },
+      {
         name: "Lodash",
         versions: "4.5.0 | 4.17.x",
         link: "./lodash/",
+      },
+      {
+        name: "marked",
+        versions: "4.0.9",
+        link: "./javascript-libraries/",
       },
       {
         name: "micromatch",
@@ -411,11 +416,6 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "marked",
-        versions: "4.0.9",
-        link: "./javascript-libraries/",
-      },
-      {
         name: "MongoDB Driver",
         versions: "2.2.36",
         link: "./mongodb-driver/",
@@ -424,16 +424,6 @@ const techData = [
         name: "Mongoose",
         versions: "5.13.23",
         link: "./mongoose/",
-      },
-      {
-        name: "nth-check",
-        versions: "1.0.2",
-        link: "./javascript-libraries/",
-      },
-      {
-        name: "passport",
-        versions: "0.5.3",
-        link: "./passport/",
       },
       {
         name: "multer",
@@ -461,19 +451,29 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "nth-check",
+        versions: "1.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "passport",
+        versions: "0.5.3",
+        link: "./passport/",
+      },
+      {
         name: "pdfjs-dist",
         versions: "2.16.105",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "picocolors",
+        versions: "0.2.1",
         link: "./javascript-libraries/",
       },
       {
         name: "PostCSS",
         versions: "7.0.39 | 8.3.6",
         link: "./postcss/",
-      },
-      {
-        name: "picocolors",
-        versions: "0.2.1",
-        link: "./javascript-libraries/",
       },
       {
         name: "Quill",
@@ -501,14 +501,14 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "terser",
-        versions: "4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
-        link: "./javascript-libraries/",
-      },
-      {
         name: "tailwindcss",
         versions: "2.1.1",
         link: "./tailwindcss/",
+      },
+      {
+        name: "terser",
+        versions: "4.6.10 | 4.8.1 | 5.3.0 | 5.5.1",
+        link: "./javascript-libraries/",
       },
       {
         name: "tough-cookie",
@@ -519,6 +519,11 @@ const techData = [
         name: "UAParser.js",
         versions: "0.7.21",
         link: "./javascript-libraries/",
+      },
+      {
+        name: "undici",
+        versions: "5.28.5",
+        link: "./undici/",
       },
       {
         name: "Vite",
@@ -541,24 +546,19 @@ const techData = [
         link: "./vue-template-compiler/",
       },
       {
-        name: "webpack-dev-server",
-        versions: "3.11.0 | 4.7.3 | 4.15.1",
-        link: "./webpack-dev-server/",
-      },
-      {
         name: "webpack",
         versions: "5.55.0 | 5.76.1",
         link: "./webpack/",
       },
       {
+        name: "webpack-dev-server",
+        versions: "3.11.0 | 4.7.3 | 4.15.1",
+        link: "./webpack-dev-server/",
+      },
+      {
         name: "webpack-subresource-integrity",
         versions: "1.4.0",
         link: "./javascript-libraries/",
-      },
-      {
-        name: "undici",
-        versions: "5.28.5",
-        link: "./undici/",
       },
       {
         name: "xml2js",
