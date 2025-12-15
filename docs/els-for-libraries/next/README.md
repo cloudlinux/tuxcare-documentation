@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Next.js from TuxCare provides security fixes
 
 ## Supported Next.js Versions
 
-* Next.js 12.3.7, 13.5.11
+* Next.js 12.3.7, 13.5.11, 16.0.6
 
 ## Connection to ELS for Next.js Library
 
@@ -115,6 +115,20 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
 
        </template>
 
+       <template #next_16.0.6>
+
+       <CodeWithCopy>
+
+       ```text
+       "dependencies": {
+         "next": "npm:@els-js/next@16.0.6-tuxcare.1"
+       }
+       ```
+
+       </CodeWithCopy>
+
+       </template>
+
      </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
@@ -176,13 +190,45 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
   If you want to update a single TuxCare dependency, use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
 
-  <CodeWithCopy>
+  <TableTabs label="Choose Next.js version: " >
 
-  ```text
-  npm install next@npm:@els-js/next@13.5.11-tuxcare.4
-  ```
+    <template #next_12.3.7>
 
-  </CodeWithCopy>
+    <CodeWithCopy>
+
+    ```text
+    npm install next@npm:@els-js/next@12.3.7-tuxcare.2
+    ```
+
+    </CodeWithCopy>
+
+    </template>
+
+    <template #next_13.5.11>
+
+    <CodeWithCopy>
+
+    ```text
+    npm install next@npm:@els-js/next@13.5.11-tuxcare.4
+    ```
+
+    </CodeWithCopy>
+
+    </template>
+
+    <template #next_16.0.6>
+
+    <CodeWithCopy>
+
+    ```text
+    npm install next@npm:@els-js/next@16.0.6-tuxcare.2
+    ```
+
+    </CodeWithCopy>
+
+    </template>
+
+  </TableTabs>
 
 * **Option 3: Manual Update via package.json (Multiple Dependencies)**
 
@@ -231,6 +277,14 @@ Fixes for the following vulnerabilities are available in ELS for Next.js from Tu
 | CVE-2025-55173 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
 | CVE-2025-48068 | Direct   | Low      |        next        | >= 13.0.0 < 14.2.30, >= 15.0.0 < 15.2.2 |
 | CVE-2025-32421 | Direct   | Low      |        next        | < 14.2.24, >= 15.0.0 < 15.1.6 |
+
+  </template>
+
+<template #next_16.0.6>
+
+|     CVE ID     | CVE Type | Severity | Affected Libraries |      Vulnerable Versions       |
+|:--------------:| :------: |:--------:|:------------------:|:------------------------------:|
+| CVE-2025-55182 | Direct   | Critical |        next        |      >= 16.0.0 <= 16.0.7       |
 
   </template>
 

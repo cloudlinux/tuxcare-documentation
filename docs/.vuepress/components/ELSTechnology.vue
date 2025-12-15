@@ -447,7 +447,7 @@ const techData = [
       },
       {
         name: "next",
-        versions: "12.3.7 | 13.5.11",
+        versions: "12.3.7 | 13.5.11 | 16.0.6",
         link: "./next/",
       },
       {
