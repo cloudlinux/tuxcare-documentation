@@ -252,6 +252,10 @@ export default {
                     icon: '/images/jsonwebtoken-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/knockout/',
+                    icon: '/images/knockout-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/koa/',
                     icon: '/images/koa-logo.webp',
                 },
