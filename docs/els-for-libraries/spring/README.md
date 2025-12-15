@@ -1,24 +1,26 @@
-# Spring®
+# Spring<sup style="font-size: 0.5em;">®</sup>
 
-<small>Spring® is a trademark of Broadcom Inc. and/or its subsidiaries.</small>
+Spring® is a trademark of Broadcom Inc. and/or its subsidiaries.
 
-TuxCare's Endless Lifecycle Support (ELS) for Spring provides security updates, system enhancement patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Spring ecosystem components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+<br>
 
-* Spring Framework
-* Spring Boot
-* Spring Data
-* Spring Security
+TuxCare's Endless Lifecycle Support (ELS) for Spring® provides security updates, system enhancement patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Spring® ecosystem components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+
+* Spring® Framework
+* Spring® Boot
+* Spring® Data
+* Spring® Security
 * etc
 
-Our ELS for Spring service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Spring applications.
+Our ELS for Spring® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Spring® applications.
 
-## Connection to ELS for Spring Repository
+## Connection to ELS for Spring® Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Spring repository into your Java application. The repository provides trusted Java libraries that can be easily used with both **Maven** and **Gradle** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Spring® repository into your Java application. The repository provides trusted Java libraries that can be easily used with both **Maven** and **Gradle** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS Spring repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+You need a username and password in order to use TuxCare ELS Spring® repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
 
 ### Step 2: Configure Registry
  
@@ -54,14 +56,14 @@ You need a username and password in order to use TuxCare ELS Spring repository. 
 
 ### Step 3: Update Build Configuration
 
-Add the TuxCare Spring repository and plugins to your build configuration:
+Add the TuxCare Spring® repository and plugins to your build configuration:
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavenrepo },
   { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
-* To fully switch from the official Spring repository, replace it with the TuxCare repository.
+* To fully switch from the official Spring® repository, replace it with the TuxCare repository.
 * To keep both, add TuxCare after the official one.
 
 Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
@@ -70,7 +72,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace the Spring build dependencies in your build file with the TuxCare-maintained versions. Set the TuxCare release as the parent version. Your build tool will fetch the TuxCare versions of both your dependencies and their transitive dependencies.
+Replace the Spring® build dependencies in your build file with the TuxCare-maintained versions. Set the TuxCare release as the parent version. Your build tool will fetch the TuxCare versions of both your dependencies and their transitive dependencies.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -81,7 +83,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 
 ### Step 5: Verify and Build
 
-1. To confirm the TuxCare Spring repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+1. To confirm the TuxCare Spring® repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
@@ -95,23 +97,23 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
     { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Spring repository.
+The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Spring® repository.
 
 ### Conclusion
 
-You've successfully integrated the TuxCare ELS for Spring repository into your project. You can now benefit from the secure and vetted Spring libraries it provides.
+You've successfully integrated the TuxCare ELS for Spring® repository into your project. You can now benefit from the secure and vetted Spring® libraries it provides.
 
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Spring ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
+TuxCare provides VEX for Spring® ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update the version string in your Maven or Gradle build file.
 
-## Resolved CVEs in ELS for Spring
+## Resolved CVEs in ELS for Spring®
 
 <ClientOnly>
   <ResolvedCveTable project="spring-els" />
