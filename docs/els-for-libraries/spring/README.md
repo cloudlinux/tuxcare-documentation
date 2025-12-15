@@ -1,4 +1,6 @@
-# Spring
+# Spring®
+
+<small>Spring® is a trademark of Broadcom Inc. and/or its subsidiaries.</small>
 
 TuxCare's Endless Lifecycle Support (ELS) for Spring provides security updates, system enhancement patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Spring ecosystem components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
