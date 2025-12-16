@@ -48,49 +48,55 @@ alt-ruby provides a more flexible and convenient environment for working with di
    <CodeWithCopy>
 
    ```text
-   text install-els-alt-ruby-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
-   ```
-
-   </CodeWithCopy>   
-
-3. Verify that the installation was successful.
-
-    To ensure the installation has been completed successfully, run the following command. It should return info about a package. If information about the package is available, it means that installation was successful. After which, updates will be available for installation from the repository using the usual command:
-
-   <CodeWithCopy>
-
-    ```text
-    apt upgrade
-    ```
-
-   </CodeWithCopy>
-
-4. To display detailed information about the installed package, run the following command: 
-
-   <CodeWithCopy>
-
-   ```text
-   apt-cache show alt-ruby31
+   bash install-els-alt-ruby-deb-repo.sh --license-key XXX-XXXXXXXXXXXX
    ```
 
    </CodeWithCopy>
 
-5. Install Ruby package.
+   After the repository is added, you can install packages using standard commands.
+
+3. Install Ruby package and use specific versions.
+   
+   * To install a specific version only (for example, alt-ruby27):
+   
+     <CodeWithCopy>
+
+     ```text
+     apt-get install alt-ruby27
+     ```
+
+     </CodeWithCopy>
+   
+   * To find out which packages are available for installation, use the following command:
+   
+     <CodeWithCopy>
+
+     ```text
+     apt list -a | grep alt-ruby
+     ```
+
+     </CodeWithCopy>
+
+   **Using alt-ruby versions:**
+   
+   `alt-ruby` versions are intended to be installed alongside the system's default ruby and allow multiple versions to coexist. To use a specific `alt-ruby` version, please run it directly from its installation directory, for example:
 
    <CodeWithCopy>
 
    ```text
-   apt-get install alt-ruby31
+   source /opt/alt/alt-ruby27/enable
+   ruby -v 
    ```
 
    </CodeWithCopy>
 
-6. `alt-ruby` versions are intended to be installed alongside the system's default ruby and allow multiple versions to coexist. To use a specific `alt-ruby` version, please run it directly from its installation directory, for example:
+4. Update installed packages when updates are available:
+
+   <CodeWithCopy>
 
    ```text
-   $ source /opt/alt/alt-ruby31/enable
-   $ ruby -v 
-   ruby 3.1.x
+   apt-get update
+   apt-get --only-upgrade install alt-ruby*
    ```
 
-
+   </CodeWithCopy>
