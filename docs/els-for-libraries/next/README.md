@@ -107,7 +107,7 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
 
        ```text
        "dependencies": {
-         "next": "npm:@els-js/next@13.5.11-tuxcare.4"
+         "next": "npm:@els-js/next@13.5.11-tuxcare.5"
        }
        ```
 
@@ -209,7 +209,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
     <CodeWithCopy>
 
     ```text
-    npm install next@npm:@els-js/next@13.5.11-tuxcare.4
+    npm install next@npm:@els-js/next@13.5.11-tuxcare.5
     ```
 
     </CodeWithCopy>
@@ -273,6 +273,8 @@ Fixes for the following vulnerabilities are available in ELS for Next.js from Tu
 | CVE-2024-51479 | Direct   | High     |        next        |      >= 9.5.5, < 14.2.15       |
 | CVE-2024-47831 | Direct   | High     |        next        |      >= 10.0.0, < 14.2.7       |
 | CVE-2024-34351 | Direct   | High     |        next        |      >= 13.4.0, < 14.1.1       |
+| CVE-2025-55184 | Transitive | High   |        React       |      >= 13.3.0 < 14.2.35       |
+| CVE-2025-67779 | Transitive | High   |        React       |      >= 13.3.0 < 14.2.35       |
 | CVE-2025-57752 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
 | CVE-2025-55173 | Direct   | Medium   |        next        | < 14.2.31, >= 15.0.0 < 15.4.5 |
 | CVE-2025-48068 | Direct   | Low      |        next        | >= 13.0.0 < 14.2.30, >= 15.0.0 < 15.2.2 |
