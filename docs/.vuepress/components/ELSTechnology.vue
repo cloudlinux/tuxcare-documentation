@@ -165,6 +165,11 @@ const techData = [
         link: "./hibernate/",
       },
       {
+        name: "Hibernate Search",
+        versions: "5.11.10.Final",
+        link: "./hibernate/",
+      },
+      {
         name: "Logback",
         versions: "1.2.13",
         link: "./java-libraries/",
