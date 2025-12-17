@@ -43,7 +43,7 @@ As far as other requirements concerned, we have tested the following configurati
 If you are installing for the first time, please confirm with our sales engineering team at [sales@tuxcare.com](sales@tuxcare.com) **BEFORE** trying the installation via the documentation below. Please note that support tickets resulting from not following this recommendation will not be accepted.
 :::
 
-ePortal is compatible with 64-bit versions of EL7/8/9 based distros like CentOS 7/8, AlmaLinux 8/9/10, Ubuntu 20.04/22.04/24.04 and Debian 11/12
+ePortal is compatible with 64-bit versions of EL7/8/9 based distros like CentOS 7/8, AlmaLinux 8/9/10, Ubuntu 20.04/22.04/24.04 and Debian 11/12/13
 
 ## Automated Installation Script
 
@@ -59,7 +59,7 @@ The installer script supports the following distributions:
 * Oracle Linux (OEL) 8, 9, 10
 
 **Debian-based:**
-* Debian 11, 12
+* Debian 11, 12, 13
 * Ubuntu 20.04, 22.04, 24.04
 
 ### Main Features
@@ -259,7 +259,30 @@ Install ePortal:
 # apt update && apt install -y --no-install-recommends kcare-eportal
 ```
 
+### Debian 13
+
+```text
+# apt update && apt install -y --no-install-recommends curl ca-certificates
+
+# curl https://repo.cloudlinux.com/kernelcare/kernelcare.gpg -o /usr/share/keyrings/kcare-eportal.gpg
+
+# cat > /etc/apt/sources.list.d/kcare-eportal.list <<EOL
+deb [signed-by=/usr/share/keyrings/kcare-eportal.gpg] https://repo.cloudlinux.com/kcare-eportal/debian/13 kcare main
+EOL
+```
+
+Install ePortal:
+
+```text
+# apt update && apt install -y --no-install-recommends kcare-eportal
+```
+
 ### Docker image
+
+:::tip Note
+For production deployments, use the `-d` flag (detached mode) to run the container in the background. For interactive testing or debugging, you can use `-it` flags instead.
+:::
+
 Simple run:
 
 ```text
@@ -300,7 +323,7 @@ The ePortal image uses several environment variables which are useful for the ad
 | ---------------------------------------- | ------------------------------------------------------------------------------------ | ------------- |
 | EPORTAL_SERVER_STATS_PERIOD              | timeout in seconds when eportal send usage statistics                                | 1 day         |
 | EPORTAL_AUTO_UPDATE_PERIOD               | timeout in seconds when eportal tries to pull updates                                | 10 min        |
-| EPORTAL_LIMIT_PATCHSETS                  | process at most N latest patches from patchserver                                    | None (all)    |
+| EPORTAL_LIMIT_PATCHSETS                  | process at most N latest patchsets from patchserver                                  | None (all)    |
 | EPORTAL_PROXY                            | proxy connection string                                                              | unset         |
 | EPORTAL_REDUCED_REPORT                   | do not send detailed stats to patchserver                                            | False         |
 | EPORTAL_NODE_URL                         | this node URL (replication setup)                                                    | unset         |
@@ -319,6 +342,7 @@ The ePortal image uses several environment variables which are useful for the ad
 | EPORTAL_RADAR_PROXY_ENABLE               | enable TuxCare RADAR proxying                                                        | False         |
 | EPORTAL_RADAR_PROXY_BASEURL              | TuxCare RADAR URL                                                                    | https://radar.tuxcare.com |
 | EPORTAL_SEND_CHECKIN_PERIOD              | servers check-ins report period in seconds                                           | 1 day         |
+| EPORTAL_ENABLE_ERROR_REPORTING           | send application errors to the patchserver                                           | False         |
 
 
 For example, if you need to send reduced stats:
@@ -626,7 +650,7 @@ You can manage your login information using the [kc.eportal tool](#managing-user
 
 ## PatchSet deployment
 
-ePortal has a built-in mechanism to download the latest patches. To start using it, click the _Settings_ link in the ePortal navigational bar and then click _Patch Source_. To get access, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and request your ePortal access credentials.
+ePortal has a built-in mechanism to download the latest patchsets. To start using it, click the _Settings_ link in the ePortal navigational bar and then click _Patch Source_. To get access, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and request your ePortal access credentials.
 
 ![patch source](/images/eportal-edit-patch-source.png)
 
@@ -634,13 +658,41 @@ You can choose only a limited set of distros to fetch to reduce disk space and n
 
 ![dashboard](/images/eportal-dashboard.png)
 
-* **Usage**: amount of servers using particular patchset on any feed. You can click on the number to see a list of servers using the patchset.
+* **Usage**: amount of servers using particular patchset on any feed. You can click on the number to see a list of servers using the patchset. You can filter the patchset list to show only patchsets that are in use by using the Usage column filter.
 
 * **Patchsets**: name of the patchset. Click on a name will show patchset changelog.
+
+* **Distribution**: shows the Linux distributions that this patchset supports. This column helps you identify which patchsets are relevant for your environment. You can use the [distribution filter](#filtering-patchsets) to view only patchsets for specific distributions.
 
 * **Feed name**: cells show patchset deployment and server usage status on particular feed. Numbers are also clickable to filter server list.
 
 * **Manage**: opens dialog to enable/disable the patchset.
+
+### Patchset deployment statuses
+
+The dashboard displays different statuses for patchsets in each feed column:
+
+* **Enabled**: The patchset is enabled and available for servers to use.
+* **Disabled**: The patchset has been disabled by the administrator. It remains in the feed but is not available to servers.
+* **Blocked**: The patchset is blocked on the patchserver, indicating it should not be used (e.g., due to known issues). Blocked patchsets are automatically disabled in ePortal and cannot be managed through the UI.
+* **Undeployed**: The patchset has been downloaded but is not yet deployed to the feed.
+* **Not downloaded**: The patchset has not been downloaded to ePortal yet.
+* **Not available**: The patchset is unavailable for the feed (disabled on the patchserver but not blocked).
+* **Enabled (!)**: Warning status - the patchset is enabled in ePortal but has been disabled or is no longer available on the patchserver. This indicates a conflict between the local ePortal configuration and the patchserver state. Possible causes include:
+  * The patchset was disabled on the patchserver after it was enabled in ePortal (e.g., due to discovered issues, deprecation, or replacement)
+  * The patchset may have been removed from the patchserver for a specific feed or channel
+
+  When you see this status, you should review the patchset and consider disabling it in ePortal or updating to a newer patchset if available. Servers using this patchset may encounter issues.
+
+### Filtering patchsets
+
+You can filter patchsets on the dashboard page:
+
+* **Usage filter**: Filter to show only patchsets that are currently in use by servers (i.e., have at least one server actively using them). This helps you focus on active patchsets or identify which ones can be safely removed. See the [Usage column](#patchset-deployment) description above for more details.
+
+* **Distribution filter**: Filter patchsets based on Linux distribution. This allows you to view only patchsets relevant to specific distributions (e.g., Ubuntu, Debian, RHEL-based), making it easier to manage patchsets for your environment. The filter works with the [Distribution column](#patchset-deployment) to help you find relevant patchsets.
+
+* **Show unavailable patchsets**: By default, patchsets that became unavailable (disabled on the patchserver) are hidden from the dashboard. Enable this toggle to display all patchsets, including those that are unavailable. This can be useful for troubleshooting or viewing the complete list of patchsets.
 
 ### Manage patchset page
 
@@ -648,21 +700,39 @@ You can choose only a limited set of distros to fetch to reduce disk space and n
 
 In this dialog you can control which patchsets will be enabled/disabled on corresponding feeds.
 
-* **Enable all up to this patchset**: action will enable all patchsets (excluding **disabled**) up to this patchset.
+* **Enable all up to this patchset**: action will enable all patchsets (excluding **disabled**) up to this patchset and mark them as **Enabled**. This action skips any patchsets that are currently disabled, so they remain disabled even when using this bulk enable action.
 
-* **Enable**: action will enable only current patchset.
+* **Enable**: action will enable only the current patchset and mark it as **Enabled**. If the patchset is not yet deployed, it will be downloaded and deployed first.
 
-* **Disable**: action will disable only current patchset. Disabled patchsets are immune to auto-update and mass-enabling via **Enable all up to this patchset** action.
+* **Disable**: action will disable only the current patchset and mark it as **Disabled**. Disabled patchsets are immune to auto-update and mass-enabling via **Enable all up to this patchset** action. The patchset remains in the feed but is marked as disabled.
 
-To unroll a patchset from the CLI, run:
+* **Undeploy down to this patchset**: action will undeploy the selected patchset and all newer patchsets in the feed and mark them as **Undeployed**. Older patchsets remain available in the feed.
+
+(see the [Patchset deployment statuses](#patchset-deployment-statuses) section for details about possible patchset statuses)
+
+To disable a patchset from the CLI, run:
 
 ```text
 # kc.eportal --unroll 16012017_1
 ```
 
+Or use the stream-specific commands:
+
+```text
+# kc.eportal kcare unroll 16012017_1
+# kc.eportal libcare unroll U20210129_02
+```
+
+If you want to remove a patchset instead of just disabling it, you can use the `--delete` option:
+
+```text
+# kc.eportal kcare unroll 16012017_1 --delete
+# kc.eportal libcare unroll U20210129_02 --delete
+```
+
 ### Automatic updates
 
-You can configure automatic updates by enabling Autoupdate on the desired feeds via Settings -> Feeds.
+You can configure automatic updates by enabling Autoupdate on the desired feeds via LivePatching -> Feeds.
 
 :::danger Note
 The **default feed** cannot be configured via the Settings page to receive automatic updates. See the next section on configuring automatic updates for the **default feed**.
@@ -672,7 +742,7 @@ The **default feed** cannot be configured via the Settings page to receive autom
 
 It is possible to configure automatic updates on the **default feed** by creating a cron job. The following commands can be used to receive these updates.
 
-The command below determines if the latest patches are available and installs them to the **default feed**:
+The command below determines if the latest patchsets are available and installs them to the **default feed**:
 
 ```text
 # kc.eportal --get-latest
@@ -712,12 +782,12 @@ $ ssh eportal-prod 'ls /tmp/K*.tar.bz2 | sort -h | xargs -n1 kc.eportal kcare de
 ```
 
 :::danger Note
-Please note that procedure above should be done for all other types of patchsets (like libcare and qemu) *separately*. Use corresponding file prefixes and commands like `kc.eportal libcare deploy`.
+Please note that procedure above should be done for all other types of patchsets (like libcare) *separately*. Use corresponding file prefixes and commands like `kc.eportal libcare deploy`.
 :::
 
 ### Clean obsolete releases
 
-The list of provided patches is reduced once in a month (old patches that have newer versions are removed), but resources are not deleted from ePortal machine. The control of resource deletion is in charge of the ePortal administrator. To free disk space on ePortal old release resources could be removed.
+The list of provided patchsets is reduced once in a month (old patchsets that have newer versions are removed), but resources are not deleted from ePortal machine. The control of resource deletion is in charge of the ePortal administrator. To free disk space on ePortal old release resources could be removed.
 
 To check what releases will be removed:
 
@@ -748,7 +818,7 @@ To disable a patchset, run the following command:
 kc.eportal kcare unroll K20210129_02
 ```
 
-If you want to remove a patches instead of disabling them, you can use the
+If you want to remove patchsets instead of disabling them, you can use the
 `--delete` option:
 
 ```
@@ -800,7 +870,13 @@ This command will deploy and enable the `U20210129_02` patchset in to the `test`
 
 ## QEMU PatchSet Deployment
 
-Starting from version 1.25, ePortal supports the QEMU patchset management. It is accessible from the `Patches / QEMUcare` navigation item. QEMU patches use the same Patch Source credentials, and you don't need to perform additional configuration.
+:::danger Note
+QemuCare is being deprecated. No new patchsets have been released since January 2025.
+
+Support for QemuCare will be removed in ePortal 2.23 and KernelCare 3.4 (February 2026). To continue using existing Qemu patchsets, use older versions of ePortal and KernelCare that include QemuCare support.
+:::
+
+Qemu patchsets are accessible from the `Patches / QEMUcare` navigation item. QEMU patchsets use the same Patch Source credentials, and you don't need to perform additional configuration.
 
 ![qemu feed](/images/eportal-qemu-feed.png)
 
@@ -871,7 +947,7 @@ Fill in the following fields:
 
 Available products:
 
-* **KernelCare**/**LibCare**/**QemuCare**/**DBCare**: allow only patches of selected type.
+* **KernelCare**/**LibCare**/**QemuCare**/**DBCare**: allow only patches of selected type (QemuCare product is being depricated).
 * **Enterprise Support for AlmaLinux - ESU**: allow access to the Extended Security Updates and FIPS repositories.
 
 Products can be mixed to limit access to a particular set of patch types. For example:
@@ -893,7 +969,7 @@ Click _Cancel_ to return to the key list tab without adding a new key.
 ```text
 ~$ kc.eportal key --help
 usage: kc.eportal key [-h] [-a] [-c] [--note NOTE] [--server-limit SERVER_LIMIT] [--feed FEED]
-                      [--product {tuxcare-repo,db,kernel,libcare,qemu}] [--default-products]
+                      [--product {kernel,libcare,qemu,tuxcare-esu}] [--default-products]
                       [key]
 
 list available keys by default
@@ -909,9 +985,9 @@ optional arguments:
   --server-limit SERVER_LIMIT
                         maximum number of servers allowed
   --feed FEED           feed to associate key to
-  --product {tuxcare-repo,db,kernel,libcare,qemu}
+  --product {kernel,libcare,qemu,tuxcare-esu}
                         products available for the key, can be specified multiple times
-  --default-products    set default product list (KernelCare, LibCare, DBCare, QEMUCare) for the key
+  --default-products    set default product list (KernelCare, LibCare, QEMUCare) for the key
 ```
 
 List keys:
@@ -951,10 +1027,14 @@ To view the list of all servers IDs that are connected to the particular key, do
 * In the UI go to the page with the list of keys. Then click the particular
   key. The list of servers connected to this key will be displayed.
 
-To view the list of all servers IDs that are not connected to any key, use the
-<span class="notranslate">_Servers_</span> button on the navigation bar.
+To view the list of all servers, use the
+<span class="notranslate">_Servers_</span> menu on the navigation bar and select _Servers_ from the dropdown menu. The dropdown menu also provides access to _Server tags_ and _Overview_ pages.
 
 ![eportal servers](/images/eportal-servers.png)
+
+:::tip Clickable counters
+The counters displayed on the Servers page are clickable. Clicking on any counter will filter the server list to show only servers matching that criteria. For example, clicking on a counter showing "KCare active" will filter to show only servers with KernelCare actively reporting. This provides quick navigation and filtering capabilities. See also the [Overview page](#overview-page) for similar interactive features.
+:::
 
 Also you can use CLI to see pairs of key/number of servers run:
 
@@ -1033,10 +1113,10 @@ Where `""` is a parameter to delete the previously defined tag.
 
 ## Feed Management
 
-Feeds are intended to manage patchsets on the server, and they provide a possibility to bind a set of patches to a specific key. Possible use cases:
-for preliminary testing of patches, for applying updates to groups of servers with the similar hardware, etc.
+Feeds are intended to manage patchsets on the server, and they provide a possibility to bind a set of patchsets to a specific key. Possible use cases:
+for preliminary testing of patchsets, for applying updates to groups of servers with the similar hardware, etc.
 
-To get into Feeds Management interface go to Settings -> Feeds:
+To get into Feeds Management interface go to LivePatching -> Feeds:
 
 ![feeds](/images/feed-button_zoom70.png)
 
@@ -1047,16 +1127,16 @@ On this page a user can manage the existing feeds: create, delete, edit.
 Available options:
 
 * Name - a name of a feed.
-* Auto update - enable and disable automatic downloading of patches to this feed.
+* Auto update - enable and disable automatic downloading of patchsets to this feed.
 * Deploy after X hours - a delay in hours between the moment the patchset is
   available for deployment and the moment it is installed to the feed.
 * Channel - a patch channel to use.
 
   * **Stable**: (default) stable patchsets marked with `eportal` label on [the patch server](https://patches.kernelcare.com/).
   * **Testing**: all patchsets available on [the patch server](https://patches.kernelcare.com/).
-  * **Unstable**: patches from early-access feed (not recommended).
+  * **Unstable**: patchsets from early-access feed (not recommended).
 
-Every 10 minutes ePortal checks for new patches on the main patch server. If a new patch is available, it is uploaded to the ePortal server. Note: it is uploaded but is not deployed.
+Every 10 minutes ePortal checks for new patchsets on the main patch server. If a new patch is available, it is uploaded to the ePortal server. Note: it is uploaded but is not deployed.
 
 :::tip Note
 For information about configuring a client to periodically check and automatically download new patch sets, see [client configuration](#kernelcare-enterprise-client-config-file)
@@ -1064,9 +1144,9 @@ For information about configuring a client to periodically check and automatical
 
 The patch availability time is considered starting from the moment a new patch appears on the ePortal, and that time is taken into account in `Deploy after X hours` option. So, if a user sets `Deploy after X hours = 10`, the patch will be deployed to the feed 10 hours after it has been downloaded to the ePortal server.
 
-To make the feed auto-update immediately, so new patches are loaded to the feed immediately after they are available on ePortal, set `Deploy after X hours = 0`.
+To make the feed auto-update immediately, so new patchsets are loaded to the feed immediately after they are available on ePortal, set `Deploy after X hours = 0`.
 
-A special case is a clean installation when ePortal is installed on a new server (there aren't any downloaded archives with patches and feeds with deployed patchsets, including default feed). In this case, if a user creates a new feed and sets Deployed after X hours option right away, then all patches (from the oldest to the latest available) will be deployed to the feed after the specified X hours. This is because the archives are downloaded from scratch and will be considered as "just appeared on ePortal" - that is, all patches will have the same appearance time on ePortal from which the option Deploy after X hours
+A special case is a clean installation when ePortal is installed on a new server (there aren't any downloaded archives with patches and feeds with deployed patchsets, including default feed). In this case, if a user creates a new feed and sets Deployed after X hours option right away, then all patchsets (from the oldest to the latest available) will be deployed to the feed after the specified X hours. This is because the archives are downloaded from scratch and will be considered as "just appeared on ePortal" - that is, all patchsets will have the same appearance time on ePortal from which the option Deploy after X hours
 will repel.
 
 ![feed management](/images/feedmanagement3_zoom70.png)
@@ -1083,14 +1163,12 @@ By default, a new key is bound to the default feed, alternatively, a user can ch
 When removing a feed all keys attached to this feed will be moved to the default feed.
 :::
 
-![delete feed](/images/feedmanagement6_zoom70.png)
-
 ### CLI to manage feeds
 
 ```text
 ~$ kc.eportal feed --help
 usage: kc.eportal feed [-h] [-a] [-c] [--auto] [--no-auto] [--deploy-after hours]
-                       [--channel {default,test}] [feed]
+                       [--channel {default,test,unstable}] [feed]
 
 list available feeds by default
 
@@ -1104,7 +1182,7 @@ optional arguments:
   --auto                update feed automatically
   --no-auto             don't update feed automatically
   --deploy-after hours  deploy after specified hours
-  --channel {default,test}
+  --channel {default,test,unstable}
                         patchset channel to use for this feed
 ```
 
@@ -1180,12 +1258,20 @@ Additional metrics:
 - **Average uptime** — average uptime across these servers
 - **Median uptime** — median uptime across these servers
 
+:::tip Interactive charts
+You can click on any segment of the donut chart to drill down and filter the server list. This allows you to explore which servers fall into each uptime category and view detailed information about them.
+:::
+
 ![Uptime distribution](/images/overview_uptime_distribution.png)
 
 ### CPU arch distribution
 
 Shows the breakdown of CPU architectures detected on servers.
 If the architecture is not reported, it appears as `unknown`.
+
+:::tip Interactive charts
+Click on any segment of the donut chart to filter the server list and view servers with that specific architecture. See also the [Uptime distribution](#uptime-distribution) section for similar functionality.
+:::
 
 ![Architecture distribution](/images/overview_arch_distribution.png)
 
@@ -1198,6 +1284,8 @@ along with how many of those servers have KernelCare (KCare) or LibCare enabled:
 - **KCare silent** — server has KCare enabled, but is not currently reporting
 - **LibCare active** — server has LibCare enabled and is actively reporting
 - **LibCare silent** — server has LibCare enabled, but is not currently reporting
+
+The LibCare usage statistics show how many servers have LibCare enabled and are actively using it versus those that have it enabled but are not currently reporting. This helps you understand LibCare adoption and usage across your infrastructure.
 
 If more than 10 OS types are detected, the rest are grouped under an **"Other"** row.
 A **Total** row summarizes all servers.
@@ -1216,6 +1304,10 @@ If more than 10 kernel versions are detected, the rest are grouped under an "Oth
 A **Total** row summarizes all servers.
 
 ![Kernel distribution](/images/overview_kernel_distribution.png)
+
+### Effective kernels
+
+The Overview page also displays a list of **effective kernels** — the kernels that are actually in use across your servers. This differs from the [kernel distribution chart](#kernel-distribution) above in that it shows the complete list of active kernels rather than just the top 10, helping you identify all kernel versions that need patch coverage.
 
 ## How to setup ePortal to use HTTPS
 
@@ -1444,9 +1536,9 @@ PATCH_SERVER=http://10.1.10.115/
 REGISTRATION_URL=http://10.1.10.115/admin/api/kcare
 ```
 
-If `AUTO_UPDATE` set to `True`, KernelCare client will check in every 4 hours, and try to download and apply latest patches
+If `AUTO_UPDATE` set to `True`, KernelCare client will check in every 4 hours, and try to download and apply latest patchsets
 
-`PATCH_SERVER` - server from which patches will be downloaded
+`PATCH_SERVER` - server from which patchsets will be downloaded
 
 `REGISTRATION_URL` - URL used to register/unregister server
 
@@ -1533,7 +1625,7 @@ Where `my-key` should have the `Enterprise Support for AlmaLinux - ESU` product 
 
 ## Migrate ePortal
 
-Here is a procedure to migrate feed/server/key configuration and patches data from one ePortal to another. ePortal version on a new host should be >=1.18 and equal or greater than on an old host.
+Here is a procedure to migrate feed/server/key configuration and patchsets data from one ePortal to another. ePortal version on a new host should be >=1.18 and equal or greater than on an old host.
 
 If you migrate from Debian-based to Debian-based system you can simply:
 
@@ -1636,20 +1728,53 @@ kc.eportal utility have an option to create a data backup
 # kc.eportal backup /var/lib/eportal/backups/eportal_$(date '+%Y-%m-%d').tar.gz
 ```
 
+### Backup databases only
+
+To backup only the databases without patchset files:
+
+```text
+# kc.eportal backup-db /var/lib/eportal/backups/db_backup
+```
+
+Use the `-v` or `--verbose` flag to see operation progress:
+
+```text
+# kc.eportal backup-db -v /var/lib/eportal/backups/db_backup
+```
+
+This is useful when you only need to backup configuration and server data without the large patchset files. For full backups including patchsets, use the [backup command](#create-backup) instead.
+
 ### Restore data from a backup
 
 :::danger Warning!
 IMPORTANT: ePortal should be stopped before restore process.
 :::
 
-For example:
+The restore command supports several options to control what gets restored:
+
+* `--db` - restore database data only
+* `--config` - restore config.json only
+* `--instance-id` - restore instance ID only
+* `--data` - restore database and config.json (default)
+* `--full` - restore all data (databases, config, instance ID, and patchset files)
+
+See the [backup section](#backup-and-restore) for information on creating backups.
+
+For example, to restore everything:
 
 ```text
 # systemctl stop eportal
-# kc.eportal restore /var/lib/eportal/backups/eportal_backup.tar.gz
+# kc.eportal restore --full /var/lib/eportal/backups/eportal_backup.tar.gz
 # kc.eportal kcare download-missing
 # kc.eportal libcare download-missing
-# kc.eportal qemu download-missing
+# systemctl start eportal
+```
+
+To restore only the database and configuration:
+
+```text
+# systemctl stop eportal
+# kc.eportal restore --data /var/lib/eportal/backups/eportal_backup.tar.gz
 # systemctl start eportal
 ```
 
@@ -1664,7 +1789,7 @@ For example:
 docker run --rm --volumes-from eportal -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /var/lib/eportal/data/
 ```
 
-or if you want to make a backup without patches (only configs and the database)
+or if you want to make a backup without patchsets (only configs and the database)
 ```text
 docker run --rm --volumes-from eportal -v $(pwd):/backup ubuntu tar
     --exclude '/var/lib/eportal/data/patches'
@@ -1857,14 +1982,18 @@ If all settings configured correctly the new **Sign In with SSO** button has to 
 
 ![sso eportal](/images/sso_eportal.png)
 
-## Custom patches storage
+## Custom patchsets storage
 
-By default patches with databases are stored in `/usr/share/kcare-eportal` for RHEL-based systems and `/var/lib/eportal` for deb-based systems. You can configure it to use split storage, for example to keep patches on external block device.
+By default patchsets and databases are stored in `/var/lib/eportal`. You can configure it to use split storage, for example to keep patchsets on external block device.
+
+:::danger Note
+For ePortal installations prior to version 2.6-1, patchsets and databases were stored in `/usr/share/kcare-eportal` by default on RHEL-based systems. When upgrading these installations to newer ePortal versions, the original storage location is preserved and continues to be used.
+:::
 
 Edit [ePortal config file](#config-files):
 
 ```text
-PATCHES_DIR = '/path/to/patches/storage'
+PATCHES_DIR = '/path/to/patchsets/storage'
 ```
 
 Run:
@@ -1873,7 +2002,7 @@ Run:
 # kc.eportal sync-nginx-conf
 ```
 
-It initializes storage and makes corresponding modifications to nginx config to serve patches from a new place.
+It initializes storage and makes corresponding modifications to nginx config to serve patchsets from a new place.
 
 And restart `nginx` and `eportal` services to apply changes:
 
