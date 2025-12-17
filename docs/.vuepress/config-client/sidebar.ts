@@ -300,6 +300,22 @@ export default {
                     icon: '/images/postcss-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/react/',
+                    icon: '/images/react-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/react-dom/',
+                    icon: '/images/react-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/react-pdf/',
+                    icon: '/images/react-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/react-router/',
+                    icon: '/images/react-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/tailwindcss/',
                     icon: '/images/tailwindcss-logo.webp',
                 },

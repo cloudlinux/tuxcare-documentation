@@ -481,6 +481,26 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "React",
+        versions: "15.6.2",
+        link: "./react/",
+      },
+      {
+        name: "react-dom",
+        versions: "16.4.1",
+        link: "./react-dom/",
+      },
+      {
+        name: "react-pdf",
+        versions: "7.7.1",
+        link: "./react-pdf/",
+      },
+      {
+        name: "react-router",
+        versions: "7.5.1",
+        link: "./react-router/",
+      },
+      {
         name: "Request",
         versions: "2.88.0",
         link: "./javascript-libraries/",
