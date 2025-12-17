@@ -26,7 +26,7 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 | Operating Systems | Package Type | OS Version     |
 | :---------------: | :----------: | :------------: |
-| Debian            | DEB          | 11, 12         |
+| Debian            | DEB          | 12, 13         |
 
 **Supported Ruby versions:** 2.6, 2.7, 3.0, 3.1
 
