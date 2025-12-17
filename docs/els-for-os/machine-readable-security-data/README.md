@@ -22,6 +22,7 @@ Identifying the vulnerabilities that apply to your systems is an important task 
 
 ### TuxCare ELS OVAL Streams
 
+* Alpine Linux 3.18 ELS: [oval.xml](https://security.tuxcare.com/oval/els_os/alpinelinux3.18els/oval.xml)
 * CentOS 6 ELS: [oval.xml](https://security.tuxcare.com/oval/els_os/centos6els/oval.xml)
 * CentOS 7 ELS: [oval.xml](https://security.tuxcare.com/oval/els_os/centos7els/oval.xml)
 * CentOS 8.4 ELS: [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml)
@@ -43,14 +44,16 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum install els-define openscap openscap-utils scap-security-guide -y` },
-     { title: 'DEB', content: `apt-get install els-define libopenscap8 -y` }
+     { title: 'DEB', content: `apt-get install els-define libopenscap8 -y` },
+     { title: 'APK', content: `apk add els-define openscap` }
    ]" />
 
 2. Before running a scan, make sure the system is up to date and running the latest kernel:
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum update -y` },
-     { title: 'DEB', content: `apt-get update && apt-get upgrade -y` }
+     { title: 'DEB', content: `apt-get update && apt-get upgrade -y` },
+     { title: 'APK', content: `apk update && apk upgrade` }
    ]" />
 
 3. Reboot the system.
@@ -148,6 +151,7 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 
 Currently, we provide CSAF data for the following OS versions:
 
+* Alpine Linux 3.18 ELS: [security.tuxcare.com/csaf/v2/els_os/alpinelinux3.18els/](https://security.tuxcare.com/csaf/v2/els_os/alpinelinux3.18els/)
 * CentOS 6 ELS: [security.tuxcare.com/csaf/v2/els_os/centos6els/](https://security.tuxcare.com/csaf/v2/els_os/centos6els/)
 * CentOS 7 ELS: [security.tuxcare.com/csaf/v2/els_os/centos7els/](hhttps://security.tuxcare.com/csaf/v2/els_os/centos7els/)
 * CentOS 8.4 ELS: [security.tuxcare.com/csaf/v2/els_os/centos8.4els/](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/)
@@ -163,6 +167,7 @@ Currently, we provide CSAF data for the following OS versions:
 
 ## TuxCare ELS RSS releases feeds
 
+* Alpine Linux 3.18 ELS: [cve.tuxcare.com/rss_feed/els/releases/alpinelinux3.18els](https://cve.tuxcare.com/rss_feed/els/releases/alpinelinux3.18els)
 * CentOS 6 ELS: [cve.tuxcare.com/rss_feed/els/releases/centos6els](https://cve.tuxcare.com/rss_feed/els/releases/centos6els)
 * CentOS 7 ELS: [cve.tuxcare.com/rss_feed/els/releases/centos7els](https://cve.tuxcare.com/rss_feed/els/releases/centos7els)
 * CentOS 8.4 ELS: [cve.tuxcare.com/rss_feed/els/releases/centos8.4els](https://cve.tuxcare.com/rss_feed/els/releases/centos8.4els)
