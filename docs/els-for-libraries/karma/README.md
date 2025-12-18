@@ -127,7 +127,7 @@ TuxCare provides ELS for karma as an NPM package, hosted on a secure internal re
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the karma library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the ELS version of the Karma library (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -137,15 +137,21 @@ TuxCare provides ELS for karma as an NPM package, hosted on a secure internal re
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare Karma library is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-    added 1 package, and audited 2 packages in 792ms
-    
-    found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the karma library into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for Karma repository.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 

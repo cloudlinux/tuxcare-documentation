@@ -115,15 +115,21 @@ TuxCare provides ELS for RequireJS as an NPM package, hosted on a secure interna
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare RequireJS library is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-    added 1 package, and audited 2 packages in 792ms
-    
-    found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the RequireJS library into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for RequireJS repository.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 

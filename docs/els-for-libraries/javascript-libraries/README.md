@@ -145,7 +145,7 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
 
    </CodeWithCopy>
 
-6. Run the following command to install the ELS version of the JavaScript libraries (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
+6. Run the following command to install the TuxCare ELS version (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -154,16 +154,6 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
    ```
 
    </CodeWithCopy>
-
-   You will see an output like:
-
-   ```text
-    added 1 package, and audited 2 packages in 792ms
-    
-    found 0 vulnerabilities
-   ```
-
-7. You've successfully installed the Tuxcare ELS version of the JavaScript libraries into your project.
 
 ### Step 3: Verify Installation
 
@@ -179,7 +169,7 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
 
 2. After reviewing the dependencies, run your application to ensure everything works correctly.
 
-The npm tool should be able to identify and resolve dependencies from the TuxCare ELS for JavaScript Libraries repository.
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for JavaScript Libraries repository.
 
 ### Conclusion
 

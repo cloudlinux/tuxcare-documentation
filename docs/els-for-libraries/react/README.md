@@ -79,19 +79,25 @@ TuxCare provides ELS for React as an NPM package, hosted on a secure internal re
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare React library is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-    added 1 package, and audited 2 packages in 792ms
-    
-    found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the React transitive dependencies into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for React repository.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
-VEX is a machine-readable format that tells you if a known vulnerability and is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
 TuxCare provides VEX for React transitive dependencies: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/node-fetch/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/react/).
 

@@ -798,18 +798,21 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare Angular repository is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-   added 925 packages, and audited 926 packages in 3m
-
-   158 packages are looking for funding
-     run `npm fund` for details
-
-   found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully integrated the TuxCare ELS for Angular repository into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for Angular repository.
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
