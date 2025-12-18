@@ -155,6 +155,11 @@ const techData = [
         link: "./apache-kafka/",
       },
       {
+        name: "Apache Lucene",
+        versions: "5.5.5",
+        link: "./apache-lucene/",
+      },
+      {
         name: "Jackson",
         versions: "1.9.13",
         link: "./jackson/",
