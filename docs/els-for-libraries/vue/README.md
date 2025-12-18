@@ -95,12 +95,12 @@ TuxCare provides ELS for Vue as an NPM package, hosted on a secure internal regi
 
      </CodeWithCopy>
 
-5. You need to remove the `node_modules` directory and the `pnpm-lock.yaml` file before installing the patched packages. Use the following command:
+5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
    <CodeWithCopy>
 
    ```text
-   rm -rf node_modules pnpm-lock.yaml
+   rm -rf node_modules package-lock.json && npm cache clean --force
    ```
 
    </CodeWithCopy>
@@ -110,7 +110,7 @@ TuxCare provides ELS for Vue as an NPM package, hosted on a secure internal regi
    <CodeWithCopy>
 
    ```text
-   pnpm install
+   npm install
    ```
 
    </CodeWithCopy>
@@ -149,12 +149,12 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 * **Option 2: Manual Update via CLI (Single Dependency)**
 
-  If you want to update a single TuxCare dependency, use the pnpm add command with the specific version. This automatically updates both `package.json` and `pnpm-lock.yaml`:
+  If you want to update a single TuxCare dependency, use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
 
   <CodeWithCopy>
 
   ```text
-  pnpm add vue@npm:@els-js/vue@2.7.16-tuxcare.2
+  npm install vue@npm:@els-js/vue@2.7.16-tuxcare.2
   ```
 
   </CodeWithCopy>
@@ -166,8 +166,8 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  rm -rf node_modules pnpm-lock.yaml
-  pnpm install
+  rm -rf node_modules package-lock.json && npm cache clean --force
+  npm install
   ```
 
   </CodeWithCopy>
