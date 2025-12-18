@@ -316,6 +316,10 @@ export default {
                     icon: '/images/react-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/requirejs/',
+                    icon: '/images/requirejs-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/tailwindcss/',
                     icon: '/images/tailwindcss-logo.webp',
                 },

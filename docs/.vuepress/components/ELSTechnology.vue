@@ -501,6 +501,11 @@ const techData = [
         link: "./react-router/",
       },
       {
+        name: "RequireJS",
+        versions: "2.3.6",
+        link: "./requirejs/",
+      },
+      {
         name: "Request",
         versions: "2.88.0",
         link: "./javascript-libraries/",
