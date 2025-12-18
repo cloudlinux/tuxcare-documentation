@@ -84,7 +84,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
   
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps2 },
-  { title: 'Gradle (build.gradle)', content: gradledeps }
+  { title: 'Gradle (build.gradle)', content: gradledeps2 }
 ]" />
 
   </template>
@@ -181,13 +181,19 @@ const mavendeps2 =
 <dependencies>
     <dependency>
       <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-search</artifactId>
+      <artifactId>hibernate-core</artifactId>
     </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
   implementation("org.hibernate:hibernate-core:5.6.15.Final-tuxcare.1")
+}`
+
+const gradledeps2 =
+`dependencies {
+  implementation platform("org.hibernate:hibernate-search-parent:5.11.10.Final")
+  implementation "org.hibernate:hibernate-core"
 }`
 </script>
 
