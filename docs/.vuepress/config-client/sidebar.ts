@@ -141,6 +141,10 @@ export default {
                     icon: '/images/apache-kafka.webp',
                 },
                 {
+                    path: '/els-for-libraries/apache-lucene/',
+                    icon: '/images/apache-lucene.webp',
+                },
+                {
                     path: '/els-for-libraries/apache-velocity-engine/',
                     icon: '/images/velocity-logo.webp',
                 },
