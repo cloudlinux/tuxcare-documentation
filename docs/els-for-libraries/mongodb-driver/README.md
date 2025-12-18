@@ -115,15 +115,21 @@ TuxCare provides ELS for MongoDB driver as an NPM package, hosted on a secure in
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare MongoDB driver is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-    added 12 packages, and audited 13 packages in 1s
-    
-    found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the MongoDB driver into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for MongoDB repository.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 

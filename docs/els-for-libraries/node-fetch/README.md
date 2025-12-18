@@ -138,15 +138,21 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare node-fetch library is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-    added 1 package, and audited 2 packages in 863ms
-    
-    found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the node-fetch library into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for node-fetch repository.
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

@@ -151,15 +151,21 @@ TuxCare provides ELS for webpack-dev-server as an NPM package, hosted on a secur
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare webpack-dev-server library is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-    added 1 package, and audited 2 packages in 792ms
-    
-    found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the webpack-dev-server library into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for webpack-dev-server repository.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 

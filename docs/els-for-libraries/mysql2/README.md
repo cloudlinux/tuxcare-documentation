@@ -115,15 +115,21 @@ TuxCare provides ELS for MySQL2 as an NPM package, hosted on a secure internal r
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare MySQL2 library is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-    added 13 packages, and audited 14 packages in 986ms
-    
-    found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the MySQL2 library into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for MySQL2 repository.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 

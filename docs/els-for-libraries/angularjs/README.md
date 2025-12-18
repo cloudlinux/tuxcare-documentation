@@ -183,7 +183,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
    </CodeWithCopy>
 
-6. Run the following command to install ELS for AngularJS dependencies (token for the TuxCare repository will be automatically picked up from your .npmrc file):
+6. Run the following command to install ELS for AngularJS dependencies (token for the TuxCare repository will be automatically picked up from your `.npmrc` file):
 
    <CodeWithCopy>
 
@@ -193,15 +193,21 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare AngularJS repository is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-   added 1 package, and audited 2 packages in 796ms
-
-   found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully integrated the TuxCare ELS for AngularJS repository into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for AngularJS repository.
 
 ## Vulnerability Exploitability eXchange (VEX)
 

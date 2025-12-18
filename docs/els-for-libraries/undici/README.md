@@ -115,15 +115,21 @@ TuxCare provides ELS for undici as an NPM package, hosted on a secure internal r
 
    </CodeWithCopy>
 
-   You will see an output like:
+## Step 3: Verify Installation
+
+1. To confirm the TuxCare undici library is set up correctly, use npm to list the project's dependencies:
+
+   <CodeWithCopy>
 
    ```text
-    added 2 packages, and audited 3 packages in 886ms
-    
-    found 0 vulnerabilities
+   npm list
    ```
 
-7. You've successfully installed the Tuxcare ELS version of the undici library into your project.
+   </CodeWithCopy>
+
+2. After reviewing the dependencies, run your application to ensure everything works correctly.
+
+The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for undici repository.
 
 ## Vulnerability Exploitability eXchange (VEX) 
 
