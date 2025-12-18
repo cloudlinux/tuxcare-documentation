@@ -5,6 +5,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Hibernate provides security patche
 ## Supported Versions
 
 * Hibernate ORM 5.6.15.Final
+* Hibernate Search 5.11.10.Final
 
 ## Connection to ELS for Hibernate Repository
 
@@ -68,10 +69,27 @@ Replace the Hibernate dependencies in your build file with the TuxCare-maintaine
 
 You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
 
+<TableTabs label="Choose an extension: " >
+
+  <template #Hibernate_ORM>
+  
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
   { title: 'Gradle (build.gradle)', content: gradledeps }
 ]" />
+
+  </template>
+
+  <template #Hibernate_Search>
+  
+<CodeTabs :tabs="[
+  { title: 'Maven (pom.xml)', content: mavendeps2 },
+  { title: 'Gradle (build.gradle)', content: gradledeps2 }
+]" />
+
+  </template>
+
+</TableTabs>
 
 ### Step 5: Verify and Build
 
@@ -153,9 +171,29 @@ const mavendeps =
     </dependency>
 </dependencies>`
 
+const mavendeps2 =
+`<parent>
+  <groupId>org.hibernate</groupId>
+  <artifactId>hibernate-search-parent</artifactId>
+  <version>5.11.10.Final-tuxcare.1</version>
+</parent>
+
+<dependencies>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+    </dependency>
+</dependencies>`
+
 const gradledeps =
 `dependencies {
   implementation("org.hibernate:hibernate-core:5.6.15.Final-tuxcare.1")
+}`
+
+const gradledeps2 =
+`dependencies {
+  implementation platform("org.hibernate:hibernate-search-parent:5.11.10.Final")
+  implementation "org.hibernate:hibernate-core"
 }`
 </script>
 
