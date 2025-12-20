@@ -75,10 +75,10 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
 
      ```text
      "dependencies": {
-       "lodash": "npm:@els-js/lodash@4.17.19-tuxcare.2"
+       "lodash": "npm:@els-js/lodash@4.17.19-tuxcare.3"
      },
      "overrides": {
-       "lodash@4.17.19": "npm:@els-js/lodash@4.17.19-tuxcare.2"
+       "lodash@4.17.19": "npm:@els-js/lodash@4.17.19-tuxcare.3"
      }
      ```
     
@@ -94,7 +94,7 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
 
       ```text
       "dependencies": {
-        "lodash": "npm:@els-js/lodash@4.5.0-tuxcare.2"
+        "lodash": "npm:@els-js/lodash@4.5.0-tuxcare.3"
       }
       ```
 
@@ -108,7 +108,7 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
 
       ```text
       "dependencies": {
-        "lodash": "npm:@els-js/lodash@4.17.15-tuxcare.2"
+        "lodash": "npm:@els-js/lodash@4.17.15-tuxcare.3"
       }
       ```
 
@@ -122,7 +122,7 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
 
       ```text
       "dependencies": {
-        "lodash": "npm:@els-js/lodash@4.17.19-tuxcare.2"
+        "lodash": "npm:@els-js/lodash@4.17.19-tuxcare.3"
       }
       ```
 
@@ -197,7 +197,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
   <CodeWithCopy>
 
   ```text
-  npm install lodash@npm:@els-js/lodash@4.5.0-tuxcare.2
+  npm install lodash@npm:@els-js/lodash@4.5.0-tuxcare.3
   ```
 
   </CodeWithCopy>
