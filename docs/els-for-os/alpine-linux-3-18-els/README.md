@@ -38,12 +38,26 @@ In order to use Endless Lifecycle Support for Alpine Linux 3.18, you will need t
    <CodeWithCopy>
 
    ```
-   apk info els-define
+   apk info els-alpine-release
    ```
 
    </CodeWithCopy>
 
    It should return the info of an available package. If you see information about the package, you can be sure that the installation was successful. After this, you will be able to install updates from the repository using a regular apk upgrade command.
+
+   Example:
+
+   ```
+   alpine:~# apk info els-alpine-release
+   els-alpine-release-1.0.0-r0 description:
+   ELS Alpine repository configuration
+
+   els-alpine-release-1.0.0-r0 webpage:
+   https://tuxcare.com/
+
+   els-alpine-release-1.0.0-r0 installed size:
+   20 KiB
+   ```
 
 ## Security Updates
 
@@ -65,12 +79,12 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
    </CodeWithCopy>
 
-2. Uninstall the `els-define` package:
+2. Uninstall the `els-alpine-release` package:
 
    <CodeWithCopy>
 
    ```
-   apk del els-define
+   apk del els-alpine-release
    ```
 
    </CodeWithCopy>
