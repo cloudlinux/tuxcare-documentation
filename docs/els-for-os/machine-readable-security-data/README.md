@@ -40,12 +40,12 @@ Identifying the vulnerabilities that apply to your systems is an important task 
 
 OpenSCAP is an open source vulnerability scanner and compliance tool and it can be used to scan a system protected by TuxCare ELS. The following command show how to produce a vulnerability report for the system:
 
-1. Install els-define and OpenSCAP:
+1. Install the ELS release package and OpenSCAP:
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum install els-define openscap openscap-utils scap-security-guide -y` },
      { title: 'DEB', content: `apt-get install els-define libopenscap8 -y` },
-     { title: 'APK', content: `apk add els-define openscap` }
+     { title: 'APK', content: `apk add els-alpine-release openscap` }
    ]" />
 
 2. Before running a scan, make sure the system is up to date and running the latest kernel:
