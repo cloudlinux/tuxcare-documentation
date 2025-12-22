@@ -136,8 +136,8 @@ const techData = [
       },
       {
         name: "Apache CXF",
-        versions: "3.5.9",
-        link: "./java-libraries/",
+        versions: "3.5.9 | 3.5.11",
+        link: "./apache-cxf/",
       },
       {
         name: "DNSJava",

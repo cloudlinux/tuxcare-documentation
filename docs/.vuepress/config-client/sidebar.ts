@@ -165,6 +165,10 @@ export default {
                     icon: '/images/apache.webp',
                 },
                 {
+                    path: '/els-for-libraries/apache-cxf/',
+                    icon: '/images/apache.webp',
+                },
+                {
                     path: '/els-for-libraries/java-libraries/',
                     icon: '/images/java.webp',
                 },

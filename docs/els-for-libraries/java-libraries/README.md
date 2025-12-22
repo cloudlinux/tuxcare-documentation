@@ -7,7 +7,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Commons BeanUtils** 1.9.4
 * **Apache Commons HttpClient** 3.1
 * **Apache Commons IO** 2.7
-* **Apache CXF** 3.5.9
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
 * **Apache Thrift** 0.9.3
 * **DNSJava** 2.1.7
@@ -189,24 +188,24 @@ const gradlerepo =
 const mavendeps =
 `<dependencies>
     <dependency>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-core</artifactId>
-        <version>3.5.9.tuxcare.1</version>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-handler</artifactId>
+        <version>4.1.115.Final.tuxcare.1</version>
     </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-    implementation "org.apache.cxf:cxf-core:3.5.9.tuxcare.1"
+    implementation "io.netty:netty-handler:4.1.115.Final.tuxcare.1"
 }`
 
 const mavendeps2 =
 `<dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-bom</artifactId>
-            <version>3.5.9.tuxcare.1</version>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-bom</artifactId>
+            <version>4.1.115.Final.tuxcare.1</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -215,8 +214,8 @@ const mavendeps2 =
 
 <dependencies>
     <dependency>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-core</artifactId>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-handler</artifactId>
     </dependency>
 </dependencies>`
 
@@ -227,11 +226,11 @@ const gradledeps2 =
 
 dependencyManagement {
     imports {
-        mavenBom 'org.apache.cxf:cxf-bom:3.5.9.tuxcare.1'
+        mavenBom 'io.netty:netty-bom:4.1.115.Final.tuxcare.1'
     }
 }
 
 dependencies {
-    implementation "org.apache.cxf:cxf-core"
+    implementation "io.netty:netty-handler"
 }`
 </script>
