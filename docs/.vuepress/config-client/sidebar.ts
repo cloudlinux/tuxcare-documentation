@@ -31,6 +31,10 @@ export default {
             children: [
                 "/els-for-os/",
                 {
+                    path: '/els-for-os/alpine-linux-3-18-els/',
+                    icon: '/images/alpine-linux.webp',
+                },
+                {
                     path: '/els-for-os/centos-6-els/',
                     icon: '/images/centos.webp',
                 },
