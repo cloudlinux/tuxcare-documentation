@@ -139,7 +139,7 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 
 </template>
 
-<template #Laravel5>
+<template #Laravel5.8>
 
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
 |----------------|----------|----------------------|---------------------|
