@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Laravel from TuxCare provides security fixes
 
 ## Supported Versions
 
-* **Laravel** 8, 10, 11
+* **Laravel** 8, 10, 11, 5.8.38
 
 Other versions upon request.
 
@@ -113,11 +113,45 @@ composer update
 
 Fixes for the following vulnerabilities are available in ELS for Laravel from TuxCare:
 
+<TableTabs label="Choose Laravel version: " >
+
+<template #Laravel11>
+
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
 |----------------|----------|----------------------|---------------------|
-| CVE-2025-27515 | Medium   | >= 11.0.0, < 11.44.1 | 11.44.0-p1+tuxcare  |
-| CVE-2025-27515 | Medium   | < 10.48.29           | 10.48.28-p1+tuxcare |
-| CVE-2025-27515 | Medium   | <= 8.83.29           | 8.83.29-p1+tuxcare  |
+| CVE-2025-27515      | Medium   | >= 11.0.0, < 11.44.1      | 11.44.0-p1+tuxcare  |
+
+</template>
+
+<template #Laravel10>
+
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
+|----------------|----------|----------------------|---------------------|
+| CVE-2025-27515      | Medium   | < 10.48.29                | 10.48.28-p1+tuxcare |
+
+</template>
+
+<template #Laravel8>
+
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
+|----------------|----------|----------------------|---------------------|
+| CVE-2025-27515      | Medium   | <= 8.83.29                | 8.83.29-p1+tuxcare  |
+
+</template>
+
+<template #Laravel5>
+
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
+|----------------|----------|----------------------|---------------------|
+| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4       | 5.8.38-p1+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.8.38-p1+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
