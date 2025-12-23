@@ -556,6 +556,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "tinymce",
+        versions: "6.8.6",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "tough-cookie",
         versions: "2.4.3 | 2.5.0",
         link: "./javascript-libraries/",
