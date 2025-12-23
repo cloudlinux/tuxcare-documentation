@@ -10,6 +10,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **braces** 2.3.2
 * **copy-anything** 2.0.6
 * **cookie** 0.4.2
+* **cross-spawn** 5.1.0
 * **crypto-js** 3.3.0
 * **debug** 4.1.1
 * **dompurify** 2.3.0, 2.4.3
@@ -248,6 +249,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2022-25883 | Direct   | High     | semver            | < 5.7.2, >= 6.0.0 < 6.3.1, >= 7.0.0 < 7.5.3 |
 | CVE-2022-3517  | Direct   | High     | minimatch         | <= 3.0.5           |
 | CVE-2024-21536 | Direct   | High     | http-proxy-middleware | < 2.0.7, >= 3.0.0, < 3.0.3 |
+| CVE-2024-21538 | Direct   | High     | cross-spawn        | -                  |
 | CVE-2024-29415 | Direct   | High     | ip                | <= 2.0.1           |
 | CVE-2024-4068  | Direct   | High     | braces            | < 3.0.3            |
 | AIKIDO-2024-10543 | Direct   | High     | i18next           | 17.0.2 - 24.1.1    |
