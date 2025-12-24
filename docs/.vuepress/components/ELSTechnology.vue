@@ -291,6 +291,11 @@ const techData = [
         link: "./bootstrap/",
       },
       {
+        name: "bootstrap-sass",
+        versions: "3.4.0-tuxcare.1",
+        link: "./bootstrap-sass/",
+      },
+      {
         name: "braces",
         versions: "2.3.2",
         link: "./javascript-libraries/",
@@ -308,6 +313,11 @@ const techData = [
       {
         name: "copy-anything",
         versions: "2.0.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "cross-spawn",
+        versions: "5.1.0",
         link: "./javascript-libraries/",
       },
       {

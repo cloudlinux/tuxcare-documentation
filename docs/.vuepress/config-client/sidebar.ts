@@ -256,6 +256,10 @@ export default {
                     icon: '/images/bootstrap-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/bootstrap-sass/',
+                    icon: '/images/bootstrap-sass-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/express/',
                     icon: '/images/express-logo.webp',
                 },
