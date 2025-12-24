@@ -81,6 +81,32 @@ composer update
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
+::: tip IMPORTANT: Composer Repository Configuration
+
+If you encounter dependency resolution errors like:
+"packages from higher priority repository do not match your constraint"
+
+This occurs when your project requires a version of a dependency that is not yet available in the TuxCare repository.
+
+SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canonical:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nexus.repo.tuxcare.com/repository/els_php_custom1/",
+            "canonical": false
+        }
+    ]
+}
+```
+
+This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
+
+:::
+
+
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
@@ -134,7 +160,7 @@ Fixes for the following vulnerabilities are available in ELS for Dompdf from Tux
 | CVE ID         | Severity | Vulnerable versions | Fixed in version    |
 |----------------|----------|---------------------|---------------------|
 | CVE-2021-3838  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2021-2400  | Medium   | < 2.0.0             | 0.8.6-p1+tuxcare    |
+| CVE-2021-2400  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
 | CVE-2022-41343 | High     | < 2.0.1             | 0.8.6-p1+tuxcare    |
 | CVE-2023-50262 | High     | < 2.0.3             | 0.8.6-p1+tuxcare    |
 | CVE-2021-3902  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |

@@ -82,6 +82,32 @@ composer update
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
+::: tip IMPORTANT: Composer Repository Configuration
+
+If you encounter dependency resolution errors like:
+"packages from higher priority repository do not match your constraint"
+
+This occurs when your project requires a version of a dependency that is not yet available in the TuxCare repository.
+
+SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canonical:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nexus.repo.tuxcare.com/repository/els_php_custom1/",
+            "canonical": false
+        }
+    ]
+}
+```
+
+This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
+
+:::
+
+
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
