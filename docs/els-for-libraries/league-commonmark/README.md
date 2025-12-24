@@ -1,20 +1,20 @@
-# Laravel
+# League CommonMark
 
-Endless Lifecycle Support (ELS) for Laravel from TuxCare provides security fixes for Laravel framework versions that have reached their end-of-life. This allows you to continue running your Laravel applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for League CommonMark from TuxCare provides security fixes for League CommonMark versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Laravel** 8, 10, 11, 5.8.38
+* **League CommonMark** 1.6.7
 
 Other versions upon request.
 
-## Connection to ELS for Laravel Repository
+## Connection to ELS for League CommonMark Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Laravel repository into your Laravel application. The repository provides trusted Laravel framework versions that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for League CommonMark repository into your application. The repository provides trusted League CommonMark packages that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Laravel repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for League CommonMark repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -58,13 +58,13 @@ Add the `els_php_custom1` Composer repository either via CLI or by editing `comp
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Laravel
+### Step 4: Install League CommonMark
 
-Install the TuxCare-maintained Laravel release that matches your project:
+Install the TuxCare-maintained League CommonMark release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require laravel/framework:10.48.28-p1+tuxcare` },
-  { title: 'composer.json', content: laraveljson }
+  { title: 'Composer CLI', content: `composer require league/commonmark:1.6.7-p1+tuxcare` },
+  { title: 'composer.json', content: commonmarkjson }
 ]" />
 
 **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -111,16 +111,16 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Laravel ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/).
+TuxCare provides VEX for League CommonMark ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/league-commonmark/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/league-commonmark/).
 
 ## How to Upgrade to a Newer Version
 
-If you have already installed a TuxCare Laravel package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+If you have already installed a TuxCare League CommonMark package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
 
 <CodeWithCopy>
 
 ```text
-composer require laravel/framework:VERSION-pN+tuxcare
+composer require league/commonmark:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -135,45 +135,17 @@ composer update
 
 </CodeWithCopy>
 
-## Resolved CVEs in Laravel
+## Resolved CVEs in League CommonMark
 
-Fixes for the following vulnerabilities are available in ELS for Laravel from TuxCare:
+Fixes for the following vulnerabilities are available in ELS for League CommonMark from TuxCare:
 
-<TableTabs label="Choose Laravel version: " >
+<TableTabs label="Choose League CommonMark version: ">
 
-<template #Laravel11>
+<template #LeagueCommonMark1.6>
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | >= 11.0.0, < 11.44.1      | 11.44.0-p1+tuxcare  |
-
-</template>
-
-<template #Laravel10>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | < 10.48.29                | 10.48.28-p1+tuxcare |
-
-</template>
-
-<template #Laravel8>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | <= 8.83.29                | 8.83.29-p1+tuxcare  |
-
-</template>
-
-<template #Laravel5.8>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4       | 5.8.38-p1+tuxcare   |
-| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.8.38-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
+| CVE ID             | Severity | Vulnerable versions | Fixed in version    |
+|--------------------|----------|---------------------|---------------------|
+| GHSA-c2pc-g5qf-rfrf | High     | < 2.6.0             | 1.6.7-p1+tuxcare    |
 
 </template>
 
@@ -211,10 +183,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php_custom1/","options":{"http":{"verify":true}}}' --json`
 
-const laraveljson =
+const commonmarkjson =
 `{
     "require": {
-        "laravel/framework": "10.48.28-p1+tuxcare"
+        "league/commonmark": "1.6.7-p1+tuxcare"
     }
 }`
 
