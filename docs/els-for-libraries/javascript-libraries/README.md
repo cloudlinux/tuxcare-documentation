@@ -14,6 +14,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **crypto-js** 3.3.0
 * **debug** 4.1.1
 * **dompurify** 2.3.0, 2.4.3
+* **elliptic** 6.6.0
 * **express-jwt** 0.1.3
 * **form-data** 2.3.3
 * **formidable** 2.1.2
@@ -237,6 +238,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2023-46233 | Direct   | Critical | crypto-js          | < 4.2.0            |
 | CVE-2024-21534 | Direct   | Critical | jsonpath-plus      | 0.1.0 - 10.1.0     |
 | CVE-2024-48910 | Direct   | Critical | dompurify          | < 2.4.2            |
+| GHSA-vjh7-7g9h-fjfh | Direct   | Critical | elliptic          | <= 6.6.0           |
 | CVE-2025-7783  | Direct   | Critical | form-data          | < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3 |
 | CVE-2018-13863 | Direct   | High     | bson               | >= 0.5.0, < 1.0.5 |
 | CVE-2021-23424 | Direct   | High     | ansi-html          | < 0.0.8            |

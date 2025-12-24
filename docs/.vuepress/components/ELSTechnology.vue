@@ -336,6 +336,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "elliptic",
+        versions: "6.6.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "express",
         versions: "3.21.2",
         link: "./express/",
