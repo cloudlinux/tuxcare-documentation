@@ -64,14 +64,31 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-**Replace your dependencies (both direct and transitive, as needed) with the TuxCare-maintained ones, then rebuild your project.**
+Replace the Apache CXF dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-Check [your TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted) for the specific artifacts you need. It's recommended to use the BOM (Bill of Materials) to manage versions:
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
 
+<TableTabs label="Choose a version: " >
+
+  <template #3.5.9>
+  
 <CodeTabs :tabs="[
-  { title: 'Maven (pom.xml)', content: mavendeps },
-  { title: 'Gradle (build.gradle)', content: gradledeps }
+  { title: 'Maven (pom.xml)', content: mavendeps_359 },
+  { title: 'Gradle (build.gradle)', content: gradledeps_359 }
 ]" />
+
+  </template>
+
+  <template #3.5.11>
+  
+<CodeTabs :tabs="[
+  { title: 'Maven (pom.xml)', content: mavendeps_3511 },
+  { title: 'Gradle (build.gradle)', content: gradledeps_3511 }
+]" />
+
+  </template>
+
+</TableTabs>
 
 ### Step 5: Verify and Build
 
@@ -144,13 +161,13 @@ const gradlerepo =
   mavenCentral()
 }`
 
-const mavendeps =
+const mavendeps_359 =
 `<dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-bom</artifactId>
-            <version>3.5.9.tuxcare.1</version>
+            <version>3.5.9-tuxcare.2</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -164,14 +181,49 @@ const mavendeps =
     </dependency>
 </dependencies>`
 
-const gradledeps =
+const gradledeps_359 =
 `plugins {
     id 'java'
 }
 
 dependencyManagement {
     imports {
-        mavenBom 'org.apache.cxf:cxf-bom:3.5.9.tuxcare.1'
+        mavenBom 'org.apache.cxf:cxf-bom:3.5.9-tuxcare.2'
+    }
+}
+
+dependencies {
+    implementation "org.apache.cxf:cxf-core"
+}`
+
+const mavendeps_3511 =
+`<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-bom</artifactId>
+            <version>3.5.11-tuxcare.1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<dependencies>
+    <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-core</artifactId>
+    </dependency>
+</dependencies>`
+
+const gradledeps_3511 =
+`plugins {
+    id 'java'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.apache.cxf:cxf-bom:3.5.11-tuxcare.1'
     }
 }
 

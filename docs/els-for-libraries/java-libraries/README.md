@@ -190,13 +190,13 @@ const mavendeps =
     <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-handler</artifactId>
-        <version>4.1.115.Final.tuxcare.1</version>
+        <version>4.1.115.Final-tuxcare.2</version>
     </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
-    implementation "io.netty:netty-handler:4.1.115.Final.tuxcare.1"
+    implementation "io.netty:netty-handler:4.1.115.Final-tuxcare.2"
 }`
 
 const mavendeps2 =
@@ -205,7 +205,7 @@ const mavendeps2 =
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-bom</artifactId>
-            <version>4.1.115.Final.tuxcare.1</version>
+            <version>4.1.115.Final-tuxcare.2</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -226,7 +226,7 @@ const gradledeps2 =
 
 dependencyManagement {
     imports {
-        mavenBom 'io.netty:netty-bom:4.1.115.Final.tuxcare.1'
+        mavenBom 'io.netty:netty-bom:4.1.115.Final-tuxcare.2'
     }
 }
 
