@@ -122,6 +122,12 @@ TuxCare provides VEX for Apache CXF ELS versions: [security.tuxcare.com/vex/cycl
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
+## Resolved CVEs in ELS for Apache CXF
+
+<ClientOnly>
+  <ResolvedCveTable project="apache-cxf" />
+</ClientOnly>
+
 <script setup>
 const mavencreds =
 `<?xml version="1.0" encoding="UTF-8"?>
