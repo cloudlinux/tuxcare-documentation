@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Hibernate provides security patche
 
 ## Supported Versions
 
-* Hibernate ORM 5.6.15.Final
+* Hibernate ORM 5.4.32.Final, 5.6.15.Final
 * Hibernate Search 5.11.10.Final
 
 ## Connection to ELS for Hibernate Repository
