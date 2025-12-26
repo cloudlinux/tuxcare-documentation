@@ -90,6 +90,11 @@ const techData = [
         link: "./spring/",
       },
       {
+        name: "Apache Avro",
+        versions: "1.10.2",
+        link: "./java-libraries/",
+      },
+      {
         name: "Dom4j",
         versions: "1.6.1",
         link: "./java-libraries/",
@@ -100,8 +105,28 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Google Gson",
+        versions: "2.8.5 | 2.9.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "Google Guava",
         versions: "20.0 | 30.1-jre | 31.1-jre",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Google Guice",
+        versions: "4.2.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "H2 Database",
+        versions: "1.4.200",
+        link: "./java-libraries/",
+      },
+      {
+        name: "HtmlUnit",
+        versions: "2.70.0",
         link: "./java-libraries/",
       },
       {
@@ -121,12 +146,17 @@ const techData = [
       },
       {
         name: "Okio",
-        versions: "2.8.0",
+        versions: "2.8.0 | 2.10.0",
         link: "./java-libraries/",
       },
       {
         name: "Apache Commons BeanUtils",
         versions: "1.9.4",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Commons Compress",
+        versions: "1.20",
         link: "./java-libraries/",
       },
       {
@@ -138,6 +168,21 @@ const techData = [
         name: "Apache CXF",
         versions: "3.5.9 | 3.5.11",
         link: "./apache-cxf/",
+      },
+      {
+        name: "Apache HttpComponents Client",
+        versions: "4.5.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Maven",
+        versions: "3.8.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Maven Shared Utils",
+        versions: "3.2.1",
+        link: "./java-libraries/",
       },
       {
         name: "DNSJava",
@@ -165,8 +210,18 @@ const techData = [
         link: "./jackson/",
       },
       {
+        name: "JSON Assert",
+        versions: "1.2.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "JSON Smart v2",
+        versions: "2.4.8",
+        link: "./java-libraries/",
+      },
+      {
         name: "Hibernate",
-        versions: "5.6.15.Final",
+        versions: "5.4.32.Final | 5.6.15.Final",
         link: "./hibernate/",
       },
       {
@@ -176,7 +231,7 @@ const techData = [
       },
       {
         name: "Logback",
-        versions: "1.2.13",
+        versions: "1.1.7 | 1.2.13",
         link: "./java-libraries/",
       },
       {
@@ -195,6 +250,16 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Reactor BOM",
+        versions: "2020.0.38",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Reactor Netty",
+        versions: "1.0.39",
+        link: "./java-libraries/",
+      },
+      {
         name: "Plexus Utils",
         versions: "1.5.8",
         link: "./java-libraries/",
@@ -206,8 +271,8 @@ const techData = [
       },
       {
         name: "Protobuf",
-        versions: "2.5.0"
-        ,link: "./protobuf/",
+        versions: "2.5.0 | 2.6.1",
+        link: "./protobuf/",
       },
       {
         name: "Reload4j",
@@ -230,6 +295,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Undertow",
+        versions: "2.2.33.Final | 2.3.10.Final",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Velocity Engine",
         versions: "1.7",
         link: "./apache-velocity-engine/",
@@ -246,7 +316,7 @@ const techData = [
       },
       {
         name: "Apache Commons IO",
-        versions: "2.7",
+        versions: "2.5 | 2.7",
         link: "./java-libraries/",
       },
       {
@@ -712,6 +782,16 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "MLflow",
+        versions: "2.22.4",
+        link: "./python-libraries/",
+      },
+      {
+        name: "MySQL Connector/Python",
+        versions: "8.4.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "NumPy",
         versions: "1.15.4 | 1.16.0",
         link: "./numpy/",
@@ -758,7 +838,7 @@ const techData = [
       },
       {
         name: "PyJWT",
-        versions: "2.3.0 | 2.8.0 | 2.10.1",
+        versions: "1.7.1 | 2.3.0 | 2.8.0 | 2.10.1",
         link: "./python-libraries/",
       },
       {
@@ -783,7 +863,7 @@ const techData = [
       },
       {
         name: "PyYAML",
-        versions: "5.3.1",
+        versions: "3.13 | 5.3.1",
         link: "./python-libraries/",
       },
       {

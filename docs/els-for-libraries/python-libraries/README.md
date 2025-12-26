@@ -17,6 +17,8 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **httpx** 0.22.0
 * **idna** 2.1, 2.8, 2.10, 3.6
 * **Jinja2** 2.11.3, 3.0.3
+* **MLflow** 2.22.4
+* **MySQL Connector/Python** 8.4.0
 * **orjson** 3.8.5
 * **pandas** 2.2.0, 2.2.2
 * **paramiko** 3.0.0
@@ -25,12 +27,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Pillow** 8.4.0, 9.4.0, 9.5.0, 11.2.1
 * **protobuf** 4.24.3
 * **pydantic** 1.10.5
-* **PyJWT** 2.3.0, 2.8.0, 2.10.1
+* **PyJWT** 1.7.1, 2.3.0, 2.8.0, 2.10.1
 * **pymongo** 3.13.0
 * **pypdf** 5.9.0
 * **python-jose** 3.3.0
 * **python-multipart** 0.0.6
-* **PyYAML** 5.3.1
+* **PyYAML** 3.13, 5.3.1
 * **redis-py** 4.5.1
 * **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
 * **setuptools** 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.8.0
@@ -152,6 +154,7 @@ TuxCare provides VEX for Python Libraries ELS versions: [security.tuxcare.com/ve
 Fixes for the following vulnerabilities are available in ELS for Python Libraries from TuxCare versions:
 
 <TableTabs label="Select library:">
+
   <template #aiohttp>
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version        |
@@ -287,6 +290,23 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
   </template>
 
+  <template #mlflow>
+
+| CVE ID        | Severity | Vulnerable Versions | Safe Version          |
+| :-----------: | :------: | :-----------------: | :-------------------: |
+| CVE-2024-6838 | N/A      | 2.22.4              | 2.22.4.post1+tuxcare  |
+| CVE-2024-156  | N/A      | 2.22.4              | 2.22.4.post1+tuxcare  |
+
+  </template>
+
+  <template #mysql-connector-python>
+
+| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
+| :------------: | :------: | :-----------------: | :-----------------: |
+| CVE-2024-21272 | N/A      | 8.4.0               | 8.4.0.post1+tuxcare |
+
+  </template>
+
   <template #orjson>
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version        |
@@ -359,11 +379,12 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
   <template #pyjwt>
 
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2025-45768 | N/A      | 2.8.0               | 2.8.0.post1+tuxcare |
+| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
+| :------------: | :------: | :-----------------: | :------------------: |
+| CVE-2025-45768 | N/A      | 2.8.0               | 2.8.0.post1+tuxcare  |
 | CVE-2025-45768 | N/A      | 2.10.1              | 2.10.1.post1+tuxcare |
-| CVE-2022-29217 | High     | 2.3.0               | 2.3.0.post1+tuxcare |
+| CVE-2022-29217 | High     | 1.7.1               | 1.7.1.post1+tuxcare  |
+| CVE-2022-29217 | High     | 2.3.0               | 2.3.0.post1+tuxcare  |
 
   </template>
 
@@ -379,6 +400,8 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version        |
 | :------------: | :------: | :-----------------: | :-----------------: |
+| CVE-2025-62708 | N/A      | 5.9.0               | 5.9.0.post3+tuxcare |
+| CVE-2025-62707 | N/A      | 5.9.0               | 5.9.0.post2+tuxcare |
 | CVE-2025-55197 | High     | 5.9.0               | 5.9.0.post1+tuxcare |
 
   </template>
@@ -403,7 +426,9 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version        |
 | :------------: | :------: | :-----------------: | :-----------------: |
+| CVE-2020-14343 | Critical | 3.13                | 3.13.post1+tuxcare  |
 | CVE-2020-14343 | Critical | 5.3.1               | 5.3.1.post1+tuxcare |
+| CVE-2017-18342 | Critical | 3.13                | 3.13.post1+tuxcare  |
 
   </template>
 
@@ -418,8 +443,8 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
   <template #requests>
 
-| CVE ID         | Severity | Vulnerable Versions | Safe Version        |
-| :------------: | :------: | :-----------------: | :-----------------: |
+| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
+| :------------: | :------: | :-----------------: | :------------------: |
 | CVE-2024-47081 | Medium   | 2.32.3              | 2.32.3.post1+tuxcare |
 | CVE-2024-35195 | Medium   | 2.31.0              | 2.31.0.post1+tuxcare |
 | CVE-2023-32681 | Medium   | 2.25.1              | 2.25.1.post1+tuxcare |
