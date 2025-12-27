@@ -74,10 +74,10 @@ TuxCare provides ELS for Vuetify as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "vuetify": "npm:@els-js/vuetify@2.5.5-tuxcare.1"
+       "vuetify": "npm:@els-js/vuetify@2.5.5-tuxcare.2"
      },
      "overrides": {
-       "vuetify@2.5.5": "npm:@els-js/vuetify@2.5.5-tuxcare.1"
+       "vuetify@2.5.5": "npm:@els-js/vuetify@2.5.5-tuxcare.2"
      }
      ```
     
@@ -89,7 +89,7 @@ TuxCare provides ELS for Vuetify as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "vuetify": "npm:@els-js/vuetify@2.5.5-tuxcare.1"
+       "vuetify": "npm:@els-js/vuetify@2.5.5-tuxcare.2"
      }
      ```
 
@@ -182,10 +182,12 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for Vuetify from TuxCare versions:
 
-| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-| :------------: | :------: |:--------:|:------------------:| :----------------: |
-| CVE-2025-1461  | Direct   | Medium   | Vuetify            | >= 2.0.0 < 3.0.0   |
-| CVE-2022-25873 | Direct   | Medium   | Vuetify            | >= 2.0.1 < 2.6.10  |
+|     CVE ID     | CVE Type | Severity | Affected Libraries |       Vulnerable Versions        |
+|:--------------:| :------: |:--------:|:------------------:|:--------------------------------:|
+| CVE-2025-8083  | Direct   |   High   | Vuetify            | >= 2.2.0-beta.2 < 3.0.0-alpha.10 |
+| CVE-2025-1461  | Direct   |  Medium  | Vuetify            |         >= 2.0.0 < 3.0.0         |
+| CVE-2022-25873 | Direct   |  Medium  | Vuetify            |        >= 2.0.1 < 2.6.10         |
+| CVE-2025-8082  | Direct   |  Medium  | Vuetify            |         >= 2.0.0 < 3.0.0         |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 

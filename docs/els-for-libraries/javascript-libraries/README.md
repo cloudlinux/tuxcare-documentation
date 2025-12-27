@@ -14,6 +14,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **crypto-js** 3.3.0
 * **debug** 4.1.1
 * **dompurify** 2.3.0, 2.4.3
+* **elliptic** 6.6.0
 * **express-jwt** 0.1.3
 * **form-data** 2.3.3
 * **formidable** 2.1.2
@@ -38,6 +39,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **sentry-browser** 5.7.1
 * **ssr-window** 4.0.2
 * **terser** 4.6.10, 4.8.1, 5.3.0, 5.5.1
+* **tinymce** 6.8.6
 * **tough-cookie** 2.4.3, 2.5.0
 * **ua-parser-js** 0.7.21
 * **underscore** 1.7.0
@@ -236,6 +238,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2023-46233 | Direct   | Critical | crypto-js          | < 4.2.0            |
 | CVE-2024-21534 | Direct   | Critical | jsonpath-plus      | 0.1.0 - 10.1.0     |
 | CVE-2024-48910 | Direct   | Critical | dompurify          | < 2.4.2            |
+| GHSA-vjh7-7g9h-fjfh | Direct   | Critical | elliptic          | <= 6.6.0           |
 | CVE-2025-7783  | Direct   | Critical | form-data          | < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3 |
 | CVE-2018-13863 | Direct   | High     | bson               | >= 0.5.0, < 1.0.5 |
 | CVE-2021-23424 | Direct   | High     | ansi-html          | < 0.0.8            |
@@ -271,6 +274,7 @@ Fixes for the following vulnerabilities are available in ELS for JavaScript Libr
 | CVE-2023-0842  | Direct   | Medium   | xml2js            | 0.4.23             |
 | CVE-2023-28155 | Direct   | Medium   | request           | <= 2.88.1          |
 | CVE-2024-47764 | Direct   | Medium   | cookie            | < 0.7.0            |
+| CVE-2024-29881 | Direct   | Medium   | tinymce           | < 6.8.1, >= 6.8.2 < 7.0.0 |
 | CVE-2024-4067  | Direct   | Medium   | micromatch        | < 4.0.8            |
 | CVE-2024-45801 | Direct   | Medium   | dompurify         | < 2.5.4, >= 3.0.0 < 3.1.3 |
 | CVE-2024-47068 | Direct   | Medium   | rollup            | < 2.79.2, < 3.29.5, < 4.22.4 |
