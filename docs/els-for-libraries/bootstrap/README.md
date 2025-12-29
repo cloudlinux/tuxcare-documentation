@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Bootstrap from TuxCare provides security fix
 
 ## Supported Bootstrap Versions
 
-* Bootstrap 3.4.1, 4.6.2
+* Bootstrap 3.2.0, 3.4.1, 4.6.2
 
 ## Connection to ELS for Bootstrap Library
 
@@ -86,6 +86,20 @@ TuxCare provides ELS for Bootstrap as an NPM package, hosted on a secure interna
      Manually update your `package.json` file by replacing your Bootstrap dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
      <TableTabs label="Choose Bootstrap version: " >
+
+      <template #bootstrap_3.2.0>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "bootstrap": "npm:@els-js/bootstrap@3.2.0-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
 
       <template #bootstrap_3.4.1>
 
@@ -205,6 +219,21 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 Fixes for the following vulnerabilities are available in ELS for Bootstrap from TuxCare versions:
 
 <TableTabs label="Choose Bootstrap version: " >
+
+<template #bootstrap_3.2.0>
+
+|    CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+|:-------------:|:--------:|:--------:|:------------------:|:-------------------:|
+| CVE-2019-8331 |  Direct  |  Medium  |     bootstrap      |          < 3.4.1          |
+| CVE-2016-10735 |  Direct  |  Medium  |     bootstrap      |          >= 3.0.0 < 3.4.0, 4.0.0:beta          |
+| CVE-2024-6484 |  Direct  |  Medium  |     bootstrap      |          < 3.4.1          |
+| CVE-2024-6485 |  Direct  |  Medium  |     bootstrap      |          >=1.4.0 <=3.4.1          |
+| CVE-2018-20676 |  Direct  |  Medium  |     bootstrap      |          < 3.4.0          |
+| CVE-2018-20677 |  Direct  |  Medium  |     bootstrap      |          < 3.4.0          |
+| CVE-2018-14042 |  Direct  |  Medium  |     bootstrap      |          < 3.4.0, >= 4.0.0 < 4.1.2          |
+| CVE-2018-14040 |  Direct  |  Medium  |     bootstrap      |          < 3.4.0, >= 4.0.0 < 4.1.2          |
+
+  </template>
 
 <template #bootstrap_3.4.1>
 
