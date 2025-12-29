@@ -357,7 +357,7 @@ const techData = [
       },
       {
         name: "Bootstrap",
-        versions: "3.4.1 | 4.6.2",
+        versions: "3.2.0 | 3.4.1 | 4.6.2",
         link: "./bootstrap/",
       },
       {
