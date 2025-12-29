@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Bootstrap from TuxCare provides security fix
 
 ## Supported Bootstrap Versions
 
-* Bootstrap 3.2.0, 3.4.1, 4.6.2
+* Bootstrap 3.2.0, 3.4.1, 4.1.1, 4.6.2
 
 ## Connection to ELS for Bootstrap Library
 
@@ -108,6 +108,20 @@ TuxCare provides ELS for Bootstrap as an NPM package, hosted on a secure interna
       ```text
       "dependencies": {
         "bootstrap": "npm:@els-js/bootstrap@3.4.1-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+      <template #bootstrap_4.1.1>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "bootstrap": "npm:@els-js/bootstrap@4.1.1-tuxcare.1"
       }
       ```
 
@@ -241,6 +255,17 @@ Fixes for the following vulnerabilities are available in ELS for Bootstrap from 
 |:-------------:|:--------:|:--------:|:------------------:|:-------------------:|
 | CVE-2025-1647 |  Direct  |  Medium  |     bootstrap      |          >=3.4.1 <4.0.0          |
 | CVE-2024-6485 |  Direct  |  Medium  |     bootstrap      |          >=1.4.0 <=3.4.1          |
+
+  </template>
+
+<template #bootstrap_4.1.1>
+
+|    CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+|:-------------:|:--------:|:--------:|:------------------:|:-------------------:|
+| CVE-2019-8331 |  Direct  |  Medium  |     bootstrap      |          < 3.4.1          |
+| CVE-2018-14040 |  Direct  |  Medium  |     bootstrap      |          < 3.4.0, >= 4.0.0 < 4.1.2          |
+| CVE-2018-14042 |  Direct  |  Medium  |     bootstrap      |          < 3.4.0, >= 4.0.0 < 4.1.2          |
+| CVE-2018-14041 |  Direct  |  Medium  |     bootstrap      |          >= 4.0.0 < 4.1.2          |
 
   </template>
 
