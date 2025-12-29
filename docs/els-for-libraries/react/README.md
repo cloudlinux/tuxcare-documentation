@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for React from TuxCare provides security fixes f
 
 ## Supported React Versions
 
-* React 15.6.2
+* React 15.6.2, 19.2.0
 
 ## Connection to ELS for React Library
 
@@ -47,17 +47,75 @@ TuxCare provides ELS for React as an NPM package, hosted on a secure internal re
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your React transitive dependencies with the TuxCare packages:
+4. Update your `package.json` file to replace your React dependencies with the TuxCare packages. You can do this in two ways:
+
+   * **Option 1: TuxCare Patcher (Automated)**
+
+     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the React version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
 
      <CodeWithCopy>
 
      ```text
-     "overrides": {
-       "node-fetch@1.7.3": "npm:@els-js/node-fetch@1.7.3-tuxcare.1"
-     }
+     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+     tuxcare-patch-js
      ```
 
      </CodeWithCopy>
+
+     The patcher will update your `package.json`, for example, from:
+
+     ```text
+     "dependencies": {
+       "react": "^19.2.0"
+     }
+     ```
+
+     to:
+
+     ```text
+     "dependencies": {
+       "react": "npm:@els-js/react@19.2.0-tuxcare.1"
+     },
+     "overrides": {
+       "react@19.2.0": "npm:@els-js/react@19.2.0-tuxcare.1"
+     }
+     ```
+    
+   * **Option 2: Manual Update**
+
+     Manually update your `package.json` file by replacing your React dependencies with the TuxCare packages. This method gives you full control over which packages to update.
+
+     <TableTabs label="Choose React version: " >
+
+      <template #react_15.6.2>
+
+      <CodeWithCopy>
+
+      ```text
+      "overrides": {
+        "node-fetch@1.7.3": "npm:@els-js/node-fetch@1.7.3-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+      <template #react_19.2.0>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "react": "npm:@els-js/react@19.2.0-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+     </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -118,9 +176,28 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for React from TuxCare versions:
 
+<TableTabs label="Choose React version: " >
+
+<template #react_15.6.2>
+
 | CVE ID         | CVE Type   | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :--------: |:--------:|:------------------:| :----------------: |
 | CVE-2022-0235  | Transitive | High     | node-fetch         | < 2.6.7, >= 3.0.0 < 3.1.1 |
+
+</template>
+
+<template #react_19.2.0>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2025-67779 | Direct   | High     | react              | 19.0.2, 19.1.3, 19.2.2 |
+| CVE-2025-55184 | Direct   | High     | react              | >= 19.0.0 < 19.0.2, >= 19.1.0 < 19.1.3, >= 19.2.0 < 19.2.2 |
+| CVE-2025-55182 | Direct   | Medium   | react              | 19.0.0, 19.1.0, 19.1.1, 19.2.0 |
+| CVE-2025-55183 | Direct   | Medium   | react              | >= 19.0.0 < 19.0.2, >= 19.1.0 < 19.1.3, >= 19.2.0 < 19.2.2 |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
