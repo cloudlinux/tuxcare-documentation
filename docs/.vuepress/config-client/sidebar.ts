@@ -231,7 +231,15 @@ export default {
                     icon: '/images/livewire-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/symfony-process/',
+                    path: '/els-for-libraries/dompdf/',
+                    icon: '/images/dompdf-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/league-commonmark/',
+                    icon: '/images/league-commonmark-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/symfony/',
                     icon: '/images/symfony-logo.webp',
                 },
                 {
