@@ -496,6 +496,11 @@ const techData = [
         link: "./lodash/",
       },
       {
+        name: "LoopBack",
+        versions: "2.42.0",
+        link: "./loopback/",
+      },
+      {
         name: "marked",
         versions: "4.0.9",
         link: "./javascript-libraries/",
