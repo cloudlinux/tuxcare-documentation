@@ -288,6 +288,10 @@ export default {
                     icon: '/images/lodash-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/loopback/',
+                    icon: '/images/loopback-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/mongodb-driver/',
                     icon: '/images/mongodb-logo.webp',
                 },
