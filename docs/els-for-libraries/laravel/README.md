@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Laravel from TuxCare provides security fixes
 
 ## Supported Versions
 
-* **Laravel** 8, 10, 11, 5.8.38
+* **Laravel** 5.8.38, 8, 10, 11
 
 Other versions upon request.
 
@@ -81,16 +81,19 @@ composer update
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
-::: tip IMPORTANT: Composer Repository Configuration
+### Composer Repository Configuration
 
 If you encounter dependency resolution errors like:
-"packages from higher priority repository do not match your constraint"
 
-This occurs when your project requires a version of a dependency that is not yet available in the TuxCare repository.
+`packages from higher priority repository do not match your constraint`
 
-SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canonical:
+it usually means your project requires a package version that is not yet available in the TuxCare repository.
 
-```json
+**Solution**: Update your `composer.json` to set the TuxCare repository as non-canonical:
+
+<CodeWithCopy>
+
+```
 {
     "repositories": [
         {
@@ -102,10 +105,9 @@ SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canon
 }
 ```
 
+</CodeWithCopy>
+
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
-
-:::
-
 
 ## Vulnerability Exploitability eXchange (VEX)
 
@@ -141,39 +143,39 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 
 <TableTabs label="Choose Laravel version: " >
 
-<template #Laravel11>
+<template #Laravel_5.8>
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | >= 11.0.0, < 11.44.1      | 11.44.0-p1+tuxcare  |
-
-</template>
-
-<template #Laravel10>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | < 10.48.29                | 10.48.28-p1+tuxcare |
-
-</template>
-
-<template #Laravel8>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | <= 8.83.29                | 8.83.29-p1+tuxcare  |
-
-</template>
-
-<template #Laravel5.8>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4       | 5.8.38-p1+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions           | Fixed in version    |
+|---------------------|----------|-------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0           | 5.8.38-p1+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0           | 5.8.38-p1+tuxcare   |
 | GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.8.38-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
+| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4           | 5.8.38-p1+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0           | 5.8.38-p1+tuxcare   |
+
+</template>
+
+<template #Laravel_8>
+
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
+|----------------|----------|----------------------|---------------------|
+| CVE-2025-27515 | Medium   | <= 8.83.29           | 8.83.29-p1+tuxcare  |
+
+</template>
+
+<template #Laravel_10>
+
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
+|----------------|----------|----------------------|---------------------|
+| CVE-2025-27515 | Medium   | < 10.48.29           | 10.48.28-p1+tuxcare |
+
+</template>
+
+<template #Laravel_11>
+
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
+|----------------|----------|----------------------|---------------------|
+| CVE-2025-27515 | Medium   | >= 11.0.0, < 11.44.1 | 11.44.0-p1+tuxcare  |
 
 </template>
 

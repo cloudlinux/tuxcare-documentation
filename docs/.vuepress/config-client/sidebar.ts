@@ -223,20 +223,20 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/laravel/',
-                    icon: '/images/laravel-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/livewire/',
-                    icon: '/images/livewire-logo.webp',
-                },
-                {
                     path: '/els-for-libraries/dompdf/',
                     icon: '/images/dompdf-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/laravel/',
+                    icon: '/images/laravel-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/league-commonmark/',
                     icon: '/images/league-commonmark-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/livewire/',
+                    icon: '/images/livewire-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/symfony/',

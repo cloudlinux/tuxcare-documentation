@@ -82,16 +82,19 @@ composer update
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
-::: tip IMPORTANT: Composer Repository Configuration
+### Composer Repository Configuration
 
 If you encounter dependency resolution errors like:
-"packages from higher priority repository do not match your constraint"
 
-This occurs when your project requires a version of a dependency that is not yet available in the TuxCare repository.
+`packages from higher priority repository do not match your constraint`
 
-SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canonical:
+it usually means your project requires a package version that is not yet available in the TuxCare repository.
 
-```json
+**Solution**: Update your `composer.json` to set the TuxCare repository as non-canonical:
+
+<CodeWithCopy>
+
+```
 {
     "repositories": [
         {
@@ -103,16 +106,18 @@ SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canon
 }
 ```
 
+</CodeWithCopy>
+
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
-
-:::
-
 
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Symfony components ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/).
+TuxCare provides VEX for Symfony components ELS versions: 
+* Symfony Process - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/)
+* Symfony HttpFoundation - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/)
+
 
 ## How to Upgrade to a Newer Version
 
@@ -140,7 +145,7 @@ composer update
 
 <TableTabs label="Choose Symfony component: " >
 
-<template #SymfonyProcess>
+<template #Symfony_Process>
 
 ### Symfony Process
 
@@ -151,7 +156,7 @@ composer update
 
 </template>
 
-<template #SymfonyHttpFoundation>
+<template #Symfony_HttpFoundation>
 
 ### Symfony HttpFoundation
 

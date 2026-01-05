@@ -81,16 +81,19 @@ composer update
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
-::: tip IMPORTANT: Composer Repository Configuration
+### Composer Repository Configuration
 
 If you encounter dependency resolution errors like:
-"packages from higher priority repository do not match your constraint"
 
-This occurs when your project requires a version of a dependency that is not yet available in the TuxCare repository.
+`packages from higher priority repository do not match your constraint`
 
-SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canonical:
+it usually means your project requires a package version that is not yet available in the TuxCare repository.
 
-```json
+**Solution**: Update your `composer.json` to set the TuxCare repository as non-canonical:
+
+<CodeWithCopy>
+
+```
 {
     "repositories": [
         {
@@ -102,10 +105,9 @@ SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canon
 }
 ```
 
+</CodeWithCopy>
+
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
-
-:::
-
 
 ## Vulnerability Exploitability eXchange (VEX)
 
@@ -141,7 +143,7 @@ Fixes for the following vulnerabilities are available in ELS for Livewire from T
 
 <TableTabs label="Choose Livewire version: ">
 
-<template #Livewire3>
+<template #Livewire_3>
 
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version |
 |----------------|----------|----------------------|------------------|
