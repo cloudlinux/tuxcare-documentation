@@ -204,5 +204,6 @@
     "/els-for-runtimes-and-libraries/ua-parser-js/": "/els-for-libraries/javascript-libraries/",
     "/els-for-runtimes-and-libraries/webpack-subresource-integrity/": "/els-for-libraries/javascript-libraries/",
     "/els-for-runtimes-and-libraries/xml2js/": "/els-for-libraries/javascript-libraries/",
-    "/els-for-runtimes-and-libraries/yargs-parser/": "/els-for-libraries/javascript-libraries/"
+    "/els-for-runtimes-and-libraries/yargs-parser/": "/els-for-libraries/javascript-libraries/",
+    "/els-for-libraries/symfony-process/": "/els-for-libraries/symfony/"
 }

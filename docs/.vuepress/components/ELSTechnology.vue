@@ -953,9 +953,19 @@ const techData = [
     ecosystemIcon: "/images/php-logo.webp",
     projects: [
       {
+        name: "DomPDF",
+        versions: "0.8.x | 1.2.x",
+        link: "./dompdf/",
+      },      
+      {
         name: "Laravel",
-        versions: "8 | 10 | 11",
+        versions: "5.8.38 | 8 | 10 | 11",
         link: "./laravel/",
+      },
+      {
+        name: "League Commonmark",
+        versions: "1.6.7",
+        link: "./league-commonmark/",
       },
       {
         name: "Livewire",
@@ -963,19 +973,14 @@ const techData = [
         link: "./livewire/",
       },
       {
-        name: "Symfony components",
-        versions: "5.4.x | 6.4.x | 3.4.x | 4.4.x",
+        name: "Symfony HttpFoundation",
+        versions: "3.4.x | 4.4.x",
         link: "./symfony/",
       },
       {
-        name: "DomPDF",
-        versions: "1.2.x | 0.8.x",
-        link: "./dompdf/",
-      },
-      {
-        name: "League Commonmark",
-        versions: "1.6.x",
-        link: "./league-commonmark/",
+        name: "Symfony Process",
+        versions: "5.x | 6.x",
+        link: "./symfony/",
       },
     ],
   },

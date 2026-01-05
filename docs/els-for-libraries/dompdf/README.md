@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Dompdf from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* **Dompdf** 1.2.2, 0.8.6
+* **Dompdf** 0.8.6, 1.2.2
 
 Other versions upon request.
 
@@ -81,16 +81,19 @@ composer update
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
-::: tip IMPORTANT: Composer Repository Configuration
+### Composer Repository Configuration
 
 If you encounter dependency resolution errors like:
-"packages from higher priority repository do not match your constraint"
 
-This occurs when your project requires a version of a dependency that is not yet available in the TuxCare repository.
+`packages from higher priority repository do not match your constraint`
 
-SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canonical:
+it usually means your project requires a package version that is not yet available in the TuxCare repository.
 
-```json
+**Solution**: Update your `composer.json` to set the TuxCare repository as non-canonical:
+
+<CodeWithCopy>
+
+```
 {
     "repositories": [
         {
@@ -102,10 +105,9 @@ SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canon
 }
 ```
 
+</CodeWithCopy>
+
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
-
-:::
-
 
 ## Vulnerability Exploitability eXchange (VEX)
 
@@ -141,32 +143,32 @@ Fixes for the following vulnerabilities are available in ELS for Dompdf from Tux
 
 <TableTabs label="Choose Dompdf version: ">
 
-<template #Dompdf1.2>
+<template #Dompdf_0.8.6>
 
 | CVE ID         | Severity | Vulnerable versions | Fixed in version    |
 |----------------|----------|---------------------|---------------------|
-| CVE-2021-3838  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2021-2400  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2022-41343 | High     | < 2.0.1             | 1.2.2-p1+tuxcare    |
-| CVE-2023-50262 | High     | < 2.0.3             | 1.2.2-p1+tuxcare    |
-| CVE-2021-3902  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2022-0085  | Medium   | < 2.0.0             | 1.2.2-p1+tuxcare    |
-| CVE-2023-23924 | Critical | < 2.0.2             | 1.2.2-p1+tuxcare    |
+| CVE-2023-50262 | High     | < 2.0.3             | 0.8.6-p1+tuxcare    |
+| CVE-2023-23924 | Critical | < 2.0.2             | 0.8.6-p1+tuxcare    |
+| CVE-2022-41343 | High     | < 2.0.1             | 0.8.6-p1+tuxcare    |
+| CVE-2022-28368 | Critical | < 1.2.1             | 0.8.6-p1+tuxcare    |
+| CVE-2022-0085  | Medium   | < 2.0.0             | 0.8.6-p1+tuxcare    |
+| CVE-2021-3902  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
+| CVE-2021-3838  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
+| CVE-2021-2400  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
 
 </template>
 
-<template #Dompdf0.8>
+<template #Dompdf_1.2.2>
 
 | CVE ID         | Severity | Vulnerable versions | Fixed in version    |
 |----------------|----------|---------------------|---------------------|
-| CVE-2021-3838  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2021-2400  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2022-41343 | High     | < 2.0.1             | 0.8.6-p1+tuxcare    |
-| CVE-2023-50262 | High     | < 2.0.3             | 0.8.6-p1+tuxcare    |
-| CVE-2021-3902  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2022-0085  | Medium   | < 2.0.0             | 0.8.6-p1+tuxcare    |
-| CVE-2023-23924 | Critical | < 2.0.2             | 0.8.6-p1+tuxcare    |
-| CVE-2022-28368 | Critical | < 1.2.1             | 0.8.6-p1+tuxcare    |
+| CVE-2023-50262 | High     | < 2.0.3             | 1.2.2-p1+tuxcare    |
+| CVE-2023-23924 | Critical | < 2.0.2             | 1.2.2-p1+tuxcare    |
+| CVE-2022-41343 | High     | < 2.0.1             | 1.2.2-p1+tuxcare    |
+| CVE-2022-0085  | Medium   | < 2.0.0             | 1.2.2-p1+tuxcare    |
+| CVE-2021-3902  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
+| CVE-2021-3838  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
+| CVE-2021-2400  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
 
 </template>
 
