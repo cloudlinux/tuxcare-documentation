@@ -8,7 +8,7 @@ TuxCare, which is an expansion of the CloudLinux’s KernelCare and Extended Lif
 
 With [TuxCare Live Patching Services](/live-patching-services/), Linux kernels, libraries, databases, virtualizations and IoT devices receive automated security patches applied with zero downtime.
 
-Using the [TuxCare Extended Lifecycle Support](/extended-lifecycle-support/) services, you can migrate to the newest version of Linux at your own pace while maintaining protection from the common risks of running an end-of-life distro.
+Using the [TuxCare Endless Lifecycle Support](/endless-lifecycle-support/) services, you can migrate to the newest version of Linux at your own pace while maintaining protection from the common risks of running an end-of-life distro.
 
 [TuxCare Enterprise Support](/enterprise-support-for-almalinux/) provides a TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with 16 years of support coverage. It also delivers an extended lifecycle with FIPS-compliant security patches for select minor versions and helps avoid costly upfront support package fees with pay-as-you-go hourly support bundles.
 

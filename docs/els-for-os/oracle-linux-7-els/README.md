@@ -28,7 +28,7 @@ In order to use Endless Lifecycle Support for Oracle Linux 7, you will need to o
    <CodeWithCopy>
 
    ```
-   sh install-oraclelinux7-els-repo.sh --license-key XXXX-XXXXXXXXX
+   sh install-oraclelinux7-els-repo.sh --license-key XXXXXXXX
    ```
 
    </CodeWithCopy>

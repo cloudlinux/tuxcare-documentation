@@ -28,7 +28,7 @@ In order to use Endless Lifecycle Support for Red Hat Enterprise Linux 7, you wi
    <CodeWithCopy>
 
    ```
-   sh install-rhel7-els-repo.sh --license-key XXXX-XXXXXXXXX
+   sh install-rhel7-els-repo.sh --license-key XXXXXXXX
    ```
 
    </CodeWithCopy>

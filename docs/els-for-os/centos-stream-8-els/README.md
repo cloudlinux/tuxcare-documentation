@@ -28,7 +28,7 @@ In order to use Endless Lifecycle Support for CentOS Stream 8, you will need to 
    <CodeWithCopy>
 
    ```
-   sh install-centos8stream-els-repo.sh --license-key XXXX-XXXXXXXXX
+   sh install-centos8stream-els-repo.sh --license-key XXXXXXXX
    ```
 
    </CodeWithCopy>

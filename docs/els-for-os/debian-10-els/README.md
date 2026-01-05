@@ -28,7 +28,7 @@ In order to use Endless Lifecycle Support for Debian 10, you will need to open T
    <CodeWithCopy>
 
    ```
-   bash install-debian10-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
+   bash install-debian10-els-repo.sh --license-key XXXXXXXXXXX
    ```
 
    </CodeWithCopy>

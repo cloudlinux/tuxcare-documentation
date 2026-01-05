@@ -23,8 +23,8 @@ In order to use Endless Lifecycle Support for CentOS 8, you will need to open TC
 2. Run the installer script with keys:
 
    <CodeTabs :tabs="[
-     { title: 'CentOS 8.4 ELS', content: `sh install-centos8.4-els-repo.sh --license-key XXXX-XXXXXXXXXXXX` },
-     { title: 'CentOS 8.5 ELS', content: `sh install-centos8.5-els-repo.sh --license-key XXXX-XXXXXXXXXXXX` }
+     { title: 'CentOS 8.4 ELS', content: `sh install-centos8.4-els-repo.sh --license-key XXXXXXXXXXX` },
+     { title: 'CentOS 8.5 ELS', content: `sh install-centos8.5-els-repo.sh --license-key XXXXXXXXXXX` }
    ]" />
 
    The installation script registers the server in the CLN with the key and adds a PGP key to the server.
