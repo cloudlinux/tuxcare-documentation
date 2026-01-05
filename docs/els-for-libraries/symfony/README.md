@@ -1,20 +1,21 @@
-# Symfony Process
+# Symfony
 
-Endless Lifecycle Support (ELS) for Symfony Process from TuxCare provides security fixes for Symfony Process component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, Symfony HttpFoundation from TuxCare provides security fixes for Symfony component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions
+## Supported Versions and Components
 
 * **Symfony Process** 5.x, 6.x
+* **Symfony HttpFoundation** 3.4.x, 4.4.x
 
 Other versions upon request.
 
-## Connection to ELS for Symfony Process Repository
+## Connection to ELS for Symfony Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Symfony Process repository into your application. The repository provides trusted Symfony Process packages that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Symfony components repository into your application. The repository provides trusted Symfony packages that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Symfony Process repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Symfony repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -58,9 +59,9 @@ Add the `els_php_custom1` Composer repository either via CLI or by editing `comp
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Symfony Process
+### Step 4: Install Symfony components
 
-Install the TuxCare-maintained Symfony Process release that matches your project:
+Install the TuxCare-maintained Symfony components release that matches your project:
 
 <CodeTabs :tabs="[
   { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p1+tuxcare` },
@@ -81,11 +82,37 @@ composer update
 
 Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
+::: tip IMPORTANT: Composer Repository Configuration
+
+If you encounter dependency resolution errors like:
+"packages from higher priority repository do not match your constraint"
+
+This occurs when your project requires a version of a dependency that is not yet available in the TuxCare repository.
+
+SOLUTION: Update your `composer.json` to set the TuxCare repository as non-canonical:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nexus.repo.tuxcare.com/repository/els_php_custom1/",
+            "canonical": false
+        }
+    ]
+}
+```
+
+This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
+
+:::
+
+
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Symfony Process ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/).
+TuxCare provides VEX for Symfony components ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/).
 
 ## How to Upgrade to a Newer Version
 
@@ -109,14 +136,33 @@ composer update
 
 </CodeWithCopy>
 
-## Resolved CVEs in Symfony Process
+## Resolved CVEs
 
-Fixes for the following vulnerabilities are available in ELS for Symfony Process from TuxCare:
+<TableTabs label="Choose Symfony component: " >
+
+<template #SymfonyProcess>
+
+### Symfony Process
 
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
 |----------------|----------|----------------------|-------------------|
 | CVE-2025-27515 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
 | CVE-2025-27515 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
+
+</template>
+
+<template #SymfonyHttpFoundation>
+
+### Symfony HttpFoundation
+
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
+|----------------|----------|----------------------|-------------------|
+| CVE-2025-64500 | Critical |< 5.4.50 >=6, <6.4.29, >=7,<7.3.7| 3.4.47-p1+tuxcare |
+| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p1+tuxcare |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 

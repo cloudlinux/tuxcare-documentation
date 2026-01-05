@@ -1,20 +1,20 @@
-# Laravel
+# Dompdf
 
-Endless Lifecycle Support (ELS) for Laravel from TuxCare provides security fixes for Laravel framework versions that have reached their end-of-life. This allows you to continue running your Laravel applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Dompdf from TuxCare provides security fixes for Dompdf versions that have reached their end-of-life. This allows you to continue running your Dompdf applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Laravel** 8, 10, 11, 5.8.38
+* **Dompdf** 1.2.2, 0.8.6
 
 Other versions upon request.
 
-## Connection to ELS for Laravel Repository
+## Connection to ELS for Dompdf Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Laravel repository into your Laravel application. The repository provides trusted Laravel framework versions that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Dompdf repository into your application. The repository provides trusted Dompdf packages that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Laravel repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Dompdf repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -58,13 +58,13 @@ Add the `els_php_custom1` Composer repository either via CLI or by editing `comp
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Laravel
+### Step 4: Install Dompdf
 
-Install the TuxCare-maintained Laravel release that matches your project:
+Install the TuxCare-maintained Dompdf release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require laravel/framework:10.48.28-p1+tuxcare` },
-  { title: 'composer.json', content: laraveljson }
+  { title: 'Composer CLI', content: `composer require dompdf/dompdf:1.2.2-p1+tuxcare` },
+  { title: 'composer.json', content: dompdfjson }
 ]" />
 
 **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -111,16 +111,16 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Laravel ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/).
+TuxCare provides VEX for Dompdf ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/dompdf/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/dompdf/).
 
 ## How to Upgrade to a Newer Version
 
-If you have already installed a TuxCare Laravel package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+If you have already installed a TuxCare Dompdf package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
 
 <CodeWithCopy>
 
 ```text
-composer require laravel/framework:VERSION-pN+tuxcare
+composer require dompdf/dompdf:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -135,45 +135,38 @@ composer update
 
 </CodeWithCopy>
 
-## Resolved CVEs in Laravel
+## Resolved CVEs in Dompdf
 
-Fixes for the following vulnerabilities are available in ELS for Laravel from TuxCare:
+Fixes for the following vulnerabilities are available in ELS for Dompdf from TuxCare:
 
-<TableTabs label="Choose Laravel version: " >
+<TableTabs label="Choose Dompdf version: ">
 
-<template #Laravel11>
+<template #Dompdf1.2>
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | >= 11.0.0, < 11.44.1      | 11.44.0-p1+tuxcare  |
-
-</template>
-
-<template #Laravel10>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | < 10.48.29                | 10.48.28-p1+tuxcare |
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2021-3838  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
+| CVE-2021-2400  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
+| CVE-2022-41343 | High     | < 2.0.1             | 1.2.2-p1+tuxcare    |
+| CVE-2023-50262 | High     | < 2.0.3             | 1.2.2-p1+tuxcare    |
+| CVE-2021-3902  | Critical | < 2.0.0             | 1.2.2-p1+tuxcare    |
+| CVE-2022-0085  | Medium   | < 2.0.0             | 1.2.2-p1+tuxcare    |
+| CVE-2023-23924 | Critical | < 2.0.2             | 1.2.2-p1+tuxcare    |
 
 </template>
 
-<template #Laravel8>
+<template #Dompdf0.8>
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| CVE-2025-27515      | Medium   | <= 8.83.29                | 8.83.29-p1+tuxcare  |
-
-</template>
-
-<template #Laravel5.8>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
-|----------------|----------|----------------------|---------------------|
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4       | 5.8.38-p1+tuxcare   |
-| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.8.38-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0       | 5.8.38-p1+tuxcare   |
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2021-3838  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
+| CVE-2021-2400  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
+| CVE-2022-41343 | High     | < 2.0.1             | 0.8.6-p1+tuxcare    |
+| CVE-2023-50262 | High     | < 2.0.3             | 0.8.6-p1+tuxcare    |
+| CVE-2021-3902  | Critical | < 2.0.0             | 0.8.6-p1+tuxcare    |
+| CVE-2022-0085  | Medium   | < 2.0.0             | 0.8.6-p1+tuxcare    |
+| CVE-2023-23924 | Critical | < 2.0.2             | 0.8.6-p1+tuxcare    |
+| CVE-2022-28368 | Critical | < 1.2.1             | 0.8.6-p1+tuxcare    |
 
 </template>
 
@@ -211,10 +204,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php_custom1/","options":{"http":{"verify":true}}}' --json`
 
-const laraveljson =
+const dompdfjson =
 `{
     "require": {
-        "laravel/framework": "10.48.28-p1+tuxcare"
+        "dompdf/dompdf": "1.2.2-p1+tuxcare"
     }
 }`
 

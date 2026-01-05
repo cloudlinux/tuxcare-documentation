@@ -963,9 +963,19 @@ const techData = [
         link: "./livewire/",
       },
       {
-        name: "Symfony Process",
-        versions: "5.x | 6.x",
-        link: "./symfony-process/",
+        name: "Symfony components",
+        versions: "5.4.x | 6.4.x | 3.4.x | 4.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "DomPDF",
+        versions: "1.2.x | 0.8.x",
+        link: "./dompdf/",
+      },
+      {
+        name: "League Commonmark",
+        versions: "1.6.x",
+        link: "./league-commonmark/",
       },
     ],
   },
