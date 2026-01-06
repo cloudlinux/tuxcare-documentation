@@ -28,7 +28,7 @@ In order to use Endless Lifecycle Support for Alpine Linux 3.18, you will need t
    <CodeWithCopy>
 
    ```
-   sh install-els-alpine-repo.sh --license-key XXXX-XXXXXXXXXXXX
+   sh install-els-alpine-repo.sh --license-key XXXXXXXXXXX
    ```
 
    </CodeWithCopy>

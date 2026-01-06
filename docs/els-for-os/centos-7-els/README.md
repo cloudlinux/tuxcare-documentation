@@ -29,7 +29,7 @@ In order to use Endless Lifecycle Support for CentOS 7, you will need to open TC
    <CodeWithCopy>
 
    ```
-   sh install-centos7-els-repo.sh --license-key XXXX-XXXXXXXXX
+   sh install-centos7-els-repo.sh --license-key XXXXXXXX
    ```
 
    </CodeWithCopy>

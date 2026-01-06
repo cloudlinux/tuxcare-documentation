@@ -28,7 +28,7 @@ In order to use Endless Lifecycle Support for Ubuntu 18.04, you will need to ope
    <CodeWithCopy>
 
    ```
-   bash install-ubuntu18.04-els-repo.sh --license-key XXXX-XXXXXXXXXXXX
+   bash install-ubuntu18.04-els-repo.sh --license-key XXXXXXXXXXX
    ```
 
    </CodeWithCopy>
