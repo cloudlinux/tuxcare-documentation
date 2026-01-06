@@ -681,6 +681,11 @@ const techData = [
         link: "./webpack/",
       },
       {
+        name: "YUI",
+        versions: "3.18.1",
+        link: "./yui/",
+      },
+      {
         name: "webpack-dev-server",
         versions: "3.11.0 | 4.7.3 | 4.15.1",
         link: "./webpack-dev-server/",
