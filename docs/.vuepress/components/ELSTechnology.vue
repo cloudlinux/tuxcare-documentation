@@ -547,7 +547,7 @@ const techData = [
       },
       {
         name: "Nuxt",
-        versions: "overrides only",
+        versions: "2.18.1 | 3.2.0",
         link: "./nuxt/",
       },
       {

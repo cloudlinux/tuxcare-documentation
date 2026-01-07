@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes fo
 
 ## Supported Nuxt Versions
 
-* Nuxt (overrides only)
+* Nuxt 2.18.1, 3.2.0
 
 ## Connection to ELS for Nuxt Library
 
@@ -49,25 +49,48 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 
 4. Update your `package.json` file to add the following overrides for the TuxCare packages:
 
-   <CodeWithCopy>
+   <TableTabs label="Choose Nuxt version: " >
 
-   ```text
-   "overrides": {
-     "braces@2.3.2": "npm:@els-js/braces@2.3.2-tuxcare.3",
-     "braces@3.0.3": "npm:@els-js/braces@3.0.3-tuxcare.1",
-     "cookie@0.3.1": "npm:@els-js/cookie@0.3.1-tuxcare.1",
-     "devalue@2.0.1": "npm:@els-js/devalue@2.0.1-tuxcare.1",
-     "ip@2.0.1": "npm:@els-js/ip@2.0.1-tuxcare.2",
-     "lodash.template@4.5.0": "npm:@els-js/lodash.template@4.5.0-tuxcare.2",
-     "parse-git-config@3.0.0": "npm:@els-js/parse-git-config@3.0.0-tuxcare.1",
-     "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.2",
-     "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
-     "vue@2.7.16": "npm:@els-js/vue@2.7.16-tuxcare.3",
-     "vue-template-compiler@2.7.16": "npm:@els-js/vue-template-compiler@2.7.16-tuxcare.3"
-   }
-   ```
+    <template #nuxt_3.2.0>
 
-   </CodeWithCopy>
+    <CodeWithCopy>
+
+    ```text
+    "overrides": {
+      "lodash.pick@4.4.0": "npm:@els-js/lodash.pick@4.4.0-tuxcare.1",
+      "lodash.template@4.5.0": "npm:@els-js/lodash.template@4.5.0-tuxcare.2"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    </template>
+
+    <template #nuxt_2.18.1>
+
+    <CodeWithCopy>
+
+    ```text
+    "overrides": {
+      "braces@2.3.2": "npm:@els-js/braces@2.3.2-tuxcare.3",
+      "braces@3.0.3": "npm:@els-js/braces@3.0.3-tuxcare.1",
+      "cookie@0.3.1": "npm:@els-js/cookie@0.3.1-tuxcare.1",
+      "devalue@2.0.1": "npm:@els-js/devalue@2.0.1-tuxcare.1",
+      "ip@2.0.1": "npm:@els-js/ip@2.0.1-tuxcare.2",
+      "lodash.template@4.5.0": "npm:@els-js/lodash.template@4.5.0-tuxcare.2",
+      "parse-git-config@3.0.0": "npm:@els-js/parse-git-config@3.0.0-tuxcare.1",
+      "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.2",
+      "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
+      "vue@2.7.16": "npm:@els-js/vue@2.7.16-tuxcare.3",
+      "vue-template-compiler@2.7.16": "npm:@els-js/vue-template-compiler@2.7.16-tuxcare.3"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    </template>
+
+   </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -128,6 +151,19 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCare versions:
 
+<TableTabs label="Choose Nuxt version: " >
+
+<template #nuxt_3.2.0>
+
+|    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
+|:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2020-8203 | Transitive | High     | lodash.pick        | >= 4.0.0 <= 4.4.0   |
+| CVE-2021-23337 | Transitive | High     | lodash.template    | <= 4.5.0            |
+
+</template>
+
+<template #nuxt_2.18.1>
+
 |    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 |:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
 | CVE-2024-4068 | Transitive | High     | braces             |       < 3.0.3       |
@@ -140,6 +176,10 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 | CVE-2025-54798 | Transitive | High     | tmp                |      <= 0.2.4       |
 | CVE-2024-9506 | Transitive | High     | vue                |   >=2.0.0 < 3.0.0   |
 | CVE-2024-6783 | Transitive | High     | vue-template-compiler |   >=2.0.0 < 3.0.0   |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
