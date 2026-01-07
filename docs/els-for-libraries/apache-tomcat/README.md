@@ -9,7 +9,7 @@ Apache Tomcat is also available for installation as a standalone server. You can
 
 ## Supported Versions
 
-* Apache Tomcat 8.5.100, 9.0.75, 9.0.83
+* Apache Tomcat 8.5.100, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100
 
 ## Connection to ELS for Apache Tomcat Repository
 

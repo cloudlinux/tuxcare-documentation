@@ -141,7 +141,7 @@ const techData = [
       },
       {
         name: "Apache Tomcat",
-        versions: "8.5.100 | 9.0.75 | 9.0.83",
+        versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100",
         link: "./apache-tomcat/",
       },
       {
