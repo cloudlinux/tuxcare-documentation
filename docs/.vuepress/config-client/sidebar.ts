@@ -320,6 +320,10 @@ export default {
                     icon: '/images/node-fetch-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/nuxt/',
+                    icon: '/images/nuxt-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/passport/',
                     icon: '/images/passport-logo.webp',
                 },

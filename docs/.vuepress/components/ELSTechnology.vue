@@ -546,6 +546,11 @@ const techData = [
         link: "./node-fetch/",
       },
       {
+        name: "Nuxt",
+        versions: "overrides only",
+        link: "./nuxt/",
+      },
+      {
         name: "node-forge",
         versions: "0.10.0",
         link: "./javascript-libraries/",
