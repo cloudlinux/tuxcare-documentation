@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for bootstrap-sass from TuxCare provides securit
 
 ## Supported bootstrap-sass Versions
 
-* bootstrap-sass 3.4.0-tuxcare.1
+* bootstrap-sass 3.4.0
 
 ## Connection to ELS for bootstrap-sass Library
 
@@ -37,8 +37,8 @@ TuxCare provides ELS for bootstrap-sass as an NPM package, hosted on a secure in
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
-   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
+   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
    ```
 
    </CodeWithCopy>

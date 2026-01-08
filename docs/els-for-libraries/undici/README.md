@@ -37,8 +37,8 @@ TuxCare provides ELS for undici as an NPM package, hosted on a secure internal r
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
-   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
+   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
    ```
 
    </CodeWithCopy>
