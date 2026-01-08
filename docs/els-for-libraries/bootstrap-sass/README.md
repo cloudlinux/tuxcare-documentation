@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for bootstrap-sass from TuxCare provides securit
 
 ## Supported bootstrap-sass Versions
 
-* bootstrap-sass 3.4.0-tuxcare.1
+* bootstrap-sass 3.4.0
 
 ## Connection to ELS for bootstrap-sass Library
 

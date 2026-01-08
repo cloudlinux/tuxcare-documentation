@@ -362,7 +362,7 @@ const techData = [
       },
       {
         name: "bootstrap-sass",
-        versions: "3.4.0-tuxcare.1",
+        versions: "3.4.0",
         link: "./bootstrap-sass/",
       },
       {
@@ -457,7 +457,7 @@ const techData = [
       },
       {
         name: "jQuery",
-        versions: "1.12.4 | 2.2.4 | 3.4.1",
+        versions: "1.8.2 | 1.12.4 | 2.2.4 | 3.4.1",
         link: "./jquery/",
       },
       {
@@ -966,7 +966,7 @@ const techData = [
         name: "DomPDF",
         versions: "0.8.x | 1.2.x",
         link: "./dompdf/",
-      },      
+      },
       {
         name: "Laravel",
         versions: "5.8.38 | 8 | 10 | 11",
