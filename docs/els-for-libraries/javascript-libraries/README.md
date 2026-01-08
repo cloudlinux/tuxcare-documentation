@@ -80,8 +80,8 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
-   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
+   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
    ```
 
    </CodeWithCopy>
