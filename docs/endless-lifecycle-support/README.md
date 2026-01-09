@@ -8,7 +8,7 @@ Explore TuxCare’s Endless Lifecycle Support Portfolio:
 
 * **Endless Lifecycle Support for Runtimes**
 
-  Keep your apps running safely on the runtimes they were built for, without rushed upgrades or broken code – even after official support ends. [learn more](/els-for-runtimes/).
+  Keep your apps running safely on the runtimes they were built for, without rushed upgrades or broken code – even after official support ends. [Learn more](/els-for-runtimes/).
 
 * **Endless Lifecycle Support for Libraries**
 
