@@ -50,7 +50,11 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
 
 4. Update your `package.json` file to replace your node-fetch dependencies with the TuxCare packages. You can do this in two ways:
 
-   * **Option 1: TuxCare Patcher (Automated)**
+   * **Option 1: Manual update**
+
+     Manually update your `package.json` file by replacing your node-fetch dependencies with the TuxCare packages. This method gives you full control over which packages to update.
+
+   * **Option 2: TuxCare Patcher (Automated)**
 
      Install the Patcher globally and run it. The TuxCare Patcher automatically detects the node-fetch version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
 
@@ -75,16 +79,12 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
 
      ```text
      "dependencies": {
-       "node-fetch": "npm:@els-js/node-fetch@2.6.1-tuxcare.1"
+       "node-fetch": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
      },
      "overrides": {
-       "node-fetch@2.6.1": "npm:@els-js/node-fetch@2.6.1-tuxcare.1"
+       "node-fetch@2.6.1": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
      }
      ```
-    
-   * **Option 2: Manual Update**
-
-     Manually update your `package.json` file by replacing your node-fetch dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
      <TableTabs label="Choose node-fetch version: " >
 
@@ -94,7 +94,7 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
 
       ```text
       "dependencies": {
-        "node-fetch": "npm:@els-js/node-fetch@1.7.3-tuxcare.1"
+        "node-fetch": "npm:@els-js/node-fetch@>=1.7.3-tuxcare.1"
       }
       ```
 
@@ -108,7 +108,7 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
 
       ```text
       "dependencies": {
-        "node-fetch": "npm:@els-js/node-fetch@2.6.1-tuxcare.1"
+        "node-fetch": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
       }
       ```
 
@@ -156,35 +156,7 @@ The `npm` tool should be able to identify and resolve dependencies from the TuxC
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you can use one of the following methods:
-
-* **Option 1: TuxCare Patcher (Automated). Recommended for projects with multiple TuxCare dependencies.**
-
-  The TuxCare Patcher automatically detects all TuxCare dependencies in your `package.json` and updates them to the latest available versions.
-
-  <CodeWithCopy>
-
-  ```text
-  tuxcare-patch-js --upgrade
-  ```
-
-  </CodeWithCopy>
-
-* **Option 2: Manual Update via CLI (Single Dependency)**
-
-  If you want to update a single TuxCare dependency, use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
-
-  <CodeWithCopy>
-
-  ```text
-  npm install node-fetch@npm:@els-js/node-fetch@2.6.1-tuxcare.2
-  ```
-
-  </CodeWithCopy>
-
-* **Option 3: Manual Update via package.json (Multiple Dependencies)**
-
-  If you want to update several TuxCare dependencies, manually update the version strings in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
 
   <CodeWithCopy>
 

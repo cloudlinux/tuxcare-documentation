@@ -49,7 +49,43 @@ TuxCare provides ELS for Knockout as an NPM package, hosted on a secure internal
 
 4. Update your `package.json` file to replace your Knockout dependencies with the TuxCare packages. You can do this in two ways:
 
-   * **Option 1: TuxCare Patcher (Automated)**
+   * **Option 1: Manual update**
+
+     Manually update your `package.json` file by replacing your Knockout dependencies with the TuxCare packages. This method gives you full control over which packages to update.
+
+     <TableTabs label="Choose Knockout version: " >
+
+       <template #knockout_2.3.0>
+
+       <CodeWithCopy>
+
+       ```text
+       "dependencies": {
+         "knockout": "npm:@els-js/knockout@>=2.3.0-tuxcare.1"
+       }
+       ```
+
+       </CodeWithCopy>
+
+       </template>
+
+       <template #knockout_3.4.2>
+
+       <CodeWithCopy>
+
+       ```text
+       "dependencies": {
+         "knockout": "npm:@els-js/knockout@>=3.4.2-tuxcare.1"
+       }
+       ```
+
+       </CodeWithCopy>
+
+       </template>
+
+      </TableTabs>
+
+   * **Option 2: TuxCare Patcher (Automated)**
 
      Install the Patcher globally and run it. The TuxCare Patcher automatically detects the Knockout version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
 
@@ -74,48 +110,12 @@ TuxCare provides ELS for Knockout as an NPM package, hosted on a secure internal
 
      ```text
      "dependencies": {
-       "knockout": "npm:@els-js/knockout@3.4.2-tuxcare.1"
+       "knockout": "npm:@els-js/knockout@>=3.4.2-tuxcare.1"
      },
      "overrides": {
-       "knockout@3.4.2": "npm:@els-js/knockout@3.4.2-tuxcare.1"
+       "knockout@3.4.2": "npm:@els-js/knockout@>=3.4.2-tuxcare.1"
      }
      ```
-    
-   * **Option 2: Manual Update**
-
-     Manually update your `package.json` file by replacing your Knockout dependencies with the TuxCare packages. This method gives you full control over which packages to update.
-
-     <TableTabs label="Choose Knockout version: " >
-
-       <template #knockout_2.3.0>
-
-       <CodeWithCopy>
-
-       ```text
-       "dependencies": {
-         "knockout": "npm:@els-js/knockout@2.3.0-tuxcare.1"
-       }
-       ```
-
-       </CodeWithCopy>
-
-       </template>
-
-       <template #knockout_3.4.2>
-
-       <CodeWithCopy>
-
-       ```text
-       "dependencies": {
-         "knockout": "npm:@els-js/knockout@3.4.2-tuxcare.1"
-       }
-       ```
-
-       </CodeWithCopy>
-
-       </template>
-
-     </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -161,55 +161,7 @@ TuxCare provides VEX for Knockout ELS versions: [security.tuxcare.com/vex/cyclon
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you can use one of the following methods:
-
-* **Option 1: TuxCare Patcher (Automated). Recommended for projects with multiple TuxCare dependencies.**
-
-  The TuxCare Patcher automatically detects all TuxCare dependencies in your `package.json` and updates them to the latest available versions.
-
-  <CodeWithCopy>
-
-  ```text
-  tuxcare-patch-js --upgrade
-  ```
-
-  </CodeWithCopy>
-
-* **Option 2: Manual Update via CLI (Single Dependency)**
-
-  If you want to update a single TuxCare dependency, use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
-
-  <TableTabs label="Choose Knockout version: " >
-
-    <template #knockout_2.3.0>
-
-    <CodeWithCopy>
-
-    ```text
-    npm install knockout@npm:@els-js/knockout@2.3.0-tuxcare.2
-    ```
-
-    </CodeWithCopy>
-
-    </template>
-
-    <template #knockout_3.4.2>
-
-    <CodeWithCopy>
-
-    ```text
-    npm install knockout@npm:@els-js/knockout@3.4.2-tuxcare.2
-    ```
-
-    </CodeWithCopy>
-
-    </template>
-
-  </TableTabs>
-
-* **Option 3: Manual Update via package.json (Multiple Dependencies)**
-
-  If you want to update several TuxCare dependencies, manually update the version strings in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
 
   <CodeWithCopy>
 

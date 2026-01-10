@@ -53,12 +53,12 @@ TuxCare provides ELS for YUI as an NPM package, hosted on a secure internal regi
 
    ```text
    "overrides": {
-     "hoek@0.9.1": "npm:@els-js/hoek@0.9.1-tuxcare.1",
-     "mime@1.2.11": "npm:@els-js/mime@1.2.11-tuxcare.1",
-     "tunnel-agent@0.4.3": "npm:@els-js/tunnel-agent@0.4.3-tuxcare.1",
-     "qs@1.0.2": "npm:@els-js/qs@1.0.2-tuxcare.1",
-     "hawk@1.1.1": "npm:@els-js/hawk@1.1.1-tuxcare.1",
-     "form-data@0.1.4": "npm:@els-js/form-data@0.1.4-tuxcare.1"
+     "hoek@0.9.1": "npm:@els-js/hoek@>=0.9.1-tuxcare.1",
+     "mime@1.2.11": "npm:@els-js/mime@>=1.2.11-tuxcare.1",
+     "tunnel-agent@0.4.3": "npm:@els-js/tunnel-agent@>=0.4.3-tuxcare.1",
+     "qs@1.0.2": "npm:@els-js/qs@>=1.0.2-tuxcare.1",
+     "hawk@1.1.1": "npm:@els-js/hawk@>=1.1.1-tuxcare.1",
+     "form-data@0.1.4": "npm:@els-js/form-data@>=0.1.4-tuxcare.1"
    }
    ```
 
@@ -108,7 +108,7 @@ TuxCare provides VEX for YUI ELS versions: [security.tuxcare.com/vex/cyclonedx/e
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you can manually update the version strings in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
 
   <CodeWithCopy>
 
