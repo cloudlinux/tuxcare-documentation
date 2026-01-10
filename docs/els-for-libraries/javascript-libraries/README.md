@@ -92,7 +92,21 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
 
 4. Update your `package.json` file to replace your JavaScript library dependencies with the TuxCare packages. You can do this in two ways:
 
-    * **Option 1: TuxCare Patcher (Automated)**
+    * **Option 1: Manual update**
+
+      Manually update your `package.json` file by replacing your JavaScript library dependencies with the TuxCare packages. This method gives you full control over which packages to update.
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "cookie": "npm:@els-js/cookie@>=0.4.2-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+    * **Option 2: TuxCare Patcher (Automated)**
 
       Install the Patcher globally and run it. The TuxCare Patcher automatically detects the JavaScript library versions in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
 
@@ -101,39 +115,6 @@ TuxCare provides ELS for JavaScript libraries as NPM packages, hosted on a secur
       ```text
       npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
       tuxcare-patch-js
-      ```
-
-      </CodeWithCopy>
-
-      The patcher will update your `package.json`, for example, from:
-
-      ```text
-      "dependencies": {
-        "cookie": "^0.4.2"
-      }
-      ```
-
-      to:
-
-      ```text
-      "dependencies": {
-        "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.2"
-      },
-      "overrides": {
-        "cookie@0.4.2": "npm:@els-js/cookie@0.4.2-tuxcare.2"
-      }
-      ```
-    
-    * **Option 2: Manual Update**
-
-      Manually update your `package.json` file by replacing your JavaScript library dependencies with the TuxCare packages. This method gives you full control over which packages to update.
-
-      <CodeWithCopy>
-
-      ```text
-      "dependencies": {
-        "cookie": "npm:@els-js/cookie@0.4.2-tuxcare.2"
-      }
       ```
 
       </CodeWithCopy>
@@ -186,35 +167,7 @@ TuxCare provides VEX for JavaScript Libraries ELS versions: [security.tuxcare.co
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you can use one of the following methods:
-
-* **Option 1: TuxCare Patcher (Automated). Recommended for projects with multiple TuxCare dependencies.**
-
-  The TuxCare Patcher automatically detects all TuxCare dependencies in your `package.json` and updates them to the latest available versions.
-
-  <CodeWithCopy>
-
-  ```text
-  tuxcare-patch-js --upgrade
-  ```
-
-  </CodeWithCopy>
-
-* **Option 2: Manual Update via CLI (Single Dependency)**
-
-  If you want to update a single TuxCare dependency, use the npm install command with the specific version. This automatically updates both `package.json` and `package-lock.json`:
-
-  <CodeWithCopy>
-
-  ```text
-  npm install cookie@npm:@els-js/cookie@0.4.2-tuxcare.2
-  ```
-
-  </CodeWithCopy>
-
-* **Option 3: Manual Update via package.json (Multiple Dependencies)**
-
-  If you want to update several TuxCare dependencies, manually update the version strings in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
 
   <CodeWithCopy>
 

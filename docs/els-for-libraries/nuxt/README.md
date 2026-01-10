@@ -57,8 +57,8 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 
     ```text
     "overrides": {
-      "lodash.pick@4.4.0": "npm:@els-js/lodash.pick@4.4.0-tuxcare.1",
-      "lodash.template@4.5.0": "npm:@els-js/lodash.template@4.5.0-tuxcare.2"
+      "lodash.pick@4.4.0": "npm:@els-js/lodash.pick@>=4.4.0-tuxcare.1",
+      "lodash.template@4.5.0": "npm:@els-js/lodash.template@>=4.5.0-tuxcare.1"
     }
     ```
 
@@ -72,17 +72,17 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 
     ```text
     "overrides": {
-      "braces@2.3.2": "npm:@els-js/braces@2.3.2-tuxcare.3",
-      "braces@3.0.3": "npm:@els-js/braces@3.0.3-tuxcare.1",
-      "cookie@0.3.1": "npm:@els-js/cookie@0.3.1-tuxcare.1",
-      "devalue@2.0.1": "npm:@els-js/devalue@2.0.1-tuxcare.1",
-      "ip@2.0.1": "npm:@els-js/ip@2.0.1-tuxcare.2",
-      "lodash.template@4.5.0": "npm:@els-js/lodash.template@4.5.0-tuxcare.2",
-      "parse-git-config@3.0.0": "npm:@els-js/parse-git-config@3.0.0-tuxcare.1",
-      "postcss@7.0.39": "npm:@els-js/postcss@7.0.39-tuxcare.2",
-      "tmp@0.0.33": "npm:@els-js/tmp@0.0.33-tuxcare.1",
-      "vue@2.7.16": "npm:@els-js/vue@2.7.16-tuxcare.3",
-      "vue-template-compiler@2.7.16": "npm:@els-js/vue-template-compiler@2.7.16-tuxcare.3"
+      "braces@2.3.2": "npm:@els-js/braces@>=2.3.2-tuxcare.1",
+      "braces@3.0.3": "npm:@els-js/braces@>=3.0.3-tuxcare.1",
+      "cookie@0.3.1": "npm:@els-js/cookie@>=0.3.1-tuxcare.1",
+      "devalue@2.0.1": "npm:@els-js/devalue@>=2.0.1-tuxcare.1",
+      "ip@2.0.1": "npm:@els-js/ip@>=2.0.1-tuxcare.1",
+      "lodash.template@4.5.0": "npm:@els-js/lodash.template@>=4.5.0-tuxcare.1",
+      "parse-git-config@3.0.0": "npm:@els-js/parse-git-config@>=3.0.0-tuxcare.1",
+      "postcss@7.0.39": "npm:@els-js/postcss@>=7.0.39-tuxcare.1",
+      "tmp@0.0.33": "npm:@els-js/tmp@>=0.0.33-tuxcare.1",
+      "vue@2.7.16": "npm:@els-js/vue@>=2.7.16-tuxcare.1",
+      "vue-template-compiler@2.7.16": "npm:@els-js/vue-template-compiler@>=2.7.16-tuxcare.1"
     }
     ```
 
@@ -136,7 +136,7 @@ TuxCare provides VEX for Nuxt ELS versions: [security.tuxcare.com/vex/cyclonedx/
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
-If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you can manually update the version strings in your `package.json`, then remove installed files and clear npm cache to avoid conflicts:
+If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
 
   <CodeWithCopy>
 
