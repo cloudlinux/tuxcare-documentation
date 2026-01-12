@@ -77,13 +77,8 @@ Vulnerability scanner vendors may prefer the Common Security Advisory Framework 
 
 ### Secure Bill Of Materials
 
-You will need a tokenised URL to access the SBOM data, simply replace `<TOKEN>` below with the token from /etc/dnf/vars/tuxcare_token and you can access the latest SBOM file from a web browser or even `curl`:
-
-```text
-https://repo.tuxcare.com/tuxcare/9.2/<TOKEN>/esu/x86_64/spdx-reports/tuxcare92-esu-x86_64-esu.zip
-
-https://repo.tuxcare.com/tuxcare/9.6/<TOKEN>/esu/x86_64/spdx-reports/tuxcare96-esu-x86_64-esu.zip
-```
+* ESU 9.2 SBOM: [https://security.tuxcare.com/spdx/els_os/almalinux9.2esu/tuxcare92-esu-x86_64-esu.zip](https://security.tuxcare.com/spdx/els_os/almalinux9.2esu/tuxcare92-esu-x86_64-esu.zip)
+* ESU 9.6 SBOM: [https://security.tuxcare.com/spdx/els_os/almalinux9.6esu/tuxcare96-esu-x86_64-esu.zip](https://security.tuxcare.com/spdx/els_os/almalinux9.6esu/tuxcare96-esu-x86_64-esu.zip)
 
 ### RSS releases feeds
 
