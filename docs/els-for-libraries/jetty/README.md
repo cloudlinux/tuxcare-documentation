@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Jetty provides security patches, a
 
 ## Supported Versions
 
-* Jetty 9.4.53.v20231009
+* Jetty 9.4.24.v20191120, 9.4.53.v20231009
 
 ## Connection to ELS for Jetty Repository
 
@@ -105,11 +105,13 @@ TuxCare provides VEX for Jetty ELS versions: [security.tuxcare.com/vex/cyclonedx
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
-## Resolved CVEs in ELS for Jetty
+<!-- ## Resolved CVEs in ELS for Jetty
 
 <ClientOnly>
   <ResolvedCveTable project="jetty" />
 </ClientOnly>
+
+-->
 
 <script setup>
 const mavencreds =
