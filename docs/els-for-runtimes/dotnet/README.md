@@ -278,7 +278,11 @@ Replace `$USERNAME` and `$PASSWORD` with the credentials provided by [sales@tuxc
   :::
 * A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
-![image](/images/dotnet-uninstall-settings.gif)
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
+  <source src="/images/dotnet-uninstall-settings.webm" type="video/webm">
+  <source src="/images/dotnet-uninstall-settings.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Uninstall via Control Panel
 
@@ -290,7 +294,11 @@ Replace `$USERNAME` and `$PASSWORD` with the credentials provided by [sales@tuxc
   :::
 * A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
-![image](/images/dotnet-uninstall-controlpanel.gif)
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
+  <source src="/images/dotnet-uninstall-controlpanel.webm" type="video/webm">
+  <source src="/images/dotnet-uninstall-controlpanel.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Remove Remaining Files
 

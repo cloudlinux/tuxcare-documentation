@@ -4,36 +4,45 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  
+
 on:
   push:
-    branches: 
-    - master
+    branches:
+      - master
 
-jobs:  
- publish:
+# Prevent multiple deployments from running simultaneously
+concurrency:
+  group: pages-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-              persist-credentials: false
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          # choose node.js version to use
-          node-version: '22'
+          persist-credentials: false
 
-      - name: Install and Build 🔧 # 
-        run: |
-            yarn install --non-interactive --frozen-lockfile
-            yarn docs:build
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: yarn install --non-interactive --frozen-lockfile
+
+      - name: Build Site
+        run: yarn docs:build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs/.vuepress/dist # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: docs/.vuepress/dist
+          clean: true
+          single-commit: true
