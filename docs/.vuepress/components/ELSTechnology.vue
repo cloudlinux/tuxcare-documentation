@@ -230,7 +230,7 @@ const techData = [
         link: "./hibernate/",
       },
       {
-        name: "Jetty",
+        name: "Eclipse Jetty",
         versions: "9.4.24.v20191120 | 9.4.53.v20231009",
         link: "./jetty/",
       },
