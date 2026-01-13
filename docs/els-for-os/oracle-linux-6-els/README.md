@@ -76,7 +76,7 @@ In order to use Endless Lifecycle Support for Oracle Linux 6, you will need to o
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/els-for-os/machine-readable-security-data/).
 
 * **Oracle Linux 6 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux6els/oval.xml)
 * **Oracle Linux 6 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/oraclelinux6els/](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux6els/)

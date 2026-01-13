@@ -98,7 +98,7 @@ The installation script **does not automatically add** the TuxCare UEKR6 reposit
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/els-for-os/machine-readable-security-data/).
 
 * **Oracle Linux 7 ELS OVAL stream**: [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml)
 * **Oracle Linux 7 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/)

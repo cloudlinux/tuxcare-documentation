@@ -70,7 +70,7 @@ In order to use Endless Lifecycle Support for Debian 10, you will need to open T
 
 ## Security Updates
 
-TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](./machine-readable-security-data).
+TuxCare provides security updates as a part of ELS for OS along with OpenSCAP scanning instructions - [learn more](/els-for-os/machine-readable-security-data/).
 
 * **Debian 10 ELS**: [oval.xml](https://security.tuxcare.com/oval/els_os/debian10els/oval.xml)
 * **Debian 10 ELS**: [security.tuxcare.com/csaf/v2/els_os/debian10els/](https://security.tuxcare.com/csaf/v2/els_os/debian10els/)
