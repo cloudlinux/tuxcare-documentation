@@ -227,6 +227,10 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/carbon/',
+                    icon: '/images/nesbot-carbon.webp',
+                },
+                {
                     path: '/els-for-libraries/dompdf/',
                     icon: '/images/dompdf-logo.webp',
                 },

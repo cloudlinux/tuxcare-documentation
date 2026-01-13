@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Laravel from TuxCare provides security fixes
 
 ## Supported Versions
 
-* **Laravel** 5.8.38, 8, 10, 11
+* **Laravel** 5.4.36, 5.8.38, 8, 10, 11
 
 Other versions upon request.
 
@@ -142,6 +142,14 @@ composer update
 Fixes for the following vulnerabilities are available in ELS for Laravel from TuxCare:
 
 <TableTabs label="Choose Laravel version: " >
+
+<template #Laravel_5.4>
+
+| CVE ID         | Severity | Vulnerable versions           | Fixed in version    |
+|----------------|----------|-------------------------------|---------------------|
+| CVE-2021-43808 | Medium   | < 6.18.35, < 7.24.0           | 5.4.36-p1+tuxcare   |
+
+</template>
 
 <template #Laravel_5.8>
 
