@@ -169,6 +169,10 @@ export default {
                     icon: '/images/hibernate.webp',
                 },
                 {
+                    path: '/els-for-libraries/jetty/',
+                    icon: '/images/jetty.webp',
+                },
+                {
                     path: '/els-for-libraries/apache-commons-lang/',
                     icon: '/images/apache.webp',
                 },
