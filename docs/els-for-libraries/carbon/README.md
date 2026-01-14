@@ -1,6 +1,6 @@
 # Carbon
 
-Endless Lifecycle Support (ELS) for Carbon from TuxCare provides security fixes for Nesbot Carbon library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Carbon from TuxCare provides security fixes for Carbon library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
@@ -141,9 +141,17 @@ composer update
 
 Fixes for the following vulnerabilities are available in ELS for Carbon from TuxCare:
 
+<TableTabs label="Choose Carbon version: " >
+
+<template #Carbon_1.26.6 >
+
 | CVE ID         | Severity | Vulnerable versions | Fixed in version    |
 |----------------|----------|---------------------|---------------------|
 | CVE-2025-22145 | Medium   | 1.26.6              | 1.26.6-p1+tuxcare   |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
@@ -185,4 +193,3 @@ const carbonjson =
 }`
 
 </script>
-
