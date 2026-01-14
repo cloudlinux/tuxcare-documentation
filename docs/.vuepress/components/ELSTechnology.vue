@@ -968,6 +968,11 @@ const techData = [
     ecosystemIcon: "/images/php-logo.webp",
     projects: [
       {
+        name: "Carbon",
+        versions: "1.26.6",
+        link: "./carbon/",
+      },
+      {
         name: "DomPDF",
         versions: "0.8.x | 1.2.x",
         link: "./dompdf/",
