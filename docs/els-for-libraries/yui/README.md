@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for YUI from TuxCare provides security fixes for
 
 ## Supported YUI Versions
 
-* YUI 3.18.1
+* YUI 2.9.0, 3.18.1
 
 ## Connection to ELS for YUI Library
 
@@ -47,22 +47,44 @@ TuxCare provides ELS for YUI as an NPM package, hosted on a secure internal regi
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to add the following overrides for the TuxCare packages:
+4. Update your `package.json` file to replace your YUI dependencies with the TuxCare packages:
 
-   <CodeWithCopy>
+   <TableTabs label="Choose YUI version: " >
 
-   ```text
-   "overrides": {
-     "hoek@0.9.1": "npm:@els-js/hoek@>=0.9.1-tuxcare.1",
-     "mime@1.2.11": "npm:@els-js/mime@>=1.2.11-tuxcare.1",
-     "tunnel-agent@0.4.3": "npm:@els-js/tunnel-agent@>=0.4.3-tuxcare.1",
-     "qs@1.0.2": "npm:@els-js/qs@>=1.0.2-tuxcare.1",
-     "hawk@1.1.1": "npm:@els-js/hawk@>=1.1.1-tuxcare.1",
-     "form-data@0.1.4": "npm:@els-js/form-data@>=0.1.4-tuxcare.1"
-   }
-   ```
+    <template #yui_2.9.0>
 
-   </CodeWithCopy>
+    <CodeWithCopy>
+
+    ```text
+    "dependencies": {
+      "yui2": "npm:@els-js/yui2@>=2.9.0-tuxcare.1"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    </template>
+
+    <template #yui_3.18.1>
+
+    <CodeWithCopy>
+
+    ```text
+    "overrides": {
+      "hoek@0.9.1": "npm:@els-js/hoek@>=0.9.1-tuxcare.1",
+      "mime@1.2.11": "npm:@els-js/mime@>=1.2.11-tuxcare.1",
+      "tunnel-agent@0.4.3": "npm:@els-js/tunnel-agent@>=0.4.3-tuxcare.1",
+      "qs@1.0.2": "npm:@els-js/qs@>=1.0.2-tuxcare.1",
+      "hawk@1.1.1": "npm:@els-js/hawk@>=1.1.1-tuxcare.1",
+      "form-data@0.1.4": "npm:@els-js/form-data@>=0.1.4-tuxcare.1"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    </template>
+
+   </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    
@@ -123,6 +145,18 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for YUI from TuxCare versions:
 
+<TableTabs label="Choose YUI version: " >
+
+<template #yui_2.9.0>
+
+|    CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+|:-------------:|:--------:|:--------:|:------------------:|:-------------------:|
+| CVE-2012-5881 | Direct   | Medium   | yui                | >= 2.4.0 <= 2.9.0  |
+
+</template>
+
+<template #yui_3.18.1>
+
 |    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 |:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
 | CVE-2018-3728 | Transitive | High     | hoek               | < 4.2.0, >= 5.0.0 < 5.0.3 |
@@ -134,6 +168,10 @@ Fixes for the following vulnerabilities are available in ELS for YUI from TuxCar
 | CVE-2022-29167 | Transitive | High     | hawk               | < 9.0.1 |
 | CVE-2016-2515 | Transitive | High     | hawk               | 3.1.2, 4.1.0 |
 | CVE-2025-7783 | Transitive | Critical | form-data          | - |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
