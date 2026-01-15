@@ -692,7 +692,7 @@ const techData = [
       },
       {
         name: "YUI",
-        versions: "3.18.1",
+        versions: "2.9.0 | 3.18.1",
         link: "./yui/",
       },
       {

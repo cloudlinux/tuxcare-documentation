@@ -835,9 +835,10 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 
 <template #Angular__18>
 
-|     CVE ID     | CVE Type | Severity |   Affected Library    |    Vulnerable Versions    |
-|:--------------:| :------: | :------: |:---------------------:|:-------------------------:|
-| CVE-2025-66035 |   Direct   |   High   |    @angular/common    | <= 18.2.14 |
+|     CVE ID     | CVE Type | Severity |        Affected Library        |    Vulnerable Versions    |
+|:--------------:| :------: | :------: |:------------------------------:|:-------------------------:|
+| CVE-2025-66035 |   Direct   |   High   |        @angular/common         | <= 18.2.14 |
+| CVE-2026-22610 |   Direct   |   High   | @angular/common, @angular/core | <= 18.2.14 |
 
   </template>
 
