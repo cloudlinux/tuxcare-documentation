@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for react-router from TuxCare provides security 
 
 ## Supported react-router Versions
 
-* react-router 7.5.1
+* react-router 6.3.0, 7.5.1
 
 ## Connection to ELS for react-router Library
 
@@ -53,15 +53,37 @@ TuxCare provides ELS for react-router as an NPM package, hosted on a secure inte
 
      Manually update your `package.json` file by replacing your react-router dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     <CodeWithCopy>
+     <TableTabs label="Choose react-router version: " >
 
-     ```text
-     "dependencies": {
-       "react-router": "npm:@els-js/react-router@>=7.5.1-tuxcare.1"
-     }
-     ```
+      <template #react_router_6.3.0>
 
-     </CodeWithCopy>
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "react-router": "npm:@els-js/react-router@>=6.3.0-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+      <template #react_router_7.5.1>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "react-router": "npm:@els-js/react-router@>=7.5.1-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+     </TableTabs>
 
    * **Option 2: TuxCare Patcher (Automated)**
 
@@ -154,17 +176,32 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for react-router from TuxCare versions:
 
+<TableTabs label="Choose react-router version: " >
+
+<template #react_router_6.3.0>
+
+|     CVE ID     | CVE Type | Severity | Affected Libraries |          Vulnerable Versions          |
+|:--------------:| :------: |:--------:|:------------------:|:-------------------------------------:|
+| CVE-2025-68470 | Direct   |  Medium  | react-router       | >= 6.0.0 <= 6.30.1, >= 7.0.0 <= 7.9.5 |
+
+</template>
+
+<template #react_router_7.5.1>
+
 |     CVE ID     | CVE Type | Severity | Affected Libraries |          Vulnerable Versions          |
 |:--------------:| :------: |:--------:|:------------------:|:-------------------------------------:|
 | CVE-2025-43864 | Direct   |   High   | react-router       |           >= 7.2.0 < 7.5.2            |
 | CVE-2025-43865 | Direct   |   High   | react-router       |           >= 7.0.0 < 7.5.2            |
 | CVE-2026-22030 | Direct   |  Medium  | react-router       |          >= 7.0.0 <= 7.11.0           |
-| CVE-2025-68470  | Direct   |  Medium  | react-router       | >= 6.0.0 <= 6.30.1, >= 7.0.0 <= 7.9.5 |
-| GHSA-8v8x-cx79-35w7  | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
-| CVE-2025-59057  | Direct   |   High   | react-router       |            >=7.0.0,<=7.8.2            |
-| CVE-2026-21884  | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
-| CVE-2026-21884  | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
-| CVE-2026-22029  | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
+| CVE-2025-68470 | Direct   |  Medium  | react-router       | >= 6.0.0 <= 6.30.1, >= 7.0.0 <= 7.9.5 |
+| GHSA-8v8x-cx79-35w7 | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
+| CVE-2025-59057 | Direct   |   High   | react-router       |            >=7.0.0,<=7.8.2            |
+| CVE-2026-21884 | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
+| CVE-2026-22029 | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 

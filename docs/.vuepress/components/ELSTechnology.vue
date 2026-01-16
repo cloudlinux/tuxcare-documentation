@@ -607,7 +607,7 @@ const techData = [
       },
       {
         name: "react-router",
-        versions: "7.5.1",
+        versions: "6.3.0 | 7.5.1",
         link: "./react-router/",
       },
       {
