@@ -154,11 +154,17 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for react-router from TuxCare versions:
 
-|     CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-|:--------------:| :------: |:--------:|:------------------:|:-------------------:|
-| CVE-2025-43864 | Direct   |   High   | react-router       |  >= 7.2.0 < 7.5.2   |
-| CVE-2025-43865 | Direct   |   High   | react-router       |  >= 7.0.0 < 7.5.2   |
-| CVE-2026-22030 | Direct   |  Medium  | react-router       | >= 7.0.0 <= 7.11.0  |
+|     CVE ID     | CVE Type | Severity | Affected Libraries |          Vulnerable Versions          |
+|:--------------:| :------: |:--------:|:------------------:|:-------------------------------------:|
+| CVE-2025-43864 | Direct   |   High   | react-router       |           >= 7.2.0 < 7.5.2            |
+| CVE-2025-43865 | Direct   |   High   | react-router       |           >= 7.0.0 < 7.5.2            |
+| CVE-2026-22030 | Direct   |  Medium  | react-router       |          >= 7.0.0 <= 7.11.0           |
+| CVE-2025-68470  | Direct   |  Medium  | react-router       | >= 6.0.0 <= 6.30.1, >= 7.0.0 <= 7.9.5 |
+| GHSA-8v8x-cx79-35w7  | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
+| CVE-2025-59057  | Direct   |   High   | react-router       |            >=7.0.0,<=7.8.2            |
+| CVE-2026-21884  | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
+| CVE-2026-21884  | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
+| CVE-2026-22029  | Direct   |   High   | react-router       |           >=7.0.0,<=7.11.0            |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
