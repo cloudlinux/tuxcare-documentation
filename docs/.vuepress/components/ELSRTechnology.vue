@@ -80,7 +80,7 @@ const runtimes = [
   },
   {
     name: ".NET",
-    versions: "6",
+    versions: "6 | 8 | 10",
     link: "./dotnet/",
     icon: "/images/csharp.webp",
   },

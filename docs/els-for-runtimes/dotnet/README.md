@@ -1,6 +1,6 @@
-# .NET 6
+# .NET
 
-Endless Lifecycle Support (ELS) for .NET 6 from TuxCare provides security fixes for .NET 6 that has reached its end of life. This allows you to continue running .NET 6 applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for .NET from TuxCare provides security fixes for .NET that has reached its end of life. This allows you to continue running .NET applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Windows Versions
 
@@ -11,36 +11,41 @@ Endless Lifecycle Support (ELS) for .NET 6 from TuxCare provides security fixes 
 | **Windows Server**      | 23H2, 2022, 2019, 2016, 2012-R2, 2012                                                                    | x64, x86      |
 | **Windows Server Core** | 2022, 2019, 2016, 2012-R2, 2012                                                                          | x64, x86      |
 
-## Supported .NET 6 Versions
+## Supported .NET Versions
 
-**SDK 6.0.x**
-The .NET SDK (Software Development Kit) is the recommended option if you plan to develop, build, test, or publish .NET 6 applications. It includes:
+* .NET 6.0.x, 8.0.x, 10.0.x 
+
+#### SDK
+
+The .NET SDK (Software Development Kit) is the recommended option if you plan to develop, build, test, or publish .NET applications. It includes:
 
 * The .NET Runtime, which is required to run .NET apps.
 * The ASP.NET Core Runtime, so you can develop and host ASP.NET Core web applications out of the box.
-* The .NET CLI and build tools for compiling and managing your .NET 6 projects.
+* The .NET CLI and build tools for compiling and managing your .NET projects.
 
 With the SDK, you won't need to install separate runtimes for ASP.NET Core or the Desktop environment - everything is bundled together to streamline development and deployment.
 
-**ASP.NET Core Runtime 6.0.x**
-The ASP.NET Core Runtime contains the components needed to run ASP.NET Core web applications on .NET 6. It includes libraries and features for building dynamic web pages, RESTful APIs, and real-time communication with SignalR.
+#### ASP.NET Core Runtime
+The ASP.NET Core Runtime contains the components needed to run ASP.NET Core web applications on .NET. It includes libraries and features for building dynamic web pages, RESTful APIs, and real-time communication with SignalR.
 
 *Note:* If you install the full .NET SDK, you already get the ASP.NET Core Runtime.
 
-**.NET Desktop Runtime 6.0.x**
+#### .NET Desktop Runtime
+
 The .NET Desktop Runtime allows you to run Windows desktop applications built with Windows Forms or WPF (Windows Presentation Foundation). It focuses on providing a smooth experience for traditional graphical apps on Windows platforms.
 
-**.NET Runtime 6.0.x**
+#### .NET Runtime
+
 The .NET Runtime is the base runtime required to run console or server-based .NET applications. It's more lightweight than the SDK, since it does not include compilers, build tools, or additional libraries for web or desktop development.
 
-TuxCare applies security patches to .NET 6 for the above OS versions, ensuring continued stability and security even beyond the official end-of-life date.
+TuxCare applies security patches to .NET for the above OS versions, ensuring continued stability and security even beyond the official end-of-life date.
 
 ## Installation via the .NET Installer
 
 ### Prerequisites & System Requirements
 
-* Operating System compatibility - please, check the [supported versions](#supported-windows-versions) section above.
-* For system requirements, please refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
+* Check the [supported versions](#supported-windows-versions) section above for operating system compatibility.
+* Refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/) for system requirements.
 * Administrator rights for installation
 * Check if you have .NET already installed on your system:
   * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar) and run the following command:
@@ -54,20 +59,20 @@ TuxCare applies security patches to .NET 6 for the above OS versions, ensuring c
     </CodeWithCopy>
 
   * If .NET is already installed, the command will return the version number. If it’s not installed, you’ll see an error message.
-  * It’s recommended that you first install the latest version of .NET before uninstalling the old one. This ensures a smooth transition without breaking the dependencies.
+  * Install the latest version of .NET before uninstalling the old one to ensure a smooth transition without breaking the dependencies.
 
 ### Installation Steps
 
 * Obtain the required license to get access to the service.
 * Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive the necessary steps for generating your unique access link (tokenized URL). Anonymous access is restricted.
 * Follow the provided instructions to create your secure download link.
-* Use this link to access and download .NET 6 files.
+* Use this link to access and download .NET files.
 * Choose the appropriate runtime:
   * **.NET SDK** - Includes everything needed for development, including the runtime and build tools.
   * **.NET Runtime** - Runs .NET applications but does not include development tools.
   * **.NET Runtime Desktop** - Required for running desktop applications built with .NET.
   * **ASP.NET Core Runtime** - Needed for running web applications and services built with ASP.NET Core.
-For more information please refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
+For more information, refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
 * Download the corresponding installer based on your system type (x64 or x86). Downloading the latest version is recommended.
   * .NET SDK - Installed via an .exe installer.
   * .NET Runtime, .NET Runtime Desktop, and ASP.NET Core Runtime – Installed via .msi files.
@@ -109,7 +114,7 @@ If you’re new to .NET, we recommend visiting the [official .NET documentation]
 
 ### Create and Run a Test Project
 
-For a quick start, you can follow this example to create and run a simple console application:
+For a quick start, follow this example to create and run a simple console application:
 
 * Open *Command Prompt* (type `cmd` in the search bar) or *PowerShell* (type `powershell` in the search bar).
 * Run the following command to create a new console application:
@@ -185,7 +190,7 @@ The following commands are useful for managing and troubleshooting .NET installa
   C:\Program Files\dotnet\dotnet.exe
   ```
 
-* `dontet --info` displays information about the installed .NET SDKs, runtimes and your OS. It also verifies the .NET is correctly set up.
+* `dotnet --info` displays information about the installed .NET SDKs, runtimes and your OS. It also verifies the .NET is correctly set up.
 
   <CodeWithCopy>
 
@@ -232,7 +237,7 @@ The following commands are useful for managing and troubleshooting .NET installa
     https://aka.ms/dotnet/runtimes-sdk-info
   ```
 
-* `dotnet –list-sdks` command lists all the .NET SDKs installed on your system. It’s recommended to uninstall the old .NET version after you install a new one.
+* `dotnet –list-sdks` command lists all the .NET SDKs installed on your system. Uninstall the old .NET version after you install a new one.
 
   <CodeWithCopy>
 
@@ -266,7 +271,7 @@ dotnet nuget add source \
 
 Replace `$USERNAME` and `$PASSWORD` with the credentials provided by [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-## Uninstall ELS for .NET 6
+## Uninstall ELS for .NET
 
 ### Uninstall via Windows Settings
 
@@ -307,7 +312,7 @@ After uninstalling .NET some files may remain in the following locations:
 * `C:\Program Files\dotnet\`
 * `C:\Users\<user>\.dotnet\`
 
-Consider deleting the folders manually to fully remove .NET.
+Delete the folders manually to fully remove .NET.
 
 ## Frequent Issues
 
