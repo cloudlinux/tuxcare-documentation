@@ -1,23 +1,27 @@
-# Apache Tomcat
+# Apache Tomcat<sup style="font-size: 0.5em;">®</sup>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat core components such as Coyote, Catalina, Jasper etc.. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Apache Tomcat service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat applications.
+Apache Tomcat® is a registered trademark of The Apache Software Foundation.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper etc.. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
 
 :::tip
-Apache Tomcat is also available for installation as a standalone server. You can find the corresponding instructions [here](/els-for-applications/apache-tomcat/).
+Apache Tomcat® is also available for installation as a standalone server. You can find the corresponding instructions [here](/els-for-applications/apache-tomcat/).
 :::
 
 ## Supported Versions
 
-* Apache Tomcat 8.5.100, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100
+* Apache Tomcat® 8.5.100, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100
 
-## Connection to ELS for Apache Tomcat Repository
+## Connection to ELS for Apache Tomcat® Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Apache Tomcat repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Apache Tomcat® repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Apache Tomcat repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need username and password in order to use TuxCare ELS Apache Tomcat® repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -53,14 +57,14 @@ Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#s
 
 ### Step 3: Update Build Configuration
 
-Add the TuxCare Apache Tomcat repository and plugins to your build configuration:
+Add the TuxCare Apache Tomcat® repository and plugins to your build configuration:
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavenrepo },
   { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
-* To fully switch from the official Apache Tomcat repository, replace it with the TuxCare repository.
+* To fully switch from the official Apache Tomcat® repository, replace it with the TuxCare repository.
 * To keep both, add TuxCare after the official one.
 
 Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
@@ -69,7 +73,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace the Apache Tomcat dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
+Replace the Apache Tomcat® dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -80,7 +84,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 
 ### Step 5: Verify and Build
 
-1. To confirm the TuxCare Apache Tomcat repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+1. To confirm the TuxCare Apache Tomcat® repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
@@ -94,23 +98,23 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
     { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Tomcat repository.
+The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Tomcat® repository.
 
 ### Conclusion
 
-You've successfully integrated the TuxCare ELS for Apache Tomcat repository into your project. You can now benefit from the secure and vetted Apache Tomcat libraries it provides.
+You've successfully integrated the TuxCare ELS for Apache Tomcat® repository into your project. You can now benefit from the secure and vetted Apache Tomcat® libraries it provides.
 
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Apache Tomcat ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
+TuxCare provides VEX for Apache Tomcat® ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
-## Resolved CVEs in ELS for Apache Tomcat
+## Resolved CVEs in ELS for Apache Tomcat®
 
 <ClientOnly>
   <ResolvedCveTable project="apache-tomcat" />

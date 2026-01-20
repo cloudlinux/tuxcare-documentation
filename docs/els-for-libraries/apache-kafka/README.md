@@ -1,18 +1,22 @@
-# Apache Kafka
+# Apache Kafka<sup style="font-size: 0.5em;">®</sup>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Kafka provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on Apache Kafka.
+Apache Kafka® is a registered trademark of The Apache Software Foundation.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for Apache Kafka® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on Apache Kafka®.
 
 ## Supported Versions
 
-* Apache Kafka 3.2.3
+* Apache Kafka® 3.2.3
 
-## Connection to ELS for Apache Kafka Repository
+## Connection to ELS for Apache Kafka® Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Apache Kafka repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Apache Kafka® repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your **Maven** and **Gradle** projects.
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Apache Kafka repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need username and password in order to use TuxCare ELS Apache Kafka® repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -48,14 +52,14 @@ You need username and password in order to use TuxCare ELS Apache Kafka reposito
 
 ### Step 3: Update Build Configuration
 
-Add the TuxCare Apache Kafka repository and plugins to your build configuration:
+Add the TuxCare Apache Kafka® repository and plugins to your build configuration:
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavenrepo },
   { title: 'Gradle (build.gradle)', content: gradlerepo }
 ]" />
 
-* To fully switch from the official Apache Kafka repository, replace it with the TuxCare repository.
+* To fully switch from the official Apache Kafka® repository, replace it with the TuxCare repository.
 * To keep both, add TuxCare after the official one.
 
 Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.
@@ -64,7 +68,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 ### Step 4: Update Dependencies
 
-Replace the Apache Kafka dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
+Replace the Apache Kafka® dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
 You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
 
@@ -75,7 +79,7 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
 
 ### Step 5: Verify and Build
 
-1. To confirm the TuxCare Apache Kafka repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
+1. To confirm the TuxCare Apache Kafka® repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
@@ -89,23 +93,23 @@ You can find a specific artifact version in your TuxCare account on [Nexus](http
     { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Kafka repository.
+The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Kafka® repository.
 
 ### Conclusion
 
-You've successfully integrated the TuxCare ELS for Apache Kafka repository into your project. You can now benefit from the secure and vetted Apache Kafka libraries it provides.
+You've successfully integrated the TuxCare ELS for Apache Kafka® repository into your project. You can now benefit from the secure and vetted Apache Kafka® libraries it provides.
 
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for Apache Kafka ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.kafka/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.kafka/).
+TuxCare provides VEX for Apache Kafka® ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.kafka/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.kafka/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
-## Resolved CVEs in ELS for Apache Kafka
+## Resolved CVEs in ELS for Apache Kafka®
 
 <ClientOnly>
   <ResolvedCveTable project="apache-kafka" />

@@ -140,7 +140,7 @@ const techData = [
         link: "./apache-spark/",
       },
       {
-        name: "Apache Tomcat",
+        name: "Apache Tomcat®",
         versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100",
         link: "./apache-tomcat/",
       },
@@ -195,12 +195,12 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Kafka",
+        name: "Apache Kafka®",
         versions: "3.2.3",
         link: "./apache-kafka/",
       },
       {
-        name: "Apache Lucene",
+        name: "Apache Lucene™",
         versions: "5.5.5",
         link: "./apache-lucene/",
       },
