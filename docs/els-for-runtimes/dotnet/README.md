@@ -2,18 +2,19 @@
 
 Endless Lifecycle Support (ELS) for .NET from TuxCare provides security fixes for .NET that has reached its end of life. This allows you to continue running .NET applications without vulnerability concerns, even after official support has ended.
 
-## Supported Windows Versions
+## Supported Versions
 
-| OS                      | Version                                                                                                  | Architectures |
-| :---------------------: | :------------------------------------------------------------------------------------------------------: | :-----------: |
-| **Nano Server**         | 2019, 2022                                                                                               | x64           |
-| **Windows**             | 11 (24H2 (IoT), 24H2 (E), 24H2, 23H2, 22H2 (E)), 10 (22H2 (E), 21H2 (E), 21H2 (IoT), 1809 (E), 1607 (E)) | x64, x86      |
-| **Windows Server**      | 23H2, 2022, 2019, 2016, 2012-R2, 2012                                                                    | x64, x86      |
-| **Windows Server Core** | 2022, 2019, 2016, 2012-R2, 2012                                                                          | x64, x86      |
+**Supported .NET versions**: 6.0.x, 8.0.x, 10.0.x
 
-## Supported .NET Versions
-
-* .NET 6.0.x, 8.0.x, 10.0.x 
+| Windows Version                                         | .NET 6 | .NET 8 | .NET 10 | Architectures |
+|---------------------------------------------------------|:------:|:------:|:-------:|:-------------:|
+| **Nano Server 2019, 2022**                              | ✓      | ✓      | ✓       | x64           |
+| **Nano Server 2025**                                    | —      | ✓      | ✓       | x64           |
+| **Windows 11** (24H2, 23H2, 22H2 E/Edu)                 | ✓      | ✓      | ✓       | x64           |
+| **Windows 10** (22H2)                                   | ✓      | ✓      | ✓       | x64           |
+| **Windows Server** 2025                                 | —      | ✓      | ✓       | x64           |
+| **Windows Server** 2022, 2019, 2016, 2012-R2, 2012      | ✓      | ✓      | ✓       | x64, x86      |
+| **Windows Server Core** 2022, 2019, 2016, 2012-R2, 2012 | ✓      | ✓      | ✓       | x64, x86      |
 
 #### SDK
 
@@ -44,7 +45,7 @@ TuxCare applies security patches to .NET for the above OS versions, ensuring con
 
 ### Prerequisites & System Requirements
 
-* Check the [supported versions](#supported-windows-versions) section above for operating system compatibility.
+* Check the [supported versions](#supported-versions) section above for operating system compatibility.
 * Refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/) for system requirements.
 * Administrator rights for installation
 * Check if you have .NET already installed on your system:
@@ -72,7 +73,7 @@ TuxCare applies security patches to .NET for the above OS versions, ensuring con
   * **.NET Runtime** - Runs .NET applications but does not include development tools.
   * **.NET Runtime Desktop** - Required for running desktop applications built with .NET.
   * **ASP.NET Core Runtime** - Needed for running web applications and services built with ASP.NET Core.
-For more information, refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
+  For more information, refer to the [official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/).
 * Download the corresponding installer based on your system type (x64 or x86). Downloading the latest version is recommended.
   * .NET SDK - Installed via an .exe installer.
   * .NET Runtime, .NET Runtime Desktop, and ASP.NET Core Runtime – Installed via .msi files.
@@ -174,7 +175,7 @@ For a quick start, follow this example to create and run a simple console applic
 
 The following commands are useful for managing and troubleshooting .NET installation.
 
-* `where.exe` dotnet locates the dotnet executable on the system. The output shows the exact path where the dotnet command is installed. By default, the .NET installation is placed in the Program Files\dotnet folder, unless a different destination is chosen during setup.
+* `where.exe dotnet` locates the dotnet executable on the system. The output shows the exact path where the dotnet command is installed. By default, the .NET installation is placed in the Program Files\dotnet folder, unless a different destination is chosen during setup.
 
   <CodeWithCopy>
 
@@ -237,7 +238,7 @@ The following commands are useful for managing and troubleshooting .NET installa
     https://aka.ms/dotnet/runtimes-sdk-info
   ```
 
-* `dotnet –list-sdks` command lists all the .NET SDKs installed on your system. Uninstall the old .NET version after you install a new one.
+* `dotnet --list-sdks` lists all the .NET SDKs installed on your system. Uninstall the old .NET version after you install a new one.
 
   <CodeWithCopy>
 
@@ -275,11 +276,11 @@ Replace `$USERNAME` and `$PASSWORD` with the credentials provided by [sales@tuxc
 
 ### Uninstall via Windows Settings
 
-* Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** or (**Apps&Features** on older versions).
+* Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** (or **Apps & Features** on older versions).
 * Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
 * Click on each entry and select **Uninstall**.
   :::tip
-  During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
+  During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
   :::
 * A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
@@ -295,7 +296,7 @@ Replace `$USERNAME` and `$PASSWORD` with the credentials provided by [sales@tuxc
 * Search for *.NET SDK* or *.NET Runtime* depending on what you’ve installed.
 * Right-click on each entry and select **Uninstall**.
   :::tip
-  During the uninstall,  a **"Files in use"** window can appear. Select **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
+  During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
   :::
 * A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
