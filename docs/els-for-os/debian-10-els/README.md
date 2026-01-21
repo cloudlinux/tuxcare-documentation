@@ -76,41 +76,13 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 * **Debian 10 ELS**: [security.tuxcare.com/csaf/v2/els_os/debian10els/](https://security.tuxcare.com/csaf/v2/els_os/debian10els/)
 * **Debian 10 ELS**: [cve.tuxcare.com/rss_feed/els/releases/debian10els](https://cve.tuxcare.com/rss_feed/els/releases/debian10els)
 
-## Removing ELS from Debian 10
+## Removing the ELS repository
 
-1. Remove the ELS repository configuration:
+The repository can be removed by running the installation script with the `--delete` flag:
    <CodeWithCopy>
 
    ```
-   rm /etc/apt/sources.list.d/*els*.list
+   bash install-debian10-els-repo.sh --delete
    ```
 
-   </CodeWithCopy>
-
-2. Remove the ELS signing key:
-
-   <CodeWithCopy>
-
-   ```
-   apt-key list | grep TuxCare
-   apt-key del <KEY_ID>
-   ```
-   </CodeWithCopy>
-
-3. Uninstall the ELS release package:
-
-   <CodeWithCopy>
-
-   ```
-   apt remove els-os-release
-   ```
-   </CodeWithCopy>
-
-4. Update the package cache:
-
-   <CodeWithCopy>
-
-   ```
-   apt update
-   ```
    </CodeWithCopy>

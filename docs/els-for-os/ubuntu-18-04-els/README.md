@@ -77,43 +77,31 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 
 ## Removing the ELS repository 
 
-1. List the ELS repository file in the APT sources directory:
+1. List ELS repository file (ending with -els.repo) in the repository folder:
 
    <CodeWithCopy>
 
    ```
-   ls -l /etc/apt/sources.list.d/*els*.list
+   ls -l /etc/apt/sources.list.d/*-els.list
    ```
 
    </CodeWithCopy>
 
-2. Remove the ELS repository file to disable the repository:
+2. Remove the file to disable the ELS repository, for example:
 
    <CodeWithCopy>
 
    ```
-   sudo rm /etc/apt/sources.list.d/*els*.list
+   rm /etc/apt/sources.list.d/ubuntu-els.list
    ```
 
    </CodeWithCopy>
 
-3. Remove the ELS package:
+3. Uninstall the `els-define` package:
 
    <CodeWithCopy>
 
    ```
-   sudo apt remove els-define
+   apt remove els-define
    ```
-   </CodeWithCopy>
-
-4. Update the package index:
-
-   <CodeWithCopy>
-
-    ```
-   sudo apt update
-    ```
-    
-   </CodeWithCopy>
-
- 
+   </CodeWithCopy> 

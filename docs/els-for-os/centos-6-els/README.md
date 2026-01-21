@@ -1,20 +1,20 @@
 # CentOS 6 ELS
 
-## Connection to ELS repository
+## Connecting to ELS repository
 
-To install the Endless Lifecycle Support repository on a server, you just need to download an installer script and run the script with a key. The installation script will register the server in the CLN with the key, add a PGP key to the server, and create the ELS repository.
+To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
 
 ### Outbound Firewall Settings
 
-In order to use Endless Lifecycle Support for CentOS 6, you will need to open TCP port 443 to the following destinations:
+To use Endless Lifecycle Support for CentOS 6, you need to open TCP port 443 to the following destinations:
 
 * [cln.cloudlinux.com](http://cln.cloudlinux.com)
 * [repo.cloudlinux.com](http://repo.cloudlinux.com)
 * [els-rollout.cloudlinux.com](https://els-rollout.cloudlinux.com/)
 
-## Installation of repositories
+## Installing the repository
 
-1. Download an installer script:
+1. Download an installation script:
 
    <CodeWithCopy>
 
@@ -24,7 +24,7 @@ In order to use Endless Lifecycle Support for CentOS 6, you will need to open TC
 
    </CodeWithCopy>
 
-2. Run the installer script with keys:
+2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.
 
    <CodeWithCopy>
 
@@ -34,9 +34,9 @@ In order to use Endless Lifecycle Support for CentOS 6, you will need to open TC
 
    </CodeWithCopy>
 
-   The installation script registers a server in CLN with the key and adds a PGP key to the server.
+   
 
-3. To ensure the installation has been completed successfully, run the following command:
+3. Verify that the installation was successful by running the following command:
 
    <CodeWithCopy>
 
@@ -46,7 +46,8 @@ In order to use Endless Lifecycle Support for CentOS 6, you will need to open TC
 
    </CodeWithCopy>
 
-   It should return the info about an available package. If you can see information about the package, you can be sure that the installation was successful. After this, you will be able to install updates from the repository using a regular yum upgrade command.
+   It should return information about the available package. If the package information is displayed, the installation was successful.
+   After that, you can install updates from the repository using a standard `yum upgrade` command.
 
    Example:
 
@@ -74,7 +75,7 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
 * **CentOS 6 ELS CSAF data**: [security.tuxcare.com/csaf/v2/els_os/centos6els/](https://security.tuxcare.com/csaf/v2/els_os/centos6els/)
 * **CentOS 6 ELS RSS release feed**: [cve.tuxcare.com/rss_feed/els/releases/centos6els](https://cve.tuxcare.com/rss_feed/els/releases/centos6els)
 
-## Deinstallation instructions for yum repositories
+## Removing the ELS repository
 
 1. List ELS repository file (ending with `-els.repo`) in the repository folder:
 
