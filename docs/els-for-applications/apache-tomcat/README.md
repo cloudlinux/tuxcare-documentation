@@ -1,17 +1,21 @@
-# Apache Tomcat
+# Apache Tomcat<sup style="font-size: 0.5em;">®</sup>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat core components such as Coyote, Catalina, Jasper etc.. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Apache Tomcat service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat applications.
+Apache®, Apache Tomcat®, are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper etc.. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
 
 This guide outlines the steps needed for Apache Tomcat server setup and configuration.
 
 :::tip
-Apache Tomcat is also available for installation as a library for Maven and Gradle projects. You can find the corresponding instructions [here](/els-for-libraries/apache-tomcat/).
+Apache Tomcat® is also available for installation as a library for Maven and Gradle projects. You can find the corresponding instructions [here](/els-for-libraries/apache-tomcat/).
 :::
 
 ## Supported Versions
 
-* Apache Tomcat 8.5.100, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100
+* Apache Tomcat® 8.5.100, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100
 
 ## Prerequisites
 
@@ -33,7 +37,7 @@ Apache Tomcat is also available for installation as a library for Maven and Grad
 
 ## Repository Access
 
-You need username and password to access the TuxCare ELS Apache Tomcat repository. Anonymous access is disabled. 
+You need username and password to access the TuxCare ELS Apache Tomcat® repository. Anonymous access is disabled. 
 To obtain credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 Once you have credentials, you can access the repository at: [nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/).
@@ -52,7 +56,7 @@ Once you have credentials, you can access the repository at: [nexus.repo.tuxcare
 
    </CodeWithCopy>
 
-2. Create a new `tomcat` user as a member of this `tomcat` group, with a home directory of `/opt/tomcat`, which will be used to install Tomcat, and set the user's login shell to `/bin/false` so that no one can log in directly as this user:
+2. Create a new `tomcat` user as a member of this `tomcat` group, with a home directory of `/opt/tomcat`, which will be used to install Apache Tomcat®, and set the user's login shell to `/bin/false` so that no one can log in directly as this user:
 
    <CodeWithCopy>
 
@@ -62,9 +66,9 @@ Once you have credentials, you can access the repository at: [nexus.repo.tuxcare
 
    </CodeWithCopy>
 
-### Step 2: Download and Install Apache Tomcat
+### Step 2: Download and Install Apache Tomcat®
 
-1. Open the terminal and download Apache Tomcat from TuxCare using your credentials. For example, Apache Tomcat 8.5.100:
+1. Open the terminal and download Apache Tomcat® from TuxCare using your credentials. For example, Apache Tomcat® 8.5.100:
 
    <CodeWithCopy>
 
@@ -76,7 +80,7 @@ Once you have credentials, you can access the repository at: [nexus.repo.tuxcare
 
    Replace `USERNAME` and `PASSWORD` with your actual credentials.
 
-2. Create the `/opt/tomcat` directory and extract the Apache Tomcat archive into it:
+2. Create the `/opt/tomcat` directory and extract the Apache Tomcat® archive into it:
 
    <CodeWithCopy>
 
@@ -87,7 +91,7 @@ Once you have credentials, you can access the repository at: [nexus.repo.tuxcare
 
    </CodeWithCopy>
 
-3. Change to the Tomcat installation directory:
+3. Change to the Apache Tomcat® installation directory:
 
    <CodeWithCopy>
 
@@ -99,7 +103,7 @@ Once you have credentials, you can access the repository at: [nexus.repo.tuxcare
 
 ### Step 4: Configure Permissions
 
-Update permissions so that the `tomcat` user has access to the Tomcat installation.
+Update permissions so that the `tomcat` user has access to the Apache Tomcat® installation.
 
 1. Change ownership to the `tomcat` group:
 
@@ -168,9 +172,9 @@ Update permissions so that the `tomcat` user has access to the Tomcat installati
 
    </CodeWithCopy>
 
-### Step 6: Run Tomcat
+### Step 6: Run Apache Tomcat®
 
-1. To start Tomcat run:
+1. To start Apache Tomcat® run:
 
    <CodeWithCopy>
 
@@ -182,7 +186,7 @@ Update permissions so that the `tomcat` user has access to the Tomcat installati
 
 2. Verify installation. 
 
-   * Go to [http://localhost:8080/](http://localhost:8080/) in your browser. You should see the default Tomcat homepage.
+   * Go to [http://localhost:8080/](http://localhost:8080/) in your browser. You should see the default Apache Tomcat® homepage.
 
    * Or check from the terminal:
 
@@ -194,9 +198,9 @@ Update permissions so that the `tomcat` user has access to the Tomcat installati
 
     </CodeWithCopy>
 
-    Successful output will be an HTML page from Tomcat.
+    Successful output will be an HTML page from Apache Tomcat®.
 
-3. To stop Tomcat run: 
+3. To stop Apache Tomcat® run: 
 
    <CodeWithCopy>
 
@@ -208,9 +212,9 @@ Update permissions so that the `tomcat` user has access to the Tomcat installati
 
 ## Windows Installation
 
-### Step 1: Download Apache Tomcat
+### Step 1: Download Apache Tomcat®
 
-Download the Apache Tomcat .zip archive from [https://nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/) using your credentials.
+Download the Apache Tomcat® .zip archive from [https://nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/) using your credentials.
 
 ### Step 2: Extract and Install
 
@@ -222,21 +226,21 @@ Download the Apache Tomcat .zip archive from [https://nexus.repo.tuxcare.com/rep
 
 2. Add a new system variable named `CATALINA_HOME` with the value `C:\Tomcat\apache-tomcat-8.5.100-tuxcare.3` (or your installation path).
 
-### Step 4: Run Tomcat
+### Step 4: Run Apache Tomcat®
 
-1. Start Tomcat by double-clicking `C:\Tomcat\apache-tomcat-8.5.100-tuxcare.3\bin\startup.bat`.
+1. Start Apache Tomcat® by double-clicking `C:\Tomcat\apache-tomcat-8.5.100-tuxcare.3\bin\startup.bat`.
 
-2. Verify installation. Go to [http://localhost:8080/](http://localhost:8080/) in your browser. You should see the default Tomcat homepage.
+2. Verify installation. Go to [http://localhost:8080/](http://localhost:8080/) in your browser. You should see the default Apache Tomcat® homepage.
 
-3. Stop Tomcat by double-clicking `C:\Tomcat\apache-tomcat-8.5.100-tuxcare.3\bin\shutdown.bat`.
+3. Stop Apache Tomcat® by double-clicking `C:\Tomcat\apache-tomcat-8.5.100-tuxcare.3\bin\shutdown.bat`.
 
 ## Upgrading to a Newer TuxCare Version
 
 To upgrade to a newer TuxCare release (e.g., from `tuxcare.1` to `tuxcare.3`):
 
-1. Download and extract a new version of the Apache Tomcat archive from TuxCare using the instructions above.
+1. Download and extract a new version of the Apache Apache Tomcat® archive from TuxCare using the instructions above.
 
-2. Start Tomcat by running the startup script.
+2. Start Apache Tomcat® by running the startup script.
 
 ## Logs Location
 
@@ -266,9 +270,9 @@ Check logs for detailed error information:
 
 VEX is a machine-readable format that indicates whether a known vulnerability is actually exploitable in your product. It helps reduce false positives and prioritize real risks.
 
-TuxCare provides VEX data for Apache Tomcat ELS versions at: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
+TuxCare provides VEX data for Apache Tomcat® ELS versions at: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
-## Resolved CVEs in ELS for Apache Tomcat
+## Resolved CVEs in ELS for Apache Tomcat®
 
 <ClientOnly>
   <ResolvedCveTable project="apache-tomcat" />

@@ -7,11 +7,12 @@ export default defineUserConfig({
   theme,
   markdown: {
     anchor: {
-      slugify: str =>
-        str
-          .replace(/®/g, '')
-          .toLowerCase()
-          .replace(/\s+/g, '-')
+    slugify: str =>
+      str
+        .replace(/®/g, '')
+        .replace(/™/g, '')
+        .toLowerCase()
+        .replace(/\s+/g, '-')
     },
     headers: {
       level: [2, 3, 4, 5],

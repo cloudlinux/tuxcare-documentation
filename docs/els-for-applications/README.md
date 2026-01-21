@@ -4,7 +4,7 @@
 
 * [Apache Hadoop](./apache-hadoop)
 * [Apache Hive](./apache-hive)
-* [Apache Tomcat](./apache-tomcat)
+* [Apache Tomcat®](./apache-tomcat)
 
 ## Vulnerability Coverage and Target Response Times
 
