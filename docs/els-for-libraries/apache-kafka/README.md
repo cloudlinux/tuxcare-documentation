@@ -1,6 +1,6 @@
 # Apache Kafka<sup style="font-size: 0.5em;">®</sup>
 
-Apache Kafka® is a registered trademark of The Apache Software Foundation.
+Apache®, Apache Kafka®, are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
 
 <br>
 

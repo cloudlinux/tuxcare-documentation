@@ -130,12 +130,12 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Struts",
+        name: "Apache Struts™",
         versions: "1.3.5 | 2.5.33",
         link: "./apache-struts/",
       },
       {
-        name: "Apache Spark",
+        name: "Apache Spark™",
         versions: "2.4.8",
         link: "./apache-spark/",
       },
@@ -200,7 +200,7 @@ const techData = [
         link: "./apache-kafka/",
       },
       {
-        name: "Apache Lucene™",
+        name: "Apache Lucene®",
         versions: "5.5.5",
         link: "./apache-lucene/",
       },
@@ -305,7 +305,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Velocity Engine",
+        name: "Apache Velocity Engine™",
         versions: "1.7",
         link: "./apache-velocity-engine/",
       },

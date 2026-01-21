@@ -1,6 +1,6 @@
 # Apache Tomcat<sup style="font-size: 0.5em;">®</sup>
 
-\* Apache Tomcat® is a registered trademark of The Apache Software Foundation.
+Apache®, Apache Tomcat®, are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
 
 <br>
 
