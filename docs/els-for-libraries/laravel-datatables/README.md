@@ -1,21 +1,20 @@
-# Symfony
+# Yajra Laravel DataTables
 
-Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, Symfony HttpFoundation from TuxCare provides security fixes for Symfony component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Yajra Yajra Laravel DataTables from TuxCare provides security fixes for Yajra Laravel DataTable package versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions and Components
+## Supported Versions
 
-* **Symfony Process** 5.x, 6.x
-* **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
+* **Yajra Laravel-DataTables-Oracle** 9.21.2, 10.11.4
 
 Other versions upon request.
 
-## Connection to ELS for Symfony Repository
+## Connection to ELS for Yajra Laravel DataTable Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Symfony components repository into your application. The repository provides trusted Symfony packages that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Yajra Laravel DataTable repository into your application. The repository provides trusted Yajra Laravel DataTable package versions that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Symfony repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Yajra Laravel DataTable repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -59,13 +58,13 @@ Add the `els_php_custom1` Composer repository either via CLI or by editing `comp
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Symfony components
+### Step 4: Install Yajra Laravel DataTable
 
-Install the TuxCare-maintained Symfony components release that matches your project:
+Install the TuxCare-maintained Yajra Laravel DataTable release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p1+tuxcare` },
-  { title: 'composer.json', content: symfonyjson }
+  { title: 'Composer CLI', content: `composer require yajra/laravel-datatables-oracle:10.11.4-p1+tuxcare` },
+  { title: 'composer.json', content: pkgjson }
 ]" />
 
 **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -114,19 +113,16 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Symfony components ELS versions: 
-* Symfony Process - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/)
-* Symfony HttpFoundation - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/)
-
+TuxCare provides VEX for Yajra Laravel DataTable ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/yajra-laravel-datatables-oracle/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/yajra-laravel-datatables-oracle/).
 
 ## How to Upgrade to a Newer Version
 
-If you have already installed a TuxCare Symfony Process package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+If you have already installed a TuxCare Yajra Laravel DataTable package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
 
 <CodeWithCopy>
 
 ```text
-composer require symfony/process:VERSION-pN+tuxcare
+composer require yajra/laravel-datatables-oracle:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -141,27 +137,25 @@ composer update
 
 </CodeWithCopy>
 
-## Resolved CVEs
+## Resolved CVEs in Yajra Laravel DataTable
 
-<TableTabs label="Choose Symfony component: " >
+Fixes for the following vulnerabilities are available in ELS for Yajra/Laravel-DataTables-Oracle from TuxCare:
 
-<template #Symfony_Process>
+<TableTabs label="Choose version: " >
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2025-27515 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
-| CVE-2025-27515 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
+<template #Version_9.21.2>
+
+| CVE ID            | Severity | Vulnerable versions | Fixed in version       |
+|-------------------|----------|---------------------|------------------------|
+| AIKIDO-2025-10705 | N/A      | 9.21.2              | 9.21.2-p1+tuxcare      |
 
 </template>
 
-<template #Symfony_HttpFoundation>
+<template #Version_10.11.4>
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 2.8.52-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 3.4.47-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p1+tuxcare |
-| CVE-2024-50345 | Medium   |< 5.4.46, >=6,<6.4.14, >=7,<7.1.7| 3.4.47-p3+tuxcare |
+| CVE ID            | Severity | Vulnerable versions | Fixed in version       |
+|-------------------|----------|---------------------|------------------------|
+| AIKIDO-2025-10705 | N/A      | 10.11.4             | 10.11.4-p1+tuxcare     |
 
 </template>
 
@@ -199,10 +193,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php_custom1/","options":{"http":{"verify":true}}}' --json`
 
-const symfonyjson =
+const pkgjson =
 `{
     "require": {
-        "symfony/process": "6.4.13-p1+tuxcare"
+        "yajra/laravel-datatables-oracle": "10.11.4-p1+tuxcare"
     }
 }`
 

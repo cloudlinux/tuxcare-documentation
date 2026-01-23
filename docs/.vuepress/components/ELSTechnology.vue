@@ -978,6 +978,11 @@ const techData = [
         link: "./dompdf/",
       },
       {
+        name: "Firebase PHP-JWT",
+        versions: "6.11.1",
+        link: "./firebase-php-jwt/",
+      },
+      {
         name: "Laravel",
         versions: "5.8.38 | 8 | 10 | 11",
         link: "./laravel/",
@@ -993,14 +998,34 @@ const techData = [
         link: "./livewire/",
       },
       {
+        name: "PHPOffice PhpSpreadsheet",
+        versions: "4.5.0",
+        link: "./phpspreadsheet/",
+      },
+      {
+        name: "Spatie Browsershot",
+        versions: "3.61.0",
+        link: "./spatie/",
+      },
+      {
+        name: "Spatie Laravel Medialibrary",
+        versions: "9.12.4 | 10.15.0",
+        link: "./spatie/",
+      },
+      {
         name: "Symfony HttpFoundation",
-        versions: "3.4.x | 4.4.x",
+        versions: "2.8.x | 3.4.x | 4.4.x",
         link: "./symfony/",
       },
       {
         name: "Symfony Process",
         versions: "5.x | 6.x",
         link: "./symfony/",
+      },
+      {
+        name: "Yajra Laravel DataTables",
+        versions: "9.21.2 | 10.11.4",
+        link: "./laravel-datatables-oracle/",
       },
     ],
   },

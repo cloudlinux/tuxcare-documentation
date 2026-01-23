@@ -235,8 +235,16 @@ export default {
                     icon: '/images/dompdf-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/firebase-php-jwt/',
+                    icon: '/images/firebase.webp',
+                },
+                {
                     path: '/els-for-libraries/laravel/',
                     icon: '/images/laravel-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/laravel-datatables-oracle/',
+                    icon: '/images/Yajra.webp',
                 },
                 {
                     path: '/els-for-libraries/league-commonmark/',
@@ -245,6 +253,14 @@ export default {
                 {
                     path: '/els-for-libraries/livewire/',
                     icon: '/images/livewire-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/phpspreadsheet/',
+                    icon: '/images/phpspreadsheet.webp',
+                },
+                {
+                    path: '/els-for-libraries/spatie/',
+                    icon: '/images/spatie.webp',
                 },
                 {
                     path: '/els-for-libraries/symfony/',

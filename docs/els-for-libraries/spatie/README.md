@@ -1,21 +1,21 @@
-# Symfony
+# Spatie
 
-Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, Symfony HttpFoundation from TuxCare provides security fixes for Symfony component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Spatie packages from TuxCare provides security fixes for Spatie package versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions and Components
 
-* **Symfony Process** 5.x, 6.x
-* **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
+* **Spatie Browsershot** 3.61.0
+* **Spatie Laravel Medialibrary** 9.12.4, 10.15.0
 
 Other versions upon request.
 
-## Connection to ELS for Symfony Repository
+## Connection to ELS for Spatie Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Symfony components repository into your application. The repository provides trusted Symfony packages that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Spatie packages repository into your application. The repository provides trusted Spatie packages that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Symfony repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Spatie repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -59,14 +59,31 @@ Add the `els_php_custom1` Composer repository either via CLI or by editing `comp
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Symfony components
+### Step 4: Install Spatie packages
 
-Install the TuxCare-maintained Symfony components release that matches your project:
+Install the TuxCare-maintained Spatie package release that matches your project:
+
+<TableTabs label="Choose Spatie package: " >
+
+<template #Spatie_Browsershot>
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p1+tuxcare` },
-  { title: 'composer.json', content: symfonyjson }
+  { title: 'Composer CLI', content: `composer require spatie/browsershot:3.61.0-p1+tuxcare` },
+  { title: 'composer.json', content: pkgjson1 }
 ]" />
+
+</template>
+
+<template #Spatie_Laravel_Medialibrary>
+
+<CodeTabs :tabs="[
+  { title: 'Composer CLI', content: `composer require spatie/laravel-medialibrary:10.15.0-p1+tuxcare` },
+  { title: 'composer.json', content: pkgjson2 }
+]" />
+
+</template>
+
+</TableTabs>
 
 **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -114,19 +131,19 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Symfony components ELS versions: 
-* Symfony Process - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/)
-* Symfony HttpFoundation - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/)
+TuxCare provides VEX for Spatie ELS versions: 
+* Spatie Browsershot - [security.tuxcare.com/vex/cyclonedx/els_lang_php/spatie-browsershot/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/spatie-browsershot/)
+* Spatie Laravel Medialibrary - [security.tuxcare.com/vex/cyclonedx/els_lang_php/spatie-laravel-medialibrary/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/spatie-laravel-medialibrary/)
 
 
 ## How to Upgrade to a Newer Version
 
-If you have already installed a TuxCare Symfony Process package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+If you have already installed a TuxCare Spatie package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
 
 <CodeWithCopy>
 
 ```text
-composer require symfony/process:VERSION-pN+tuxcare
+composer require spatie/PACKAGE:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -143,25 +160,28 @@ composer update
 
 ## Resolved CVEs
 
-<TableTabs label="Choose Symfony component: " >
+Fixes for the following vulnerabilities are available in ELS for Spatie from TuxCare:
 
-<template #Symfony_Process>
+<TableTabs label="Choose Spatie package:" >
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2025-27515 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
-| CVE-2025-27515 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
+<template #Spatie_Browsershot>
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version       |
+|----------------|----------|---------------------|------------------------|
+| CVE-2025-1026  | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
+| CVE-2024-21547 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
+| CVE-2024-21549 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
+| CVE-2024-21544 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
+| CVE-2025-1022  | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
 
 </template>
 
-<template #Symfony_HttpFoundation>
+<template #Spatie_Laravel_Medialibrary>
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 2.8.52-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 3.4.47-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p1+tuxcare |
-| CVE-2024-50345 | Medium   |< 5.4.46, >=6,<6.4.14, >=7,<7.1.7| 3.4.47-p3+tuxcare |
+| CVE ID            | Severity | Vulnerable versions | Fixed in version       |
+|-------------------|----------|---------------------|------------------------|
+| AIKIDO-2024-10189 | High     | 9.12.4              | 9.12.4-p1+tuxcare      |
+| AIKIDO-2024-10189 | High     | 10.15.0             | 10.15.0-p1+tuxcare     |
 
 </template>
 
@@ -199,11 +219,19 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php_custom1/","options":{"http":{"verify":true}}}' --json`
 
-const symfonyjson =
+const pkgjson1 =
 `{
     "require": {
-        "symfony/process": "6.4.13-p1+tuxcare"
+        "spatie/browsershot": "3.61.0-p1+tuxcare"
+    }
+}`
+
+const pkgjson2 =
+`{
+    "require": {
+        "spatie/laravel-medialibrary": "10.15.0-p1+tuxcare"
     }
 }`
 
 </script>
+
