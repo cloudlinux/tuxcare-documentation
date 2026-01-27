@@ -968,6 +968,11 @@ const techData = [
     ecosystemIcon: "/images/php-logo.webp",
     projects: [
       {
+        name: "Browsershot",
+        versions: "3.61.0",
+        link: "./browsershot/",
+      },
+      {
         name: "Carbon",
         versions: "1.26.6",
         link: "./carbon/",
@@ -998,19 +1003,9 @@ const techData = [
         link: "./livewire/",
       },
       {
-        name: "PHPOffice PhpSpreadsheet",
+        name: "PhpSpreadsheet",
         versions: "4.5.0",
         link: "./phpspreadsheet/",
-      },
-      {
-        name: "Spatie Browsershot",
-        versions: "3.61.0",
-        link: "./spatie/",
-      },
-      {
-        name: "Spatie Laravel Medialibrary",
-        versions: "9.12.4 | 10.15.0",
-        link: "./spatie/",
       },
       {
         name: "Symfony HttpFoundation",
@@ -1021,11 +1016,6 @@ const techData = [
         name: "Symfony Process",
         versions: "5.x | 6.x",
         link: "./symfony/",
-      },
-      {
-        name: "Yajra Laravel DataTables",
-        versions: "9.21.2 | 10.11.4",
-        link: "./laravel-datatables-oracle/",
       },
     ],
   },

@@ -227,6 +227,10 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/browsershot/',
+                    icon: '/images/spatie.webp',
+                },
+                {
                     path: '/els-for-libraries/carbon/',
                     icon: '/images/nesbot-carbon.webp',
                 },
@@ -243,10 +247,6 @@ export default {
                     icon: '/images/laravel-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/laravel-datatables-oracle/',
-                    icon: '/images/Yajra.webp',
-                },
-                {
                     path: '/els-for-libraries/league-commonmark/',
                     icon: '/images/league-commonmark-logo.webp',
                 },
@@ -257,10 +257,6 @@ export default {
                 {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
-                },
-                {
-                    path: '/els-for-libraries/spatie/',
-                    icon: '/images/spatie.webp',
                 },
                 {
                     path: '/els-for-libraries/symfony/',
