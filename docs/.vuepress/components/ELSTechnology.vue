@@ -968,6 +968,11 @@ const techData = [
     ecosystemIcon: "/images/php-logo.webp",
     projects: [
       {
+        name: "Browsershot",
+        versions: "3.61.0",
+        link: "./browsershot/",
+      },
+      {
         name: "Carbon",
         versions: "1.26.6",
         link: "./carbon/",
@@ -976,6 +981,11 @@ const techData = [
         name: "DomPDF",
         versions: "0.8.x | 1.2.x",
         link: "./dompdf/",
+      },
+      {
+        name: "Firebase PHP-JWT",
+        versions: "6.11.1",
+        link: "./firebase-php-jwt/",
       },
       {
         name: "Laravel",
@@ -993,8 +1003,13 @@ const techData = [
         link: "./livewire/",
       },
       {
+        name: "PhpSpreadsheet",
+        versions: "4.5.0",
+        link: "./phpspreadsheet/",
+      },
+      {
         name: "Symfony HttpFoundation",
-        versions: "3.4.x | 4.4.x",
+        versions: "2.8.x | 3.4.x | 4.4.x",
         link: "./symfony/",
       },
       {

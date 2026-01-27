@@ -227,12 +227,20 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/browsershot/',
+                    icon: '/images/spatie.webp',
+                },
+                {
                     path: '/els-for-libraries/carbon/',
                     icon: '/images/nesbot-carbon.webp',
                 },
                 {
                     path: '/els-for-libraries/dompdf/',
                     icon: '/images/dompdf-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/firebase-php-jwt/',
+                    icon: '/images/firebase.webp',
                 },
                 {
                     path: '/els-for-libraries/laravel/',
@@ -245,6 +253,10 @@ export default {
                 {
                     path: '/els-for-libraries/livewire/',
                     icon: '/images/livewire-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/phpspreadsheet/',
+                    icon: '/images/phpspreadsheet.webp',
                 },
                 {
                     path: '/els-for-libraries/symfony/',
