@@ -112,7 +112,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 ## Resolved CVEs in ELS for Apache Lucene®
 
 <ClientOnly>
-  <ResolvedCveTable project="apache-Lucene®" />
+  <ResolvedCveTable project="apache-lucene" />
 </ClientOnly>
 
 <script setup>
