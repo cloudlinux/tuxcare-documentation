@@ -130,7 +130,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 ## Resolved CVEs in ELS for Apache Struts™
 
 <ClientOnly>
-  <ResolvedCveTable project="apache-Struts™" />
+  <ResolvedCveTable project="apache-struts" />
 </ClientOnly>
 
 <!-- data for Apache Struts instructions used in code blocks -->
