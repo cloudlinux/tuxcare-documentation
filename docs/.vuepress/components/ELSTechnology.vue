@@ -1019,6 +1019,17 @@ const techData = [
       },
     ],
   },
+  {
+    ecosystem: "C#",
+    ecosystemIcon: "/images/csharp.webp",
+    projects: [
+      {
+        name: ".NET Components",
+        versions: "6 | 8 | 10",
+        link: "./dotnet/",
+      },
+    ],
+  },
 ];
 
 const filteredData = computed(() => {
