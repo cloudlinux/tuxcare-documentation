@@ -10,13 +10,13 @@ TuxCare employs the Common Vulnerability Scoring System (CVSS v3.1) to assess th
 
 Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
 
-TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
+**Vulnerability coverage.** TuxCare shall provide security patches for high- and critical-risk (CVSS 7 and above), medium-risk (CVSS 4.0 to 6.9), and low-risk vulnerabilities. TuxCare reserves the right to offer a mitigation strategy as an alternative to a direct code fix.
 
-* **High and Critical CVEs (CVSS 7+):** Patches provided within 14 days
-* **Medium-severity CVEs (CVSS 4.0 to 6.9):** Patches provided within 60 days
-* **Low-severity CVEs:** Patches provided within 90 days.
-  * **For .NET patches may be provided upon custom request.** 
-* TuxCare may offer a mitigation strategy as an alternative to a direct code fix.
+**Response time.** TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
+
+* **High- and critical-risk vulnerabilities (CVSS 7 and above):** Patches are provided within 14 days from the date the vulnerabilities are publicly disclosed.
+* **Medium-risk vulnerabilities (CVSS 4.0 to 6.9):** Patches are provided within 60 days from the date the vulnerabilities are publicly disclosed.
+* **Low-risk vulnerabilities:** Patches are provided within 90 days from the date the vulnerabilities are publicly disclosed.
 
 ## Incident Reporting and Response Timeframe
 
