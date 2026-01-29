@@ -411,6 +411,15 @@ export default {
                     path: '/els-for-libraries/javascript-libraries/',
                     icon: '/images/javascript.webp',
                 },
+                {
+                    title: 'C#',
+                    type: 'section-header',
+                    icon: '/images/csharp.webp',
+                },
+                {
+                    path: '/els-for-libraries/dotnet/',
+                    icon: '/images/dotnet-logo.webp',
+                },
             ]
         },
     ],
