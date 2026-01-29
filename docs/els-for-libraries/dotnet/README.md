@@ -40,6 +40,8 @@ dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_c
 
 As an alternative to the CLI, you can configure NuGet package sources using a `nuget.config` file. This approach is useful for sharing configuration across a team or for version-controlled source settings.
 
+Before creating or editing a `nuget.config` file, navigate to your project directory (containing a `.csproj` file). If you don't have a project yet, create one first.
+
 #### Understanding NuGet Configuration Hierarchy
 
 NuGet configuration follows a hierarchy (from highest to lowest priority):
@@ -79,11 +81,11 @@ In this configuration:
 
 #### Adding Credentials for nuget.config
 
-If your `nuget.config` requires authentication, you can add credentials using the CLI or by adding a `<packageSourceCredentials>` section to your `nuget.config`:
+If your `nuget.config` requires authentication, you can add credentials using the CLI or by adding a `<packageSourceCredentials>` section inside `<configuration>` in your `nuget.config`:
 
 <CodeTabs :tabs="[
   { title: 'CLI', content: 'dotnet nuget update source TuxCare --username <USERNAME> --password <PASSWORD>' },
-  { title: 'nuget.config', content: credsConfig }
+  { title: 'nuget.config', content: credsSnippet },
 ]" />
 
 :::warning
@@ -106,10 +108,10 @@ Example output:
 
 ```text
 Registered Sources:
-  1.  nuget.org [Enabled]
-      https://api.nuget.org/v3/index.json
-  2.  TuxCare [Enabled]
-      https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json
+  1.  TuxCare [Enabled]
+      https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json
+  2.  nuget [Enabled]
+      https://api.nuget.org/v3/index.json
 ```
 
 ## Working with Packages
@@ -177,25 +179,12 @@ dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare-els
 
 If you use a `nuget.config` file, you can add package source mapping to route specific packages to the TuxCare feed. This ensures certain packages are always fetched from TuxCare while others come from NuGet.org.
 
-Add a `<packageSourceMapping>` section to your `nuget.config`, for example, Newtonsoft.Json:
+Add a `<packageSourceMapping>` section inside `<configuration>` in your `nuget.config`. For example, to route Newtonsoft.Json to TuxCare:
 
-<CodeWithCopy>
-
-```
-<packageSourceMapping>
-  <!-- Allow nuget.org to serve any package -->
-  <packageSource key="nuget">
-    <package pattern="*" />
-  </packageSource>
-
-  <!-- Route specific packages to TuxCare feed -->
-  <packageSource key="TuxCare">
-    <package pattern="Newtonsoft.*" />
-  </packageSource>
-</packageSourceMapping>
-```
-
-</CodeWithCopy>
+<CodeTabs :tabs="[
+  { title: 'Snippet to Add', content: mappingSnippet },
+  { title: 'Full nuget.config', content: mappingFullConfig }
+]" />
 
 **You can find available package versions in your TuxCare account on Nexus (anonymous access is restricted).**
 
@@ -269,11 +258,70 @@ dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_c
 
 <script setup>
 
-const credsConfig =
+const credsSnippet =
 `<packageSourceCredentials>
     <TuxCare>
-        <add key="Username" value="username" />
-        <add key="Password" value="passwordHash" />
+        <add key="Username" value="<USERNAME>" />
+        <add key="Password" value="<PASSWORD>" />
     </TuxCare>
 </packageSourceCredentials>`
+
+const credsFullConfig =
+`<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="TuxCare" value="https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" />
+    <add key="nuget" value="https://api.nuget.org/v3/index.json" />
+  </packageSources>
+  <packageSourceCredentials>
+    <TuxCare>
+        <add key="Username" value="<USERNAME>" />
+        <add key="Password" value="<PASSWORD>" />
+    </TuxCare>
+  </packageSourceCredentials>
+</configuration>`
+
+const mappingSnippet =
+`<packageSourceMapping>
+  <!-- Allow nuget.org to serve any package -->
+  <packageSource key="nuget">
+    <package pattern="*" />
+  </packageSource>
+
+  <!-- Route specific packages to TuxCare feed -->
+  <packageSource key="TuxCare">
+    <package pattern="Newtonsoft.*" />
+  </packageSource>
+</packageSourceMapping>`
+
+const mappingFullConfig =
+`<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <!-- To inherit the global NuGet package sources remove the <clear/> line below -->
+    <clear />
+    <add key="TuxCare" value="https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" />
+    <add key="nuget" value="https://api.nuget.org/v3/index.json" />
+  </packageSources>
+
+  <packageSourceCredentials>
+      <TuxCare>
+          <add key="Username" value="username" />
+          <add key="Password" value="passwordHash" />
+      </TuxCare>
+  </packageSourceCredentials>
+
+  <packageSourceMapping>
+    <!-- Allow nuget.org to serve any package -->
+    <packageSource key="nuget">
+      <package pattern="*" />
+    </packageSource>
+
+    <!-- Route specific packages to TuxCare feed -->
+    <packageSource key="TuxCare">
+      <package pattern="Newtonsoft.*" />
+    </packageSource>
+  </packageSourceMapping>
+</configuration>`
 </script>
