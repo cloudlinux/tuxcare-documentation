@@ -31,7 +31,6 @@ TuxCare provides technical support according to the standard [support policy](ht
 	
 It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to the TuxCare’s online knowledge base.
 
-
 ## Vulnerability coverage
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.

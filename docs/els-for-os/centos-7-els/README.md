@@ -2,7 +2,7 @@
 
 ## Supported Architecture and Packages
 
-Supported architecture is x86_64. For other architectures, please contact our sales team.
+Supported architecture is x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 The list of supported packages is provided [here](https://cve.tuxcare.com/els/projects?os=5779c3e2-4d4e-4612-8386-25e5fc241ed6&project=&version=&packages=&orderBy=project-asc).
 
