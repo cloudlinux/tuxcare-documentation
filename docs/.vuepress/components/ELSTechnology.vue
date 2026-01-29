@@ -1024,7 +1024,7 @@ const techData = [
     ecosystemIcon: "/images/csharp.webp",
     projects: [
       {
-        name: ".NET Components",
+        name: ".NET",
         versions: "6 | 8 | 10",
         link: "./dotnet/",
       },
