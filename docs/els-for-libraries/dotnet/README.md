@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for .NET from TuxCare delivers security fixes for .NET library, framework, and tool packages, distributed through NuGet packages. This allows you to continue running your .NET applications without vulnerability concerns, even after official support has ended.
 
-NuGet is the standard package manager for .NET, used to deliver the reusable components applications depend on. ELS applies fixes at the package level, so your applications receive security updates without requiring changes to your own code.
+NuGet is the standard package manager for .NET, used to deliver the reusable components that applications depend on. ELS applies fixes at the package level, so your applications receive security updates without requiring changes to your own code.
 
 ## Supported Versions
 
@@ -13,8 +13,7 @@ Other versions upon request.
 ## Prerequisites
 
 * .NET SDK installed. A TuxCare-supported .NET SDK build is also [available](/els-for-runtimes/dotnet/).
-* Access to the TuxCare .NET NuGet repository (credentials required).  
-You need a username and password to use the TuxCare ELS for .NET repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* Access to the TuxCare .NET NuGet repository (credentials required). To receive the credentials - a username and password - please contact [sales@tuxcare.com](mailto:sales@tuxcare.com). Anonymous access is disabled.
 
 ## Adding the Repository
 
@@ -27,7 +26,7 @@ Add the TuxCare NuGet repository as a package source using the `dotnet` CLI:
 <CodeWithCopy>
 
 ```text
-dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/els_dotnet/index.json" `
+dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" `
   --name TuxCare `
   --username <USERNAME> `
   --password <PASSWORD>
@@ -35,7 +34,7 @@ dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/els_dotnet/in
 
 </CodeWithCopy>
 
-**Replace `<USERNAME>` and `<PASSWORD>` with the credentials provided by sales.**
+**Replace `<els_dotnet_customerN>` with your customer repository name, and `<USERNAME>` and `<PASSWORD>` with the credentials provided by sales.**
 
 ### Adding the NuGet Source via nuget.config
 
@@ -62,10 +61,10 @@ Create a `nuget.config` file in your project or solution directory:
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
-    <!--To inherit the global NuGet package sources remove the <clear/> line below -->
+    <!-- To inherit the global NuGet package sources remove the <clear/> line below -->
     <clear />
+    <add key="TuxCare" value="https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" />
     <add key="nuget" value="https://api.nuget.org/v3/index.json" />
-    <add key="TuxCare" value="https://nexus.repo.tuxcare.com/repository/els_dotnet/index.json" />
   </packageSources>
 </configuration>
 ```
@@ -110,7 +109,7 @@ Registered Sources:
   1.  nuget.org [Enabled]
       https://api.nuget.org/v3/index.json
   2.  TuxCare [Enabled]
-      https://nexus.repo.tuxcare.com/repository/els_dotnet/index.json
+      https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json
 ```
 
 ## Working with Packages
@@ -172,7 +171,7 @@ dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare-els
 
 </CodeWithCopy>
 
-**You can find available package versions in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_dotnet/) (anonymous access is restricted).**
+**You can find available package versions in your TuxCare account on Nexus (anonymous access is restricted).**
 
 ### Using Package Source Mapping
 
@@ -198,7 +197,7 @@ Add a `<packageSourceMapping>` section to your `nuget.config`, for example, Newt
 
 </CodeWithCopy>
 
-**You can find available package versions in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_dotnet/) (anonymous access is restricted).**
+**You can find available package versions in your TuxCare account on Nexus (anonymous access is restricted).**
 
 ### Building the Project
 
@@ -260,7 +259,7 @@ To update the credentials for an existing source, remove and re-add the source:
 
 ```text
 dotnet nuget remove source TuxCare
-dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/els_dotnet/index.json" `
+dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/<els_dotnet_customerN>/index.json" `
   --name TuxCare `
   --username <NEW_USERNAME> `
   --password <NEW_PASSWORD>
@@ -272,9 +271,9 @@ dotnet nuget add source "https://nexus.repo.tuxcare.com/repository/els_dotnet/in
 
 const credsConfig =
 `<packageSourceCredentials>
-    <TuxCareProd>
+    <TuxCare>
         <add key="Username" value="username" />
         <add key="Password" value="passwordHash" />
-      </TuxCareProd>
+    </TuxCare>
 </packageSourceCredentials>`
 </script>
