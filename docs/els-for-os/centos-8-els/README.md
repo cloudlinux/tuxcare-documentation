@@ -1,5 +1,16 @@
 # CentOS 8 ELS
 
+## Supported Architecture and Packages
+
+Supported architecture is x86_64. For other architectures, please contact our sales team.
+
+The list of supported packages is provided here:
+
+* [CentOS 8.4 ELS](https://cve.tuxcare.com/els/projects?os=aa4ebb59-95d6-4734-9014-0dded2e4a382&project=&version=&packages=&orderBy=project-asc)
+
+* [CentOS 8.5 ELS](https://cve.tuxcare.com/els/projects?os=a3407f4d-0962-4971-bb9f-3141bb924451&project=&version=&packages=&orderBy=project-asc)
+
+
 ## Connecting to ELS repository
 
 To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
