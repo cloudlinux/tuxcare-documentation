@@ -1,5 +1,11 @@
 # Ubuntu 16.04 ELS
 
+## Supported Architecture and Packages
+
+Supported architecture is x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
+The list of supported packages is provided [here](https://cve.tuxcare.com/els/projects?os=8da0aedd-952c-463b-b98b-437b628cb20a&project=&version=&packages=&orderBy=project-asc).
+
 ## Connecting to ELS repository
 
 To install the Endless Lifecycle Support repository on a server, download an installation script and run it with a license key. The installation script registers the server in the CLN using the license key, adds a PGP key to the server, and creates the ELS repository.
