@@ -35,7 +35,7 @@ It delivers 24/7/365 access to the TuxCare’s support team through the [TuxCare
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS v3) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we give priority to the NVD score.
 
-TuxCare Endless Lifecycle Support, by default, provides security patches for High and Critical vulnerabilities (with a 7+ CVSS score). For vulnerabilities rated as Medium (4.0 to 6.9), TuxCare can provide patches for CVE's where mitigations are not available and there is sufficient customer demand.
+TuxCare shall provide security patches for high- and critical-risk vulnerabilities (CVSS 7 and above). For medium-risk vulnerabilities (CVSS 4.0 to 6.9), TuxCare may provide security patches where mitigations are not available, and there is sufficient customer demand. TuxCare reserves the right to offer a mitigation strategy as an alternative to a direct code fix.
 
 Custom coverage options are available, including a 10-pack of customer-directed patches for clients who need CVEs patched outside of the ELS scope. Specific details regarding these coverage options and their pricing can be obtained by contacting our sales team.
 
@@ -43,7 +43,7 @@ Custom coverage options are available, including a 10-pack of customer-directed 
 
 Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
 
-We aim to deliver security patches for critical and high-risk vulnerabilities (CVSS 7+) within 14 days from when the vulnerabilities become publicly disclosed. This rapid response time significantly reduces the window of opportunity for potential attackers and meets most security regulation requirements.
+TuxCare will make commercially reasonable efforts to deliver security patches for critical and high-risk vulnerabilities (CVSS 7 and above) within 14 days from the date the vulnerabilities become publicly disclosed.
 
 Requests for customer-directed security patches for CVEs that are outside of the ELS scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 14 days.
 
