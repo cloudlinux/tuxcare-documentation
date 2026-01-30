@@ -80,9 +80,6 @@ TuxCare provides ELS for node-fetch as an NPM package, hosted on a secure intern
      ```text
      "dependencies": {
        "node-fetch": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
-     },
-     "overrides": {
-       "node-fetch@2.6.1": "npm:@els-js/node-fetch@>=2.6.1-tuxcare.1"
      }
      ```
 

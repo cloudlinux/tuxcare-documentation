@@ -89,9 +89,6 @@ TuxCare provides ELS for RequireJS as an NPM package, hosted on a secure interna
      ```text
      "dependencies": {
        "requirejs": "npm:@els-js/requirejs@>=2.3.6-tuxcare.1"
-     },
-     "overrides": {
-       "requirejs@2.3.6": "npm:@els-js/requirejs@>=2.3.6-tuxcare.1"
      }
      ```
 

@@ -111,9 +111,6 @@ TuxCare provides ELS for Knockout as an NPM package, hosted on a secure internal
      ```text
      "dependencies": {
        "knockout": "npm:@els-js/knockout@>=3.4.2-tuxcare.1"
-     },
-     "overrides": {
-       "knockout@3.4.2": "npm:@els-js/knockout@>=3.4.2-tuxcare.1"
      }
      ```
 

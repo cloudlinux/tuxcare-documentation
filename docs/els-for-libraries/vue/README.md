@@ -47,53 +47,17 @@ TuxCare provides ELS for Vue as an NPM package, hosted on a secure internal regi
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Update your `package.json` file to replace your Vue dependencies with the TuxCare packages. You can do this in two ways:
+Manually update your `package.json` file by replacing your Vue dependencies with the TuxCare packages.
 
-   * **Option 1: Manual update**
+  <CodeWithCopy>
 
-     Manually update your `package.json` file by replacing your Vue dependencies with the TuxCare packages. This method gives you full control over which packages to update.
+  ```text
+  "dependencies": {
+    "vue": "npm:@els-js/vue@>=2.7.16-tuxcare.1"
+  }
+  ```
 
-     <CodeWithCopy>
-
-     ```text
-     "dependencies": {
-       "vue": "npm:@els-js/vue@>=2.7.16-tuxcare.1"
-     }
-     ```
-
-     </CodeWithCopy>
-
-   * **Option 2: TuxCare Patcher (Automated)**
-
-     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the Vue version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
-
-     <CodeWithCopy>
-
-     ```text
-     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
-     tuxcare-patch-js
-     ```
-
-     </CodeWithCopy>
-
-     The patcher will update your `package.json`, for example, from:
-
-     ```text
-     "dependencies": {
-       "vue": "^2.7.16"
-     }
-     ```
-
-     to:
-
-     ```text
-     "dependencies": {
-       "vue": "npm:@els-js/vue@>=2.7.16-tuxcare.1"
-     },
-     "overrides": {
-       "vue@2.7.16": "npm:@els-js/vue@>=2.7.16-tuxcare.1"
-     }
-     ```
+  </CodeWithCopy>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    

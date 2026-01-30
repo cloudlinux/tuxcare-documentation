@@ -89,9 +89,6 @@ TuxCare provides ELS for bootstrap-sass as an NPM package, hosted on a secure in
      ```text
      "dependencies": {
        "bootstrap-sass": "npm:@els-js/bootstrap-sass@>=3.4.0-tuxcare.1"
-     },
-     "overrides": {
-       "bootstrap-sass@3.4.0": "npm:@els-js/bootstrap-sass@>=3.4.0-tuxcare.1"
      }
      ```
 

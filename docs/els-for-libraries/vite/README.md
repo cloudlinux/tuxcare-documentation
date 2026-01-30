@@ -89,9 +89,6 @@ TuxCare provides ELS for Vite as an NPM package, hosted on a secure internal reg
      ```text
      "dependencies": {
        "vite": "npm:@els-js/vite@>=4.5.5-tuxcare.1"
-     },
-     "overrides": {
-       "vite@4.5.5": "npm:@els-js/vite@>=4.5.5-tuxcare.1"
      }
      ```
 

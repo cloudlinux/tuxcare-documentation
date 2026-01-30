@@ -89,9 +89,6 @@ TuxCare provides ELS for vue-template-compiler as an NPM package, hosted on a se
      ```text
      "dependencies": {
        "vue-template-compiler": "npm:@els-js/vue-template-compiler@>=2.6.11-tuxcare.1"
-     },
-     "overrides": {
-       "vue-template-compiler@2.6.11": "npm:@els-js/vue-template-compiler@>=2.6.11-tuxcare.1"
      }
      ```
 

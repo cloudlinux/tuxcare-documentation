@@ -111,9 +111,6 @@ TuxCare provides ELS for react-router as an NPM package, hosted on a secure inte
      ```text
      "dependencies": {
        "react-router": "npm:@els-js/react-router@>=7.5.1-tuxcare.1"
-     },
-     "overrides": {
-       "react-router@7.5.1": "npm:@els-js/react-router@>=7.5.1-tuxcare.1"
      }
      ```
 

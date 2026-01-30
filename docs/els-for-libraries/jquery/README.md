@@ -79,9 +79,6 @@ TuxCare provides ELS for jQuery as an NPM package, hosted on a secure internal r
      ```text
      "dependencies": {
        "jquery": "npm:@els-js/jquery@>=1.12.4-tuxcare.1"
-     },
-     "overrides": {
-       "jquery@1.12.4": "npm:@els-js/jquery@>=1.12.4-tuxcare.1"
      }
      ```
 
