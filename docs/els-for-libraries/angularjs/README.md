@@ -37,8 +37,8 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-angularjs:registry=https://nexus.repo.tuxcare.com/repository/els_angularjs/
+   //nexus.repo.tuxcare.com/repository/els_angularjs/:_auth=${TOKEN}
    ```
 
    </CodeWithCopy>
@@ -61,7 +61,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@>=1.4.4-tuxcare.1"
+          "angular": "npm:@els-angularjs/angular@>=1.4.4-tuxcare.1"
       }
       ```
 
@@ -75,7 +75,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@>=1.5.11-tuxcare.1"
+          "angular": "npm:@els-angularjs/angular@>=1.5.11-tuxcare.1"
       }
       ```
 
@@ -89,7 +89,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@>=1.6.10-tuxcare.1"
+          "angular": "npm:@els-angularjs/angular@>=1.6.10-tuxcare.1"
       }
       ```
 
@@ -103,7 +103,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
  
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@>=1.7.9-tuxcare.1"
+          "angular": "npm:@els-angularjs/angular@>=1.7.9-tuxcare.1"
       }
       ```
 
@@ -117,7 +117,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@>=1.8.2-tuxcare.1"
+          "angular": "npm:@els-angularjs/angular@>=1.8.2-tuxcare.1"
       }
       ```
 
@@ -131,7 +131,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
       ```text
       "dependencies": {
-          "angular": "npm:@els-js/angular@>=1.8.3-tuxcare.1"
+          "angular": "npm:@els-angularjs/angular@>=1.8.3-tuxcare.1"
       }
       ```
 
@@ -143,12 +143,12 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
    * **Option 2: TuxCare Patcher (Automated)**
 
-     Install the Patcher globally and run the following commands. The TuxCare Patcher automatically detects the AngularJS version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-js/*` packages.
+     Install the Patcher globally and run the following commands. The TuxCare Patcher automatically detects the AngularJS version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-angularjs/*` packages.
 
      <CodeWithCopy>
 
      ```text
-     npm install -g @els-js/tuxcare-patcher --userconfig ./.npmrc
+     npm install -g @els-angularjs/tuxcare-patcher --userconfig ./.npmrc
      tuxcare-patch-js
      ```
 
@@ -166,10 +166,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
 
      ```text
      "dependencies": {
-       "angular": "npm:@els-js/angular@>=1.8.3-tuxcare.1"
-     },
-     "overrides": {
-       "angular@1.8.3": "npm:@els-js/angular@>=1.8.3-tuxcare.1"
+       "angular": "npm:@els-angularjs/angular@>=1.8.3-tuxcare.1"
      }
      ```
 
