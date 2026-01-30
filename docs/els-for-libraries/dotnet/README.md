@@ -6,7 +6,11 @@ NuGet is the standard package manager for .NET, used to deliver the reusable com
 
 ## Supported Versions
 
-**Supported .NET versions**: 6, 8, 10
+* .NET 6, 8, 10
+* Microsoft.Owin 3.1.0
+* Microsoft.Owin.Security.Cookies 3.1.0
+* Newtonsoft.Json 4.5.11, 6.0.8, 8.0.3, 9.0.1, 10.0.3, 11.0.2, 12.0.3
+* SharpZipLib 0.86.0
 
 Other versions upon request.
 
@@ -90,6 +94,10 @@ If your `nuget.config` requires authentication, you can add credentials using th
 
 :::warning
 Avoid committing credentials to version control. Consider using environment variables or a separate local configuration file for sensitive information.
+:::
+
+:::tip
+When using the CLI (`dotnet nuget add source` or `dotnet nuget update source`), the password is stored as a hash. When manually editing `nuget.config`, the password is stored in plain text.
 :::
 
 ### Verifying the Source
@@ -262,7 +270,7 @@ const credsSnippet =
 `<packageSourceCredentials>
     <TuxCare>
         <add key="Username" value="<USERNAME>" />
-        <add key="Password" value="<PASSWORD>" />
+        <add key="ClearTextPassword" value="<PASSWORD>" />
     </TuxCare>
 </packageSourceCredentials>`
 

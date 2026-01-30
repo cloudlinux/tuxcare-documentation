@@ -412,9 +412,9 @@ export default {
                     icon: '/images/javascript.webp',
                 },
                 {
-                    title: 'C#',
+                    title: '.NET',
                     type: 'section-header',
-                    icon: '/images/csharp.webp',
+                    icon: '/images/dotnet-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/dotnet/',
