@@ -1020,12 +1020,32 @@ const techData = [
     ],
   },
   {
-    ecosystem: "C#",
-    ecosystemIcon: "/images/csharp.webp",
+    ecosystem: ".NET",
+    ecosystemIcon: "/images/dotnet-logo.webp",
     projects: [
       {
         name: ".NET",
         versions: "6 | 8 | 10",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Owin",
+        versions: "3.1.0",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Owin.Security.Cookies",
+        versions: "3.1.0",
+        link: "./dotnet/",
+      },
+      {
+        name: "Newtonsoft.Json",
+        versions: "4.5.11 | 6.0.8 | 8.0.3 | 9.0.1 | 10.0.3 | 11.0.2 | 12.0.3",
+        link: "./dotnet/",
+      },
+      {
+        name: "SharpZipLib",
+        versions: "0.86.0",
         link: "./dotnet/",
       },
     ],
