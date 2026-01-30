@@ -89,9 +89,6 @@ TuxCare provides ELS for express as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "express": "npm:@els-js/express@>=3.21.2-tuxcare.1"
-     },
-     "overrides": {
-       "express@3.21.2": "npm:@els-js/express@>=3.21.2-tuxcare.1"
      }
      ```
 

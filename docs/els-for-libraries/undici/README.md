@@ -89,9 +89,6 @@ TuxCare provides ELS for undici as an NPM package, hosted on a secure internal r
      ```text
      "dependencies": {
        "undici": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
-     },
-     "overrides": {
-       "undici@5.28.5": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
      }
      ```
 

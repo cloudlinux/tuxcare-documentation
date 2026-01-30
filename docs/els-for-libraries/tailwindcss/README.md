@@ -89,9 +89,6 @@ TuxCare provides ELS for tailwindcss as an NPM package, hosted on a secure inter
       ```text
       "dependencies": {
         "tailwindcss": "npm:@els-js/tailwindcss@>=2.1.1-tuxcare.1"
-      },
-      "overrides": {
-        "tailwindcss@2.1.1": "npm:@els-js/tailwindcss@>=2.1.1-tuxcare.1"
       }
       ```
 

@@ -72,25 +72,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Replace your Angular dependencies with TuxCare ones. You can use one of the following methods:
-
-   * **Option 1: Manual update**
-
-     Manually update your `package.json` file by replacing your Angular dependencies with the TuxCare packages. This method gives you full control over which packages to update.
-
-   * **Option 2: TuxCare Patcher (Automated)**
-
-     Install the Patcher globally and run it. The TuxCare Patcher automatically detects the Angular version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-angular/*` packages.
-
-
-     <CodeWithCopy>
-
-     ```text
-     npm install -g @els-angular/tuxcare-patcher --userconfig ./.npmrc
-     tuxcare-patch-js
-     ```
-
-     </CodeWithCopy>
+4. Manually update your `package.json` file by replacing your Angular dependencies with the TuxCare packages.
 
      <TableTabs label="Choose Angular version: " >
 

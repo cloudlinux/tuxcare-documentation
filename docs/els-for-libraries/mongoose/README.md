@@ -89,9 +89,6 @@ TuxCare provides ELS for Mongoose as an NPM package, hosted on a secure internal
      ```text
      "dependencies": {
        "mongoose": "npm:@els-js/mongoose@>=5.13.23-tuxcare.1"
-     },
-     "overrides": {
-       "mongoose@5.13.23": "npm:@els-js/mongoose@>=5.13.23-tuxcare.1"
      }
      ```
 

@@ -47,11 +47,7 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
    Replace ${TOKEN} with the token you received from [sales@tuxcare.com](mailto:sales@tuxcare.com).
    :::
 
-4. Replace your AngularJS dependencies with TuxCare ones. You can use one of the following methods:
-
-   * **Option 1: Manual update**
-
-     Manually update your `package.json` file by replacing your AngularJS dependencies with the TuxCare packages. This method gives you full control over which packages to update.
+4. Manually update your `package.json` file by replacing your AngularJS dependencies with the TuxCare packages.
 
       <TableTabs label="Choose AngularJS version: " >
 
@@ -140,35 +136,6 @@ TuxCare provides ELS for AngularJS as an NPM package, hosted on a secure interna
       </template>
 
      </TableTabs>
-
-   * **Option 2: TuxCare Patcher (Automated)**
-
-     Install the Patcher globally and run the following commands. The TuxCare Patcher automatically detects the AngularJS version in your `package.json` and updates your `dependencies` and `overrides` to use the corresponding TuxCare `@els-angularjs/*` packages.
-
-     <CodeWithCopy>
-
-     ```text
-     npm install -g @els-angularjs/tuxcare-patcher --userconfig ./.npmrc
-     tuxcare-patch-js
-     ```
-
-     </CodeWithCopy>
-
-     The patcher will update your `package.json`, for example, from:
-
-     ```text
-     "dependencies": {
-       "angular": "^1.8.3"
-     }
-     ```
-
-     to:
-
-     ```text
-     "dependencies": {
-       "angular": "npm:@els-angularjs/angular@>=1.8.3-tuxcare.1"
-     }
-     ```
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
    

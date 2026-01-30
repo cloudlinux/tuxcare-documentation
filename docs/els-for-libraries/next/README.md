@@ -125,9 +125,6 @@ TuxCare provides ELS for Next.js as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "next": "npm:@els-js/next@>=12.3.7-tuxcare.1"
-     },
-     "overrides": {
-       "next@12.3.7": "npm:@els-js/next@>=12.3.7-tuxcare.1"
      }
      ```
 

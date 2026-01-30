@@ -89,9 +89,6 @@ TuxCare provides ELS for koa as an NPM package, hosted on a secure internal regi
      ```text
      "dependencies": {
        "koa": "npm:@els-js/koa@>=1.7.1-tuxcare.1"
-     },
-     "overrides": {
-       "koa@1.7.1": "npm:@els-js/koa@>=1.7.1-tuxcare.1"
      }
      ```
 

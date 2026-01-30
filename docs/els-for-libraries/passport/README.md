@@ -89,9 +89,6 @@ TuxCare provides ELS for passport as an NPM package, hosted on a secure internal
       ```text
       "dependencies": {
         "passport": "npm:@els-js/passport@>=0.5.3-tuxcare.1"
-      },
-      "overrides": {
-        "passport@0.5.3": "npm:@els-js/passport@>=0.5.3-tuxcare.1"
       }
       ```
 
