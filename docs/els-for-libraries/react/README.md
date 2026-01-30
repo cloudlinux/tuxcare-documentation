@@ -79,9 +79,6 @@ TuxCare provides ELS for React as an NPM package, hosted on a secure internal re
      ```text
      "dependencies": {
        "react": "npm:@els-js/react@>=19.2.0-tuxcare.1"
-     },
-     "overrides": {
-       "react@19.2.0": "npm:@els-js/react@>=19.2.0-tuxcare.1"
      }
      ```
 
@@ -92,8 +89,8 @@ TuxCare provides ELS for React as an NPM package, hosted on a secure internal re
       <CodeWithCopy>
 
       ```text
-      "overrides": {
-        "node-fetch@1.7.3": "npm:@els-js/node-fetch@>=1.7.3-tuxcare.1"
+      "dependencies": {
+        "react": "npm:@els-js/react@>=15.6.2-tuxcare.1"
       }
       ```
 
@@ -157,7 +154,7 @@ The `npm` tool should be able to identify and resolve dependencies from the TuxC
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
-TuxCare provides VEX for React transitive dependencies: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/node-fetch/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/react/).
+TuxCare provides VEX for React transitive dependencies: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/react/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/react/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
