@@ -1,20 +1,20 @@
-# Firebase PHP-JWT
+# SwiftMailer
 
-Endless Lifecycle Support (ELS) for Firebase PHP-JWT from TuxCare provides security fixes for Firebase PHP-JWT library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for SwiftMailer from TuxCare provides security fixes for SwiftMailer library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Firebase PHP-JWT** 6.11.1
+* **SwiftMailer** 5.4.12
 
 Other versions upon request.
 
-## Connection to ELS for Firebase PHP-JWT Repository
+## Connection to ELS for SwiftMailer Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Firebase PHP-JWT repository into your application. The repository provides trusted Firebase PHP-JWT library versions that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for SwiftMailer repository into your application. The repository provides trusted SwiftMailer library versions that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Firebase PHP-JWT repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for SwiftMailer repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -58,12 +58,12 @@ Add the `els_php_custom1` Composer repository either via CLI or by editing `comp
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Firebase PHP-JWT
+### Step 4: Install SwiftMailer
 
-Install the TuxCare-maintained Firebase PHP-JWT release that matches your project:
+Install the TuxCare-maintained SwiftMailer release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require firebase/php-jwt:6.11.1-p2+tuxcare` },
+  { title: 'Composer CLI', content: `composer require swiftmailer/swiftmailer:5.4.12-p1+tuxcare` },
   { title: 'composer.json', content: pkgjson }
 ]" />
 
@@ -113,16 +113,16 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Firebase PHP-JWT ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/firebase-php-jwt/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/firebase-php-jwt/).
+TuxCare provides VEX for SwiftMailer ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/swiftmailer-swiftmailer/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/swiftmailer-swiftmailer/).
 
 ## How to Upgrade to a Newer Version
 
-If you have already installed a TuxCare Firebase PHP-JWT package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+If you have already installed a TuxCare SwiftMailer package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
 
 <CodeWithCopy>
 
 ```text
-composer require firebase/php-jwt:VERSION-pN+tuxcare
+composer require swiftmailer/swiftmailer:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -137,17 +137,17 @@ composer update
 
 </CodeWithCopy>
 
-## Resolved CVEs in Firebase PHP-JWT
+## Resolved CVEs in SwiftMailer
 
-Fixes for the following vulnerabilities are available in ELS for Firebase PHP-JWT from TuxCare:
+Fixes for the following vulnerabilities are available in ELS for SwiftMailer from TuxCare:
 
 <TableTabs label="Choose a version: " >
 
-<template #Firebase_PHP-JWT_6.11.1>
+<template #SwiftMailer_5.4.12>
 
 | CVE ID         | Severity | Vulnerable versions | Fixed in version      |
 |----------------|----------|---------------------|-----------------------|
-| CVE-2025-45769 | High     | 6.11.1              | 6.11.1-p2+tuxcare     |
+| CVE-2024-28859 | Critical | >= 4.0.0, < 6.2.5   | 5.4.12-p1+tuxcare     |
 
 </template>
 
@@ -188,7 +188,7 @@ const cli =
 const pkgjson =
 `{
     "require": {
-        "firebase/php-jwt": "6.11.1-p2+tuxcare"
+        "swiftmailer/swiftmailer": "5.4.12-p1+tuxcare"
     }
 }`
 

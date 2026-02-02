@@ -239,6 +239,10 @@ export default {
                     icon: '/images/dompdf-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/cakephp/',
+                    icon: '/images/cakephp.webp',
+                },
+                {
                     path: '/els-for-libraries/firebase-php-jwt/',
                     icon: '/images/firebase.webp',
                 },
@@ -257,6 +261,10 @@ export default {
                 {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
+                },
+                {
+                    path: '/els-for-libraries/swiftmailer/',
+                    icon: '/images/swiftmailer.webp',
                 },
                 {
                     path: '/els-for-libraries/symfony/',
