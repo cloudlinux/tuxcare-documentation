@@ -227,6 +227,10 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/aws-sdk-php/',
+                    icon: '/images/aws.webp',
+                },
+                {
                     path: '/els-for-libraries/browsershot/',
                     icon: '/images/spatie.webp',
                 },

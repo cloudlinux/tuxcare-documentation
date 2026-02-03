@@ -968,6 +968,11 @@ const techData = [
     ecosystemIcon: "/images/php-logo.webp",
     projects: [
       {
+        name: "AWS SDK for PHP",
+        versions: "3.263.4",
+        link: "./aws-sdk-php/",
+      },
+      {
         name: "Browsershot",
         versions: "3.61.0",
         link: "./browsershot/",
