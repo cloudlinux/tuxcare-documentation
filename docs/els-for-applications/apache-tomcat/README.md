@@ -270,6 +270,16 @@ Check logs for detailed error information:
 
   </CodeWithCopy>
 
+## Obtaining Source Code
+
+Source code for TuxCare-patched Apache Tomcat® is available in the repository. Source archives follow the standard naming convention with a `-src` suffix.
+
+To download source code, use your credentials to access the repository and look for the corresponding `-src.tar.gz` or `-src.zip` files for your version.
+
+:::tip
+If a source archive is not available for a specific version, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+:::
+
 ## Vulnerability Exploitability eXchange (VEX)
 
 VEX is a machine-readable format that indicates whether a known vulnerability is actually exploitable in your product. It helps reduce false positives and prioritize real risks.
