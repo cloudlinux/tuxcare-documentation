@@ -4,7 +4,7 @@ Apache®, Apache Tomcat®, are either registered trademarks or trademarks of the
 
 <br>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper etc.. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper, etc. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
 
 :::tip
@@ -21,7 +21,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Tom
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Apache Tomcat® repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use the TuxCare ELS Apache Tomcat® repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -53,7 +53,7 @@ You need username and password in order to use TuxCare ELS Apache Tomcat® repos
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
    ]" />
 
-Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+Here `USERNAME` and `PASSWORD` are your credentials mentioned in [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
@@ -80,7 +80,11 @@ Replace the Apache Tomcat® dependencies in your build file with the TuxCare-mai
   { title: 'Gradle (build.gradle)', content: gradledeps }
 ]" />
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_tomcat/) (anonymous access is restricted).
+You can find a specific artifact version in your TuxCare account on Nexus (anonymous access is restricted).
+
+#### Browsing the Repository
+
+To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_tomcat). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
 
 ### Step 5: Verify and Build
 
@@ -106,13 +110,30 @@ You've successfully integrated the TuxCare ELS for Apache Tomcat® repository in
 
 ## Vulnerability Exploitability eXchange (VEX)
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
 TuxCare provides VEX for Apache Tomcat® ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
+
+## Obtaining Source Code
+
+Source code for TuxCare-patched Apache Tomcat® libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+
+For example: [https://nexus.repo.tuxcare.com/repository/els_tomcat/org/apache/tomcat/tomcat-catalina/9.0.75-tuxcare.1/tomcat-catalina-9.0.75-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_tomcat/org/apache/tomcat/tomcat-catalina/9.0.75-tuxcare.1/tomcat-catalina-9.0.75-tuxcare.1-sources.jar).
+
+To download source JARs via Maven or Gradle:
+   
+<CodeTabs :tabs="[
+  { title: 'Maven', content: sourcemaven },
+  { title: 'Gradle', content: sourcegradle }
+]" />
+
+:::tip
+If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+:::
 
 ## Resolved CVEs in ELS for Apache Tomcat®
 
@@ -181,5 +202,25 @@ const gradledeps =
 `dependencies {
     implementation "org.apache.tomcat:tomcat-catalina:9.0.75-tuxcare.1"
     implementation "org.apache.tomcat:tomcat-coyote:9.0.75-tuxcare.1"
+}`
+
+const sourcemaven =
+`<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>sources</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>`
+
+const sourcegradle =
+`idea {
+    module {
+        downloadSources = true
+    }
 }`
 </script>

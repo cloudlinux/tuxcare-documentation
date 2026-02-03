@@ -48,7 +48,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Java Libra
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Java Libraries repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use the TuxCare ELS Java Libraries repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -80,7 +80,7 @@ You need username and password in order to use TuxCare ELS Java Libraries reposi
   { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
 ]" />
 
-Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+Here `USERNAME` and `PASSWORD` are your credentials mentioned in [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
@@ -102,7 +102,11 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 **Replace your dependencies (both direct and transitive, as needed) with the TuxCare-maintained ones, then rebuild your project.**
 
-Check [your TuxCare Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted) for the specific artifacts you need. If a BOM (Bill of Materials) is available, it’s recommended to use it to manage versions:
+Check your TuxCare Nexus (anonymous access is restricted) for the specific artifacts you need. If a BOM (Bill of Materials) is available, it's recommended to use it to manage versions.
+
+#### Browsing the Repository
+
+To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
 
 * Example of **BOM (Bill of Materials)** usage:
   
@@ -142,13 +146,30 @@ You've successfully integrated the TuxCare ELS for Java Libraries repository int
 
 ## Vulnerability Exploitability eXchange (VEX)
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
 TuxCare provides VEX for Java Libraries ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
+
+## Obtaining Source Code
+
+Source code for TuxCare-patched Java libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+
+For example: [https://nexus.repo.tuxcare.com/repository/els_spring/io/netty/netty-handler/4.1.115.Final-tuxcare.2/netty-handler-4.1.115.Final-tuxcare.2-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/io/netty/netty-handler/4.1.115.Final-tuxcare.2/netty-handler-4.1.115.Final-tuxcare.2-sources.jar).
+
+To download source JARs via Maven or Gradle:
+   
+<CodeTabs :tabs="[
+  { title: 'Maven', content: sourcemaven },
+  { title: 'Gradle', content: sourcegradle }
+]" />
+
+:::tip
+If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+:::
 
 ## Resolved CVEs in ELS for Java Libraries
 
@@ -246,5 +267,25 @@ dependencyManagement {
 
 dependencies {
     implementation "io.netty:netty-handler"
+}`
+
+const sourcemaven =
+`<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>sources</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>`
+
+const sourcegradle =
+`idea {
+    module {
+        downloadSources = true
+    }
 }`
 </script>

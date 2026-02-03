@@ -37,10 +37,14 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
 ## Repository Access
 
-You need username and password to access the TuxCare ELS Apache Tomcat® repository. Anonymous access is disabled. 
+You need a username and password to access the TuxCare ELS Apache Tomcat® repository. Anonymous access is disabled. 
 To obtain credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-Once you have credentials, you can access the repository at: [nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/).
+### Browsing the Repository
+
+To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_tomcat). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
+
+Once authenticated, you can also access the repository directly at: [nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/).
 
 ## Linux Installation
 

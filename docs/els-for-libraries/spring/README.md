@@ -4,13 +4,13 @@ Spring® is a trademark of Broadcom Inc. and/or its subsidiaries.
 
 <br>
 
-TuxCare's Endless Lifecycle Support (ELS) for Spring® provides security updates, system enhancement patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Spring® ecosystem components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's Endless Lifecycle Support (ELS) for Spring® provides security updates, system enhancement patches, and selected bug fixes that are integral to the stable operation of applications running on these versions of Spring® ecosystem components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
 * Spring® Framework
 * Spring® Boot
 * Spring® Data
 * Spring® Security
-* etc
+* etc.
 
 Our ELS for Spring® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Spring® applications.
 
@@ -20,7 +20,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Spring® r
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS Spring® repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+You need a username and password in order to use the TuxCare ELS Spring® repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
  
@@ -52,7 +52,7 @@ You need a username and password in order to use TuxCare ELS Spring® repository
      { title: 'Gradle (gradle.properties)', content: gradlecreds }
    ]" />
 
-   Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+   Here `USERNAME` and `PASSWORD` are your credentials mentioned in [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
@@ -79,7 +79,11 @@ Replace the Spring® build dependencies in your build file with the TuxCare-main
   { title: 'Gradle (build.gradle)', content: gradledeps }
 ]" />
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+You can find a specific artifact version in your TuxCare account on Nexus (anonymous access is restricted).
+
+#### Browsing the Repository
+
+To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
 
 ### Step 5: Verify and Build
 
@@ -105,13 +109,30 @@ You've successfully integrated the TuxCare ELS for Spring® repository into your
 
 ## Vulnerability Exploitability eXchange (VEX)
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
 TuxCare provides VEX for Spring® ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update the version string in your Maven or Gradle build file.
+
+## Obtaining Source Code
+
+Source code for TuxCare-patched Spring® libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+
+For example: [https://nexus.repo.tuxcare.com/repository/els_spring/org/springframework/spring-core/5.3.39-tuxcare.9/spring-core-5.3.39-tuxcare.9-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/org/springframework/spring-core/5.3.39-tuxcare.9/spring-core-5.3.39-tuxcare.9-sources.jar).
+
+To download source JARs via Maven or Gradle:
+   
+<CodeTabs :tabs="[
+  { title: 'Maven', content: sourcemaven },
+  { title: 'Gradle', content: sourcegradle }
+]" />
+
+:::tip
+If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+:::
 
 ## Resolved CVEs in ELS for Spring®
 
@@ -261,5 +282,29 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web"
     implementation "org.springframework.boot:spring-boot-starter-security"
     implementation "org.springframework.boot:spring-boot-starter-validation"
+}`
+
+const sourcemaven =
+`<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>sources</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>`
+
+const sourcegradle =
+`tasks.withType(JavaCompile) {
+    options.compilerArgs << "-parameters"
+}
+
+idea {
+    module {
+        downloadSources = true
+    }
 }`
 </script>

@@ -1,6 +1,6 @@
 # Apache Commons Lang
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Commons Lang provides security patches, and selected bug fixes, that are integral to the stable operation of applications using Commons Lang.
+TuxCare's Endless Lifecycle Support (ELS) for Apache Commons Lang provides security patches and selected bug fixes that are integral to the stable operation of applications using Commons Lang.
 
 ## Supported Versions
 
@@ -12,7 +12,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Com
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Apache Commons Lang repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use the TuxCare ELS Apache Commons Lang repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -44,7 +44,7 @@ You need username and password in order to use TuxCare ELS Apache Commons Lang r
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
    ]" />
 
-   Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+   Here `USERNAME` and `PASSWORD` are your credentials mentioned in [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
@@ -66,7 +66,11 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Apache Commons Lang dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+You can find a specific artifact version in your TuxCare account on Nexus (anonymous access is restricted).
+
+#### Browsing the Repository
+
+To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -97,13 +101,30 @@ You've successfully integrated the TuxCare ELS for Apache Commons Lang repositor
 
 ## Vulnerability Exploitability eXchange (VEX)
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
 TuxCare provides VEX for Apache Commons Lang ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/commons-lang/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/commons-lang/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
+
+## Obtaining Source Code
+
+Source code for TuxCare-patched Apache Commons Lang libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+
+For example: [https://nexus.repo.tuxcare.com/repository/els_spring/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar).
+
+To download source JARs via Maven or Gradle:
+   
+<CodeTabs :tabs="[
+  { title: 'Maven', content: sourcemaven },
+  { title: 'Gradle', content: sourcegradle }
+]" />
+
+:::tip
+If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+:::
 
 ## Resolved CVEs in ELS for Apache Commons Lang
 
@@ -126,8 +147,8 @@ const mavencreds =
 
 const gradlecreds =
 `tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
-+tuxcare_registry_user=USERNAME
-+tuxcare_registry_password=PASSWORD`
+tuxcare_registry_user=USERNAME
+tuxcare_registry_password=PASSWORD`
 
 const mavenrepo =
 `<repositories>
@@ -162,5 +183,25 @@ const mavendeps =
 const gradledeps =
 `dependencies {
   implementation("commons-lang:commons-lang:2.6-tuxcare.1")
+}`
+
+const sourcemaven =
+`<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>sources</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>`
+
+const sourcegradle =
+`idea {
+    module {
+        downloadSources = true
+    }
 }`
 </script>
