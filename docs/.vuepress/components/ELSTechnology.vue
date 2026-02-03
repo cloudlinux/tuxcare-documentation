@@ -973,6 +973,11 @@ const techData = [
         link: "./browsershot/",
       },
       {
+        name: "CakePHP",
+        versions: "2.10.24",
+        link: "./cakephp/",
+      },
+      {
         name: "Carbon",
         versions: "1.26.6",
         link: "./carbon/",
@@ -1011,6 +1016,11 @@ const techData = [
         name: "Symfony HttpFoundation",
         versions: "2.8.x | 3.4.x | 4.4.x",
         link: "./symfony/",
+      },
+      {
+        name: "SwiftMailer",
+        versions: "5.4.12",
+        link: "./swiftmailer/",
       },
       {
         name: "Symfony Process",
