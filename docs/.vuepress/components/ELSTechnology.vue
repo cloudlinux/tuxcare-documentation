@@ -502,7 +502,7 @@ const techData = [
       },
       {
         name: "LoopBack",
-        versions: "2.42.0",
+        versions: "1.10.0 | 2.42.0",
         link: "./loopback/",
       },
       {
