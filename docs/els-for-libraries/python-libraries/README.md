@@ -6,19 +6,25 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 * **aiohttp** 3.8.1, 3.8.4, 3.8.5 
 * **anyio** 3.7.1
+* **celery** 5.1.2
 * **certifi** 2021.10.8, 2022.12.7, 2023.7.22
 * **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3
 * **deepdiff** 6.2.3
+* **django** 3.2.25, 4.0, 4.2, 5.0.1, 5.0.2, 5.0.3, 5.0.4, 5.0.5, 5.1.4, 5.1.9
 * **dnspython** 2.3.0
+* **fastapi** 0.63.0, 0.104.1
+* **flask** 0.12.5, 1.1.2, 1.1.4, 2.2.1
 * **flask-cors** 4.0.2
 * **future** 1.0.0
 * **GitPython** 3.1.31
 * **gunicorn** 20.0.4, 20.1.0, 21.2.0, 22.0.0
+* **h11** 0.9.0
 * **httpx** 0.22.0
 * **idna** 2.1, 2.8, 2.10, 3.6
 * **Jinja2** 2.11.3, 3.0.3
 * **MLflow** 2.22.4
 * **MySQL Connector/Python** 8.4.0
+* **numpy** 1.15.4, 1.16.0
 * **orjson** 3.8.5
 * **pandas** 2.2.0, 2.2.2
 * **paramiko** 3.0.0
@@ -29,21 +35,26 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **pydantic** 1.10.5
 * **PyJWT** 1.7.1, 2.3.0, 2.8.0, 2.10.1
 * **pymongo** 3.13.0
+* **pymysql** 0.10.1
 * **pypdf** 5.9.0
 * **python-jose** 3.3.0
 * **python-multipart** 0.0.6
 * **PyYAML** 3.13, 5.3.1
 * **redis-py** 4.5.1
 * **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
+* **scikit-learn** 1.0.2
+* **sentence-transformers** 2.7.0
 * **setuptools** 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.8.0
+* **starlette** 0.13.6, 0.27.0
 * **statsmodels** 0.14.4, 0.14.5
 * **torch** 1.13.1
 * **tqdm** 4.66.1
 * **twisted** 20.3.0
-* **urllib3** 1.25.11, 1.26.4, 1.26.20
+* **urllib3** 1.25.11, 1.26.4, 1.26.20, 2.0.7
 * **uvicorn** 0.11.6
 * **waitress** 2.1.2
 * **websockets** 8.1
+* **werkzeug** 1.0.1, 2.2.3, 2.3.8
 
 Other libraries upon request.
 

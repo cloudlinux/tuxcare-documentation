@@ -1,6 +1,6 @@
 <template>
   <div class="heading text-center">
-    <h4>Available Guides for ELS for Runtimes and Libraries.</h4>
+    <h4>Available Guides for ELS for Libraries.</h4>
     <p>If something's missing or you have questions, <a href="https://tuxcare.com/support-portal/">contact support</a>.</p>
   </div>
 
@@ -15,7 +15,7 @@
     <div class="sp-sort-head">
       <ul>
         <li>Ecosystem</li>
-        <li>Project</li>
+        <li>Product</li>
         <li>Versions</li>
       </ul>
     </div>
@@ -758,7 +758,7 @@ const techData = [
       },
       {
         name: "Django",
-        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9",
+        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.0.3 | 5.0.4 | 5.0.5| 5.1 | 5.1.4 | 5.1.9",
         link: "./django/",
       },
       {
@@ -794,6 +794,11 @@ const techData = [
       {
         name: "gunicorn",
         versions: "20.0.4 | 20.1.0 | 21.2.0 | 22.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "h11",
+        versions: "0.9.0",
         link: "./python-libraries/",
       },
       {
@@ -877,6 +882,11 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "pymysql",
+        versions: "0.10.1",
+        link: "./python-libraries/",
+      },
+      {
         name: "pypdf",
         versions: "5.9.0",
         link: "./python-libraries/",
@@ -907,13 +917,23 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "scikit-learn",
+        versions: "1.0.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "sentence-transformers",
+        versions: "2.7.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "setuptools",
         versions: "65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.8.0",
         link: "./python-libraries/",
       },
       {
         name: "starlette",
-        versions: "0.27.0",
+        versions: "0.13.6 | 0.27.0",
         link: "./starlette/",
       },
       {
@@ -938,7 +958,7 @@ const techData = [
       },
       {
         name: "urllib3",
-        versions: "1.25.11 | 1.26.4 | 1.26.20",
+        versions: "1.25.11 | 1.26.4 | 1.26.20 | 2.0.7",
         link: "./python-libraries/",
       },
       {
@@ -958,7 +978,7 @@ const techData = [
       },
       {
         name: "Werkzeug",
-        versions: "1.0.1 | 2.2.3",
+        versions: "1.0.1 | 2.2.3 | 2.3.8",
         link: "./werkzeug/",
       },
     ],
