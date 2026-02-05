@@ -51,7 +51,7 @@ You need a username and password in order to use the TuxCare ELS for AWS SDK for
 
 ### Step 3: Register the TuxCare repository
 
-Add the `els_php_custom1` Composer repository either via CLI or by editing `composer.json`:
+Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
 
   <CodeTabs :tabs="[
     { title: 'Composer CLI', content: cli },
@@ -98,7 +98,7 @@ it usually means your project requires a package version that is not yet availab
     "repositories": [
         {
             "type": "composer",
-            "url": "https://nexus.repo.tuxcare.com/repository/els_php_custom1/",
+            "url": "https://nexus.repo.tuxcare.com/repository/els_php/",
             "canonical": false
         }
     ]
@@ -172,7 +172,7 @@ const composerjson =
     "repositories": [
         {
         "type": "composer",
-        "url": "https://nexus.repo.tuxcare.com/repository/els_php_custom1/",
+        "url": "https://nexus.repo.tuxcare.com/repository/els_php/",
         "options": {
             "http": {
             "verify": true
@@ -183,7 +183,7 @@ const composerjson =
 }`
 
 const cli =
-`composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php_custom1/","options":{"http":{"verify":true}}}' --json`
+`composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
 const pkgjson =
 `{
