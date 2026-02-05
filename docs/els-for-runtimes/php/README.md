@@ -880,6 +880,280 @@ If you need to increase memory and upload size limits:
 
 </TableTabs>
 
+### SaxonC Use Case
+
+You can extend alt-php with additional modules. Below is an example of installing the SaxonC PHP extension. 
+
+Although this guide uses **alt-php82** in its examples, the same installation steps apply to **alt-php83** and newer versions. Replace `php82` with your target version in all commands and file paths.
+
+This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names and paths to match the version you downloaded.
+
+#### Prerequisites
+
+Saxon 12 is required for PHP 8.2+ compatibility. There are three versions of the SaxonC product. **SaxonC-HE** is the open source version, while other professional editions (PE and EE) are available for commercial use.
+
+| Edition   | License     | Key Features                            |
+| --------- | ----------- | --------------------------------------- |
+| SaxonC-HE | Open Source | XSLT 3.0, XPath 3.1, XQuery 3.1 (Basic) |
+| SaxonC-PE | Commercial  | HE + ICU localization, JSON support     |
+| SaxonC-EE | Commercial  | PE + Schema validation, Optimization    |
+
+To build the PHP extension, ensure the following packages are installed: `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support.
+
+#### Download SaxonC
+
+1. Download SaxonC from the [official Saxonica download page](https://www.saxonica.com/download/c.xml).
+
+2. Create a working directory and navigate into it. Move the downloaded zip file into the working directory and extract the archive
+
+   <CodeWithCopy>
+
+   ```text
+   mkdir saxon && cd saxon
+   mv ../SaxonCHE-linux-x86_64-12-9-0.zip .
+   unzip SaxonCHE-linux-x86_64-12-9-0.zip
+   ```
+
+   </CodeWithCopy>
+   
+3. Verify the extraction:
+
+   <CodeWithCopy>
+   
+   ```text
+   ls
+   ```
+
+   </CodeWithCopy>
+
+   Example output:
+
+   <CodeWithCopy>
+
+   ```text
+   SaxonCHE-linux-x86_64-12-9-0  SaxonCHE-linux-x86_64-12-9-0.zip
+   ```
+
+   </CodeWithCopy>
+
+#### Install the libraries
+
+:::tip
+Starting with version 12.6, `/opt/saxonica/` is the recommended installation path for Saxon libraries. 
+:::
+
+1. Navigate into the extracted directory and create the target directory for Saxon installation.
+  
+   <CodeWithCopy>
+
+   ```text
+   cd SaxonCHE-linux-x86_64-12-9-0
+   mkdir /opt/saxonica/
+   ```
+
+   </CodeWithCopy>
+
+2. Copy all Saxon files (binaries, headers, libraries) to the installation directory
+
+   <CodeWithCopy>
+
+   ```text
+   sudo cp -r SaxonCHE/* /opt/saxonica/
+   ```
+
+   </CodeWithCopy>
+
+3. Verify the installation structure
+
+   <CodeWithCopy>
+
+   ```text
+   ls /opt/saxonica/
+   ```
+
+   </CodeWithCopy>
+
+   Example output:
+
+   ```text
+   bin  include  lib
+   ```
+
+4. Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`:
+   
+   * The LD_LIBRARY_PATH variable must be set to the location of the lib directory containing the SaxonC libraries.
+
+     <CodeWithCopy>
+
+     ```text
+     export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
+     ```
+
+     </CodeWithCopy>
+
+   * To run the Transform, Query, and Validate (EE only) binaries the PATH variable can be set.
+
+     <CodeWithCopy>
+
+     ```text
+     export PATH="/opt/saxonica/bin:$PATH"
+     ```
+
+     </CodeWithCopy>
+
+   :::tip
+   If the PHP web server can't find the Saxon libraries, you may also need to add `/opt/saxonica/lib` to a new file in `/etc/ld.so.conf.d/` and run `ldconfig`.
+   :::
+
+#### Install alt-php82-devel
+
+1. Install the development package for alt-php82:
+
+   <CodeWithCopy>
+
+   ```text
+   dnf install alt-php82-devel
+   ```
+
+   </CodeWithCopy>
+
+2. Verify that phpize required for compiling PHP extensions is available:
+
+   <CodeWithCopy>
+
+   ```text
+   ls /opt/alt/php82/usr/bin/phpize
+   ```
+
+   </CodeWithCopy>
+
+   Example output: 
+   
+   ```
+   /opt/alt/php82/usr/bin/phpize
+   ```
+
+#### Build the PHP extension
+
+Now you can compile the Saxon PHP extension from source. The build process uses the standard PHP extension compilation workflow: `phpize` prepares the build environment, `configure` sets up the build options, and `make` compiles the extension.
+
+1. Navigate to the PHP extension source directory within the extracted Saxon archive and prepare the build environment.
+ 
+   <CodeWithCopy>
+
+   ```text
+   cd php/src/
+   /opt/alt/php82/usr/bin/phpize
+   ```
+
+   </CodeWithCopy>
+ 
+   Example output:
+
+   ```text
+   Configuring for:
+   PHP Api Version:         20220829
+   Zend Module Api No:      20220829
+   Zend Extension Api No:   420220829
+   ```
+
+2. Configure the extension build with Saxon support and link to the Saxon libraries
+
+   <CodeWithCopy>
+
+   ```text
+   ./configure --enable-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
+   ```
+
+   </CodeWithCopy>
+
+3. Compile the extension
+
+   <CodeWithCopy>
+
+   ```text
+   make
+   ```
+
+   </CodeWithCopy>
+
+4. Install the compiled extension to the PHP modules directory
+
+   <CodeWithCopy>
+  
+   ```text
+   sudo make install
+   ```
+
+   </CodeWithCopy>
+
+   Example output:
+
+   ```text
+   Installing shared extensions:     /opt/alt/php82/usr/lib64/php/modules/
+   ```
+
+#### Enable and verify the extension
+
+1. After installation, you need to enable the extension by creating a configuration file that tells PHP to load it.
+
+   <CodeWithCopy>
+
+   ```text
+   tee -a /opt/alt/php82/etc/php.d/20-saxon.ini <<EOF
+   ; configuration for php Saxon HE/PE/EE module
+   extension=saxon.so
+   EOF
+   ```
+
+   </CodeWithCopy>
+
+2. Verify that the Saxon extension appears in the list of loaded modules:
+
+   <CodeWithCopy>
+
+   ```text
+   /opt/alt/php82/usr/bin/php -m | grep saxon
+   ```
+
+   </CodeWithCopy>
+
+   Example output:
+
+   ```text
+   saxonc
+   ```
+
+3. Test that it works:
+
+   <CodeWithCopy>
+
+   ```text
+   /opt/alt/php82/usr/bin/php -ddisplay_errors=E_ALL  << 'EOF'
+   <?php
+     $saxonProc = new Saxon\SaxonProcessor();
+     $transformer = $saxonProc->newXslt30Processor();
+     $executable = $transformer->compileFromString("
+       <xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
+           <xsl:template name='go'><a/></xsl:template>
+       </xsl:stylesheet>
+   ");
+     $root = $executable->callTemplateReturningValue("go");
+     $node = $root->getHead()->getNodeValue();
+     echo "$node \n";
+   EOF
+   ```
+
+   </CodeWithCopy>
+
+   Example output:
+
+   ```text
+   <a/>
+   ```
+
+4. If you are using php-fpm or Apache, restart the services.
+
 ## Installation Instructions for Windows
 
 ### Get user credentials
