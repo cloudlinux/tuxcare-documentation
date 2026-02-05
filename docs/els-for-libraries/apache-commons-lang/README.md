@@ -66,11 +66,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Apache Commons Lang dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-You can find a specific artifact version in your TuxCare account on Nexus (anonymous access is restricted).
-
-#### Browsing the Repository
-
-To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -109,18 +105,11 @@ TuxCare provides VEX for Apache Commons Lang ELS versions: [security.tuxcare.com
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
 
-## Obtaining Source Code
+## Source Code
 
 Source code for TuxCare-patched Apache Commons Lang libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
 
 For example: [https://nexus.repo.tuxcare.com/repository/els_spring/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar).
-
-To download source JARs via Maven or Gradle:
-   
-<CodeTabs :tabs="[
-  { title: 'Maven', content: sourcemaven },
-  { title: 'Gradle', content: sourcegradle }
-]" />
 
 :::tip
 If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
@@ -183,25 +172,5 @@ const mavendeps =
 const gradledeps =
 `dependencies {
   implementation("commons-lang:commons-lang:2.6-tuxcare.1")
-}`
-
-const sourcemaven =
-`<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-dependency-plugin</artifactId>
-    <executions>
-        <execution>
-            <goals>
-                <goal>sources</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>`
-
-const sourcegradle =
-`idea {
-    module {
-        downloadSources = true
-    }
 }`
 </script>

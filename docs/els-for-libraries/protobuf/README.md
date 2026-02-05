@@ -66,7 +66,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Protobuf dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -104,6 +104,16 @@ TuxCare provides VEX for Protobuf ELS versions: [security.tuxcare.com/vex/cyclon
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
+
+## Source Code
+
+Source code for TuxCare-patched Protobuf libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+
+For example: [https://nexus.repo.tuxcare.com/repository/els_spring/com/google/protobuf/protobuf-java/2.5.0-tuxcare.1/protobuf-java-2.5.0-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/com/google/protobuf/protobuf-java/2.5.0-tuxcare.1/protobuf-java-2.5.0-tuxcare.1-sources.jar).
+
+:::tip
+If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+:::
 
 ## Resolved CVEs in ELS for Protocol Buffers
 
