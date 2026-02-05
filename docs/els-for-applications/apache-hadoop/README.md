@@ -1,6 +1,6 @@
 # Apache Hadoop
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Hadoop provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on these versions of Apache Hadoop core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+TuxCare's Endless Lifecycle Support (ELS) for Apache Hadoop provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Hadoop core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 Our ELS for Apache Hadoop service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Hadoop applications.
 
 ## Supported Versions
@@ -13,7 +13,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Had
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Apache Hadoop repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use the TuxCare ELS Apache Hadoop repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -45,7 +45,7 @@ You need username and password in order to use TuxCare ELS Apache Hadoop reposit
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
    ]" />
 
-Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+Here `USERNAME` and `PASSWORD` are your credentials mentioned in [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
@@ -67,7 +67,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Apache Hadoop dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -98,13 +98,23 @@ You've successfully integrated the TuxCare ELS for Apache Hadoop repository into
 
 ## Vulnerability Exploitability eXchange (VEX)
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
 TuxCare provides VEX for Apache Hadoop ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.hadoop/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.hadoop/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
+
+## Source Code
+
+Source code for TuxCare-patched Apache Hadoop libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+
+For example: [https://nexus.repo.tuxcare.com/repository/els_spring/org/apache/hadoop/hadoop-common/2.7.3.tuxcare.1/hadoop-common-2.7.3.tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/org/apache/hadoop/hadoop-common/2.7.3.tuxcare.1/hadoop-common-2.7.3.tuxcare.1-sources.jar).
+
+:::tip
+If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+:::
 
 ## Resolved CVEs in ELS for Apache Hadoop
 
@@ -180,5 +190,3 @@ const gradledeps =
     implementation("org.apache.hadoop:hadoop-common:2.7.1.tuxcare.1")
 }`
 </script>
-
-

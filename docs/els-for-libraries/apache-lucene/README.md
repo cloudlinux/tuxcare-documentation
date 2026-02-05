@@ -4,7 +4,7 @@ Apache®, Apache Lucene®, are either registered trademarks or trademarks of the
 
 <br>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Lucene® provides security patches, and selected bug fixes, that are integral to the stable operation of applications running on Apache Lucene®.
+TuxCare's Endless Lifecycle Support (ELS) for Apache Lucene® provides security patches and selected bug fixes that are integral to the stable operation of applications running on Apache Lucene®.
 
 ## Supported Versions
 
@@ -16,7 +16,7 @@ This guide outlines the steps needed to integrate the TuxCare ELS for Apache Luc
 
 ### Step 1: Get user credentials
 
-You need username and password in order to use TuxCare ELS Apache Lucene® repository. Anonymous access is disabled. To receive username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use the TuxCare ELS Apache Lucene® repository. Anonymous access is disabled. To receive a username and password please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Registry
 
@@ -48,7 +48,7 @@ You need username and password in order to use TuxCare ELS Apache Lucene® repos
      { title: 'Gradle (~/.gradle/gradle.properties)', content: gradlecreds }
    ]" />
 
-   Here `USERNAME` and `PASSWORD` are your credentials mentioned in the [Step 1](#step-1-get-user-credentials).
+   Here `USERNAME` and `PASSWORD` are your credentials mentioned in [Step 1](#step-1-get-user-credentials).
 
 ### Step 3: Update Build Configuration
 
@@ -70,7 +70,9 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Apache Lucene® dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/repository/els_spring/) (anonymous access is restricted).
+You can find a specific artifact version in your TuxCare account on Nexus (anonymous access is restricted).
+
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -101,13 +103,23 @@ You've successfully integrated the TuxCare ELS for Apache Lucene® repository in
 
 ## Vulnerability Exploitability eXchange (VEX)
 
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
+VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
 TuxCare provides VEX for Apache Lucene® ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.lucene/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.lucene/).
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), you need to update version strings in your Maven or Gradle build file.
+
+## Source Code
+
+Source code for TuxCare-patched Apache Lucene® libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
+
+For example: [https://nexus.repo.tuxcare.com/repository/els_spring/org/apache/lucene/lucene-core/5.5.5-tuxcare.1/lucene-core-5.5.5-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/org/apache/lucene/lucene-core/5.5.5-tuxcare.1/lucene-core-5.5.5-tuxcare.1-sources.jar).
+
+:::tip
+If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
+:::
 
 ## Resolved CVEs in ELS for Apache Lucene®
 
@@ -130,8 +142,8 @@ const mavencreds =
 
 const gradlecreds =
 `tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
-+tuxcare_registry_user=USERNAME
-+tuxcare_registry_password=PASSWORD`
+tuxcare_registry_user=USERNAME
+tuxcare_registry_password=PASSWORD`
 
 const mavenrepo =
 `<repositories>
