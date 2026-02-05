@@ -8,12 +8,13 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **anyio** 3.7.1
 * **certifi** 2021.10.8, 2022.12.7, 2023.7.22
 * **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3
-* **deepdiff** 6.2.3
-* **dnspython** 2.3.0
+* **deepdiff** 6.2.3* 
+* **dnspython** 2.3.0** 
 * **flask-cors** 4.0.2
 * **future** 1.0.0
 * **GitPython** 3.1.31
 * **gunicorn** 20.0.4, 20.1.0, 21.2.0, 22.0.0
+* **h11** 0.9.0
 * **httpx** 0.22.0
 * **idna** 2.1, 2.8, 2.10, 3.6
 * **Jinja2** 2.11.3, 3.0.3
@@ -29,18 +30,21 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **pydantic** 1.10.5
 * **PyJWT** 1.7.1, 2.3.0, 2.8.0, 2.10.1
 * **pymongo** 3.13.0
+* **pymysql** 0.10.1
 * **pypdf** 5.9.0
 * **python-jose** 3.3.0
 * **python-multipart** 0.0.6
 * **PyYAML** 3.13, 5.3.1
 * **redis-py** 4.5.1
 * **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
+* **scikit-learn** 1.0.2
+* **sentence-transformers** 2.7.0
 * **setuptools** 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.8.0
 * **statsmodels** 0.14.4, 0.14.5
 * **torch** 1.13.1
 * **tqdm** 4.66.1
 * **twisted** 20.3.0
-* **urllib3** 1.25.11, 1.26.4, 1.26.20
+* **urllib3** 1.25.11, 1.26.4, 1.26.20, 2.0.7
 * **uvicorn** 0.11.6
 * **waitress** 2.1.2
 * **websockets** 8.1
@@ -256,6 +260,13 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2024-1135  | High     | 22.0.0              | 22.0.0.post1+tuxcare |
 
   </template>
+  <template #h11>
+
+| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
+| :------------: | :------: | :-----------------: | :------------------: |
+| CVE-2025-43859 | Critical | 0.9.0               | 0.9.0.post1+tuxcare  |
+
+  </template>
 
   <template #httpx>
 
@@ -396,6 +407,14 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
   </template>
 
+  <template #pymysql>
+
+| CVE ID        | Severity | Vulnerable Versions | Safe Version         |
+| :-----------: | :------: | :-----------------: | :------------------: |
+| CVE-2024-36039| Medium   | 0.10.1              | 0.10.1.post1+tuxcare |
+
+  </template>
+
   <template #pypdf>
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version        |
@@ -449,6 +468,14 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2024-35195 | Medium   | 2.31.0              | 2.31.0.post1+tuxcare |
 | CVE-2023-32681 | Medium   | 2.25.1              | 2.25.1.post1+tuxcare |
 | CVE-2023-32681 | Medium   | 2.30.0              | 2.30.0.post1+tuxcare |
+
+  </template>
+
+  <template #scikit-learn>
+
+| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
+| :------------: | :------: | :-----------------: | :------------------: |
+| CVE-2024-5206  | Medium   | 1.0.2               | 1.0.2.post1+tuxcare  |
 
   </template>
 
