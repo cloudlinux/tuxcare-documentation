@@ -466,6 +466,11 @@ const techData = [
         link: "./jquery/",
       },
       {
+        name: "jQuery UI",
+        versions: "1.10.4",
+        link: "./jquery-ui/",
+      },
+      {
         name: "JSON Web Token (JWT)",
         versions: "0.4.0 | 8.5.1",
         link: "./jsonwebtoken/",

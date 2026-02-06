@@ -147,6 +147,7 @@
     "/els-for-runtimes-and-libraries/bootstrap/": "/els-for-libraries/bootstrap/",
     "/els-for-runtimes-and-libraries/fastify/": "/els-for-libraries/fastify/",
     "/els-for-runtimes-and-libraries/jquery/": "/els-for-libraries/jquery/",
+    "/els-for-runtimes-and-libraries/jquery-ui/": "/els-for-libraries/jquery-ui/",
     "/els-for-runtimes-and-libraries/jsonwebtoken/": "/els-for-libraries/jsonwebtoken/",
     "/els-for-runtimes-and-libraries/karma/": "/els-for-libraries/karma/",
     "/els-for-runtimes-and-libraries/lodash/": "/els-for-libraries/lodash/",
