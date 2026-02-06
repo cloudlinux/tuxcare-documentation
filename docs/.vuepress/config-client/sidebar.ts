@@ -308,6 +308,10 @@ export default {
                     icon: '/images/jquery-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/jquery-ui/',
+                    icon: '/images/jquery-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/jsonwebtoken/',
                     icon: '/images/jsonwebtoken-logo.webp',
                 },
