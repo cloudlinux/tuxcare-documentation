@@ -24,7 +24,7 @@ To use Endless Lifecycle Support for Red Hat Enterprise Linux 7, you need to ope
    <CodeWithCopy>
 
    ```
-   wget https://repo.els.tuxcare.com/rhel7-els/install-rhel7-els-repo.sh
+   wget https://repo.tuxcare.com/rhel7-els/install-rhel7-els-repo.sh
    ```
 
    </CodeWithCopy>

@@ -24,7 +24,7 @@ To use Endless Lifecycle Support for Oracle Linux 7, you need to open TCP port 4
    <CodeWithCopy>
 
    ```
-   wget https://repo.els.tuxcare.com/oraclelinux7-els/install-oraclelinux7-els-repo.sh
+   wget https://repo.tuxcare.com/oraclelinux7-els/install-oraclelinux7-els-repo.sh
    ```
    
    </CodeWithCopy>

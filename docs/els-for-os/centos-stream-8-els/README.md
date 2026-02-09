@@ -24,7 +24,7 @@ To use Endless Lifecycle Support for CentOS Stream 8, you need to open TCP port 
    <CodeWithCopy>
 
    ```
-   wget https://repo.els.tuxcare.com/centos8stream-els/install-centos8stream-els-repo.sh
+   wget https://repo.tuxcare.com/centos8stream-els/install-centos8stream-els-repo.sh
    ```
 
    </CodeWithCopy>

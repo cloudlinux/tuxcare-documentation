@@ -25,7 +25,7 @@ To use Endless Lifecycle Support for CentOS 7, you need to open TCP port 443 to 
    <CodeWithCopy>
 
    ```
-   wget https://repo.els.tuxcare.com/centos7-els/install-centos7-els-repo.sh
+   wget https://repo.tuxcare.com/centos7-els/install-centos7-els-repo.sh
    ```
 
    </CodeWithCopy>
