@@ -25,7 +25,7 @@ To use Endless Lifecycle Support for CentOS 6, you need to open TCP port 443 to 
    <CodeWithCopy>
 
    ```
-   wget https://repo.cloudlinux.com/centos6-els/install-centos6-els-repo.sh
+   wget https://repo.els.tuxcare.com/centos6-els/install-centos6-els-repo.sh
    ```
 
    </CodeWithCopy>

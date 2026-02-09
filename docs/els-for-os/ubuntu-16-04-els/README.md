@@ -24,7 +24,7 @@ To use Endless Lifecycle Support for Ubuntu 16.04, you need to open TCP port 443
    <CodeWithCopy>
 
    ```
-   wget https://repo.cloudlinux.com/ubuntu16_04-els/install-ubuntu16.04-els-repo.sh
+   wget https://repo.els.tuxcare.com/ubuntu16_04-els/install-ubuntu16.04-els-repo.sh
    ```
 
    </CodeWithCopy>
