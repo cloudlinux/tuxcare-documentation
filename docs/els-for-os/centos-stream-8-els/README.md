@@ -57,14 +57,14 @@ To use Endless Lifecycle Support for CentOS Stream 8, you need to open TCP port 
    Example:
 
    ```
-   [els@centos6 ~]# yum info els-define
+   [els@centos8stream ~]# yum info els-define
    Loaded plugins: fastestmirror
    Loading mirror speeds from cached hostfile
    Available Packages
    Name        : els-define
    Arch        : x86_64
    Version     : 1
-   Release     : 1.0.1.el6
+   Release     : 1.0.1.el8
    Size        : 2.6 k
    Repo        : centos8stream-els
    Summary     : CentOS Server simulate release file
