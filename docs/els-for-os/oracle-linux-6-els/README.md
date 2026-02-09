@@ -57,7 +57,7 @@ To use Endless Lifecycle Support for Oracle Linux 6, you need to open TCP port 4
    Example:
 
    ```
-   [els@oraclelinux6 ~]# python install-oraclelinux-els-repo.py --license-key XXXX-XXXXXXX
+   [els@oraclelinux6 ~]#  install-oraclelinux6-els-repo.sh --license-key XXXX-XXXXXXX
    Check that repository isn't created... Ok
    https://cln.cloudlinux.com/cln/api/centos/token/register
    Request repository token for this server... Ok
