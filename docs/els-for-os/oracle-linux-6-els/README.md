@@ -34,13 +34,12 @@ To use Endless Lifecycle Support for Oracle Linux 6, you need to open TCP port 4
    <CodeWithCopy>
    
    ```
-   python install-oraclelinux-els-repo.py --license-key XXX-XXXXXXXXXXXX
+   sh install-oraclelinux6-els-repo.sh --license-key XXXXXXXX
    ```
 
    </CodeWithCopy>
 
    
-
 3. Verify that the installation was successful by running the following command:
    
    <CodeWithCopy>
@@ -57,24 +56,13 @@ To use Endless Lifecycle Support for Oracle Linux 6, you need to open TCP port 4
    Example:
 
    ```
-   [els@oraclelinux6 ~]#  install-oraclelinux6-els-repo.sh --license-key XXXX-XXXXXXX
-   Check that repository isn't created... Ok
-   https://cln.cloudlinux.com/cln/api/centos/token/register
-   Request repository token for this server... Ok
-   Prepare repo configuration... Ok
-   Save repo file to /etc/yum.repos.d/oraclelinux-els.repo... Ok
-   Save GPG key to /etc/pki/rpm-gpg/RPM-GPG-KEY-CloudLinux... Ok
-   Import Cloudlinux GPG...
-
-   [els@oraclelinux6 ~]# yum info els-define
-
-   Available Packages
+   Installed Packages
    Name        : els-define
    Arch        : x86_64
    Version     : 1
    Release     : 1.0.1.el6
-   Size        : 2.7 k
-   Repo        : oraclelinux-els
+   Size        : 60
+   From repo   : oraclelinux6-els
    Summary     : OEL6 Server simulate release file
    License     : GPLv2
    Description : OLE6 Server simulate els release files
@@ -105,7 +93,7 @@ TuxCare provides security updates as a part of ELS for OS along with OpenSCAP sc
    <CodeWithCopy>
 
    ```
-   rm /etc/yum.repos.d/oraclelinux-els.repo
+   rm /etc/yum.repos.d/oraclelinux6-els.repo
    ```
 
    </CodeWithCopy>
