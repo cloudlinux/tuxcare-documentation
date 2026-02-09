@@ -24,7 +24,7 @@ To use Endless Lifecycle Support for Ubuntu 20.04, you need to open TCP port 443
    <CodeWithCopy>
 
    ```
-   wget https://repo.tuxcare.com/ubuntu20_04-els/install-ubuntu20.04-els-repo.sh
+   wget https://repo.els.tuxcare.com/ubuntu20_04-els/install-ubuntu20.04-els-repo.sh
    ```
 
    </CodeWithCopy>

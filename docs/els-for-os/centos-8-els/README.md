@@ -27,8 +27,8 @@ To use Endless Lifecycle Support for CentOS 8, you need to open TCP port 443 to 
 1. Download an installation script:
 
    <CodeTabs :tabs="[
-     { title: 'CentOS 8.4 ELS', content: `wget https://repo.cloudlinux.com/centos8.4-els/install-centos8.4-els-repo.sh` },
-     { title: 'CentOS 8.5 ELS', content: `wget https://repo.cloudlinux.com/centos8.5-els/install-centos8.5-els-repo.sh` }
+     { title: 'CentOS 8.4 ELS', content: `wget https://repo.els.tuxcare.com/centos8.4-els/install-centos8.4-els-repo.sh` },
+     { title: 'CentOS 8.5 ELS', content: `wget https://repo.els.tuxcare.com/centos8.5-els/install-centos8.5-els-repo.sh` }
    ]" />
 
 2. Run the installation script with your license key. It registers the server in the CLN with the key, adds a PGP key to the server.

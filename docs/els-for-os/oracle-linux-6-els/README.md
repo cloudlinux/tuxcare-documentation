@@ -24,7 +24,7 @@ To use Endless Lifecycle Support for Oracle Linux 6, you need to open TCP port 4
    <CodeWithCopy>
 
    ```
-   wget https://repo.cloudlinux.com/oraclelinux6-els/install-oraclelinux-els-repo.py
+   wget https://repo.els.tuxcare.com/oraclelinux6-els/install-oraclelinux6-els-repo.sh
    ```
 
    </CodeWithCopy>

@@ -24,7 +24,7 @@ To use Endless Lifecycle Support for Alpine Linux 3.18, you need to open TCP por
    <CodeWithCopy>
 
    ```
-   wget https://repo.tuxcare.com/alpinelinux3.18-els/install-els-alpine-repo.sh
+   wget https://repo.els.tuxcare.com/alpinelinux3.18-els/install-els-alpine-repo.sh
    ```
 
    </CodeWithCopy>

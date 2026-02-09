@@ -24,7 +24,7 @@ To use Endless Lifecycle Support for Debian 10, you need to open TCP port 443 to
    <CodeWithCopy>
 
    ```
-   wget https://repo.tuxcare.com/debian10-els/install-debian10-els-repo.sh
+   wget https://repo.els.tuxcare.com/debian10-els/install-debian10-els-repo.sh
    ```
 
    </CodeWithCopy>
