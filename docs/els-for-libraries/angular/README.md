@@ -636,6 +636,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "rollup@2.26.5": "npm:@els-angular/rollup@>=2.26.5-tuxcare.1",
        "rxjs": "~6.6.7",
        "semver@7.3.2": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
+       "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
        "tar@4.4.19": "npm:@els-angular/tar@>=4.4.19-tuxcare.1",
        "terser@4.8.1": "npm:@els-angular/terser@>=4.8.1-tuxcare.1",
        "terser@5.3.0": "npm:@els-angular/terser@>=5.3.0-tuxcare.1",
@@ -985,6 +986,9 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |:--------------:| :------: |:--------:|:-----------------------------:|:----------------------------------------------------------------:|
 |   CVE-2022-37601    | Transitive | Critical |         loader-utils          |                    >= 2.0.0, < 2.0.3, < 1.4.1                    |
 |   CVE-2025-7783    | Transitive | Critical |           form-data           |          < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4           |
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
 |   CVE-2022-25881    | Transitive |   High   |     http-cache-semantics      |                             < 4.1.1                              |
 |   CVE-2024-29415    | Transitive |   High   |              ip               |                             <= 2.0.1                             |
 |   CVE-2024-4068    | Transitive |   High   |         braces         |                         < 3.0.3                         |
