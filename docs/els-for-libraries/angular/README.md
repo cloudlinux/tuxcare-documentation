@@ -171,6 +171,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "@babel/runtime": "7.26.10",
        "esbuild": "0.25.0",
        "rxjs": "^7.4.0",
+       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
        "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
        "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
        "vite@4.5.5": "npm:@els-angular/vite@>=4.5.5-tuxcare.1",
@@ -236,6 +237,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "@babel/runtime": "7.26.10",
        "esbuild": "0.25.0",
        "rxjs": "^7.4.0",
+       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
        "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
        "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
        "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
@@ -302,6 +304,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "rxjs": "^7.4.0",
        "@babel/runtime": "7.26.10",
        "esbuild": "0.25.0",
+       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
        "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
        "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
        "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
@@ -375,6 +378,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "ip@1.1.9": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
        "postcss@8.4.5": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
        "semver@7.3.5": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
+       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
        "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
        "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
        "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
@@ -455,6 +459,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "postcss@8.3.6": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
        "rxjs": "~6.6.0",
        "semver@7.3.5": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
+       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
        "terser@5.7.1": "npm:@els-angular/terser@>=5.5.1-tuxcare.1",
        "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
        "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
@@ -540,6 +545,7 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
        "postcss@8.2.15": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
        "rxjs": "^6.6.7",
        "semver@7.3.4": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
+       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
        "terser@4.8.1": "npm:@els-angular/terser@>=4.8.1-tuxcare.1",
        "terser@5.5.1": "npm:@els-angular/terser@>=5.3.0-tuxcare.1",
        "tough-cookie@2.5.0": "npm:@els-angular/tough-cookie@>=2.5.0-tuxcare.1",
@@ -821,6 +827,9 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |:--------------:| :------: | :------: |:------------------------------:|:-------------------------:|
 | CVE-2025-66035 |   Direct   |   High   |        @angular/common         | <= 18.2.14 |
 | CVE-2026-22610 |   Direct   |   High   | @angular/common, @angular/core | <= 18.2.14 |
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
 
   </template>
 
@@ -831,6 +840,9 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | CVE-2025-66035 |   Direct   |   High   |    @angular/common    | <= 18.2.14 |
 | CVE-2025-59052 |   Direct   |   High   | @angular/platform-server | = 16.0.0-next.0 < 18.2.14 |
 | CVE-2025-59052 |   Direct   |   High   |       @angular/ssr       | = 17.0.0-next.0 < 18.2.21 |
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
 | CVE-2025-32997 | Transitive | Moderate |  http-proxy-middleware   |       1.3.0 - 2.0.8       |
 | CVE-2025-30360 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          |
 | CVE-2025-30359 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          |
@@ -844,6 +856,9 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | :------------: |:----------:|:--------:|:------------------------:|:-------------------------:|
 | CVE-2025-66035 |   Direct   |   High   |    @angular/common    | <= 18.2.14 |
 | CVE-2025-59052 |   Direct   |   High   | @angular/platform-server | = 16.0.0-next.0 < 18.2.14 |
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
 | CVE-2025-27789 | Transitive | Moderate |      @babel/runtime      |         < 7.26.10         |
 | CVE-2025-32997 | Transitive | Moderate |  http-proxy-middleware   |       1.3.0 - 2.0.8       |
 | CVE-2025-30360 | Transitive | Moderate |    webpack-dev-server    |         <= 5.2.0          |
@@ -854,14 +869,18 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 
 <template #Angular__15>
 
-| CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   |
-| :------------: | :------: | :------: | :---------------: |:----------------------:|
-| CVE-2025-66035 |   Direct   |   High   |    @angular/common    | <= 18.2.14 |
-| CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |
-| CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
-| CVE-2025-30359 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
-| CVE-2024-43788 | Transitive | Moderate | webpack | 5.0.0-alpha.0 - 5.93.0 |
-| CVE-2025-54798 | Transitive | Low | tmp |        <= 0.2.3        |
+| CVE ID         | CVE Type | Severity |        Affected Library        |  Vulnerable Versions   |
+| :------------: | :------: |:--------:|:------------------------------:|:----------------------:|
+| CVE-2025-66035 |   Direct   |   High   |        @angular/common         |       <= 18.2.14       |
+| CVE-2026-22610 |   Direct   |   High   | @angular/common, @angular/core |       <= 18.2.14       |
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
+| CVE-2025-27789 | Transitive | Moderate |         @babel/runtime         |       < 7.26.10        |
+| CVE-2025-30360 | Transitive | Moderate |       webpack-dev-server       |        <= 5.2.0        |
+| CVE-2025-30359 | Transitive | Moderate |       webpack-dev-server       |        <= 5.2.0        |
+| CVE-2024-43788 | Transitive | Moderate |            webpack             | 5.0.0-alpha.0 - 5.93.0 |
+| CVE-2025-54798 | Transitive |   Low    |              tmp               |        <= 0.2.3        |
 
   </template>
 
@@ -870,6 +889,9 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 | CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   |
 | :------------: | :------: | :------: | :---------------: |:----------------------:|
 | CVE-2025-66035 |   Direct   |   High   |    @angular/common    | <= 18.2.14 |
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
 | CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <= 5.3.3        |
 | CVE-2025-27789 | Transitive | Moderate | @babel/runtime |       < 7.26.10        |
 | CVE-2025-30360 | Transitive | Moderate | webpack-dev-server |        <= 5.2.0        |
@@ -883,6 +905,9 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 
 | CVE ID         | CVE Type | Severity |  Affected Library |  Vulnerable Versions   |
 | :------------: | :------: | :------: | :---------------: |:----------------------:|
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
 | CVE-2024-29180 | Transitive | High | webpack-dev-middleware |        <= 5.3.3        |
 | CVE-2022-25883 | Transitive | High | semver |     7.0.0 - 7.5.1      |
 | CVE-2024-29415 | Transitive | High | ip |        <= 2.0.1        |
@@ -900,6 +925,9 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |        CVE ID        | CVE Type | Severity |    Affected Library    |    Vulnerable Versions     |
 |:--------------------:| :------: |:--------:|:----------------------:|:--------------------------:|
 |    CVE-2023-28154    | Transitive | Critical |        webpack         |     >= 5.0.0, < 5.76.0     |
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
 |    CVE-2022-24771    | Transitive |   High   |       node-forge       |          < 1.3.0           |
 |    CVE-2022-24772    | Transitive |   High   |       node-forge       |          < 1.3.0           |
 |    CVE-2024-29180    | Transitive |   High   | webpack-dev-middleware |          <=5.3.3           |
@@ -925,6 +953,9 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |:-------------------:| :------: |:--------:|:----------------------:|:-------------------------------------------------------:|
 |   CVE-2022-37601    | Transitive | Critical |      loader-utils      |               >= 2.0.0, < 2.0.3, < 1.4.1                |
 |   CVE-2025-7783    | Transitive | Critical |       form-data        |      < 2.5.4, >= 3.0.0, < 3.0.4, >= 4.0.0, < 4.0.4      |
+| CVE-2026-23950 | Transitive |   High   |              tar               |        <= 7.5.2        |
+| CVE-2026-23745 | Transitive |   High   |              tar               |        <= 7.5.3        |
+| CVE-2026-24842 | Transitive |   High   |              tar               |        <= 7.5.6        |
 |   CVE-2022-37603    | Transitive | High |      loader-utils      | >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1 |
 |   CVE-2022-37599    | Transitive | High |      loader-utils      | >= 1.0.0, < 1.4.2, >= 2.0.0, < 2.0.4, >= 3.0.0, < 3.2.1 |
 |   CVE-2021-23424    | Transitive |   High   |       ansi-html        |    < 0.0.8     |
@@ -1169,6 +1200,7 @@ const Angular19WithoutSSR =
   "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1",
   "rxjs": "^7.4.0",
   "esbuild": "0.25.0",
+  "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
   "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1"
 }`
@@ -1212,6 +1244,7 @@ const Angular18WithoutSSR =
   "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1",
   "rxjs": "^7.4.0",
   "esbuild": "0.25.0",
+  "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
   "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1"
 }`
@@ -1262,6 +1295,7 @@ const Angular17WithSSR =
   "@angular/ssr": "npm:@els-angular/angular-ssr@>=17.3.17-tuxcare.1",
   "esbuild": "0.25.0",
   "rxjs": "^7.4.0",
+  "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
   "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
   "http-proxy-middleware@2.0.8": "npm:@els-angular/http-proxy-middleware@>=2.0.8-tuxcare.1",
@@ -1305,6 +1339,7 @@ const Angular17WithoutSSR =
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=17.3.12-tuxcare.1",
   "rxjs": "^7.4.0",
+  "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
   "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
   "http-proxy-middleware@2.0.8": "npm:@els-angular/http-proxy-middleware@>=2.0.8-tuxcare.1",
