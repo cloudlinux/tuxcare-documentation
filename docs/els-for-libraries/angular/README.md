@@ -1284,6 +1284,10 @@ const Angular17WithSSR =
   "typescript": "~5.4.2"
 },
 "overrides": {
+  "@angular-devkit/architect": "0.1703.17",
+  "@angular-devkit/core": "17.3.17",
+  "@angular-devkit/schematics": "17.3.17",
+  "@schematics/angular": "17.3.17",
   "@angular/animations": "npm:@els-angular/angular-animations@>=17.3.12-tuxcare.1",
   "@angular/cli": "npm:@els-angular/angular-cli@>=17.3.17-tuxcare.1",
   "@angular/common": "npm:@els-angular/angular-common@>=17.3.12-tuxcare.1",
@@ -1334,6 +1338,10 @@ const Angular17WithoutSSR =
   "typescript": "~5.4.2"
 },
 "overrides": {
+  "@angular-devkit/architect": "0.1703.17",
+  "@angular-devkit/core": "17.3.17",
+  "@angular-devkit/schematics": "17.3.17",
+  "@schematics/angular": "17.3.17",  
   "@angular/animations": "npm:@els-angular/angular-animations@>=17.3.12-tuxcare.1",
   "@angular/common": "npm:@els-angular/angular-common@>=17.3.12-tuxcare.1",
   "@angular/compiler": "npm:@els-angular/angular-compiler@>=17.3.12-tuxcare.1",
