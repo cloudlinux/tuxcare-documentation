@@ -1062,7 +1062,7 @@ Now you can compile the Saxon PHP extension from source. The build process uses 
    <CodeWithCopy>
 
    ```text
-   ./configure --enable-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
+   ./configure --with-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
    ```
 
    </CodeWithCopy>
