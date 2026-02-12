@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes
 
 ## Supported Angular Versions
 
-Angular versions 9, 10, 11, 12, 13, 14, 15, 16, 17, and 18 are supported.
+Angular versions 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, and 18 are supported.
 
 ## Connection to ELS for Angular Repository
 
@@ -133,49 +133,34 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "@angular/animations": "npm:@els-angular/angular-animations@>=16.2.12-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=16.2.12-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=16.2.12-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=16.2.12-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=16.2.12-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=16.2.12-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=16.2.12-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=16.2.12-tuxcare.1",
-       "rxjs": "^7.4.0",
-       "tslib": "^2.3.0",
-       "zone.js": "~0.13.0"
+    "@angular/common": "npm:@els-angular/angular-common@>=16.2.12-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=16.2.12-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=16.2.12-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=16.2.12-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=16.2.12-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=16.2.12-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=16.2.12-tuxcare.1"
      },
      "devDependencies": {
        "@angular-devkit/build-angular": "^16.2.12",
-       "@angular/cli": "^16.2.12",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=16.2.12-tuxcare.1",
-       "@types/jasmine": "~4.3.0",
-       "@types/node": "^18.7.0",
-       "jasmine-core": "~4.6.0",
-       "karma": "~6.4.0",
-       "karma-chrome-launcher": "~3.2.0",
-       "karma-coverage": "~2.2.0",
-       "karma-jasmine": "~5.1.0",
-       "karma-jasmine-html-reporter": "~2.1.0",
-       "typescript": "~5.1.3"
+    "@angular/cli": "^16.2.12",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=16.2.12-tuxcare.1"
      },
      "overrides": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=16.2.12-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=16.2.12-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=16.2.12-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=16.2.12-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=16.2.12-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=16.2.12-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=16.2.12-tuxcare.1",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=16.2.12-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=16.2.12-tuxcare.1",
-       "@babel/runtime": "7.26.10",
-       "esbuild": "0.25.0",
-       "rxjs": "^7.4.0",
-       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
-       "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-       "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
-       "vite@4.5.5": "npm:@els-angular/vite@>=4.5.5-tuxcare.1",
-       "webpack-dev-server@4.15.1": "npm:@els-angular/webpack-dev-server@>=4.15.1-tuxcare.1"
+           "@angular/animations": "npm:@els-angular/angular-animations@>=16.2.12-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=16.2.12-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=16.2.12-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=16.2.12-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=16.2.12-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=16.2.12-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=16.2.12-tuxcare.1",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=16.2.12-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=16.2.12-tuxcare.1",
+    "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+    "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
+    "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+    "vite@4.5.5": "npm:@els-angular/vite@>=4.5.5-tuxcare.1",
+    "webpack-dev-server@4.15.1": "npm:@els-angular/webpack-dev-server@>=4.15.1-tuxcare.1"
      },
      ```
 
@@ -199,49 +184,35 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=15.2.10-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=15.2.10-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=15.2.10-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=15.2.10-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=15.2.10-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=15.2.10-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=15.2.10-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=15.2.10-tuxcare.1",
-       "rxjs": "^7.4.0",
-       "tslib": "^2.3.0",
-       "zone.js": "~0.12.0"
+    "@angular/animations": "npm:@els-angular/angular-animations@>=15.2.10-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=15.2.10-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=15.2.10-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=15.2.10-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=15.2.10-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=15.2.10-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=15.2.10-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=15.2.10-tuxcare.1"
      },
      "devDependencies": {
-       "@angular-devkit/build-angular": "^15.2.11",
-       "@angular/cli": "~15.2.11",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=15.2.10-tuxcare.1",
-       "@types/jasmine": "~4.3.0",
-       "jasmine-core": "~4.5.0",
-       "karma": "~6.4.0",
-       "karma-chrome-launcher": "~3.1.0",
-       "karma-coverage": "~2.2.0",
-       "karma-jasmine": "~5.1.0",
-       "karma-jasmine-html-reporter": "~2.0.0",
-       "typescript": "~4.9.4"
+    "@angular-devkit/build-angular": "^15.2.11",
+    "@angular/cli": "~15.2.11",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=15.2.10-tuxcare.1"
      },
      "overrides": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=15.2.10-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=15.2.10-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=15.2.10-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=15.2.10-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=15.2.10-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=15.2.10-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=15.2.10-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=15.2.10-tuxcare.1",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=15.2.10-tuxcare.1",
-       "@babel/runtime": "7.26.10",
-       "esbuild": "0.25.0",
-       "rxjs": "^7.4.0",
-       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
-       "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-       "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
-       "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
-       "webpack-dev-server@4.11.1": "npm:@els-angular/webpack-dev-server@>=4.15.1-tuxcare.1"
+    "@angular/animations": "npm:@els-angular/angular-animations@>=15.2.10-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=15.2.10-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=15.2.10-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=15.2.10-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=15.2.10-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=15.2.10-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=15.2.10-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=15.2.10-tuxcare.1",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=15.2.10-tuxcare.1",
+    "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+    "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
+    "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+    "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
+    "webpack-dev-server@4.11.1": "npm:@els-angular/webpack-dev-server@>=4.15.1-tuxcare.1"
      },
      ```
 
@@ -267,49 +238,35 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=14.3.0-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=14.3.0-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=14.3.0-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=14.3.0-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=14.3.0-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=14.3.0-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=14.3.0-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=14.3.0-tuxcare.1",
-       "rxjs": "^7.4.0",
-       "tslib": "^2.3.0",
-       "zone.js": "~0.11.4"
+    "@angular/animations": "npm:@els-angular/angular-animations@>=14.3.0-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=14.3.0-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=14.3.0-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=14.3.0-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=14.3.0-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=14.3.0-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=14.3.0-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=14.3.0-tuxcare.1"
      },
      "devDependencies": {
-       "@angular-devkit/build-angular": "^14.2.13",
-       "@angular/cli": "~14.2.13",
-       "@angular/compiler-cli": "^14.2.0",
-       "@types/jasmine": "~4.0.0",
-       "jasmine-core": "~4.3.0",
-       "karma": "~6.4.0",
-       "karma-chrome-launcher": "~3.1.0",
-       "karma-coverage": "~2.2.0",
-       "karma-jasmine": "~5.1.0",
-       "karma-jasmine-html-reporter": "~2.0.0",
-       "typescript": "~4.7.2"
+    "@angular-devkit/build-angular": "^14.2.13",
+    "@angular/cli": "~14.2.13",
+    "@angular/compiler-cli": "^14.2.0"
      },
      "overrides": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=14.3.0-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=14.3.0-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=14.3.0-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=14.3.0-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=14.3.0-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=14.3.0-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=14.3.0-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=14.3.0-tuxcare.1",
-       "rxjs": "^7.4.0",
-       "@babel/runtime": "7.26.10",
-       "esbuild": "0.25.0",
-       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
-       "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-       "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
-       "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
-       "webpack-dev-server@4.11.0": "npm:@els-angular/webpack-dev-server@>=4.15.1-tuxcare.1",
-       "webpack-dev-middleware@5.3.3": "npm:@els-angular/webpack-dev-middleware@>=5.3.0-tuxcare.1"
+    "@angular/animations": "npm:@els-angular/angular-animations@>=14.3.0-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=14.3.0-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=14.3.0-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=14.3.0-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=14.3.0-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=14.3.0-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=14.3.0-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=14.3.0-tuxcare.1",
+    "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+    "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
+    "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+    "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
+    "webpack-dev-server@4.11.0": "npm:@els-angular/webpack-dev-server@>=4.15.1-tuxcare.1",
+    "webpack-dev-middleware@5.3.3": "npm:@els-angular/webpack-dev-middleware@>=5.3.0-tuxcare.1"
      }
      ```
 
@@ -336,54 +293,38 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "@angular/animations": "npm:@els-angular/angular-animations@>=13.4.0-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=13.4.0-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=13.4.0-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=13.4.0-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=13.4.0-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=13.4.0-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=13.4.0-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=13.4.0-tuxcare.1",
-       "rxjs": "^7.4.0",
-       "tslib": "^2.3.0",
-       "zone.js": "~0.11.4"
+    "@angular/common": "npm:@els-angular/angular-common@>=13.4.0-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=13.4.0-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=13.4.0-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=13.4.0-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=13.4.0-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=13.4.0-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=13.4.0-tuxcare.1"
      },
      "devDependencies": {
        "@angular-devkit/build-angular": "^13.0.4",
-       "@angular/cli": "^13.0.4",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=13.4.0-tuxcare.1",
-       "@types/express": "^4.17.17",
-       "@types/jasmine": "~5.1.0",
-       "@types/node": "^18.18.0",
-       "jasmine-core": "~5.6.0",
-       "karma": "~6.4.0",
-       "karma-chrome-launcher": "~3.2.0",
-       "karma-coverage": "~2.2.0",
-       "karma-jasmine": "~5.1.0",
-       "karma-jasmine-html-reporter": "~2.1.0",
-       "typescript": "~4.5.5"
+    "@angular/cli": "^13.0.4",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=13.4.0-tuxcare.1"
      },
      "overrides": {
        "@angular/animations": "npm:@els-angular/angular-animations@>=13.4.0-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=13.4.0-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=13.4.0-tuxcare.1",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=13.4.0-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=13.4.0-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=13.4.0-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=13.4.0-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=13.4.0-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=13.4.0-tuxcare.1",
-       "rxjs": "^7.4.0",
-       "@babel/runtime": "7.26.10",
-       "esbuild": "0.25.0",
-       "ip@1.1.9": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
-       "postcss@8.4.5": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
-       "semver@7.3.5": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
-       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
-       "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-       "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
-       "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
-       "webpack-dev-middleware@5.3.0": "npm:@els-angular/webpack-dev-middleware@>=5.3.0-tuxcare.1",
-       "webpack-dev-server@4.7.3": "npm:@els-angular/webpack-dev-server@>=4.7.3-tuxcare.1"
+    "@angular/common": "npm:@els-angular/angular-common@>=13.4.0-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=13.4.0-tuxcare.1",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=13.4.0-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=13.4.0-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=13.4.0-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=13.4.0-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=13.4.0-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=13.4.0-tuxcare.1",
+    "ip@1.1.9": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
+    "postcss@8.4.5": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
+    "semver@7.3.5": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
+    "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+    "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
+    "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+    "webpack@5.76.1": "npm:@els-angular/webpack@>=5.76.1-tuxcare.1",
+    "webpack-dev-middleware@5.3.0": "npm:@els-angular/webpack-dev-middleware@>=5.3.0-tuxcare.1",
+    "webpack-dev-server@4.7.3": "npm:@els-angular/webpack-dev-server@>=4.7.3-tuxcare.1"
      }
      ```
 
@@ -410,63 +351,48 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "@angular/animations": "npm:@els-angular/angular-animations@>=12.2.17-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=12.2.17-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=12.2.17-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=12.2.17-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=12.2.17-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=12.2.17-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=12.2.17-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=12.2.17-tuxcare.1",
-       "rxjs": "~6.6.0",
-       "tslib": "^2.3.0",
-       "zone.js": "~0.11.4"
+    "@angular/common": "npm:@els-angular/angular-common@>=12.2.17-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=12.2.17-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=12.2.17-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=12.2.17-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=12.2.17-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=12.2.17-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=12.2.17-tuxcare.1"
      },
      "devDependencies": {
-       "@angular-devkit/build-angular": "~12.2.18",
-       "@angular/cli": "~12.2.18",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=12.2.17-tuxcare.1",
-       "@types/jasmine": "~3.8.0",
-       "@types/node": "^12.11.1",
-       "jasmine-core": "~3.8.0",
-       "karma": "~6.3.0",
-       "karma-chrome-launcher": "~3.1.0",
-       "karma-coverage": "~2.0.3",
-       "karma-jasmine": "~4.0.0",
-       "karma-jasmine-html-reporter": "~1.7.0",
-       "typescript": "~4.2.4"
+          "@angular-devkit/build-angular": "~12.2.18",
+    "@angular/cli": "~12.2.18",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=12.2.17-tuxcare.1"
      },
      "overrides": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=12.2.17-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=12.2.17-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=12.2.17-tuxcare.1",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=12.2.17-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=12.2.17-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=12.2.17-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=12.2.17-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=12.2.17-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=12.2.17-tuxcare.1",
-       "@babel/runtime": "7.26.10",
-       "ansi-html@0.0.7": "npm:@els-angular/ansi-html@>=0.0.7-tuxcare.1",
-       "esbuild": "0.25.0",
-       "braces@2.3.2": "npm:@els-angular/braces@>=2.3.2-tuxcare.1",
-       "http-proxy-middleware@0.19.1": "npm:@els-angular/http-proxy-middleware@>=0.19.1-tuxcare.1",
-       "ip@1.1.5": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
-       "loader-utils@2.0.0": "npm:@els-angular/loader-utils@>=2.0.0-tuxcare.1",
-       "micromatch@3.1.10": "npm:@els-angular/micromatch@>=3.1.10-tuxcare.1",
-       "minimatch@3.0.4": "npm:@els-angular/minimatch@>=3.0.4-tuxcare.1",
-       "node-forge@0.10.0": "npm:@els-angular/node-forge@>=0.10.0-tuxcare.1",
-       "postcss@7.0.39": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
-       "postcss@8.3.6": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
-       "rxjs": "~6.6.0",
-       "semver@7.3.5": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
-       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
-       "terser@5.7.1": "npm:@els-angular/terser@>=5.5.1-tuxcare.1",
-       "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-       "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
-       "webpack@5.50.0": "npm:@els-angular/webpack@>=5.50.0-tuxcare.1",
-       "webpack-dev-middleware@3.7.3": "npm:@els-angular/webpack-dev-middleware@>=3.7.2-tuxcare.1",
-       "webpack-dev-middleware@5.0.0": "npm:@els-angular/webpack-dev-middleware@>=5.0.0-tuxcare.1",
-       "webpack-dev-server@3.11.3": "npm:@els-angular/webpack-dev-server@>=3.11.0-tuxcare.1"
+           "@angular/animations": "npm:@els-angular/angular-animations@>=12.2.17-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=12.2.17-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=12.2.17-tuxcare.1",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=12.2.17-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=12.2.17-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=12.2.17-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=12.2.17-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=12.2.17-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=12.2.17-tuxcare.1",
+    "ansi-html@0.0.7": "npm:@els-angular/ansi-html@>=0.0.7-tuxcare.1",
+    "braces@2.3.2": "npm:@els-angular/braces@>=2.3.2-tuxcare.1",
+    "http-proxy-middleware@0.19.1": "npm:@els-angular/http-proxy-middleware@>=0.19.1-tuxcare.1",
+    "ip@1.1.5": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
+    "loader-utils@2.0.0": "npm:@els-angular/loader-utils@>=2.0.0-tuxcare.1",
+    "micromatch@3.1.10": "npm:@els-angular/micromatch@>=3.1.10-tuxcare.1",
+    "minimatch@3.0.4": "npm:@els-angular/minimatch@>=3.0.4-tuxcare.1",
+    "node-forge@0.10.0": "npm:@els-angular/node-forge@>=0.10.0-tuxcare.1",
+    "postcss@7.0.39": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
+    "postcss@8.3.6": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
+    "semver@7.3.5": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
+    "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+    "terser@5.7.1": "npm:@els-angular/terser@>=5.5.1-tuxcare.1",
+    "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
+    "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+    "webpack@5.50.0": "npm:@els-angular/webpack@>=5.50.0-tuxcare.1",
+    "webpack-dev-middleware@3.7.3": "npm:@els-angular/webpack-dev-middleware@>=3.7.2-tuxcare.1",
+    "webpack-dev-middleware@5.0.0": "npm:@els-angular/webpack-dev-middleware@>=5.0.0-tuxcare.1",
+    "webpack-dev-server@3.11.3": "npm:@els-angular/webpack-dev-server@>=3.11.0-tuxcare.1"
      }
      ```
 
@@ -493,65 +419,51 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
      ```text
      "dependencies": {
        "@angular/animations": "npm:@els-angular/angular-animations@>=11.2.14-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=11.2.14-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=11.2.14-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=11.2.14-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=11.2.14-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=11.2.14-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=11.2.14-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=11.2.14-tuxcare.1",
-       "rxjs": "^6.6.7",
-       "tslib": "^2.0.0",
-       "zone.js": "~0.11.4"
+    "@angular/common": "npm:@els-angular/angular-common@>=11.2.14-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=11.2.14-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=11.2.14-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=11.2.14-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=11.2.14-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=11.2.14-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=11.2.14-tuxcare.1"
      },
      "devDependencies": {
-       "@angular-devkit/build-angular": "0.1102.14",
-       "@angular/cli": "11.2.14",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=11.2.14-tuxcare.1",
-       "@types/jasmine": "3.10.3",
-       "@types/node": "^12.11.1",
-       "jasmine-core": "~3.10.0",
-       "karma": "~6.3.20",
-       "karma-chrome-launcher": "~3.1.0",
-       "karma-coverage": "~2.0.3",
-       "karma-jasmine": "~4.0.0",
-       "karma-jasmine-html-reporter": "~1.7.0",
-       "typescript": "4.0.8"
+           "@angular-devkit/build-angular": "0.1102.14",
+    "@angular/cli": "11.2.14",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=11.2.14-tuxcare.1"
      },
      "overrides": {
        "@angular/animations": "npm:@els-angular/angular-animations@>=11.2.14-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=11.2.14-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=11.2.14-tuxcare.1",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=11.2.14-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=11.2.14-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=11.2.14-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=11.2.14-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=11.2.14-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=11.2.14-tuxcare.1",
-       "@babel/runtime": "7.26.10",
-       "ansi-html@0.0.7": "npm:@els-angular/ansi-html@>=0.0.7-tuxcare.1",
-       "braces@2.3.2": "npm:@els-angular/braces@>=2.3.2-tuxcare.1",
-       "form-data@2.3.3": "@els-angular/form-data@>=2.3.3-tuxcare.1",
-       "http-cache-semantics@4.2.0": "npm:@els-angular/http-cache-semantics@>=3.8.1-tuxcare.1",
-       "http-proxy-middleware@0.19.1": "npm:@els-angular/http-proxy-middleware@>=0.19.1-tuxcare.1",
-       "ip@1.1.9": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
-       "loader-utils@2.0.0": "npm:@els-angular/loader-utils@>=2.0.0-tuxcare.1",
-       "micromatch@3.1.10": "npm:@els-angular/micromatch@>=3.1.10-tuxcare.1",
-       "minimatch@3.0.4": "npm:@els-angular/minimatch@>=3.0.4-tuxcare.1",
-       "node-forge@0.10.0": "npm:@els-angular/node-forge@>=0.10.0-tuxcare.1",
-       "request@2.88.2": "npm:@els-angular/request@>=2.88.2-tuxcare.1",
-       "rollup@2.38.4": "npm:@els-angular/rollup@>=2.38.4-tuxcare.1",
-       "postcss@7.0.39": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
-       "postcss@8.2.15": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
-       "rxjs": "^6.6.7",
-       "semver@7.3.4": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
-       "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
-       "terser@4.8.1": "npm:@els-angular/terser@>=4.8.1-tuxcare.1",
-       "terser@5.5.1": "npm:@els-angular/terser@>=5.3.0-tuxcare.1",
-       "tough-cookie@2.5.0": "npm:@els-angular/tough-cookie@>=2.5.0-tuxcare.1",
-       "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-       "webpack-dev-middleware@3.7.2": "npm:@els-angular/webpack-dev-middleware@>=3.7.2-tuxcare.1",
-       "webpack-dev-server@3.11.2": "npm:@els-angular/webpack-dev-server@>=3.11.0-tuxcare.1"
+    "@angular/common": "npm:@els-angular/angular-common@>=11.2.14-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=11.2.14-tuxcare.1",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=11.2.14-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=11.2.14-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=11.2.14-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=11.2.14-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=11.2.14-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=11.2.14-tuxcare.1",
+    "ansi-html@0.0.7": "npm:@els-angular/ansi-html@>=0.0.7-tuxcare.1",
+    "braces@2.3.2": "npm:@els-angular/braces@>=2.3.2-tuxcare.1",
+    "form-data@2.3.3": "@els-angular/form-data@>=2.3.3-tuxcare.1",
+    "http-cache-semantics@4.2.0": "npm:@els-angular/http-cache-semantics@>=3.8.1-tuxcare.1",
+    "http-proxy-middleware@0.19.1": "npm:@els-angular/http-proxy-middleware@>=0.19.1-tuxcare.1",
+    "ip@1.1.9": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
+    "loader-utils@2.0.0": "npm:@els-angular/loader-utils@>=2.0.0-tuxcare.1",
+    "micromatch@3.1.10": "npm:@els-angular/micromatch@>=3.1.10-tuxcare.1",
+    "minimatch@3.0.4": "npm:@els-angular/minimatch@>=3.0.4-tuxcare.1",
+    "node-forge@0.10.0": "npm:@els-angular/node-forge@>=0.10.0-tuxcare.1",
+    "request@2.88.2": "npm:@els-angular/request@>=2.88.2-tuxcare.1",
+    "rollup@2.38.4": "npm:@els-angular/rollup@>=2.38.4-tuxcare.1",
+    "postcss@7.0.39": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
+    "postcss@8.2.15": "npm:@els-angular/postcss@>=8.3.6-tuxcare.1",
+    "semver@7.3.4": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
+    "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+    "terser@4.8.1": "npm:@els-angular/terser@>=4.8.1-tuxcare.1",
+    "terser@5.5.1": "npm:@els-angular/terser@>=5.3.0-tuxcare.1",
+    "tough-cookie@2.5.0": "npm:@els-angular/tough-cookie@>=2.5.0-tuxcare.1",
+    "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
+    "webpack-dev-middleware@3.7.2": "npm:@els-angular/webpack-dev-middleware@>=3.7.2-tuxcare.1",
+    "webpack-dev-server@3.11.2": "npm:@els-angular/webpack-dev-server@>=3.11.0-tuxcare.1"
      }
      ```
 
@@ -577,76 +489,62 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=10.2.5-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=10.2.5-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=10.2.5-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=10.2.5-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=10.2.5-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=10.2.5-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=10.2.5-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=10.2.5-tuxcare.1",
-       "rxjs": "~6.6.7",
-       "tslib": "^2.0.0",
-       "zone.js": "~0.10.3"
+    "@angular/animations": "npm:@els-angular/angular-animations@>=10.2.5-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=10.2.5-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=10.2.5-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=10.2.5-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=10.2.5-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=10.2.5-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=10.2.5-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=10.2.5-tuxcare.1"
      },
      "devDependencies": {
-       "@angular-devkit/build-angular": "0.1002.4",
-       "@angular/cli": "10.2.4",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=10.2.5-tuxcare.1",
-       "@types/jasmine": "3.6.0",
-       "@types/node": "^12.11.1",
-       "jasmine-core": "~3.6.0",
-       "karma": "npm:@els-angular/karma@>=5.0.9-tuxcare.1",
-       "karma-chrome-launcher": "~3.1.0",
-       "karma-coverage-istanbul-reporter": "~3.0.3",
-       "karma-jasmine": "~3.3.1",
-       "karma-jasmine-html-reporter": "~1.5.4",
-       "typescript": "4.0.8"
+    "@angular-devkit/build-angular": "0.1002.4",
+    "@angular/cli": "10.2.4",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=10.2.5-tuxcare.1"
      },
      "overrides": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=10.2.5-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=10.2.5-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=10.2.5-tuxcare.1",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=10.2.5-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=10.2.5-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=10.2.5-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=10.2.5-tuxcare.1",
-       "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=10.2.5-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=10.2.5-tuxcare.1",   
-       "@babel/runtime": "7.26.10",
-       "ansi-html@0.0.7": "npm:@els-angular/ansi-html@>=0.0.7-tuxcare.1",
-       "braces@2.3.2": "npm:@els-angular/braces@>=2.3.2-tuxcare.1",
-       "cookie@0.4.2": "npm:@els-angular/cookie@>=0.4.2-tuxcare.1",
-       "debug@4.1.1": "npm:@els-angular/debug@>=4.1.1-tuxcare.1",
-       "form-data@2.3.3": "npm:@els-angular/form-data@>=2.3.3-tuxcare.1",
-       "http-cache-semantics@3.8.1": "npm:@els-angular/http-cache-semantics@>=3.8.1-tuxcare.1",
-       "http-proxy-middleware@0.19.1": "npm:@els-angular/http-proxy-middleware@>=0.19.1-tuxcare.1",
-       "ip@1.1.5": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
-       "karma@5.0.9": "npm:@els-angular/karma@>=5.0.9-tuxcare.1",
-       "loader-utils@1.2.3": "npm:@els-angular/loader-utils@>=1.2.3-tuxcare.1",
-       "loader-utils@2.0.0": "npm:@els-angular/loader-utils@>=2.0.0-tuxcare.1",
-       "micromatch@3.1.10": "npm:@els-angular/micromatch@>=3.1.10-tuxcare.1",
-       "minimatch@3.0.4": "npm:@els-angular/minimatch@>=3.0.4-tuxcare.1",
-       "nth-check@1.0.2": "npm:@els-angular/nth-check@>=1.0.2-tuxcare.1",
-       "node-forge@0.10.0": "npm:@els-angular/node-forge@>=0.10.0-tuxcare.1",
-       "parseuri@0.0.6": "npm:@els-angular/parseuri@>=0.0.6-tuxcare.1",
-       "postcss@7.0.21": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
-       "postcss@7.0.32": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
-       "request@2.88.2": "npm:@els-angular/request@>=2.88.2-tuxcare.1",
-       "rollup@2.26.5": "npm:@els-angular/rollup@>=2.26.5-tuxcare.1",
-       "rxjs": "~6.6.7",
-       "semver@7.3.2": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
-       "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
-       "tar@4.4.19": "npm:@els-angular/tar@>=4.4.19-tuxcare.1",
-       "terser@4.8.1": "npm:@els-angular/terser@>=4.8.1-tuxcare.1",
-       "terser@5.3.0": "npm:@els-angular/terser@>=5.3.0-tuxcare.1",
-       "tough-cookie@2.5.0": "npm:@els-angular/tough-cookie@>=2.5.0-tuxcare.1",
-       "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-       "tmp@0.2.1": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
-       "ua-parser-js@0.7.21": "npm:@els-angular/ua-parser-js@>=0.7.21-tuxcare.1",
-       "webpack-dev-middleware@3.7.2": "npm:@els-angular/webpack-dev-middleware@>=3.7.2-tuxcare.1",
-       "webpack-dev-server@3.11.0": "npm:@els-angular/webpack-dev-server@>=3.11.0-tuxcare.1",
-       "webpack-subresource-integrity@1.4.1": "npm:@els-angular/webpack-subresource-integrity@>=1.4.0-tuxcare.1"
+           "@angular/animations": "npm:@els-angular/angular-animations@>=10.2.5-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=10.2.5-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=10.2.5-tuxcare.1",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=10.2.5-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=10.2.5-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=10.2.5-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=10.2.5-tuxcare.1",
+    "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=10.2.5-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=10.2.5-tuxcare.1",
+    "ansi-html@0.0.7": "npm:@els-angular/ansi-html@>=0.0.7-tuxcare.1",
+    "braces@2.3.2": "npm:@els-angular/braces@>=2.3.2-tuxcare.1",
+    "cookie@0.4.2": "npm:@els-angular/cookie@>=0.4.2-tuxcare.1",
+    "debug@4.1.1": "npm:@els-angular/debug@>=4.1.1-tuxcare.1",
+    "form-data@2.3.3": "npm:@els-angular/form-data@>=2.3.3-tuxcare.1",
+    "http-cache-semantics@3.8.1": "npm:@els-angular/http-cache-semantics@>=3.8.1-tuxcare.1",
+    "http-proxy-middleware@0.19.1": "npm:@els-angular/http-proxy-middleware@>=0.19.1-tuxcare.1",
+    "ip@1.1.5": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
+    "karma@5.0.9": "npm:@els-angular/karma@>=5.0.9-tuxcare.1",
+    "loader-utils@1.2.3": "npm:@els-angular/loader-utils@>=1.2.3-tuxcare.1",
+    "loader-utils@2.0.0": "npm:@els-angular/loader-utils@>=2.0.0-tuxcare.1",
+    "micromatch@3.1.10": "npm:@els-angular/micromatch@>=3.1.10-tuxcare.1",
+    "minimatch@3.0.4": "npm:@els-angular/minimatch@>=3.0.4-tuxcare.1",
+    "nth-check@1.0.2": "npm:@els-angular/nth-check@>=1.0.2-tuxcare.1",
+    "node-forge@0.10.0": "npm:@els-angular/node-forge@>=0.10.0-tuxcare.1",
+    "parseuri@0.0.6": "npm:@els-angular/parseuri@>=0.0.6-tuxcare.1",
+    "postcss@7.0.21": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
+    "postcss@7.0.32": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
+    "request@2.88.2": "npm:@els-angular/request@>=2.88.2-tuxcare.1",
+    "rollup@2.26.5": "npm:@els-angular/rollup@>=2.26.5-tuxcare.1",
+    "semver@7.3.2": "npm:@els-angular/semver@>=7.3.2-tuxcare.1",
+    "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+    "tar@4.4.19": "npm:@els-angular/tar@>=4.4.19-tuxcare.1",
+    "terser@4.8.1": "npm:@els-angular/terser@>=4.8.1-tuxcare.1",
+    "terser@5.3.0": "npm:@els-angular/terser@>=5.3.0-tuxcare.1",
+    "tough-cookie@2.5.0": "npm:@els-angular/tough-cookie@>=2.5.0-tuxcare.1",
+    "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
+    "tmp@0.2.1": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+    "ua-parser-js@0.7.21": "npm:@els-angular/ua-parser-js@>=0.7.21-tuxcare.1",
+    "webpack-dev-middleware@3.7.2": "npm:@els-angular/webpack-dev-middleware@>=3.7.2-tuxcare.1",
+    "webpack-dev-server@3.11.0": "npm:@els-angular/webpack-dev-server@>=3.11.0-tuxcare.1",
+    "webpack-subresource-integrity@1.4.1": "npm:@els-angular/webpack-subresource-integrity@>=1.4.0-tuxcare.1"
      }
      ```
 
@@ -672,100 +570,319 @@ TuxCare provides ELS for Angular as an NPM package, hosted on a secure internal 
 
      ```text
      "dependencies": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=9.1.13-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=9.1.13-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=9.1.13-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=9.1.13-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=9.1.13-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=9.1.13-tuxcare.1",
-       "@angular/platform-browser-dynamic": "9.1.13",
-       "@angular/router": "npm:@els-angular/angular-router@>=9.1.13-tuxcare.1",
-       "rxjs": "~6.5.4",
-       "tslib": "^1.10.0",
-       "zone.js": "~0.10.2"
+        "@angular/animations": "npm:@els-angular/angular-animations@>=9.1.13-tuxcare.1",
+        "@angular/common": "npm:@els-angular/angular-common@>=9.1.13-tuxcare.1",
+        "@angular/compiler": "npm:@els-angular/angular-compiler@>=9.1.13-tuxcare.1",
+        "@angular/core": "npm:@els-angular/angular-core@>=9.1.13-tuxcare.1",
+        "@angular/forms": "npm:@els-angular/angular-forms@>=9.1.13-tuxcare.1",
+        "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=9.1.13-tuxcare.1",
+        "@angular/platform-browser-dynamic": "9.1.13",
+        "@angular/router": "npm:@els-angular/angular-router@>=9.1.13-tuxcare.1"
      },
      "devDependencies": {
-       "@angular-devkit/build-angular": "~0.901.15",
-       "@angular/cli": "~9.1.15",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=9.1.13-tuxcare.1",
-       "@types/jasmine": "~3.5.0",
-       "@types/jasminewd2": "~2.0.3",
-       "@types/node": "^12.11.1",
-       "codelyzer": "^5.1.2",
-       "jasmine-core": "~3.5.0",
-       "jasmine-spec-reporter": "~4.2.1",
-       "karma": "npm:@els-angular/karma@>=5.0.9-tuxcare.1",
-       "karma-chrome-launcher": "~3.1.0",
-       "karma-coverage-istanbul-reporter": "~2.1.0",
-       "karma-jasmine": "~3.0.1",
-       "karma-jasmine-html-reporter": "~1.4.2",
-       "protractor": "~5.4.3",
-       "ts-node": "~8.3.0",
-       "tslint": "~6.1.0",
-       "typescript": "~3.8.3"
+        "@angular-devkit/build-angular": "~0.901.15",
+        "@angular/cli": "~9.1.15",
+        "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=9.1.13-tuxcare.1"
      },
      "overrides": {
-       "@angular/animations": "npm:@els-angular/angular-animations@>=9.1.13-tuxcare.1",
-       "@angular/common": "npm:@els-angular/angular-common@>=9.1.13-tuxcare.1",
-       "@angular/compiler": "npm:@els-angular/angular-compiler@>=9.1.13-tuxcare.1",
-       "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=9.1.13-tuxcare.1",
-       "@angular/core": "npm:@els-angular/angular-core@>=9.1.13-tuxcare.1",
-       "@angular/forms": "npm:@els-angular/angular-forms@>=9.1.13-tuxcare.1",
-       "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=9.1.13-tuxcare.1",
-       "@angular/router": "npm:@els-angular/angular-router@>=9.1.13-tuxcare.1",
-       "ansi-html@0.0.7": "npm:@els-angular/ansi-html@>=0.0.7-tuxcare.1",
-       "braces@2.3.2": "npm:@els-angular/braces@>=2.3.2-tuxcare.1",
-       "cookie@0.4.2": "npm:@els-angular/cookie@>=0.4.2-tuxcare.1",
-       "debug@4.1.1": "npm:@els-angular/debug@>=4.1.1-tuxcare.1",
-       "form-data@2.3.3": "npm:@els-angular/form-data@>=2.3.3-tuxcare.1",
-       "http-cache-semantics@3.8.1": "npm:@els-angular/http-cache-semantics@>=3.8.1-tuxcare.1",
-       "http-proxy-middleware@0.19.1": "npm:@els-angular/http-proxy-middleware@>=0.19.1-tuxcare.1",
-       "ip@1.1.5": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
-       "loader-utils@2.0.0": "npm:@els-angular/loader-utils@>=2.0.0-tuxcare.1",
-       "karma@5.0.9": "npm:@els-angular/karma@>=5.0.9-tuxcare.1",
-       "micromatch@3.1.10": "npm:@els-angular/micromatch@>=3.1.10-tuxcare.1",
-       "minimatch@3.0.4": "npm:@els-angular/minimatch@>=3.0.4-tuxcare.1",
-       "nth-check@1.0.2": "npm:@els-angular/nth-check@>=1.0.2-tuxcare.1",
-       "node-forge@0.10.0": "npm:@els-angular/node-forge@>=0.10.0-tuxcare.1",
-       "parseuri@0.0.6": "npm:@els-angular/parseuri@>=0.0.6-tuxcare.1",
-       "postcss@7.0.27": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
-       "postcss@7.0.39": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
-       "request@2.88.2": "npm:@els-angular/request@>=2.88.2-tuxcare.1",
-       "rollup@2.1.0": "npm:@els-angular/rollup@>=2.1.0-tuxcare.1",
-       "rxjs": "~6.5.4",
-       "semver@7.1.3": "npm:@els-angular/semver@>=7.1.3-tuxcare.1",
-       "tar@4.4.19": "npm:@els-angular/tar@>=4.4.19-tuxcare.1",
-       "terser@4.6.10": "npm:@els-angular/terser@>=4.6.10-tuxcare.1",
-       "tough-cookie@2.5.0": "npm:@els-angular/tough-cookie@>=2.5.0-tuxcare.1",
-       "tmp@0.0.30": "npm:@els-angular/tmp@>=0.0.30-tuxcare.1",
-       "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-       "tmp@0.2.1": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
-       "ua-parser-js@0.7.21": "npm:@els-angular/ua-parser-js@>=0.7.21-tuxcare.1",
-       "webpack-dev-middleware@3.7.2": "npm:@els-angular/webpack-dev-middleware@>=3.7.2-tuxcare.1",
-       "webpack-dev-server@3.11.0": "npm:@els-angular/webpack-dev-server@>=3.11.0-tuxcare.1",
-       "webpack-subresource-integrity@1.4.0": "npm:@els-angular/webpack-subresource-integrity@>=1.4.0-tuxcare.1",
-       "xml2js@0.4.23": "npm:@els-angular/xml2js@>=0.4.23-tuxcare.1",
-       "yargs-parser@11.1.1": "npm:@els-angular/yargs-parser@>=11.1.1-tuxcare.1"
+           "@angular/animations": "npm:@els-angular/angular-animations@>=9.1.13-tuxcare.1",
+    "@angular/common": "npm:@els-angular/angular-common@>=9.1.13-tuxcare.1",
+    "@angular/compiler": "npm:@els-angular/angular-compiler@>=9.1.13-tuxcare.1",
+    "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=9.1.13-tuxcare.1",
+    "@angular/core": "npm:@els-angular/angular-core@>=9.1.13-tuxcare.1",
+    "@angular/forms": "npm:@els-angular/angular-forms@>=9.1.13-tuxcare.1",
+    "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=9.1.13-tuxcare.1",
+    "@angular/router": "npm:@els-angular/angular-router@>=9.1.13-tuxcare.1",
+    "ansi-html@0.0.7": "npm:@els-angular/ansi-html@>=0.0.7-tuxcare.1",
+    "braces@2.3.2": "npm:@els-angular/braces@>=2.3.2-tuxcare.1",
+    "cookie@0.4.2": "npm:@els-angular/cookie@>=0.4.2-tuxcare.1",
+    "debug@4.1.1": "npm:@els-angular/debug@>=4.1.1-tuxcare.1",
+    "form-data@2.3.3": "npm:@els-angular/form-data@>=2.3.3-tuxcare.1",
+    "http-cache-semantics@3.8.1": "npm:@els-angular/http-cache-semantics@>=3.8.1-tuxcare.1",
+    "http-proxy-middleware@0.19.1": "npm:@els-angular/http-proxy-middleware@>=0.19.1-tuxcare.1",
+    "ip@1.1.5": "npm:@els-angular/ip@>=1.1.5-tuxcare.1",
+    "loader-utils@2.0.0": "npm:@els-angular/loader-utils@>=2.0.0-tuxcare.1",
+    "karma@5.0.9": "npm:@els-angular/karma@>=5.0.9-tuxcare.1",
+    "micromatch@3.1.10": "npm:@els-angular/micromatch@>=3.1.10-tuxcare.1",
+    "minimatch@3.0.4": "npm:@els-angular/minimatch@>=3.0.4-tuxcare.1",
+    "nth-check@1.0.2": "npm:@els-angular/nth-check@>=1.0.2-tuxcare.1",
+    "node-forge@0.10.0": "npm:@els-angular/node-forge@>=0.10.0-tuxcare.1",
+    "parseuri@0.0.6": "npm:@els-angular/parseuri@>=0.0.6-tuxcare.1",
+    "postcss@7.0.27": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
+    "postcss@7.0.39": "npm:@els-angular/postcss@>=7.0.39-tuxcare.1",
+    "request@2.88.2": "npm:@els-angular/request@>=2.88.2-tuxcare.1",
+    "rollup@2.1.0": "npm:@els-angular/rollup@>=2.1.0-tuxcare.1",
+    "semver@7.1.3": "npm:@els-angular/semver@>=7.1.3-tuxcare.1",
+    "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+    "tar@4.4.19": "npm:@els-angular/tar@>=4.4.19-tuxcare.1",
+    "terser@4.6.10": "npm:@els-angular/terser@>=4.6.10-tuxcare.1",
+        "tough-cookie@2.5.0": "npm:@els-angular/tough-cookie@>=2.5.0-tuxcare.1",
+        "tmp@0.0.30": "npm:@els-angular/tmp@>=0.0.30-tuxcare.1",
+        "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
+        "tmp@0.2.1": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+        "ua-parser-js@0.7.21": "npm:@els-angular/ua-parser-js@>=0.7.21-tuxcare.1",
+        "webpack-dev-middleware@3.7.2": "npm:@els-angular/webpack-dev-middleware@>=3.7.2-tuxcare.1",
+        "webpack-dev-server@3.11.0": "npm:@els-angular/webpack-dev-server@>=3.11.0-tuxcare.1",
+        "webpack-subresource-integrity@1.4.0": "npm:@els-angular/webpack-subresource-integrity@>=1.4.0-tuxcare.1",
+        "xml2js@0.4.23": "npm:@els-angular/xml2js@>=0.4.23-tuxcare.1",
+        "yargs-parser@11.1.1": "npm:@els-angular/yargs-parser@>=11.1.1-tuxcare.1"
      }
      ```
 
      </CodeWithCopy>
  
-     :::tip
-     If you use any of the following **non-default Angular modules**, update their versions as shown below:
+    :::tip
+    If you use any of the following **non-default Angular modules**, update their versions as shown below:
 
-     * "@angular/elements": "npm:@els-angular/angular-elements@>=9.1.13-tuxcare.1",
-     * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=9.1.13-tuxcare.1",
-     * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=9.1.13-tuxcare.1",
-     * "@angular/localize": "npm:@els-angular/angular-localize@>=9.1.13-tuxcare.1",
-     * "@angular/language-service": "npm:@els-angular/angular-language-service@>=9.1.13-tuxcare.1",
-     * "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=9.1.13-tuxcare.1",
+    * "@angular/elements": "npm:@els-angular/angular-elements@>=9.1.13-tuxcare.1",
+    * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=9.1.13-tuxcare.1",
+    * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=9.1.13-tuxcare.1",
+    * "@angular/localize": "npm:@els-angular/angular-localize@>=9.1.13-tuxcare.1",
+    * "@angular/language-service": "npm:@els-angular/angular-language-service@>=9.1.13-tuxcare.1",
+    * "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=9.1.13-tuxcare.1",
 
-     After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
-     :::
-     </template>
+    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+    :::
+    </template>
 
-     </TableTabs>
+    <template #Angular_8>
+
+    <CodeWithCopy>
+
+    ```text
+    "dependencies": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=8.2.14-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=8.2.14-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=8.2.14-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=8.2.14-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=8.2.14-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=8.2.14-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=8.2.14-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=8.2.14-tuxcare.1"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "~0.803.29",
+      "@angular/cli": "~8.3.29",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=8.2.14-tuxcare.1"
+    },
+    "overrides": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=8.2.14-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=8.2.14-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=8.2.14-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=8.2.14-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=8.2.14-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=8.2.14-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=8.2.14-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=8.2.14-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=8.2.14-tuxcare.1"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    :::tip
+    If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+    * "@angular/elements": "npm:@els-angular/angular-elements@>=8.2.14-tuxcare.1",
+    * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=8.2.14-tuxcare.1",
+    * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=8.2.14-tuxcare.1",
+    * "@angular/language-service": "npm:@els-angular/angular-language-service@>=8.2.14-tuxcare.1",
+    * "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=8.2.14-tuxcare.1",
+
+    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+    :::
+    </template>
+
+    <template #Angular_7>
+
+    <CodeWithCopy>
+
+    ```text
+    "dependencies": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=7.2.16-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=7.2.16-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=7.2.16-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=7.2.16-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=7.2.16-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=7.2.16-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=7.2.16-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=7.2.16-tuxcare.1"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "~0.13.9",
+      "@angular/cli": "~7.3.10",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=7.2.16-tuxcare.1"
+    },
+    "overrides": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=7.2.16-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=7.2.16-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=7.2.16-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=7.2.16-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=7.2.16-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=7.2.16-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=7.2.16-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=7.2.16-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=7.2.16-tuxcare.1"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    :::tip
+    If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+    * "@angular/elements": "npm:@els-angular/angular-elements@>=7.2.16-tuxcare.1",
+    * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=7.2.16-tuxcare.1",
+    * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=7.2.16-tuxcare.1",
+    * "@angular/language-service": "npm:@els-angular/angular-language-service@>=7.2.16-tuxcare.1",
+    * "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=7.2.16-tuxcare.1",
+
+    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+    :::
+    </template>
+
+    <template #Angular_6>
+
+    <CodeWithCopy>
+
+    ```text
+    "dependencies": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=6.1.10-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=6.1.10-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=6.1.10-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=6.1.10-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=6.1.10-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=6.1.10-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=6.1.10-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=6.1.10-tuxcare.1"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "~0.8.9",
+      "@angular/cli": "~6.2.9",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=6.1.10-tuxcare.1"
+    },
+    "overrides": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=6.1.10-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=6.1.10-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=6.1.10-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=6.1.10-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=6.1.10-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=6.1.10-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=6.1.10-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=6.1.10-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=6.1.10-tuxcare.1"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    :::tip
+    If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+    * "@angular/elements": "npm:@els-angular/angular-elements@>=6.1.10-tuxcare.1",
+    * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=6.1.10-tuxcare.1",
+    * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=6.1.10-tuxcare.1",
+    * "@angular/language-service": "npm:@els-angular/angular-language-service@>=6.1.10-tuxcare.1",
+    * "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=6.1.10-tuxcare.1",
+
+    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+    :::
+    </template>
+
+    <template #Angular_5>
+
+    <CodeWithCopy>
+
+    ```text
+    "dependencies": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=5.2.11-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=5.2.11-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=5.2.11-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=5.2.11-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=5.2.11-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=5.2.11-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=5.2.11-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=5.2.11-tuxcare.1"
+    },
+    "devDependencies": {
+      "@angular/cli": "~1.7.4",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=5.2.11-tuxcare.1"
+    },
+    "overrides": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=5.2.11-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=5.2.11-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=5.2.11-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=5.2.11-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=5.2.11-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=5.2.11-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=5.2.11-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=5.2.11-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=5.2.11-tuxcare.1"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    :::tip
+    If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+    * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=5.2.11-tuxcare.1",
+    * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=5.2.11-tuxcare.1",
+    * "@angular/language-service": "npm:@els-angular/angular-language-service@>=5.2.11-tuxcare.1",
+    * "@angular/service-worker": "npm:@els-angular/angular-service-worker@>=5.2.11-tuxcare.1",
+
+    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+    :::
+    </template>
+
+    <template #Angular_4>
+
+    <CodeWithCopy>
+
+    ```text
+    "dependencies": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=4.4.7-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=4.4.7-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=4.4.7-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=4.4.7-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=4.4.7-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=4.4.7-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=4.4.7-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=4.4.7-tuxcare.1"
+    },
+    "devDependencies": {
+      "@angular/cli": "~1.4.10",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=4.4.7-tuxcare.1",
+      "@angular/tsc-wrapped": "npm:@els-angular/angular-tsc-wrapped@>=4.4.7-tuxcare.1"
+    },
+    "overrides": {
+      "@angular/animations": "npm:@els-angular/angular-animations@>=4.4.7-tuxcare.1",
+      "@angular/common": "npm:@els-angular/angular-common@>=4.4.7-tuxcare.1",
+      "@angular/compiler": "npm:@els-angular/angular-compiler@>=4.4.7-tuxcare.1",
+      "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=4.4.7-tuxcare.1",
+      "@angular/core": "npm:@els-angular/angular-core@>=4.4.7-tuxcare.1",
+      "@angular/forms": "npm:@els-angular/angular-forms@>=4.4.7-tuxcare.1",
+      "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=4.4.7-tuxcare.1",
+      "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=4.4.7-tuxcare.1",
+      "@angular/router": "npm:@els-angular/angular-router@>=4.4.7-tuxcare.1",
+      "@angular/tsc-wrapped": "npm:@els-angular/angular-tsc-wrapped@>=4.4.7-tuxcare.1"
+    }
+    ```
+
+    </CodeWithCopy>
+
+    :::tip
+    If you use any of the following **non-default Angular modules**, update their versions as shown below:
+
+    * "@angular/upgrade": "npm:@els-angular/angular-upgrade@>=4.4.7-tuxcare.1",
+    * "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=4.4.7-tuxcare.1",
+    * "@angular/language-service": "npm:@els-angular/angular-language-service@>=4.4.7-tuxcare.1",
+
+    After adding these aliases, make sure the same modules are also listed in the `overrides` section, just like the default ones.
+    :::
+    </template>
+
+    </TableTabs>
 
 5. You need to remove the `node_modules` directory and the `package-lock.json` file, and also clear the `npm cache` before installing the patched packages. Use the following commands:
 
@@ -1070,6 +1187,47 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 
   </template>
 
+<template #Angular__8>
+
+|     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
+|:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
+| CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 8.2.14      |
+
+  </template>
+
+<template #Angular__7>
+
+|     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
+|:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
+| CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 7.2.16      |
+
+  </template>
+
+<template #Angular__6>
+
+|     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
+|:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
+| CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 6.1.10      |
+
+  </template>
+
+<template #Angular__5>
+
+|     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
+|:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
+| CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 5.2.11      |
+
+  </template>
+
+<template #Angular__4>
+
+|     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
+|:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
+| CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 4.4.7       |
+| CVE-2025-66412 |  Direct  |   High   |       @angular/compiler        |      <= 4.4.7       |
+
+  </template>
+
 </TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -1085,26 +1243,12 @@ const Angular19WithSSR =
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.14-tuxcare.1",
   "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=19.2.14-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=19.2.14-tuxcare.1",
-  "@angular/ssr": "^19.2.15",
-  "express": "^4.18.2",
-  "rxjs": "~7.8.0",
-  "tslib": "^2.3.0",
-  "zone.js": "~0.15.0"
+  "@angular/ssr": "^19.2.15"
 },
 "devDependencies": {
   "@angular-devkit/build-angular": "^19.2.15",
   "@angular/cli": "^19.2.15",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.14-tuxcare.1",
-  "@types/express": "^4.17.17",
-  "@types/jasmine": "~5.1.0",
-  "@types/node": "^18.18.0",
-  "jasmine-core": "~5.6.0",
-  "karma": "~6.4.0",
-  "karma-chrome-launcher": "~3.2.0",
-  "karma-coverage": "~2.2.0",
-  "karma-jasmine": "~5.1.0",
-  "karma-jasmine-html-reporter": "~2.1.0",
-  "typescript": "~5.7.2"
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.14-tuxcare.1"
 },
 "overrides": {
   "@angular/common": "npm:@els-angular/angular-common@>=19.2.14-tuxcare.1",
@@ -1128,23 +1272,12 @@ const Angular19WithoutSSR =
   "@angular/forms": "npm:@els-angular/angular-forms@>=19.2.14-tuxcare.1",
   "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=19.2.14-tuxcare.1",
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=19.2.14-tuxcare.1",
-  "@angular/router": "npm:@els-angular/angular-router@>=19.2.14-tuxcare.1",
-  "rxjs": "~7.8.0",
-  "tslib": "^2.3.0",
-  "zone.js": "~0.15.0"
+  "@angular/router": "npm:@els-angular/angular-router@>=19.2.14-tuxcare.1"
 },
 "devDependencies": {
   "@angular-devkit/build-angular": "^19.2.15",
   "@angular/cli": "^19.2.15",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.14-tuxcare.1",
-  "@types/jasmine": "~5.1.0",
-  "jasmine-core": "~5.6.0",
-  "karma": "~6.4.0",
-  "karma-chrome-launcher": "~3.2.0",
-  "karma-coverage": "~2.2.0",
-  "karma-jasmine": "~5.1.0",
-  "karma-jasmine-html-reporter": "~2.1.0",
-  "typescript": "~5.7.2"
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=19.2.14-tuxcare.1"
 },
 "overrides": {
   "@angular/common": "npm:@els-angular/angular-common@>=19.2.14-tuxcare.1",
@@ -1170,26 +1303,12 @@ const Angular19WithoutSSR =
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=18.2.14-tuxcare.1",
   "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=18.2.14-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1",
-  "@angular/ssr": "^18.2.20",
-  "express": "^4.18.2", 
-  "rxjs": "^7.4.0",
-  "tslib": "^2.3.0",
-  "zone.js": "~0.14.10"
+  "@angular/ssr": "^18.2.20"
 },
 "devDependencies": {
   "@angular-devkit/build-angular": "^18.2.20",
   "@angular/cli": "^18.2.20",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1",
-  "@types/express": "^4.17.17",
-  "@types/jasmine": "~5.1.0",
-  "@types/node": "^18.18.0",
-  "jasmine-core": "~5.2.0",
-  "karma": "~6.4.0",
-  "karma-chrome-launcher": "~3.2.0",
-  "karma-coverage": "~2.2.0",
-  "karma-jasmine": "~5.1.0",
-  "karma-jasmine-html-reporter": "~2.1.0",
-  "typescript": "~5.5.2"
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1"
 },
 "overrides": {
   "@angular/animations": "npm:@els-angular/angular-animations@>=18.2.14-tuxcare.1",
@@ -1202,9 +1321,7 @@ const Angular19WithoutSSR =
   "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=18.2.14-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1",
   "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1",
-  "rxjs": "^7.4.0",
-  "esbuild": "0.25.0",
-  "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+  "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
   "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1"
 }`
@@ -1218,23 +1335,12 @@ const Angular18WithoutSSR =
   "@angular/forms": "npm:@els-angular/angular-forms@>=18.2.14-tuxcare.1",
   "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=18.2.14-tuxcare.1",
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=18.2.14-tuxcare.1",
-  "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1", 
-  "rxjs": "^7.4.0",
-  "tslib": "^2.3.0",
-  "zone.js": "~0.14.10"
+  "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1"
 },
 "devDependencies": {
   "@angular-devkit/build-angular": "^18.2.20",
   "@angular/cli": "^18.2.20",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1",
-  "@types/jasmine": "~5.1.0",
-  "jasmine-core": "~5.2.0",
-  "karma": "~6.4.0",
-  "karma-chrome-launcher": "~3.2.0",
-  "karma-coverage": "~2.2.0",
-  "karma-jasmine": "~5.1.0",
-  "karma-jasmine-html-reporter": "~2.1.0",
-  "typescript": "~5.5.2"
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1"
 },
 "overrides": {
   "@angular/animations": "npm:@els-angular/angular-animations@>=18.2.14-tuxcare.1",
@@ -1246,9 +1352,7 @@ const Angular18WithoutSSR =
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=18.2.14-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1",
   "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1",
-  "rxjs": "^7.4.0",
-  "esbuild": "0.25.0",
-  "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+  "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
   "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1"
 }`
@@ -1263,25 +1367,12 @@ const Angular17WithSSR =
   "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=17.3.12-tuxcare.1",
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=17.3.12-tuxcare.1", 
-  "@angular/ssr": "npm:@els-angular/angular-ssr@>=17.3.17-tuxcare.1",
-  "express": "^4.18.2", 
-  "rxjs": "^7.4.0",
-  "tslib": "^2.3.0",
-  "zone.js": "~0.14.3"
+  "@angular/ssr": "npm:@els-angular/angular-ssr@>=17.3.17-tuxcare.1"
 },
 "devDependencies": {
   "@angular-devkit/build-angular": "^17.3.12",
   "@angular/cli": "npm:@els-angular/angular-cli@>=17.3.17-tuxcare.1",
-  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=17.3.12-tuxcare.1", 
-  "@types/express": "^4.17.17",
-  "@types/jasmine": "~5.1.0",
-  "jasmine-core": "~5.1.0",
-  "karma": "~6.4.0",
-  "karma-chrome-launcher": "~3.2.0",
-  "karma-coverage": "~2.2.0",
-  "karma-jasmine": "~5.1.0",
-  "karma-jasmine-html-reporter": "~2.1.0",
-  "typescript": "~5.4.2"
+  "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=17.3.12-tuxcare.1"
 },
 "overrides": {
   "@angular-devkit/architect": "0.1703.17",
@@ -1301,9 +1392,7 @@ const Angular17WithSSR =
   "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=17.3.12-tuxcare.1",
   "@angular/ssr": "npm:@els-angular/angular-ssr@>=17.3.17-tuxcare.1",
-  "esbuild": "0.25.0",
-  "rxjs": "^7.4.0",
-  "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+  "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
   "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
   "http-proxy-middleware@2.0.8": "npm:@els-angular/http-proxy-middleware@>=2.0.8-tuxcare.1",
@@ -1319,23 +1408,12 @@ const Angular17WithoutSSR =
   "@angular/forms": "npm:@els-angular/angular-forms@>=17.3.12-tuxcare.1",
   "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=17.3.12-tuxcare.1",
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=17.3.12-tuxcare.1",
-  "@angular/router": "npm:@els-angular/angular-router@>=17.3.12-tuxcare.1",
-  "rxjs": "^7.4.0",
-  "tslib": "^2.3.0",
-  "zone.js": "~0.14.3"
+  "@angular/router": "npm:@els-angular/angular-router@>=17.3.12-tuxcare.1"
 },
 "devDependencies": {
   "@angular-devkit/build-angular": "^17.3.12",
   "@angular/cli": "^17.3.12",
-  "@angular/compiler-cli": "^17.3.0",
-  "@types/jasmine": "~5.1.0",
-  "jasmine-core": "~5.1.0",
-  "karma": "~6.4.0",
-  "karma-chrome-launcher": "~3.2.0",
-  "karma-coverage": "~2.2.0",
-  "karma-jasmine": "~5.1.0",
-  "karma-jasmine-html-reporter": "~2.1.0",
-  "typescript": "~5.4.2"
+  "@angular/compiler-cli": "^17.3.0"
 },
 "overrides": {
   "@angular-devkit/architect": "0.1703.17",
@@ -1350,8 +1428,7 @@ const Angular17WithoutSSR =
   "@angular/platform-browser": "npm:@els-angular/angular-platform-browser@>=17.3.12-tuxcare.1",
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=17.3.12-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=17.3.12-tuxcare.1",
-  "rxjs": "^7.4.0",
-  "tar": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
+  "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
   "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
   "http-proxy-middleware@2.0.8": "npm:@els-angular/http-proxy-middleware@>=2.0.8-tuxcare.1",
