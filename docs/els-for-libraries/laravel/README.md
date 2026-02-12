@@ -59,14 +59,31 @@ Add the `els_php` Composer repository either via CLI or by editing `composer.jso
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Laravel
+### Step 4: Install Laravel or Illuminate components
 
-Install the TuxCare-maintained Laravel release that matches your project:
+Install the TuxCare-maintained Laravel or Illuminate release that matches your project:
+
+<TableTabs label="Choose version: " >
+
+<template #Laravel>
 
 <CodeTabs :tabs="[
   { title: 'Composer CLI', content: `composer require laravel/framework:10.48.28-p1+tuxcare` },
   { title: 'composer.json', content: laraveljson }
 ]" />
+
+</template>
+
+<template #Illuminate>
+
+<CodeTabs :tabs="[
+  { title: 'Composer CLI', content: `composer require illuminate/view:5.4.36-p1+tuxcare` },
+  { title: 'composer.json', content: illuminatejson }
+]" />
+
+</template>
+
+</TableTabs>
 
 **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -114,7 +131,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Laravel ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/).
+TuxCare provides VEX for:
+* Laravel: [security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/)
+* Illuminate: [security.tuxcare.com/vex/cyclonedx/els_lang_php/illuminate-view/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/illuminate-view/)
 
 ## How to Upgrade to a Newer Version
 
@@ -138,11 +157,11 @@ composer update
 
 </CodeWithCopy>
 
-## Resolved CVEs in Laravel
+## Resolved CVEs in Laravel and Illuminate
 
 Fixes for the following vulnerabilities are available in ELS for Laravel from TuxCare:
 
-<TableTabs label="Choose Laravel version: " >
+<TableTabs label="Choose version: " >
 
 <template #Laravel_5.4>
 
@@ -234,6 +253,13 @@ const laraveljson =
 `{
     "require": {
         "laravel/framework": "10.48.28-p1+tuxcare"
+    }
+}`
+
+const illuminatejson =
+`{
+    "require": {
+        "illuminate/view": "5.4.36-p1+tuxcare"
     }
 }`
 
