@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes
 
 ## Supported Angular Versions
 
-Angular versions 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, and 18 are supported.
+Angular versions from 4 to 18 are supported.
 
 ## Connection to ELS for Angular Repository
 
