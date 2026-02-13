@@ -342,7 +342,7 @@ const techData = [
     projects: [
       {
         name: "Angular",
-        versions: "4 - 18",
+        versions: "4-18",
         link: "./angular/",
       },
       {
