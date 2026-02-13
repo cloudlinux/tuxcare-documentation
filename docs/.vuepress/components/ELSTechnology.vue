@@ -427,7 +427,7 @@ const techData = [
       },
       {
         name: "fastify",
-        versions: "3.29.5",
+        versions: "3.29.5 | 4.29.1",
         link: "./fastify/",
       },
       {

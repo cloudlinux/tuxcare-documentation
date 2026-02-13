@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for fastify from TuxCare provides security fixes
 
 ## Supported fastify Versions
 
-* fastify 3.29.5
+* fastify 3.29.5, 4.29.1
 
 ## Connection to ELS for fastify Library
 
@@ -53,6 +53,10 @@ TuxCare provides ELS for fastify as an NPM package, hosted on a secure internal 
 
       Manually update your `package.json` file by replacing your fastify dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
+      <TableTabs label="Choose fastify version: " >
+
+      <template #fastify_3.29.5>
+
       <CodeWithCopy>
 
       ```text
@@ -62,6 +66,24 @@ TuxCare provides ELS for fastify as an NPM package, hosted on a secure internal 
       ```
 
       </CodeWithCopy>
+
+      </template>
+
+      <template #fastify_4.29.1>
+
+      <CodeWithCopy>
+
+      ```text
+      "dependencies": {
+        "fastify": "npm:@els-js/fastify@>=4.29.1-tuxcare.1"
+      }
+      ```
+
+      </CodeWithCopy>
+
+      </template>
+
+      </TableTabs>
 
     * **Option 2: TuxCare Patcher (Automated)**
 
@@ -151,9 +173,28 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for fastify from TuxCare versions:
 
-| CVE ID         | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
+<TableTabs label="Choose fastify version: " >
+
+<template #fastify_3.29.5>
+
+| CVE ID         | CVE Type   | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :-------: |:--------:|:------------------:| :----------------: |
+| CVE-2026-25223 | Direct    | High     | fastify            | < 5.7.2            |
+| CVE-2026-25224 | Direct    | High     | fastify            | < 5.7.2            |
 | CVE-2025-57319 | Transitive | High     | fast-redact        | <= 3.5.0           |
 | CVE-2024-47764 | Transitive | Low      | cookie             | < 0.7.0            |
+
+</template>
+
+<template #fastify_4.29.1>
+
+| CVE ID         | CVE Type   | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :-------: |:--------:|:------------------:| :----------------: |
+| CVE-2026-25223 | Direct    | High     | fastify            | < 5.7.2            |
+| CVE-2026-25224 | Direct    | High     | fastify            | < 5.7.2            |
+
+</template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
