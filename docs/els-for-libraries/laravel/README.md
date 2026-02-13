@@ -59,7 +59,7 @@ Add the `els_php` Composer repository either via CLI or by editing `composer.jso
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Laravel or Illuminate components
+### Step 4: Install Laravel components
 
 Install the TuxCare-maintained Laravel or Illuminate release that matches your project:
 
