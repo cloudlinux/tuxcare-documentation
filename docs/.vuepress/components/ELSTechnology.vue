@@ -175,16 +175,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Maven",
-        versions: "3.8.1",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Apache Maven Shared Utils",
-        versions: "3.2.1",
-        link: "./java-libraries/",
-      },
-      {
         name: "DNSJava",
         versions: "2.1.7",
         link: "./java-libraries/",
