@@ -85,68 +85,8 @@ const techData = [
     ecosystemIcon: "/images/java.webp",
     projects: [
       {
-        name: "Spring®",
-        versions: "Multiple",
-        link: "./spring/",
-      },
-      {
         name: "Apache Avro",
         versions: "1.10.2",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Dom4j",
-        versions: "1.6.1",
-        link: "./java-libraries/",
-      },
-      {
-        name: "SnakeYAML",
-        versions: "1.23 | 1.26 | 1.29 | 1.30 | 1.33",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Google Gson",
-        versions: "2.8.5 | 2.9.1",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Google Guava",
-        versions: "20.0 | 30.1-jre | 31.1-jre",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Google Guice",
-        versions: "4.2.1",
-        link: "./java-libraries/",
-      },
-      {
-        name: "H2 Database",
-        versions: "1.4.200",
-        link: "./java-libraries/",
-      },
-      {
-        name: "HtmlUnit",
-        versions: "2.70.0",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Apache Struts™",
-        versions: "1.3.5 | 2.5.33",
-        link: "./apache-struts/",
-      },
-      {
-        name: "Apache Spark™",
-        versions: "2.4.8",
-        link: "./apache-spark/",
-      },
-      {
-        name: "Apache Tomcat®",
-        versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100",
-        link: "./apache-tomcat/",
-      },
-      {
-        name: "Okio",
-        versions: "2.8.0 | 2.10.0",
         link: "./java-libraries/",
       },
       {
@@ -165,6 +105,21 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Commons IO",
+        versions: "2.5 | 2.7",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Commons Lang",
+        versions: "2.4 | 2.6",
+        link: "./apache-commons-lang/",
+      },
+      {
+        name: "Apache Commons Lang3",
+        versions: "3.4 | 3.8.1 | 3.10 | 3.12.0 | 3.17.0",
+        link: "./apache-commons-lang/",
+      },
+      {
         name: "Apache CXF",
         versions: "3.5.9 | 3.5.11",
         link: "./apache-cxf/",
@@ -172,26 +127,6 @@ const techData = [
       {
         name: "Apache HttpComponents Client",
         versions: "4.5.2",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Apache Maven",
-        versions: "3.8.1",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Apache Maven Shared Utils",
-        versions: "3.2.1",
-        link: "./java-libraries/",
-      },
-      {
-        name: "DNSJava",
-        versions: "2.1.7",
-        link: "./java-libraries/",
-      },
-      {
-        name: "el-spec",
-        versions: "3.0.0",
         link: "./java-libraries/",
       },
       {
@@ -205,18 +140,79 @@ const techData = [
         link: "./apache-lucene/",
       },
       {
-        name: "Jackson",
-        versions: "1.9.13",
-        link: "./jackson/",
-      },
-      {
-        name: "JSON Assert",
-        versions: "1.2.3",
+        name: "Apache Maven",
+        versions: "3.8.1",
         link: "./java-libraries/",
       },
       {
-        name: "JSON Smart v2",
+        name: "Apache Maven Shared Utils",
+        versions: "3.2.1",
+        link: "./java-libraries/",
+      },
+      
+      {
+        name: "Apache Spark™",
         versions: "2.4.8",
+        link: "./apache-spark/",
+      },
+      {
+        name: "Apache Struts™",
+        versions: "1.3.5 | 2.5.33",
+        link: "./apache-struts/",
+      },
+      {
+        name: "Apache Thrift",
+        versions: "0.9.1 | 0.9.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Tomcat®",
+        versions: "8.5.100 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18",
+        link: "./apache-tomcat/",
+      },
+      {
+        name: "Apache Velocity Engine™",
+        versions: "1.7",
+        link: "./apache-velocity-engine/",
+      },
+      {
+        name: "DNSJava",
+        versions: "2.1.7",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Dom4j",
+        versions: "1.6.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "el-spec",
+        versions: "3.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Google Gson",
+        versions: "2.8.5 | 2.9.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Google Guava",
+        versions: "20.0 | 25.1-android | 25.1-jre | 30.1-jre | 31.1-jre",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Google Guice",
+        versions: "4.2.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "H2 Database",
+        versions: "1.4.200",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Hadoop",
+        versions: "2.7.1, 2.7.3",
         link: "./java-libraries/",
       },
       {
@@ -230,13 +226,38 @@ const techData = [
         link: "./hibernate/",
       },
       {
-        name: "Eclipse Jetty",
-        versions: "9.4.24.v20191120 | 9.4.53.v20231009",
-        link: "./jetty/",
+        name: "Hive",
+        versions: "2.3.9",
+        link: "./java-libraries/",
+      },
+      {
+        name: "HtmlUnit",
+        versions: "2.70.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Jackson",
+        versions: "1.9.13",
+        link: "./jackson/",
+      },
+      {
+        name: "JSON",
+        versions: "20090211 | 20140107",
+        link: "./java-libraries/",
+      },
+      {
+        name: "JSON Assert",
+        versions: "1.2.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "JSON Smart v2",
+        versions: "2.4.8",
+        link: "./java-libraries/",
       },
       {
         name: "Logback",
-        versions: "1.1.7 | 1.2.13",
+        versions: "1.1.7 | 1.2.13 | 1.4.14",
         link: "./java-libraries/",
       },
       {
@@ -250,23 +271,13 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Querydsl",
-        versions: "5.1.0",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Reactor BOM",
-        versions: "2020.0.38",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Reactor Netty",
-        versions: "1.0.39",
+        name: "Okio",
+        versions: "2.8.0 | 2.10.0",
         link: "./java-libraries/",
       },
       {
         name: "Plexus Utils",
-        versions: "1.5.8",
+        versions: "1.4.5 | 1.5.8",
         link: "./java-libraries/",
       },
       {
@@ -280,8 +291,28 @@ const techData = [
         link: "./protobuf/",
       },
       {
+        name: "Querydsl",
+        versions: "5.1.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Reactor BOM",
+        versions: "2020.0.23 | 2020.0.38 | 2022.0.15",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Reactor Netty",
+        versions: "1.0.23 | 1.0.32 | 1.0.39 | 1.1.15",
+        link: "./java-libraries/",
+      },
+      {
         name: "Reload4j",
         versions: "1.2.17",
+        link: "./java-libraries/",
+      },
+      {
+        name: "SnakeYAML",
+        versions: "1.23 | 1.26 | 1.29 | 1.30 | 1.33",
         link: "./java-libraries/",
       },
       {
@@ -290,9 +321,9 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Thrift",
-        versions: "0.9.3",
-        link: "./java-libraries/",
+        name: "Spring®",
+        versions: "Multiple",
+        link: "./spring/",
       },
       {
         name: "Thymeleaf",
@@ -305,29 +336,19 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Velocity Engine™",
-        versions: "1.7",
-        link: "./apache-velocity-engine/",
-      },
-      {
         name: "Woodstox",
         versions: "5.0.3",
         link: "./java-libraries/",
       },
       {
         name: "XMLUnit",
-        versions: "2.9.1 | 2.9.0"
-        ,link: "./java-libraries/",
-      },
-      {
-        name: "Apache Commons IO",
-        versions: "2.5 | 2.7",
+        versions: "2.9.1 | 2.9.0",
         link: "./java-libraries/",
       },
       {
-        name: "Apache Commons Lang",
-        versions: "2.4 | 2.6 | 3.4 | 3.10 | 3.12.0",
-        link: "./apache-commons-lang/",
+        name: "Eclipse Jetty",
+        versions: "8.2.0.v20160908 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.59 | 10.0.27 | 11.0.19 | 11.0.27",
+        link: "./jetty/",
       },
       {
         name: "Apache Santuario XML Security For Java",

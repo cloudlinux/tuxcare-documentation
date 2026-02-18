@@ -13,25 +13,28 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Maven** 3.8.1
 * **Apache Maven Shared Utils** 3.2.1
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
-* **Apache Thrift** 0.9.3
+* **Apache Thrift** 0.9.1, 0.9.3
 * **DNSJava** 2.1.7
 * **Dom4j** 1.6.1
 * **el-spec** 3.0.0
 * **Google Gson** 2.8.5, 2.9.1
-* **Google Guava** 20.0, 30.1-jre, 31.1-jre
+* **Google Guava** 20.0, 25.1-android, 25.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **H2 Database** 1.4.200
+* **Hadoop** 2.7.1, 2.7.3
+* **Hive** 2.3.9
 * **HtmlUnit** 2.70.0
+* **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
 * **JSON Smart v2** 2.4.8
-* **Logback** 1.1.7, 1.2.13
+* **Logback** 1.1.7, 1.2.13, 1.4.14
 * **Netty** 4.1.115.Final, 4.1.63.Final
 * **Nimbus JOSE + JWT** 9.22, 9.24.4
 * **Okio** 2.8.0, 2.10.0
-* **Plexus Utils** 1.5.8
+* **Plexus Utils** 1.4.5, 1.5.8
 * **Querydsl** 5.1.0
-* **Reactor BOM** 2020.0.38
-* **Reactor Netty** 1.0.39
+* **Reactor BOM** 2020.0.23, 2020.0.38, 2022.0.15
+* **Reactor Netty** 1.0.23, 1.0.32, 1.0.39, 1.1.15
 * **Reload4j** 1.2.17
 * **SnakeYAML** 1.23, 1.26, 1.29, 1.30, 1.33
 * **Snappy Java** 1.1.8.4
