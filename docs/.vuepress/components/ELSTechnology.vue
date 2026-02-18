@@ -1060,6 +1060,22 @@ const techData = [
     ],
   },
   {
+    ecosystem: "Go",
+    ecosystemIcon: "/images/go_logo.webp",
+    projects: [
+      {
+        name: "Grafana",
+        versions: "10.4.1 | 11.2.0 | 11.3.0 | 11.4.0 | 11.5.0",
+        link: "./grafana/",
+      },
+      {
+        name: "Loki",
+        versions: "3.1.0 | 3.2.0 | 3.3.0",
+        link: "./loki/",
+      },
+    ],
+  },
+  {
     ecosystem: ".NET",
     ecosystemIcon: "/images/dotnet-logo.webp",
     projects: [
