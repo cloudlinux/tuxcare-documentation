@@ -275,6 +275,28 @@ export default {
                     icon: '/images/symfony-logo.webp',
                 },
                 {
+                    title: 'Go',
+                    type: 'section-header',
+                    icon: '/images/go_logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/grafana/',
+                    icon: '/images/grafana_logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/loki/',
+                    icon: '/images/grafana_logo.webp',
+                },
+                {
+                    title: '.NET',
+                    type: 'section-header',
+                    icon: '/images/dotnet-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/dotnet/',
+                    icon: '/images/dotnet-logo.webp',
+                },
+                {
                     title: 'JavaScript',
                     type: 'section-header',
                     icon: '/images/javascript.webp',
@@ -426,28 +448,6 @@ export default {
                 {
                     path: '/els-for-libraries/javascript-libraries/',
                     icon: '/images/javascript.webp',
-                },
-                {
-                    title: 'Go',
-                    type: 'section-header',
-                    icon: '/images/go_logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/grafana/',
-                    icon: '/images/grafana_logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/loki/',
-                    icon: '/images/grafana_logo.webp',
-                },
-                {
-                    title: '.NET',
-                    type: 'section-header',
-                    icon: '/images/dotnet-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/dotnet/',
-                    icon: '/images/dotnet-logo.webp',
                 },
             ]
         },

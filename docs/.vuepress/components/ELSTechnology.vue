@@ -336,6 +336,385 @@ const techData = [
       },
     ],
   },
+    {
+    ecosystem: "Python",
+    ecosystemIcon: "/images/python.webp",
+    projects: [
+      {
+        name: "aiohttp",
+        versions: "3.8.1 | 3.8.4 | 3.8.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "anyio",
+        versions: "3.7.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "celery",
+        versions: "5.1.2",
+        link: "./celery/",
+      },
+      {
+        name: "certifi",
+        versions: "2021.10.8 | 2022.12.7 | 2023.7.22",
+        link: "./python-libraries/",
+      },
+      {
+        name: "cryptography",
+        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "deepdiff",
+        versions: "6.2.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Django",
+        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.0.3 | 5.0.4 | 5.0.5| 5.1 | 5.1.4 | 5.1.9",
+        link: "./django/",
+      },
+      {
+        name: "dnspython",
+        versions: "2.3.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "fastapi",
+        versions: "0.63.0 | 0.104.1",
+        link: "./fastapi/",
+      },
+      {
+        name: "Flask",
+        versions: "0.12.5 | 1.1.2 | 1.1.4 | 2.2.1",
+        link: "./flask/",
+      },
+      {
+        name: "flask-cors",
+        versions: "4.0.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "future",
+        versions: "1.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "GitPython",
+        versions: "3.1.31",
+        link: "./python-libraries/",
+      },
+      {
+        name: "gunicorn",
+        versions: "20.0.4 | 20.1.0 | 21.2.0 | 22.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "h11",
+        versions: "0.9.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "httpx",
+        versions: "0.22.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "idna",
+        versions: "2.1 | 2.8 | 2.10 | 3.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Jinja2",
+        versions: "2.11.3 | 3.0.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "MLflow",
+        versions: "2.22.4",
+        link: "./python-libraries/",
+      },
+      {
+        name: "MySQL Connector/Python",
+        versions: "8.4.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "NumPy",
+        versions: "1.15.4 | 1.16.0",
+        link: "./numpy/",
+      },
+      {
+        name: "orjson",
+        versions: "3.8.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pandas",
+        versions: "2.2.0 | 2.2.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "paramiko",
+        versions: "3.0.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pdfkit",
+        versions: "0.6.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "piexif",
+        versions: "1.1.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Pillow",
+        versions: "8.4.0 | 9.4.0 | 9.5.0 | 11.2.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "protobuf",
+        versions: "4.24.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pydantic",
+        versions: "1.10.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "PyJWT",
+        versions: "1.7.1 | 2.3.0 | 2.8.0 | 2.10.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pymongo",
+        versions: "3.13.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pymysql",
+        versions: "0.10.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pypdf",
+        versions: "5.9.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "python-jose",
+        versions: "3.3.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "python-multipart",
+        versions: "0.0.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "PyYAML",
+        versions: "3.13 | 5.3.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "redis-py",
+        versions: "4.5.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "requests",
+        versions: "2.25.1 | 2.30.0 | 2.31.0 | 2.32.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "scikit-learn",
+        versions: "1.0.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "sentence-transformers",
+        versions: "2.7.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "setuptools",
+        versions: "65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.8.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "starlette",
+        versions: "0.13.6 | 0.27.0",
+        link: "./starlette/",
+      },
+      {
+        name: "statsmodels",
+        versions: "0.14.4 | 0.14.5",
+        link: "./python-libraries/",
+      },
+      {
+        name: "torch",
+        versions: "1.13.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "tqdm",
+        versions: "4.66.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "twisted",
+        versions: "20.3.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "urllib3",
+        versions: "1.25.11 | 1.26.4 | 1.26.20 | 2.0.7",
+        link: "./python-libraries/",
+      },
+      {
+        name: "uvicorn",
+        versions: "0.11.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "waitress",
+        versions: "2.1.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "websockets",
+        versions: "8.1",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Werkzeug",
+        versions: "1.0.1 | 2.2.3 | 2.3.8",
+        link: "./werkzeug/",
+      },
+    ],
+  },
+  {
+    ecosystem: "PHP",
+    ecosystemIcon: "/images/php-logo.webp",
+    projects: [
+      {
+        name: "AWS SDK for PHP",
+        versions: "3.263.4",
+        link: "./aws-sdk-php/",
+      },
+      {
+        name: "Browsershot",
+        versions: "3.61.0",
+        link: "./browsershot/",
+      },
+      {
+        name: "CakePHP",
+        versions: "2.10.24",
+        link: "./cakephp/",
+      },
+      {
+        name: "Carbon",
+        versions: "1.26.6",
+        link: "./carbon/",
+      },
+      {
+        name: "DomPDF",
+        versions: "0.8.x | 1.2.x",
+        link: "./dompdf/",
+      },
+      {
+        name: "Firebase PHP-JWT",
+        versions: "6.11.1",
+        link: "./firebase-php-jwt/",
+      },
+      {
+        name: "Laravel",
+        versions: "5.8.38 | 8 | 10 | 11",
+        link: "./laravel/",
+      },
+      {
+        name: "League Commonmark",
+        versions: "1.6.7",
+        link: "./league-commonmark/",
+      },
+      {
+        name: "Livewire",
+        versions: "3.x",
+        link: "./livewire/",
+      },
+      {
+        name: "PhpSpreadsheet",
+        versions: "4.5.0",
+        link: "./phpspreadsheet/",
+      },
+      {
+        name: "Symfony HttpFoundation",
+        versions: "2.8.x | 3.4.x | 4.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "SwiftMailer",
+        versions: "5.4.12",
+        link: "./swiftmailer/",
+      },
+      {
+        name: "Symfony Process",
+        versions: "5.x | 6.x",
+        link: "./symfony/",
+      },
+    ],
+  },
+  {
+    ecosystem: "Go",
+    ecosystemIcon: "/images/go_logo.webp",
+    projects: [
+      {
+        name: "Grafana",
+        versions: "10.4.1 | 11.2.0 | 11.3.0 | 11.4.0 | 11.5.0",
+        link: "./grafana/",
+      },
+      {
+        name: "Loki",
+        versions: "3.1.0 | 3.2.0 | 3.3.0",
+        link: "./loki/",
+      },
+    ],
+  },
+  {
+    ecosystem: ".NET",
+    ecosystemIcon: "/images/dotnet-logo.webp",
+    projects: [
+      {
+        name: ".NET",
+        versions: "6 | 8 | 10",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Owin",
+        versions: "3.1.0",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Owin.Security.Cookies",
+        versions: "3.1.0",
+        link: "./dotnet/",
+      },
+      {
+        name: "Newtonsoft.Json",
+        versions: "4.5.11 | 6.0.8 | 8.0.3 | 9.0.1 | 10.0.3 | 11.0.2 | 12.0.3",
+        link: "./dotnet/",
+      },
+      {
+        name: "SharpZipLib",
+        versions: "0.86.0",
+        link: "./dotnet/",
+      },
+    ],
+  },
   {
     ecosystem: "JavaScript",
     ecosystemIcon: "/images/javascript.webp",
@@ -724,385 +1103,6 @@ const techData = [
         name: "@sentry/browser",
         versions: "5.7.1",
         link: "./javascript-libraries/",
-      },
-    ],
-  },
-    {
-    ecosystem: "Python",
-    ecosystemIcon: "/images/python.webp",
-    projects: [
-      {
-        name: "aiohttp",
-        versions: "3.8.1 | 3.8.4 | 3.8.5",
-        link: "./python-libraries/",
-      },
-      {
-        name: "anyio",
-        versions: "3.7.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "celery",
-        versions: "5.1.2",
-        link: "./celery/",
-      },
-      {
-        name: "certifi",
-        versions: "2021.10.8 | 2022.12.7 | 2023.7.22",
-        link: "./python-libraries/",
-      },
-      {
-        name: "cryptography",
-        versions: "3.4.8 | 41.0.7 | 42.0.0 | 42.0.8 | 43.0.1 | 43.0.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "deepdiff",
-        versions: "6.2.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "Django",
-        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.0.3 | 5.0.4 | 5.0.5| 5.1 | 5.1.4 | 5.1.9",
-        link: "./django/",
-      },
-      {
-        name: "dnspython",
-        versions: "2.3.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "fastapi",
-        versions: "0.63.0 | 0.104.1",
-        link: "./fastapi/",
-      },
-      {
-        name: "Flask",
-        versions: "0.12.5 | 1.1.2 | 1.1.4 | 2.2.1",
-        link: "./flask/",
-      },
-      {
-        name: "flask-cors",
-        versions: "4.0.2",
-        link: "./python-libraries/",
-      },
-      {
-        name: "future",
-        versions: "1.0.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "GitPython",
-        versions: "3.1.31",
-        link: "./python-libraries/",
-      },
-      {
-        name: "gunicorn",
-        versions: "20.0.4 | 20.1.0 | 21.2.0 | 22.0.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "h11",
-        versions: "0.9.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "httpx",
-        versions: "0.22.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "idna",
-        versions: "2.1 | 2.8 | 2.10 | 3.6",
-        link: "./python-libraries/",
-      },
-      {
-        name: "Jinja2",
-        versions: "2.11.3 | 3.0.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "MLflow",
-        versions: "2.22.4",
-        link: "./python-libraries/",
-      },
-      {
-        name: "MySQL Connector/Python",
-        versions: "8.4.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "NumPy",
-        versions: "1.15.4 | 1.16.0",
-        link: "./numpy/",
-      },
-      {
-        name: "orjson",
-        versions: "3.8.5",
-        link: "./python-libraries/",
-      },
-      {
-        name: "pandas",
-        versions: "2.2.0 | 2.2.2",
-        link: "./python-libraries/",
-      },
-      {
-        name: "paramiko",
-        versions: "3.0.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "pdfkit",
-        versions: "0.6.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "piexif",
-        versions: "1.1.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "Pillow",
-        versions: "8.4.0 | 9.4.0 | 9.5.0 | 11.2.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "protobuf",
-        versions: "4.24.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "pydantic",
-        versions: "1.10.5",
-        link: "./python-libraries/",
-      },
-      {
-        name: "PyJWT",
-        versions: "1.7.1 | 2.3.0 | 2.8.0 | 2.10.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "pymongo",
-        versions: "3.13.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "pymysql",
-        versions: "0.10.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "pypdf",
-        versions: "5.9.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "python-jose",
-        versions: "3.3.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "python-multipart",
-        versions: "0.0.6",
-        link: "./python-libraries/",
-      },
-      {
-        name: "PyYAML",
-        versions: "3.13 | 5.3.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "redis-py",
-        versions: "4.5.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "requests",
-        versions: "2.25.1 | 2.30.0 | 2.31.0 | 2.32.3",
-        link: "./python-libraries/",
-      },
-      {
-        name: "scikit-learn",
-        versions: "1.0.2",
-        link: "./python-libraries/",
-      },
-      {
-        name: "sentence-transformers",
-        versions: "2.7.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "setuptools",
-        versions: "65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.8.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "starlette",
-        versions: "0.13.6 | 0.27.0",
-        link: "./starlette/",
-      },
-      {
-        name: "statsmodels",
-        versions: "0.14.4 | 0.14.5",
-        link: "./python-libraries/",
-      },
-      {
-        name: "torch",
-        versions: "1.13.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "tqdm",
-        versions: "4.66.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "twisted",
-        versions: "20.3.0",
-        link: "./python-libraries/",
-      },
-      {
-        name: "urllib3",
-        versions: "1.25.11 | 1.26.4 | 1.26.20 | 2.0.7",
-        link: "./python-libraries/",
-      },
-      {
-        name: "uvicorn",
-        versions: "0.11.6",
-        link: "./python-libraries/",
-      },
-      {
-        name: "waitress",
-        versions: "2.1.2",
-        link: "./python-libraries/",
-      },
-      {
-        name: "websockets",
-        versions: "8.1",
-        link: "./python-libraries/",
-      },
-      {
-        name: "Werkzeug",
-        versions: "1.0.1 | 2.2.3 | 2.3.8",
-        link: "./werkzeug/",
-      },
-    ],
-  },
-  {
-    ecosystem: "PHP",
-    ecosystemIcon: "/images/php-logo.webp",
-    projects: [
-      {
-        name: "AWS SDK for PHP",
-        versions: "3.263.4",
-        link: "./aws-sdk-php/",
-      },
-      {
-        name: "Browsershot",
-        versions: "3.61.0",
-        link: "./browsershot/",
-      },
-      {
-        name: "CakePHP",
-        versions: "2.10.24",
-        link: "./cakephp/",
-      },
-      {
-        name: "Carbon",
-        versions: "1.26.6",
-        link: "./carbon/",
-      },
-      {
-        name: "DomPDF",
-        versions: "0.8.x | 1.2.x",
-        link: "./dompdf/",
-      },
-      {
-        name: "Firebase PHP-JWT",
-        versions: "6.11.1",
-        link: "./firebase-php-jwt/",
-      },
-      {
-        name: "Laravel",
-        versions: "5.8.38 | 8 | 10 | 11",
-        link: "./laravel/",
-      },
-      {
-        name: "League Commonmark",
-        versions: "1.6.7",
-        link: "./league-commonmark/",
-      },
-      {
-        name: "Livewire",
-        versions: "3.x",
-        link: "./livewire/",
-      },
-      {
-        name: "PhpSpreadsheet",
-        versions: "4.5.0",
-        link: "./phpspreadsheet/",
-      },
-      {
-        name: "Symfony HttpFoundation",
-        versions: "2.8.x | 3.4.x | 4.4.x",
-        link: "./symfony/",
-      },
-      {
-        name: "SwiftMailer",
-        versions: "5.4.12",
-        link: "./swiftmailer/",
-      },
-      {
-        name: "Symfony Process",
-        versions: "5.x | 6.x",
-        link: "./symfony/",
-      },
-    ],
-  },
-  {
-    ecosystem: "Go",
-    ecosystemIcon: "/images/go_logo.webp",
-    projects: [
-      {
-        name: "Grafana",
-        versions: "10.4.1 | 11.2.0 | 11.3.0 | 11.4.0 | 11.5.0",
-        link: "./grafana/",
-      },
-      {
-        name: "Loki",
-        versions: "3.1.0 | 3.2.0 | 3.3.0",
-        link: "./loki/",
-      },
-    ],
-  },
-  {
-    ecosystem: ".NET",
-    ecosystemIcon: "/images/dotnet-logo.webp",
-    projects: [
-      {
-        name: ".NET",
-        versions: "6 | 8 | 10",
-        link: "./dotnet/",
-      },
-      {
-        name: "Microsoft.Owin",
-        versions: "3.1.0",
-        link: "./dotnet/",
-      },
-      {
-        name: "Microsoft.Owin.Security.Cookies",
-        versions: "3.1.0",
-        link: "./dotnet/",
-      },
-      {
-        name: "Newtonsoft.Json",
-        versions: "4.5.11 | 6.0.8 | 8.0.3 | 9.0.1 | 10.0.3 | 11.0.2 | 12.0.3",
-        link: "./dotnet/",
-      },
-      {
-        name: "SharpZipLib",
-        versions: "0.86.0",
-        link: "./dotnet/",
       },
     ],
   },
