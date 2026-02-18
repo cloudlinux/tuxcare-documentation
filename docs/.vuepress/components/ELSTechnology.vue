@@ -1216,7 +1216,7 @@ function getFilteredProjects(item) {
 }
 
 .ecosystem-icon {
-  height: 20px;
+  height: auto;
   width: 20px;
   margin-right: 0.5rem;
 }
