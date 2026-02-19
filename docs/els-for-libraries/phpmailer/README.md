@@ -1,20 +1,20 @@
-# Carbon
+# PHPMailer
 
-Endless Lifecycle Support (ELS) for Carbon from TuxCare provides security fixes for Carbon library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for PHPMailer from TuxCare provides security fixes for PHPMailer library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Carbon** 1.26.6, 1.39.1
+* **PHPMailer** 5.2.28
 
 Other versions upon request.
 
-## Connection to ELS for Carbon Repository
+## Connection to ELS for PHPMailer Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Carbon repository into your application. The repository provides trusted Carbon library versions that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for PHPMailer repository into your application. The repository provides trusted PHPMailer library versions that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Carbon repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for PHPMailer repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -58,13 +58,13 @@ Add the `els_php` Composer repository either via CLI or by editing `composer.jso
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Carbon
+### Step 4: Install PHPMailer
 
-Install the TuxCare-maintained Carbon release that matches your project:
+Install the TuxCare-maintained PHPMailer release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require nesbot/carbon:1.26.6-p1+tuxcare` },
-  { title: 'composer.json', content: carbonjson }
+  { title: 'Composer CLI', content: `composer require phpmailer/phpmailer:5.2.28-p1+tuxcare` },
+  { title: 'composer.json', content: pkgjson }
 ]" />
 
 **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -113,16 +113,16 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Carbon ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/nesbot-carbon/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/nesbot-carbon/).
+TuxCare provides VEX for PHPMailer ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/phpmailer-phpmailer/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/phpmailer-phpmailer/).
 
 ## How to Upgrade to a Newer Version
 
-If you have already installed a TuxCare Carbon package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+If you have already installed a TuxCare PHPMailer package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
 
 <CodeWithCopy>
 
 ```text
-composer require nesbot/carbon:VERSION-pN+tuxcare
+composer require phpmailer/phpmailer:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -137,25 +137,19 @@ composer update
 
 </CodeWithCopy>
 
-## Resolved CVEs in Carbon
+## Resolved CVEs in PHPMailer
 
-Fixes for the following vulnerabilities are available in ELS for Carbon from TuxCare:
+Fixes for the following vulnerabilities are available in ELS for PHPMailer from TuxCare:
 
-<TableTabs label="Choose Carbon version: " >
+<TableTabs label="Choose PHPMailer version: " >
 
-<template #Carbon_1.26.6 >
+<template #PHPMailer_5.2.28 >
 
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2025-22145 | Medium   | 1.26.6              | 1.26.6-p1+tuxcare   |
-
-</template>
-
-<template #Carbon_1.39.1 >
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2025-22145 | Medium   | 1.39.1              | 1.39.1-p1+tuxcare   |
+| CVE ID         | Severity | Vulnerable versions | Fixed in version       |
+|----------------|----------|---------------------|------------------------|
+| CVE-2021-34551 | High     | 5.2.28              | 5.2.28-p1+tuxcare      |
+| CVE-2021-3603  | High     | 5.2.28              | 5.2.28-p1+tuxcare      |
+| CVE-2020-13625 | High     | 5.2.28              | 5.2.28-p1+tuxcare      |
 
 </template>
 
@@ -193,10 +187,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const carbonjson =
+const pkgjson =
 `{
     "require": {
-        "nesbot/carbon": "1.26.6-p1+tuxcare"
+        "phpmailer/phpmailer": "5.2.28-p1+tuxcare"
     }
 }`
 

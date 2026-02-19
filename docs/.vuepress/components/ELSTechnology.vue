@@ -999,7 +999,7 @@ const techData = [
       },
       {
         name: "Browsershot",
-        versions: "3.61.0",
+        versions: "3.61.0 | 4.4.0",
         link: "./browsershot/",
       },
       {
@@ -1009,7 +1009,7 @@ const techData = [
       },
       {
         name: "Carbon",
-        versions: "1.26.6",
+        versions: "1.26.6 | 1.39.1",
         link: "./carbon/",
       },
       {
@@ -1036,6 +1036,11 @@ const techData = [
         name: "Livewire",
         versions: "3.x",
         link: "./livewire/",
+      },
+      {
+        name: "PHPMailer",
+        versions: "5.2.28",
+        link: "./phpmailer/",
       },
       {
         name: "PhpSpreadsheet",

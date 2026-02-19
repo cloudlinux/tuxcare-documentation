@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Browsershot from TuxCare provides security f
 
 ## Supported Versions and Components
 
-* **Browsershot** 3.61.0
+* **Browsershot** 3.61.0, 4.4.0
 
 Other versions upon request.
 
@@ -147,11 +147,20 @@ Fixes for the following vulnerabilities are available in ELS for Browsershot fro
 
 | CVE ID         | Severity | Vulnerable versions | Fixed in version       |
 |----------------|----------|---------------------|------------------------|
+| CVE-2025-3192  | High     | 3.61.0              | 3.61.0-p2+tuxcare      |
 | CVE-2025-1026  | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
 | CVE-2024-21547 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
 | CVE-2024-21549 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
 | CVE-2024-21544 | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
 | CVE-2025-1022  | High     | 3.61.0              | 3.61.0-p1+tuxcare      |
+
+</template>
+
+<template #Browsershot_4.4.0 >
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version       |
+|----------------|----------|---------------------|------------------------|
+| CVE-2025-3192  | High     | 4.4.0               | 4.4.0-p1+tuxcare       |
 
 </template>
 
