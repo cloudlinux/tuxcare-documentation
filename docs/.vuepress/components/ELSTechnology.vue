@@ -211,11 +211,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Hadoop",
-        versions: "2.7.1, 2.7.3",
-        link: "./java-libraries/",
-      },
-      {
         name: "Hibernate",
         versions: "5.4.32.Final | 5.6.15.Final",
         link: "./hibernate/",
@@ -224,11 +219,6 @@ const techData = [
         name: "Hibernate Search",
         versions: "5.11.10.Final",
         link: "./hibernate/",
-      },
-      {
-        name: "Hive",
-        versions: "2.3.9",
-        link: "./java-libraries/",
       },
       {
         name: "HtmlUnit",
