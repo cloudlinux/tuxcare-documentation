@@ -21,8 +21,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Google Guava** 20.0, 25.1-android, 25.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **H2 Database** 1.4.200
-* **Hadoop** 2.7.1, 2.7.3
-* **Hive** 2.3.9
 * **HtmlUnit** 2.70.0
 * **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
