@@ -65,15 +65,7 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 
    </CodeWithCopy>
 
-   The output should display the Maven version and build details, for example:
-
-   ```text
-   Apache Maven 3.8.1-tuxcare.1 (5284a0ab5505591af3daaaee1cd8f527203667b9)
-   Maven home: /opt/maven/apache-maven-3.8.1-tuxcare.1
-   Java version: 17.0.17, vendor: Red Hat, Inc., runtime: /usr/lib/jvm/java-17-openjdk-17.0.17.0.10-1.el9.alma.1.x86_64
-   Default locale: ru_RU, platform encoding: UTF-8
-   OS name: "linux", version: "5.14.0-611.5.1.el9_7.x86_64", arch: "amd64", family: "unix"
-   ```
+   The output should display the Maven version and build details.
 
 ## Windows Installation
 
@@ -87,7 +79,7 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
    C:\Maven\apache-maven-3.8.1-tuxcare.1\bin\mvn --version
    ```
 
-   The output should display the Maven version and build details similar to the Linux example above.
+   The output should display the Maven version and build details.
 
 ## Upgrading to a Newer TuxCare Version
 
