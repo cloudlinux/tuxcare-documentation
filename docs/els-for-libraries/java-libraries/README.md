@@ -101,7 +101,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 **Replace your dependencies (both direct and transitive, as needed) with the TuxCare-maintained ones, then rebuild your project.**
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
 If a BOM (Bill of Materials) is available, it's recommended to use it to manage versions.
 
@@ -155,7 +155,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Source code for TuxCare-patched Java libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
 
-For example: [https://nexus.repo.tuxcare.com/repository/els_spring/io/netty/netty-handler/4.1.115.Final-tuxcare.2/netty-handler-4.1.115.Final-tuxcare.2-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/io/netty/netty-handler/4.1.115.Final-tuxcare.2/netty-handler-4.1.115.Final-tuxcare.2-sources.jar).
+For example: [https://nexus.repo.tuxcare.com/repository/els_java/io/netty/netty-handler/4.1.115.Final-tuxcare.2/netty-handler-4.1.115.Final-tuxcare.2-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/io/netty/netty-handler/4.1.115.Final-tuxcare.2/netty-handler-4.1.115.Final-tuxcare.2-sources.jar).
 
 :::tip
 If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
@@ -183,7 +183,7 @@ const mavencreds =
 </settings>`
 
 const gradlecreds =
-`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
+`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_java/
 tuxcare_registry_user=USERNAME
 tuxcare_registry_password=PASSWORD`
 
@@ -191,7 +191,7 @@ const mavenrepo =
 `<repositories>
   <repository>
       <id>tuxcare-registry</id>
-      <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
+      <url>https://nexus.repo.tuxcare.com/repository/els_java/</url>
   </repository>
 </repositories>`
 
