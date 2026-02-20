@@ -5,6 +5,8 @@
 * [Apache Hadoop](./apache-hadoop)
 * [Apache Hive](./apache-hive)
 * [Apache Tomcat®](./apache-tomcat)
+* [Apache Maven](./maven)
+* [Gradle](./gradle)
 
 ## Vulnerability Coverage and Target Response Times
 

@@ -460,6 +460,14 @@ export default {
                     path: '/els-for-applications/apache-tomcat/',
                     icon: '/images/tomcat.webp',
                 },
+                {
+                    path: '/els-for-applications/maven/',
+                    icon: '/images/apache.webp',
+                },
+                {
+                    path: '/els-for-applications/gradle/',
+                    icon: '/images/gradle.webp',
+                },
             ]
         },
     ],
