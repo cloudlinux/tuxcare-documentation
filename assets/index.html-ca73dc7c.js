@@ -1,0 +1,91 @@
+import{_ as p,S as o,n as u,p as h,a6 as i,q as a,J as r,C as t,A as s}from"./framework-a770bce2.js";const x=`<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
+  <servers>
+    <server>
+      <id>tuxcare-registry</id>
+      <username>USERNAME</username>
+      <password>PASSWORD</password>
+    </server>
+  </servers>
+</settings>`,g=`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_java/
+tuxcare_registry_user=USERNAME
+tuxcare_registry_password=PASSWORD`,m=`<repositories>
+  <repository>
+    <id>tuxcare-registry</id>
+    <url>https://nexus.repo.tuxcare.com/repository/els_java/</url>
+  </repository>
+</repositories>`,f=`repositories {
+  maven {
+    url = uri(providers.gradleProperty("tuxcare_registry_url").get())
+    credentials {
+      username = providers.gradleProperty("tuxcare_registry_user").get()
+      password = providers.gradleProperty("tuxcare_registry_password").get()
+    }
+    authentication { basic(BasicAuthentication) }
+  }
+  mavenCentral()
+}`,v=`<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-bom</artifactId>
+            <version>3.5.9-tuxcare.2</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<dependencies>
+    <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-core</artifactId>
+    </dependency>
+</dependencies>`,b=`plugins {
+    id 'java'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.apache.cxf:cxf-bom:3.5.9-tuxcare.2'
+    }
+}
+
+dependencies {
+    implementation "org.apache.cxf:cxf-core"
+}`,y=`<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-bom</artifactId>
+            <version>3.5.11-tuxcare.1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<dependencies>
+    <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-core</artifactId>
+    </dependency>
+</dependencies>`,C=`plugins {
+    id 'java'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.apache.cxf:cxf-bom:3.5.11-tuxcare.1'
+    }
+}
+
+dependencies {
+    implementation "org.apache.cxf:cxf-core"
+}`,T={__name:"index.html",setup(S){return(w,e)=>{const n=o("CodeTabs"),d=o("TableTabs"),l=o("ResolvedCveTable"),c=o("ClientOnly");return u(),h("div",null,[e[6]||(e[6]=i('<h1 id="apache-cxf" tabindex="-1"><a class="header-anchor" href="#apache-cxf" aria-hidden="true">#</a> Apache CXF</h1><p>TuxCare&#39;s Endless Lifecycle Support (ELS) for Apache CXF provides security patches and selected bug fixes that are integral to the stable operation of applications running on Apache CXF.</p><h2 id="supported-versions" tabindex="-1"><a class="header-anchor" href="#supported-versions" aria-hidden="true">#</a> Supported Versions</h2><ul><li>Apache CXF 3.5.9, 3.5.11</li></ul><h2 id="connection-to-els-for-apache-cxf-repository" tabindex="-1"><a class="header-anchor" href="#connection-to-els-for-apache-cxf-repository" aria-hidden="true">#</a> Connection to ELS for Apache CXF Repository</h2><p>This guide outlines the steps needed to integrate the TuxCare ELS for Apache CXF repository into your Java application. The repository provides trusted Java libraries that can be easily integrated into your <strong>Maven</strong> and <strong>Gradle</strong> projects.</p><h3 id="step-1:-get-user-credentials" tabindex="-1"><a class="header-anchor" href="#step-1:-get-user-credentials" aria-hidden="true">#</a> Step 1: Get user credentials</h3><p>You need a username and password in order to use the TuxCare ELS Apache CXF repository. Anonymous access is disabled. To receive a username and password please contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p><h3 id="step-2:-configure-registry" tabindex="-1"><a class="header-anchor" href="#step-2:-configure-registry" aria-hidden="true">#</a> Step 2: Configure Registry</h3>',9)),a("ol",null,[e[3]||(e[3]=i(`<li><p>Navigate to the directory depending on your operating system.</p><ul><li>Windows</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>Maven: C:\\Users\\{username}\\.m2
+Gradle: C:\\Users\\{username}\\.gradle
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>macOS</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>Maven: /Users/{username}/.m2
+Gradle: /Users/{username}/.gradle
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>Linux</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>Maven: /home/{username}/.m2
+Gradle: /home/{username}/.gradle
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>`,1)),a("li",null,[e[0]||(e[0]=a("p",null,"Add the TuxCare repository and plugin repository to your build configuration.",-1)),e[1]||(e[1]=a("div",{class:"tip custom-block"},[a("p",{class:"custom-block-title"}),a("p",null,[r("For Maven, you may choose any valid "),a("code",null,"<id>"),r(" value instead of "),a("code",null,"tuxcare-registry"),r(", but the same value must be used in both "),a("code",null,"settings.xml"),r(" and "),a("code",null,"pom.xml"),r(".")])],-1)),t(n,{tabs:[{title:"Maven (~/.m2/settings.xml)",content:x},{title:"Gradle (~/.gradle/gradle.properties)",content:g}]},null,8,["tabs"]),e[2]||(e[2]=a("p",null,[r("Here "),a("code",null,"USERNAME"),r(" and "),a("code",null,"PASSWORD"),r(" are your credentials mentioned in "),a("a",{href:"#step-1-get-user-credentials"},"Step 1"),r(".")],-1))])]),e[7]||(e[7]=a("h3",{id:"step-3:-update-build-configuration",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#step-3:-update-build-configuration","aria-hidden":"true"},"#"),r(" Step 3: Update Build Configuration")],-1)),e[8]||(e[8]=a("p",null,"Add the TuxCare Apache CXF repository and plugins to your build configuration:",-1)),t(n,{tabs:[{title:"Maven (pom.xml)",content:m},{title:"Gradle (build.gradle)",content:f}]},null,8,["tabs"]),e[9]||(e[9]=i('<ul><li>To fully switch from the official Apache CXF repository, replace it with the TuxCare repository.</li><li>To keep both, add TuxCare after the official one.</li></ul><p>Example Maven and Gradle projects are available on GitHub. Remember to set the required environment variables.</p><ul><li><a href="https://github.com/cloudlinux/securechain-java/tree/main/examples/maven" target="_blank" rel="noopener noreferrer">Maven</a></li><li><a href="https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle" target="_blank" rel="noopener noreferrer">Gradle</a></li></ul><h3 id="step-4:-update-dependencies" tabindex="-1"><a class="header-anchor" href="#step-4:-update-dependencies" aria-hidden="true">#</a> Step 4: Update Dependencies</h3><p>Replace the Apache CXF dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.</p><p>You can find a specific artifact version in your TuxCare account on <a href="https://nexus.repo.tuxcare.com/#browse/browse:els_java" target="_blank" rel="noopener noreferrer">Nexus</a>. Click <strong>Sign In</strong> in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.</p>',6)),t(d,{label:"Choose a version: "},{"3.5.9":s(()=>[t(n,{tabs:[{title:"Maven (pom.xml)",content:v},{title:"Gradle (build.gradle)",content:b}]},null,8,["tabs"])]),"3.5.11":s(()=>[t(n,{tabs:[{title:"Maven (pom.xml)",content:y},{title:"Gradle (build.gradle)",content:C}]},null,8,["tabs"])]),_:1}),e[10]||(e[10]=a("h3",{id:"step-5:-verify-and-build",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#step-5:-verify-and-build","aria-hidden":"true"},"#"),r(" Step 5: Verify and Build")],-1)),a("ol",null,[a("li",null,[e[4]||(e[4]=a("p",null,"To confirm the TuxCare Apache CXF repository is set up correctly, use your build tool to list the project's dependencies. It shows both direct and transitive dependencies in the classpath.",-1)),t(n,{tabs:[{title:"Maven",content:"mvn dependency:tree -Dverbose"},{title:"Gradle",content:"./gradlew dependencies --configuration runtimeClasspath"}]})]),a("li",null,[e[5]||(e[5]=a("p",null,"After reviewing the dependencies, include any library from the repository into your project and then run a build:",-1)),t(n,{tabs:[{title:"Maven",content:"mvn clean install"},{title:"Gradle",content:"./gradlew build"}]})])]),e[11]||(e[11]=i('<p>The build tool you&#39;re using should be able to identify and resolve dependencies from the TuxCare ELS for Apache CXF repository.</p><h3 id="conclusion" tabindex="-1"><a class="header-anchor" href="#conclusion" aria-hidden="true">#</a> Conclusion</h3><p>You&#39;ve successfully integrated the TuxCare ELS for Apache CXF repository into your project. You can now benefit from the secure and vetted Apache CXF libraries it provides.</p><h2 id="vulnerability-exploitability-exchange-(vex)" tabindex="-1"><a class="header-anchor" href="#vulnerability-exploitability-exchange-(vex)" aria-hidden="true">#</a> Vulnerability Exploitability eXchange (VEX)</h2><p>VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.</p><p>TuxCare provides VEX for Apache CXF ELS versions: <a href="https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.cxf/" target="_blank" rel="noopener noreferrer">security.tuxcare.com/vex/cyclonedx/els_lang_java/org.apache.cxf/</a>.</p><h2 id="how-to-upgrade-to-a-newer-version-of-tuxcare-packages" tabindex="-1"><a class="header-anchor" href="#how-to-upgrade-to-a-newer-version-of-tuxcare-packages" aria-hidden="true">#</a> How to Upgrade to a Newer Version of TuxCare Packages</h2><p>If you have already installed a package with a <code>tuxcare.1</code> suffix and want to upgrade to a newer release (for example, <code>tuxcare.3</code>), you need to update version strings in your Maven or Gradle build file.</p><h2 id="source-code" tabindex="-1"><a class="header-anchor" href="#source-code" aria-hidden="true">#</a> Source Code</h2><p>Source code for TuxCare-patched Apache CXF libraries is available in the repository. Source JARs follow the standard Maven naming convention with a <code>-sources</code> classifier.</p><p>For example: <a href="https://nexus.repo.tuxcare.com/repository/els_java/org/apache/cxf/cxf-core/3.5.9-tuxcare.2/cxf-core-3.5.9-tuxcare.2-sources.jar" target="_blank" rel="noopener noreferrer">https://nexus.repo.tuxcare.com/repository/els_java/org/apache/cxf/cxf-core/3.5.9-tuxcare.2/cxf-core-3.5.9-tuxcare.2-sources.jar</a>.</p><div class="tip custom-block"><p class="custom-block-title"></p><p>If a source JAR is not available for a specific package, please contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a> to report the issue.</p></div><h2 id="resolved-cves-in-els-for-apache-cxf" tabindex="-1"><a class="header-anchor" href="#resolved-cves-in-els-for-apache-cxf" aria-hidden="true">#</a> Resolved CVEs in ELS for Apache CXF</h2>',13)),t(c,null,{default:s(()=>[t(l,{project:"apache-cxf"})]),_:1})])}}},_=p(T,[["__file","index.html.vue"]]);export{_ as default};
