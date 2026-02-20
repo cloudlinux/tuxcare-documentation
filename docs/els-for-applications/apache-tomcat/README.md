@@ -15,7 +15,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 
 ## Supported Versions
 
-* Apache Tomcat® 8.5.100, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100
+* Apache Tomcat® 8.5.100, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100, 10.1.18
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Apache Tomcat® is also available for installation as a library for Maven and Gr
 You need a username and password to access the TuxCare ELS Apache Tomcat® repository. Anonymous access is disabled. 
 To obtain credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
-To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_tomcat). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
+To browse available artifacts via the web interface, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click the **Sign in** button in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or re-open the browse link due to Nexus routing behavior.
 
 ## Linux Installation
 
@@ -73,7 +73,7 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
    <CodeWithCopy>
 
    ```text
-   curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_tomcat/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/tomcat-8.5.100-tuxcare.3.tar.gz
+   curl -u USERNAME:PASSWORD -O https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/tomcat-8.5.100-tuxcare.3.tar.gz
    ```
 
    </CodeWithCopy>
@@ -214,7 +214,7 @@ Update permissions so that the `tomcat` user has access to the Apache Tomcat® i
 
 ### Step 1: Download Apache Tomcat®
 
-Download the Apache Tomcat® .zip archive from [https://nexus.repo.tuxcare.com/repository/els_tomcat/](https://nexus.repo.tuxcare.com/repository/els_tomcat/) using your credentials.
+Download the Apache Tomcat® .zip archive from [https://nexus.repo.tuxcare.com/repository/els_java/](https://nexus.repo.tuxcare.com/repository/els_java/) using your credentials.
 
 ### Step 2: Extract and Install
 
