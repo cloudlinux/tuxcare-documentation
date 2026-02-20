@@ -1198,6 +1198,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
 |:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
 | CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 8.2.14      |
+| CVE-2025-66412 |  Direct  |   High   |       @angular/compiler        |      <= 8.2.14       |
 
   </template>
 
@@ -1206,6 +1207,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
 |:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
 | CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 7.2.16      |
+| CVE-2025-66412 |  Direct  |   High   |       @angular/compiler        |      <= 7.2.16      |
 
   </template>
 
@@ -1214,6 +1216,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
 |:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
 | CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 6.1.10      |
+| CVE-2025-66412 |  Direct  |   High   |       @angular/compiler        |      <= 6.1.10      |
 
   </template>
 
@@ -1222,6 +1225,7 @@ Fixes for the following vulnerabilities are available in ELS for Angular from Tu
 |     CVE ID     | CVE Type | Severity |        Affected Library        | Vulnerable Versions |
 |:--------------:|:--------:|:--------:|:------------------------------:|:-------------------:|
 | CVE-2026-22610 |  Direct  |   High   | @angular/common, @angular/core |      <= 5.2.11      |
+| CVE-2025-66412 |  Direct  |   High   |       @angular/compiler        |      <= 5.2.11      |
 
   </template>
 
