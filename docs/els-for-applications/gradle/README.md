@@ -4,8 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Gradle provides security patches f
 
 ## Supported Versions
 
-* Gradle 6.9.4
-* Gradle 7.6.6
+* Gradle 6.9.4, 7.6.6
 
 ## Prerequisites
 
