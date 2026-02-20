@@ -149,8 +149,8 @@ composer update
 
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
 |----------------|----------|----------------------|-------------------|
-| CVE-2025-27515 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
-| CVE-2025-27515 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
+| CVE-2024-51736 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
+| CVE-2024-51736 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
 
 </template>
 
