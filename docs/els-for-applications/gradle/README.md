@@ -64,21 +64,7 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 
    </CodeWithCopy>
 
-   The output should display the Gradle version and build details, for example:
-
-   ```text
-   ------------------------------------------------------------
-   Gradle 6.9.4
-   ------------------------------------------------------------
-
-   Build time:   2026-02-09 00:00:00 UTC
-   Revision:     103e60c6d0b5c78bb062e1f1bbf6a91dff4dd9fd
-
-   Kotlin:       1.4.20
-   Groovy:       2.5.12
-   Ant:          Apache Ant(TM) version 1.10.9 compiled on September 27 2020
-   JVM:          17.0.17 (Red Hat, Inc. 17.0.17+10-LTS)
-   OS:           Linux 5.14.0-611.5.1.el9_7.x86_64 amd64
+   The output should display the Gradle version and build details.
    ```
 
 ## Windows Installation
@@ -97,7 +83,7 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
 
    </CodeWithCopy>
 
-   The output should display the Gradle version and build details similar to the Linux example above.
+   The output should display the Gradle version and build details.
 
 ## Upgrading to a Newer TuxCare Version
 
