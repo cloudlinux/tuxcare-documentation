@@ -65,7 +65,6 @@ To browse available artifacts via the web interface, visit TuxCare [Nexus](https
    </CodeWithCopy>
 
    The output should display the Gradle version and build details.
-   ```
 
 ## Windows Installation
 
