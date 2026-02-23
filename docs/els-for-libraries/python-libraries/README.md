@@ -17,6 +17,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **h11** 0.9.0
 * **httpx** 0.22.0
 * **idna** 2.1, 2.8, 2.10, 3.6
+* **jaraco-context** 5.3.0
 * **Jinja2** 2.11.3, 3.0.3
 * **MLflow** 2.22.4
 * **MySQL Connector/Python** 8.4.0
@@ -284,6 +285,14 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2024-3651 | High     | 2.8                 | 2.8.post1+tuxcare  |
 | CVE-2024-3651 | High     | 2.10                | 2.10.post1+tuxcare |
 | CVE-2024-3651 | High     | 3.6                 | 3.6.post1+tuxcare  |
+
+  </template>
+
+  <template #jaraco-context>
+
+| CVE ID         | Severity | Vulnerable Versions | Safe Version         |
+| :------------: | :------: | :-----------------: | :------------------: |
+| CVE-2026-23949 | N/A     | 5.3.0               | 5.3.0.post1+tuxcare  |
 
   </template>
 

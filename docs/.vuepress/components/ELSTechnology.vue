@@ -828,6 +828,11 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "jaraco-context",
+        versions: "5.3.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "Jinja2",
         versions: "2.11.3 | 3.0.3",
         link: "./python-libraries/",
