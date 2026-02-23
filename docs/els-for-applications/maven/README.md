@@ -91,10 +91,8 @@ VEX is a machine-readable format that indicates whether a known vulnerability is
 
 TuxCare provides VEX data for Apache Maven ELS versions at: [security.tuxcare.com/vex/cyclonedx/els_lang_java/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/).
 
-<!--
 ## Resolved CVEs in ELS for Apache Maven
 
 <ClientOnly>
   <ResolvedCveTable project="maven" />
 </ClientOnly>
--->

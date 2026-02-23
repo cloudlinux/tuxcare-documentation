@@ -94,10 +94,8 @@ VEX is a machine-readable format that indicates whether a known vulnerability is
 
 TuxCare provides VEX data for Gradle ELS versions at: [security.tuxcare.com/vex/cyclonedx/els_lang_java/org.gradle/](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.gradle/).
 
-<!--
 ## Resolved CVEs in ELS for Gradle
 
 <ClientOnly>
   <ResolvedCveTable project="gradle" />
 </ClientOnly>
--->
