@@ -106,8 +106,8 @@ You need credentials in order to access the TuxCare ELS Grafana repository. Anon
 
 Fixes for the following vulnerabilities are available in ELS for Grafana from TuxCare:
 
-|    CVE ID     | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
-|:-------------:|:--------:|:--------:|:------------------:|:-------------------:|
-| CVE-2025-4123 |  Direct  |  Medium  |      grafana       |          -          |
+|    CVE ID     | CVE Type | Severity | Affected Libraries |          Vulnerable Versions           |
+|:-------------:|:--------:|:--------:|:------------------:|:--------------------------------------:|
+| CVE-2025-4123 |  Direct  |  Medium  |      grafana       | 10.4.1, 11.2.0, 11.3.0, 11.4.0, 11.5.0 |
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
