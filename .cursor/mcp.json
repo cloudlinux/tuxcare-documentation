@@ -2,8 +2,7 @@
   "mcpServers": {
     "tuxcare-docs": {
       "command": "node",
-      "args": ["mcp-docs-server/server.mjs"],
-      "cwd": "/home/sonia/almalinux/docs/tuxcare-documentation"
+      "args": ["mcp-docs-server/server.mjs"]
     }
   }
 }
