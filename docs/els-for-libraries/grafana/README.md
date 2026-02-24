@@ -30,7 +30,7 @@ You need credentials in order to access the TuxCare ELS Grafana repository. Anon
 
    <TableTabs label="Choose operating system: ">
 
-   <template #debian13>
+   <template #Debian_13>
 
    <CodeWithCopy>
 
@@ -44,7 +44,7 @@ You need credentials in order to access the TuxCare ELS Grafana repository. Anon
 
    </template>
 
-   <template #debian12>
+   <template #Debian_12>
 
    <CodeWithCopy>
 
@@ -58,7 +58,7 @@ You need credentials in order to access the TuxCare ELS Grafana repository. Anon
 
    </template>
 
-   <template #alpine3_22>
+   <template #Alpine_Linux_3.22>
 
    <CodeWithCopy>
 
