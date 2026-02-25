@@ -125,20 +125,12 @@ export default {
                     icon: '/images/java.webp',
                 },
                 {
-                    path: '/els-for-libraries/spring/',
-                    icon: '/images/els_for_spring_color.webp',
+                    path: '/els-for-libraries/apache-commons-lang/',
+                    icon: '/images/apache.webp',
                 },
                 {
-                    path: '/els-for-libraries/apache-struts/',
-                    icon: '/images/strut-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/apache-spark/',
-                    icon: '/images/apache-spark.webp',
-                },
-                {
-                    path: '/els-for-libraries/apache-tomcat/',
-                    icon: '/images/tomcat.webp',
+                    path: '/els-for-libraries/apache-cxf/',
+                    icon: '/images/apache.webp',
                 },
                 {
                     path: '/els-for-libraries/apache-kafka/',
@@ -149,8 +141,32 @@ export default {
                     icon: '/images/apache-lucene.webp',
                 },
                 {
+                    path: '/els-for-libraries/apache-spark/',
+                    icon: '/images/apache-spark.webp',
+                },
+                {
+                    path: '/els-for-libraries/apache-struts/',
+                    icon: '/images/strut-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/apache-tomcat/',
+                    icon: '/images/tomcat.webp',
+                },
+                {
                     path: '/els-for-libraries/apache-velocity-engine/',
                     icon: '/images/velocity-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/hibernate/',
+                    icon: '/images/hibernate.webp',
+                },
+                {
+                    path: '/els-for-libraries/jackson/',
+                    icon: '/images/jackson-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/jetty/',
+                    icon: '/images/jetty.webp',
                 },
                 {
                     path: '/els-for-libraries/postgresql-driver/',
@@ -161,24 +177,8 @@ export default {
                     icon: '/images/protobuf-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/jackson/',
-                    icon: '/images/jackson-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/hibernate/',
-                    icon: '/images/hibernate.webp',
-                },
-                {
-                    path: '/els-for-libraries/jetty/',
-                    icon: '/images/jetty.webp',
-                },
-                {
-                    path: '/els-for-libraries/apache-commons-lang/',
-                    icon: '/images/apache.webp',
-                },
-                {
-                    path: '/els-for-libraries/apache-cxf/',
-                    icon: '/images/apache.webp',
+                    path: '/els-for-libraries/spring/',
+                    icon: '/images/els_for_spring_color.webp',
                 },
                 {
                     path: '/els-for-libraries/java-libraries/',
@@ -263,6 +263,10 @@ export default {
                     icon: '/images/livewire-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/phpmailer/',
+                    icon: '/images/phpmailer.webp',
+                },
+                {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
                 },
@@ -273,28 +277,6 @@ export default {
                 {
                     path: '/els-for-libraries/symfony/',
                     icon: '/images/symfony-logo.webp',
-                },
-                {
-                    title: 'Go',
-                    type: 'section-header',
-                    icon: '/images/go_logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/grafana/',
-                    icon: '/images/grafana_logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/loki/',
-                    icon: '/images/grafana_logo.webp',
-                },
-                {
-                    title: '.NET',
-                    type: 'section-header',
-                    icon: '/images/dotnet-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/dotnet/',
-                    icon: '/images/dotnet-logo.webp',
                 },
                 {
                     title: 'JavaScript',
@@ -449,6 +431,28 @@ export default {
                     path: '/els-for-libraries/javascript-libraries/',
                     icon: '/images/javascript.webp',
                 },
+                {
+                    title: 'Go',
+                    type: 'section-header',
+                    icon: '/images/go_logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/grafana/',
+                    icon: '/images/grafana_logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/loki/',
+                    icon: '/images/grafana_logo.webp',
+                },
+                {
+                    title: '.NET',
+                    type: 'section-header',
+                    icon: '/images/dotnet-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/dotnet/',
+                    icon: '/images/dotnet-logo.webp',
+                },
             ]
         },
     ],
@@ -468,6 +472,14 @@ export default {
                 {
                     path: '/els-for-applications/apache-tomcat/',
                     icon: '/images/tomcat.webp',
+                },
+                {
+                    path: '/els-for-applications/maven/',
+                    icon: '/images/apache.webp',
+                },
+                {
+                    path: '/els-for-applications/gradle/',
+                    icon: '/images/gradle.webp',
                 },
             ]
         },

@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Carbon from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* **Carbon** 1.26.6
+* **Carbon** 1.26.6, 1.39.1
 
 Other versions upon request.
 
@@ -148,6 +148,14 @@ Fixes for the following vulnerabilities are available in ELS for Carbon from Tux
 | CVE ID         | Severity | Vulnerable versions | Fixed in version    |
 |----------------|----------|---------------------|---------------------|
 | CVE-2025-22145 | Medium   | 1.26.6              | 1.26.6-p1+tuxcare   |
+
+</template>
+
+<template #Carbon_1.39.1 >
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2025-22145 | Medium   | 1.39.1              | 1.39.1-p1+tuxcare   |
 
 </template>
 

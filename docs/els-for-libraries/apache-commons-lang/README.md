@@ -4,7 +4,8 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Commons Lang provides secur
 
 ## Supported Versions
 
-* Apache Commons Lang 2.4, 2.6, 3.4, 3.10, 3.12.0
+* Apache Commons Lang 2.4, 2.6 
+* Apache Commons Lang3 3.4, 3.8.1, 3.10, 3.12.0, 3.17.0
 
 ## Connection to ELS for Apache Commons Lang Repository
 
@@ -66,12 +67,28 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Apache Commons Lang dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
+<TableTabs label="Choose version: " >
 
-<CodeTabs :tabs="[
-  { title: 'Maven (pom.xml)', content: mavendeps },
-  { title: 'Gradle (build.gradle)', content: gradledeps }
+<template #Commons_Lang>
+            
+  <CodeTabs :tabs="[
+{ title: 'Maven (pom.xml)', content: mavenDepsLang },
+{ title: 'Gradle (build.gradle)', content: gradleDepsLang }
 ]" />
+
+</template>
+
+<template #Commons_Lang3>
+            
+  <CodeTabs :tabs="[
+{ title: 'Maven (pom.xml)', content: mavenDepsLang3 },
+{ title: 'Gradle (build.gradle)', content: gradleDepsLang3 }
+]" />
+
+  </template>
+
+</TableTabs>
 
 ### Step 5: Verify and Build
 
@@ -109,7 +126,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Source code for TuxCare-patched Apache Commons Lang libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
 
-For example: [https://nexus.repo.tuxcare.com/repository/els_spring/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar).
+For example: [https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar).
 
 :::tip
 If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
@@ -135,7 +152,7 @@ const mavencreds =
 </settings>`
 
 const gradlecreds =
-`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
+`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_java/
 tuxcare_registry_user=USERNAME
 tuxcare_registry_password=PASSWORD`
 
@@ -143,7 +160,7 @@ const mavenrepo =
 `<repositories>
   <repository>
     <id>tuxcare-registry</id>
-    <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
+    <url>https://nexus.repo.tuxcare.com/repository/els_java/</url>
   </repository>
 </repositories>`
 
@@ -160,7 +177,7 @@ const gradlerepo =
   mavenCentral()
 }`
 
-const mavendeps =
+const mavenDepsLang =
 `<dependencies>
     <dependency>
         <groupId>commons-lang</groupId>
@@ -169,8 +186,21 @@ const mavendeps =
     </dependency>
 </dependencies>`
 
-const gradledeps =
+const gradleDepsLang =
 `dependencies {
   implementation("commons-lang:commons-lang:2.6-tuxcare.1")
+}`
+const mavenDepsLang3 =
+`<dependencies>
+  <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.4-tuxcare.1</version>
+  </dependency>
+</dependencies>`
+
+const gradleDepsLang3 =
+`dependencies {
+  implementation 'org.apache.commons:commons-lang3:3.4-tuxcare.1'
 }`
 </script>

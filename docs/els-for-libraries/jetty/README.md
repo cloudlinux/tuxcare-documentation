@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security pa
 
 ## Supported Versions
 
-* Eclipse Jetty 9.4.24.v20191120, 9.4.53.v20231009
+* Eclipse Jetty 8.2.0.v20160908, 9.4.24.v20191120, 9.4.48.v20220622, 9.4.53.v20231009, 9.4.59, 10.0.27, 11.0.19, 11.0.27
 
 ## Connection to ELS for Eclipse Jetty Repository
 
@@ -66,7 +66,7 @@ Example Maven and Gradle projects are available on GitHub. Remember to set the r
 
 Replace the Eclipse Jetty dependencies in your build file with the TuxCare-maintained versions to cover both direct and transitive dependencies.
 
-You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_spring). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
+You can find a specific artifact version in your TuxCare account on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java). Click **Sign In** in the top right corner to authenticate with your TuxCare credentials. After logging in, you may need to refresh or reopen the link to browse artifacts due to Nexus routing behavior.
 
 <CodeTabs :tabs="[
   { title: 'Maven (pom.xml)', content: mavendeps },
@@ -109,7 +109,7 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Source code for TuxCare-patched Eclipse Jetty libraries is available in the repository. Source JARs follow the standard Maven naming convention with a `-sources` classifier.
 
-For example: [https://nexus.repo.tuxcare.com/repository/els_spring/org/eclipse/jetty/jetty-server/9.4.53.v20231009-tuxcare.1/jetty-server-9.4.53.v20231009-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_spring/org/eclipse/jetty/jetty-server/9.4.53.v20231009-tuxcare.1/jetty-server-9.4.53.v20231009-tuxcare.1-sources.jar).
+For example: [https://nexus.repo.tuxcare.com/repository/els_java/org/eclipse/jetty/jetty-server/9.4.53.v20231009-tuxcare.1/jetty-server-9.4.53.v20231009-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/org/eclipse/jetty/jetty-server/9.4.53.v20231009-tuxcare.1/jetty-server-9.4.53.v20231009-tuxcare.1-sources.jar).
 
 :::tip
 If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to report the issue.
@@ -135,7 +135,7 @@ const mavencreds =
 </settings>`
 
 const gradlecreds =
-`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_spring/
+`tuxcare_registry_url=https://nexus.repo.tuxcare.com/repository/els_java/
 tuxcare_registry_user=USERNAME
 tuxcare_registry_password=PASSWORD`
 
@@ -143,7 +143,7 @@ const mavenrepo =
 `<repositories>
   <repository>
     <id>tuxcare-registry</id>
-    <url>https://nexus.repo.tuxcare.com/repository/els_spring/</url>
+    <url>https://nexus.repo.tuxcare.com/repository/els_java/</url>
   </repository>
 </repositories>`
 
