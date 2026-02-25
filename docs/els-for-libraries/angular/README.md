@@ -1313,11 +1313,11 @@ const Angular19WithoutSSR =
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=18.2.14-tuxcare.1",
   "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=18.2.14-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1",
-  "@angular/ssr": "^18.2.20"
+  "@angular/ssr": "18.2.21"
 },
 "devDependencies": {
-  "@angular-devkit/build-angular": "^18.2.20",
-  "@angular/cli": "^18.2.20",
+  "@angular-devkit/build-angular": "18.2.21",
+  "@angular/cli": "18.2.21",
   "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1"
 },
 "overrides": {
@@ -1331,9 +1331,12 @@ const Angular19WithoutSSR =
   "@angular/platform-server": "npm:@els-angular/angular-platform-server@>=18.2.14-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1",
   "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1",
+  "ajv@8.17.1": "npm:@els-angular/ajv@>=8.17.1-tuxcare.1",
+  "esbuild": "0.25.0",
   "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-  "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1"
+  "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+  "webpack@5.94.0": "npm:@els-angular/webpack@>=5.94.0-tuxcare.1"
 }`
 
 const Angular18WithoutSSR =
@@ -1348,8 +1351,8 @@ const Angular18WithoutSSR =
   "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1"
 },
 "devDependencies": {
-  "@angular-devkit/build-angular": "^18.2.20",
-  "@angular/cli": "^18.2.20",
+  "@angular-devkit/build-angular": "18.2.21",
+  "@angular/cli": "18.2.21",
   "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1"
 },
 "overrides": {
@@ -1362,9 +1365,12 @@ const Angular18WithoutSSR =
   "@angular/platform-browser-dynamic": "npm:@els-angular/angular-platform-browser-dynamic@>=18.2.14-tuxcare.1",
   "@angular/router": "npm:@els-angular/angular-router@>=18.2.14-tuxcare.1",
   "@angular/compiler-cli": "npm:@els-angular/angular-compiler-cli@>=18.2.14-tuxcare.1",
+  "ajv@8.17.1": "npm:@els-angular/ajv@>=8.17.1-tuxcare.1",
+  "esbuild": "0.25.0",
   "tar@6.2.1": "npm:@els-angular/tar@>=6.2.1-tuxcare.1",
   "tmp@0.0.33": "npm:@els-angular/tmp@>=0.0.33-tuxcare.1",
-  "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1"
+  "tmp@0.2.5": "npm:@els-angular/tmp@>=0.2.1-tuxcare.1",
+  "webpack@5.94.0": "npm:@els-angular/webpack@>=5.94.0-tuxcare.1"
 }`
 
 const Angular17WithSSR =
