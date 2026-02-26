@@ -1,21 +1,20 @@
-# Symfony
+# PHPUnit
 
-Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, Symfony HttpFoundation from TuxCare provides security fixes for Symfony component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for PHPUnit from TuxCare provides security fixes for PHPUnit versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions and Components
+## Supported Versions
 
-* **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
-* **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
+* **PHPUnit** 12.4.5
 
 Other versions upon request.
 
-## Connection to ELS for Symfony Repository
+## Connection to ELS for PHPUnit Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Symfony components repository into your application. The repository provides trusted Symfony packages that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for PHPUnit repository into your application. The repository provides trusted PHPUnit packages that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Symfony repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for PHPUnit repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -59,13 +58,13 @@ Add the `els_php` Composer repository either via CLI or by editing `composer.jso
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Symfony components
+### Step 4: Install PHPUnit
 
-Install the TuxCare-maintained Symfony components release that matches your project:
+Install the TuxCare-maintained PHPUnit release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p2+tuxcare` },
-  { title: 'composer.json', content: symfonyjson }
+  { title: 'Composer CLI', content: `composer require sebastianbergmann/phpunit:12.4.5-p1+tuxcare` },
+  { title: 'composer.json', content: phpunitjson }
 ]" />
 
 **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -114,19 +113,16 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Symfony components ELS versions: 
-* Symfony Process - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/)
-* Symfony HttpFoundation - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/)
-
+TuxCare provides VEX for PHPUnit ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/sebastianbergmann-phpunit/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/sebastianbergmann-phpunit/)
 
 ## How to Upgrade to a Newer Version
 
-If you have already installed a TuxCare Symfony Process package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+If you have already installed a TuxCare PHPUnit package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
 
 <CodeWithCopy>
 
 ```text
-composer require symfony/process:VERSION-pN+tuxcare
+composer require sebastianbergmann/phpunit:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -143,31 +139,15 @@ composer update
 
 ## Resolved CVEs
 
-<TableTabs label="Choose Symfony component: " >
+Fixes for the following vulnerabilities are available in ELS for PHPUnit from TuxCare:
 
-<template #Symfony_Process>
+<TableTabs label="Choose PHPUnit version: ">
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2026-24739 | Medium   | < 6.4.14             | 6.4.13-p2+tuxcare |
-| CVE-2026-24739 | Medium   | < 5.4.46             | 5.4.45-p2+tuxcare |
-| CVE-2026-24739 | Medium   | < 4.4.45             | 4.4.44-p1+tuxcare |
-| CVE-2026-24739 | Medium   | < 3.4.48             | 3.4.47-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 4.4.45             | 4.4.44-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 3.4.48             | 3.4.47-p1+tuxcare |
+<template #PHPUnit_12.4>
 
-</template>
-
-<template #Symfony_HttpFoundation>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 2.8.52-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 3.4.47-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p1+tuxcare |
-| CVE-2024-50345 | Medium   |< 5.4.46, >=6,<6.4.14, >=7,<7.1.7| 3.4.47-p3+tuxcare |
+| CVE ID         | Severity | Vulnerable versions | Fixed in version       |
+|----------------|----------|---------------------|------------------------|
+| CVE-2026-24765 | High     | 12.4.5              | 12.4.5-p1+tuxcare     |
 
 </template>
 
@@ -205,10 +185,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const symfonyjson =
+const phpunitjson =
 `{
     "require": {
-        "symfony/process": "6.4.13-p2+tuxcare"
+        "sebastianbergmann/phpunit": "12.4.5-p1+tuxcare"
     }
 }`
 
