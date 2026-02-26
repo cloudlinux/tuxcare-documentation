@@ -748,11 +748,6 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "anyio",
-        versions: "3.7.1",
-        link: "./python-libraries/",
-      },
-      {
         name: "celery",
         versions: "5.1.2",
         link: "./celery/",
@@ -873,11 +868,6 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "piexif",
-        versions: "1.1.3",
-        link: "./python-libraries/",
-      },
-      {
         name: "Pillow",
         versions: "8.4.0 | 9.4.0 | 9.5.0 | 11.2.1",
         link: "./python-libraries/",
@@ -943,11 +933,6 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "sentence-transformers",
-        versions: "2.7.0",
-        link: "./python-libraries/",
-      },
-      {
         name: "setuptools",
         versions: "65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.8.0",
         link: "./python-libraries/",
@@ -956,11 +941,6 @@ const techData = [
         name: "starlette",
         versions: "0.13.6 | 0.27.0",
         link: "./starlette/",
-      },
-      {
-        name: "statsmodels",
-        versions: "0.14.4 | 0.14.5",
-        link: "./python-libraries/",
       },
       {
         name: "torch",
