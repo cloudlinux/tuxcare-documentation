@@ -12,25 +12,25 @@
     </div>
 
     <div class="runtimes-sorting-d">
-      <div v-for="(runtime, index) in runtimes" :key="index" class="item">
-        <div class="item-l">
-          <a v-if="runtime.link" :href="runtime.link">
-            <img :src="runtime.icon" :alt="runtime.name" />
-            {{ runtime.name }}
-          </a>
-          <template v-else>
-            <img :src="runtime.icon" :alt="runtime.name" />
-            {{ runtime.name }}
-          </template>
-        </div>
-        <div class="item-r">
+      <a
+        v-for="(runtime, index) in runtimes"
+        :key="index"
+        :href="runtime.link || undefined"
+        :class="['item', { clickable: runtime.link }]"
+      >
+        <span class="item-l">
+          <img :src="runtime.icon" :alt="runtime.name" />
+          {{ runtime.name }}
+        </span>
+        <span class="item-r">
           <span>{{ runtime.versions }}</span>
           <sup v-if="runtime.footnoteSymbol" class="c-red">{{ runtime.footnoteSymbol }}</sup>
           <span v-if="runtime.footnote" class="footnote">
             <sup>{{ runtime.footnoteSymbol }}</sup> {{ runtime.footnote }}
           </span>
-        </div>
-      </div>
+        </span>
+        <span v-if="runtime.link" class="item-arrow">&rarr;</span>
+      </a>
     </div>
   </div>
 
@@ -55,7 +55,7 @@
     </div>
   </div>
 
-  <p>If something's missing or you have questions, <a href="https://tuxcare.com/support-portal/">contact support</a>.<br>Support for other Linux distros is available upon request</p>
+  <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.<br>Support for other Linux distros is available upon request.</p>
 </template>
 
 <script setup>
@@ -183,6 +183,30 @@ const operatingSystems = [
   padding: 0.75rem 0.5rem;
   border-bottom: 1px solid #eee;
   align-items: center;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.runtimes-sorting-d .item.clickable {
+  cursor: pointer;
+}
+
+.runtimes-sorting-d .item.clickable:hover {
+  background-color: #FEF6F2;
+  box-shadow: 0 2px 8px rgba(244, 130, 67, 0.1);
+}
+
+.runtimes-sorting-d .item.clickable:hover .item-l,
+.runtimes-sorting-d .item.clickable:hover .item-r {
+  color: #F48243;
+}
+
+.runtimes-sorting-d .item.clickable:hover .item-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: #F48243;
 }
 
 .runtimes-sorting-d .item:last-child {
@@ -194,6 +218,8 @@ const operatingSystems = [
   display: flex;
   align-items: center;
   font-weight: 500;
+  color: #1b1f27;
+  transition: color 0.2s ease;
 }
 
 .runtimes-sorting-d .item-l img {
@@ -201,17 +227,6 @@ const operatingSystems = [
   width: 24px;
   margin-right: 0.75rem;
   object-fit: contain;
-}
-
-.runtimes-sorting-d .item-l a {
-  display: flex;
-  align-items: center;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.runtimes-sorting-d .item-l a:hover {
-  text-decoration: underline;
 }
 
 .runtimes-sorting-d .item-r {
@@ -224,6 +239,16 @@ const operatingSystems = [
 
 .runtimes-sorting-d .item-r span {
   line-height: 1.4;
+}
+
+.runtimes-sorting-d .item-arrow {
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.2s ease;
+  color: #5c6370;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
 }
 
 .c-red {

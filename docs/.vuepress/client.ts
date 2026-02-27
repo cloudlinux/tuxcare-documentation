@@ -18,12 +18,19 @@ import CodeWithCopy from "./components/CodeWithCopy.vue";
 import TableTabs from "./components/TableTabs.vue";
 import ELSTechnology from "./components/ELSTechnology.vue";
 import ELSRTechnology from "./components/ELSRTechnology.vue";
+import ELSOSSelector from "./components/ELSOSSelector.vue";
+import ELSPrerequisites from "./components/ELSPrerequisites.vue";
+import ELSSteps from "./components/ELSSteps.vue";
+import WhatsNext from "./components/WhatsNext.vue";
+import ELSApplication from "./components/ELSApplication.vue";
+import GlobalCopyCode from "./components/GlobalCopyCode.vue";
 
 import ResolvedCveTable from './components/ResolvedCveTable.vue'
 
 export default defineClientConfig({
     rootComponents: [
         Chat,
+        GlobalCopyCode,
     ],
     async enhance({ app }) {
         app.config.globalProperties.$eventBus = mitt();
@@ -33,6 +40,11 @@ export default defineClientConfig({
         app.component("TableTabs", TableTabs);
         app.component("ELSTechnology", ELSTechnology);
         app.component("ELSRTechnology", ELSRTechnology);
+        app.component("ELSOSSelector", ELSOSSelector);
+        app.component("ELSPrerequisites", ELSPrerequisites);
+        app.component("ELSSteps", ELSSteps);
+        app.component("WhatsNext", WhatsNext);
+        app.component("ELSApplication", ELSApplication);
     },
     layouts: {
         Layout,

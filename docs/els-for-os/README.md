@@ -4,20 +4,7 @@ TuxCare's [Endless Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-
 
 Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
-## Supported Operating Systems
-
-* [Alpine Linux 3.18](./alpine-linux-3-18-els)
-* [CentOS 6](./centos-6-els)
-* [CentOS 7](./centos-7-els)
-* [CentOS 8](./centos-8-els)
-* [CentOS Stream 8](./centos-stream-8-els)
-* [Debian 10](./debian-10-els)
-* [Oracle Linux 6](./oracle-linux-6-els)
-* [Oracle Linux 7](./oracle-linux-7-els)
-* [Red Hat Enterprise Linux 7](./red-hat-enterprise-linux-7-els)
-* [Ubuntu 16.04](./ubuntu-16-04-els)
-* [Ubuntu 18.04](./ubuntu-18-04-els)
-* [Ubuntu 20.04](./ubuntu-20-04-els)
+<ELSOSSelector />
 
 ## Support Duration
 

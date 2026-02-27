@@ -1,5 +1,5 @@
 <template>
-  <div class="docs-card-container">
+  <div class="docs-card-container" @click="goTo()">
     <div class="docs-card-container__header">
       <img width="20" height="20" :src="withBase('collections-bookmark.svg')" alt="document icon">
       <p v-if="card.title" class="docs-card-container__header-paragraph">{{ card.title }}</p>
@@ -8,7 +8,8 @@
       <p v-if="card.description" class="docs-card-container__main-paragraph">{{ card.description }}</p>
     </div>
     <div class="docs-card-container__footer">
-      <button @click="goTo()" class="docs-card-container__footer-btn">View Documentation</button>
+      <span class="docs-card-container__footer-btn">View Documentation</span>
+      <span class="docs-card-container__footer-arrow">&rarr;</span>
     </div>
   </div>
 </template>
@@ -34,6 +35,17 @@ const goTo = () => router.push(props.card?.link)
   justify-content space-between
   border 1px solid $cardBorderColor;
   border-radius $cardBorderRadius
+  cursor pointer
+  transition all 0.2s ease
+
+  &:hover
+    border-color $buttonColorBg
+    box-shadow 0 4px 16px rgba(22, 48, 85, 0.1)
+    transform translateY(-2px)
+
+  &:hover .docs-card-container__footer-arrow
+    opacity 1
+    transform translateX(0)
 
   &__header
     display: flex;
@@ -61,6 +73,9 @@ const goTo = () => router.push(props.card?.link)
 
   &__footer
     padding $cardFooterPaddingVertically $cardFooterPaddingHorizontally
+    display flex
+    align-items center
+    justify-content space-between
 
     &-btn
       background $buttonColorBg
@@ -73,6 +88,13 @@ const goTo = () => router.push(props.card?.link)
       cursor pointer
       border none
       outline none
+
+    &-arrow
+      font-size 1.25rem
+      color $buttonColorBg
+      opacity 0
+      transform translateX(-4px)
+      transition all 0.2s ease
 
 @media (max-width: $mobileBreakpoint)
   .docs-card-container

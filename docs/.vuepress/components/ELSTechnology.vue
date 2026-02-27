@@ -1,7 +1,7 @@
 <template>
   <div class="heading text-center">
-    <h4>Available Guides for ELS for Libraries.</h4>
-    <p>If something's missing or you have questions, <a href="https://tuxcare.com/support-portal/">contact support</a>.</p>
+    <h4>Available Guides for ELS for Libraries</h4>
+    <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p>
   </div>
 
   <div class="supported-product-sorting">
@@ -14,9 +14,9 @@
 
     <div class="sp-sort-head">
       <ul>
-        <li>Ecosystem</li>
-        <li>Product</li>
-        <li>Versions</li>
+        <li class="head-ecosystem">Ecosystem</li>
+        <li class="head-product">Product</li>
+        <li class="head-versions">Versions</li>
       </ul>
     </div>
 
@@ -37,36 +37,26 @@
 
       <div class="sp-sort-row" v-if="filteredData[activeTab]">
         <div class="scroll-container">
-          <div class="project-version-box">
-            <div class="project-col">
-              <ul>
-                <li
-                  v-for="(project, pIndex) in getFilteredProjects(filteredData[activeTab])"
-                  :key="pIndex"
-                >
-                  <a
-                    v-if="project.link"
-                    :href="project.link"
-                    rel="noopener noreferrer"
-                  >
-                    {{ project.name }}
-                  </a>
-                  <span v-else>{{ project.name }}</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="version-col">
-              <ul>
-                <li
-                  v-for="(project, pIndex) in getFilteredProjects(filteredData[activeTab])"
-                  :key="'v' + pIndex"
-                >
-                  <span class="badge">{{ project.versions }}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul class="project-list">
+            <li
+              v-for="(project, pIndex) in getFilteredProjects(filteredData[activeTab])"
+              :key="pIndex"
+            >
+              <a
+                v-if="project.link"
+                :href="project.link"
+                class="project-row"
+              >
+                <span class="project-name">{{ project.name }}</span>
+                <span class="project-versions">{{ project.versions }}</span>
+                <span class="project-arrow">&rarr;</span>
+              </a>
+              <div v-else class="project-row">
+                <span class="project-name">{{ project.name }}</span>
+                <span class="project-versions">{{ project.versions }}</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1177,9 +1167,20 @@ function getFilteredProjects(item) {
 }
 
 .sp-sort-head li {
-  flex: 1;
   text-align: left;
   padding-left: 0.5rem;
+}
+
+.sp-sort-head .head-ecosystem {
+  flex: 0 0 33.333%;
+}
+
+.sp-sort-head .head-product {
+  flex: 0 0 29.7%;
+}
+
+.sp-sort-head .head-versions {
+  flex: 1;
 }
 
 .sp-sort-body {
@@ -1208,6 +1209,13 @@ function getFilteredProjects(item) {
   min-height: 2.5rem;
   margin-bottom: 0.4rem;
   border-bottom: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.ecosystem-tabs li:hover {
+  background-color: #f5f7fa;
 }
 
 .ecosystem-tabs li.active {
@@ -1232,61 +1240,71 @@ function getFilteredProjects(item) {
   width: auto;
 }
 
-.project-version-box {
-  display: flex;
-  background-color: #FEF6F2;
-  padding: 0.5rem;
-  gap: 1.4rem;
-  width: auto;
-}
-
-.project-col,
-.version-col {
-  width: 50%;
-}
-
-.project-col ul,
-.version-col ul {
+.project-list {
   list-style: none;
-  padding: 0;
   margin: 0;
+  background-color: #FEF6F2;
+  padding: 0.25rem 0.5rem;
 }
 
-.project-col li,
-.version-col li {
-  min-height: 2.5rem;
-  margin-bottom: 0.4rem;
+.project-row {
   display: flex;
   align-items: center;
-  border-bottom: none;
-  border-bottom: 1px solid #F48243;
-}
-
-.version-col li {
-  line-height: 1.1;
-  justify-content: flex-start;
-}
-
-.project-col a {
-  color: #007bff;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px solid #f0d4c2;
+  transition: all 0.2s ease;
   text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.project-col a,
-.version-col .badge {
-  display: block;
-  word-wrap: break-word;
-  white-space: normal;
-  text-align: left;
-}
-
-.badge {
-  background: none;
   color: inherit;
-  padding: 0;
-  border-radius: 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+a.project-row:hover {
+  background: #FEF6F2;
+  box-shadow: 0 2px 8px rgba(244, 130, 67, 0.1);
+}
+
+a.project-row:hover .project-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: #F48243;
+}
+
+a.project-row:hover .project-name,
+a.project-row:hover .project-versions {
+  color: #F48243;
+}
+
+.project-list > li:last-child .project-row {
+  border-bottom: none;
+}
+
+.project-name {
+  flex: 0 0 45%;
+  min-width: 0;
+  word-wrap: break-word;
   font-size: 0.9rem;
+  font-weight: 500;
+  color: #1b1f27;
+  transition: color 0.2s ease;
+}
+
+.project-versions {
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  color: #5c6370;
+}
+
+.project-arrow {
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.2s ease;
+  color: #5c6370;
+  flex-shrink: 0;
 }
 </style>
 
