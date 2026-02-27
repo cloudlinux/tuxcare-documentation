@@ -88,8 +88,74 @@ blockquote
   margin-left 0
   padding-left 1rem
 
-ul, ol
+ul
   padding-left 1.2em
+
+ol
+  padding-left 1.2em
+
+// Steps styling — commented out pending review
+// ol
+//   padding-left 0
+//
+// .content:not(.custom) ol
+//   list-style none
+//   counter-reset step-counter
+//   margin 1rem 0
+//
+// .content:not(.custom) ol > li
+//   counter-increment step-counter
+//   position relative
+//   padding-left 1.5rem
+//   padding-bottom 1.25rem
+//   margin-bottom 0
+//   border-left 2px solid #e0e3e8
+//   margin-left 0.9rem
+//
+// .content:not(.custom) ol > li:last-child
+//   border-left-color transparent
+//   padding-bottom 0
+//
+// .content:not(.custom) ol > li::before
+//   content counter(step-counter)
+//   position absolute
+//   left -1rem
+//   top 0
+//   width 2rem
+//   height 2rem
+//   border-radius 50%
+//   background $buttonColorBg
+//   color #fff
+//   font-weight 700
+//   font-size 0.85rem
+//   display flex
+//   align-items center
+//   justify-content center
+//   line-height 1
+//
+// .content:not(.custom) ol > li > p:first-child
+//   font-weight 600
+//   color $headerColor
+//   margin-top 0
+//
+// .content:not(.custom) ol > li > p
+//   margin 0.25rem 0 0.5rem 0
+//
+// .content:not(.custom) ol ol
+//   counter-reset step-counter
+//   margin 0.5rem 0
+//
+// .content:not(.custom) ol ol > li
+//   margin-left 0
+//   padding-left 2.5rem
+//   border-left-color #eef0f2
+//
+// .content:not(.custom) ol ol > li::before
+//   width 1.5rem
+//   height 1.5rem
+//   font-size 0.75rem
+//   left -0.75rem
+//   background #5c6370
 
 strong
   font-weight 600
@@ -241,6 +307,26 @@ badge[type="danger"]
 
   &:before
     content: attr(text);
+
+// Global copy button for code blocks
+.global-copy-btn
+  position absolute
+  top 0.5rem
+  right 0.5rem
+  background none
+  border none
+  cursor pointer
+  padding 0.2rem
+  z-index 10
+  line-height 0
+  svg
+    fill #ccc
+    width 20px
+    height 20px
+    transition fill 0.3s
+
+  &:hover svg
+    fill #1994f9
 
 @media (max-width: $mobileBreakpoint)
   .content:not(.custom)
