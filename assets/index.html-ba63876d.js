@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-1adc648a","path":"/local-mirror-for-els-python/","title":"Installation instructions of a local mirror for ELS Python","lang":"en-US","frontmatter":{},"headers":[]}');export{t as data};
