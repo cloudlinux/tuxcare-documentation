@@ -22,7 +22,6 @@ import ELSOSSelector from "./components/ELSOSSelector.vue";
 import ELSPrerequisites from "./components/ELSPrerequisites.vue";
 import ELSSteps from "./components/ELSSteps.vue";
 import WhatsNext from "./components/WhatsNext.vue";
-import ContentTabs from "./components/ContentTabs.vue";
 import ELSApplication from "./components/ELSApplication.vue";
 import GlobalCopyCode from "./components/GlobalCopyCode.vue";
 
