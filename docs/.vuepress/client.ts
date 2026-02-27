@@ -44,7 +44,6 @@ export default defineClientConfig({
         app.component("ELSPrerequisites", ELSPrerequisites);
         app.component("ELSSteps", ELSSteps);
         app.component("WhatsNext", WhatsNext);
-        app.component("ContentTabs", ContentTabs);
         app.component("ELSApplication", ELSApplication);
     },
     layouts: {
