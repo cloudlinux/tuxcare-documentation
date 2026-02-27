@@ -242,48 +242,6 @@ Where:
 - `[Link text](url)` — the card title and destination (required)
 - `— Description` — text after the em-dash becomes the card subtitle (optional)
 
-## Components: ContentTabs
-
-**Description**:
-
-- Tab switcher for rich markdown content (not code).
-- Uses named slots `#tab-0`, `#tab-1`, etc. for each tab panel.
-- Inactive tabs are hidden with `v-show`, so content stays in the DOM but is visually hidden.
-
-**Known issues**:
-
-- Content inside inactive tabs is **not discoverable by browser search** (Ctrl+F). Consider using visible headers instead if searchability is important.
-
-**Props**:
-
-- `tabs` (Array, **required**): Array of tab title strings.
-
-**Usage example**:
-
-```markdown
-<ContentTabs :tabs="['RPM-based', 'Debian-based', 'Alpine']">
-
-<template #tab-0>
-
-RPM content here with markdown, `CodeWithCopy`, etc.
-
-</template>
-
-<template #tab-1>
-
-Debian content here.
-
-</template>
-
-<template #tab-2>
-
-Alpine content here.
-
-</template>
-
-</ContentTabs>
-```
-
 ## Components: ResolvedCveTable
 
 **Description**:
