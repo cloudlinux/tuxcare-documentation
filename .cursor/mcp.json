@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tuxcare-docs": {
+      "command": "node",
+      "args": ["mcp-docs-server/server.mjs"]
+    }
+  }
+}
