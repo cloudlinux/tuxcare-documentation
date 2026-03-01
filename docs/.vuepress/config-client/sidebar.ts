@@ -267,6 +267,10 @@ export default {
                     icon: '/images/phpmailer.webp',
                 },
                 {
+                    path: '/els-for-libraries/phpunit/',
+                    icon: '/images/phpunit.webp',
+                },
+                {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
                 },
@@ -277,6 +281,10 @@ export default {
                 {
                     path: '/els-for-libraries/symfony/',
                     icon: '/images/symfony-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/zendframework-zf1/',
+                    icon: '/images/zf1.webp',
                 },
                 {
                     title: 'JavaScript',

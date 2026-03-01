@@ -1039,6 +1039,11 @@ const techData = [
         link: "./phpmailer/",
       },
       {
+        name: "PHPUnit",
+        versions: "12.4.5",
+        link: "./phpunit/",
+      },
+      {
         name: "PhpSpreadsheet",
         versions: "4.5.0",
         link: "./phpspreadsheet/",
@@ -1055,8 +1060,13 @@ const techData = [
       },
       {
         name: "Symfony Process",
-        versions: "5.x | 6.x",
+        versions: "3.4.x | 4.4.x | 5.x | 6.x",
         link: "./symfony/",
+      },
+      {
+        name: "Zend Framework 1",
+        versions: "1.12.10",
+        link: "./zendframework-zf1/",
       },
     ],
   },

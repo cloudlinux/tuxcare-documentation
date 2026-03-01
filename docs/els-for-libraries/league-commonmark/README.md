@@ -63,7 +63,7 @@ Add the `els_php` Composer repository either via CLI or by editing `composer.jso
 Install the TuxCare-maintained League CommonMark release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require league/commonmark:1.6.7-p1+tuxcare` },
+  { title: 'Composer CLI', content: `composer require league/commonmark:1.6.7-p2+tuxcare` },
   { title: 'composer.json', content: commonmarkjson }
 ]" />
 
@@ -141,6 +141,7 @@ Fixes for the following vulnerabilities are available in ELS for League CommonMa
 
 | CVE ID             | Severity | Vulnerable versions | Fixed in version    |
 |--------------------|----------|---------------------|---------------------|
+| CVE-2025-46734     | Medium   | < 2.7.0             | 1.6.7-p2+tuxcare    |
 | GHSA-c2pc-g5qf-rfrf | High     | < 2.6.0             | 1.6.7-p1+tuxcare    |
 
 </template>
@@ -182,7 +183,7 @@ const cli =
 const commonmarkjson =
 `{
     "require": {
-        "league/commonmark": "1.6.7-p1+tuxcare"
+        "league/commonmark": "1.6.7-p2+tuxcare"
     }
 }`
 

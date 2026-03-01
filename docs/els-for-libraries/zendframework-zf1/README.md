@@ -1,21 +1,20 @@
-# Symfony
+# Zend Framework 1
 
-Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, Symfony HttpFoundation from TuxCare provides security fixes for Symfony component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Zend Framework 1 from TuxCare provides security fixes for Zend Framework 1 versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions and Components
+## Supported Versions
 
-* **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
-* **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
+* **Zend Framework 1** 1.12.10
 
 Other versions upon request.
 
-## Connection to ELS for Symfony Repository
+## Connection to ELS for Zend Framework 1 Repository
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Symfony components repository into your application. The repository provides trusted Symfony packages that can be easily integrated into your **Composer** projects.
+This guide outlines the steps needed to integrate the TuxCare ELS for Zend Framework 1 repository into your application. The repository provides trusted Zend Framework packages that can be easily integrated into your **Composer** projects.
 
 ### Step 1: Get user credentials
 
-You need a username and password in order to use TuxCare ELS for Symfony repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+You need a username and password in order to use TuxCare ELS for Zend Framework 1 repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ### Step 2: Configure Composer authentication
 
@@ -59,13 +58,13 @@ Add the `els_php` Composer repository either via CLI or by editing `composer.jso
     { title: 'composer.json', content: composerjson }
   ]" />
 
-### Step 4: Install Symfony components
+### Step 4: Install Zend Framework 1
 
-Install the TuxCare-maintained Symfony components release that matches your project:
+Install the TuxCare-maintained Zend Framework 1 release that matches your project:
 
 <CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p2+tuxcare` },
-  { title: 'composer.json', content: symfonyjson }
+  { title: 'Composer CLI', content: `composer require zendframework/zf1:1.12.10-p1+tuxcare` },
+  { title: 'composer.json', content: zf1json }
 ]" />
 
 **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -114,19 +113,16 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
 
-TuxCare provides VEX for Symfony components ELS versions: 
-* Symfony Process - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-process/)
-* Symfony HttpFoundation - [security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony-http-foundation/)
-
+TuxCare provides VEX for Zend Framework 1 ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework-zf1/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/zendframework-zf1/)
 
 ## How to Upgrade to a Newer Version
 
-If you have already installed a TuxCare Symfony Process package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
+If you have already installed a TuxCare Zend Framework 1 package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
 
 <CodeWithCopy>
 
 ```text
-composer require symfony/process:VERSION-pN+tuxcare
+composer require zendframework/zf1:VERSION-pN+tuxcare
 ```
 
 </CodeWithCopy>
@@ -143,31 +139,21 @@ composer update
 
 ## Resolved CVEs
 
-<TableTabs label="Choose Symfony component: " >
+Fixes for the following vulnerabilities are available in ELS for Zend Framework 1 from TuxCare:
 
-<template #Symfony_Process>
+<TableTabs label="Choose Zend Framework 1 version: ">
 
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2026-24739 | Medium   | < 6.4.14             | 6.4.13-p2+tuxcare |
-| CVE-2026-24739 | Medium   | < 5.4.46             | 5.4.45-p2+tuxcare |
-| CVE-2026-24739 | Medium   | < 4.4.45             | 4.4.44-p1+tuxcare |
-| CVE-2026-24739 | Medium   | < 3.4.48             | 3.4.47-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 6.4.14             | 6.4.13-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 5.4.46             | 5.4.45-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 4.4.45             | 4.4.44-p1+tuxcare |
-| CVE-2024-51736 | Critical | < 3.4.48             | 3.4.47-p1+tuxcare |
+<template #Zend_Framework_1.12>
 
-</template>
-
-<template #Symfony_HttpFoundation>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version  |
-|----------------|----------|----------------------|-------------------|
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 2.8.52-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 3.4.47-p1+tuxcare |
-| CVE-2025-64500 | Critical |< 5.4.50, >=6,<6.4.29, >=7,<7.3.7| 4.4.49-p1+tuxcare |
-| CVE-2024-50345 | Medium   |< 5.4.46, >=6,<6.4.14, >=7,<7.1.7| 3.4.47-p3+tuxcare |
+| CVE ID              | Severity | Vulnerable versions | Fixed in version       |
+|---------------------|----------|---------------------|------------------------|
+| CVE-2016-6233       | Critical | 1.12.10             | 1.12.10-p1+tuxcare    |
+| CVE-2016-4861       | Critical | 1.12.10             | 1.12.10-p1+tuxcare    |
+| CVE-2015-7695       | Critical | 1.12.10             | 1.12.10-p1+tuxcare    |
+| CVE-2015-5723       | High     | 1.12.10             | 1.12.10-p1+tuxcare    |
+| CVE-2015-5161       | Medium   | 1.12.10             | 1.12.10-p1+tuxcare    |
+| CVE-2015-3154       | Medium   | 1.12.10             | 1.12.10-p1+tuxcare    |
+| GHSA-gff2-p6vm-3p8g | Medium   | 1.12.10             | 1.12.10-p1+tuxcare    |
 
 </template>
 
@@ -205,10 +191,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const symfonyjson =
+const zf1json =
 `{
     "require": {
-        "symfony/process": "6.4.13-p2+tuxcare"
+        "zendframework/zf1": "1.12.10-p1+tuxcare"
     }
 }`
 
