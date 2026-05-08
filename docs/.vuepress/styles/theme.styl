@@ -272,6 +272,29 @@ badge[type="danger"]
   &:hover img
     opacity 1
 
+// "Ask AI" button injected to the left of the copy button. Click sends the
+// snippet + page URL/title to Chat.vue via the shared `chatState` store.
+.global-ask-ai-btn
+  position absolute
+  top 0.5rem
+  right 2.5rem
+  background none
+  border none
+  cursor pointer
+  padding 0.2rem
+  z-index 10
+  line-height 0
+  svg
+    fill #ccc
+    width 20px
+    height 20px
+    opacity 0.6
+    transition fill 0.3s, opacity 0.3s
+
+  &:hover svg
+    fill #1994f9
+    opacity 1
+
 // Reserve a gutter on the right of long code lines so they don't run under
 // the copy button, and fade the trailing edge into the block background so
 // truncated content is visually obvious. Users can scroll horizontally to read it.

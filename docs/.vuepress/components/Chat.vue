@@ -65,6 +65,7 @@
       <div class="iframe-container" ref="iframeContainer">
         <iframe
           :src="iframeUrl"
+          :key="iframeUrl"
           class="chat-iframe"
           frameborder="0"
           allow="clipboard-read; clipboard-write; fullscreen"
@@ -79,15 +80,23 @@
 </template>
 
 <script>
+import { chatState } from "../composables/useChat";
+
+const CHAT_BASE_URL = "https://chatbot.cloudlinux.com/docs/tuxcare";
+const CHAT_ORIGIN = "https://chatbot.cloudlinux.com";
+
 export default {
   data() {
     return {
       showChat: false,
       isLoading: true,
-      iframeUrl: "https://chatbot.cloudlinux.com/docs/tuxcare",
+      iframeUrl: CHAT_BASE_URL,
       windowWidth: 0, // Changed from window.innerWidth to avoid SSR error
       showTooltip: true,
       tooltipDismissDuration: 2 * 60 * 60 * 1000, // 2 hours in milliseconds
+      // Held until the iframe finishes loading, then sent via postMessage as
+      // a backup path in case the chatbot doesn't honor `?prompt=`.
+      pendingPrompt: null,
     };
   },
   computed: {
@@ -102,9 +111,16 @@ export default {
     window.addEventListener("resize", this.handleResize);
     this.handleResize(); // Set initial windowWidth on client-side
     this.updateTooltipVisibility();
+    // Listen for "Ask AI" clicks on code blocks — bumping chatState.trigger
+    // is how those buttons request the chat to open with a prefilled prompt.
+    this.unwatchTrigger = this.$watch(
+      () => chatState.trigger,
+      () => this.openWithPrompt(chatState.prompt)
+    );
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.handleResize);
+    if (this.unwatchTrigger) this.unwatchTrigger();
   },
   methods: {
     toggleChat() {
@@ -118,6 +134,32 @@ export default {
     },
     onIframeLoad() {
       this.isLoading = false;
+      if (this.pendingPrompt) {
+        const iframe = this.$refs.iframeContainer?.querySelector("iframe");
+        if (iframe?.contentWindow) {
+          try {
+            iframe.contentWindow.postMessage(
+              { type: "prefill", prompt: this.pendingPrompt },
+              CHAT_ORIGIN
+            );
+          } catch (_) {
+            /* targetOrigin mismatch or iframe not ready — ignore */
+          }
+        }
+        this.pendingPrompt = null;
+      }
+    },
+    openWithPrompt(prompt) {
+      if (!prompt) return;
+      // Forces the iframe to (re)load with the prompt seeded as a query param.
+      // The :key="iframeUrl" binding on the iframe ensures Vue re-mounts it
+      // even when only the query changes.
+      this.iframeUrl =
+        CHAT_BASE_URL + "?prompt=" + encodeURIComponent(prompt);
+      this.pendingPrompt = prompt;
+      this.isLoading = true;
+      if (!this.showChat) this.showChat = true;
+      this.dismissTooltip();
     },
     dismissTooltip() {
       const currentTime = new Date().getTime();

@@ -7,6 +7,12 @@
     </div>
 
     <div class="tab-content code-block-wrapper">
+      <button class="ask-ai-button" @click="askAi" aria-label="Ask AI about this code" title="Ask AI about this code">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M11.5 2.5a.5.5 0 0 1 .96 0l1.36 4.06a3 3 0 0 0 1.92 1.92l4.06 1.36a.5.5 0 0 1 0 .96l-4.06 1.36a3 3 0 0 0-1.92 1.92l-1.36 4.06a.5.5 0 0 1-.96 0l-1.36-4.06a3 3 0 0 0-1.92-1.92L4.16 11.3a.5.5 0 0 1 0-.96l4.06-1.36a3 3 0 0 0 1.92-1.92zM18 16a.4.4 0 0 1 .76 0l.42 1.27a1.5 1.5 0 0 0 .95.95l1.27.42a.4.4 0 0 1 0 .76l-1.27.42a1.5 1.5 0 0 0-.95.95l-.42 1.27a.4.4 0 0 1-.76 0l-.42-1.27a1.5 1.5 0 0 0-.95-.95l-1.27-.42a.4.4 0 0 1 0-.76l1.27-.42a1.5 1.5 0 0 0 .95-.95z"/>
+        </svg>
+      </button>
+
       <button class="copy-button" @click="copyCode" aria-label="Copy code">
         <img v-if="!copied" src="/images/copy.webp" width="16" height="16" alt="Copy" />
         <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -21,6 +27,8 @@
 </template>
 
 <script>
+import { openChatWithPrompt, buildCodePrompt } from '../composables/useChat'
+
 export default {
   name: 'CodeTabs',
   props: {
@@ -57,6 +65,10 @@ export default {
         this.copied = true
         setTimeout(() => (this.copied = false), 2000)
       })
+    },
+    askAi() {
+      const text = this.tabs[this.activeTab].content
+      openChatWithPrompt(buildCodePrompt(text))
     }
   }
 }
@@ -187,6 +199,30 @@ code {
 }
 
 .copy-button:hover img {
+  opacity: 1;
+}
+
+.ask-ai-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  z-index: 10;
+}
+
+.ask-ai-button svg {
+  width: 20px;
+  height: 20px;
+  fill: #ccc;
+  opacity: 0.6;
+  transition: fill 0.2s, opacity 0.2s;
+}
+
+.ask-ai-button:hover svg {
+  fill: #1994f9;
   opacity: 1;
 }
 
