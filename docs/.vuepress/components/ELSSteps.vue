@@ -86,7 +86,7 @@
   margin: 0.5rem 0;
 }
 
-.els-steps-body :deep(code) {
+.els-steps-body :deep(:not(pre) > code) {
   font-size: 0.85rem;
 }
 </style>

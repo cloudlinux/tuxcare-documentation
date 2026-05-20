@@ -635,15 +635,15 @@ TuxCare Technical Support is designed for enterprise clients with trained IT sta
 
 1. Technical Support ticketing system: [https://tuxcare.com/support-portal/](https://tuxcare.com/support-portal/)
 
-* Acceptance of requests 24 hours a day, 365 days a year
-* Unlimited number of tickets may be submitted
-* Customers will be supplied with instructions describing the use of the ticketing system during onboarding
-* User accounts will be created for each nominated user within each client organization
-* User accounts will have access to log, view and respond to tickets
+   * Acceptance of requests 24 hours a day, 365 days a year
+   * Unlimited number of tickets may be submitted
+   * Customers will be supplied with instructions describing the use of the ticketing system during onboarding
+   * User accounts will be created for each nominated user within each client organization
+   * User accounts will have access to log, view and respond to tickets
 
 2. Email: acceptance of requests 24 hours a day, 365 days a year:
 
-* New tickets may be created by simply emailing the support desk: [support@tuxcare.com](support@tuxcare.com)
+   * New tickets may be created by simply emailing the support desk: [support@tuxcare.com](support@tuxcare.com)
 
 :::warning
 If you are a user of our server product AMI's on AWS Marketplace, before you contact support, you should have your AWS accountId to hand, there are various ways to find it.
