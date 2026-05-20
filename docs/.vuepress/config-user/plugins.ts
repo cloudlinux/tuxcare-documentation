@@ -1,9 +1,11 @@
 import {containerPlugin} from "@vuepress/plugin-container";
 import {ContainerPluginOptions} from "@vuepress/plugin-container/lib/node/containerPlugin";
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { prismjsPlugin } from '@vuepress/plugin-prismjs'
 import { path } from '@vuepress/utils'
 
 export default [
+    prismjsPlugin(),
     containerPlugin({
         type: 'warning',
         before: info => `<div class="warning custom-block"><p class="custom-block-title">${info}</p>`,
