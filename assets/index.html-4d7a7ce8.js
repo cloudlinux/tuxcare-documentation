@@ -1,0 +1,1 @@
+const t=JSON.parse(`{"key":"v-723af926","path":"/els-for-os/debian-10-els/","title":"Debian 10 ELS","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Installation","slug":"installation","link":"#installation","children":[]},{"level":2,"title":"What's Next?","slug":"what's-next?","link":"#what's-next?","children":[]}]}`);export{t as data};

@@ -1,0 +1,1 @@
+const t=JSON.parse(`{"key":"v-005219b3","path":"/els-for-os/amazon-linux-2-els/","title":"Amazon Linux 2 ELS","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Installation","slug":"installation","link":"#installation","children":[]},{"level":2,"title":"What's Next?","slug":"what's-next?","link":"#what's-next?","children":[]}]}`);export{t as data};

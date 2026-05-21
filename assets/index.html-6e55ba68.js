@@ -1,0 +1,1 @@
+const t=JSON.parse(`{"key":"v-5944124d","path":"/els-for-os/centos-7-els/","title":"CentOS 7 ELS","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Installation","slug":"installation","link":"#installation","children":[]},{"level":2,"title":"What's Next?","slug":"what's-next?","link":"#what's-next?","children":[]}]}`);export{t as data};

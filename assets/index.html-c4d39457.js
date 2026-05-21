@@ -1,0 +1,1 @@
+const t=JSON.parse(`{"key":"v-6edc31d6","path":"/els-for-os/ubuntu-20-04-els/","title":"Ubuntu 20.04 ELS","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Installation","slug":"installation","link":"#installation","children":[]},{"level":2,"title":"What's Next?","slug":"what's-next?","link":"#what's-next?","children":[]}]}`);export{t as data};

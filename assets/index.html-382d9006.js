@@ -1,0 +1,1 @@
+const l=JSON.parse(`{"key":"v-0e283951","path":"/els-for-os/alpine-linux-3-18-els/","title":"Alpine Linux 3.18 ELS","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Installation","slug":"installation","link":"#installation","children":[]},{"level":2,"title":"What's Next?","slug":"what's-next?","link":"#what's-next?","children":[]}]}`);export{l as data};

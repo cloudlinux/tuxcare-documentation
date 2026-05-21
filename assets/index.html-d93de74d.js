@@ -1,0 +1,1 @@
+const l=JSON.parse(`{"key":"v-4a520a16","path":"/els-for-os/oracle-linux-6-els/","title":"Oracle Linux 6 ELS","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Installation","slug":"installation","link":"#installation","children":[]},{"level":2,"title":"What's Next?","slug":"what's-next?","link":"#what's-next?","children":[]}]}`);export{l as data};
