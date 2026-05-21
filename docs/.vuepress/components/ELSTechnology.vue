@@ -963,7 +963,7 @@ const techData = [
       },
       {
         name: "Nuxt",
-        versions: "0.10.7 | 2.18.1",
+        versions: "0.10.7 | 1.4.5 | 2.18.1 | 3.2.0 | 3.12.3 | 3.12.4 | 4.0.3",
         link: "./nuxt/",
       },
       {
@@ -978,7 +978,7 @@ const techData = [
       },
       {
         name: "Nuxt",
-        versions: "0.10.7 | 2.18.1",
+        versions: "0.10.7 | 1.4.5 | 2.18.1 | 3.2.0 | 3.12.3 | 3.12.4 | 4.0.3",
         link: "./nuxt/",
       },
       {
