@@ -285,6 +285,8 @@ export default {
                     icon: '/images/firebase.webp',
                 },
                 {
+                    path: '/els-for-libraries/google-protobuf/',
+                    icon: '/images/php-logo.webp',
                     path: '/els-for-libraries/guzzle/',
                     icon: '/images/guzzle.webp',
                 },

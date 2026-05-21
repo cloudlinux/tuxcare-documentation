@@ -9,6 +9,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3, 44.0.3, 45.0.7
 * **deepdiff** 6.2.3
 * **dnspython** 2.3.0
+* **fastmcp** 2.14.5, 2.14.7
 * **flask-cors** 4.0.2
 * **future** 1.0.0
 * **GitPython** 3.1.31
@@ -18,6 +19,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **idna** 2.1, 2.8, 2.10, 3.6
 * **jaraco-context** 5.3.0
 * **Jinja2** 2.11.3, 3.0.3
+* **keras** 2.15.0
 * **langchain-core** 0.3.83
 * **LightGBM** 3.3.5
 * **MLflow** 2.9.1, 2.22.4
@@ -28,13 +30,15 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **pdfkit** 0.6.1
 * **pip** 9.0
 * **Pillow** 8.4.0, 9.4.0, 9.5.0, 10.4.0, 11.2.1, 11.3.0
-* **protobuf** 3.17.0, 3.20.0, 4.24.3, 4.25.8
+* **protobuf** 3.17.0, 3.20.3, 4.24.3, 4.25.8
+* **pyarrow** 12.0.1
 * **pydantic** 1.10.5
 * **PyJWT** 1.7.1, 2.3.0, 2.8.0, 2.10.1
 * **pymongo** 3.13.0
 * **pymysql** 0.10.1
 * **pyOpenSSL** 23.3.0, 24.3.0, 25.3.0
 * **pypdf** 5.9.0
+* **pytest** 7.4.4, 8.4.2
 * **python-jose** 3.3.0
 * **python-multipart** 0.0.6
 * **PyYAML** 3.13, 5.3.1

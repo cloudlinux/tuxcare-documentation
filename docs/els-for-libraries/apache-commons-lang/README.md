@@ -4,8 +4,8 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Commons Lang provides secur
 
 ## Supported Versions
 
-* Apache Commons Lang 2.4, 2.6 
-* Apache Commons Lang3 3.4, 3.8.1, 3.10, 3.12.0, 3.17.0
+* Apache Commons Lang 2.4, 2.6
+* Apache Commons Lang3 3.4, 3.8.1, 3.10, 3.12.0, 3.14.0, 3.17.0
 
 ## Installation
 

@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Log4j provides security pat
 
 ## Supported Versions
 
-* Apache Log4j 1.2.17
+* Apache Log4j 1.2.16, 1.2.17
 
 ## Installation
 

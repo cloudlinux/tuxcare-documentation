@@ -86,7 +86,7 @@ const techData = [
     projects: [
       {
         name: "Apache Avro",
-        versions: "1.10.2",
+        versions: "1.7.6 | 1.7.7 | 1.10.2 | 1.11.3",
         link: "./java-libraries/",
       },
       {
@@ -96,12 +96,12 @@ const techData = [
       },
       {
         name: "Apache Commons BeanUtils",
-        versions: "1.9.4",
+        versions: "1.6 | 1.8.3 | 1.9.4",
         link: "./java-libraries/",
       },
       {
         name: "Apache Commons Compress",
-        versions: "1.20",
+        versions: "1.19 | 1.20 | 1.26.2",
         link: "./java-libraries/",
       },
       {
@@ -111,7 +111,7 @@ const techData = [
       },
       {
         name: "Apache Commons IO",
-        versions: "2.5 | 2.7",
+        versions: "2.5 | 2.6 | 2.7 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -121,7 +121,7 @@ const techData = [
       },
       {
         name: "Apache Commons Lang3",
-        versions: "3.4 | 3.8.1 | 3.10 | 3.12.0 | 3.17.0",
+        versions: "3.4 | 3.8.1 | 3.10 | 3.12.0 | 3.14.0 | 3.17.0",
         link: "./apache-commons-lang/",
       },
       {
@@ -141,7 +141,7 @@ const techData = [
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.17",
+        versions: "1.2.16 | 1.2.17",
         link: "./apache-log4j/",
       },
       {
@@ -237,7 +237,7 @@ const techData = [
       },
       {
         name: "Google Guava",
-        versions: "20.0 | 25.1-android | 25.1-jre | 27.1-android | 27.1-jre | 30.1-jre | 31.1-jre",
+        versions: "16.0.1 | 18.0 | 20.0 | 25.1-android | 25.1-jre | 27.1-android | 27.1-jre | 30.1-jre | 31.1-jre",
         link: "./java-libraries/",
       },
       {
@@ -332,7 +332,7 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "4.1.115.Final | 4.1.63.Final",
+        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final",
         link: "./java-libraries/",
       },
       {
@@ -502,7 +502,7 @@ const techData = [
       },
       {
         name: "Xerces",
-        versions: "2.11.0",
+        versions: "2.11.0 | 2.12.0",
         link: "./java-libraries/",
       },
       {
@@ -637,13 +637,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "devalue",
+        versions: "2.0.1 | 4.3.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "diff",
         versions: "1.0.2 | 1.4.0 | 7.0.0",
         link: "./javascript-libraries/",
       },
       {
-        name: "DOMPurify",
-        versions: "2.3.0 | 2.4.3 | 2.5.8",
+        name: "dompurify",
+        versions: "2.3.0 | 2.4.3 | 2.5.8 | 2.5.9 | 3.1.6 | 3.2.3",
         link: "./javascript-libraries/",
       },
       {
@@ -669,6 +674,11 @@ const techData = [
       {
         name: "es5-ext",
         versions: "0.10.7",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "esbuild",
+        versions: "0.13.8 | 0.14.22 | 0.14.25 | 0.14.54 | 0.15.18 | 0.15.5 | 0.17.19 | 0.18.17 | 0.18.20 | 0.19.12 | 0.20.1 | 0.21.5",
         link: "./javascript-libraries/",
       },
       {
@@ -742,6 +752,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "hapi-hoek",
+        versions: "6.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "hawk",
         versions: "0.13.1 | 1.0.0 | 1.1.1 | 2.3.1 | 3.1.0",
         link: "./javascript-libraries/",
@@ -753,7 +768,7 @@ const techData = [
       },
       {
         name: "hoek",
-        versions: "0.8.5 | 0.9.1 | 2.11.1 | 2.12.0 | 2.14.0 | 2.16.3",
+        versions: "0.8.5 | 0.9.1 | 2.11.1 | 2.12.0 | 2.14.0 | 2.16.3 | 4.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -798,7 +813,7 @@ const techData = [
       },
       {
         name: "js-yaml",
-        versions: "3.3.1 | 3.7.0",
+        versions: "3.3.1 | 3.7.0 | 4.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -848,7 +863,7 @@ const techData = [
       },
       {
         name: "Lodash",
-        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.5.0 | 4.17.15 | 4.17.19",
+        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
         link: "./lodash/",
       },
       {
@@ -952,6 +967,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "nguniversal-express-engine",
+        versions: "10.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "next",
         versions: "12.3.7 | 13.5.11 | 14.2.35 | 16.0.6",
         link: "./next/",
@@ -1012,9 +1032,24 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "picomatch",
+        versions: "2.3.1 | 4.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "PostCSS",
         versions: "5.2.18 | 6.0.23 | 7.0.39 | 8.3.6",
         link: "./postcss/",
+      },
+      {
+        name: "prismjs",
+        versions: "1.27.0 | 1.29.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "protobufjs",
+        versions: "6.11.6",
+        link: "./javascript-libraries/",
       },
       {
         name: "pug",
@@ -1182,6 +1217,11 @@ const techData = [
         link: "./undici/",
       },
       {
+        name: "uuid",
+        versions: "3.4.0 | 8.3.2 | 9.0.1 | 11.0.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "validator",
         versions: "8.2.0 | 10.11.0",
         link: "./javascript-libraries/",
@@ -1313,6 +1353,11 @@ const techData = [
         link: "./fastapi/",
       },
       {
+        name: "fastmcp",
+        versions: "2.14.5 | 2.14.7",
+        link: "./python-libraries/",
+      },
+      {
         name: "Flask",
         versions: "0.12.5 | 1.1.2 | 1.1.4 | 2.2.1",
         link: "./flask/",
@@ -1360,6 +1405,11 @@ const techData = [
       {
         name: "Jinja2",
         versions: "2.11.3 | 3.0.3",
+        link: "./python-libraries/",
+      },
+      {
+        name: "keras",
+        versions: "2.15.0",
         link: "./python-libraries/",
       },
       {
@@ -1423,6 +1473,11 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "pyarrow",
+        versions: "12.0.1",
+        link: "./python-libraries/",
+      },
+      {
         name: "pydantic",
         versions: "1.10.5",
         link: "./python-libraries/",
@@ -1450,6 +1505,11 @@ const techData = [
       {
         name: "pypdf",
         versions: "5.9.0",
+        link: "./python-libraries/",
+      },
+      {
+        name: "pytest",
+        versions: "7.4.4 | 8.4.2",
         link: "./python-libraries/",
       },
       {
@@ -1599,6 +1659,9 @@ const techData = [
         link: "./firebase-php-jwt/",
       },
       {
+        name: "Google Protobuf",
+        versions: "3.24.4",
+        link: "./google-protobuf/",
         name: "Guzzle",
         versions: "6.3.3",
         link: "./guzzle/",

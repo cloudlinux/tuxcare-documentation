@@ -4,12 +4,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported Java Libraries
 
-* **Apache Avro** 1.10.2
+* **Apache Avro** 1.7.6, 1.7.7, 1.10.2, 1.11.3
 * **Apache Axis** 1.4
-* **Apache Commons BeanUtils** 1.9.4
-* **Apache Commons Compress** 1.20
+* **Apache Commons BeanUtils** 1.6, 1.8.3, 1.9.4
+* **Apache Commons Compress** 1.19, 1.20, 1.26.2
 * **Apache Commons HttpClient** 3.1
-* **Apache Commons IO** 2.5, 2.7
+* **Apache Commons IO** 2.5, 2.6, 2.7, 2.11.0
 * **Apache HttpComponents Client** 4.5.2
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
 * **Apache Thrift** 0.9.1, 0.9.3
@@ -22,7 +22,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **EdDSA** 0.3.0
 * **el-spec** 3.0.0
 * **Google Gson** 2.8.5, 2.9.1
-* **Google Guava** 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
+* **Google Guava** 16.0.1, 18.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
 * **H2 Database** 1.4.200
@@ -38,7 +38,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **LZ4** 1.8.1
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **NekoHTML** 1.9.22
-* **Netty** 4.1.115.Final, 4.1.63.Final
+* **Netty** 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final
 * **Nimbus JOSE + JWT** 9.22, 9.24.4
 * **OkHttp3** 3.14.9
 * **Okio** 2.8.0, 2.10.0
@@ -53,7 +53,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Thymeleaf** 3.0.15.RELEASE
 * **Undertow** 2.2.33.Final, 2.3.10.Final
 * **Woodstox** 5.0.3
-* **Xerces** 2.11.0
+* **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0
 
 Other libraries upon request.
