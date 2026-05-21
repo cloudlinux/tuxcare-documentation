@@ -962,11 +962,6 @@ const techData = [
         link: "./node-fetch/",
       },
       {
-        name: "Nuxt",
-        versions: "0.10.7 | 1.4.5 | 2.18.1 | 3.2.0 | 3.12.3 | 3.12.4 | 4.0.3",
-        link: "./nuxt/",
-      },
-      {
         name: "node-forge",
         versions: "0.10.0",
         link: "./javascript-libraries/",
