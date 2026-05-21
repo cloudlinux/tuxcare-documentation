@@ -55,6 +55,11 @@ export default [
         link: "/els-for-applications/",
     },
     {
+        title: "SecureChain for Open Source",
+        description: "delivers verified, signed, continuously patched open-source packages from a trusted, TuxCare-managed registry — drop-in replacements that extend protection beyond upstream end of life. Available for JavaScript at launch, with Python, Java, Go, and PHP on the roadmap.",
+        link: "/securechain/",
+    },
+    {
         title: "Subscription Management Portal",
         description: "The TuxCare subscription management portal is designed to easily manage your licenses of TuxCare products and services by means of a user-friendly interface.",
         link: "/tuxcare-cln/",

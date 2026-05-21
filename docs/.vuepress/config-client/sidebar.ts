@@ -519,6 +519,34 @@ export default {
             ]
         },
     ],
+    '/securechain/': [
+        {
+            collapsable: false,
+            children: [
+                "/securechain/",
+                {
+                    title: 'JavaScript',
+                    type: 'section-header',
+                    icon: '/images/javascript.webp',
+                },
+                {
+                    path: '/securechain/lodash/',
+                    icon: '/images/lodash-logo.webp',
+                },
+                // Python / Java / Go / Rust / PHP section-headers and entries
+                // are added here as those ecosystems launch.
+                {
+                    title: 'Resources',
+                    type: 'section-header',
+                    icon: '/images/star.webp',
+                },
+                "/securechain/managing-securechain-repository/",
+                // VEX, CVE Tracker, and Upgrade are surfaced as <WhatsNext>
+                // cards on the landing page and the lodash page rather than
+                // as standalone sidebar entries.
+            ]
+        },
+    ],
     '/els-for-applications/': [
         {
             collapsable: false,

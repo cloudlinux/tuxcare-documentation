@@ -27,6 +27,7 @@ const titleMap = {
   '/els-for-os/': 'ELS for OS',
   '/els-for-runtimes/': 'ELS for Runtimes',
   '/enterprise-support-for-almalinux/': 'Enterprise Support for AlmaLinux',
+  '/securechain/': 'SecureChain for Open Source Software',
 };
 
 const breadCrumbs = computed(() => {
