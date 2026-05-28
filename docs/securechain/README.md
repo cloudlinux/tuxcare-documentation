@@ -12,16 +12,18 @@
 
 ## Vulnerability Coverage and Target Response Times
 
-TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the severity of security vulnerabilities. Our severity rating system for patching vulnerabilities integrates both NVD scoring and vendor scoring (when available). When the vendor's score is lower than the NVD score, we prioritize the NVD score.
+TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the severity of security vulnerabilities. Our severity rating system integrates both NVD scoring and vendor scoring (when available); when the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
-Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
+Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. SecureChain commits to substantially faster timelines than PCI DSS, HIPAA, and FISMA require.
 
-* **Vulnerability coverage.** TuxCare shall provide security patches for critical- and high-risk (CVSS 7.0 and above), medium-risk (CVSS 4.0 to 6.9), and low-risk (CVSS 0.1 to 3.9) vulnerabilities. TuxCare reserves the right to offer a mitigation strategy as an alternative to a direct code fix.
+- **Vulnerability coverage.** TuxCare shall provide security patches for critical-risk (CVSS 9.0 and above), high-risk (CVSS 7.0 to 8.9), medium-risk (CVSS 4.0 to 6.9), and low-risk (CVSS 0.1 to 3.9) vulnerabilities across both the managed catalog and on-demand package requests. TuxCare reserves the right to offer a mitigation strategy as an alternative to a direct code fix.
 
-* **Response time.** TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
-    * **High- and critical-risk vulnerabilities (CVSS 7.0 and above):** Patches are provided within 14 days from the date the vulnerabilities are publicly disclosed.
-    * **Medium-risk vulnerabilities (CVSS 4.0 to 6.9):** Patches are provided within 60 days from the date the vulnerabilities are publicly disclosed.
-    * **Low-risk vulnerabilities (CVSS 0.1 to 3.9):** Patches are provided within 90 days from the date the vulnerabilities are publicly disclosed.
+- **Response time.** TuxCare will make commercially reasonable efforts to adhere to the following guidelines when addressing vulnerabilities:
+
+  * **Critical-risk (CVSS 9.0 and above):** 7 calendar days from public disclosure.
+  * **High-risk (CVSS 7.0 to 8.9):** 14 calendar days from public disclosure.
+  * **Medium-risk (CVSS 4.0 to 6.9):** 30 calendar days from public disclosure.
+  * **Low-risk (CVSS 0.1 to 3.9):** 60 calendar days from public disclosure.
 
 ## Incident Reporting and Response Timeframe
 
