@@ -58,7 +58,6 @@ export default [
     // loader is injected at runtime instead of being a static <script src>,
     // so it is not flagged by SRI scanners (unsafe_sri_v2). SRI cannot be
     // applied to gtag.js anyway, as Google rotates it without versioning.
-    // TODO: replace G-XXXXXXXXXX with the real GA4 Measurement ID for docs.tuxcare.com.
     "script",
     {},
     `
@@ -67,11 +66,11 @@ export default [
       (function(){
         var s = document.createElement('script');
         s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RSVSWSBDSK';
         document.head.appendChild(s);
       })();
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-RSVSWSBDSK');
       `,
   ],
   [
