@@ -66,11 +66,11 @@ export default [
       (function(){
         var s = document.createElement('script');
         s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RSVSWSBDSK';
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z539WTSZ80';
         document.head.appendChild(s);
       })();
       gtag('js', new Date());
-      gtag('config', 'G-RSVSWSBDSK');
+      gtag('config', 'G-Z539WTSZ80');
       `,
   ],
   [
