@@ -73,6 +73,26 @@ export default [
       `,
   ],
   [
+    // Google Analytics 4 (GA4) — loaded the same way GTM is: the gtag.js
+    // loader is injected at runtime instead of being a static <script src>,
+    // so it is not flagged by SRI scanners (unsafe_sri_v2). SRI cannot be
+    // applied to gtag.js anyway, as Google rotates it without versioning.
+    "script",
+    {},
+    `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      (function(){
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z539WTSZ80';
+        document.head.appendChild(s);
+      })();
+      gtag('js', new Date());
+      gtag('config', 'G-Z539WTSZ80');
+      `,
+  ],
+  [
     "script",
     {},
     `
