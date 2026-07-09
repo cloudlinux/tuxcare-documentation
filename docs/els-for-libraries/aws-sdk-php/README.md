@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained AWS SDK for PHP release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require aws/aws-sdk-php:3.263.4-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require aws/aws-sdk-php:3.263.4-p2+tuxcare` },
      { title: 'composer.json', content: pkgjson }
    ]" />
 
@@ -148,7 +148,7 @@ const cli =
 const pkgjson =
 `{
     "require": {
-        "aws/aws-sdk-php": "3.263.4-p1+tuxcare"
+        "aws/aws-sdk-php": "3.263.4-p2+tuxcare"
     }
 }`
 

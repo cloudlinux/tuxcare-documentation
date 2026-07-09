@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained Zend HTTP release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p2+tuxcare` },
      { title: 'composer.json', content: zendhttpjson }
    ]" />
 
@@ -148,7 +148,7 @@ const cli =
 const zendhttpjson =
 `{
     "require": {
-        "zendframework/zend-http": "2.5.6-p1+tuxcare"
+        "zendframework/zend-http": "2.5.6-p2+tuxcare"
     }
 }`
 
