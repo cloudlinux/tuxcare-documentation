@@ -104,6 +104,14 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
+## Resolved GHSA Advisories
+
+GitHub Security Advisories (GHSA) are not indexed on the public CVE Tracker, so the ones resolved in ELS for Zend HTTP are listed here.
+
+| Advisory              | Fixed in version   |
+|-----------------------|--------------------|
+| GHSA-cg8w-5jrc-675g   | 2.5.6-p2+tuxcare   |
+
 ## What's Next?
 
 <WhatsNext hide-title>

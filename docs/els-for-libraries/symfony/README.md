@@ -121,15 +121,11 @@ Other versions upon request.
 
    <template #Symfony_Mime>
 
-   Pick the release that matches your Symfony major version:
-
    ```text
-   composer require symfony/mime:5.4.45-p1+tuxcare
-   composer require symfony/mime:6.4.37-p2+tuxcare
    composer require symfony/mime:7.4.9-p1+tuxcare
    ```
 
-   `composer.json` (example for 7.4.x):
+   `composer.json`:
 
    ```text
    {
@@ -143,14 +139,11 @@ Other versions upon request.
 
    <template #Symfony_Routing>
 
-   Pick the release that matches your Symfony major version:
-
    ```text
-   composer require symfony/routing:5.4.48-p1+tuxcare
    composer require symfony/routing:7.4.9-p1+tuxcare
    ```
 
-   `composer.json` (example for 7.4.x):
+   `composer.json`:
 
    ```text
    {
