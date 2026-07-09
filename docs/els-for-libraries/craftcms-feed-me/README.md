@@ -104,7 +104,7 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in CraftCMS Feed Me
+## Resolved CVEs
 
 | CVE-ID            | Severity | Vulnerable versions | Fixed in Version  |
 | ----------------- | -------- | ------------------- | ----------------- |
