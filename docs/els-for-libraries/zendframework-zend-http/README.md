@@ -104,12 +104,13 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved GHSA Advisories
+## Resolved CVEs
 
-GitHub Security Advisories (GHSA) are not indexed on the public CVE Tracker, so the ones resolved in ELS for Zend HTTP are listed here.
+Fixes for the following vulnerabilities are available in ELS for Zend HTTP from TuxCare:
 
-| Advisory              | Fixed in version   |
+| CVE ID                | Fixed in version   |
 |-----------------------|--------------------|
+| CVE-2021-3007         | 2.5.6-p2+tuxcare   |
 | GHSA-cg8w-5jrc-675g   | 2.5.6-p2+tuxcare   |
 
 ## What's Next?
