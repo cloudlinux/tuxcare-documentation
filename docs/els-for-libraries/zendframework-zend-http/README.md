@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained Zend HTTP release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p2+tuxcare` },
      { title: 'composer.json', content: zendhttpjson }
    ]" />
 
@@ -103,6 +103,15 @@ it usually means your project requires a package version that is not yet availab
 ```
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
+
+## Resolved CVEs
+
+Fixes for the following vulnerabilities are available in ELS for Zend HTTP from TuxCare:
+
+| CVE ID                | Fixed in version   |
+|-----------------------|--------------------|
+| CVE-2021-3007         | 2.5.6-p2+tuxcare   |
+| GHSA-cg8w-5jrc-675g   | 2.5.6-p2+tuxcare   |
 
 ## What's Next?
 
@@ -148,7 +157,7 @@ const cli =
 const zendhttpjson =
 `{
     "require": {
-        "zendframework/zend-http": "2.5.6-p1+tuxcare"
+        "zendframework/zend-http": "2.5.6-p2+tuxcare"
     }
 }`
 
