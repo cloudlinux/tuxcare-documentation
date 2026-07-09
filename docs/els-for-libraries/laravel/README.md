@@ -254,7 +254,7 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 |----------------|----------|----------------------|---------------------|
 | CVE-2025-27515 | Medium   | < 10.48.29           | 10.48.28-p1+tuxcare |
 | AIKIDO-2026-10659 | —      | —                    | 10.50.2-p3+tuxcare  |
-| GHSA-5vg9-5847-vvmq | —    | —                    | 10.50.2-p3+tuxcare  |
+| GHSA-5vg9-5847-vvmq | High     | < 12.60.0, <= 13.9.0 | 10.50.2-p3+tuxcare  |
 
 </template>
 
@@ -263,8 +263,8 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
 |----------------|----------|----------------------|---------------------|
 | CVE-2025-27515 | Medium   | >= 11.0.0, < 11.44.1 | 11.44.0-p1+tuxcare  |
-| GHSA-5vg9-5847-vvmq | —   | —                    | 11.44.0-p2+tuxcare  |
-| GHSA-crmm-hgp2-wgrp | —   | —                    | 11.44.0-p2+tuxcare  |
+| GHSA-5vg9-5847-vvmq | High     | < 12.60.0, <= 13.9.0 | 11.44.0-p2+tuxcare  |
+| GHSA-crmm-hgp2-wgrp | Medium   | < 12.61.1, < 13.12.0 | 11.44.0-p2+tuxcare  |
 | AIKIDO-2026-10659 | —      | —                    | 11.51.0-p2+tuxcare  |
 
 </template>
@@ -274,7 +274,7 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
 |----------------|----------|----------------------|---------------------|
 | AIKIDO-2026-10659 | —      | —                    | 12.58.0-p2+tuxcare  |
-| GHSA-5vg9-5847-vvmq | —    | —                    | 12.58.0-p2+tuxcare  |
+| GHSA-5vg9-5847-vvmq | High     | < 12.60.0, <= 13.9.0 | 12.58.0-p2+tuxcare  |
 
 </template>
 
