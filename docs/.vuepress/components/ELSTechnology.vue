@@ -2144,7 +2144,7 @@ const techData = [
         link: "./zendframework/",
       },
       {
-        name: "Zend Framework 2",
+        name: "Zend Framework",
         versions: "2.4.13",
         link: "./zendframework/",
       },
