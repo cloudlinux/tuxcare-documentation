@@ -171,6 +171,10 @@ export default {
                     icon: '/images/velocity-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/elasticsearch/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-libraries/hibernate/',
                     icon: '/images/hibernate.webp',
                 },
@@ -345,11 +349,7 @@ export default {
                     icon: '/images/symfony-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/zendframework-zf1/',
-                    icon: '/images/zf1.webp',
-                },
-                {
-                    path: '/els-for-libraries/zendframework-zend-http/',
+                    path: '/els-for-libraries/zendframework/',
                     icon: '/images/zf1.webp',
                 },
                 {

@@ -276,6 +276,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Elasticsearch",
+        versions: "7.16.3",
+        link: "./elasticsearch/",
+      },
+      {
         name: "excel-streaming-reader",
         versions: "5.0.2",
         link: "./java-libraries/",
@@ -319,6 +324,11 @@ const techData = [
         name: "Hibernate Search",
         versions: "5.11.10.Final",
         link: "./hibernate/",
+      },
+      {
+        name: "HPPC",
+        versions: "0.8.1",
+        link: "./java-libraries/",
       },
       {
         name: "HtmlUnit",
@@ -597,7 +607,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 10.0.26 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28",
+        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30",
         link: "./jetty/",
       },
       {
@@ -673,7 +683,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.27.2 | 0.33.0",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.6.2 | 1.6.8",
         link: "./javascript-libraries/",
       },
       {
@@ -1323,7 +1333,7 @@ const techData = [
       },
       {
         name: "pdfjs-dist",
-        versions: "2.16.105 | 3.11.174",
+        versions: "2.14.305 | 2.16.105 | 3.11.174",
         link: "./javascript-libraries/",
       },
       {
@@ -2116,12 +2126,17 @@ const techData = [
       {
         name: "Zend Framework 1",
         versions: "1.12.10",
-        link: "./zendframework-zf1/",
+        link: "./zendframework/",
+      },
+      {
+        name: "Zend Framework 2",
+        versions: "2.4.13",
+        link: "./zendframework/",
       },
       {
         name: "Zend HTTP",
         versions: "2.5.6",
-        link: "./zendframework-zend-http/",
+        link: "./zendframework/",
       },
     ],
   },

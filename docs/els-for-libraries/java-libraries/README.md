@@ -37,6 +37,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Google OAuth Client** 1.25.0
 * **H2 Database** 1.4.200
 * **Hazelcast** 4.2.8
+* **HPPC** 0.8.1
 * **HtmlUnit** 2.70.0
 * **iText** 2.1.7
 * **JasperReports** 3.7.4
