@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained CraftCMS release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require craftcms/cms:3.9.15-p3+tuxcare` },
+     { title: 'Composer CLI', content: `composer require craftcms/cms:3.9.15-p4+tuxcare` },
      { title: 'composer.json', content: packagejson }
    ]" />
 
@@ -103,6 +103,29 @@ it usually means your project requires a package version that is not yet availab
 ```
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
+
+## Resolved CVEs
+
+Fixes for the following vulnerabilities are available in ELS for CraftCMS from TuxCare:
+
+| CVE ID                | Fixed in version     |
+|-----------------------|----------------------|
+| CVE-2023-33495        | 3.9.15-p4+tuxcare    |
+| CVE-2024-52291        | 3.9.15-p4+tuxcare    |
+| CVE-2025-35939        | 3.9.15-p4+tuxcare    |
+| CVE-2025-54417        | 3.9.15-p4+tuxcare    |
+| CVE-2025-68437        | 3.9.15-p4+tuxcare    |
+| CVE-2025-68456        | 3.9.15-p4+tuxcare    |
+| CVE-2026-25493        | 3.9.15-p4+tuxcare    |
+| CVE-2026-25495        | 3.9.15-p4+tuxcare    |
+| CVE-2026-27127        | 3.9.15-p4+tuxcare    |
+| CVE-2026-27128        | 3.9.15-p4+tuxcare    |
+| CVE-2026-28783        | 3.9.15-p4+tuxcare    |
+| CVE-2026-29069        | 3.9.15-p4+tuxcare    |
+| CVE-2026-32267        | 3.9.15-p4+tuxcare    |
+| AIKIDO-2025-10090     | 3.9.15-p4+tuxcare    |
+| AIKIDO-2025-10859     | 3.9.15-p4+tuxcare    |
+| GHSA-3m9m-24vh-39wx   | 3.9.15-p4+tuxcare    |
 
 ## What's Next?
 
@@ -148,7 +171,7 @@ const cli =
 const packagejson =
 `{
     "require": {
-        "craftcms/cms": "3.9.15-p3+tuxcare"
+        "craftcms/cms": "3.9.15-p4+tuxcare"
     }
 }`
 

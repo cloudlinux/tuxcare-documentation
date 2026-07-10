@@ -6,8 +6,9 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 
 * **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
 * **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
-* **Symfony Mime** 7.4.x
-* **Symfony Routing** 7.4.x
+* **Symfony HttpKernel** 3.4.x
+* **Symfony Mime** 5.4.x, 6.4.x, 7.4.x
+* **Symfony Routing** 5.4.x, 7.4.x
 
 Other versions upon request.
 
@@ -94,6 +95,24 @@ Other versions upon request.
    {
        "require": {
            "symfony/http-foundation": "4.4.49-p2+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_HttpKernel>
+
+   ```text
+   composer require symfony/http-kernel:3.4.49-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/http-kernel": "3.4.49-p1+tuxcare"
        }
    }
    ```

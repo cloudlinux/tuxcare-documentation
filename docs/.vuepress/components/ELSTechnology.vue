@@ -2035,7 +2035,7 @@ const techData = [
       },
       {
         name: "Guzzle",
-        versions: "6.3.3",
+        versions: "6.0.2 | 6.3.3",
         link: "./guzzle/",
       },
       {
@@ -2051,6 +2051,16 @@ const techData = [
       {
         name: "Laravel",
         versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
+        link: "./laravel/",
+      },
+      {
+        name: "Illuminate View",
+        versions: "5.4.36",
+        link: "./laravel/",
+      },
+      {
+        name: "Illuminate Database",
+        versions: "5.4.36",
         link: "./laravel/",
       },
       {
@@ -2109,18 +2119,23 @@ const techData = [
         link: "./swiftmailer/",
       },
       {
+        name: "Symfony HttpKernel",
+        versions: "3.4.x",
+        link: "./symfony/",
+      },
+      {
         name: "Symfony Process",
         versions: "3.4.x | 4.4.x | 5.x | 6.x",
         link: "./symfony/",
       },
       {
         name: "Symfony Mime",
-        versions: "7.4.x",
+        versions: "5.4.x | 6.4.x | 7.4.x",
         link: "./symfony/",
       },
       {
         name: "Symfony Routing",
-        versions: "7.4.x",
+        versions: "5.4.x | 7.4.x",
         link: "./symfony/",
       },
       {

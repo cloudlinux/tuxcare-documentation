@@ -84,7 +84,7 @@ Other versions upon request.
    <template #zend-http>
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p2+tuxcare` },
      { title: 'composer.json', content: zendhttpjson }
    ]" />
 
@@ -168,8 +168,8 @@ Fixes for the following vulnerabilities are available in ELS for Zend Framework 
 
 | CVE ID              | Severity | Vulnerable versions | Fixed in version   |
 |---------------------|----------|---------------------|--------------------|
-| CVE-2021-3007       | Critical | 2.5.6               | 2.5.6-p1+tuxcare   |
-| GHSA-cg8w-5jrc-675g | High     | 2.5.6               | 2.5.6-p1+tuxcare   |
+| CVE-2021-3007       | Critical | 2.5.6               | 2.5.6-p2+tuxcare   |
+| GHSA-cg8w-5jrc-675g | High     | 2.5.6               | 2.5.6-p2+tuxcare   |
 
 </template>
 
@@ -233,7 +233,7 @@ const zf2json =
 const zendhttpjson =
 `{
     "require": {
-        "zendframework/zend-http": "2.5.6-p1+tuxcare"
+        "zendframework/zend-http": "2.5.6-p2+tuxcare"
     }
 }`
 

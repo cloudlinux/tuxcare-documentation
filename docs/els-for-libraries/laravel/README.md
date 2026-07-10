@@ -132,7 +132,7 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs in Laravel and Illuminate
+## Resolved CVEs
 
 Fixes for the following vulnerabilities are available in ELS for Laravel from TuxCare:
 
@@ -213,6 +213,9 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 | GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.8.38-p1+tuxcare   |
 | GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4           | 5.8.38-p1+tuxcare   |
 | GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0           | 5.8.38-p1+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.8.38-p4+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1           | 5.8.38-p4+tuxcare   |
+| AIKIDO-2026-10659   | High     | 5.6.0 - 12.56.0, 13.0.0 - 13.6.0 | 5.8.38-p3+tuxcare   |
 
 </template>
 
@@ -250,6 +253,8 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
 |----------------|----------|----------------------|---------------------|
 | CVE-2025-27515 | Medium   | < 10.48.29           | 10.48.28-p1+tuxcare |
+| AIKIDO-2026-10659 | High   | 5.6.0 - 12.56.0, 13.0.0 - 13.6.0 | 10.50.2-p3+tuxcare  |
+| GHSA-5vg9-5847-vvmq | High     | < 12.60.0, <= 13.9.0 | 10.50.2-p3+tuxcare  |
 
 </template>
 
@@ -258,6 +263,18 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
 |----------------|----------|----------------------|---------------------|
 | CVE-2025-27515 | Medium   | >= 11.0.0, < 11.44.1 | 11.44.0-p1+tuxcare  |
+| GHSA-5vg9-5847-vvmq | High     | < 12.60.0, <= 13.9.0 | 11.44.0-p2+tuxcare  |
+| GHSA-crmm-hgp2-wgrp | Medium   | < 12.61.1, < 13.12.0 | 11.44.0-p2+tuxcare  |
+| AIKIDO-2026-10659 | High   | 5.6.0 - 12.56.0, 13.0.0 - 13.6.0 | 11.51.0-p2+tuxcare  |
+
+</template>
+
+<template #Laravel_12>
+
+| CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
+|----------------|----------|----------------------|---------------------|
+| AIKIDO-2026-10659 | High   | 5.6.0 - 12.56.0, 13.0.0 - 13.6.0 | 12.58.0-p2+tuxcare  |
+| GHSA-5vg9-5847-vvmq | High     | < 12.60.0, <= 13.9.0 | 12.58.0-p2+tuxcare  |
 
 </template>
 

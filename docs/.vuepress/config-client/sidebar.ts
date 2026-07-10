@@ -253,20 +253,12 @@ export default {
                     icon: '/images/spatie.webp',
                 },
                 {
-                    path: '/els-for-libraries/carbon/',
-                    icon: '/images/nesbot-carbon.webp',
-                },
-                {
-                    path: '/els-for-libraries/dompdf/',
-                    icon: '/images/dompdf-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/php-svg-lib/',
-                    icon: '/images/dompdf-logo.webp',
-                },
-                {
                     path: '/els-for-libraries/cakephp/',
                     icon: '/images/cakephp.webp',
+                },
+                {
+                    path: '/els-for-libraries/carbon/',
+                    icon: '/images/nesbot-carbon.webp',
                 },
                 {
                     path: '/els-for-libraries/craftcms/',
@@ -279,6 +271,10 @@ export default {
                 {
                     path: '/els-for-libraries/doctrine-orm/',
                     icon: '/images/orm.webp',
+                },
+                {
+                    path: '/els-for-libraries/dompdf/',
+                    icon: '/images/dompdf-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/drupal/',
@@ -317,20 +313,24 @@ export default {
                     icon: '/images/livewire-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/phpseclib/',
-                    icon: '/images/phpseclib.webp',
+                    path: '/els-for-libraries/php-svg-lib/',
+                    icon: '/images/dompdf-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/phpmailer/',
                     icon: '/images/phpmailer.webp',
                 },
                 {
-                    path: '/els-for-libraries/phpunit/',
-                    icon: '/images/phpunit.webp',
+                    path: '/els-for-libraries/phpseclib/',
+                    icon: '/images/phpseclib.webp',
                 },
                 {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
+                },
+                {
+                    path: '/els-for-libraries/phpunit/',
+                    icon: '/images/phpunit.webp',
                 },
                 {
                     path: '/els-for-libraries/google-protobuf/',
