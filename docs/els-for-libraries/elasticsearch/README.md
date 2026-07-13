@@ -1,10 +1,12 @@
-# Eclipse Jetty
+# Elasticsearch
 
-TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security patches and selected bug fixes that are integral to the stable operation of applications running on Eclipse Jetty.
+TuxCare's Endless Lifecycle Support (ELS) for Elasticsearch provides security patches and selected bug fixes that are integral to the stable operation of applications running on the Elasticsearch Java client libraries.
 
 ## Supported Versions
 
-* Eclipse Jetty 7.6.0.v20120127, 8.2.0.v20160908, 9.2.16.v20160414, 9.4.24.v20191120, 9.4.41.v20210516, 9.4.48.v20220622, 9.4.50.v20221201, 9.4.53.v20231009, 9.4.57.v20241219, 9.4.58.v20250814, 9.4.59, 9.4.60, 9.4.61, 9.4.62, 10.0.26, 10.0.27, 10.0.28, 10.0.29, 10.0.30, 11.0.19, 11.0.26, 11.0.27, 11.0.28, 11.0.29, 11.0.30
+* Elasticsearch 7.16.3
+
+Other versions upon request.
 
 ## Installation
 
@@ -50,14 +52,14 @@ TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security pa
 
 3. **Add the TuxCare repository**
 
-   Add the TuxCare Eclipse Jetty repository and plugins to your build configuration.
+   Add the TuxCare Elasticsearch repository and plugins to your build configuration.
 
    <CodeTabs :tabs="[
      { title: 'Maven (pom.xml)', content: mavenrepo },
      { title: 'Gradle (build.gradle)', content: gradlerepo }
    ]" />
 
-   * To fully switch from the official Eclipse Jetty repository, replace it with the TuxCare repository.
+   * To fully switch from the official Elasticsearch repository, replace it with the TuxCare repository.
    * To keep both, add TuxCare after the official one.
 
    :::tip
@@ -66,7 +68,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security pa
 
 4. **Update dependencies**
 
-   Replace Eclipse Jetty dependencies with TuxCare-maintained versions. You can find artifact versions on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) — sign in with your TuxCare credentials.
+   Replace Elasticsearch dependencies with TuxCare-maintained versions. You can find artifact versions on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) — sign in with your TuxCare credentials.
 
    <CodeTabs :tabs="[
      { title: 'Maven (pom.xml)', content: mavendeps },
@@ -89,7 +91,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security pa
      { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-   The build tool should be able to identify and resolve dependencies from the TuxCare ELS for Eclipse Jetty repository.
+   The build tool should be able to identify and resolve dependencies from the TuxCare ELS for Elasticsearch repository.
 
 </ELSSteps>
 
@@ -98,10 +100,10 @@ TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security pa
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Eclipse+Jetty) — Track vulnerability fixes and updates
-* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Eclipse+Jetty) — Patched versions and changelogs
-* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Eclipse+Jetty) — Full list of product parts covered by ELS
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.eclipse.jetty/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Elasticsearch) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Elasticsearch) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Elasticsearch) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.elasticsearch/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [Source code](/els-for-libraries/managing-els-repository/#javaSources) — Access source JARs in Nexus
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#java) — Update an installed package to a newer TuxCare release
 
@@ -147,37 +149,16 @@ const gradlerepo =
 }`
 
 const mavendeps =
-`<dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-bom</artifactId>
-            <version>9.4.53.v20231009-tuxcare.1</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
-</dependencyManagement>
-
-<dependencies>
+`<dependencies>
     <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-server</artifactId>
+        <groupId>org.elasticsearch.client</groupId>
+        <artifactId>elasticsearch-rest-high-level-client</artifactId>
+        <version>7.16.3-tuxcare.1</version>
     </dependency>
 </dependencies>`
 
 const gradledeps =
-`plugins {
-    id 'java'
-}
-
-dependencyManagement {
-    imports {
-        mavenBom 'org.eclipse.jetty:jetty-bom:9.4.53.v20231009-tuxcare.1'
-    }
-}
-
-dependencies {
-    implementation "org.eclipse.jetty:jetty-server"
+`dependencies {
+  implementation("org.elasticsearch.client:elasticsearch-rest-high-level-client:7.16.3-tuxcare.1")
 }`
 </script>

@@ -221,5 +221,7 @@
     "/els-for-libraries/symfony-process/": "/els-for-libraries/symfony/",
     "/els-for-libraries/apache-lucene/": "/els-for-libraries/apache-lucene-and-solr/",
     "/els-for-libraries/grafana/": "/els-for-applications/grafana/",
-    "/els-for-libraries/loki/": "/els-for-applications/loki/"
+    "/els-for-libraries/loki/": "/els-for-applications/loki/",
+    "/els-for-libraries/zendframework-zf1/": "/els-for-libraries/zendframework/",
+    "/els-for-libraries/zendframework-zend-http/": "/els-for-libraries/zendframework/"
 }
