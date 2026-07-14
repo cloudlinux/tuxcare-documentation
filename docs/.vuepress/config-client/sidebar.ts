@@ -337,6 +337,10 @@ export default {
                     icon: '/images/saloon.webp',
                 },
                 {
+                    path: '/els-for-libraries/spatie-laravel-medialibrary/',
+                    icon: '/images/spatie.webp',
+                },
+                {
                     path: '/els-for-libraries/swiftmailer/',
                     icon: '/images/swiftmailer.webp',
                 },

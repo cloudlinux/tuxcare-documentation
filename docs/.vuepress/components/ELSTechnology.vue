@@ -165,6 +165,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Pulsar",
+        versions: "3.2.4",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Kafka®",
         versions: "3.2.3",
         link: "./apache-kafka/",
@@ -207,7 +212,7 @@ const techData = [
       },
       {
         name: "Apache Thrift",
-        versions: "0.9.1 | 0.9.3",
+        versions: "0.9.1 | 0.9.3 | 0.14.1",
         link: "./java-libraries/",
       },
       {
@@ -236,8 +241,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "AssertJ",
+        versions: "2.9.0 | 3.18.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "Bouncy Castle",
         versions: "1.64 | 1.76 | 1.78.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "c3p0",
+        versions: "0.2.20",
         link: "./java-libraries/",
       },
       {
@@ -377,7 +392,7 @@ const techData = [
       },
       {
         name: "Logback",
-        versions: "1.1.7 | 1.2.13 | 1.4.14",
+        versions: "1.1.7 | 1.2.13 | 1.4.14 | 1.5.18",
         link: "./java-libraries/",
       },
       {
@@ -447,7 +462,7 @@ const techData = [
       },
       {
         name: "Reactor BOM",
-        versions: "2020.0.23 | 2020.0.38 | 2022.0.15",
+        versions: "2020.0.23 | 2020.0.32 | 2020.0.38 | 2022.0.15",
         link: "./java-libraries/",
       },
       {
@@ -596,6 +611,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "XStream",
+        versions: "1.4.17",
+        link: "./java-libraries/",
+      },
+      {
         name: "Eclipse Jetty",
         versions: "8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 10.0.26 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28",
         link: "./jetty/",
@@ -673,7 +693,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.27.2 | 0.33.0",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.27.2 | 0.33.0 | 1.7.5 | 1.7.7",
         link: "./javascript-libraries/",
       },
       {
@@ -1052,8 +1072,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "i18next-http-backend",
+        versions: "1.4.4 | 2.5.2",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "immutable",
-        versions: "4.3.5 | 4.3.7 | 5.0.3",
+        versions: "3.8.1 | 3.8.2 | 4.3.5 | 4.3.7 | 5.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1174,6 +1199,11 @@ const techData = [
       {
         name: "loader-utils",
         versions: "0.2.17 | 1.1.0 | 1.2.3 | 2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "luxon",
+        versions: "2.3.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1318,7 +1348,7 @@ const techData = [
       },
       {
         name: "path-to-regexp",
-        versions: "0.1.3 | 0.1.12",
+        versions: "0.1.3 | 0.1.12 | 6.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1457,6 +1487,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "ssri",
+        versions: "7.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "stringstream",
         versions: "0.0.4 | 0.0.5",
         link: "./javascript-libraries/",
@@ -1473,7 +1508,7 @@ const techData = [
       },
       {
         name: "swiper",
-        versions: "11.2.10",
+        versions: "8.4.7 | 11.2.10",
         link: "./javascript-libraries/",
       },
       {
@@ -1483,12 +1518,12 @@ const techData = [
       },
       {
         name: "tar",
-        versions: "1.0.3 | 2.1.1 | 2.2.1 | 2.2.2 | 4.4.19 | 6.0.2 | 6.2.1",
+        versions: "1.0.3 | 2.1.1 | 2.2.1 | 2.2.2 | 4.4.19 | 6.0.2 | 6.1.15 | 6.2.1",
         link: "./javascript-libraries/",
       },
       {
         name: "terser",
-        versions: "3.17.0 | 4.6.3 | 4.6.10 | 4.8.1 | 5.3.0 | 5.5.1 | 5.7.1",
+        versions: "3.17.0 | 4.6.3 | 4.6.10 | 4.8.1 | 5.3.0 | 5.5.1 | 5.7.1 | 5.10.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1528,7 +1563,7 @@ const techData = [
       },
       {
         name: "underscore",
-        versions: "1.4.4 | 1.6.0 | 1.7.0",
+        versions: "1.4.4 | 1.6.0 | 1.7.0 | 1.13.4",
         link: "./javascript-libraries/",
       },
       {
@@ -2025,7 +2060,7 @@ const techData = [
       },
       {
         name: "Guzzle",
-        versions: "6.3.3",
+        versions: "6.3.3 | 7.10.0",
         link: "./guzzle/",
       },
       {
@@ -2042,6 +2077,11 @@ const techData = [
         name: "Laravel",
         versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
         link: "./laravel/",
+      },
+      {
+        name: "Laravel Media Library",
+        versions: "9.12.4 | 10.15.0",
+        link: "./spatie-laravel-medialibrary/",
       },
       {
         name: "League Commonmark",
@@ -2104,13 +2144,23 @@ const techData = [
         link: "./symfony/",
       },
       {
-        name: "Symfony Mime",
+        name: "Symfony HttpKernel",
         versions: "7.4.x",
         link: "./symfony/",
       },
       {
+        name: "Symfony Mailer",
+        versions: "6.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony Mime",
+        versions: "5.4.x | 6.4.x | 7.4.x",
+        link: "./symfony/",
+      },
+      {
         name: "Symfony Routing",
-        versions: "7.4.x",
+        versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
         link: "./symfony/",
       },
       {
