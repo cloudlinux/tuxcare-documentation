@@ -171,6 +171,10 @@ export default {
                     icon: '/images/velocity-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/elasticsearch/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-libraries/hibernate/',
                     icon: '/images/hibernate.webp',
                 },
@@ -249,20 +253,12 @@ export default {
                     icon: '/images/spatie.webp',
                 },
                 {
-                    path: '/els-for-libraries/carbon/',
-                    icon: '/images/nesbot-carbon.webp',
-                },
-                {
-                    path: '/els-for-libraries/dompdf/',
-                    icon: '/images/dompdf-logo.webp',
-                },
-                {
-                    path: '/els-for-libraries/php-svg-lib/',
-                    icon: '/images/dompdf-logo.webp',
-                },
-                {
                     path: '/els-for-libraries/cakephp/',
                     icon: '/images/cakephp.webp',
+                },
+                {
+                    path: '/els-for-libraries/carbon/',
+                    icon: '/images/nesbot-carbon.webp',
                 },
                 {
                     path: '/els-for-libraries/craftcms/',
@@ -275,6 +271,10 @@ export default {
                 {
                     path: '/els-for-libraries/doctrine-orm/',
                     icon: '/images/orm.webp',
+                },
+                {
+                    path: '/els-for-libraries/dompdf/',
+                    icon: '/images/dompdf-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/drupal/',
@@ -313,20 +313,24 @@ export default {
                     icon: '/images/livewire-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/phpseclib/',
-                    icon: '/images/phpseclib.webp',
+                    path: '/els-for-libraries/php-svg-lib/',
+                    icon: '/images/dompdf-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/phpmailer/',
                     icon: '/images/phpmailer.webp',
                 },
                 {
-                    path: '/els-for-libraries/phpunit/',
-                    icon: '/images/phpunit.webp',
+                    path: '/els-for-libraries/phpseclib/',
+                    icon: '/images/phpseclib.webp',
                 },
                 {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
+                },
+                {
+                    path: '/els-for-libraries/phpunit/',
+                    icon: '/images/phpunit.webp',
                 },
                 {
                     path: '/els-for-libraries/google-protobuf/',
@@ -349,11 +353,7 @@ export default {
                     icon: '/images/symfony-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/zendframework-zf1/',
-                    icon: '/images/zf1.webp',
-                },
-                {
-                    path: '/els-for-libraries/zendframework-zend-http/',
+                    path: '/els-for-libraries/zendframework/',
                     icon: '/images/zf1.webp',
                 },
                 {

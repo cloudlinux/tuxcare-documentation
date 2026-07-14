@@ -13,7 +13,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ansi-html** 0.0.7
 * **ansi-regex** 3.0.0
 * **async** 2.6.1, 2.6.3
-* **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.24.0, 0.27.2, 0.33.0, 1.7.5, 1.7.7
+* **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.24.0, 0.26.1, 0.27.2, 0.33.0, 1.6.2, 1.6.8, 1.7.5, 1.7.7
 * **azure-identity** 4.0.1
 * **babel-helpers** 7.15.4, 7.24.0, 7.24.1, 7.25.6, 7.26.0
 * **babel-plugin-transform-modules-systemjs** 7.15.4, 7.23.9, 7.24.1, 7.25.0
@@ -125,7 +125,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **parse-git-config** 3.0.0
 * **parsejson** 0.0.3
 * **path-to-regexp** 0.1.3, 0.1.12, 6.2.1
-* **pdfjs-dist** 2.16.105, 3.11.174
+* **pdfjs-dist** 2.14.305, 2.16.105, 3.11.174
 * **picocolors** 0.2.1
 * **picomatch** 2.3.1, 4.0.2
 * **prismjs** 1.27.0, 1.29.0

@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Guzzle from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* **Guzzle** 6.3.3, 7.10.0
+* **Guzzle** 6.0.2, 6.3.3, 7.10.0
 
 Other versions upon request.
 
@@ -59,10 +59,36 @@ Other versions upon request.
 
    Install the TuxCare-maintained Guzzle release that matches your project:
 
+   <TableTabs label="Choose version: ">
+
+   <template #Guzzle_6.3>
+
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.3.3-p1+tuxcare` },
      { title: 'composer.json', content: guzzlejson }
    ]" />
+
+   </template>
+
+   <template #Guzzle_6.0>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.0.2-p1+tuxcare` },
+     { title: 'composer.json', content: guzzlejson602 }
+   ]" />
+
+   </template>
+
+   <template #Guzzle_7.10>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:7.10.0-p1+tuxcare` },
+     { title: 'composer.json', content: guzzlejson710 }
+   ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -149,6 +175,20 @@ const guzzlejson =
 `{
     "require": {
         "guzzlehttp/guzzle": "6.3.3-p1+tuxcare"
+    }
+}`
+
+const guzzlejson602 =
+`{
+    "require": {
+        "guzzlehttp/guzzle": "6.0.2-p1+tuxcare"
+    }
+}`
+
+const guzzlejson710 =
+`{
+    "require": {
+        "guzzlehttp/guzzle": "7.10.0-p1+tuxcare"
     }
 }`
 

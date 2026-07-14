@@ -6,7 +6,7 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 
 * **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
 * **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
-* **Symfony HttpKernel** 7.4.x
+* **Symfony HttpKernel** 3.4.x, 7.4.x
 * **Symfony Mailer** 6.4.x
 * **Symfony Mime** 5.4.x, 6.4.x, 7.4.x
 * **Symfony Routing** 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x

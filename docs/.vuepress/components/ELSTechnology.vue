@@ -286,6 +286,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Elasticsearch",
+        versions: "7.16.3",
+        link: "./elasticsearch/",
+      },
+      {
         name: "excel-streaming-reader",
         versions: "5.0.2",
         link: "./java-libraries/",
@@ -329,6 +334,11 @@ const techData = [
         name: "Hibernate Search",
         versions: "5.11.10.Final",
         link: "./hibernate/",
+      },
+      {
+        name: "HPPC",
+        versions: "0.8.1",
+        link: "./java-libraries/",
       },
       {
         name: "HtmlUnit",
@@ -617,7 +627,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.48.v20220622 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 10.0.26 | 10.0.27 | 10.0.28 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28",
+        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30",
         link: "./jetty/",
       },
       {
@@ -693,7 +703,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.27.2 | 0.33.0 | 1.7.5 | 1.7.7",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.6.2 | 1.6.8 | 1.7.5 | 1.7.7",
         link: "./javascript-libraries/",
       },
       {
@@ -1353,7 +1363,7 @@ const techData = [
       },
       {
         name: "pdfjs-dist",
-        versions: "2.16.105 | 3.11.174",
+        versions: "2.14.305 | 2.16.105 | 3.11.174",
         link: "./javascript-libraries/",
       },
       {
@@ -2060,7 +2070,7 @@ const techData = [
       },
       {
         name: "Guzzle",
-        versions: "6.3.3 | 7.10.0",
+        versions: "6.0.2 | 6.3.3 | 7.10.0",
         link: "./guzzle/",
       },
       {
@@ -2076,6 +2086,16 @@ const techData = [
       {
         name: "Laravel",
         versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
+        link: "./laravel/",
+      },
+      {
+        name: "Illuminate View",
+        versions: "5.4.36",
+        link: "./laravel/",
+      },
+      {
+        name: "Illuminate Database",
+        versions: "5.4.36",
         link: "./laravel/",
       },
       {
@@ -2139,13 +2159,13 @@ const techData = [
         link: "./swiftmailer/",
       },
       {
-        name: "Symfony Process",
-        versions: "3.4.x | 4.4.x | 5.x | 6.x",
+        name: "Symfony HttpKernel",
+        versions: "3.4.x | 7.4.x",
         link: "./symfony/",
       },
       {
-        name: "Symfony HttpKernel",
-        versions: "7.4.x",
+        name: "Symfony Process",
+        versions: "3.4.x | 4.4.x | 5.x | 6.x",
         link: "./symfony/",
       },
       {
@@ -2166,12 +2186,17 @@ const techData = [
       {
         name: "Zend Framework 1",
         versions: "1.12.10",
-        link: "./zendframework-zf1/",
+        link: "./zendframework/",
+      },
+      {
+        name: "Zend Framework",
+        versions: "2.4.13",
+        link: "./zendframework/",
       },
       {
         name: "Zend HTTP",
         versions: "2.5.6",
-        link: "./zendframework-zend-http/",
+        link: "./zendframework/",
       },
     ],
   },

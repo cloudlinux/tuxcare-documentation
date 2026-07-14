@@ -150,7 +150,7 @@ composer update "drupal/core-*" drupal/core --with-all-dependencies
 
 The `"9.5.11-p1+tuxcare as 9.5.11"` alias is the key — it tells Composer to install the Satis version but pretend it's `9.5.11` for dependency resolution, satisfying `core-recommended`'s exact version constraint.
 
-## Resolved CVEs in Drupal
+## Resolved CVEs
 
 | CVE ID              | Vulnerable versions                                                                        | Fixed in version    |
 |---------------------|--------------------------------------------------------------------------------------------|---------------------|
