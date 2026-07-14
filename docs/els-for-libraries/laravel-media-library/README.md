@@ -1,10 +1,10 @@
-# Spatie Laravel Media Library
+# Laravel Media Library
 
 Endless Lifecycle Support (ELS) for Laravel Media Library (spatie/laravel-medialibrary) from TuxCare provides security fixes for package versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions and Components
 
-* **spatie/laravel-medialibrary** 9.12.4, 10.15.0
+* **Laravel Media Library** 9.12.4, 10.15.0
 
 Other versions upon request.
 

@@ -341,7 +341,7 @@ export default {
                     icon: '/images/saloon.webp',
                 },
                 {
-                    path: '/els-for-libraries/spatie-laravel-medialibrary/',
+                    path: '/els-for-libraries/laravel-media-library/',
                     icon: '/images/spatie.webp',
                 },
                 {

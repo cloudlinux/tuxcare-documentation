@@ -2101,7 +2101,7 @@ const techData = [
       {
         name: "Laravel Media Library",
         versions: "9.12.4 | 10.15.0",
-        link: "./spatie-laravel-medialibrary/",
+        link: "./laravel-media-library/",
       },
       {
         name: "League Commonmark",
