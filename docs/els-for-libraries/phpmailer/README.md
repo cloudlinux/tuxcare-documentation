@@ -104,24 +104,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for PHPMailer from TuxCare:
-
-<TableTabs label="Choose PHPMailer version: " >
-
-<template #PHPMailer_5.2.28 >
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version       |
-|----------------|----------|---------------------|------------------------|
-| CVE-2021-34551 | High     | 5.2.28              | 5.2.28-p1+tuxcare      |
-| CVE-2021-3603  | High     | 5.2.28              | 5.2.28-p1+tuxcare      |
-| CVE-2020-13625 | High     | 5.2.28              | 5.2.28-p1+tuxcare      |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>

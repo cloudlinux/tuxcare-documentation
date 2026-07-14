@@ -104,22 +104,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for Firebase PHP-JWT from TuxCare:
-
-<TableTabs label="Choose a version: " >
-
-<template #Firebase_PHP-JWT_6.11.1>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version      |
-|----------------|----------|---------------------|-----------------------|
-| CVE-2025-45769 | High     | 6.11.1              | 6.11.1-p2+tuxcare     |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>

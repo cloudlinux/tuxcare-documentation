@@ -121,33 +121,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for League CommonMark from TuxCare:
-
-<TableTabs label="Choose League CommonMark version: ">
-
-<template #League_CommonMark_1.6>
-
-| CVE ID              | Severity | Vulnerable versions | Fixed in version    |
-|---------------------|----------|---------------------|---------------------|
-| CVE-2026-30838      | High     | < 2.8.1             | 1.6.7-p3+tuxcare    |
-| CVE-2025-46734      | Medium   | < 2.7.0             | 1.6.7-p2+tuxcare    |
-| GHSA-c2pc-g5qf-rfrf | High     | < 2.6.0             | 1.6.7-p1+tuxcare    |
-
-</template>
-
-<template #League_CommonMark_2.7>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
-|----------------|----------|---------------------|---------------------|
-| CVE-2026-33347 | High     | < 2.8.2             | 2.7.1-p1+tuxcare    |
-| CVE-2026-30838 | High     | < 2.8.1             | 2.7.1-p1+tuxcare    |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>

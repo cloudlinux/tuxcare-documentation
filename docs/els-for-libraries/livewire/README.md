@@ -104,22 +104,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for Livewire from TuxCare:
-
-<TableTabs label="Choose Livewire version: ">
-
-<template #Livewire_3>
-
-| CVE ID         | Severity | Vulnerable versions  | Fixed in version |
-|----------------|----------|----------------------|------------------|
-| CVE-2025-54068 | Critical | < 3.6.4              | 3.6.3-p1+tuxcare |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>

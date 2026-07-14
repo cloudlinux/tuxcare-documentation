@@ -104,14 +104,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for Doctrine ORM from TuxCare:
-
-| CVE ID              | Severity | Vulnerable versions | Fixed in version    |
-|---------------------|----------|---------------------|---------------------|
-| GHSA-vjrg-wpm8-rhrw | Medium   | < 2.20.2, < 3.3.3   | 2.8.3-p1+tuxcare    |
-
 ## What's Next?
 
 <WhatsNext hide-title>
