@@ -2059,11 +2059,6 @@ const techData = [
         link: "./drupal/",
       },
       {
-        name: "php-svg-lib",
-        versions: "0.3.4",
-        link: "./php-svg-lib/",
-      },
-      {
         name: "Firebase PHP-JWT",
         versions: "6.11.1",
         link: "./firebase-php-jwt/",
@@ -2079,13 +2074,8 @@ const techData = [
         link: "./httpful/",
       },
       {
-        name: "Laminas",
-        versions: "2.22.0",
-        link: "./laminas/",
-      },
-      {
-        name: "Laravel",
-        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
+        name: "Illuminate Database",
+        versions: "5.4.36",
         link: "./laravel/",
       },
       {
@@ -2094,8 +2084,13 @@ const techData = [
         link: "./laravel/",
       },
       {
-        name: "Illuminate Database",
-        versions: "5.4.36",
+        name: "Laminas",
+        versions: "2.22.0",
+        link: "./laminas/",
+      },
+      {
+        name: "Laravel",
+        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
         link: "./laravel/",
       },
       {
@@ -2119,9 +2114,9 @@ const techData = [
         link: "./livewire/",
       },
       {
-        name: "phpseclib",
-        versions: "0.3.10",
-        link: "./phpseclib/",
+        name: "php-svg-lib",
+        versions: "0.3.4",
+        link: "./php-svg-lib/",
       },
       {
         name: "PHPMailer",
@@ -2129,14 +2124,19 @@ const techData = [
         link: "./phpmailer/",
       },
       {
-        name: "PHPUnit",
-        versions: "4.8.10 | 6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
-        link: "./phpunit/",
+        name: "phpseclib",
+        versions: "0.3.10",
+        link: "./phpseclib/",
       },
       {
         name: "PhpSpreadsheet",
         versions: "4.5.0",
         link: "./phpspreadsheet/",
+      },
+      {
+        name: "PHPUnit",
+        versions: "4.8.10 | 6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
+        link: "./phpunit/",
       },
       {
         name: "Protobuf",
@@ -2149,23 +2149,18 @@ const techData = [
         link: "./saloon/",
       },
       {
-        name: "Symfony HttpFoundation",
-        versions: "2.8.x | 3.4.x | 4.4.x",
-        link: "./symfony/",
-      },
-      {
         name: "SwiftMailer",
         versions: "5.4.12 | 6.0.2",
         link: "./swiftmailer/",
       },
       {
-        name: "Symfony HttpKernel",
-        versions: "3.4.x | 7.4.x",
+        name: "Symfony HttpFoundation",
+        versions: "2.8.x | 3.4.x | 4.4.x",
         link: "./symfony/",
       },
       {
-        name: "Symfony Process",
-        versions: "3.4.x | 4.4.x | 5.x | 6.x",
+        name: "Symfony HttpKernel",
+        versions: "3.4.x | 7.4.x",
         link: "./symfony/",
       },
       {
@@ -2179,18 +2174,23 @@ const techData = [
         link: "./symfony/",
       },
       {
+        name: "Symfony Process",
+        versions: "3.4.x | 4.4.x | 5.x | 6.x",
+        link: "./symfony/",
+      },
+      {
         name: "Symfony Routing",
         versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
         link: "./symfony/",
       },
       {
-        name: "Zend Framework 1",
-        versions: "1.12.10",
+        name: "Zend Framework",
+        versions: "2.4.13",
         link: "./zendframework/",
       },
       {
-        name: "Zend Framework",
-        versions: "2.4.13",
+        name: "Zend Framework 1",
+        versions: "1.12.10",
         link: "./zendframework/",
       },
       {
