@@ -25,7 +25,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache XMLBeans** 2.6.0
 * **AssertJ** 2.9.0, 3.18.1
 * **Bouncy Castle** 1.64, 1.76, 1.78.1
-* **c3p0** 0.2.20
 * **DNSJava** 2.1.7
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
@@ -52,6 +51,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **JUnit** 4.13
 * **Logback** 1.1.7, 1.2.13, 1.4.14, 1.5.18
 * **LZ4** 1.8.1
+* **mchange-commons-java** 0.2.20
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
 * **NekoHTML** 1.9.22

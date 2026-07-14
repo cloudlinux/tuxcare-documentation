@@ -251,11 +251,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "c3p0",
-        versions: "0.2.20",
-        link: "./java-libraries/",
-      },
-      {
         name: "DNSJava",
         versions: "2.1.7",
         link: "./java-libraries/",
@@ -398,6 +393,11 @@ const techData = [
       {
         name: "LZ4",
         versions: "1.8.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "mchange-commons-java",
+        versions: "0.2.20",
         link: "./java-libraries/",
       },
       {
