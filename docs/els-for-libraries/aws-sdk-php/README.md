@@ -104,15 +104,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for AWS SDK for PHP from TuxCare:
-
-| CVE ID                | Fixed in version    |
-|-----------------------|---------------------|
-| CVE-2023-51651        | 3.263.4-p2+tuxcare  |
-| GHSA-27qh-8cxx-2cr5   | 3.263.4-p2+tuxcare  |
-
 ## What's Next?
 
 <WhatsNext hide-title>

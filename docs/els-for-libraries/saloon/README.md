@@ -104,24 +104,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for Saloon from TuxCare:
-
-<TableTabs label="Choose a version: " >
-
-<template #Saloon_3.15.0>
-
-| CVE ID         | Severity | Vulnerable versions | Fixed in version   |
-|----------------|----------|---------------------|--------------------|
-| CVE-2026-33942 | Critical | < 4.0.0             | 3.15.0-p1+tuxcare  |
-| CVE-2026-33183 | Critical | < 4.0.0             | 3.15.0-p1+tuxcare  |
-| CVE-2026-33182 | High     | < 4.0.0             | 3.15.0-p1+tuxcare  |
-
-</template>
-
-</TableTabs>
-
 ## What's Next?
 
 <WhatsNext hide-title>

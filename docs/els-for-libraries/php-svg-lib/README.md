@@ -104,16 +104,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Resolved CVEs
-
-Fixes for the following vulnerabilities are available in ELS for php-svg-lib from TuxCare:
-
-| CVE ID              | Severity | Library      | Vulnerable Versions | Safe Version        |
-| :-----------------: | :------: | :----------: | :-----------------: | :-----------------: |
-| CVE-2024-25117      | Medium   | php-svg-lib  | < 0.5.2              | 0.3.4-p1+tuxcare   |
-| CVE-2023-50251      | High     | php-svg-lib  | < 0.5.1           | 0.3.4-p1+tuxcare   |
-| GHSA-97m3-52wr-xvv2 | Critical | php-svg-lib  | < 0.5.2          | 0.3.4-p1+tuxcare   |
-
 ## What's Next?
 
 <WhatsNext hide-title>
