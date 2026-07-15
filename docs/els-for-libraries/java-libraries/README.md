@@ -17,11 +17,13 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache HttpComponents Client** 4.5.2
 * **Apache Neethi** 3.1.1
 * **Apache POI** 3.10-FINAL, 4.1.2
+* **Apache Pulsar** 3.2.4
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
-* **Apache Thrift** 0.9.1, 0.9.3
+* **Apache Thrift** 0.9.1, 0.9.3, 0.14.1
 * **Apache Tika** 2.9.4
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.6.0
+* **AssertJ** 2.9.0, 3.18.1
 * **Bouncy Castle** 1.64, 1.76, 1.78.1
 * **DNSJava** 2.1.7
 * **docx4j** 3.3.6
@@ -48,8 +50,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **JSON Assert** 1.2.3
 * **JSON Smart v2** 2.4.8
 * **JUnit** 4.13
-* **Logback** 1.1.7, 1.2.13, 1.4.14
+* **Logback** 1.1.7, 1.2.13, 1.4.14, 1.5.18
 * **LZ4** 1.8.1
+* **mchange-commons-java** 0.2.20
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
 * **NekoHTML** 1.9.22
@@ -60,7 +63,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Okio** 2.8.0, 2.10.0
 * **Plexus Utils** 1.4.5, 1.5.8
 * **Querydsl** 5.1.0
-* **Reactor BOM** 2020.0.23, 2020.0.38, 2022.0.15
+* **Reactor BOM** 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
 * **Reactor Netty** 1.0.23, 1.0.32, 1.0.39, 1.1.15
 * **RSocket** 1.1.3
 * **SnakeYAML** 1.23, 1.26, 1.29, 1.30, 1.33
@@ -71,6 +74,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Woodstox** 5.0.3
 * **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0
+* **XStream** 1.4.17
 
 Other libraries upon request.
 

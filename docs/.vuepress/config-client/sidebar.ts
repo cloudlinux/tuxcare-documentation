@@ -301,6 +301,10 @@ export default {
                     icon: '/images/laravel-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/laravel-media-library/',
+                    icon: '/images/spatie.webp',
+                },
+                {
                     path: '/els-for-libraries/league-commonmark/',
                     icon: '/images/league-commonmark-logo.webp',
                 },

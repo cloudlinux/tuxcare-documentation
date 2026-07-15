@@ -1,15 +1,10 @@
-# Symfony
+# Laravel Media Library
 
-Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, Symfony HttpFoundation from TuxCare provides security fixes for Symfony component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Laravel Media Library (spatie/laravel-medialibrary) from TuxCare provides security fixes for package versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions and Components
 
-* **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
-* **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x
-* **Symfony HttpKernel** 3.4.x, 7.4.x
-* **Symfony Mailer** 6.4.x
-* **Symfony Mime** 5.4.x, 6.4.x, 7.4.x
-* **Symfony Routing** 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
+* **Laravel Media Library** 9.12.4, 10.15.0
 
 Other versions upon request.
 
@@ -60,121 +55,14 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Symfony components
+4. Install Laravel Media Library
 
-   Install the TuxCare-maintained Symfony component release that matches your project:
+   Install the TuxCare-maintained release that matches your project:
 
-   <TableTabs label="Choose version: ">
-
-   <template #Symfony_Process>
-
-   ```text
-   composer require symfony/process:6.4.13-p2+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/process": "6.4.13-p2+tuxcare"
-       }
-   }
-   ```
-
-   </template>
-
-   <template #Symfony_HttpFoundation>
-
-   ```text
-   composer require symfony/http-foundation:4.4.49-p2+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/http-foundation": "4.4.49-p2+tuxcare"
-       }
-   }
-   ```
-
-   </template>
-
-   <template #Symfony_HttpKernel>
-
-   ```text
-   composer require symfony/http-kernel:7.4.10-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/http-kernel": "7.4.10-p1+tuxcare"
-       }
-   }
-   ```
-
-   </template>
-
-   <template #Symfony_Mailer>
-
-   ```text
-   composer require symfony/mailer:6.4.34-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/mailer": "6.4.34-p1+tuxcare"
-       }
-   }
-   ```
-
-   </template>
-
-   <template #Symfony_Mime>
-
-   ```text
-   composer require symfony/mime:7.4.9-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/mime": "7.4.9-p1+tuxcare"
-       }
-   }
-   ```
-
-   </template>
-
-   <template #Symfony_Routing>
-
-   ```text
-   composer require symfony/routing:7.4.9-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/routing": "7.4.9-p1+tuxcare"
-       }
-   }
-   ```
-
-   </template>
-
-   </TableTabs>
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require spatie/laravel-medialibrary:10.15.0-p2+tuxcare` },
+     { title: 'composer.json', content: pkgjson }
+   ]" />
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -220,10 +108,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Symfony) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Symfony) — Patched versions and changelogs
-* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Symfony) — Components covered by ELS
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/symfony/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=spatie%2Flaravel-medialibrary) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=spatie%2Flaravel-medialibrary) — Patched versions and changelogs
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/spatie/laravel-medialibrary/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
@@ -257,5 +144,12 @@ const composerjson =
 
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
+
+const pkgjson =
+`{
+    "require": {
+        "spatie/laravel-medialibrary": "10.15.0-p2+tuxcare"
+    }
+}`
 
 </script>

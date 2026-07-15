@@ -13,7 +13,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ansi-html** 0.0.7
 * **ansi-regex** 3.0.0
 * **async** 2.6.1, 2.6.3
-* **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.24.0, 0.26.1, 0.27.2, 0.33.0, 1.6.2, 1.6.8
+* **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.24.0, 0.26.1, 0.27.2, 0.33.0, 1.6.2, 1.6.8, 1.7.5, 1.7.7
 * **azure-identity** 4.0.1
 * **babel-helpers** 7.15.4, 7.24.0, 7.24.1, 7.25.6, 7.26.0
 * **babel-plugin-transform-modules-systemjs** 7.15.4, 7.23.9, 7.24.1, 7.25.0
@@ -84,7 +84,8 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **hosted-git-info** 2.1.4, 2.7.1
 * **http-proxy-middleware** 0.19.1, 2.0.8
 * **i18next** 23.16.8
-* **immutable** 4.3.5, 4.3.7, 5.0.3
+* **i18next-http-backend** 1.4.4, 2.5.2
+* **immutable** 3.8.1, 3.8.2, 4.3.5, 4.3.7, 5.0.3
 * **ini** 1.3.5
 * **ip** 1.1.5, 1.1.9, 2.0.0, 2.0.1
 * **is-my-json-valid** 2.10.1, 2.12.2
@@ -101,6 +102,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **loader-utils** 0.2.17, 1.1.0, 1.2.3, 2.0.0
 * **lodash.merge** 3.3.2
 * **log4js** 3.0.6, 4.5.1
+* **luxon** 2.3.0
 * **markdown-it** 4.0.3, 4.3.0, 8.4.2, 13.0.2
 * **marked** 0.2.10, 0.7.0, 4.0.6, 4.0.7, 4.0.9
 * **mem** 1.1.0
@@ -122,7 +124,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **object-path** 0.11.4
 * **parse-git-config** 3.0.0
 * **parsejson** 0.0.3
-* **path-to-regexp** 0.1.3, 0.1.12
+* **path-to-regexp** 0.1.3, 0.1.12, 6.2.1
 * **pdfjs-dist** 2.14.305, 2.16.105, 3.11.174
 * **picocolors** 0.2.1
 * **picomatch** 2.3.1, 4.0.2
@@ -145,11 +147,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **socket.io** 2.1.1
 * **socket.io-parser** 3.2.0, 3.3.4, 3.4.3, 4.2.4
 * **ssr-window** 4.0.2
+* **ssri** 7.1.0
 * **stringstream** 0.0.4, 0.0.5
 * **svgo** 2.8.0
-* **swiper** 11.2.10
-* **tar** 1.0.3, 2.1.1, 2.2.1, 2.2.2, 4.4.19, 6.0.2, 6.2.1
-* **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.1, 5.3.0, 5.5.1, 5.7.1
+* **swiper** 8.4.7, 11.2.10
+* **tar** 1.0.3, 2.1.1, 2.2.1, 2.2.2, 4.4.19, 6.0.2, 6.1.15, 6.2.1
+* **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.1, 5.3.0, 5.5.1, 5.7.1, 5.10.0
 * **tinymce** 4.9.11, 5.10.9, 6.8.6
 * **tmp** 0.0.24, 0.0.28, 0.0.30, 0.0.33, 0.1.0, 0.2.1
 * **tmpl** 1.0.4
@@ -157,7 +160,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **tunnel-agent** 0.3.0, 0.4.0, 0.4.3
 * **ua-parser-js** 0.7.21, 0.7.31
 * **uglify-js** 1.1.1, 1.3.5, 2.3.6
-* **underscore** 1.4.4, 1.6.0, 1.7.0
+* **underscore** 1.4.4, 1.6.0, 1.7.0, 1.13.4
 * **underscore.string** 2.2.1, 2.3.3
 * **uuid** 3.4.0, 8.3.2, 9.0.1, 11.0.5
 * **validator** 8.2.0, 10.11.0
