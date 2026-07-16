@@ -59,27 +59,10 @@ Other versions upon request.
 
    Install the TuxCare-maintained Twig release that matches your project:
 
-   <TableTabs label="Choose version: " >
-
-   <template #Twig_2.15>
-
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require twig/twig:2.15.6-p1+tuxcare` },
-     { title: 'composer.json', content: twigjson2156 }
-   ]" />
-
-   </template>
-
-   <template #Twig_2.16>
-
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require twig/twig:2.16.1-p1+tuxcare` },
-     { title: 'composer.json', content: twigjson2161 }
+     { title: 'composer.json', content: twigjson }
    ]" />
-
-   </template>
-
-   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -162,14 +145,7 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const twigjson2156 =
-`{
-    "require": {
-        "twig/twig": "2.15.6-p1+tuxcare"
-    }
-}`
-
-const twigjson2161 =
+const twigjson =
 `{
     "require": {
         "twig/twig": "2.16.1-p1+tuxcare"
