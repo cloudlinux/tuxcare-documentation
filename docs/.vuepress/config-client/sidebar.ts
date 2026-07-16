@@ -357,10 +357,6 @@ export default {
                     icon: '/images/symfony-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/thruway/',
-                    icon: '/images/ratchet.webp',
-                },
-                {
                     path: '/els-for-libraries/twig/',
                     icon: '/images/php-logo.webp',
                 },

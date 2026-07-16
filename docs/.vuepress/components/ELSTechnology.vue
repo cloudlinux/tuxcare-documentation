@@ -2219,11 +2219,6 @@ const techData = [
         link: "./symfony/",
       },
       {
-        name: "Thruway",
-        versions: "0.4.2",
-        link: "./thruway/",
-      },
-      {
         name: "Twig",
         versions: "2.15.6 | 2.16.1",
         link: "./twig/",
