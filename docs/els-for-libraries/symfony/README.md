@@ -10,6 +10,7 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 * **Symfony Mailer** 6.4.x
 * **Symfony Mime** 5.4.x, 6.4.x, 7.4.x
 * **Symfony Routing** 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
+* **Symfony Yaml** 3.4.x, 4.4.x
 
 Other versions upon request.
 
@@ -168,6 +169,24 @@ Other versions upon request.
    {
        "require": {
            "symfony/routing": "7.4.9-p1+tuxcare"
+       }
+   }
+   ```
+
+   </template>
+
+   <template #Symfony_Yaml>
+
+   ```text
+   composer require symfony/yaml:4.4.45-p1+tuxcare
+   ```
+
+   `composer.json`:
+
+   ```text
+   {
+       "require": {
+           "symfony/yaml": "4.4.45-p1+tuxcare"
        }
    }
    ```

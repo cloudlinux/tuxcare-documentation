@@ -101,7 +101,7 @@ const techData = [
       },
       {
         name: "Apache Commons BeanUtils",
-        versions: "1.6 | 1.8.0 | 1.8.3 | 1.9.4",
+        versions: "1.6 | 1.8.0 | 1.8.3 | 1.9.4 | 1.10.1",
         link: "./java-libraries/",
       },
       {
@@ -136,8 +136,13 @@ const techData = [
       },
       {
         name: "Apache Commons Lang3",
-        versions: "3.4 | 3.8.1 | 3.10 | 3.12.0 | 3.14.0 | 3.17.0",
+        versions: "3.4 | 3.8.1 | 3.10 | 3.11 | 3.12.0 | 3.14.0 | 3.17.0",
         link: "./apache-commons-lang/",
+      },
+      {
+        name: "Apache Commons VFS",
+        versions: "2.0",
+        link: "./java-libraries/",
       },
       {
         name: "Apache CXF",
@@ -171,7 +176,7 @@ const techData = [
       },
       {
         name: "Apache Kafka®",
-        versions: "3.2.3",
+        versions: "3.2.3 | 3.7.1",
         link: "./apache-kafka/",
       },
       {
@@ -242,12 +247,17 @@ const techData = [
       },
       {
         name: "AssertJ",
-        versions: "2.9.0 | 3.18.1",
+        versions: "2.9.0 | 3.18.1 | 3.25.3",
         link: "./java-libraries/",
       },
       {
         name: "Bouncy Castle",
         versions: "1.64 | 1.76 | 1.78.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "c3p0",
+        versions: "0.9.5.5",
         link: "./java-libraries/",
       },
       {
@@ -316,6 +326,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Grails",
+        versions: "2.5.6 | 6.2.3",
+        link: "./java-libraries/",
+      },
+      {
         name: "H2 Database",
         versions: "1.4.200",
         link: "./java-libraries/",
@@ -334,6 +349,11 @@ const techData = [
         name: "Hibernate Search",
         versions: "5.11.10.Final",
         link: "./hibernate/",
+      },
+      {
+        name: "HornetQ",
+        versions: "2.4.9.Final",
+        link: "./java-libraries/",
       },
       {
         name: "HPPC",
@@ -407,7 +427,7 @@ const techData = [
       },
       {
         name: "mchange-commons-java",
-        versions: "0.2.20",
+        versions: "0.2.15 | 0.2.19 | 0.2.20",
         link: "./java-libraries/",
       },
       {
@@ -427,7 +447,7 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final",
+        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.117.Final",
         link: "./java-libraries/",
       },
       {
@@ -1073,7 +1093,7 @@ const techData = [
       },
       {
         name: "http-proxy-middleware",
-        versions: "0.19.1 | 2.0.8",
+        versions: "0.19.1 | 1.1.0 | 2.0.6 | 2.0.7 | 2.0.8 | 3.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1168,7 +1188,7 @@ const techData = [
       },
       {
         name: "karma",
-        versions: "3.0.0 | 4.0.1 | 4.1.0 | 4.4.1 | 5.0.9",
+        versions: "3.0.0 | 4.0.1 | 4.1.0 | 4.4.1 | 5.0.0 | 5.0.9",
         link: "./karma/",
       },
       {
@@ -1283,7 +1303,7 @@ const techData = [
       },
       {
         name: "multer",
-        versions: "1.4.5-lts | 1.4.5-lts.2",
+        versions: "1.4.5-lts | 1.4.5-lts.1 | 1.4.5-lts.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1388,7 +1408,7 @@ const techData = [
       },
       {
         name: "protobufjs",
-        versions: "6.11.6",
+        versions: "6.10.2 | 6.11.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1633,7 +1653,7 @@ const techData = [
       },
       {
         name: "webpack-dev-server",
-        versions: "2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.15.1",
+        versions: "2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.15.1 | 4.15.2",
         link: "./webpack-dev-server/",
       },
       {
@@ -2069,6 +2089,11 @@ const techData = [
         link: "./guzzle/",
       },
       {
+        name: "Guzzle PSR-7",
+        versions: "1.4.2 | 1.9.1",
+        link: "./guzzle/",
+      },
+      {
         name: "Httpful",
         versions: "0.3.2",
         link: "./httpful/",
@@ -2090,7 +2115,7 @@ const techData = [
       },
       {
         name: "Laravel",
-        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8 | 9.52.21 | 10 | 11 | 12.58.0",
+        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8.83.29 | 9.52.21 | 10 | 11 | 12.58.0",
         link: "./laravel/",
       },
       {
@@ -2112,6 +2137,11 @@ const techData = [
         name: "Livewire",
         versions: "3.x",
         link: "./livewire/",
+      },
+      {
+        name: "Monolog",
+        versions: "1.11.0",
+        link: "./monolog/",
       },
       {
         name: "php-svg-lib",
@@ -2182,6 +2212,21 @@ const techData = [
         name: "Symfony Routing",
         versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
         link: "./symfony/",
+      },
+      {
+        name: "Symfony Yaml",
+        versions: "3.4.x | 4.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Thruway",
+        versions: "0.4.2",
+        link: "./thruway/",
+      },
+      {
+        name: "Twig",
+        versions: "2.15.6 | 2.16.1",
+        link: "./twig/",
       },
       {
         name: "Zend Framework",
