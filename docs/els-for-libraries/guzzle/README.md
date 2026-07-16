@@ -89,20 +89,11 @@ Other versions upon request.
 
    </template>
 
-   <template #Guzzle_PSR-7_1.4>
-
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require guzzlehttp/psr7:1.4.2-p1+tuxcare` },
-     { title: 'composer.json', content: psr7json142 }
-   ]" />
-
-   </template>
-
-   <template #Guzzle_PSR-7_1.9>
+   <template #Guzzle_PSR-7>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require guzzlehttp/psr7:1.9.1-p1+tuxcare` },
-     { title: 'composer.json', content: psr7json191 }
+     { title: 'composer.json', content: psr7json }
    ]" />
 
    </template>
@@ -211,14 +202,7 @@ const guzzlejson710 =
     }
 }`
 
-const psr7json142 =
-`{
-    "require": {
-        "guzzlehttp/psr7": "1.4.2-p1+tuxcare"
-    }
-}`
-
-const psr7json191 =
+const psr7json =
 `{
     "require": {
         "guzzlehttp/psr7": "1.9.1-p1+tuxcare"
