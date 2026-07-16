@@ -1,11 +1,10 @@
-# Guzzle
+# Twig
 
-Endless Lifecycle Support (ELS) for Guzzle from TuxCare provides security fixes for Guzzle HTTP client library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Twig from TuxCare provides security fixes for Twig templating engine versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Guzzle** 6.0.2, 6.3.3, 7.10.0
-* **Guzzle PSR-7** 1.4.2, 1.9.1
+* **Twig** 2.15.6, 2.16.1
 
 Other versions upon request.
 
@@ -24,7 +23,7 @@ Other versions upon request.
 
    Composer reads credentials from a per-user `auth.json`. Create or edit the file at:
 
-   * **Linux/macOS**:
+   * **Linux/macOS**: 
      
      ```
      ~/.composer/auth.json
@@ -56,54 +55,19 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Guzzle
+4. Install Twig
 
-   Install the TuxCare-maintained Guzzle release that matches your project:
-
-   <TableTabs label="Choose version: ">
-
-   <template #Guzzle_6.3>
+   Install the TuxCare-maintained Twig release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.3.3-p1+tuxcare` },
-     { title: 'composer.json', content: guzzlejson }
+     { title: 'Composer CLI', content: `composer require twig/twig:2.16.1-p1+tuxcare` },
+     { title: 'composer.json', content: twigjson }
    ]" />
-
-   </template>
-
-   <template #Guzzle_6.0>
-
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.0.2-p1+tuxcare` },
-     { title: 'composer.json', content: guzzlejson602 }
-   ]" />
-
-   </template>
-
-   <template #Guzzle_7.10>
-
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:7.10.0-p1+tuxcare` },
-     { title: 'composer.json', content: guzzlejson710 }
-   ]" />
-
-   </template>
-
-   <template #Guzzle_PSR-7>
-
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require guzzlehttp/psr7:1.9.1-p1+tuxcare` },
-     { title: 'composer.json', content: psr7json }
-   ]" />
-
-   </template>
-
-   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
    :::tip
-
+   
    If you edited `composer.json` manually, run `composer update` to install the package:
    
    ```
@@ -144,9 +108,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=guzzlehttp%2Fguzzle) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=guzzlehttp%2Fguzzle) — Patched versions and changelogs
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/guzzlehttp/guzzle/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=twig%2Ftwig) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=twig%2Ftwig) — Patched versions and changelogs
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/twig/twig/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
@@ -181,31 +145,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const guzzlejson =
+const twigjson =
 `{
     "require": {
-        "guzzlehttp/guzzle": "6.3.3-p1+tuxcare"
-    }
-}`
-
-const guzzlejson602 =
-`{
-    "require": {
-        "guzzlehttp/guzzle": "6.0.2-p1+tuxcare"
-    }
-}`
-
-const guzzlejson710 =
-`{
-    "require": {
-        "guzzlehttp/guzzle": "7.10.0-p1+tuxcare"
-    }
-}`
-
-const psr7json =
-`{
-    "require": {
-        "guzzlehttp/psr7": "1.9.1-p1+tuxcare"
+        "twig/twig": "2.16.1-p1+tuxcare"
     }
 }`
 

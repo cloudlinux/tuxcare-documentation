@@ -82,7 +82,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **highlight.js** 9.18.5
 * **hoek** 0.8.5, 0.9.1, 2.11.1, 2.12.0, 2.14.0, 2.16.3, 4.2.1
 * **hosted-git-info** 2.1.4, 2.7.1
-* **http-proxy-middleware** 0.19.1, 2.0.8
+* **http-proxy-middleware** 0.19.1, 1.1.0, 2.0.6, 2.0.7, 2.0.8, 3.0.3
 * **i18next** 23.16.8
 * **i18next-http-backend** 1.4.4, 2.5.2
 * **immutable** 3.8.1, 3.8.2, 4.3.5, 4.3.7, 5.0.3
@@ -114,7 +114,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **moment-timezone** 0.4.1
 * **morgan** 1.5.3
 * **mout** 0.9.1, 0.11.0
-* **multer** 1.4.5-lts, 1.4.5-lts.2
+* **multer** 1.4.5-lts, 1.4.5-lts.1, 1.4.5-lts.2
 * **mysql** 2.18.1
 * **negotiator** 0.5.3
 * **netmask** 1.0.6
@@ -129,7 +129,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **picocolors** 0.2.1
 * **picomatch** 2.3.1, 4.0.2
 * **prismjs** 1.27.0, 1.29.0
-* **protobufjs** 6.11.6
+* **protobufjs** 6.10.2, 6.11.6
 * **protobufjs-utf8** 1.1.0
 * **pug** 2.0.4
 * **qs** 0.5.1, 0.6.6, 1.0.2, 1.2.2, 2.2.5, 2.3.3, 2.4.2, 4.0.0, 5.1.0, 5.2.0, 6.5.3, 6.5.5, 6.14.0

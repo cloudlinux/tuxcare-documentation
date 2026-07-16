@@ -317,6 +317,10 @@ export default {
                     icon: '/images/livewire-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/monolog/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-libraries/php-svg-lib/',
                     icon: '/images/dompdf-logo.webp',
                 },
@@ -351,6 +355,10 @@ export default {
                 {
                     path: '/els-for-libraries/symfony/',
                     icon: '/images/symfony-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/twig/',
+                    icon: '/images/php-twig.webp',
                 },
                 {
                     path: '/els-for-libraries/zendframework/',

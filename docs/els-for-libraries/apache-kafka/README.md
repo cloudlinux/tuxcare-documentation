@@ -8,7 +8,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Kafka® provides security p
 
 ## Supported Versions
 
-* Apache Kafka® 3.2.3
+* Apache Kafka® 3.2.3, 3.7.1
 
 ## Installation
 

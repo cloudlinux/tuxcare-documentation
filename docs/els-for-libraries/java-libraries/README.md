@@ -7,12 +7,13 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache ActiveMQ Artemis** 2.26.0
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
-* **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4
+* **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
 * **Apache Commons Compress** 1.19, 1.20, 1.21, 1.26.2
 * **Apache Commons Digester** 2.0, 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2
 * **Apache Commons HttpClient** 3.1
 * **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.11.0
+* **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
 * **Apache HttpComponents Client** 4.5.2
 * **Apache Neethi** 3.1.1
@@ -23,8 +24,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Tika** 2.9.4
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.6.0
-* **AssertJ** 2.9.0, 3.18.1
+* **AssertJ** 2.9.0, 3.18.1, 3.25.3
 * **Bouncy Castle** 1.64, 1.76, 1.78.1
+* **c3p0** 0.9.5.5
 * **DNSJava** 2.1.7
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
@@ -37,8 +39,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Google Guava** 16.0.1, 18.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
+* **Grails** 2.5.6, 6.2.3
 * **H2 Database** 1.4.200
 * **Hazelcast** 4.2.8
+* **HornetQ** 2.4.9.Final
 * **HPPC** 0.8.1
 * **HtmlUnit** 2.70.0
 * **iText** 2.1.7
@@ -52,11 +56,11 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **JUnit** 4.13
 * **Logback** 1.1.7, 1.2.13, 1.4.14, 1.5.18
 * **LZ4** 1.8.1
-* **mchange-commons-java** 0.2.20
+* **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
 * **NekoHTML** 1.9.22
-* **Netty** 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final
+* **Netty** 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.117.Final
 * **Netty Incubator** 0.0.21.Final
 * **Nimbus JOSE + JWT** 9.22, 9.23, 9.24.4
 * **OkHttp3** 3.14.9, 4.10.0
