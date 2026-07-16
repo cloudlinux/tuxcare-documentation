@@ -318,7 +318,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/monolog/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
                     path: '/els-for-libraries/php-svg-lib/',
@@ -358,7 +358,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/twig/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/php-twig.webp',
                 },
                 {
                     path: '/els-for-libraries/zendframework/',
