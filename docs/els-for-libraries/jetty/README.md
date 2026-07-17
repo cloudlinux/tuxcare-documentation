@@ -68,6 +68,12 @@ TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security pa
 
    Replace Eclipse Jetty dependencies with TuxCare-maintained versions. You can find artifact versions on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) — sign in with your TuxCare credentials.
 
+   Each TuxCare version is the upstream Jetty version with a TuxCare patch suffix — for example, `9.4.58.v20250814-tuxcare.3`. It differs from the upstream number (`9.4.58`) because it is a safe version provided by TuxCare, so use the version string as shown in Nexus.
+
+   :::tip
+   The snippet below is only an example — check Nexus for the current version of your Jetty line.
+   :::
+
    <CodeTabs :tabs="[
      { title: 'Maven (pom.xml)', content: mavendeps },
      { title: 'Gradle (build.gradle)', content: gradledeps }
@@ -152,7 +158,7 @@ const mavendeps =
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-bom</artifactId>
-            <version>9.4.53.v20231009-tuxcare.1</version>
+            <version>9.4.58.v20250814-tuxcare.3</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -173,7 +179,7 @@ const gradledeps =
 
 dependencyManagement {
     imports {
-        mavenBom 'org.eclipse.jetty:jetty-bom:9.4.53.v20231009-tuxcare.1'
+        mavenBom 'org.eclipse.jetty:jetty-bom:9.4.58.v20250814-tuxcare.3'
     }
 }
 
