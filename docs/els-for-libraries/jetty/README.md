@@ -68,7 +68,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Eclipse Jetty provides security pa
 
    Replace Eclipse Jetty dependencies with TuxCare-maintained versions. You can find artifact versions on [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) — sign in with your TuxCare credentials.
 
-   Each TuxCare artifact is the upstream Jetty version plus a TuxCare patch suffix — for example, `9.4.58.v20250814-tuxcare.3`. The suffix marks the TuxCare patch revision, so the version string differs from the plain upstream number (a search for the bare `9.4.58` won't match). Always copy the exact version string as shown in Nexus.
+   Each TuxCare version is the upstream Jetty version with a TuxCare patch suffix — for example, `9.4.58.v20250814-tuxcare.3`. It differs from the upstream number (`9.4.58`) because it is a safe version provided by TuxCare, so use the version string as shown in Nexus.
 
    :::tip
    The snippet below is only an example — check Nexus for the current version of your Jetty line.
