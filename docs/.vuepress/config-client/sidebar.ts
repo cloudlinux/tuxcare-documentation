@@ -346,7 +346,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/ratchet/',
-                    icon: '/images/TuxCare_color_icon.webp',
+                    icon: '/images/ratchet.webp',
                 },
                 {
                     path: '/els-for-libraries/saloon/',
@@ -362,7 +362,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/thruway/',
-                    icon: '/images/TuxCare_color_icon.webp',
+                    icon: '/images/thruway.webp',
                 },
                 {
                     path: '/els-for-libraries/twig/',
