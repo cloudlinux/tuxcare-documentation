@@ -2174,6 +2174,11 @@ const techData = [
         link: "./google-protobuf/",
       },
       {
+        name: "Ratchet",
+        versions: "0.3.6",
+        link: "./ratchet/",
+      },
+      {
         name: "Saloon",
         versions: "3.15.0",
         link: "./saloon/",
@@ -2217,6 +2222,11 @@ const techData = [
         name: "Symfony Yaml",
         versions: "3.4.x | 4.4.x",
         link: "./symfony/",
+      },
+      {
+        name: "Thruway",
+        versions: "0.4.2",
+        link: "./thruway/",
       },
       {
         name: "Twig",

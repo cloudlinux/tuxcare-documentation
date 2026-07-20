@@ -345,6 +345,10 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/ratchet/',
+                    icon: '/images/ratchet.webp',
+                },
+                {
                     path: '/els-for-libraries/saloon/',
                     icon: '/images/saloon.webp',
                 },
@@ -355,6 +359,10 @@ export default {
                 {
                     path: '/els-for-libraries/symfony/',
                     icon: '/images/symfony-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/thruway/',
+                    icon: '/images/thruway.webp',
                 },
                 {
                     path: '/els-for-libraries/twig/',
