@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Guzzle from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* **Guzzle** 6.0.2, 6.3.3, 7.10.0
+* **Guzzle** 6.0.2, 6.3.3, 6.5.8, 7.10.0
 * **Guzzle PSR-7** 1.4.2, 1.9.1
 
 Other versions upon request.
@@ -76,6 +76,15 @@ Other versions upon request.
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.0.2-p1+tuxcare` },
      { title: 'composer.json', content: guzzlejson602 }
+   ]" />
+
+   </template>
+
+   <template #Guzzle_6.5>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.5.8-p1+tuxcare` },
+     { title: 'composer.json', content: guzzlejson658 }
    ]" />
 
    </template>
@@ -192,6 +201,13 @@ const guzzlejson602 =
 `{
     "require": {
         "guzzlehttp/guzzle": "6.0.2-p1+tuxcare"
+    }
+}`
+
+const guzzlejson658 =
+`{
+    "require": {
+        "guzzlehttp/guzzle": "6.5.8-p1+tuxcare"
     }
 }`
 

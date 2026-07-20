@@ -106,7 +106,7 @@ const techData = [
       },
       {
         name: "Apache Commons Compress",
-        versions: "1.19 | 1.20 | 1.21 | 1.26.2",
+        versions: "1.18 | 1.19 | 1.20 | 1.21 | 1.26.2",
         link: "./java-libraries/",
       },
       {
@@ -126,7 +126,7 @@ const techData = [
       },
       {
         name: "Apache Commons IO",
-        versions: "2.4 | 2.5 | 2.6 | 2.7 | 2.11.0",
+        versions: "2.4 | 2.5 | 2.6 | 2.7 | 2.8.0 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -251,6 +251,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apereo CAS Client",
+        versions: "4.0.4",
+        link: "./java-libraries/",
+      },
+      {
         name: "Bouncy Castle",
         versions: "1.64 | 1.76 | 1.78.1",
         link: "./java-libraries/",
@@ -307,7 +312,7 @@ const techData = [
       },
       {
         name: "Google Gson",
-        versions: "2.8.5 | 2.9.1",
+        versions: "2.4 | 2.8.5 | 2.8.9 | 2.9.1 | 2.10.1 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -447,7 +452,7 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.117.Final",
+        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.117.Final | 4.1.130.Final",
         link: "./java-libraries/",
       },
       {
@@ -457,7 +462,12 @@ const techData = [
       },
       {
         name: "Nimbus JOSE + JWT",
-        versions: "9.22 | 9.23 | 9.24.4",
+        versions: "8.23 | 9.22 | 9.23 | 9.24.4 | 9.37.3 | 9.39.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Nimbus OAuth2 OIDC SDK",
+        versions: "9.43.3 | 9.43.6",
         link: "./java-libraries/",
       },
       {
@@ -732,8 +742,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "babel-core",
+        versions: "7.18.9 | 7.21.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "babel-helpers",
-        versions: "7.15.4 | 7.24.0 | 7.24.1 | 7.25.6 | 7.26.0",
+        versions: "7.15.4 | 7.18.9 | 7.21.0 | 7.24.0 | 7.24.1 | 7.25.6 | 7.26.0",
         link: "./javascript-libraries/",
       },
       {
@@ -747,8 +762,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "babel-runtime-corejs2",
+        versions: "7.18.9 | 7.21.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "babel-runtime-corejs3",
-        versions: "7.15.3",
+        versions: "7.15.3 | 7.18.9 | 7.21.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1093,7 +1113,7 @@ const techData = [
       },
       {
         name: "http-proxy-middleware",
-        versions: "0.19.1 | 1.1.0 | 2.0.6 | 2.0.7 | 2.0.8 | 3.0.3",
+        versions: "0.0.5 | 0.17.2 | 0.17.3 | 0.18.0 | 0.19.1 | 0.20.0 | 1.0.0 | 1.1.0 | 2.0.6 | 2.0.7 | 2.0.8 | 3.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1128,7 +1148,7 @@ const techData = [
       },
       {
         name: "jQuery",
-        versions: "1.8.2 | 1.12.4 | 2.2.4 | 3.4.1",
+        versions: "1.8.2 | 1.11.3 | 1.12.4 | 2.2.4 | 3.2.1 | 3.3.1 | 3.4.1",
         link: "./jquery/",
       },
       {
@@ -1163,7 +1183,7 @@ const techData = [
       },
       {
         name: "JSON Web Token (JWT)",
-        versions: "0.4.0 | 0.4.1 | 8.5.1",
+        versions: "0.4.0 | 0.4.1 | 7.1.6 | 8.5.1",
         link: "./jsonwebtoken/",
       },
       {
@@ -1203,7 +1223,7 @@ const techData = [
       },
       {
         name: "Lodash",
-        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
+        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.4 | 4.17.5 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
         link: "./lodash/",
       },
       {
@@ -1347,6 +1367,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "nodemailer",
+        versions: "2.7.2 | 6.10.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "nth-check",
         versions: "1.0.2",
         link: "./javascript-libraries/",
@@ -1423,7 +1448,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.5 | 2.3.3 | 2.4.2 | 4.0.0 | 5.1.0 | 5.2.0 | 6.5.3 | 6.5.5 | 6.14.0",
+        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.5 | 2.3.3 | 2.4.2 | 4.0.0 | 5.1.0 | 5.2.0 | 6.5.3 | 6.5.5 | 6.11.0 | 6.14.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1493,7 +1518,7 @@ const techData = [
       },
       {
         name: "shell-quote",
-        versions: "1.4.3 | 1.7.2",
+        versions: "1.4.3 | 1.6.1 | 1.7.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1653,7 +1678,7 @@ const techData = [
       },
       {
         name: "webpack-dev-server",
-        versions: "2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.15.1 | 4.15.2",
+        versions: "2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.11.1 | 4.15.1 | 4.15.2",
         link: "./webpack-dev-server/",
       },
       {
@@ -1673,7 +1698,7 @@ const techData = [
       },
       {
         name: "ws",
-        versions: "1.1.1 | 1.1.2 | 3.3.3 | 4.1.0 | 7.4.6",
+        versions: "1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 7.4.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1684,6 +1709,11 @@ const techData = [
       {
         name: "xml2js",
         versions: "0.2.6 | 0.2.8 | 0.4.23",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "xmldom",
+        versions: "0.1.31 | 0.6.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2085,7 +2115,7 @@ const techData = [
       },
       {
         name: "Guzzle",
-        versions: "6.0.2 | 6.3.3 | 7.10.0",
+        versions: "6.0.2 | 6.3.3 | 6.5.8 | 7.10.0",
         link: "./guzzle/",
       },
       {
@@ -2115,7 +2145,7 @@ const techData = [
       },
       {
         name: "Laravel",
-        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 7.30.7 | 8.83.29 | 9.52.21 | 10 | 11 | 12.58.0",
+        versions: "5.4.36 | 5.5.50 | 5.6.40 | 5.7.29 | 5.8.38 | 6.20.45 | 7.30.7 | 8.12.0 | 8.12.1 | 8.12.2 | 8.12.3 | 8.83.29 | 9.52.21 | 10 | 11 | 12.58.0",
         link: "./laravel/",
       },
       {
@@ -2220,7 +2250,7 @@ const techData = [
       },
       {
         name: "Symfony Yaml",
-        versions: "3.4.x | 4.4.x",
+        versions: "2.8.x | 3.4.x | 4.4.x",
         link: "./symfony/",
       },
       {
