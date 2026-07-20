@@ -8,11 +8,11 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
-* **Apache Commons Compress** 1.19, 1.20, 1.21, 1.26.2
+* **Apache Commons Compress** 1.18, 1.19, 1.20, 1.21, 1.26.2
 * **Apache Commons Digester** 2.0, 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2
 * **Apache Commons HttpClient** 3.1
-* **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.11.0
+* **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
 * **Apache HttpComponents Client** 4.5.2
@@ -25,6 +25,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.6.0
 * **AssertJ** 2.9.0, 3.18.1, 3.25.3
+* **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.78.1
 * **c3p0** 0.9.5.5
 * **DNSJava** 2.1.7
@@ -35,7 +36,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **EdDSA** 0.3.0
 * **el-spec** 3.0.0
 * **excel-streaming-reader** 5.0.2
-* **Google Gson** 2.8.5, 2.9.1
+* **Google Gson** 2.4, 2.8.5, 2.8.9, 2.9.1, 2.10.1, 2.11.0
 * **Google Guava** 16.0.1, 18.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
@@ -60,9 +61,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
 * **NekoHTML** 1.9.22
-* **Netty** 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.117.Final
+* **Netty** 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.117.Final, 4.1.130.Final
 * **Netty Incubator** 0.0.21.Final
-* **Nimbus JOSE + JWT** 9.22, 9.23, 9.24.4
+* **Nimbus JOSE + JWT** 8.23, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
+* **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 2.8.0, 2.10.0
 * **Plexus Utils** 1.4.5, 1.5.8

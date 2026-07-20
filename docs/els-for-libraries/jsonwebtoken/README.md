@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
 
 ## Supported JSON Web Token Versions
 
-* JSON Web Token 0.4.0, 0.4.1, 8.5.1
+* JSON Web Token 0.4.0, 0.4.1, 7.1.6, 8.5.1
 
 ## Installation
 
@@ -79,6 +79,19 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
       },
       "overrides": {
         "jsonwebtoken@0.4.1": "npm:@els-js/jsonwebtoken@>=0.4.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #JSON_Web_Token_7.1.6>
+
+      ```text
+      "dependencies": {
+        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=7.1.6-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@7.1.6": "npm:@els-js/jsonwebtoken@>=7.1.6-tuxcare.1"
       }
       ```
 
