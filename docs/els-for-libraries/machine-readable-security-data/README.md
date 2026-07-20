@@ -15,10 +15,11 @@ Each package built by TuxCare ships with an SBOM that lists its components, vers
 
 TuxCare generates an SBOM for every package it builds, across all ELS for Libraries ecosystems (Java, JavaScript, Python, PHP, .NET). SBOMs are published to TuxCare Nexus and require credentials. Direct browse repositories are currently available for:
 
+* Java - [els-java-sbom](https://nexus.repo.tuxcare.com/#browse/browse:els-java-sbom)
 * Python - [els_python_sbom](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom)
 * JavaScript - [els-js-sbom](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom)
 
-For Java, PHP, and other ecosystems, reach out to [sales@tuxcare.com](mailto:sales@tuxcare.com) to check SBOM availability.
+For PHP, .NET, and other ecosystems, reach out to [sales@tuxcare.com](mailto:sales@tuxcare.com) to check SBOM availability.
 
 ## Vulnerability Exploitability eXchange (VEX)
 
@@ -37,11 +38,11 @@ Each entry links one CVE to one artifact version and carries a status:
 * **exploitable** — the CVE affects this artifact version and has not yet been patched in this release.
 * **resolved** — the CVE has been patched through a TuxCare release.
 
-The feed covers every supported base version, every released `-tuxcare.N` iteration, and transitive dependencies, so the entry count reflects all of these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
+Each VEX document reports the CVEs that directly affect the artifact. The feed covers every supported base version and every released `-tuxcare.N` iteration, so the entry count reflects these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
 
 ## Package Signature Verification (GPG)
 
-Every package TuxCare builds is signed with a detached OpenPGP signature so you can confirm, before installing or updating, that the artifact was produced by TuxCare and has not been altered in transit. The signature is published as a separate `.asc` file alongside the package and is created with TuxCare's signing key (SHA-256 detached signature).
+Every package TuxCare builds is signed with a detached OpenPGP signature so you can confirm, before installing or updating, that the artifact was produced by TuxCare and has not been altered in transit. The signature is published as a separate `.asc` file in TuxCare Nexus and is created with TuxCare's signing key (SHA-256 detached signature).
 
 A successful verification proves two things about the artifact:
 
@@ -52,7 +53,7 @@ A failed verification is an **integrity violation**: the artifact must be treate
 
 ### Where Signatures Are Published
 
-Signature files are published to a dedicated Nexus signatures repository, separate from the package repositories and mirroring the path of the package they sign. Accessing them requires the same TuxCare Nexus credentials as the package repositories.
+Signature files are published to TuxCare Nexus and require the same credentials as the package repositories. By default the `.asc` is published in the same repository as the SBOM; JavaScript is the exception, publishing signatures to a dedicated signatures repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise repository and path.
 
 ### Obtain the TuxCare Public Key
 
@@ -76,10 +77,10 @@ Import the public key once. It can verify every TuxCare-signed package, so this 
 
 ### Verify a Package
 
-The verification procedure is the same for every ELS for Libraries ecosystem (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature from the matching TuxCare signatures repository, and run `gpg --verify`. Select your ecosystem below.
+The verification procedure is the same for every ELS for Libraries ecosystem (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature from TuxCare Nexus, and run `gpg --verify`. Select your ecosystem below.
 
 :::warning
-The `els-<ecosystem>-signatures` repository paths and the example package versions shown below are representative. Confirm the exact signatures-repository path and artifact naming for your account with your TuxCare contact.
+The signature location and artifact naming vary by ecosystem. The Java steps below are confirmed; for the other ecosystems, the repository paths and example versions shown are representative — confirm the exact signatures location and artifact naming for your account with your TuxCare contact.
 :::
 
 <TableTabs label="Choose ecosystem: " :labels="{ DotNET: '.NET' }">
@@ -100,9 +101,11 @@ The `els-<ecosystem>-signatures` repository paths and the example package versio
 
 2. **Download the matching signature**
 
+   For Java, the `.asc` is published in the SBOM repository (`els-java-sbom`), keyed by artifact name and version:
+
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
-     https://nexus.repo.tuxcare.com/repository/els-java-signatures/org/apache/commons/commons-lang3/3.12.0-tuxcare.1/commons-lang3-3.12.0-tuxcare.1.jar.asc \
+     https://nexus.repo.tuxcare.com/repository/els-java-sbom/commons-lang3/3.12.0-tuxcare.1/commons-lang3-3.12.0-tuxcare.1.jar.asc \
      -o commons-lang3-3.12.0-tuxcare.1.jar.asc
    ```
 
