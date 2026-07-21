@@ -1,4 +1,4 @@
-# Machine-Readable Security Data (Errata, OVAL, CSAF, GPG)
+# Machine-Readable Security Data (Errata, OVAL, CSAF)
 
 TuxCare provides machine-readable security data for ELS for Runtimes in the following formats:
 
@@ -6,7 +6,8 @@ TuxCare provides machine-readable security data for ELS for Runtimes in the foll
 * **OVAL** — Open Vulnerability and Assessment Language patch definitions for use with OpenSCAP and similar tools
 * **CSAF** — Common Security Advisory Framework advisories in [OASIS](https://www.csaf.io/) CSAF 2.0 format (VEX and Security Advisory)
 * **RSS** — release feeds for tracking updates
-* **GPG** — OpenPGP signatures on packages and repository metadata, so you can confirm that what you install came from TuxCare and was not altered in transit (see [Package Signature Verification (GPG)](#package-signature-verification-gpg))
+
+Every package is also signed so you can verify its authenticity and integrity before installing — see [Package Signature Verification (GPG)](#package-signature-verification-gpg).
 
 Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/fixes) and [security.tuxcare.com](https://security.tuxcare.com).
 
@@ -134,12 +135,8 @@ The repository setup script installs the key for you. To confirm it is present i
 
 <CodeTabs :tabs="[
   { title: 'RPM', content: `rpm -qi $(rpm -qa 'gpg-pubkey*') | grep -i tuxcare` },
-  { title: 'DEB', content:
-  `# Keyring referenced by the repo config's signed-by= option
-  ls /etc/apt/trusted.gpg.d/ /usr/share/keyrings/ 2>/dev/null | grep -i tuxcare
-  gpg --show-keys /etc/apt/trusted.gpg.d/tuxcare*.gpg` },
-  { title: 'APK', content:
-  `ls /etc/apk/keys/ | grep -i tuxcare` }
+  { title: 'DEB', content: `ls /etc/apt/trusted.gpg.d/ | grep -i tuxcare` },
+  { title: 'APK', content: `ls /etc/apk/keys/ | grep -i tuxcare` }
 ]" />
 
 If the key is missing, re-run the repository setup script from the [installation instructions](/els-for-runtimes/) rather than importing a key from an untrusted source.
@@ -152,21 +149,40 @@ The TuxCare public signing key is also published at [`repo.tuxcare.com/tuxcare/R
 
 With signature checking enabled, verification happens automatically during install and update. You can also verify explicitly before installing:
 
-<CodeTabs :tabs="[
-  { title: 'RPM', content:
-  `# Download without installing, then check the signature
-  yumdownloader alt-php74   # or: dnf download alt-php74
-  rpm --checksig alt-php74-*.rpm` },
-  { title: 'DEB', content:
-  `# apt verifies the signed InRelease index on update, then
-  # checks every .deb against the checksums in that signed index
-  apt-get update
-  apt-get install --reinstall --download-only alt-php74-meta` },
-  { title: 'APK', content:
-  `# apk verifies the signed index and the package checksum on fetch
-  apk fetch --simulate alt-php74
-  apk verify alt-php74-*.apk` }
-]" />
+<TableTabs>
+
+<template #RPM>
+
+```text
+# Download without installing, then check the signature
+yumdownloader alt-php74   # or: dnf download alt-php74
+rpm --checksig alt-php74-*.rpm
+```
+
+</template>
+
+<template #DEB>
+
+```text
+# apt verifies the signed InRelease index on update, then
+# checks every .deb against the checksums in that signed index
+apt-get update
+apt-get install --reinstall --download-only alt-php74-meta
+```
+
+</template>
+
+<template #APK>
+
+```text
+# apk verifies the signed index and the package checksum
+# automatically on 'apk add'; to check a downloaded package:
+apk verify alt-php74-*.apk
+```
+
+</template>
+
+</TableTabs>
 
 A successful RPM check reports `digests signatures OK`; `apt-get update` completes with no `NO_PUBKEY`, `not signed`, or `Hash Sum mismatch` warnings; and `apk verify` prints `OK`. Any other result is an integrity violation — stop and re-obtain the package over a trusted channel.
 
@@ -194,72 +210,148 @@ An **integrity violation** is any failure of the package manager to confirm that
 
 **1. GPG signature failure** — a package is signed with an unknown key, or its signature does not match its contents.
 
-<CodeTabs :tabs="[
-  { title: 'RPM', content:
-  `Package alt-php74-7.4.33-....rpm is not signed
-  # or:
-  The GPG keys listed for the '...' repository are already installed but
-  they are not correct for this package.
-  # or:
-  GPG check FAILED` },
-  { title: 'DEB', content:
-  `# apt trusts packages via the signed repository index; a missing or
-  # wrong key surfaces on update:
-  The following signatures couldn't be verified because the public key
-  is not available: NO_PUBKEY ...` },
-  { title: 'APK', content:
-  `UNTRUSTED signature
-  # or:
-  BAD signature` }
-]" />
+<TableTabs>
+
+<template #RPM>
+
+```text
+Package alt-php74-7.4.33-....rpm is not signed
+# or:
+The GPG keys listed for the '...' repository are already installed but
+they are not correct for this package.
+# or:
+GPG check FAILED
+```
+
+</template>
+
+<template #DEB>
+
+```text
+# apt trusts packages via the signed repository index; a missing or
+# wrong key surfaces on update:
+The following signatures couldn't be verified because the public key
+is not available: NO_PUBKEY ...
+```
+
+</template>
+
+<template #APK>
+
+```text
+UNTRUSTED signature
+# or:
+BAD signature
+```
+
+</template>
+
+</TableTabs>
 
 **2. Repository metadata signature mismatch** — the signed repository index cannot be verified against the trusted key (index tampered with, unsigned, or signed by the wrong key).
 
-<CodeTabs :tabs="[
-  { title: 'RPM', content:
-  `# Only detected when repo_gpgcheck=1 (see note above)
-  repomd.xml signature could not be verified for ...
-  # or:
-  GPG verification is enabled, but GPG signature is not available.` },
-  { title: 'DEB', content:
-  `GPG error: https://repo.alt.tuxcare.com ... : The repository is not signed.
-  # or:
-  ... NO_PUBKEY ... (signed-by key not trusted)` },
-  { title: 'APK', content:
-  `apk: ... UNTRUSTED signature (APKINDEX)
-  # or:
-  apk: verification error` }
-]" />
+<TableTabs>
+
+<template #RPM>
+
+```text
+# Only detected when repo_gpgcheck=1 (see note above)
+repomd.xml signature could not be verified for ...
+# or:
+GPG verification is enabled, but GPG signature is not available.
+```
+
+</template>
+
+<template #DEB>
+
+```text
+GPG error: https://repo.alt.tuxcare.com ... : The repository is not signed.
+# or:
+... NO_PUBKEY ... (key not present in /etc/apt/trusted.gpg.d/)
+```
+
+</template>
+
+<template #APK>
+
+```text
+apk: ... UNTRUSTED signature (APKINDEX)
+# or:
+apk: verification error
+```
+
+</template>
+
+</TableTabs>
 
 **3. Checksum error** — a package's bytes do not match the checksum recorded in the signed index (corruption or tampering after signing).
 
-<CodeTabs :tabs="[
-  { title: 'RPM', content:
-  `Package does not match intended download.
-  # or:
-  [Errno -1] Package ... checksum ... does not match` },
-  { title: 'DEB', content:
-  `Failed to fetch ... Hash Sum mismatch` },
-  { title: 'APK', content:
-  `BAD archive
-  # or:
-  ... sha256 ... mismatch` }
-]" />
+<TableTabs>
+
+<template #RPM>
+
+```text
+Package does not match intended download.
+# or:
+[Errno -1] Package ... checksum ... does not match
+```
+
+</template>
+
+<template #DEB>
+
+```text
+Failed to fetch ... Hash Sum mismatch
+```
+
+</template>
+
+<template #APK>
+
+```text
+BAD archive
+# or:
+... sha256 ... mismatch
+```
+
+</template>
+
+</TableTabs>
 
 **4. HTTPS/TLS certificate error** — the connection to the repository could not be authenticated, so the transport itself is untrusted.
 
-<CodeTabs :tabs="[
-  { title: 'RPM', content:
-  `Curl error (60): SSL peer certificate or SSH remote key was not OK
-  # or:
-  SSL certificate problem: unable to get local issuer certificate` },
-  { title: 'DEB', content:
-  `server certificate verification failed. CAfile: ... CRLfile: none
-  # or:
-  gnutls_handshake() failed: The certificate is NOT trusted.` },
-  { title: 'APK', content:
-  `TLS error: certificate verification failed` }
-]" />
+<TableTabs>
+
+<template #RPM>
+
+```text
+Curl error (60): SSL peer certificate or SSH remote key was not OK
+# or:
+SSL certificate problem: unable to get local issuer certificate
+```
+
+</template>
+
+<template #DEB>
+
+```text
+server certificate verification failed. CAfile: ... CRLfile: none
+# or:
+gnutls_handshake() failed: The certificate is NOT trusted.
+```
+
+</template>
+
+<template #APK>
+
+```text
+TLS error: certificate verification failed
+```
+
+</template>
+
+</TableTabs>
 
 :::warning
 Never bypass one of these errors with flags such as `--nogpgcheck`, `[trusted=yes]`, `--allow-untrusted`, or `--no-check-certificate`. Treat the artifact as compromised, log the event (below), and re-obtain the package and repository configuration from TuxCare over a trusted channel.
