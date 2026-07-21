@@ -30,7 +30,7 @@ Feeds are published per ecosystem:
 * Java - [els_lang_java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
 * Python - [els_lang_python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/)
 * JavaScript - [els_lang_javascript](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/)
-* PHP - [els_lang_php](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/)
+* PHP - [els_lang_php](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — PHP releases iterate as `-pN+tuxcare` (e.g. `5.2.28-p1+tuxcare`), not `-tuxcare.N`
 * .NET - [els_lang_dotnet](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/)
 
 Each entry links one CVE to one artifact version and carries a status:
@@ -53,7 +53,7 @@ A failed verification is an **integrity violation**: the artifact must be treate
 
 ### Where Signatures Are Published
 
-Signature files are published to TuxCare Nexus and require the same credentials as the package repositories. By default the `.asc` is published in the same repository as the SBOM; JavaScript is the exception, publishing signatures to a dedicated signatures repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise repository and path.
+Signature files are published to TuxCare Nexus and require the same credentials as the package repositories. The repository the `.asc` lives in varies by ecosystem: some publish it alongside the SBOM, while others use a dedicated repository — JavaScript uses a dedicated signatures repository, and PHP publishes signatures to the `els_php_raw_custom1` raw repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise repository and path.
 
 ### Obtain the TuxCare Public Key
 
@@ -80,7 +80,7 @@ Import the public key once. It can verify every TuxCare-signed package, so this 
 The verification procedure is the same for every ELS for Libraries ecosystem (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature from TuxCare Nexus, and run `gpg --verify`. Select your ecosystem below.
 
 :::warning
-The signature location and artifact naming vary by ecosystem. The Java steps below are confirmed; for the other ecosystems, the repository paths and example versions shown are representative — confirm the exact signatures location and artifact naming for your account with your TuxCare contact.
+The signature location and artifact naming vary by ecosystem. The Java and PHP steps below are confirmed; for the other ecosystems, the repository paths and example versions shown are representative — confirm the exact signatures location and artifact naming for your account with your TuxCare contact.
 :::
 
 <TableTabs label="Choose ecosystem: " :labels="{ DotNET: '.NET' }">
@@ -207,20 +207,38 @@ The signature location and artifact naming vary by ecosystem. The Java steps bel
 
 1. **Obtain the exact published artifact**
 
-   With your TuxCare repository configured (see any PHP library's setup, e.g. [PHPMailer](/els-for-libraries/phpmailer/)), download the published package archive from your Nexus `els_php` account, or use the copy Composer caches under `~/.composer/cache/files/`. This example assumes `phpmailer-5.2.28-p1+tuxcare.zip` in the current directory.
-
-2. **Download the matching signature**
+   GPG verifies the byte-for-byte archive that was signed — do not rebuild it locally. For PHP, TuxCare publishes the signed archive together with its detached `.asc` signature in the `els_php_raw_custom1` raw repository on TuxCare Nexus, laid out as `<vendor>/<package>/<version>/`. Authenticate with the same Nexus credentials you use for the `els_php` Composer repository (see any PHP library's setup, e.g. [PHPMailer](/els-for-libraries/phpmailer/)) and download the archive for the version you use. This example uses `symfony/yaml` `v4.4.45-p1+tuxcare`:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
-     https://nexus.repo.tuxcare.com/repository/els-php-signatures/phpmailer/phpmailer/5.2.28-p1+tuxcare/phpmailer-5.2.28-p1+tuxcare.zip.asc \
-     -o phpmailer-5.2.28-p1+tuxcare.zip.asc
+     https://nexus.repo.tuxcare.com/repository/els_php_raw_custom1/symfony/yaml/v4.4.45-p1+tuxcare/yaml-v4.4.45-p1+tuxcare.zip \
+     -o yaml-v4.4.45-p1+tuxcare.zip
+   ```
+
+   Check the exact package, version, and path in your TuxCare Nexus account. (Signatures are published per artifact, so a package only has an `.asc` if a signed build exists for it.)
+
+   Alternatively, verify the copy Composer downloaded during `composer install`, provided it is the same build. Composer stores it under a content-hashed filename (`<vendor>/<package>/<hash>.zip`) in its files cache, so locate it and copy it out under the published name first. The cache location varies by operating system:
+
+   * **macOS**: `~/Library/Caches/composer`
+   * **Linux**: `~/.composer/cache` (or `$XDG_CACHE_HOME/composer`)
+   * **Windows**: `C:\Users\<user>\AppData\Local\Composer`
+
+   Confirm your exact path with `composer config cache-dir`; the downloaded package archives live in its `files/` subdirectory.
+
+2. **Download the matching signature**
+
+   The `.asc` sits beside the archive in the same `els_php_raw_custom1` repository:
+
+   ```text
+   curl -u "${USERNAME}:${PASSWORD}" -fsSL \
+     https://nexus.repo.tuxcare.com/repository/els_php_raw_custom1/symfony/yaml/v4.4.45-p1+tuxcare/yaml-v4.4.45-p1+tuxcare.zip.asc \
+     -o yaml-v4.4.45-p1+tuxcare.zip.asc
    ```
 
 3. **Verify the signature against the artifact**
 
    ```text
-   gpg --verify phpmailer-5.2.28-p1+tuxcare.zip.asc phpmailer-5.2.28-p1+tuxcare.zip
+   gpg --verify yaml-v4.4.45-p1+tuxcare.zip.asc yaml-v4.4.45-p1+tuxcare.zip
    ```
 
    A `Good signature` line confirms authenticity and integrity. `BAD signature`, or a missing public key, is an integrity violation — stop and re-obtain the package from TuxCare over a trusted channel.
@@ -317,7 +335,7 @@ The ELS for Libraries delivery model is a set of per-ecosystem registries hosted
 |---|---|---|
 | **GPG signature failure** | The detached `.asc` signature does not match the artifact, or the artifact was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
 | **Checksum / integrity-hash mismatch** | The downloaded package archive's hash does not match the `dist.shasum` recorded in `composer.lock` — the bytes changed in transit or the artifact was substituted. | **Composer** aborts with `The checksum verification of the file failed`. |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | **Composer**, with `secure-http` enabled (the default), fails with `curl error 60` / `SSL certificate problem`. |
+| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | **Composer** fails with `curl error 60` / `SSL certificate problem` (traffic to Nexus is HTTPS-only under the default `secure-http`). |
 
 </template>
 
