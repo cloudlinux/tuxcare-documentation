@@ -147,12 +147,20 @@ The TuxCare public signing key is also published at [`repo.tuxcare.com/tuxcare/R
 
 ### Verify a Package
 
-With signature checking enabled, verification happens automatically during install and update. You can also verify explicitly before installing. On RPM, download the package (`yumdownloader alt-php74` or `dnf download alt-php74`) and check its signature; on DEB, `apt` verifies the signed index on update and the `.deb` checksums on download; on APK, `apk` verifies the signed index and package checksum on `apk add`, or run `apk verify` on a downloaded file:
+With signature checking enabled, verification happens automatically during install and update. You can also verify explicitly before installing:
+
+* **RPM** — download the package without installing, then check its signature.
+* **DEB** — `apt` verifies the signed `InRelease` index on update, then checks every `.deb` against the checksums in that signed index.
+* **APK** — `apk` verifies the signed index and the package checksum automatically on `apk add`; use `apk verify` to check a downloaded package.
 
 <CodeTabs :tabs="[
-  { title: 'RPM', content: `rpm --checksig alt-php74-*.rpm` },
-  { title: 'DEB', content: `apt-get update && apt-get install --reinstall --download-only alt-php74-meta` },
-  { title: 'APK', content: `apk verify alt-php74-*.apk` }
+{ title: 'RPM', content:
+`yumdownloader alt-php74   # or: dnf download alt-php74
+rpm --checksig alt-php74-*.rpm` },
+{ title: 'DEB', content:
+`apt-get update
+apt-get install --reinstall --download-only alt-php74-meta` },
+{ title: 'APK', content: `apk verify alt-php74-*.apk` }
 ]" />
 
 A successful RPM check reports `digests signatures OK`; `apt-get update` completes with no `NO_PUBKEY`, `not signed`, or `Hash Sum mismatch` warnings; and `apk verify` prints `OK`. Any other result is an integrity violation — stop and re-obtain the package over a trusted channel.
@@ -182,33 +190,67 @@ An **integrity violation** is any failure of the package manager to confirm that
 **1. GPG signature failure** — a package is signed with an unknown key, or its signature does not match its contents.
 
 <CodeTabs :tabs="[
-  { title: 'RPM', content: `Public key for alt-php74-*.rpm is not installed` },
-  { title: 'DEB', content: `The following signatures couldn't be verified because the public key is not available: NO_PUBKEY ...` },
-  { title: 'APK', content: `UNTRUSTED signature` }
+{ title: 'RPM', content:
+`Package alt-php74-7.4.33-....rpm is not signed
+# or:
+The GPG keys listed for the '...' repository are already installed but they are not correct for this package.
+# or:
+GPG check FAILED` },
+{ title: 'DEB', content:
+`# apt trusts packages via the signed repository index; a missing or
+# wrong key surfaces on update:
+The following signatures couldn't be verified because the public key is not available: NO_PUBKEY ...` },
+{ title: 'APK', content:
+`UNTRUSTED signature
+# or:
+BAD signature` }
 ]" />
 
 **2. Repository metadata signature mismatch** — the signed repository index cannot be verified against the trusted key (index tampered with, unsigned, or signed by the wrong key).
 
 <CodeTabs :tabs="[
-  { title: 'RPM', content: `repomd.xml signature could not be verified for ...` },
-  { title: 'DEB', content: `GPG error: https://repo.alt.tuxcare.com ... : The repository is not signed.` },
-  { title: 'APK', content: `UNTRUSTED signature (APKINDEX)` }
+{ title: 'RPM', content:
+`# Only detected when repo_gpgcheck=1 (see note above)
+repomd.xml signature could not be verified for ...
+# or:
+GPG verification is enabled, but GPG signature is not available.` },
+{ title: 'DEB', content:
+`GPG error: https://repo.alt.tuxcare.com ... : The repository is not signed.
+# or:
+... NO_PUBKEY ... (key not present in /etc/apt/trusted.gpg.d/)` },
+{ title: 'APK', content:
+`apk: ... UNTRUSTED signature (APKINDEX)
+# or:
+apk: verification error` }
 ]" />
 
 **3. Checksum error** — a package's bytes do not match the checksum recorded in the signed index (corruption or tampering after signing).
 
 <CodeTabs :tabs="[
-  { title: 'RPM', content: `Package does not match intended download.` },
-  { title: 'DEB', content: `Failed to fetch ... Hash Sum mismatch` },
-  { title: 'APK', content: `... sha256 ... mismatch` }
+{ title: 'RPM', content:
+`Package does not match intended download.
+# or:
+[Errno -1] Package ... checksum ... does not match` },
+{ title: 'DEB', content:
+`Failed to fetch ... Hash Sum mismatch` },
+{ title: 'APK', content:
+`BAD archive
+# or:
+... sha256 ... mismatch` }
 ]" />
 
 **4. HTTPS/TLS certificate error** — the connection to the repository could not be authenticated, so the transport itself is untrusted.
 
 <CodeTabs :tabs="[
-  { title: 'RPM', content: `SSL certificate problem: unable to get local issuer certificate` },
-  { title: 'DEB', content: `server certificate verification failed. CAfile: ... CRLfile: none` },
-  { title: 'APK', content: `TLS error: certificate verification failed` }
+{ title: 'RPM', content:
+`Curl error (60): SSL peer certificate or SSH remote key was not OK
+# or:
+SSL certificate problem: unable to get local issuer certificate` },
+{ title: 'DEB', content:
+`server certificate verification failed. CAfile: ... CRLfile: none
+# or:
+gnutls_handshake() failed: The certificate is NOT trusted.` },
+{ title: 'APK', content: `TLS error: certificate verification failed` }
 ]" />
 
 :::warning
