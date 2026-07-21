@@ -4,26 +4,31 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported Java Libraries
 
-* **Apache ActiveMQ Artemis** 2.26.0
+* **Aircompressor** 0.27
+* **Apache ActiveMQ Artemis** 2.26.0, 2.33.0
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
+* **Apache Batik** 1.7
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
+* **Apache Commons Collections** 3.2, 3.2.1
 * **Apache Commons Compress** 1.18, 1.19, 1.20, 1.21, 1.26.2
 * **Apache Commons Digester** 2.0, 2.1
-* **Apache Commons FileUpload** 1.2.1, 1.2.2
+* **Apache Commons FileUpload** 1.2.1, 1.2.2, 1.5
 * **Apache Commons HttpClient** 3.1
 * **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
 * **Apache HttpComponents Client** 4.5.2
+* **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
 * **Apache POI** 3.10-FINAL, 4.1.2
 * **Apache Pulsar** 3.2.4
 * **Apache Santuario XML Security For Java** 2.0.10, 2.3.1
 * **Apache Thrift** 0.9.1, 0.9.3, 0.14.1
 * **Apache Tika** 2.9.4
+* **Apache Xalan** 2.7.1
 * **Apache XML Graphics Commons** 1.4, 2.1
-* **Apache XMLBeans** 2.6.0
+* **Apache XMLBeans** 2.3.0, 2.6.0
 * **AssertJ** 2.9.0, 3.18.1, 3.25.3
 * **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.78.1
@@ -35,7 +40,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Eclipse Parsson** 1.0.0
 * **EdDSA** 0.3.0
 * **el-spec** 3.0.0
+* **EWS Java API** 2.0
 * **excel-streaming-reader** 5.0.2
+* **GlassFish** 3.0.0
 * **Google Gson** 2.4, 2.8.5, 2.8.9, 2.9.1, 2.10.1, 2.11.0
 * **Google Guava** 16.0.1, 18.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
@@ -43,41 +50,53 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Grails** 2.5.6, 6.2.3
 * **H2 Database** 1.4.200
 * **Hazelcast** 4.2.8
+* **Hibernate Commons Annotations** 5.1.2.Final
+* **Hibernate Validator** 5.4.3.Final, 6.2.5.Final
 * **HornetQ** 2.4.9.Final
 * **HPPC** 0.8.1
 * **HtmlUnit** 2.70.0
 * **iText** 2.1.7
-* **JasperReports** 3.7.4
+* **JasperReports** 3.7.4, 6.2.2, 6.21.5
 * **JBoss XNIO** 3.8.0, 3.8.8
 * **JDOM** 1.0, 1.1.3
 * **Joda-Time** 1.3
 * **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
-* **JSON Smart v2** 2.4.8
+* **JSON Smart v2** 1.3.2, 2.4.8
+* **json-io** 2.9.4
+* **jsoup** 1.7.2
 * **JUnit** 4.13
 * **Logback** 1.1.7, 1.2.13, 1.4.14, 1.5.18
 * **LZ4** 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
+* **MySQL Connector/J** 5.1.49
 * **NekoHTML** 1.9.22
-* **Netty** 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.117.Final, 4.1.130.Final
+* **Netty** 3.10.6.Final, 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.117.Final, 4.1.130.Final
 * **Netty Incubator** 0.0.21.Final
 * **Nimbus JOSE + JWT** 8.23, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 2.8.0, 2.10.0
-* **Plexus Utils** 1.4.5, 1.5.8
+* **Plexus Utils** 1.4.5, 1.5.5, 1.5.8, 3.1.0, 3.6.0
+* **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
-* **Reactor BOM** 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
-* **Reactor Netty** 1.0.23, 1.0.32, 1.0.39, 1.1.15
+* **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
+* **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.1.15
+* **reload4j** 1.2.16
+* **Retrofit** 2.9.0
 * **RSocket** 1.1.3
-* **SnakeYAML** 1.23, 1.26, 1.29, 1.30, 1.33
-* **Snappy Java** 1.1.8.4
+* **SLF4J** 1.6.1, 1.7.21
+* **SnakeYAML** 1.23, 1.26, 1.28, 1.29, 1.30, 1.33
+* **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
+* **Sonatype Sisu** 2.3.0
 * **Thymeleaf** 3.0.15.RELEASE
-* **Undertow** 2.2.33.Final, 2.3.0.Final, 2.3.10.Final, 2.3.18.Final
-* **Woodstox** 5.0.3
+* **Undertow** 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.18.Final
+* **WildFly** 27.0.1.Final
+* **WildFly Core** 19.0.1.Final
+* **Woodstox** 5.0.3, 5.3.0
 * **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0
 * **XStream** 1.4.17

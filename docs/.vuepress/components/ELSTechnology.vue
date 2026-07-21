@@ -85,8 +85,13 @@ const techData = [
     ecosystemIcon: "/images/java.webp",
     projects: [
       {
+        name: "Aircompressor",
+        versions: "0.27",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache ActiveMQ Artemis",
-        versions: "2.26.0",
+        versions: "2.26.0 | 2.33.0",
         link: "./java-libraries/",
       },
       {
@@ -100,8 +105,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Batik",
+        versions: "1.7",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Commons BeanUtils",
         versions: "1.6 | 1.8.0 | 1.8.3 | 1.9.4 | 1.10.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Commons Collections",
+        versions: "3.2 | 3.2.1",
         link: "./java-libraries/",
       },
       {
@@ -116,7 +131,7 @@ const techData = [
       },
       {
         name: "Apache Commons FileUpload",
-        versions: "1.2.1 | 1.2.2",
+        versions: "1.2.1 | 1.2.2 | 1.5",
         link: "./java-libraries/",
       },
       {
@@ -146,7 +161,7 @@ const techData = [
       },
       {
         name: "Apache CXF",
-        versions: "3.5.9 | 3.5.11",
+        versions: "3.4.5 | 3.5.9 | 3.5.11",
         link: "./apache-cxf/",
       },
       {
@@ -157,6 +172,11 @@ const techData = [
       {
         name: "Apache HttpComponents Client",
         versions: "4.5.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Ivy",
+        versions: "2.3.0",
         link: "./java-libraries/",
       },
       {
@@ -176,12 +196,12 @@ const techData = [
       },
       {
         name: "Apache Kafka®",
-        versions: "3.2.3 | 3.7.1",
+        versions: "2.8.2 | 3.2.3 | 3.7.1",
         link: "./apache-kafka/",
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.16 | 1.2.17 | 2.17.1 | 2.22.1",
+        versions: "1.2.16 | 1.2.17 | 2.17.1 | 2.17.2 | 2.22.1",
         link: "./apache-log4j/",
       },
       {
@@ -196,7 +216,7 @@ const techData = [
       },
       {
         name: "Apache Maven",
-        versions: "3.8.1",
+        versions: "3.0.5 | 3.8.1",
         link: "./java-libraries/",
       },
       {
@@ -232,8 +252,13 @@ const techData = [
       },
       {
         name: "Apache Velocity Engine™",
-        versions: "1.7",
+        versions: "1.7 | 1.7.1",
         link: "./apache-velocity-engine/",
+      },
+      {
+        name: "Apache Xalan",
+        versions: "2.7.1",
+        link: "./java-libraries/",
       },
       {
         name: "Apache XML Graphics Commons",
@@ -242,7 +267,7 @@ const techData = [
       },
       {
         name: "Apache XMLBeans",
-        versions: "2.6.0",
+        versions: "2.3.0 | 2.6.0",
         link: "./java-libraries/",
       },
       {
@@ -306,8 +331,18 @@ const techData = [
         link: "./elasticsearch/",
       },
       {
+        name: "EWS Java API",
+        versions: "2.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "excel-streaming-reader",
         versions: "5.0.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "GlassFish",
+        versions: "3.0.0",
         link: "./java-libraries/",
       },
       {
@@ -347,13 +382,23 @@ const techData = [
       },
       {
         name: "Hibernate",
-        versions: "4.3.11.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final",
+        versions: "4.3.11.Final | 5.1.2.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final",
         link: "./hibernate/",
+      },
+      {
+        name: "Hibernate Commons Annotations",
+        versions: "5.1.2.Final",
+        link: "./java-libraries/",
       },
       {
         name: "Hibernate Search",
         versions: "5.11.10.Final",
         link: "./hibernate/",
+      },
+      {
+        name: "Hibernate Validator",
+        versions: "5.4.3.Final | 6.2.5.Final",
+        link: "./java-libraries/",
       },
       {
         name: "HornetQ",
@@ -377,12 +422,12 @@ const techData = [
       },
       {
         name: "Jackson",
-        versions: "1.9.13 | 2.14.2",
+        versions: "1.9.13 | 2.12.1 | 2.14.1 | 2.14.2",
         link: "./jackson/",
       },
       {
         name: "JasperReports",
-        versions: "3.7.4",
+        versions: "3.7.4 | 6.2.2 | 6.21.5",
         link: "./java-libraries/",
       },
       {
@@ -412,7 +457,17 @@ const techData = [
       },
       {
         name: "JSON Smart v2",
-        versions: "2.4.8",
+        versions: "1.3.2 | 2.4.8",
+        link: "./java-libraries/",
+      },
+      {
+        name: "json-io",
+        versions: "2.9.4",
+        link: "./java-libraries/",
+      },
+      {
+        name: "jsoup",
+        versions: "1.7.2",
         link: "./java-libraries/",
       },
       {
@@ -446,13 +501,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "MySQL Connector/J",
+        versions: "5.1.49",
+        link: "./java-libraries/",
+      },
+      {
         name: "NekoHTML",
         versions: "1.9.22",
         link: "./java-libraries/",
       },
       {
         name: "Netty",
-        versions: "4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.117.Final | 4.1.130.Final",
+        versions: "3.10.6.Final | 4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.117.Final | 4.1.130.Final",
         link: "./java-libraries/",
       },
       {
@@ -482,7 +542,7 @@ const techData = [
       },
       {
         name: "Plexus Utils",
-        versions: "1.4.5 | 1.5.8",
+        versions: "1.4.5 | 1.5.5 | 1.5.8 | 3.1.0 | 3.6.0",
         link: "./java-libraries/",
       },
       {
@@ -492,8 +552,13 @@ const techData = [
       },
       {
         name: "Protobuf",
-        versions: "2.5.0 | 2.6.1 | 3.21.9",
+        versions: "2.5.0 | 2.6.1 | 3.19.6 | 3.21.1 | 3.21.9",
         link: "./protobuf/",
+      },
+      {
+        name: "Quartz Scheduler",
+        versions: "1.8.5",
+        link: "./java-libraries/",
       },
       {
         name: "Querydsl",
@@ -502,12 +567,22 @@ const techData = [
       },
       {
         name: "Reactor BOM",
-        versions: "2020.0.23 | 2020.0.32 | 2020.0.38 | 2022.0.15",
+        versions: "2020.0.0 | 2020.0.7 | 2020.0.23 | 2020.0.32 | 2020.0.38 | 2022.0.15",
         link: "./java-libraries/",
       },
       {
         name: "Reactor Netty",
-        versions: "1.0.23 | 1.0.32 | 1.0.39 | 1.1.15",
+        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.1.15",
+        link: "./java-libraries/",
+      },
+      {
+        name: "reload4j",
+        versions: "1.2.16",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Retrofit",
+        versions: "2.9.0",
         link: "./java-libraries/",
       },
       {
@@ -516,13 +591,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "SLF4J",
+        versions: "1.6.1 | 1.7.21",
+        link: "./java-libraries/",
+      },
+      {
         name: "SnakeYAML",
-        versions: "1.23 | 1.26 | 1.29 | 1.30 | 1.33",
+        versions: "1.23 | 1.26 | 1.28 | 1.29 | 1.30 | 1.33",
         link: "./java-libraries/",
       },
       {
         name: "Snappy Java",
-        versions: "1.1.8.4",
+        versions: "1.1.2 | 1.1.8.4",
         link: "./java-libraries/",
       },
       {
@@ -531,8 +611,13 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Sonatype Sisu",
+        versions: "2.3.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Spring® Framework",
-        versions: "3.1 | 4.0 | 4.1 | 4.3 | 5.2 | 5.3 | 6.0 | 6.1",
+        versions: "3.0 | 3.1 | 4.0 | 4.1 | 4.2 | 4.3 | 5.1 | 5.2 | 5.3 | 6.0 | 6.1 | 6.2",
         link: "./spring/",
         detailsHash: "Framework",
       },
@@ -548,13 +633,13 @@ const techData = [
       },
       {
         name: "Spring® Boot",
-        versions: "2.4 | 2.6 | 2.7 | 3.1",
+        versions: "2.1 | 2.3 | 2.4 | 2.5 | 2.6 | 2.7 | 3.0 | 3.1 | 3.2 | 3.3 | 3.4",
         link: "./spring/",
         detailsHash: "Boot",
       },
       {
         name: "Spring® Cloud",
-        versions: "3.1.9",
+        versions: "3.1.6 | 3.1.9",
         link: "./spring/",
       },
       {
@@ -565,7 +650,7 @@ const techData = [
       },
       {
         name: "Spring® Security",
-        versions: "5.7 | 5.8 | 6.1",
+        versions: "1.3 | 4.2 | 5.6 | 5.7 | 5.8 | 6.1 | 6.2 | 6.3 | 6.4",
         link: "./spring/",
         detailsHash: "Security",
       },
@@ -591,7 +676,7 @@ const techData = [
       },
       {
         name: "Spring® LDAP",
-        versions: "2.4.1 | 2.4.4",
+        versions: "2.4.1 | 2.4.4 | 3.0.6",
         link: "./spring/",
         detailsHash: "LDAP",
       },
@@ -632,12 +717,22 @@ const techData = [
       },
       {
         name: "Undertow",
-        versions: "2.2.33.Final | 2.3.0.Final | 2.3.10.Final | 2.3.18.Final",
+        versions: "2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.18.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "WildFly",
+        versions: "27.0.1.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "WildFly Core",
+        versions: "19.0.1.Final",
         link: "./java-libraries/",
       },
       {
         name: "Woodstox",
-        versions: "5.0.3",
+        versions: "5.0.3 | 5.3.0",
         link: "./java-libraries/",
       },
       {

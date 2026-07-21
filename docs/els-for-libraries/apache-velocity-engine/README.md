@@ -8,7 +8,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Velocity Engine™ provides
 
 ## Supported Versions
 
-* Apache Velocity Engine™ 1.7
+* Apache Velocity Engine™ 1.7, 1.7.1
 
 ## Installation
 
