@@ -28,7 +28,7 @@ TuxCare publishes VEX as CycloneDX VEX documents, distributed alongside each pac
 Feeds are published per ecosystem:
 
 * Java - [els_lang_java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
-* Python - [els_lang_python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/)
+* Python - [els_lang_python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/) — Python releases iterate as `X.Y.Z.postN+tuxcare` (e.g. `2021.10.8.post2+tuxcare`), not `-tuxcare.N`
 * JavaScript - [els_lang_javascript](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/)
 * PHP - [els_lang_php](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — PHP releases iterate as `-pN+tuxcare` (e.g. `5.2.28-p1+tuxcare`), not `-tuxcare.N`
 * .NET - [els_lang_dotnet](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/)
@@ -53,7 +53,7 @@ A failed verification is an **integrity violation**: the artifact must be treate
 
 ### Where Signatures Are Published
 
-Signature files are published to TuxCare Nexus and require the same credentials as the package repositories. The repository the `.asc` lives in varies by ecosystem: some publish it alongside the SBOM, while others use a dedicated repository — JavaScript uses a dedicated signatures repository, and PHP publishes signatures to the `els_php_raw_custom1` raw repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise repository and path.
+Signature files are published to TuxCare Nexus and require the same credentials as the package repositories. The repository the `.asc` lives in varies by ecosystem: Java publishes it alongside the SBOM, JavaScript uses a dedicated signatures repository, PHP uses the `els_php_raw_custom1` raw repository, and Python publishes it next to each package in the `els_python` package repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise repository and path.
 
 ### Obtain the TuxCare Public Key
 
@@ -80,7 +80,7 @@ Import the public key once. It can verify every TuxCare-signed package, so this 
 The verification procedure is the same for every ELS for Libraries ecosystem (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature from TuxCare Nexus, and run `gpg --verify`. Select your ecosystem below.
 
 :::warning
-The signature location and artifact naming vary by ecosystem. The Java and PHP steps below are confirmed; for the other ecosystems, the repository paths and example versions shown are representative — confirm the exact signatures location and artifact naming for your account with your TuxCare contact.
+The signature location and artifact naming vary by ecosystem. The Java, JavaScript, PHP, and Python steps below are confirmed; the .NET steps shown are representative — confirm the exact signatures location and artifact naming for .NET with your TuxCare contact.
 :::
 
 <TableTabs label="Choose ecosystem: " :labels="{ DotNET: '.NET' }">
@@ -173,26 +173,28 @@ The signature location and artifact naming vary by ecosystem. The Java and PHP s
 
 1. **Obtain the exact published artifact**
 
-   With your TuxCare index configured (see the [Python libraries](/els-for-libraries/python-libraries/) setup), `pip download` fetches the published file as-is:
+   With your TuxCare index configured (see the [Python libraries](/els-for-libraries/python-libraries/) setup), `pip download` fetches the published wheel as-is (the customer index serves wheels):
 
    ```text
    pip download certifi==2021.10.8.post2+tuxcare --no-deps -d .
    ```
 
+   This writes `certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl` to the current directory.
+
 2. **Download the matching signature**
 
-   Fetch the `.asc` for the same version from the signatures repository, authenticating with your TuxCare Nexus credentials:
+   For Python, the `.asc` is published next to the package in the `els_python` package repository, under `packages/<name>/<version>/`. Authenticate with your TuxCare Nexus credentials:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
-     https://nexus.repo.tuxcare.com/repository/els-python-signatures/certifi/2021.10.8.post2+tuxcare/certifi-2021.10.8.post2+tuxcare.tar.gz.asc \
-     -o certifi-2021.10.8.post2+tuxcare.tar.gz.asc
+     "https://nexus.repo.tuxcare.com/repository/els_python/packages/certifi/2021.10.8.post2+tuxcare/certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl.asc" \
+     -o certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl.asc
    ```
 
 3. **Verify the signature against the artifact**
 
    ```text
-   gpg --verify certifi-2021.10.8.post2+tuxcare.tar.gz.asc certifi-2021.10.8.post2+tuxcare.tar.gz
+   gpg --verify certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl.asc certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl
    ```
 
    A `Good signature` line confirms authenticity and integrity. `BAD signature`, or a missing public key, is an integrity violation — stop and re-obtain the package from TuxCare over a trusted channel.
