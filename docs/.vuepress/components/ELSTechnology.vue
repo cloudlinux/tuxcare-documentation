@@ -650,7 +650,7 @@ const techData = [
       },
       {
         name: "Spring® Security",
-        versions: "1.3 | 4.2 | 5.6 | 5.7 | 5.8 | 6.1 | 6.2 | 6.3 | 6.4",
+        versions: "4.2 | 5.6 | 5.7 | 5.8 | 6.1 | 6.2 | 6.3 | 6.4",
         link: "./spring/",
         detailsHash: "Security",
       },
@@ -707,7 +707,7 @@ const techData = [
       },
       {
         name: "Spring® Authorization Server",
-        versions: "1.1.4",
+        versions: "1.1.4 | 1.3.7",
         link: "./spring/",
       },
       {
