@@ -8,7 +8,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache ActiveMQ Artemis** 2.26.0, 2.33.0
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
-* **Apache Batik** 1.7
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
 * **Apache Commons Collections** 3.2, 3.2.1
 * **Apache Commons Compress** 1.18, 1.19, 1.20, 1.21, 1.26.2
@@ -27,6 +26,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Thrift** 0.9.1, 0.9.3, 0.14.1
 * **Apache Tika** 2.9.4
 * **Apache Xalan** 2.7.1
+* **Apache XML Graphics Batik** 1.7
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.3.0, 2.6.0
 * **AssertJ** 2.9.0, 3.18.1, 3.25.3

@@ -105,11 +105,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Batik",
-        versions: "1.7",
-        link: "./java-libraries/",
-      },
-      {
         name: "Apache Commons BeanUtils",
         versions: "1.6 | 1.8.0 | 1.8.3 | 1.9.4 | 1.10.1",
         link: "./java-libraries/",
@@ -258,6 +253,11 @@ const techData = [
       {
         name: "Apache Xalan",
         versions: "2.7.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache XML Graphics Batik",
+        versions: "1.7",
         link: "./java-libraries/",
       },
       {
