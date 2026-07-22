@@ -217,33 +217,14 @@ verifies both against the key on every `apk add` and `apk upgrade`.
 
 ### Confirm the TuxCare Signing Key Is Installed
 
-<TableTabs label="Choose distribution: ">
+The ELS release package installs the signing key for you during setup. To
+confirm it is present in the trust store your package manager uses, run:
 
-<template #RPM>
-
-```text
-rpm -q gpg-pubkey --qf '%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n' | grep -i tuxcare
-```
-
-</template>
-
-<template #DEB>
-
-```text
-gpg --show-keys /etc/apt/trusted.gpg.d/tuxcare-keyring.gpg
-```
-
-</template>
-
-<template #APK>
-
-```text
-ls /etc/apk/keys/
-```
-
-</template>
-
-</TableTabs>
+<CodeTabs :tabs="[
+  { title: 'RPM', content: `rpm -q gpg-pubkey --qf '%{NAME}-%{VERSION}-%{RELEASE}\\t%{SUMMARY}\\n' | grep -i tuxcare` },
+  { title: 'DEB', content: `gpg --show-keys /etc/apt/trusted.gpg.d/tuxcare-keyring.gpg` },
+  { title: 'APK', content: `ls /etc/apk/keys/` }
+]" />
 
 ### Verify a Package
 
