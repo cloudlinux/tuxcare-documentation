@@ -716,11 +716,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "WildFly",
-        versions: "27.0.1.Final",
-        link: "./java-libraries/",
-      },
-      {
         name: "Woodstox",
         versions: "5.0.3 | 5.3.0",
         link: "./java-libraries/",

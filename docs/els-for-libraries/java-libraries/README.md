@@ -91,7 +91,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Sonatype Sisu** 2.3.0
 * **Thymeleaf** 3.0.15.RELEASE
 * **Undertow** 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.18.Final
-* **WildFly** 27.0.1.Final
 * **Woodstox** 5.0.3, 5.3.0
 * **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0
