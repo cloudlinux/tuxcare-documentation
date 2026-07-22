@@ -388,7 +388,7 @@ const techData = [
       {
         name: "Hibernate Commons Annotations",
         versions: "5.1.2.Final",
-        link: "./java-libraries/",
+        link: "./hibernate/",
       },
       {
         name: "Hibernate Search",
@@ -398,7 +398,7 @@ const techData = [
       {
         name: "Hibernate Validator",
         versions: "5.4.3.Final | 6.2.5.Final",
-        link: "./java-libraries/",
+        link: "./hibernate/",
       },
       {
         name: "HornetQ",
@@ -576,11 +576,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "reload4j",
-        versions: "1.2.16",
-        link: "./java-libraries/",
-      },
-      {
         name: "Retrofit",
         versions: "2.9.0",
         link: "./java-libraries/",
@@ -723,11 +718,6 @@ const techData = [
       {
         name: "WildFly",
         versions: "27.0.1.Final",
-        link: "./java-libraries/",
-      },
-      {
-        name: "WildFly Core",
-        versions: "19.0.1.Final",
         link: "./java-libraries/",
       },
       {

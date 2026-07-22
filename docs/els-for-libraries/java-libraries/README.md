@@ -50,8 +50,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Grails** 2.5.6, 6.2.3
 * **H2 Database** 1.4.200
 * **Hazelcast** 4.2.8
-* **Hibernate Commons Annotations** 5.1.2.Final
-* **Hibernate Validator** 5.4.3.Final, 6.2.5.Final
 * **HornetQ** 2.4.9.Final
 * **HPPC** 0.8.1
 * **HtmlUnit** 2.70.0
@@ -84,7 +82,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Querydsl** 5.1.0
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
 * **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.1.15
-* **reload4j** 1.2.16
 * **Retrofit** 2.9.0
 * **RSocket** 1.1.3
 * **SLF4J** 1.6.1, 1.7.21
@@ -95,7 +92,6 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Thymeleaf** 3.0.15.RELEASE
 * **Undertow** 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.18.Final
 * **WildFly** 27.0.1.Final
-* **WildFly Core** 19.0.1.Final
 * **Woodstox** 5.0.3, 5.3.0
 * **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0
