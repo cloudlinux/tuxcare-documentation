@@ -30,7 +30,7 @@ Feeds are published per ecosystem:
 * Java - [els_lang_java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
 * Python - [els_lang_python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/) — Python releases iterate as `X.Y.Z.postN+tuxcare` (e.g. `2021.10.8.post2+tuxcare`), not `-tuxcare.N`
 * JavaScript - [els_lang_javascript](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/)
-* PHP - [els_lang_php](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — PHP releases iterate as `-pN+tuxcare` (e.g. `5.2.28-p1+tuxcare`), not `-tuxcare.N`
+* PHP - [els_lang_php](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — PHP releases iterate as `-pN+tuxcare`, for example `5.2.28-p1+tuxcare`, not `-tuxcare.N`
 * .NET - [els_lang_dotnet](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/)
 
 Each entry links one CVE to one artifact version and carries a status:
@@ -161,7 +161,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
    gpg: Good signature from "TuxCare <...>" [unknown]
    ```
 
-   The `Good signature` line, and a key ID that matches the TuxCare public key you imported, confirm the artifact is authentic and unmodified. (The `[unknown]` trust level only reflects that you have not personally signed TuxCare's key in your web of trust; it does not affect the validity of the signature.)
+   The `Good signature` line, and a key ID that matches the TuxCare public key you imported, confirm the artifact is authentic and unmodified. The `[unknown]` trust level only reflects that you have not personally signed TuxCare's key in your web of trust; it does not affect the validity of the signature.
 
 </ELSSteps>
 
@@ -209,7 +209,11 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
 
 1. **Obtain the exact published artifact**
 
-   GPG verifies the byte-for-byte archive that was signed — do not rebuild it locally. For PHP, TuxCare publishes the signed archive together with its detached `.asc` signature in the `els_php_raw_custom1` raw repository on TuxCare Nexus, laid out as `<vendor>/<package>/<version>/`. Authenticate with the same Nexus credentials you use for the `els_php` Composer repository (see any PHP library's setup, e.g. [PHPMailer](/els-for-libraries/phpmailer/)) and download the archive for the version you use. This example uses `symfony/yaml` `v4.4.45-p1+tuxcare`:
+   GPG verifies the byte-for-byte archive that was signed, so use the file exactly as you downloaded it rather than repacking it locally. For PHP, TuxCare publishes the signed archive together with its detached `.asc` signature in the `els_php_raw_custom1` raw repository on TuxCare Nexus, laid out as `<vendor>/<package>/<version>/`.
+
+   Authenticate with the same Nexus credentials you use for the `els_php` Composer repository; any PHP library's setup shows them, for example [PHPMailer](/els-for-libraries/phpmailer/). Then download the archive for the version you use.
+
+   This example uses `symfony/yaml` `v4.4.45-p1+tuxcare`:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
@@ -217,19 +221,19 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
      -o yaml-v4.4.45-p1+tuxcare.zip
    ```
 
-   Check the exact package, version, and path in your TuxCare Nexus account. (Signatures are published per artifact, so a package only has an `.asc` if a signed build exists for it.)
+   Check the exact package, version, and path in your TuxCare Nexus account. Signatures are published per artifact, so a package only has an `.asc` if a signed build exists for it.
 
-   Alternatively, verify the copy Composer downloaded during `composer install`, provided it is the same build. Composer stores it under a content-hashed filename (`<vendor>/<package>/<hash>.zip`) in its files cache, so locate it and copy it out under the published name first. The cache location varies by operating system:
+   Alternatively, verify the copy Composer downloaded during `composer install`, provided it is the same build. Composer stores it under a content-hashed filename such as `<vendor>/<package>/<hash>.zip` in its files cache, so locate it and copy it out under the published name first. The cache location varies by operating system:
 
+   * **Linux**: `~/.composer/cache`, or `$XDG_CACHE_HOME/composer` if set
    * **macOS**: `~/Library/Caches/composer`
-   * **Linux**: `~/.composer/cache` (or `$XDG_CACHE_HOME/composer`)
    * **Windows**: `C:\Users\<user>\AppData\Local\Composer`
 
-   Confirm your exact path with `composer config cache-dir`; the downloaded package archives live in its `files/` subdirectory.
+   Confirm your exact path with `composer config cache-dir`; the downloaded package archives are stored in its `files/` subdirectory.
 
 2. **Download the matching signature**
 
-   The `.asc` sits beside the archive in the same `els_php_raw_custom1` repository:
+   The `.asc` is published next to the archive in the same `els_php_raw_custom1` repository:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
@@ -337,7 +341,7 @@ The ELS for Libraries delivery model is a set of per-ecosystem registries hosted
 |---|---|---|
 | **GPG signature failure** | The detached `.asc` signature does not match the artifact, or the artifact was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
 | **Checksum / integrity-hash mismatch** | The downloaded package archive's hash does not match the `dist.shasum` recorded in `composer.lock` — the bytes changed in transit or the artifact was substituted. | **Composer** aborts with `The checksum verification of the file failed`. |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | **Composer** fails with `curl error 60` / `SSL certificate problem` (traffic to Nexus is HTTPS-only under the default `secure-http`). |
+| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | **Composer** fails with `curl error 60` / `SSL certificate problem` — traffic to Nexus is HTTPS-only under the default `secure-http`. |
 
 </template>
 
@@ -442,7 +446,7 @@ fi
 
 <template #PHP>
 
-Composer verifies each downloaded package against the `dist.shasum` in `composer.lock` (checksum check), and `secure-http` (HTTPS-only) is enabled by default. A failure is written to a dedicated log file and to the system journal.
+Composer verifies each downloaded package against the `dist.shasum` in `composer.lock` as a checksum check, and the HTTPS-only `secure-http` setting is enabled by default. A failure is written to a dedicated log file and to the system journal.
 
 ```bash
 #!/usr/bin/env bash
