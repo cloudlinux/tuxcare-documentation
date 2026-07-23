@@ -53,7 +53,7 @@ A failed verification is an **integrity violation**: the artifact must be treate
 
 ### Where Signatures Are Published
 
-Signature files are published to TuxCare Nexus and require the same credentials as the package repositories. The repository the `.asc` lives in varies by ecosystem: Java publishes it alongside the SBOM, JavaScript uses a dedicated signatures repository, PHP uses the `els_php_raw_custom1` raw repository, and Python publishes it next to each package in the `els_python` package repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise repository and path.
+Signature files are published to TuxCare Nexus and require the same credentials as the package repositories. The repository where the `.asc` is published varies by ecosystem: Java publishes it alongside the SBOM, JavaScript uses a dedicated signatures repository, PHP uses the `els_php_raw_custom1` raw repository, and Python publishes it next to each package in the `els_python` package repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise repository and path.
 
 ### Obtain the TuxCare Public Key
 
@@ -297,7 +297,7 @@ All ELS for Libraries ecosystems are signed the same way. If you need a signatur
 
 ## Integrity Violation Events
 
-An **integrity violation** is any event where an artifact obtained from TuxCare — or the channel it was retrieved over — fails a verification check, indicating the package may not be authentic or may have been altered in transit. The package manager already **blocks** such an operation (the install or update stops), but by default the only trace is the command's exit code and whatever scrolled past in the terminal. To align with the EU Cyber Resilience Act (CRA), these events should be treated as security-relevant and retained in a dedicated log so a system administrator can review them regardless of when or how the update was triggered.
+An **integrity violation** is any event where an artifact obtained from TuxCare — or the channel it was retrieved over — fails a verification check, indicating the package may not be authentic or may have been altered in transit. The package manager already **blocks** such an operation (the install or update stops), but by default the only trace is the command's exit code and its console output. To align with the EU Cyber Resilience Act (CRA), these events should be treated as security-relevant and retained in a dedicated log so a system administrator can review them regardless of when or how the update was triggered.
 
 ### What Counts as an Integrity Violation
 
@@ -363,7 +363,7 @@ The ELS for Libraries delivery model is a set of per-ecosystem registries hosted
 
 ### Capturing Integrity Violations in a Dedicated Log
 
-Because these checks run inside the package manager (`npm`, `pip`, `mvn`, `composer`, `dotnet`) or `gpg`, their outcome lives only in the command's exit code and console output. To retain violations for later review — as CRA expects — run the install or verification inside a wrapper that writes the result to a dedicated log, separate from ordinary build output. Doing this in a CI job or an install/deploy script guarantees the event is captured no matter who triggered the update or whether anyone was watching the terminal.
+Because these checks run inside the package manager (`npm`, `pip`, `mvn`, `composer`, `dotnet`) or `gpg`, their outcome is recorded only in the command's exit code and console output. To retain violations for later review — as CRA expects — run the install or verification inside a wrapper that writes the result to a dedicated log, separate from ordinary build output. Doing this in a CI job or an install/deploy script guarantees the event is captured no matter who triggered the update or whether its output was monitored.
 
 <TableTabs label="Choose ecosystem: " :labels="{ DotNET: '.NET' }">
 
