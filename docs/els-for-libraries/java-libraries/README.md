@@ -11,13 +11,14 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
 * **Apache Commons Collections** 3.2, 3.2.1
 * **Apache Commons Compress** 1.18, 1.19, 1.20, 1.21, 1.26.2
+* **Apache Commons Configuration** 2.12.0
 * **Apache Commons Digester** 2.0, 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2, 1.5
 * **Apache Commons HttpClient** 3.1
 * **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
-* **Apache HttpComponents Client** 4.5.2
+* **Apache HttpComponents Client** 4.5.2, 4.5.8
 * **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
 * **Apache POI** 3.10-FINAL, 4.1.2
@@ -29,7 +30,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache XML Graphics Batik** 1.7
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.3.0, 2.6.0
-* **AssertJ** 2.9.0, 3.18.1, 3.25.3
+* **AssertJ** 2.9.0, 3.18.1, 3.19.0, 3.23.1, 3.24.2, 3.25.3
 * **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.78.1
 * **c3p0** 0.9.5.5
@@ -58,12 +59,14 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **JBoss XNIO** 3.8.0, 3.8.8
 * **JDOM** 1.0, 1.1.3
 * **Joda-Time** 1.3
+* **jose4j** 0.8.0
 * **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
 * **JSON Smart v2** 1.3.2, 2.4.8
 * **json-io** 2.9.4
 * **jsoup** 1.7.2
 * **JUnit** 4.13
+* **Lettuce** 6.1.10.RELEASE
 * **Logback** 1.1.7, 1.2.13, 1.4.14, 1.5.18
 * **LZ4** 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
@@ -89,7 +92,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
 * **Sonatype Sisu** 2.3.0
-* **Thymeleaf** 3.0.15.RELEASE
+* **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE
 * **Undertow** 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.18.Final
 * **Woodstox** 5.0.3, 5.3.0
 * **Xerces** 2.11.0, 2.12.0

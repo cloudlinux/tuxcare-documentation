@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
 
 ## Supported JSON Web Token Versions
 
-* JSON Web Token 0.4.0, 0.4.1, 7.1.6, 8.5.1
+* JSON Web Token 0.3.0, 0.4.0, 0.4.1, 7.1.6, 8.5.1
 
 ## Installation
 
@@ -57,6 +57,19 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
      Manually update your `package.json` file by replacing your JSON Web Token dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
      <TableTabs label="Choose JSON Web Token version: " >
+
+      <template #JSON_Web_Token_0.3.0>
+
+      ```text
+      "dependencies": {
+        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=0.3.0-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@0.3.0": "npm:@els-js/jsonwebtoken@>=0.3.0-tuxcare.1"
+      }
+      ```
+
+      </template>
 
       <template #JSON_Web_Token_0.4.0>
 
