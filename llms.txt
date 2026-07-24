@@ -1,0 +1,41 @@
+# TuxCare Documentation
+
+> TuxCare provides automated Linux patch management, live kernel patching, extended lifecycle support (ELS) for end-of-life operating systems, libraries, runtimes and applications, and SecureChain — verified, signed, continuously patched open-source packages. This site (docs.tuxcare.com) is the official product documentation. Each link below points to a product area; append the path to https://docs.tuxcare.com to read it.
+
+The full text of every documentation page, concatenated into a single file, is available at [https://docs.tuxcare.com/llms-full.txt](https://docs.tuxcare.com/llms-full.txt).
+
+## Products
+
+- [TuxCare](https://docs.tuxcare.com/tuxcare/): Overview of TuxCare services that automate, simplify, and enhance Linux operations.
+- [TuxCare Radar](https://docs.tuxcare.com/radar/): Vulnerability risk assessment and prioritization that reveals real-world risk beyond conventional scanner scores.
+- [TuxCare Enterprise Support](https://docs.tuxcare.com/enterprise-support-for-almalinux/): Extended support and security fixes for AlmaLinux and Rocky Linux.
+
+## Live patching
+
+- [KernelCare](https://docs.tuxcare.com/live-patching-services/): Live kernel patching — security patches and bugfixes with no reboot.
+- [KernelCare for IoT](https://docs.tuxcare.com/kernelcare-for-iot/): Live patching for ARM64 embedded/IoT systems.
+- [ePortal](https://docs.tuxcare.com/eportal/): Web management console for KernelCare Enterprise live patch management.
+- [ePortal API](https://docs.tuxcare.com/eportal-api/): API reference for patch management and ePortal automation.
+
+## Extended Lifecycle Support (ELS)
+
+- [ELS for Operating Systems](https://docs.tuxcare.com/els-for-os/): Post-EOL security support for end-of-life Linux distributions.
+- [ELS for Libraries](https://docs.tuxcare.com/els-for-libraries/): Extended security fixes for open-source libraries.
+- [ELS for Runtimes](https://docs.tuxcare.com/els-for-runtimes/): Extended support for language runtimes (PHP, Python, Node.js, etc.).
+- [ELS for Applications](https://docs.tuxcare.com/els-for-applications/): Security patches for end-of-life open-source applications.
+
+## SecureChain
+
+- [SecureChain for Open Source](https://docs.tuxcare.com/securechain/): Verified, signed, continuously patched open-source packages from a TuxCare-managed registry — drop-in replacements that extend coverage beyond upstream EOL.
+- [SecureChain JavaScript Ecosystem Guide](https://docs.tuxcare.com/securechain/javascript/): Connect to the SecureChain npm registry, authenticate, install dependencies, and troubleshoot resolution.
+- [Managing the SecureChain Repository](https://docs.tuxcare.com/securechain/managing-securechain-repository/): Upgrade installed SecureChain packages to newer releases across ecosystems.
+
+## Account & reference
+
+- [Subscription Management Portal](https://docs.tuxcare.com/tuxcare-cln/): Manage licenses and subscriptions for TuxCare products and services.
+- [Service Descriptions](https://docs.tuxcare.com/service-descriptions/): Service-level and technical support details.
+
+## Optional
+
+- [TuxCare product site](https://tuxcare.com/): Marketing/product overview and contact.
+- [CVE Tracker](https://tuxcare.com/cve-tracker/): Track vulnerability fixes and update status across TuxCare-supported packages.
