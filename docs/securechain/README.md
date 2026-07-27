@@ -46,13 +46,13 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 TuxCare's commitment to transparency and visibility is foundational to our SecureChain offering. We provide verifiable metadata that helps customers understand package composition, software provenance, and vulnerability impact across the software supply chain.
 
 * **SLSA Compliance**: TuxCare packages are built and signed to support verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance at Level 2 at launch, with Level 3 on the roadmap. Builds run from vetted sources, include attestations for dependencies, and undergo continuous testing to maintain integrity and trust.
-* **Software Bill of Materials (SBOM)**: Machine-readable SBOMs provide visibility into package composition and dependencies, supporting software supply chain transparency and accountability. Depending on the package, SBOMs are provided in industry-standard formats — SPDX and CycloneDX. See [Machine-Readable Security Data](./machine-readable-security-data/) for current availability.
+* **Software Bill of Materials (SBOM)**: Machine-readable SBOMs provide visibility into package composition and dependencies, supporting software supply chain transparency and accountability. Depending on the package, SBOMs are provided in industry-standard formats — SPDX and CycloneDX.
 
 :::warning
 Note: SBOM availability for certain components is still expanding and may vary by package. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for current availability details.
 :::
 
-* **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. VEX is published in standard formats, including CycloneDX VEX. See [Machine-Readable Security Data](./machine-readable-security-data/) for the feed URL and details.
+* **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. VEX is published in standard formats, including CycloneDX VEX.
 * **Verifiable Integrity and Provenance**: Packages and metadata provide end-to-end provenance information, helping customers verify how software was built, tested, and distributed.
 * **Secure Distribution**: Signed packages and associated metadata are distributed through TuxCare-managed infrastructure to ensure authenticity and integrity.
 
