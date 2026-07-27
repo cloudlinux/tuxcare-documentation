@@ -70,7 +70,6 @@ It delivers 24/7/365 access to TuxCare's support team through the [TuxCare Suppo
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [Machine-Readable Security Data](./machine-readable-security-data/) — SBOM and VEX feeds, formats, and consumption guidance
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
 
 </WhatsNext>
