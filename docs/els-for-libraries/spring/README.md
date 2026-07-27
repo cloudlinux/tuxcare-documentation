@@ -410,6 +410,10 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 </ELSPrerequisites>
 
+:::tip
+Optionally, ELS for Spring® can be consumed through your own repository manager (Nexus, Artifactory) instead of connecting to TuxCare directly — this is for organizations that already run one. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+:::
+
 <ELSSteps>
 
 1. **Navigate to the build tool directory**
@@ -498,7 +502,6 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [Source code](/els-for-libraries/managing-els-repository/#javaSources) — Access source JARs in Nexus
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#java) — Update an installed package to a newer TuxCare release
-
 </WhatsNext>
 
 <!-- data for spring instructions used in code blocks -->

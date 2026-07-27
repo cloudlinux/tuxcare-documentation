@@ -83,6 +83,10 @@ Other libraries upon request.
 
 </ELSPrerequisites>
 
+:::tip
+Optionally, ELS can be consumed through your own repository manager (Nexus, Artifactory) instead of connecting to TuxCare directly — this is for organizations that already run one. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+:::
+
 <ELSSteps>
 
 1. **Navigate to the build tool directory**
