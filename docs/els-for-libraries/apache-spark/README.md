@@ -21,6 +21,10 @@ Our ELS for Apache Spark™ service is designed to provide solutions for organiz
 
 </ELSPrerequisites>
 
+:::tip
+Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+:::
+
 <ELSSteps>
 
 1. **Navigate to the build tool directory**

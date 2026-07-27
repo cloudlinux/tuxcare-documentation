@@ -1,6 +1,6 @@
 # Managing the ELS repository
 
-This page provides instructions for upgrading to newer TuxCare package versions, accessing source code for ELS-patched libraries, and managing the TuxCare NuGet source for .NET projects.
+This page provides instructions for upgrading to newer TuxCare package versions, accessing source code for ELS-patched libraries, managing the TuxCare NuGet source for .NET projects, and consuming the Java repository through your own repository manager.
 
 ## How to Upgrade to a Newer Version
 
@@ -152,6 +152,34 @@ The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `d
 </template>
 
 </TableTabs>
+
+## Consuming ELS through your own repository manager
+
+Instead of pointing Maven or Gradle directly at `https://nexus.repo.tuxcare.com/repository/els_java/`, you can proxy the TuxCare Java repository through your own repository manager. This is optional and intended for organizations that already run one — otherwise ELS connects directly, as described in the setup steps on each library's page.
+
+The steps below use the Java repository (`els_java`) as an example, but the same approach applies to any ELS ecosystem — only the repository format, remote URL, and authentication differ.
+
+<ELSSteps>
+
+1. **Create the proxy repository**
+
+   In your repository manager, create a **Maven**-format repository that proxies an external URL. Depending on the product, this type is called a *proxy* or *remote* repository.
+
+2. **Point it at the TuxCare repository**
+
+   Set the remote URL to `https://nexus.repo.tuxcare.com/repository/els_java/` and supply your ELS credentials via HTTP Basic authentication (your TuxCare Nexus username and password).
+
+3. **Repoint your build tools**
+
+   Configure Maven or Gradle to resolve against your own repository manager instead of `nexus.repo.tuxcare.com`. Artifacts are fetched from TuxCare and cached on demand the first time they are requested.
+
+</ELSSteps>
+
+:::tip
+A proxy only caches and serves the artifacts that have actually been requested through it, so browsing your proxy will not show the full TuxCare catalog. This is expected behavior, not a permissions problem.
+
+To see the full list of available artifacts and versions, sign in to the TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) with your ELS credentials and browse the `els_java` repository directly. For automation or scripted checks, you can query the Nexus REST API `components` or `search` endpoints instead (for example, `/service/rest/v1/components?repository=els_java`), which return the full catalog regardless of what your proxy has cached, paginated via a `continuationToken`.
+:::
 
 <script setup>
 
