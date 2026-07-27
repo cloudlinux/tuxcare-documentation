@@ -7,13 +7,14 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **acorn** 6.0.4, 6.2.0
 * **adm-zip** 0.4.4, 0.4.7, 0.4.16, 0.5.18
 * **ag-grid** 16.0.1, 17.1.0, 17.1.1, 18.0.1, 18.1.2
-* **ag-grid-community** 20.2.0, 21.0.0, 23.0.2, 23.2.1, 24.1.0, 25.0.0, 26.1.0, 26.2.0, 26.2.1, 28.1.0, 28.1.1, 28.2.0, 29.1.0, 30.1.0, 30.2.0, 31.1.1
+* **ag-grid-community** 20.2.0, 21.0.0, 23.0.2, 23.2.1, 24.1.0, 25.0.0, 26.0.0, 26.1.0, 26.2.0, 26.2.1, 28.1.0, 28.1.1, 28.2.0, 29.1.0, 30.1.0, 30.2.0, 31.1.1
+* **ag-grid-enterprise** 16.0.1, 17.1.1, 18.0.1, 20.2.0, 21.0.0, 23.0.2, 23.2.1, 24.1.0, 25.0.0, 26.1.0, 26.2.0, 26.2.1, 28.1.0, 28.1.3, 30.1.0, 31.1.1
 * **ajv** 4.11.8, 5.5.2, 6.4.0, 6.5.3, 6.9.1, 6.10.0, 6.11.0, 6.12.3, 6.12.4, 6.12.6, 6.14.0, 8.6.2, 8.9.0, 8.11.0, 8.12.0, 8.17.1
 * **animations** 6.0.1
 * **ansi-html** 0.0.7
 * **ansi-regex** 3.0.0
 * **async** 2.6.1, 2.6.3
-* **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.24.0, 0.26.1, 0.27.2, 0.33.0, 1.6.2, 1.6.8, 1.7.5, 1.7.7
+* **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.24.0, 0.26.0, 0.26.1, 0.27.2, 0.33.0, 1.6.2, 1.6.8, 1.7.5, 1.7.7, 1.7.9
 * **azure-identity** 4.0.1
 * **babel-core** 7.18.9, 7.21.0, 7.21.5, 7.29.0
 * **babel-helpers** 7.15.4, 7.18.9, 7.21.0, 7.21.5, 7.24.0, 7.24.1, 7.25.6, 7.26.0, 7.29.0
@@ -56,22 +57,24 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **dset** 3.1.3
 * **ejs** 1.0.0, 2.7.4, 3.1.9
 * **elliptic** 6.4.1, 6.5.4, 6.5.5, 6.6.0, 6.6.1
-* **engine.io** 3.2.1
+* **engine.io** 1.8.3, 3.1.5, 3.2.1
 * **es5-ext** 0.10.7, 0.10.46
 * **esbuild** 0.13.8, 0.14.22, 0.14.25, 0.14.54, 0.15.5, 0.15.18, 0.17.8, 0.17.15, 0.17.19, 0.18.17, 0.18.20, 0.19.8, 0.19.12, 0.20.1, 0.21.5, 0.23.1
 * **eslint-plugin-kit** 0.2.7
+* **estree-util-value-to-estree** 1.3.0
 * **eventsource** 0.1.6, 1.1.0
 * **express-jwt** 0.1.3, 0.1.4
 * **extend** 3.0.0
-* **fast-uri** 3.0.1, 3.0.3
-* **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.5.3, 4.5.6
+* **fast-uri** 2.4.0, 2.4.2, 3.0.1, 3.0.3
+* **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.5.3, 4.5.6, 4.5.7
+* **fastify-middie** 8.3.3
 * **file-type** 17.1.6
 * **flatted** 3.2.9, 3.3.3
 * **follow-redirects** 0.0.3, 1.0.0, 1.2.6, 1.5.10, 1.15.2, 1.15.3, 1.15.5, 1.15.6, 1.15.9, 1.15.11
 * **form-data** 0.0.8, 0.1.4, 0.2.0, 1.0.0-rc3, 1.0.1, 2.0.0, 2.1.4, 2.3.3, 4.0.0, 4.0.1
 * **formidable** 2.1.2, 2.1.5
 * **forwarded** 0.1.0
-* **fresh** 0.2.4, 0.3.0, 0.5.2
+* **fresh** 0.1.0, 0.2.0, 0.2.4, 0.3.0, 0.5.2
 * **fstream** 1.0.8
 * **gh-pages** 0.12.0
 * **glob** 10.2.6, 10.3.10, 10.4.5
@@ -88,7 +91,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **http-proxy-middleware** 0.0.5, 0.17.2, 0.17.3, 0.18.0, 0.19.1, 0.20.0, 1.0.0, 1.1.0, 1.3.1, 2.0.6, 2.0.7, 2.0.8, 3.0.3
 * **i18next** 23.16.8
 * **i18next-http-backend** 1.4.4, 2.5.2
-* **immutable** 3.8.1, 3.8.2, 4.3.5, 4.3.7, 5.0.3
+* **immutable** 3.8.1, 3.8.2, 3.8.3, 4.1.0, 4.3.5, 4.3.7, 5.0.3
 * **ini** 1.3.5
 * **ip** 1.1.5, 1.1.9, 2.0.0, 2.0.1
 * **is-my-json-valid** 2.10.1, 2.12.2
@@ -100,6 +103,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **jsonpath-plus** 5.1.0, 6.0.1, 7.2.0
 * **jsonpointer** 1.1.0, 2.0.0, 4.1.0
 * **jspdf** 1.4.1, 2.5.1, 2.5.2, 3.0.4
+* **jws** 0.2.6
 * **knex** 0.95.15
 * **linkify-it** 1.2.4, 4.0.1
 * **linkifyjs** 4.1.3
@@ -109,13 +113,13 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **log4js** 3.0.6, 4.5.1
 * **luxon** 2.3.0
 * **markdown-it** 4.0.3, 4.3.0, 8.4.2, 13.0.2
-* **marked** 0.2.10, 0.7.0, 4.0.6, 4.0.7, 4.0.9
+* **marked** 0.2.10, 0.3.19, 0.7.0, 0.8.2, 1.2.7, 4.0.6, 4.0.7, 4.0.9
 * **mem** 1.1.0
 * **micromatch** 2.3.11, 3.1.10
 * **mime** 1.2.6, 1.2.11, 1.3.0, 1.3.4, 1.3.6
 * **minimatch** 0.0.4, 0.0.5, 0.2.14, 0.3.0, 1.0.0, 2.0.10, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 5.1.0, 9.0.3
 * **minimist** 0.0.8, 0.0.10, 1.2.0, 1.2.1, 1.2.8
-* **moment** 2.10.6, 2.24.0
+* **moment** 2.0.0, 2.10.6, 2.24.0
 * **moment-timezone** 0.4.1
 * **morgan** 1.5.3, 1.6.1
 * **mout** 0.9.1, 0.11.0
@@ -137,8 +141,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **pdfjs-dist** 2.14.305, 2.16.105, 3.11.174
 * **picocolors** 0.2.1
 * **picomatch** 2.3.1, 4.0.1, 4.0.2
+* **piscina** 4.6.1
 * **prismjs** 1.27.0, 1.29.0
-* **protobufjs** 6.10.2, 6.11.6
+* **protobufjs** 2.2.1, 3.8.2, 4.1.3, 5.0.3, 6.10.2, 6.11.6
 * **protobufjs-utf8** 1.1.0
 * **pug** 2.0.4
 * **qs** 0.5.1, 0.6.6, 1.0.2, 1.2.2, 2.2.4, 2.2.5, 2.3.3, 2.4.2, 3.1.0, 4.0.0, 5.1.0, 5.2.0, 5.2.1, 6.5.3, 6.5.5, 6.7.0, 6.10.3, 6.10.7, 6.11.0, 6.14.0
@@ -150,11 +155,13 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **semver** 2.3.2, 4.3.6, 5.0.3, 5.1.0, 5.3.0, 5.6.0, 6.3.0, 7.0.0, 7.1.3, 7.3.2, 7.3.4, 7.3.5, 7.3.8
 * **sentry-browser** 5.7.1
 * **serialize-javascript** 1.9.1, 3.1.0, 4.0.0, 5.0.1, 6.0.2
+* **serve-static** 1.10.3
 * **set-value** 2.0.0
 * **shell-quote** 1.4.3, 1.6.1, 1.7.2, 1.7.3
 * **shelljs** 0.1.4, 0.3.0, 0.8.2
 * **socket.io** 2.1.1
 * **socket.io-parser** 3.2.0, 3.3.4, 3.4.3, 4.2.4
+* **sockjs** 0.3.18, 0.3.19
 * **ssr-window** 4.0.2
 * **ssri** 7.1.0
 * **stringstream** 0.0.4, 0.0.5
@@ -173,8 +180,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **underscore.string** 2.2.1, 2.3.3
 * **uuid** 3.4.0, 8.3.2, 9.0.1, 11.0.5
 * **validator** 8.2.0, 10.11.0
-* **webpack-dev-middleware** 1.12.0, 1.12.2, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3
+* **webpack-bundle-analyzer** 2.13.1
+* **webpack-dev-middleware** 1.10.2, 1.12.0, 1.12.2, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3
 * **webpack-subresource-integrity** 1.4.0, 1.4.1
+* **websocket-driver** 0.6.5
 * **websocket-extensions** 0.1.1
 * **word-wrap** 1.2.3
 * **ws** 0.8.1, 1.1.1, 1.1.2, 1.1.5, 3.3.3, 4.1.0, 7.4.6

@@ -73,12 +73,13 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-amqp | 2.4.17 |
-| spring-rabbit | 2.4.17 |
-| spring-rabbit-junit | 2.4.17 |
-| spring-rabbit-test | 2.4.17 |
-| spring-rabbit-stream | 2.4.17 |
-| spring-amqp-dist | 2.4.17 |
+| spring-amqp | 2.4.17, 3.1.8 |
+| spring-rabbit | 2.4.17, 3.1.8 |
+| spring-rabbit-junit | 2.4.17, 3.1.8 |
+| spring-rabbit-test | 2.4.17, 3.1.8 |
+| spring-rabbit-stream | 2.4.17, 3.1.8 |
+| spring-amqp-dist | 2.4.17, 3.1.8 |
+| spring-amqp-bom | 3.1.8 |
 </template>
 
 <template #Batch>
