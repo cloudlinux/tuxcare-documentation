@@ -13,13 +13,15 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 
 Each package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. SBOMs are provided in industry-standard formats — SPDX and CycloneDX — so they can be consumed by any SBOM-aware scanner or supply-chain tool.
 
-TuxCare generates an SBOM for every package it builds, across all ELS for Libraries ecosystems (Java, JavaScript, Python, PHP, .NET). SBOMs are published to TuxCare Nexus and require credentials. Direct browse repositories are currently available for:
+SBOMs are generated across all ELS for Libraries ecosystems (Java, JavaScript, Python, PHP, .NET) and published to [TuxCare Nexus](https://nexus.repo.tuxcare.com/). **Access requires TuxCare credentials.**
 
-* Java - [els-java-sbom](https://nexus.repo.tuxcare.com/#browse/browse:els-java-sbom)
-* Python - [els_python_sbom](https://nexus.repo.tuxcare.com/#browse/browse:els_python_sbom)
-* JavaScript - [els-js-sbom](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom)
+SBOM repositories are currently published for:
 
-For PHP, .NET, and other ecosystems, reach out to [sales@tuxcare.com](mailto:sales@tuxcare.com) to check SBOM availability.
+* Java — `els-java-sbom`
+* Python — `els_python_sbom`
+* JavaScript — `els-js-sbom`
+
+To request credentials, or to check SBOM availability for PHP, .NET, and other ecosystems, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ## Vulnerability Exploitability eXchange (VEX)
 
