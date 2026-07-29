@@ -4,10 +4,6 @@ export default [
         url: "https://support.tuxcare.com/"
     },
     {
-        text: "Forum",
-        url: "https://forum.cloudlinux.com/forum/tuxcare"
-    },
-    {
         text: "Blog",
         url: "https://blog.tuxcare.com/"
     },
