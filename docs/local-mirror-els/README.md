@@ -102,6 +102,7 @@ For example:
 rsync -avSHP --delete rsync://repo.tuxcare.com/DEBIAN10ELS/ .
 ```
 
+<!-- TODO(ELSDOC-346): unverified mirror endpoint, re-enable once confirmed
 ### Debian 11 ELS
 
 To create a local mirror of the [debian11-els](https://repo.tuxcare.com/debian11-els/) repository with security updates via `rsync`, use the following:
@@ -115,6 +116,7 @@ For example:
 ```
 rsync -avSHP --delete rsync://repo.tuxcare.com/DEBIAN11ELS/ .
 ```
+-->
 
 ### OracleLinux 6 ELS
 
