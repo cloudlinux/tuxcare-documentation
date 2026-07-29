@@ -45,7 +45,7 @@ Handling Multiple Vulnerabilities: In cases where several CVEs are reported simu
 
 TuxCare's commitment to transparency and visibility is foundational to our SecureChain offering. We provide verifiable metadata that helps customers understand package composition, software provenance, and vulnerability impact across the software supply chain.
 
-* **SLSA Compliance**: TuxCare packages are built and signed to support verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance at Level 2 at launch, with Level 3 on the roadmap. Builds run from vetted sources, include attestations for dependencies, and undergo continuous testing to maintain integrity and trust.
+* **SLSA Compliance**: TuxCare packages are built and signed to support verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance at Level 3. Builds run from vetted sources, include attestations for dependencies, and undergo continuous testing to maintain integrity and trust.
 * **Software Bill of Materials (SBOM)**: Machine-readable SBOMs provide visibility into package composition and dependencies, supporting software supply chain transparency and accountability. Depending on the package, SBOMs are provided in industry-standard formats — SPDX and CycloneDX.
 
 :::warning
