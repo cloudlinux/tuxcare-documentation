@@ -171,7 +171,7 @@ const techData = [
       },
       {
         name: "Apache HttpComponents Client",
-        versions: "4.5.2 | 4.5.8",
+        versions: "4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
         link: "./java-libraries/",
       },
       {
@@ -633,7 +633,7 @@ const techData = [
       },
       {
         name: "Spring® AMQP",
-        versions: "2.4.17",
+        versions: "2.1.8.RELEASE | 2.3.16 | 2.4.17 | 3.1.8",
         link: "./spring/",
       },
       {
@@ -671,7 +671,7 @@ const techData = [
       },
       {
         name: "Spring® Web Services",
-        versions: "3.1.8",
+        versions: "3.1.8 | 4.0.17",
         link: "./spring/",
       },
       {
@@ -913,7 +913,7 @@ const techData = [
       },
       {
         name: "brace-expansion",
-        versions: "1.1.11 | 1.1.12 | 2.0.1",
+        versions: "1.1.11 | 1.1.12 | 2.0.1 | 2.1.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1132,6 +1132,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "find-my-way",
+        versions: "9.6.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "flatted",
         versions: "3.2.9 | 3.3.3",
         link: "./javascript-libraries/",
@@ -1328,7 +1333,7 @@ const techData = [
       },
       {
         name: "karma",
-        versions: "3.0.0 | 4.0.1 | 4.1.0 | 4.4.1 | 5.0.0 | 5.0.9",
+        versions: "1.5.0 | 1.7.0 | 3.0.0 | 4.0.0 | 4.0.1 | 4.1.0 | 4.4.1 | 5.0.0 | 5.0.9",
         link: "./karma/",
       },
       {
@@ -1343,7 +1348,7 @@ const techData = [
       },
       {
         name: "Lodash",
-        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.4 | 4.17.5 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
+        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.4 | 4.17.5 | 4.17.11 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
         link: "./lodash/",
       },
       {
@@ -1463,7 +1468,7 @@ const techData = [
       },
       {
         name: "multiparty",
-        versions: "3.3.2",
+        versions: "2.2.0 | 3.3.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1573,7 +1578,7 @@ const techData = [
       },
       {
         name: "PostCSS",
-        versions: "5.2.18 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.6",
+        versions: "5.2.18 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.6",
         link: "./postcss/",
       },
       {
@@ -1583,7 +1588,7 @@ const techData = [
       },
       {
         name: "protobufjs",
-        versions: "2.2.1 | 3.8.2 | 4.1.3 | 5.0.3 | 6.10.2 | 6.11.6",
+        versions: "2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.10.2 | 6.11.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1622,6 +1627,26 @@ const techData = [
         link: "./react-router/",
       },
       {
+        name: "react-server-dom-esm",
+        versions: "0.0.0-13a913d5-20260727",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-server-dom-parcel",
+        versions: "19.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-server-dom-turbopack",
+        versions: "19.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "react-server-dom-webpack",
+        versions: "19.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "redis",
         versions: "2.8.0",
         link: "./javascript-libraries/",
@@ -1633,7 +1658,7 @@ const techData = [
       },
       {
         name: "Request",
-        versions: "2.88.0 | 2.88.2",
+        versions: "2.65.0 | 2.88.0 | 2.88.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1678,7 +1703,7 @@ const techData = [
       },
       {
         name: "shelljs",
-        versions: "0.1.4 | 0.3.0 | 0.8.2",
+        versions: "0.1.4 | 0.3.0 | 0.8.2 | 0.8.4",
         link: "./javascript-libraries/",
       },
       {
@@ -1868,7 +1893,7 @@ const techData = [
       },
       {
         name: "ws",
-        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 7.4.6",
+        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.2.1 | 7.4.6 | 7.5.9 | 8.16.0 | 8.18.0 | 8.20.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1888,7 +1913,7 @@ const techData = [
       },
       {
         name: "xmlhttprequest-ssl",
-        versions: "1.5.3 | 1.5.5",
+        versions: "1.5.1 | 1.5.3 | 1.5.5",
         link: "./javascript-libraries/",
       },
       {

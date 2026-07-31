@@ -28,7 +28,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **bn.js** 4.11.8, 4.12.0
 * **body-parser** 1.8.4, 1.13.3, 1.14.2, 1.19.0, 1.20.0, 1.20.1, 1.20.2
 * **bower** 1.8.4
-* **brace-expansion** 1.1.11, 1.1.12, 2.0.1
+* **brace-expansion** 1.1.11, 1.1.12, 2.0.1, 2.1.2
 * **braces** 0.1.5, 1.8.5, 2.3.1, 2.3.2, 3.0.2, 3.0.3
 * **browserify-sign** 4.0.4, 4.2.1
 * **browserslist** 4.10.0, 4.13.0, 4.27.0
@@ -69,6 +69,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.5.3, 4.5.6, 4.5.7
 * **fastify-middie** 8.3.3
 * **file-type** 17.1.6
+* **find-my-way** 9.6.0
 * **flatted** 3.2.9, 3.3.3
 * **follow-redirects** 0.0.3, 1.0.0, 1.2.6, 1.5.10, 1.15.2, 1.15.3, 1.15.5, 1.15.6, 1.15.9, 1.15.11
 * **form-data** 0.0.8, 0.1.4, 0.2.0, 1.0.0-rc3, 1.0.1, 2.0.0, 2.1.4, 2.3.3, 4.0.0, 4.0.1
@@ -125,7 +126,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **mout** 0.9.1, 0.11.0
 * **ms** 0.3.0, 0.6.2, 0.7.1, 0.7.2, 1.0.0, 2.0.0, 2.1.3
 * **multer** 1.4.5-lts, 1.4.5-lts.1, 1.4.5-lts.2
-* **multiparty** 3.3.2
+* **multiparty** 2.2.0, 3.3.2
 * **mysql** 2.18.1
 * **negotiator** 0.5.3
 * **netmask** 1.0.6
@@ -143,13 +144,17 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **picomatch** 2.3.1, 4.0.1, 4.0.2
 * **piscina** 4.6.1
 * **prismjs** 1.27.0, 1.29.0
-* **protobufjs** 2.2.1, 3.8.2, 4.1.3, 5.0.3, 6.10.2, 6.11.6
+* **protobufjs** 2.2.1, 3.8.2, 4.1.3, 5.0.0, 5.0.3, 6.10.2, 6.11.6
 * **protobufjs-utf8** 1.1.0
 * **pug** 2.0.4
 * **qs** 0.5.1, 0.6.6, 1.0.2, 1.2.2, 2.2.4, 2.2.5, 2.3.3, 2.4.2, 3.1.0, 4.0.0, 5.1.0, 5.2.0, 5.2.1, 6.5.3, 6.5.5, 6.7.0, 6.10.3, 6.10.7, 6.11.0, 6.14.0
 * **quill** 1.3.7
+* **react-server-dom-esm** 0.0.0-13a913d5-20260727
+* **react-server-dom-parcel** 19.2.0
+* **react-server-dom-turbopack** 19.2.0
+* **react-server-dom-webpack** 19.2.0
 * **redis** 2.8.0
-* **request** 2.88.0, 2.88.2
+* **request** 2.65.0, 2.88.0, 2.88.2
 * **rollup** 0.36.3, 0.41.6, 0.56.4, 0.57.1, 0.59.4, 0.63.5, 2.1.0, 2.26.5, 2.38.4, 2.77.3, 2.79.1, 2.79.2, 3.15.0, 4.22.4
 * **sanitize-html** 1.27.5
 * **semver** 2.3.2, 4.3.6, 5.0.3, 5.1.0, 5.3.0, 5.6.0, 6.3.0, 7.0.0, 7.1.3, 7.3.2, 7.3.4, 7.3.5, 7.3.8
@@ -158,7 +163,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **serve-static** 1.10.3
 * **set-value** 2.0.0
 * **shell-quote** 1.4.3, 1.6.1, 1.7.2, 1.7.3
-* **shelljs** 0.1.4, 0.3.0, 0.8.2
+* **shelljs** 0.1.4, 0.3.0, 0.8.2, 0.8.4
 * **socket.io** 2.1.1
 * **socket.io-parser** 3.2.0, 3.3.4, 3.4.3, 4.2.4
 * **sockjs** 0.3.18, 0.3.19
@@ -186,11 +191,11 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **websocket-driver** 0.6.5
 * **websocket-extensions** 0.1.1
 * **word-wrap** 1.2.3
-* **ws** 0.8.1, 1.1.1, 1.1.2, 1.1.5, 3.3.3, 4.1.0, 7.4.6
+* **ws** 0.8.1, 1.1.1, 1.1.2, 1.1.5, 3.3.3, 4.1.0, 6.2.1, 7.4.6, 7.5.9, 8.16.0, 8.18.0, 8.20.0
 * **xlsx** 0.18.5
 * **xml2js** 0.2.6, 0.2.8, 0.4.23
 * **xmldom** 0.1.31, 0.6.0
-* **xmlhttprequest-ssl** 1.5.3, 1.5.5
+* **xmlhttprequest-ssl** 1.5.1, 1.5.3, 1.5.5
 * **y18n** 4.0.0
 * **yaml** 1.10.2, 2.5.0
 * **yargs-parser** 4.2.1, 7.0.0, 10.1.0, 11.1.1, 13.1.2
