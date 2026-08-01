@@ -18,7 +18,7 @@ SBOMs are generated across all ELS for Libraries ecosystems (Java, JavaScript, P
 SBOM repositories are currently published for:
 
 * Java — `els-java-sbom`
-* Python — `els_python_sbom`
+* Python — `els-python-sbom`
 * JavaScript — `els-js-sbom`
 
 To request credentials, or to check SBOM availability for PHP, .NET, and other ecosystems, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
