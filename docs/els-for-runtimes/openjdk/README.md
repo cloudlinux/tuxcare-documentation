@@ -96,8 +96,8 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=openjdk&product=CentOS+6+ELS&product=CloudLinux+6+ELS&product=Oracle+Linux+6+ELS&product=CentOS+7+ELS&product=CloudLinux+7+ELS&product=Oracle+Linux+7+ELS&product=RHEL+7+ELS&product=CentOS+8.4+ELS&product=CentOS+8.5+ELS&product=CentOS+Stream+8+ELS&product=AlmaLinux+9+ELS) — Track vulnerability fixes and updates
-* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=openjdk&product=CentOS+6+ELS&product=CloudLinux+6+ELS&product=Oracle+Linux+6+ELS&product=CentOS+7+ELS&product=CloudLinux+7+ELS&product=Oracle+Linux+7+ELS&product=RHEL+7+ELS&product=CentOS+8.4+ELS&product=CentOS+8.5+ELS&product=CentOS+Stream+8+ELS&product=AlmaLinux+9+ELS) — Patched versions and changelogs
-* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?q=openjdk&product=CentOS+6+ELS&product=CloudLinux+6+ELS&product=Oracle+Linux+6+ELS&product=CentOS+7+ELS&product=CloudLinux+7+ELS&product=Oracle+Linux+7+ELS&product=RHEL+7+ELS&product=CentOS+8.4+ELS&product=CentOS+8.5+ELS&product=CentOS+Stream+8+ELS&product=AlmaLinux+9+ELS) — Full list of product parts covered by ELS
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=OpenJDK) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=OpenJDK) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=OpenJDK) — Full list of product parts covered by ELS
 
 </WhatsNext>
