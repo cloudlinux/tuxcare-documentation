@@ -1,3 +1,9 @@
+---
+head:
+  - - meta
+    - name: robots
+      content: noindex, nofollow
+---
 <!-- markdownlint-disable MD040 MD033 -->
 
 # Installation instructions of a local mirror with ELS updates

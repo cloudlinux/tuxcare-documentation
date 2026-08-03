@@ -1,6 +1,6 @@
 # Managing the ELS repository
 
-This page provides instructions for updating packages, setting up a local mirror, and removing the Endless Lifecycle Support (ELS) repository.
+This page provides instructions for updating packages and removing the Endless Lifecycle Support (ELS) repository.
 
 ## Updating packages
 
@@ -61,13 +61,6 @@ For example (packages in the 3rd rollout slot):
 ```
 yum update kernel* --enablerepo=centos7els-rollout-3-bypass
 ```
-
-## Local mirror
-
-TuxCare provides the ability to create local mirrors of ELS repositories using `rsync`. This is useful for environments with restricted internet access or for reducing external bandwidth usage.
-
-To obtain access to the local mirroring facility, provide your external IP address to your Account Manager or contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-
 
 ## Removing the ELS repository
 
