@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Lodash from TuxCare provides security fixes 
 
 ## Supported Lodash Versions
 
-* Lodash 1.3.1, 2.4.2, 3.10.1, 3.2.0, 4.17.4, 4.17.5, 4.17.15, 4.17.19, 4.17.21, 4.18.1, 4.5.0
+* Lodash 1.3.1, 2.4.2, 3.10.1, 3.2.0, 4.17.4, 4.17.5, 4.17.11, 4.17.15, 4.17.19, 4.17.21, 4.18.1, 4.5.0
 
 ## Installation
 
@@ -144,6 +144,19 @@ Endless Lifecycle Support (ELS) for Lodash from TuxCare provides security fixes 
       },
       "overrides": {
         "lodash@4.17.5": "npm:@els-js/lodash@>=4.17.5-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #Lodash_4.17.11>
+
+      ```text
+      "dependencies": {
+        "lodash": "npm:@els-js/lodash@>=4.17.11-tuxcare.1"
+      },
+      "overrides": {
+        "lodash@4.17.11": "npm:@els-js/lodash@>=4.17.11-tuxcare.1"
       }
       ```
 
