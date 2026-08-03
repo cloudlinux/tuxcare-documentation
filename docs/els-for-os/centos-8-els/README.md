@@ -71,6 +71,6 @@
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
 * [8.4] ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=CentOS+8.4+ELS) — Full list of packages covered by ELS
 * [8.5] ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=CentOS+8.5+ELS) — Full list of packages covered by ELS
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates and other repository operations
 
 </WhatsNext>

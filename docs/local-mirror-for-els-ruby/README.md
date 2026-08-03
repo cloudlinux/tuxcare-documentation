@@ -1,3 +1,9 @@
+---
+head:
+  - - meta
+    - name: robots
+      content: noindex, nofollow
+---
 # Installation instructions of a local mirror for ELS Ruby
 
 We provide the ability to create local mirrors of Ruby for ELS updates.

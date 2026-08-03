@@ -27,7 +27,19 @@ const REPO = resolve(__dirname, "..");
 const DOCS = join(REPO, "docs");
 const SITE = "https://docs.tuxcare.com";
 const OUT = join(DOCS, ".vuepress", "public", "llms-full.txt");
-const EXCLUDE_DIRS = new Set([".vuepress", "_pages-backup", "node_modules"]);
+const EXCLUDE_DIRS = new Set([
+  ".vuepress",
+  "_pages-backup",
+  "node_modules",
+  // Local mirror pages are intentionally undocumented publicly: they exist so
+  // qualified customers can be sent a direct link, but must not be surfaced in
+  // navigation, search, or the LLM corpus. Keep them out of llms-full.txt.
+  "local-mirror-els",
+  "local-mirror-for-els-nodejs",
+  "local-mirror-for-els-php",
+  "local-mirror-for-els-python",
+  "local-mirror-for-els-ruby",
+]);
 
 // CamelCase component name: starts uppercase, contains at least one lowercase.
 const COMP = "[A-Z][A-Za-z0-9]*[a-z][A-Za-z0-9]*";
