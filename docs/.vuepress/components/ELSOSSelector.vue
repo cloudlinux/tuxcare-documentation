@@ -64,6 +64,11 @@ const operatingSystems = [
     link: "./debian-10-els",
   },
   {
+    name: "Debian 11",
+    icon: "/images/debian.webp",
+    link: "./debian-11-els",
+  },
+  {
     name: "Oracle Linux 6",
     icon: "/images/Oracle-Linux.webp",
     link: "./oracle-linux-6-els",

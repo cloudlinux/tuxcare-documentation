@@ -59,6 +59,10 @@ export default {
                     icon: '/images/debian.webp',
                 },
                 {
+                    path: '/els-for-os/debian-11-els/',
+                    icon: '/images/debian.webp',
+                },
+                {
                     path: '/els-for-os/oracle-linux-6-els/',
                     icon: '/images/Oracle-Linux.webp',
                 },

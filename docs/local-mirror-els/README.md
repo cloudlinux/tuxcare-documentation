@@ -108,6 +108,22 @@ For example:
 rsync -avSHP --delete rsync://repo.tuxcare.com/DEBIAN10ELS/ .
 ```
 
+<!-- re-enable when available
+### Debian 11 ELS
+
+To create a local mirror of the [debian11-els](https://repo.tuxcare.com/debian11-els/) repository with security updates via `rsync`, use the following:
+
+```
+rsync://repo.tuxcare.com/DEBIAN11ELS/
+```
+
+For example:
+
+```
+rsync -avSHP --delete rsync://repo.tuxcare.com/DEBIAN11ELS/ .
+```
+-->
+
 ### OracleLinux 6 ELS
 
 To create a local mirror of the oraclelinux6-els repository with security updates via `rsync`, use the following:

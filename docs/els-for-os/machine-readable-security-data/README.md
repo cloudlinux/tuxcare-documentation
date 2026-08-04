@@ -21,6 +21,9 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 | CentOS 8.5 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+8.5+ELS) |
 | CentOS Stream 8 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/centos-stream8els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/centos-stream8els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=CentOS+Stream+8+ELS) |
 | Debian 10 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/debian10els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/debian10els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Debian+10+ELS) |
+<!-- re-enable when available
+| Debian 11 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/debian11els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/debian11els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Debian+11+ELS) |
+-->
 | Oracle Linux 6 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux6els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux6els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Oracle+Linux+6+ELS) |
 | Oracle Linux 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Oracle+Linux+7+ELS) |
 | Red Hat Enterprise Linux 7 ELS | [oval.xml](https://security.tuxcare.com/oval/els_os/rhel7els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/rhel7els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Red+Hat+Enterprise+Linux+7+ELS) |
