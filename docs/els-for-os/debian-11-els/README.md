@@ -52,9 +52,9 @@
    Section: utils
    Filename: pool/main/e/els-os-release/els-os-release_1.0.0-2_amd64.deb
    Size: 5306
-   SHA256: be11d8bffaac9f70c8b19d2f9c96e64bb0a698593671d807e6fe75687863e3c8
-   SHA1: 47238eb136a07fb1b91fe531b6e4ebbd3207a6ab
-   MD5sum: b82dba173e67dfbfc83a6f414c866a59
+   SHA256: 7dcf088f7bf1b3f52d0cbed9fe5d28d8ab1f500dd3b074c6870080304536e089
+   SHA1: 88017e5910372c00a27dc0df1de53faf3894affb
+   MD5sum: 44f0dae3fa554ac69d9c666d83540bae
    Description: ELS os release package for deb systems
    Description-md5: f3fdfd5cb5f71a4ebb6f1f40c8d57483
    ```
@@ -68,12 +68,12 @@
 <!-- re-enable when available
 * ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/debian11els/oval.xml) — OVAL security data
 * ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/debian11els/) — CSAF security advisories
--->
+
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Debian+11+ELS) — Track vulnerability fixes and updates
 <!-- re-enable when available
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
--->
 * ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=Debian+11+ELS) — Full list of packages covered by ELS
-* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
+-->
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates and other repository operations
 
 </WhatsNext>
