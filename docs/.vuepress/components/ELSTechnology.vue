@@ -633,7 +633,7 @@ const techData = [
       },
       {
         name: "Spring® AMQP",
-        versions: "2.1.8.RELEASE | 2.3.16 | 2.4.17 | 3.1.8",
+        versions: "2.1.8.RELEASE | 2.3.16 | 2.4.17 | 3.0.10 | 3.1.8",
         link: "./spring/",
       },
       {
@@ -643,7 +643,7 @@ const techData = [
       },
       {
         name: "Spring® Boot",
-        versions: "2.1 | 2.3 | 2.4 | 2.5 | 2.6 | 2.7 | 3.0 | 3.1 | 3.2 | 3.3 | 3.4",
+        versions: "2.1 | 2.3 | 2.4 | 2.5 | 2.6 | 2.7 | 3.0 | 3.1 | 3.2 | 3.3 | 3.4 | 3.5",
         link: "./spring/",
         detailsHash: "Boot",
       },
@@ -660,7 +660,7 @@ const techData = [
       },
       {
         name: "Spring® Security",
-        versions: "4.2 | 5.6 | 5.7 | 5.8 | 6.1 | 6.2 | 6.3 | 6.4",
+        versions: "4.2 | 5.6 | 5.7 | 5.8 | 6.0 | 6.1 | 6.2 | 6.3 | 6.4",
         link: "./spring/",
         detailsHash: "Security",
       },
@@ -671,7 +671,7 @@ const techData = [
       },
       {
         name: "Spring® Web Services",
-        versions: "3.1.8 | 4.0.17",
+        versions: "3.0.7.RELEASE | 3.1.8 | 4.0.17",
         link: "./spring/",
       },
       {
