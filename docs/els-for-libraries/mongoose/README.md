@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Mongoose from TuxCare provides security fixe
 
 ## Supported Mongoose Versions
 
-* Mongoose 5.13.23, 6.12.2, 7.8.8
+* Mongoose 5.13.23, 6.12.2, 7.8.8, 9.6.2
 
 ## Installation
 
@@ -92,6 +92,19 @@ Endless Lifecycle Support (ELS) for Mongoose from TuxCare provides security fixe
       },
       "overrides": {
         "mongoose@7.8.8": "npm:@els-js/mongoose@>=7.8.8-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #Mongoose_9.6.2>
+
+      ```text
+      "dependencies": {
+        "mongoose": "npm:@els-js/mongoose@>=9.6.2-tuxcare.1"
+      },
+      "overrides": {
+        "mongoose@9.6.2": "npm:@els-js/mongoose@>=9.6.2-tuxcare.1"
       }
       ```
 
