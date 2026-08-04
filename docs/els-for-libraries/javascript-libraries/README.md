@@ -109,6 +109,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **linkify-it** 1.2.4, 4.0.1
 * **linkifyjs** 4.1.3
 * **loader-utils** 0.2.17, 1.1.0, 1.2.3, 2.0.0
+* **lodash-es** 4.17.11, 4.17.15, 4.17.21
 * **lodash.merge** 3.3.2
 * **lodash.template** 3.6.2, 4.4.0, 4.5.0
 * **log4js** 3.0.6, 4.5.1
@@ -119,7 +120,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **micromatch** 2.3.11, 3.1.10
 * **mime** 1.2.6, 1.2.11, 1.3.0, 1.3.4, 1.3.6
 * **minimatch** 0.0.4, 0.0.5, 0.2.14, 0.3.0, 1.0.0, 2.0.10, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 5.1.0, 9.0.3
-* **minimist** 0.0.8, 0.0.10, 1.2.0, 1.2.1, 1.2.8
+* **minimist** 0.0.8, 0.0.9, 0.0.10, 1.2.0, 1.2.1, 1.2.8
 * **moment** 2.0.0, 2.10.6, 2.24.0
 * **moment-timezone** 0.4.1
 * **morgan** 1.5.3, 1.6.1
@@ -144,7 +145,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **picomatch** 2.3.1, 4.0.1, 4.0.2
 * **piscina** 4.6.1
 * **prismjs** 1.27.0, 1.29.0
-* **protobufjs** 2.2.1, 3.8.2, 4.1.3, 5.0.0, 5.0.3, 6.10.2, 6.11.6
+* **protobufjs** 0.12.13, 1.5.1, 2.2.1, 3.8.2, 4.1.3, 5.0.0, 5.0.3, 6.8.8, 6.10.2, 6.11.6
 * **protobufjs-utf8** 1.1.0
 * **pug** 2.0.4
 * **qs** 0.5.1, 0.6.6, 1.0.2, 1.2.2, 2.2.4, 2.2.5, 2.3.3, 2.4.2, 3.1.0, 4.0.0, 5.1.0, 5.2.0, 5.2.1, 6.5.3, 6.5.5, 6.7.0, 6.10.3, 6.10.7, 6.11.0, 6.14.0
@@ -169,8 +170,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **sockjs** 0.3.18, 0.3.19
 * **ssr-window** 4.0.2
 * **ssri** 7.1.0
+* **storybook** 7.0.7, 8.6.14, 9.1.16, 10.1.9
 * **stringstream** 0.0.4, 0.0.5
 * **svgo** 2.8.0
+* **swagger-ui** 2.2.10
 * **swiper** 8.4.7, 11.2.10
 * **tar** 1.0.3, 2.1.1, 2.2.1, 2.2.2, 4.4.19, 6.0.2, 6.1.15, 6.2.0, 6.2.1
 * **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.1, 5.3.0, 5.5.1, 5.7.1, 5.10.0

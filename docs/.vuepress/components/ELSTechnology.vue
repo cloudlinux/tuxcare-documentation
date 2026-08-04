@@ -91,7 +91,7 @@ const techData = [
       },
       {
         name: "Apache ActiveMQ Artemis",
-        versions: "2.26.0 | 2.33.0",
+        versions: "2.26.0 | 2.33.0 | 2.40.0",
         link: "./java-libraries/",
       },
       {
@@ -277,7 +277,7 @@ const techData = [
       },
       {
         name: "AssertJ",
-        versions: "2.9.0 | 3.18.1 | 3.19.0 | 3.23.1 | 3.24.2 | 3.25.3",
+        versions: "2.9.0 | 3.11.1 | 3.18.1 | 3.19.0 | 3.23.1 | 3.24.2 | 3.25.3",
         link: "./java-libraries/",
       },
       {
@@ -1352,6 +1352,11 @@ const techData = [
         link: "./lodash/",
       },
       {
+        name: "lodash-es",
+        versions: "4.17.11 | 4.17.15 | 4.17.21",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "lodash.merge",
         versions: "3.3.2",
         link: "./javascript-libraries/",
@@ -1423,7 +1428,7 @@ const techData = [
       },
       {
         name: "minimist",
-        versions: "0.0.8 | 0.0.10 | 1.2.0 | 1.2.1 | 1.2.8",
+        versions: "0.0.8 | 0.0.9 | 0.0.10 | 1.2.0 | 1.2.1 | 1.2.8",
         link: "./javascript-libraries/",
       },
       {
@@ -1443,7 +1448,7 @@ const techData = [
       },
       {
         name: "Mongoose",
-        versions: "5.13.23 | 6.12.2 | 7.8.8",
+        versions: "5.13.23 | 6.12.2 | 7.8.8 | 9.6.2",
         link: "./mongoose/",
       },
       {
@@ -1588,7 +1593,7 @@ const techData = [
       },
       {
         name: "protobufjs",
-        versions: "2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.10.2 | 6.11.6",
+        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1732,6 +1737,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "storybook",
+        versions: "7.0.7 | 8.6.14 | 9.1.16 | 10.1.9",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "stringstream",
         versions: "0.0.4 | 0.0.5",
         link: "./javascript-libraries/",
@@ -1744,6 +1754,11 @@ const techData = [
       {
         name: "svgo",
         versions: "2.8.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "swagger-ui",
+        versions: "2.2.10",
         link: "./javascript-libraries/",
       },
       {
