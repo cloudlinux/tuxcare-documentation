@@ -116,7 +116,7 @@ const techData = [
       },
       {
         name: "Apache Commons Compress",
-        versions: "1.8.1 | 1.18 | 1.19 | 1.20 | 1.21 | 1.26.2",
+        versions: "1.8.1 | 1.12 | 1.18 | 1.19 | 1.20 | 1.21 | 1.26.2",
         link: "./java-libraries/",
       },
       {
@@ -131,7 +131,7 @@ const techData = [
       },
       {
         name: "Apache Commons FileUpload",
-        versions: "1.2.1 | 1.2.2 | 1.5",
+        versions: "1.2.1 | 1.2.2 | 1.3.1 | 1.5",
         link: "./java-libraries/",
       },
       {
@@ -477,7 +477,7 @@ const techData = [
       },
       {
         name: "jsoup",
-        versions: "1.7.2",
+        versions: "1.7.2 | 1.7.3",
         link: "./java-libraries/",
       },
       {
@@ -492,7 +492,7 @@ const techData = [
       },
       {
         name: "Logback",
-        versions: "1.1.7 | 1.2.13 | 1.4.11 | 1.4.14 | 1.5.18",
+        versions: "1.1.7 | 1.2.12 | 1.2.13 | 1.4.11 | 1.4.14 | 1.5.18",
         link: "./java-libraries/",
       },
       {
@@ -557,7 +557,7 @@ const techData = [
       },
       {
         name: "Plexus Utils",
-        versions: "1.4.5 | 1.5.5 | 1.5.8 | 3.1.0 | 3.6.0",
+        versions: "1.4.5 | 1.5.5 | 1.5.8 | 3.1.0 | 3.5.1 | 3.6.0",
         link: "./java-libraries/",
       },
       {
