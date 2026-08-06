@@ -116,7 +116,7 @@ const techData = [
       },
       {
         name: "Apache Commons Compress",
-        versions: "1.8.1 | 1.12 | 1.18 | 1.19 | 1.20 | 1.21 | 1.26.2",
+        versions: "1.8.1 | 1.12 | 1.14 | 1.15 | 1.18 | 1.19 | 1.20 | 1.21 | 1.26.2",
         link: "./java-libraries/",
       },
       {
@@ -638,7 +638,7 @@ const techData = [
       },
       {
         name: "Spring® Batch",
-        versions: "4.3.10",
+        versions: "4.3.10 | 5.1.2",
         link: "./spring/",
       },
       {
