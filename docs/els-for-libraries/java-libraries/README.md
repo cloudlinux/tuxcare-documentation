@@ -10,7 +10,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Axis** 1.4
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
 * **Apache Commons Collections** 3.2, 3.2.1
-* **Apache Commons Compress** 1.8.1, 1.18, 1.19, 1.20, 1.21, 1.26.2
+* **Apache Commons Compress** 1.8.1, 1.12, 1.14, 1.15, 1.18, 1.19, 1.20, 1.21, 1.26.2
 * **Apache Commons Configuration** 2.12.0
 * **Apache Commons Digester** 2.0, 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2, 1.5
