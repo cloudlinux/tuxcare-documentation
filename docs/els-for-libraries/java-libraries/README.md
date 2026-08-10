@@ -18,7 +18,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
-* **Apache HttpComponents Client** 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
+* **Apache HttpComponents Client** 4.2, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
 * **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
 * **Apache POI** 3.10-FINAL, 4.1.2
@@ -67,7 +67,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **jsoup** 1.7.2, 1.7.3
 * **JUnit** 4.13
 * **Lettuce** 6.1.10.RELEASE
-* **Logback** 1.1.7, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18
+* **Logback** 1.1.7, 1.2.3, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18
 * **LZ4** 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
 * **Mozilla Rhino** 1.7.10, 1.7.15
