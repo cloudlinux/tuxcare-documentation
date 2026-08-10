@@ -213,34 +213,37 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-data-bom | 2021.2.18 |
-| spring-data-build | 2.7.18 |
-| spring-data-build-resources | 2.7.18 |
-| spring-data-parent | 2.7.18 |
-| spring-data-commons | 2.7.18 |
-| spring-data-jpa | 2.7.18 |
-| spring-data-keyvalue | 2.7.18 |
-| spring-data-ldap | 2.7.18 |
-| spring-data-redis | 2.7.18 |
-| spring-data-cassandra-parent | 3.4.18 |
-| spring-data-cassandra | 3.4.18 |
-| spring-data-cassandra-distribution | 3.4.18 |
-| spring-data-mongodb | 3.4.18 |
-| spring-data-mongodb-distribution | 3.4.18 |
-| spring-data-mongodb-parent | 3.4.18 |
-| spring-data-rest-webmvc | 3.7.18 |
-| spring-data-rest-core | 3.7.18 |
-| spring-data-rest-distribution | 3.7.18 |
-| spring-data-rest-hal-explorer | 3.7.18 |
-| spring-data-rest-parent | 3.7.18 |
-| spring-data-couchbase | 4.4.18 |
-| spring-data-elasticsearch | 4.4.18 |
-| spring-data-neo4j | 6.3.18 |
-| spring-data-r2dbc | 1.5.18 |
-| spring-data-relational | 2.4.18 |
-| spring-data-relational-parent | 2.4.18 |
-| spring-data-jdbc | 2.4.18 |
-| spring-data-jdbc-distribution | 2.4.18 |
+| spring-data-bom | 2021.2.18, 2024.0.13 |
+| spring-data-build | 2.7.18, 3.3.13 |
+| spring-data-build-resources | 2.7.18, 3.3.13 |
+| spring-data-parent | 2.7.18, 3.3.13 |
+| spring-data-commons | 2.7.18, 3.3.13 |
+| spring-data-jpa | 2.7.18, 3.3.13 |
+| spring-data-jpa-parent | 3.3.13 |
+| spring-data-jpa-distribution | 3.3.13 |
+| spring-data-envers | 3.3.13 |
+| spring-data-keyvalue | 2.7.18, 3.3.13 |
+| spring-data-ldap | 2.7.18, 3.3.13 |
+| spring-data-redis | 2.7.18, 3.3.13 |
+| spring-data-cassandra-parent | 3.4.18, 4.3.13 |
+| spring-data-cassandra | 3.4.18, 4.3.13 |
+| spring-data-cassandra-distribution | 3.4.18, 4.3.13 |
+| spring-data-mongodb | 3.4.18, 4.3.13 |
+| spring-data-mongodb-distribution | 3.4.18, 4.3.13 |
+| spring-data-mongodb-parent | 3.4.18, 4.3.13 |
+| spring-data-rest-webmvc | 3.7.18, 4.3.13 |
+| spring-data-rest-core | 3.7.18, 4.3.13 |
+| spring-data-rest-distribution | 3.7.18, 4.3.13 |
+| spring-data-rest-hal-explorer | 3.7.18, 4.3.13 |
+| spring-data-rest-parent | 3.7.18, 4.3.13 |
+| spring-data-couchbase | 4.4.18, 5.3.13 |
+| spring-data-elasticsearch | 4.4.18, 5.3.13 |
+| spring-data-neo4j | 6.3.18, 7.3.13 |
+| spring-data-r2dbc | 1.5.18, 3.3.13 |
+| spring-data-relational | 2.4.18, 3.3.13 |
+| spring-data-relational-parent | 2.4.18, 3.3.13 |
+| spring-data-jdbc | 2.4.18, 3.3.13 |
+| spring-data-jdbc-distribution | 2.4.18, 3.3.13 |
 </template>
 
 <template #Security>
