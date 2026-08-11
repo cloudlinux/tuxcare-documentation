@@ -50,7 +50,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **debug** 0.7.4, 1.0.2, 1.0.3, 1.0.4, 1.0.5, 2.1.1, 2.2.0, 2.3.3, 2.6.4, 2.6.9, 3.1.0, 3.2.6, 3.2.7, 4.1.1, 4.4.3
 * **decode-uri-component** 0.2.0
 * **defu** 5.0.1, 6.1.2
-* **devalue** 2.0.1, 4.3.3
+* **devalue** 2.0.1, 4.3.0, 4.3.1, 4.3.2, 4.3.3
 * **diff** 1.0.2, 1.4.0, 3.5.0, 7.0.0
 * **dns-packet** 1.3.1
 * **dompurify** 2.3.0, 2.4.0, 2.4.3, 2.4.7, 2.5.8, 2.5.9, 3.0.3, 3.1.6, 3.2.3
@@ -119,7 +119,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **mem** 1.1.0
 * **micromatch** 2.3.11, 3.1.10
 * **mime** 1.2.6, 1.2.11, 1.3.0, 1.3.4, 1.3.6
-* **minimatch** 0.0.4, 0.0.5, 0.2.14, 0.3.0, 1.0.0, 2.0.10, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 5.1.0, 9.0.3
+* **minimatch** 0.0.4, 0.0.5, 0.2.5, 0.2.14, 0.3.0, 1.0.0, 2.0.10, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 5.1.0, 9.0.3
 * **minimist** 0.0.8, 0.0.9, 0.0.10, 1.2.0, 1.2.1, 1.2.8
 * **moment** 2.0.0, 2.10.6, 2.24.0
 * **moment-timezone** 0.4.1
@@ -174,6 +174,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **stringstream** 0.0.4, 0.0.5
 * **svgo** 2.8.0
 * **swagger-ui** 2.2.10
+* **swagger-ui-dist** 3.52.5
 * **swiper** 8.4.7, 11.2.10
 * **tar** 1.0.3, 2.1.1, 2.2.1, 2.2.2, 4.4.19, 6.0.2, 6.1.15, 6.2.0, 6.2.1
 * **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.1, 5.3.0, 5.5.1, 5.7.1, 5.10.0
@@ -202,6 +203,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **y18n** 4.0.0
 * **yaml** 1.10.2, 2.5.0
 * **yargs-parser** 4.2.1, 7.0.0, 10.1.0, 11.1.1, 13.1.2
+* **yarn** 1.15.2
 * **zod** 3.21.4, 3.25.76
 
 Other libraries upon request.

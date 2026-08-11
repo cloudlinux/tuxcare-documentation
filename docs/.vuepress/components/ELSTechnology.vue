@@ -171,7 +171,7 @@ const techData = [
       },
       {
         name: "Apache HttpComponents Client",
-        versions: "4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
+        versions: "4.2 | 4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
         link: "./java-libraries/",
       },
       {
@@ -492,7 +492,7 @@ const techData = [
       },
       {
         name: "Logback",
-        versions: "1.1.7 | 1.2.12 | 1.2.13 | 1.4.11 | 1.4.14 | 1.5.18",
+        versions: "1.1.7 | 1.2.3 | 1.2.12 | 1.2.13 | 1.4.11 | 1.4.14 | 1.5.18",
         link: "./java-libraries/",
       },
       {
@@ -557,7 +557,7 @@ const techData = [
       },
       {
         name: "Plexus Utils",
-        versions: "1.4.5 | 1.5.5 | 1.5.8 | 3.1.0 | 3.5.1 | 3.6.0",
+        versions: "1.2 | 1.4.5 | 1.5.8 | 2.0.4 | 3.0.15 | 3.0.17 | 3.0.18 | 3.0.24 | 3.1.0 | 3.2.0 | 3.3.1 | 3.4.2 | 3.5.1 | 3.6.0",
         link: "./java-libraries/",
       },
       {
@@ -607,7 +607,7 @@ const techData = [
       },
       {
         name: "SnakeYAML",
-        versions: "1.23 | 1.26 | 1.28 | 1.29 | 1.30 | 1.33",
+        versions: "1.23 | 1.26 | 1.27 | 1.28 | 1.29 | 1.30 | 1.33",
         link: "./java-libraries/",
       },
       {
@@ -727,7 +727,7 @@ const techData = [
       },
       {
         name: "Undertow",
-        versions: "2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.18.Final | 2.3.20.Final",
+        versions: "2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final",
         link: "./java-libraries/",
       },
       {
@@ -1023,7 +1023,7 @@ const techData = [
       },
       {
         name: "devalue",
-        versions: "2.0.1 | 4.3.3",
+        versions: "2.0.1 | 4.3.0 | 4.3.1 | 4.3.2 | 4.3.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1303,7 +1303,7 @@ const techData = [
       },
       {
         name: "JSON Web Token (JWT)",
-        versions: "0.1.0 | 0.3.0 | 0.4.0 | 0.4.1 | 7.1.6 | 8.5.1",
+        versions: "0.1.0 | 0.3.0 | 0.4.0 | 0.4.1 | 5.4.0 | 7.1.6 | 8.5.1",
         link: "./jsonwebtoken/",
       },
       {
@@ -1423,7 +1423,7 @@ const techData = [
       },
       {
         name: "minimatch",
-        versions: "0.0.4 | 0.0.5 | 0.2.14 | 0.3.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 9.0.3",
+        versions: "0.0.4 | 0.0.5 | 0.2.5 | 0.2.14 | 0.3.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 9.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1762,6 +1762,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "swagger-ui-dist",
+        versions: "3.52.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "swiper",
         versions: "8.4.7 | 11.2.10",
         link: "./javascript-libraries/",
@@ -1944,6 +1949,11 @@ const techData = [
       {
         name: "yargs-parser",
         versions: "4.2.1 | 7.0.0 | 10.1.0 | 11.1.1 | 13.1.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "yarn",
+        versions: "1.15.2",
         link: "./javascript-libraries/",
       },
       {
