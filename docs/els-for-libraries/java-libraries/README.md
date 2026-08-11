@@ -80,7 +80,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 2.8.0, 2.10.0
-* **Plexus Utils** 1.4.5, 1.5.5, 1.5.8, 3.1.0, 3.5.1, 3.6.0
+* **Plexus Utils** 1.2, 1.4.5, 1.5.8, 2.0.4, 3.0.15, 3.0.17, 3.0.18, 3.0.24, 3.1.0, 3.2.0, 3.3.1, 3.4.2, 3.5.1, 3.6.0
 * **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
@@ -88,12 +88,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Retrofit** 2.9.0
 * **RSocket** 1.1.3
 * **SLF4J** 1.6.1, 1.7.21
-* **SnakeYAML** 1.23, 1.26, 1.28, 1.29, 1.30, 1.33
+* **SnakeYAML** 1.23, 1.26, 1.27, 1.28, 1.29, 1.30, 1.33
 * **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
 * **Sonatype Sisu** 2.3.0
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
-* **Undertow** 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.18.Final, 2.3.20.Final
+* **Undertow** 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final
 * **Woodstox** 5.0.3, 5.3.0
 * **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0
