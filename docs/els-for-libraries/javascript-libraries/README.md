@@ -203,7 +203,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **y18n** 4.0.0
 * **yaml** 1.10.2, 2.5.0
 * **yargs-parser** 4.2.1, 7.0.0, 10.1.0, 11.1.1, 13.1.2
-* **yarn** 1.15.2
+* **yarn** 1.15.2, 1.21.0, 1.22.1
 * **zod** 3.21.4, 3.25.76
 
 Other libraries upon request.

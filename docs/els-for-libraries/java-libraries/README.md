@@ -15,7 +15,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Commons Digester** 2.0, 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2, 1.3.1, 1.5
 * **Apache Commons HttpClient** 3.1
-* **Apache Commons IO** 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
+* **Apache Commons IO** 2.2, 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
 * **Apache HttpComponents Client** 4.2, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
