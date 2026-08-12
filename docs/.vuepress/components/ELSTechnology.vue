@@ -141,7 +141,7 @@ const techData = [
       },
       {
         name: "Apache Commons IO",
-        versions: "2.4 | 2.5 | 2.6 | 2.7 | 2.8.0 | 2.11.0",
+        versions: "2.2 | 2.4 | 2.5 | 2.6 | 2.7 | 2.8.0 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -654,7 +654,7 @@ const techData = [
       },
       {
         name: "Spring® Data",
-        versions: "2021.2",
+        versions: "2021.2 | 2024.0",
         link: "./spring/",
         detailsHash: "Data",
       },
@@ -712,7 +712,7 @@ const techData = [
       },
       {
         name: "Spring® for Apache Pulsar",
-        versions: "1.1.13",
+        versions: "1.0.12 | 1.1.13",
         link: "./spring/",
       },
       {
@@ -1953,7 +1953,7 @@ const techData = [
       },
       {
         name: "yarn",
-        versions: "1.15.2",
+        versions: "1.15.2 | 1.21.0 | 1.22.1",
         link: "./javascript-libraries/",
       },
       {
