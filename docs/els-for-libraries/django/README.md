@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported Django Versions
 
-* **Django** 3.2.25, 4.0, 4.2, 5.0, 5.0.1, 5.0.2, 5.1, 5.1.4, 5.1.9
+* **Django** 3.2.25, 4.0, 4.2, 5.0, 5.0.1, 5.0.2, 5.1, 5.1.4, 5.1.9, 5.1.10
 
 Other versions upon request.
 

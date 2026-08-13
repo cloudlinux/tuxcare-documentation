@@ -19,6 +19,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
 * **Apache HttpComponents Client** 4.2, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
+* **Apache HttpComponents Client 5** 5.5.2
 * **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
 * **Apache POI** 3.10-FINAL, 4.1.2
@@ -48,7 +49,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Google Guava** 16.0.1, 18.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
-* **Grails** 2.5.6, 6.2.3
+* **Grails** 2.5.6, 5.3.6, 6.2.1, 6.2.3
 * **H2 Database** 1.4.200
 * **Hazelcast** 4.2.8
 * **HornetQ** 2.4.9.Final
