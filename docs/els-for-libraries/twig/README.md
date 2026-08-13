@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Twig from TuxCare provides security fixes fo
 
 ## Supported Versions
 
-* **Twig** 2.15.6, 2.16.1
+* **Twig** 1.44.8, 2.15.6, 2.16.1
 
 Other versions upon request.
 
@@ -59,10 +59,36 @@ Other versions upon request.
 
    Install the TuxCare-maintained Twig release that matches your project:
 
+   <TableTabs label="Choose version: ">
+
+   <template #Twig_1.44>
+
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require twig/twig:2.16.1-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require twig/twig:v1.44.8-p1+tuxcare` },
+     { title: 'composer.json', content: twigjson1448 }
+   ]" />
+
+   </template>
+
+   <template #Twig_2.15>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require twig/twig:v2.15.6-p1+tuxcare` },
+     { title: 'composer.json', content: twigjson2156 }
+   ]" />
+
+   </template>
+
+   <template #Twig_2.16>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require twig/twig:v2.16.1-p1+tuxcare` },
      { title: 'composer.json', content: twigjson }
    ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -145,10 +171,24 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
+const twigjson1448 =
+`{
+    "require": {
+        "twig/twig": "v1.44.8-p1+tuxcare"
+    }
+}`
+
+const twigjson2156 =
+`{
+    "require": {
+        "twig/twig": "v2.15.6-p1+tuxcare"
+    }
+}`
+
 const twigjson =
 `{
     "require": {
-        "twig/twig": "2.16.1-p1+tuxcare"
+        "twig/twig": "v2.16.1-p1+tuxcare"
     }
 }`
 

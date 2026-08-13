@@ -175,6 +175,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache HttpComponents Client 5",
+        versions: "5.5.2",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Ivy",
         versions: "2.3.0",
         link: "./java-libraries/",
@@ -372,7 +377,7 @@ const techData = [
       },
       {
         name: "Grails",
-        versions: "2.5.6 | 6.2.3",
+        versions: "2.5.6 | 5.3.6 | 6.2.1 | 6.2.3",
         link: "./java-libraries/",
       },
       {
@@ -654,7 +659,7 @@ const techData = [
       },
       {
         name: "Spring® Data",
-        versions: "2021.2 | 2024.0",
+        versions: "2021.2 | 2023.1 | 2024.0",
         link: "./spring/",
         detailsHash: "Data",
       },
@@ -671,7 +676,7 @@ const techData = [
       },
       {
         name: "Spring® Web Services",
-        versions: "3.0.7.RELEASE | 3.1.8 | 4.0.17",
+        versions: "3.0.7.RELEASE | 3.1.6 | 3.1.8 | 4.0.17",
         link: "./spring/",
       },
       {
@@ -692,7 +697,7 @@ const techData = [
       },
       {
         name: "Spring® GraphQL",
-        versions: "1.0.6",
+        versions: "1.0.6 | 1.3.7",
         link: "./spring/",
       },
       {
@@ -712,7 +717,7 @@ const techData = [
       },
       {
         name: "Spring® for Apache Pulsar",
-        versions: "1.0.12 | 1.1.13",
+        versions: "1.0.12 | 1.1.13 | 1.2.13",
         link: "./spring/",
       },
       {
@@ -2004,7 +2009,7 @@ const techData = [
       },
       {
         name: "Django",
-        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.0.3 | 5.0.4 | 5.0.5| 5.1 | 5.1.4 | 5.1.9",
+        versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9 | 5.1.10",
         link: "./django/",
       },
       {
@@ -2340,7 +2345,7 @@ const techData = [
       },
       {
         name: "Guzzle PSR-7",
-        versions: "1.4.2 | 1.9.1",
+        versions: "1.1.0 | 1.4.2 | 1.9.1",
         link: "./guzzle/",
       },
       {
@@ -2480,7 +2485,7 @@ const techData = [
       },
       {
         name: "Twig",
-        versions: "2.15.6 | 2.16.1",
+        versions: "1.44.8 | 2.15.6 | 2.16.1",
         link: "./twig/",
       },
       {
