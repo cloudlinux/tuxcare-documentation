@@ -289,6 +289,10 @@ export default {
                     icon: '/images/firebase.webp',
                 },
                 {
+                    path: '/els-for-libraries/graphql-php/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-libraries/guzzle/',
                     icon: '/images/guzzle.webp',
                 },
