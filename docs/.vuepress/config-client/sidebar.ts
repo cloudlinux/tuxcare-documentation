@@ -290,7 +290,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/graphql-php/',
-                    icon: '/images/TuxCare_color_icon.webp',
+                    icon: '/images/webonyx.webp',
                 },
                 {
                     path: '/els-for-libraries/guzzle/',
