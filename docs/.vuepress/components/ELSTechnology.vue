@@ -277,7 +277,7 @@ const techData = [
       },
       {
         name: "Apache XMLBeans",
-        versions: "2.3.0 | 2.6.0",
+        versions: "2.3.0 | 2.6.0 | 5.1.1",
         link: "./java-libraries/",
       },
       {
@@ -382,7 +382,7 @@ const techData = [
       },
       {
         name: "H2 Database",
-        versions: "1.4.200",
+        versions: "1.4.200 | 2.1.210",
         link: "./java-libraries/",
       },
       {
@@ -502,12 +502,17 @@ const techData = [
       },
       {
         name: "LZ4",
-        versions: "1.8.1",
+        versions: "1.8.0 | 1.8.1",
         link: "./java-libraries/",
       },
       {
         name: "mchange-commons-java",
         versions: "0.2.15 | 0.2.19 | 0.2.20",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Micronaut",
+        versions: "3.6.0",
         link: "./java-libraries/",
       },
       {
@@ -2339,6 +2344,11 @@ const techData = [
         link: "./firebase-php-jwt/",
       },
       {
+        name: "graphql-php",
+        versions: "14.11.10",
+        link: "./graphql-php/",
+      },
+      {
         name: "Guzzle",
         versions: "6.0.2 | 6.3.3 | 6.5.8 | 7.10.0",
         link: "./guzzle/",
@@ -2400,7 +2410,7 @@ const techData = [
       },
       {
         name: "php-svg-lib",
-        versions: "0.3.4",
+        versions: "0.3.4 | 0.4.1",
         link: "./php-svg-lib/",
       },
       {

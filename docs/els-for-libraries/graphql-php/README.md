@@ -1,10 +1,10 @@
-# php-svg-lib
+# graphql-php
 
-Endless Lifecycle Support (ELS) for php-svg-lib from TuxCare provides security fixes for php-svg-lib versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for graphql-php from TuxCare provides security fixes for graphql-php versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **php-svg-lib** 0.3.4, 0.4.1
+* **graphql-php** 14.11.10
 
 Other versions upon request.
 
@@ -55,31 +55,14 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install php-svg-lib
+4. Install graphql-php
 
-   Install the TuxCare-maintained php-svg-lib release that matches your project:
-
-   <TableTabs label="Choose version: ">
-
-   <template #php-svg-lib_0.3>
+   Install the TuxCare-maintained graphql-php release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require phenx/php-svg-lib:0.3.4-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require webonyx/graphql-php:v14.11.10-p1+tuxcare` },
      { title: 'composer.json', content: pkgjson }
    ]" />
-
-   </template>
-
-   <template #php-svg-lib_0.4>
-
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require phenx/php-svg-lib:0.4.1-p1+tuxcare` },
-     { title: 'composer.json', content: pkgjson041 }
-   ]" />
-
-   </template>
-
-   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -125,9 +108,10 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=phenx%2Fphp-svg-lib) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=phenx%2Fphp-svg-lib) — Patched versions and changelogs
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/phenx/php-svg-lib/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=webonyx%2Fgraphql-php) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=webonyx%2Fgraphql-php) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=webonyx%2Fgraphql-php) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/webonyx/graphql-php/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
@@ -165,14 +149,7 @@ const cli =
 const pkgjson =
 `{
     "require": {
-        "phenx/php-svg-lib": "0.3.4-p1+tuxcare"
-    }
-}`
-
-const pkgjson041 =
-`{
-    "require": {
-        "phenx/php-svg-lib": "0.4.1-p1+tuxcare"
+        "webonyx/graphql-php": "v14.11.10-p1+tuxcare"
     }
 }`
 
