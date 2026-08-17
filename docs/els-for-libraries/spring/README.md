@@ -342,7 +342,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-hateoas | 1.5.6 |
+| spring-hateoas | 0.25.2.RELEASE, 1.5.6, 2.4.1 |
 </template>
 
 <template #LDAP>
@@ -363,9 +363,9 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-graphql | 1.0.6, 1.3.7 |
+| spring-graphql | 1.0.6, 1.2.9, 1.3.7 |
 | spring-graphql-docs | 1.0.6, 1.3.7 |
-| spring-graphql-test | 1.0.6, 1.3.7 |
+| spring-graphql-test | 1.0.6, 1.2.9, 1.3.7 |
 </template>
 
 <template #Retry>
