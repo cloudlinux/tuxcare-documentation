@@ -1,6 +1,6 @@
 # Managing the ELS repository
 
-This page provides instructions for upgrading to newer TuxCare-patched application versions.
+This page provides instructions for upgrading to newer TuxCare-patched application versions in the Endless Lifecycle Support (ELS) repository.
 
 ## Upgrading to a newer TuxCare version
 

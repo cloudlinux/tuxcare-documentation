@@ -73,7 +73,7 @@ Other libraries upon request.
 
 </ELSPrerequisites>
 
-#### Option 1: Install via command line
+### Option 1: Install via command line
 
 You can install or upgrade a package directly using the ELS repository with your credentials:
 
@@ -83,7 +83,7 @@ pip install --upgrade -i https://USERNAME:PASSWORD@nexus.repo.tuxcare.com/reposi
 
 Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisites](#prerequisites) above), and `<package>` with the Python package name (e.g., `certifi`).
 
-#### Option 2: Configure `pip` to use the ELS repository (full replacement)
+### Option 2: Configure `pip` to use the ELS repository (full replacement)
 
 This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
 
@@ -114,7 +114,7 @@ This method is recommended if you want to use only ELS-patched Python packages f
 
 </ELSSteps>
 
-#### Option 3: Add the TuxCare ELS repository as additional (recommended)
+### Option 3: Add the TuxCare ELS repository as additional (recommended)
 
 If you want to keep using public PyPI and fetch only specific patched packages from TuxCare, use *extra-index-url* instead. In this configuration, make sure to specify the exact patched version, otherwise `pip` may install the version from public PyPI.
 

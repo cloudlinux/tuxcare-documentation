@@ -1,10 +1,10 @@
 # Machine-Readable Security Data (Errata, OVAL, CSAF)
 
-TuxCare provides machine-readable security data for ELS for Runtimes in the following formats:
+TuxCare provides machine-readable security data for Endless Lifecycle Support (ELS) for Runtimes in the following formats:
 
 * **Errata** — qualified security and selected bug-fix errata advisories
 * **OVAL** — Open Vulnerability and Assessment Language patch definitions for use with OpenSCAP and similar tools
-* **CSAF** — Common Security Advisory Framework advisories in [OASIS](https://www.csaf.io/) CSAF 2.0 format (VEX and Security Advisory)
+* **CSAF** — Common Security Advisory Framework advisories in [OASIS](https://www.csaf.io/) CSAF 2.0 format, covering both Vulnerability Exploitability eXchange (VEX) and Security Advisory profiles
 * **RSS** — release feeds for tracking updates
 
 Every package is also signed so you can verify its authenticity and integrity before installing — see [Package Signature Verification (GPG)](#package-signature-verification-gpg).

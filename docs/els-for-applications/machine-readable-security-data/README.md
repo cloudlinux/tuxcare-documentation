@@ -1,6 +1,6 @@
 # Machine-Readable Security Data (SBOM, VEX, GPG)
 
-TuxCare provides machine-readable security data and verification tooling for ELS for Open-Source Applications:
+TuxCare provides machine-readable security data and verification tooling for Endless Lifecycle Support (ELS) for Open-Source Applications:
 
 * **SBOM (Software Bill of Materials)** — package composition and dependency inventory in SPDX and CycloneDX formats
 * **VEX (Vulnerability Exploitability eXchange)** — exploitability status for known CVEs in CycloneDX VEX format

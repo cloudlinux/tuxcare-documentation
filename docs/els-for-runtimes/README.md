@@ -39,7 +39,7 @@ TuxCare's commitment to transparency and visibility is foundational to our ELS f
 Note: SBOM availability for certain components is still expanding and may vary by package. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for current availability details.
 :::
 
-* **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. For ELS for Runtimes, VEX is published as part of the CSAF advisory feed. See [Machine-Readable Security Data](./machine-readable-security-data/) for per-runtime CSAF feeds and details.
+* **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. For ELS for Runtimes, VEX is published as part of the Common Security Advisory Framework (CSAF) advisory feed. See [Machine-Readable Security Data](./machine-readable-security-data/) for per-runtime CSAF feeds and details.
 * **Verifiable Integrity and Provenance**: Our packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
 
 :::warning

@@ -1,6 +1,6 @@
 # Managing the ELS repository
 
-This page provides instructions for upgrading to newer TuxCare package versions, accessing source code for ELS-patched libraries, managing the TuxCare NuGet source for .NET projects, and consuming the Java repository through your own repository manager.
+This page provides instructions for upgrading to newer TuxCare package versions, accessing source code for libraries patched under Endless Lifecycle Support (ELS), managing the TuxCare NuGet source for .NET projects, and consuming the Java repository through your own repository manager.
 
 ## How to Upgrade to a Newer Version
 
