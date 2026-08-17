@@ -1,9 +1,9 @@
-# Duration of support
+### Duration of support
 
 TuxCare provides Endless Lifecycle Support (ELS) for the Linux distributions after they have reached End of Life (EOL) or no longer receive standard support.
 
 | **Distribution** | **Arch** | **EOL** |
-|---|---|---|
+|---|---|---|---|
 | CentOS 6 | x86_64 i386 | November 2020 |
 | CentOS 7 | x86_64 i386 | June 2024 |
 | CentOS 8 | x86_64 | January 2022 |
