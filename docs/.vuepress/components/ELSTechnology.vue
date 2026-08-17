@@ -91,7 +91,7 @@ const techData = [
       },
       {
         name: "Apache ActiveMQ Artemis",
-        versions: "2.26.0 | 2.33.0 | 2.40.0",
+        versions: "2.26.0 | 2.33.0 | 2.37.0 | 2.40.0",
         link: "./java-libraries/",
       },
       {
@@ -171,7 +171,7 @@ const techData = [
       },
       {
         name: "Apache HttpComponents Client",
-        versions: "4.2 | 4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
+        versions: "4.2 | 4.2.6 | 4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
         link: "./java-libraries/",
       },
       {
@@ -537,7 +537,7 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "3.10.6.Final | 4.1.115.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.117.Final | 4.1.130.Final",
+        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.122.Final | 4.1.130.Final",
         link: "./java-libraries/",
       },
       {
@@ -597,7 +597,7 @@ const techData = [
       },
       {
         name: "Reactor Netty",
-        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.1.15",
+        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.0.48 | 1.1.15",
         link: "./java-libraries/",
       },
       {
@@ -691,7 +691,7 @@ const techData = [
       },
       {
         name: "Spring® HATEOAS",
-        versions: "1.5.6",
+        versions: "0.25.2.RELEASE | 1.5.6 | 2.4.1",
         link: "./spring/",
       },
       {
@@ -702,7 +702,7 @@ const techData = [
       },
       {
         name: "Spring® GraphQL",
-        versions: "1.0.6 | 1.3.7",
+        versions: "1.0.6 | 1.2.9 | 1.3.7",
         link: "./spring/",
       },
       {
@@ -2505,7 +2505,7 @@ const techData = [
       },
       {
         name: "Zend Framework 1",
-        versions: "1.12.10",
+        versions: "1.11.0 | 1.12.10",
         link: "./zendframework/",
       },
       {

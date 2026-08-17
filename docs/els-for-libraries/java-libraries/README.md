@@ -5,7 +5,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 ## Supported Java Libraries
 
 * **Aircompressor** 0.27
-* **Apache ActiveMQ Artemis** 2.26.0, 2.33.0, 2.40.0
+* **Apache ActiveMQ Artemis** 2.26.0, 2.33.0, 2.37.0, 2.40.0
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
@@ -18,7 +18,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Commons IO** 2.2, 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
-* **Apache HttpComponents Client** 4.2, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
+* **Apache HttpComponents Client** 4.2, 4.2.6, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
 * **Apache HttpComponents Client 5** 5.5.2
 * **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
@@ -76,7 +76,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **MyBatis** 2.3.5
 * **MySQL Connector/J** 5.1.49
 * **NekoHTML** 1.9.22
-* **Netty** 3.10.6.Final, 4.1.115.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.117.Final, 4.1.130.Final
+* **Netty** 3.10.6.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.122.Final, 4.1.130.Final
 * **Netty Incubator** 0.0.21.Final
 * **Nimbus JOSE + JWT** 8.23, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
@@ -86,7 +86,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
-* **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.1.15
+* **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.15
 * **Retrofit** 2.9.0
 * **RSocket** 1.1.3
 * **SLF4J** 1.6.1, 1.7.21
