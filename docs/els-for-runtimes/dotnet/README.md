@@ -87,7 +87,7 @@ The following steps use the .NET SDK installation as an example. If you are inst
 
    Double-click the downloaded file. Accept the **license agreement** and click **Install**.
 
-   ![image](/images/els-dotnet-installation.webp)
+   ![TuxCare .NET installer showing the license agreement with the Install button](/images/els-dotnet-installation.webp)
 
 3. Complete the installation
 

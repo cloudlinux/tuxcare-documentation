@@ -114,33 +114,6 @@ Other versions upon request.
 
 </ELSSteps>
 
-## Resolved CVEs
-
-| CVE ID | Severity | Affected Package | Affected Versions | Safe Versions |
-| :----: | :------: | :--------------: | :---------------: | :-----------: |
-| CVE-2026-32933 | High | AutoMapper | < 15.1.1; 16.0.0 ≤ v < 16.1.1 | See Nexus |
-| CVE-2018-1285 | Critical | log4net | < 2.0.10 | See Nexus |
-| CVE-2024-35252 | High | Microsoft.Azure.Storage.DataMovement | < 2.0.0 | See Nexus |
-| CVE-2024-0056 | High | Microsoft.Data.SqlClient | < 2.1.7 | See Nexus |
-| CVE-2020-1045 | High | Microsoft.Owin | ASP.NET Core 2.1 ≤ v ≤ 2.1.21; 3.1 ≤ v < 3.1.8 | See Nexus |
-| CVE-2022-29117 | High | Microsoft.Owin | .NET 5.0, 6.0.0; .NET Core 3.1 (specific releases) | See Nexus |
-| CVE-2024-38095 | High | MimeKit | >= 3.0.0, < 4.7.1 | See Nexus |
-| GHSA-gmc6-fwg3-75m5 | High | MimeKit | >= 3.0.0, < 4.7.1 | See Nexus |
-| CVE-2024-39677 | Medium | NHibernate | < 5.4.9 | See Nexus |
-| CVE-2024-21907 | High | Newtonsoft.Json | < 13.0.1 | See Nexus |
-| GHSA-5crp-9r3c-p9vr | High | Newtonsoft.Json | < 13.0.1 | See Nexus |
-| CVE-2024-51501 | Critical | Refit | < 7.2.22 | See Nexus |
-| CVE-2024-45302 | High | RestSharp | >= 107.0.0, < 112.0.0 | See Nexus |
-| GHSA-4rr6-2v9v-wcpc | Medium | RestSharp | >= 107.0.0-preview.1, < 112.0.0 | See Nexus |
-| CVE-2021-32840 | Critical | SharpZipLib | < 1.3.3 | See Nexus |
-| CVE-2021-32841 | Medium | SharpZipLib | >= 1.3.0, < 1.3.3 | See Nexus |
-| CVE-2021-32842 | Medium | SharpZipLib | >= 1.0.0, < 1.3.3 | See Nexus |
-| CVE-2024-27929 | High | SixLabors.ImageSharp | < 2.1.7; 3.1.0 ≤ v < 3.1.3 | See Nexus |
-| CVE-2025-27598 | High | SixLabors.ImageSharp | < 2.1.10; 3.0.0 ≤ v < 3.1.7 | See Nexus |
-| CVE-2025-54575 | Medium | SixLabors.ImageSharp | < 2.1.11; 3.0.0 ≤ v < 3.1.11 | See Nexus |
-| CVE-2024-38095 | High | System.Formats.Asn1 | 5.0.0-pre ≤ v < 6.0.1; 7.0.0-pre ≤ v < 8.0.1 | See Nexus |
-| CVE-2024-30105 | High | System.Text.Json | 7.0.0 ≤ v < 8.0.4 | See Nexus |
-
 ## What's Next?
 
 <WhatsNext hide-title>

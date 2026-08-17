@@ -495,7 +495,7 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
 2. Register with your license key or authentication token
 
-   ![image](/images/php-installer-token.webp)
+   ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
 
    :::tip
    If you've already registered on this machine and saved your credentials, the installer detects and uses the saved token automatically.
@@ -505,12 +505,12 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
    Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
 
-   ![image](/images/php-installer-version.webp)
+   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
 
    :::tip
    If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
 
-   ![image](/images/php-installer-versions-2.webp)
+   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
    :::
 
 4. Choose installation path and load modules
@@ -519,7 +519,7 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
    Click **Load** to fetch the required PHP archive. Select the modules you need and click **Continue**.
 
-   ![image](/images/php-installer-load.webp)
+   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
 
 5. Verify the installation
 
@@ -551,19 +551,19 @@ During installation, the installer creates a folder with PHP configuration and s
  1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
  2. Click **Advanced system settings**.
 
-    ![image](/images/php-windows-advanced-settings.webp)
+    ![Windows System window with the Advanced system settings link highlighted](/images/php-windows-advanced-settings.webp)
 
  3. Click on **Environment Variables**.
 
-    ![image](/images/php-windows-environment-variables.webp)
+    ![Advanced tab of Windows System Properties with the Environment Variables button highlighted](/images/php-windows-environment-variables.webp)
 
  4. Under *System variables*, find **Path** and click **Edit**.
 
-    ![image](/images/php-windows-add-path.webp)
+    ![Windows Environment Variables dialog with the Path entry selected under System variables](/images/php-windows-add-path.webp)
 
  5. You will see your PHP `C:\PHP` directory added.
 
-    ![image](/images/php-windows-add-path-2.webp)
+    ![Windows Edit environment variable dialog showing the PHP installation directory added to Path](/images/php-windows-add-path-2.webp)
 </details>
 
 ### Additional configurations
@@ -1031,7 +1031,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=PHP) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=PHP) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=PHP) — Full list of product parts covered by ELS
-* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#php) — OVAL, CSAF, Errata, and RSS feeds for PHP ELS
+* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#php) — Open Vulnerability and Assessment Language (OVAL), Common Security Advisory Framework (CSAF), Errata, and RSS feeds for PHP ELS
 * ![](/images/clipboard-notes.webp) [PHP Changelog](https://changelog.cloudlinux.com/) — latest updates, fixes, and enhancements for ALT-PHP
 
 </WhatsNext>

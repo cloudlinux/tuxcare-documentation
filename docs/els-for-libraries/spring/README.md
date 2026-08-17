@@ -12,7 +12,7 @@ Our ELS for Spring® service is designed to provide solutions for organizations 
 ELS for Spring® also patches transitive dependencies at no extra cost, including Hibernate, Netty, Jackson Databind, SnakeYAML, Apache Kafka, Apache Velocity, and more. See the [full list of supported Java libraries](/els-for-libraries/java-libraries/).
 :::
 
-### Supported Modules and Versions
+## Supported Modules and Versions
 
 <TableTabs label="Choose group: " :labels="{
   Framework: 'Spring® Framework',

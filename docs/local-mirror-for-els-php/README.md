@@ -6,7 +6,7 @@ head:
 ---
 # Installation instructions of a local mirror for ELS PHP
 
-We provide the ability to create local mirrors of PHP for ELS updates.
+We provide the ability to create local mirrors of PHP for Endless Lifecycle Support (ELS) updates.
 
 **To obtain access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).**
 

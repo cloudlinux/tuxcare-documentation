@@ -4,7 +4,7 @@
 
 <ELSPrerequisites>
 
-* A valid TuxCare ELS license key
+* A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
 * TCP port 443 open to `cln.cloudlinux.com` and `repo.cloudlinux.com`
 * Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -62,10 +62,10 @@
 
 <WhatsNext hide-title :versions="['Centos-8.4', 'Centos-8.5']">
 
-* [8.4] ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml) — OVAL security data
-* [8.5] ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml) — OVAL security data
-* [8.4] ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/) — CSAF security advisories
-* [8.5] ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/) — CSAF security advisories
+* [8.4] ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos8.4els/oval.xml) — Open Vulnerability and Assessment Language (OVAL) security data
+* [8.5] ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos8.5els/oval.xml) — Open Vulnerability and Assessment Language (OVAL) security data
+* [8.4] ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos8.4els/) — Common Security Advisory Framework (CSAF) security advisories
+* [8.5] ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos8.5els/) — Common Security Advisory Framework (CSAF) security advisories
 * [8.4] ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=CentOS+8.4+ELS) — Track vulnerability fixes and updates
 * [8.5] ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=CentOS+8.5+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF

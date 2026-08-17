@@ -4,7 +4,7 @@
 
 <ELSPrerequisites>
 
-* A valid TuxCare ELS license key
+* A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
 * TCP port 443 open to `cln.cloudlinux.com` and `repo.tuxcare.com`
 * Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -82,8 +82,8 @@ The installation script **does not automatically add** the TuxCare UEKR6 reposit
 
 <WhatsNext hide-title>
 
-* ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml) — OVAL security data
-* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/) — CSAF security advisories
+* ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml) — Open Vulnerability and Assessment Language (OVAL) security data
+* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/) — Common Security Advisory Framework (CSAF) security advisories
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Oracle+Linux+7+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
 * ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=Oracle+Linux+7+ELS) — Full list of packages covered by ELS

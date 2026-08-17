@@ -4,7 +4,7 @@
 
 <ELSPrerequisites>
 
-* A valid TuxCare ELS license key
+* A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
 * TCP port 443 open to `cln.cloudlinux.com` and `repo.tuxcare.com`
 * Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
@@ -42,7 +42,7 @@
 
 <WhatsNext hide-title>
 
-* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/amazonlinux2els/) — CSAF security advisories
+* ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/amazonlinux2els/) — Common Security Advisory Framework (CSAF) security advisories
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Amazon+Linux+2+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, CSAF
 * ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=Amazon+Linux+2+ELS) — Full list of packages covered by ELS

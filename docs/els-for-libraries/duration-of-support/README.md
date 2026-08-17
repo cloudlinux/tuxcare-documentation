@@ -1,4 +1,4 @@
-## Supported Projects and Duration of Support
+# Supported Projects and Duration of Support
 
 TuxCare provides Endless Lifecycle Support (ELS) for the Spring project after it has reached End of Life (EOL) or no longer receives standard support.
 
