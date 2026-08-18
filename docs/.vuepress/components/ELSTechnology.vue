@@ -357,7 +357,7 @@ const techData = [
       },
       {
         name: "Google Gson",
-        versions: "2.4 | 2.8.5 | 2.8.9 | 2.9.1 | 2.10.1 | 2.11.0",
+        versions: "2.2.4 | 2.4 | 2.8.5 | 2.8.9 | 2.9.1 | 2.10.1 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -537,7 +537,7 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.122.Final | 4.1.130.Final",
+        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
         link: "./java-libraries/",
       },
       {

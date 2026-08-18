@@ -45,7 +45,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **EWS Java API** 2.0
 * **excel-streaming-reader** 5.0.2
 * **GlassFish** 3.0.0
-* **Google Gson** 2.4, 2.8.5, 2.8.9, 2.9.1, 2.10.1, 2.11.0
+* **Google Gson** 2.2.4, 2.4, 2.8.5, 2.8.9, 2.9.1, 2.10.1, 2.11.0
 * **Google Guava** 16.0.1, 18.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
@@ -76,7 +76,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **MyBatis** 2.3.5
 * **MySQL Connector/J** 5.1.49
 * **NekoHTML** 1.9.22
-* **Netty** 3.10.6.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.122.Final, 4.1.130.Final
+* **Netty** 3.10.6.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.122.Final, 4.1.130.Final, 4.1.135.Final
 * **Netty Incubator** 0.0.21.Final
 * **Nimbus JOSE + JWT** 8.23, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
