@@ -6,7 +6,7 @@
 
 * A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
-* TCP port 443 open to `cln.cloudlinux.com`, `repo.tuxcare.com`, and `els-rollout.cloudlinux.com`
+* TCP port 443 open to `cln.cloudlinux.com`, `repo.tuxcare.com`, and `rollout.tuxcare.com`
 * Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 </ELSPrerequisites>
