@@ -431,6 +431,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "iTextPDF",
+        versions: "5.0.6",
+        link: "./java-libraries/",
+      },
+      {
         name: "Jackson",
         versions: "1.9.13 | 2.12.1 | 2.14.1 | 2.14.2",
         link: "./jackson/",
@@ -567,7 +572,7 @@ const techData = [
       },
       {
         name: "Plexus Utils",
-        versions: "1.2 | 1.4.5 | 1.5.8 | 2.0.4 | 3.0.15 | 3.0.17 | 3.0.18 | 3.0.24 | 3.1.0 | 3.2.0 | 3.3.1 | 3.4.2 | 3.5.1 | 3.6.0",
+        versions: "1.2 | 1.4.5 | 1.5.8 | 2.0.4 | 3.0.15 | 3.0.17 | 3.0.18 | 3.0.20 | 3.0.24 | 3.1.0 | 3.2.0 | 3.3.1 | 3.4.2 | 3.5.1 | 3.6.0",
         link: "./java-libraries/",
       },
       {
@@ -607,7 +612,7 @@ const techData = [
       },
       {
         name: "RSocket",
-        versions: "1.1.3",
+        versions: "1.1.3 | 1.1.5",
         link: "./java-libraries/",
       },
       {
