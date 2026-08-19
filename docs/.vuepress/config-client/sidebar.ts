@@ -565,12 +565,6 @@ export default {
                     path: '/securechain/javascript/',
                     icon: '/images/javascript.webp',
                 },
-                {
-                    title: 'Resources',
-                    type: 'section-header',
-                    icon: '/images/star.webp',
-                },
-                "/securechain/managing-securechain-repository/",
             ]
         },
     ],

@@ -28,7 +28,6 @@ The full text of every documentation page, concatenated into a single file, is a
 
 - [SecureChain for Open Source](https://docs.tuxcare.com/securechain/): Verified, signed, continuously patched open-source packages from a TuxCare-managed registry — drop-in replacements that extend coverage beyond upstream EOL.
 - [SecureChain JavaScript Ecosystem Guide](https://docs.tuxcare.com/securechain/javascript/): Connect to the SecureChain npm registry, authenticate, install dependencies, and troubleshoot resolution.
-- [Managing the SecureChain Repository](https://docs.tuxcare.com/securechain/managing-securechain-repository/): Upgrade installed SecureChain packages to newer releases across ecosystems.
 
 ## Account & reference
 

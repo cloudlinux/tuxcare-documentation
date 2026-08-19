@@ -90,6 +90,5 @@ If `npm install` resolves to the public registry instead of SecureChain, use the
 <WhatsNext hide-title>
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/wrench.webp) [Managing the SecureChain repository](/securechain/managing-securechain-repository/) — Upgrade to a newer version
 
 </WhatsNext>

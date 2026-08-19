@@ -1,3 +1,10 @@
+---
+head:
+  - - meta
+    - name: robots
+      content: noindex, nofollow
+---
+
 # Managing the SecureChain repository
 
 This page describes how to upgrade an already-installed SecureChain package to a newer release.
