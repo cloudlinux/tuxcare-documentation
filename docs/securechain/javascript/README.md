@@ -19,16 +19,23 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
    In the root directory of your project, create or edit `.npmrc` to point npm at the SecureChain registry and provide your token:
 
    ```text
-   registry=https://nexus.repo.tuxcare.com/repository/js-securechain/
-   //nexus.repo.tuxcare.com/repository/js-securechain/:_auth=<TOKEN>
-   always-auth=true
+   registry=https://artifacts.tuxcare.com/npm/
+   //artifacts.tuxcare.com/npm/:_authToken=<TOKEN>
    ```
 
    :::warning
    Replace `<TOKEN>` with your SecureChain registry token (see [Prerequisites](#prerequisites) above).
    :::
 
-2. Install your dependencies
+2. Remove the existing lockfile
+
+   If the project was previously installed against the public npm registry, delete the lockfile and `node_modules` before the first install:
+
+   ```text
+   rm -rf node_modules package-lock.json
+   ```
+
+3. Install your dependencies
 
    Run this command from the project root directory, where the package.json file containing your dependencies is located:
 
@@ -36,11 +43,9 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
    npm install
    ```
 
-   You can keep the package names and versions in `package.json` as they are. 
-   
-   `npm` is now pointed at SecureChain from the previous step, so the packages are pulled automatically from the TuxCare Nexus.
+   You can keep the package names and versions in `package.json` as they are.
 
-   For the list of available packages and versions, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:js-securechain).
+   `npm` is now pointed at SecureChain from the previous steps, so the packages are pulled automatically from the TuxCare registry: SecureChain builds where they exist, and the public upstream packages for the rest — served through the same endpoint, so no other registry configuration is needed. The freshly generated `package-lock.json` records the SecureChain URLs and checksums; commit it.
 
 </ELSSteps>
 
@@ -54,16 +59,24 @@ If `npm install` resolves to the public registry instead of SecureChain, use the
    npm config get registry
    ```
 
-   The output must be `https://nexus.repo.tuxcare.com/repository/js-securechain/`. If it returns `https://registry.npmjs.org/`, npm is not reading your project `.npmrc` - check that you are running npm from the project root and that no user-level `~/.npmrc` is overriding it.
+   The output must be `https://artifacts.tuxcare.com/npm/`. If it returns `https://registry.npmjs.org/`, npm is not reading your project `.npmrc` - check that you are running npm from the project root and that no user-level `~/.npmrc` is overriding it.
 
 * **Confirm authentication and connectivity**
 
    ```text
-   npm whoami
    npm ping
+   npm whoami
    ```
 
-   `npm whoami` confirms the token resolves to a Nexus user. `npm ping` confirms the registry is reachable with that token. Failures here usually mean a missing, malformed, or revoked `_auth` value in `.npmrc`.
+   `npm ping` must print `PONG` — it confirms the registry is reachable with your token. `npm whoami` succeeding (it prints a service identity, not your account name) confirms the token is accepted. Failures here usually mean a missing, malformed, or revoked token in `.npmrc`.
+
+* **`403 Forbidden` on every request**
+
+   The token is being sent in the wrong form. Use `_authToken` with the raw token as shown above; the `_auth` key requires the base64 encoding of `<TOKEN>:` instead.
+
+* **`EINTEGRITY` checksum mismatch during install**
+
+   The project still has a lockfile generated against the public registry, and the SecureChain build of that package legitimately differs from the public tarball. Delete `package-lock.json` and `node_modules`, then run `npm install` again (see step 2 above).
 
 ## What's Next?
 
