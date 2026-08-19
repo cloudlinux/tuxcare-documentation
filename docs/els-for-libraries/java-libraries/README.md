@@ -56,6 +56,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **HPPC** 0.8.1
 * **HtmlUnit** 2.70.0
 * **iText** 2.1.7
+* **iTextPDF** 5.0.6
 * **JasperReports** 3.7.4, 6.2.2, 6.21.5
 * **JBoss XNIO** 3.8.0, 3.8.8
 * **JDOM** 1.0, 1.1.3
@@ -82,13 +83,13 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 2.8.0, 2.10.0
-* **Plexus Utils** 1.2, 1.4.5, 1.5.8, 2.0.4, 3.0.15, 3.0.17, 3.0.18, 3.0.24, 3.1.0, 3.2.0, 3.3.1, 3.4.2, 3.5.1, 3.6.0
+* **Plexus Utils** 1.2, 1.4.5, 1.5.8, 2.0.4, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.24, 3.1.0, 3.2.0, 3.3.1, 3.4.2, 3.5.1, 3.6.0
 * **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
 * **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.15
 * **Retrofit** 2.9.0
-* **RSocket** 1.1.3
+* **RSocket** 1.1.3, 1.1.5
 * **SLF4J** 1.6.1, 1.7.21
 * **SnakeYAML** 1.23, 1.26, 1.27, 1.28, 1.29, 1.30, 1.33
 * **Snappy Java** 1.1.2, 1.1.8.4
