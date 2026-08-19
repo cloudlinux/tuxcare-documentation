@@ -36,7 +36,7 @@ alt-php provides a more flexible and convenient environment for working with dif
 | Ubuntu                                                                   | DEB          | 18.04, 20.04, 22.04, 24.04        | 5.2, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                          |
 | Debian                                                                   | DEB          | 10, 11, 12                        | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                               |
 | Debian                                                                   | DEB          | 13                                | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2           |
-| Alpine Linux                                                             | APK          | 3.23                              | 7.3, 7.4, 8.0, 8.1                                                        |
+| Alpine Linux                                                             | APK          | 3.23, 3.24                        | 7.3, 7.4, 8.0, 8.1                                                        |
 | Windows                                                                  | -            | Windows Server 2019, 2022, 2025   | 5.2, 5.4, 5.6, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                               |
 
 **Supported architectures:**

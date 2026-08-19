@@ -135,6 +135,7 @@
     "/els-for-runtimes-and-libraries/python/": "/els-for-runtimes/python/",
     "/els-for-runtimes-and-libraries/php/": "/els-for-runtimes/php/",
     "/els-for-runtimes-and-libraries/nodejs/": "/els-for-runtimes/nodejs/",
+    "/els-for-libraries/ruby/": "/els-for-runtimes/ruby/",
     "/els-for-runtimes-and-libraries/spring/": "/els-for-libraries/spring/",
     "/els-for-runtimes-and-libraries/apache-struts/": "/els-for-libraries/apache-struts/",
     "/els-for-runtimes-and-libraries/apache-spark/": "/els-for-libraries/apache-spark/",

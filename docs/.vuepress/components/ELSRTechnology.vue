@@ -85,7 +85,7 @@ const runtimes = [
   },
   {
     name: "Python",
-    versions: "2.7 | 3.6 | 3.7 | 3.8 | 3.9",
+    versions: "2.7 | 3.6 | 3.7 | 3.8 | 3.9 | 3.10",
     link: "./python/",
     icon: "/images/python.webp",
   },
