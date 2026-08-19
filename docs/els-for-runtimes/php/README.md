@@ -36,13 +36,13 @@ alt-php provides a more flexible and convenient environment for working with dif
 | Ubuntu                                                                   | DEB          | 18.04, 20.04, 22.04, 24.04        | 5.2, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                          |
 | Debian                                                                   | DEB          | 10, 11, 12                        | 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                               |
 | Debian                                                                   | DEB          | 13                                | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2           |
-| Alpine Linux                                                             | APK          | 3.22, 3.23                        | 7.3, 7.4, 8.0, 8.1                                                        |
+| Alpine Linux                                                             | APK          | 3.23                              | 7.3, 7.4, 8.0, 8.1                                                        |
 | Windows                                                                  | -            | Windows Server 2019, 2022, 2025   | 5.2, 5.4, 5.6, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2                               |
 
 **Supported architectures:**
 
 * x86_64 — all supported Linux OSes
-* aarch64/arm64 — Debian 12 and 13, Alpine Linux 3.22 and later
+* aarch64/arm64 — Debian 12 and 13, Alpine Linux 3.23 and later
 * Windows — x64 (64-bit) and x86 (32-bit) builds
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
