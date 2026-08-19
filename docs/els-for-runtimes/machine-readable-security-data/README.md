@@ -28,7 +28,6 @@ Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.
 | Debian 11 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian11/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian11/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
 | Debian 12 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian12/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian12/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
 | Debian 13 | [errata](https://security.tuxcare.com/errata/els_alt_php/debian13/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_php/debian13/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
-| Alpine Linux 3.22 | — | — | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_php/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=PHP) |
 
 ## Python
 
