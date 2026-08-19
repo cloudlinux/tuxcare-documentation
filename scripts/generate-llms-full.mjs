@@ -39,6 +39,11 @@ const EXCLUDE_DIRS = new Set([
   "local-mirror-for-els-php",
   "local-mirror-for-els-python",
   "local-mirror-for-els-ruby",
+  // SecureChain packages are installed once from upstream and patched in
+  // place, so the upgrade flow this page describes does not apply yet. The
+  // page is unlinked from navigation until it does — keep it out of the
+  // corpus too.
+  "managing-securechain-repository",
 ]);
 
 // CamelCase component name: starts uppercase, contains at least one lowercase.
