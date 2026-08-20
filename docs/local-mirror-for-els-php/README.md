@@ -40,6 +40,7 @@ We provide the ability to create local mirrors of PHP for Endless Lifecycle Supp
 
 | Option            | OS                                                                         |
 | :---------------: | :------------------------------------------------------------------------: |
+| rpm/el/6/         | CentOS 6, CloudLinux 6, Oracle Linux 6, etc.                               |
 | rpm/el/7/         | CentOS 7, CloudLinux 7, OracleLinux 7, Amazon Linux 2, etc.                |
 | rpm/el/8/         | AlmaLinux 8, CentOS 8, CentOS 8 Stream, CloudLinux 8, Oracle Linux 8, etc. |
 | rpm/el/9/         | AlmaLinux 9, CloudLinux 9, Oracle Linux 9, etc.                            |
@@ -49,6 +50,7 @@ We provide the ability to create local mirrors of PHP for Endless Lifecycle Supp
 | deb/ubuntu/20.04/ | Ubuntu 20.04                                                               |
 | deb/ubuntu/22.04/ | Ubuntu 22.04                                                               |
 | deb/ubuntu/24.04/ | Ubuntu 24.04                                                               |
+| deb/ubuntu/26.04/ | Ubuntu 26.04                                                               |
 | deb/debian/10/    | Debian 10                                                                  |
 | deb/debian/11/    | Debian 11                                                                  |
 | deb/debian/12/    | Debian 12                                                                  |
