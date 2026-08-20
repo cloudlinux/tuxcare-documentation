@@ -38,6 +38,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **DNSJava** 2.1.7
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
+* **Eclipse Aether** 1.0.2.v20150114
 * **Eclipse JGit** 5.7.0, 5.13.3
 * **Eclipse Parsson** 1.0.0
 * **EdDSA** 0.3.0
@@ -96,7 +97,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Sonatype Aether** 1.13.1
 * **Sonatype Sisu** 2.3.0
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
-* **Undertow** 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final
+* **Undertow** 2.2.24.Final, 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final
 * **Woodstox** 5.0.3, 5.3.0
 * **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0

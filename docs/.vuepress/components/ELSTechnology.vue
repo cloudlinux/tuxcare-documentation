@@ -316,6 +316,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Eclipse Aether",
+        versions: "1.0.2.v20150114",
+        link: "./java-libraries/",
+      },
+      {
         name: "Eclipse JGit",
         versions: "5.7.0 | 5.13.3",
         link: "./java-libraries/",
@@ -669,7 +674,7 @@ const techData = [
       },
       {
         name: "Spring® Data",
-        versions: "2021.2 | 2023.1 | 2024.0",
+        versions: "2021.2 | 2023.1 | 2024.0 | 2024.1",
         link: "./spring/",
         detailsHash: "Data",
       },
@@ -696,7 +701,7 @@ const techData = [
       },
       {
         name: "Spring® HATEOAS",
-        versions: "0.25.2.RELEASE | 1.5.6 | 2.4.1",
+        versions: "0.25.2.RELEASE | 1.5.6 | 2.3.4 | 2.4.1",
         link: "./spring/",
       },
       {
@@ -742,7 +747,7 @@ const techData = [
       },
       {
         name: "Undertow",
-        versions: "2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final",
+        versions: "2.2.24.Final | 2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final",
         link: "./java-libraries/",
       },
       {
@@ -2510,7 +2515,7 @@ const techData = [
       },
       {
         name: "Zend Framework 1",
-        versions: "1.11.0 | 1.12.10",
+        versions: "1.10.6 | 1.11.0 | 1.12.10",
         link: "./zendframework/",
       },
       {
