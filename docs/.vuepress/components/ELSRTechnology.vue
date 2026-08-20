@@ -67,7 +67,7 @@ const runtimes = [
   },
   {
     name: "Node.js",
-    versions: "12 | 14 | 16 | 18 | 20 | 22 | 23 | 24",
+    versions: "12 | 14 | 16 | 18 | 20 | 22 | 23 | 24 | 26",
     link: "./nodejs/",
     icon: "/images/javascript.webp",
   },
@@ -79,19 +79,19 @@ const runtimes = [
   },
   {
     name: "PHP",
-    versions: "5.2 | 5.3 | 5.4 | 5.5 | 5.6 | 7.0 | 7.1 | 7.2 | 7.3 | 7.4 | 8.0 | 8.1 | 8.2",
+    versions: "5.2 | 5.3 | 5.4 | 5.5 | 5.6 | 7.0 | 7.1 | 7.2 | 7.3 | 7.4 | 8.0 | 8.1 | 8.2 | 8.3 | 8.4 | 8.5",
     link: "./php/",
     icon: "/images/php.webp",
   },
   {
     name: "Python",
-    versions: "2.7 | 3.6 | 3.7 | 3.8 | 3.9 | 3.10",
+    versions: "2.7 | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 | 3.12 | 3.13 | 3.14",
     link: "./python/",
     icon: "/images/python.webp",
   },
   {
     name: "Ruby",
-    versions: "2.6 | 2.7 | 3.0 | 3.1 | 3.2",
+    versions: "2.6 | 2.7 | 3.0 | 3.1 | 3.2 | 3.3 | 3.4 | 3.5 | 4.0",
     link: "./ruby/",
     icon: "/images/ruby.webp",
   },
