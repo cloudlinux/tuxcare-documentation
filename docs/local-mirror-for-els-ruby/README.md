@@ -53,4 +53,5 @@ We provide the ability to create local mirrors of Ruby for Endless Lifecycle Sup
 | deb/debian/11/    | Debian 11                                                                  |
 | deb/debian/12/    | Debian 12                                                                  |
 | deb/debian/13/    | Debian 13                                                                  |
-| apk/alpine/3.22/  | Alpine Linux 3.22                                                          |
+| apk/alpine/3.23/  | Alpine Linux 3.23                                                          |
+| apk/alpine/3.24/  | Alpine Linux 3.24                                                          |

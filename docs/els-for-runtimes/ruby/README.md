@@ -32,7 +32,7 @@ alt-ruby provides a more flexible and convenient environment for working with di
 | Debian                                                                   | DEB          | 13         | 2.6, 2.7, 3.0, 3.1, 3.2       |
 | Ubuntu                                                                   | DEB          | 22.04      | 2.7, 3.0, 3.1, 3.2            |
 | Ubuntu                                                                   | DEB          | 24.04      | 2.7, 3.0, 3.1, 3.2            |
-| Alpine Linux                                                             | APK          | 3.22       | 2.6, 2.7, 3.0, 3.1, 3.2       |
+| Alpine Linux                                                             | APK          | 3.23, 3.24 | 2.6, 2.7, 3.0, 3.1, 3.2       |
 
 **Supported architectures:**
 

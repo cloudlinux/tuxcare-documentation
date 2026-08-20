@@ -32,7 +32,7 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 | Debian                                                       | DEB          | 10, 11                            | 12, 14, 16, 18, 20                |
 | Debian                                                       | DEB          | 12                                | 12, 14, 16, 18, 20, 23            |
 | Debian                                                       | DEB          | 13                                | 12, 14, 16, 18, 20, 22, 23, 24    |
-| Alpine Linux                                                 | APK          | 3.22, 3.23                        | 12, 14, 16, 18, 20, 22, 23, 24    |
+| Alpine Linux                                                 | APK          | 3.23, 3.24                        | 12, 14, 16, 18, 20, 22, 23, 24    |
 
 **Supported architectures:**
 

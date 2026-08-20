@@ -46,7 +46,8 @@ Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.
 | Debian 11 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian11/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian11/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
 | Debian 12 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian12/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian12/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
 | Debian 13 | [errata](https://security.tuxcare.com/errata/els_alt_python/debian13/) | [oval.xml](https://security.tuxcare.com/oval/els_alt_python/debian13/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
-| Alpine Linux 3.22 | — | — | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Alpine Linux 3.23 | — | — | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/alpinelinux3.23/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
+| Alpine Linux 3.24 | — | — | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_python/alpinelinux3.24/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Python) |
 
 ## Node.js
 
@@ -65,7 +66,8 @@ Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.
 | Debian 11 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/debian11/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
 | Debian 12 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/debian12/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
 | Debian 13 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/debian13/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
-| Alpine Linux 3.22 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/alpinelinux3.22/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Alpine Linux 3.23 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/alpinelinux3.23/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/alpinelinux3.23/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
+| Alpine Linux 3.24 | [errata](https://security.tuxcare.com/errata/els_alt_nodejs/alpinelinux3.24/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_nodejs/alpinelinux3.24/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Node.js) |
 
 ## Ruby
 
@@ -84,7 +86,8 @@ Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.
 | Debian 11 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian11/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
 | Debian 12 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian12/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
 | Debian 13 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/debian13/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
-| Alpine Linux 3.22 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/alpinelinux3.22/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Alpine Linux 3.23 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/alpinelinux3.23/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
+| Alpine Linux 3.24 | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/alpinelinux3.24/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
 
 ## How to use OVAL
 
