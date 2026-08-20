@@ -22,16 +22,20 @@ alt-python provides a more flexible and convenient environment for working with 
 
 ## Supported OS and Python versions
 
-| Operating Systems                                            | Package Type | OS Version                         | Python versions               |
-| :----------------------------------------------------------: | :----------: | :--------------------------------: | :---------------------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                                | 2.7, 3.6                      |
-| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                                | 2.7, 3.6                      |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                                | 2.7, 3.6                      |
-| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                               | 2.7, 3.6                      |
-| Ubuntu                                                       | DEB          | 16.04, 18.04, 20.04, 22.04, 24.04  | 2.7, 3.6                      |
-| Debian                                                       | DEB          | 10, 11                             | 2.7, 3.6                      |
-| Debian                                                       | DEB          | 12, 13                             | 2.7, 3.6, 3.7, 3.8, 3.9       |
-| Alpine Linux                                                 | APK          | 3.22, 3.23                         | 3.6, 3.7, 3.8, 3.9            |
+| Operating Systems                                            | Package Type | OS Version                         | Python versions                    |
+| :----------------------------------------------------------: | :----------: | :--------------------------------: | :--------------------------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
+| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                               | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
+| Ubuntu                                                       | DEB          | 16.04                              | 2.7, 3.6, 3.7, 3.10                |
+| Ubuntu                                                       | DEB          | 18.04, 20.04, 22.04                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
+| Ubuntu                                                       | DEB          | 24.04                              | 2.7, 3.6, 3.8, 3.9, 3.10           |
+| Debian                                                       | DEB          | 10, 11                             | 2.7, 3.6, 3.7, 3.10                |
+| Debian                                                       | DEB          | 12, 13                             | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
+| Alpine Linux                                                 | APK          | 3.23, 3.24                         | 3.6, 3.7, 3.8, 3.9                 |
+
+Every `alt-python` package ships its own bundled `pip`, `setuptools` and `wheel`. These are covered by ELS and patched together with the interpreter.
 
 **Supported architectures:**
 
