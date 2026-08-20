@@ -213,37 +213,37 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-data-bom | 2021.2.18, 2023.1.12, 2024.0.13 |
-| spring-data-build | 2.7.18, 3.2.12, 3.3.13 |
-| spring-data-build-resources | 2.7.18, 3.2.12, 3.3.13 |
-| spring-data-parent | 2.7.18, 3.2.12, 3.3.13 |
+| spring-data-bom | 2021.2.18, 2023.1.12, 2024.0.13, 2024.1.13 |
+| spring-data-build | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-build-resources | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-parent | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
 | spring-data-commons | 2.7.18, 3.3.13 |
-| spring-data-jpa | 2.7.18, 3.2.12, 3.3.13 |
-| spring-data-jpa-parent | 3.2.12, 3.3.13 |
-| spring-data-jpa-distribution | 3.2.12, 3.3.13 |
-| spring-data-envers | 3.2.12, 3.3.13 |
+| spring-data-jpa | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-jpa-parent | 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-jpa-distribution | 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-envers | 3.2.12, 3.3.13, 3.4.13 |
 | spring-data-keyvalue | 2.7.18, 3.3.13 |
-| spring-data-ldap | 2.7.18, 3.2.12, 3.3.13 |
-| spring-data-redis | 2.7.18, 3.2.12, 3.3.13 |
-| spring-data-cassandra-parent | 3.4.18, 4.3.13 |
-| spring-data-cassandra | 3.4.18, 4.3.13 |
-| spring-data-cassandra-distribution | 3.4.18, 4.3.13 |
-| spring-data-mongodb | 3.4.18, 4.2.12, 4.3.13 |
-| spring-data-mongodb-distribution | 3.4.18, 4.2.12, 4.3.13 |
-| spring-data-mongodb-parent | 3.4.18, 4.2.12, 4.3.13 |
-| spring-data-rest-webmvc | 3.7.18, 4.2.12, 4.3.13 |
-| spring-data-rest-core | 3.7.18, 4.2.12, 4.3.13 |
-| spring-data-rest-distribution | 3.7.18, 4.2.12, 4.3.13 |
-| spring-data-rest-hal-explorer | 3.7.18, 4.2.12, 4.3.13 |
-| spring-data-rest-parent | 3.7.18, 4.2.12, 4.3.13 |
-| spring-data-couchbase | 4.4.18, 5.2.12, 5.3.13 |
-| spring-data-elasticsearch | 4.4.18, 5.2.12, 5.3.13 |
-| spring-data-neo4j | 6.3.18, 7.2.12, 7.3.13 |
-| spring-data-r2dbc | 1.5.18, 3.2.12, 3.3.13 |
-| spring-data-relational | 2.4.18, 3.2.12, 3.3.13 |
-| spring-data-relational-parent | 2.4.18, 3.2.12, 3.3.13 |
-| spring-data-jdbc | 2.4.18, 3.2.12, 3.3.13 |
-| spring-data-jdbc-distribution | 2.4.18, 3.2.12, 3.3.13 |
+| spring-data-ldap | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-redis | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-cassandra-parent | 3.4.18, 4.3.13, 4.4.13 |
+| spring-data-cassandra | 3.4.18, 4.3.13, 4.4.13 |
+| spring-data-cassandra-distribution | 3.4.18, 4.3.13, 4.4.13 |
+| spring-data-mongodb | 3.4.18, 4.2.12, 4.3.13, 4.4.13 |
+| spring-data-mongodb-distribution | 3.4.18, 4.2.12, 4.3.13, 4.4.13 |
+| spring-data-mongodb-parent | 3.4.18, 4.2.12, 4.3.13, 4.4.13 |
+| spring-data-rest-webmvc | 3.7.18, 4.2.12, 4.3.13, 4.4.13 |
+| spring-data-rest-core | 3.7.18, 4.2.12, 4.3.13, 4.4.13 |
+| spring-data-rest-distribution | 3.7.18, 4.2.12, 4.3.13, 4.4.13 |
+| spring-data-rest-hal-explorer | 3.7.18, 4.2.12, 4.3.13, 4.4.13 |
+| spring-data-rest-parent | 3.7.18, 4.2.12, 4.3.13, 4.4.13 |
+| spring-data-couchbase | 4.4.18, 5.2.12, 5.3.13, 5.4.13 |
+| spring-data-elasticsearch | 4.4.18, 5.2.12, 5.3.13, 5.4.13 |
+| spring-data-neo4j | 6.3.18, 7.2.12, 7.3.13, 7.4.13 |
+| spring-data-r2dbc | 1.5.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-relational | 2.4.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-relational-parent | 2.4.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-jdbc | 2.4.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-jdbc-distribution | 2.4.18, 3.2.12, 3.3.13, 3.4.13 |
 </template>
 
 <template #Security>
@@ -342,7 +342,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-hateoas | 0.25.2.RELEASE, 1.5.6, 2.4.1 |
+| spring-hateoas | 0.25.2.RELEASE, 1.5.6, 2.3.4, 2.4.1 |
 </template>
 
 <template #LDAP>
