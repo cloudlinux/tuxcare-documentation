@@ -7,8 +7,6 @@ Endless Lifecycle Support (ELS) for MySQL and Percona Server from TuxCare provid
 | OS                                                      | Package Type | OS Version | MySQL version |
 | :-----------------------------------------------------: | :----------: | :--------: | :-----------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)          | RPM          | 7.x        | 8.0           |
-| EL 8 (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.) | RPM        | 8.x        | 8.0           |
-| EL 9 (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.) | RPM        | 9.x        | 8.0           |
 
 ## Supported OS and Percona Server versions
 
@@ -63,6 +61,8 @@ sh install-mysql-els-repo.sh --delete
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-applications/machine-readable-security-data/) — Errata, OVAL, CSAF
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
 </WhatsNext>

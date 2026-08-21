@@ -2,12 +2,24 @@
 
 TuxCare provides machine-readable security data and verification tooling for Endless Lifecycle Support (ELS) for Open-Source Applications:
 
+* **Errata, OVAL, CSAF** — security advisories and patch definitions for the database applications
 * **SBOM (Software Bill of Materials)** — package composition and dependency inventory in SPDX and CycloneDX formats
 * **VEX (Vulnerability Exploitability eXchange)** — exploitability status for known CVEs in CycloneDX VEX format
 * **Package signatures (GPG)** — detached OpenPGP signatures to verify each downloaded archive's authenticity and integrity
 * **Integrity violation logging** — detecting and retaining integrity-check failures for administrator review
 
 Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and [security.tuxcare.com](https://security.tuxcare.com/).
+
+## Errata, OVAL and CSAF
+
+Security advisories and patch definitions are published for the database applications:
+
+| Application | OS | Errata | OVAL | CSAF |
+|---|---|---|---|---|
+| MariaDB | EL 7 | [errata](https://security.tuxcare.com/errata/els_mariadb/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_mariadb/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_mariadb/el7/) |
+| MariaDB | EL 8 | [errata](https://security.tuxcare.com/errata/els_mariadb/el8/) | — | — |
+| MariaDB | EL 9 | [errata](https://security.tuxcare.com/errata/els_mariadb/el9/) | — | — |
+| MySQL and Percona Server | EL 7 | [errata](https://security.tuxcare.com/errata/els_mysql/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_mysql/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_mysql/el7/) |
 
 ## Software Bill of Materials (SBOM)
 
