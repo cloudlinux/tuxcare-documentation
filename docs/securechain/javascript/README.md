@@ -1,12 +1,18 @@
 # JavaScript
 
-SecureChain delivers verified, signed, continuously patched JavaScript packages from a TuxCare-managed npm registry. Packages install with standard `npm` tooling and continue to receive CVE patches after upstream end of life.
+SecureChain delivers verified, signed, continuously patched JavaScript packages from a TuxCare-managed npm registry. Packages install with standard `npm` tooling.
 
 ## Installation
 
+Select your subscription to see the matching setup steps:
+
+<TableTabs label="Choose your subscription: " :labels="{ SecureChain_ELS: 'SecureChain + ELS' }">
+
+<template #SecureChain>
+
 <ELSPrerequisites>
 
-* TuxCare SecureChain registry token — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* TuxCare CLN token — contact sales@tuxcare.com
 * An npm project with `package.json`. If you're starting from scratch, run `npm init -y` in your project directory to create one.
 
 </ELSPrerequisites>
@@ -23,7 +29,7 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
    ```
 
    :::warning
-   Replace `<TOKEN>` with your SecureChain registry token (see [Prerequisites](#prerequisites) above).
+   Replace `<TOKEN>` with your TuxCare CLN token.
    :::
 
 2. Remove the existing lockfile
@@ -44,7 +50,7 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
 
    You can keep the package names and versions in `package.json` as they are.
 
-   `npm` is now pointed at SecureChain from the previous steps, so the packages are pulled automatically from the TuxCare registry.
+   `npm` is now pointed at SecureChain from the previous steps, so the packages are pulled automatically from the TuxCare registry: SecureChain builds where they exist, and the public upstream packages for the rest — served through the same endpoint, so no other registry configuration is needed. The freshly generated `package-lock.json` records the SecureChain URLs and checksums; commit it.
 
    To see which versions of a package are available to your subscription, query the registry directly:
 
@@ -56,9 +62,154 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
 
 </ELSSteps>
 
+</template>
+
+<template #ELS>
+
+<ELSPrerequisites>
+
+* TuxCare CLN token — contact sales@tuxcare.com
+* An npm project with `package.json`. If you're starting from scratch, run `npm init -y` in your project directory to create one.
+
+</ELSPrerequisites>
+
+<ELSSteps>
+
+1. Connect to the TuxCare registry
+
+   In the root directory of your project, create or edit `.npmrc` to point npm at the TuxCare registry and provide your token:
+
+   ```text
+   registry=https://artifacts.tuxcare.com/npm/
+   //artifacts.tuxcare.com/npm/:_authToken=<TOKEN>
+   ```
+
+   :::warning
+   Replace `<TOKEN>` with your TuxCare CLN token.
+   :::
+
+2. Point your dependencies at TuxCare-patched versions
+
+   Update `package.json`: set the dependency itself, and add a matching `overrides` entry so transitive occurrences of the same package are covered too:
+
+   ```text
+   "dependencies": {
+     "cookie": ">=0.4.2-tuxcare.1"
+   },
+   "overrides": {
+     "cookie@0.4.2": ">=0.4.2-tuxcare.1"
+   }
+   ```
+
+   Dependencies not covered by your ELS subscription stay as they are — they are served from the public upstream through the same endpoint.
+
+3. Refresh the project dependencies
+
+   Remove the lockfile and `node_modules`, then install:
+
+   ```text
+   rm -rf node_modules package-lock.json
+   npm install
+   ```
+
+4. Verify the setup
+
+   List the project's dependencies and confirm the TuxCare packages are resolved correctly:
+
+   ```text
+   npm list
+   ```
+
+   To see which versions of a package are available to your subscription, query the registry directly:
+
+   ```text
+   npm view <package> versions
+   ```
+
+   To browse published CVE fixes across the catalogue, see the [TuxCare CVE Tracker](https://tuxcare.com/cve-tracker/fixes).
+
+</ELSSteps>
+
+</template>
+
+<template #SecureChain_ELS>
+
+<ELSPrerequisites>
+
+* TuxCare CLN token — contact sales@tuxcare.com
+* An npm project with `package.json`. If you're starting from scratch, run `npm init -y` in your project directory to create one.
+
+</ELSPrerequisites>
+
+<ELSSteps>
+
+1. Connect to the TuxCare registry
+
+   In the root directory of your project, create or edit `.npmrc` to point npm at the TuxCare registry and provide your token:
+
+   ```text
+   registry=https://artifacts.tuxcare.com/npm/
+   //artifacts.tuxcare.com/npm/:_authToken=<TOKEN>
+   ```
+
+   :::warning
+   Replace `<TOKEN>` with your TuxCare CLN token.
+   :::
+
+2. Point your ELS-covered dependencies at TuxCare-patched versions
+
+   Dependencies still maintained upstream need no changes — SecureChain builds of them are served automatically. For the ELS packages, update `package.json`: set the dependency itself, and add a matching `overrides` entry so transitive occurrences of the same package are covered too:
+
+   ```text
+   "dependencies": {
+     "axios": "^1.7.9",
+     "cookie": ">=0.4.2-tuxcare.1",
+     "express": "^4.21.2",
+     "lodash": "^4.17.21"
+   },
+   "overrides": {
+     "cookie@0.4.2": ">=0.4.2-tuxcare.1"
+   }
+   ```
+
+   Here only `cookie` is an ELS-covered package and points at the patched version; `axios`, `express` and `lodash` keep their regular version ranges and are served as SecureChain builds.
+
+3. Refresh the project dependencies
+
+   Remove the lockfile and `node_modules`, then install:
+
+   ```text
+   rm -rf node_modules package-lock.json
+   npm install
+   ```
+
+   The freshly generated `package-lock.json` records the TuxCare URLs and checksums; commit it.
+
+4. Verify the setup
+
+   List the project's dependencies and confirm the TuxCare packages are resolved correctly:
+
+   ```text
+   npm list
+   ```
+
+   To see which versions of a package are available to your subscription, query the registry directly:
+
+   ```text
+   npm view <package> versions
+   ```
+
+   To browse published CVE fixes across the catalogue, see the [TuxCare CVE Tracker](https://tuxcare.com/cve-tracker/fixes).
+
+</ELSSteps>
+
+</template>
+
+</TableTabs>
+
 ## Troubleshooting
 
-If `npm install` resolves to the public registry instead of SecureChain, use the commands below to verify that npm is reading your `.npmrc` and that the token is accepted.
+If `npm install` resolves to the public registry instead of TuxCare, use the commands below to verify that npm is reading your `.npmrc` and that the token is accepted.
 
 * **Confirm the active registry**
 
@@ -83,12 +234,18 @@ If `npm install` resolves to the public registry instead of SecureChain, use the
 
 * **`EINTEGRITY` checksum mismatch during install**
 
-   The project still has a lockfile generated against the public registry, and the SecureChain build of that package legitimately differs from the public tarball. Delete `package-lock.json` and `node_modules`, then run `npm install` again (see step 2 above).
+   The project still has a lockfile generated against the public registry, and the TuxCare build of that package legitimately differs from the public tarball. Delete `package-lock.json` and `node_modules`, then run `npm install` again (see the lockfile step above).
+
+* **`ETARGET` / `No matching version found` for a `-tuxcare` version**
+
+   The requested version exists but is not included in your subscription. Check the available versions with `npm view <package> versions` — the output reflects exactly what your token can install.
 
 ## What's Next?
 
 <WhatsNext hide-title>
 
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/wrench.webp) [Managing the SecureChain repository](/securechain/managing-securechain-repository/) — Upgrade to a newer version
 
 </WhatsNext>
