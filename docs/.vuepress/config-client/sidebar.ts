@@ -381,6 +381,10 @@ export default {
                     icon: '/images/php-twig.webp',
                 },
                 {
+                    path: '/els-for-libraries/yii2-dev/',
+                    icon: '/images/yii_logo.webp',
+                },
+                {
                     path: '/els-for-libraries/zendframework/',
                     icon: '/images/zf1.webp',
                 },

@@ -547,7 +547,7 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
+        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.111.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.119.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
         link: "./java-libraries/",
       },
       {
@@ -607,7 +607,7 @@ const techData = [
       },
       {
         name: "Reactor Netty",
-        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.0.48 | 1.1.15",
+        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.0.48 | 1.1.15 | 1.1.31",
         link: "./java-libraries/",
       },
       {
@@ -647,7 +647,7 @@ const techData = [
       },
       {
         name: "Spring® Framework",
-        versions: "3.0 | 3.1 | 4.0 | 4.1 | 4.2 | 4.3 | 5.1 | 5.2 | 5.3 | 6.0 | 6.1 | 6.2",
+        versions: "3.0 | 3.1 | 4.0 | 4.1 | 4.2 | 4.3 | 5.0 | 5.1 | 5.2 | 5.3 | 6.0 | 6.1 | 6.2",
         link: "./spring/",
         detailsHash: "Framework",
       },
@@ -696,7 +696,7 @@ const techData = [
       },
       {
         name: "Spring® Integration",
-        versions: "5.5.20",
+        versions: "5.5.20 | 6.4.10",
         link: "./spring/",
       },
       {
@@ -918,7 +918,7 @@ const techData = [
       },
       {
         name: "Bootstrap",
-        versions: "3.2.0 | 3.3.6 | 3.3.7 | 3.4.1 | 4.1.1 | 4.1.3 | 4.6.2",
+        versions: "3.0.0 | 3.2.0 | 3.3.1 | 3.3.2 | 3.3.5 | 3.3.6 | 3.3.7 | 3.4.1 | 4.1.1 | 4.1.3 | 4.6.2",
         link: "./bootstrap/",
       },
       {
@@ -2507,6 +2507,11 @@ const techData = [
         name: "Twig",
         versions: "1.44.8 | 2.15.6 | 2.16.1",
         link: "./twig/",
+      },
+      {
+        name: "yii2-dev",
+        versions: "2.0.54",
+        link: "./yii2-dev/",
       },
       {
         name: "Zend Framework",
