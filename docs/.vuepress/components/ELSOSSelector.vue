@@ -59,6 +59,11 @@ const operatingSystems = [
     link: "./centos-stream-8-els",
   },
   {
+    name: "CloudLinux 7",
+    icon: "/images/cloudlinux.webp",
+    link: "./cloudlinux-7-els",
+  },
+  {
     name: "Debian 10",
     icon: "/images/debian.webp",
     link: "./debian-10-els",

@@ -55,6 +55,10 @@ export default {
                     icon: '/images/centos-stream.webp',
                 },
                 {
+                    path: '/els-for-os/cloudlinux-7-els/',
+                    icon: '/images/cloudlinux.webp',
+                },
+                {
                     path: '/els-for-os/debian-10-els/',
                     icon: '/images/debian.webp',
                 },
