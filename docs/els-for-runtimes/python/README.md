@@ -22,25 +22,25 @@ alt-python provides a more flexible and convenient environment for working with 
 
 ## Supported OS and Python versions
 
-| Operating Systems                                            | Package Type | OS Version                         | Python versions                    |
-| :----------------------------------------------------------: | :----------: | :--------------------------------: | :--------------------------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 7.x                                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
-| EL 8 (CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)     | RPM          | 9.x                                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
-| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)            | RPM          | 10.x                               | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
-| Ubuntu                                                       | DEB          | 16.04                              | 2.7, 3.6, 3.7, 3.10                |
-| Ubuntu                                                       | DEB          | 18.04, 20.04, 22.04                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
-| Ubuntu                                                       | DEB          | 24.04                              | 2.7, 3.6, 3.8, 3.9, 3.10           |
-| Debian                                                       | DEB          | 10, 11                             | 2.7, 3.6, 3.7, 3.10                |
-| Debian                                                       | DEB          | 12, 13                             | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10      |
-| Alpine Linux                                                 | APK          | 3.23, 3.24                         | 3.6, 3.7, 3.8, 3.9                 |
+| Operating Systems                                                       | Package Type | OS Version          | Python versions                                       |
+| :---------------------------------------------------------------------: | :----------: | :-----------------: | :---------------------------------------------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x                 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
+| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
+| Ubuntu                                                                  | DEB          | 16.04               | 2.7, 3.6, 3.7, 3.10, 3.11, 3.12, 3.13, 3.14           |
+| Ubuntu                                                                  | DEB          | 18.04, 20.04, 22.04 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
+| Ubuntu                                                                  | DEB          | 24.04               | 2.7, 3.6, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14      |
+| Debian                                                                  | DEB          | 10, 11              | 2.7, 3.6, 3.7, 3.10, 3.11, 3.12, 3.13, 3.14           |
+| Debian                                                                  | DEB          | 12, 13              | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
+| Alpine Linux                                                            | APK          | 3.23, 3.24          | 3.6, 3.7, 3.8, 3.9                                    |
 
 Every `alt-python` package ships its own bundled `pip`, `setuptools` and `wheel`. These are covered by ELS and patched together with the interpreter.
 
 **Supported architectures:**
 
 * x86_64 — all supported OSes
-* arm64 — Debian 12 and 13
+* aarch64/arm64 — Debian 12 and 13, Ubuntu 16.04, 18.04, 20.04, 22.04 and 24.04, Alpine Linux 3.23 and later
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 

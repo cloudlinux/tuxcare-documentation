@@ -40,11 +40,11 @@ We provide the ability to create local mirrors of Node.js for Endless Lifecycle 
 
 | Option            | OS                                                                         |
 | :---------------: | :------------------------------------------------------------------------: |
+| rpm/el/6/         | CentOS 6, CloudLinux 6, Oracle Linux 6, etc.                               |
 | rpm/el/7/         | CentOS 7, CloudLinux 7, OracleLinux 7, etc.                                |
 | rpm/el/8/         | AlmaLinux 8, CentOS 8, CentOS 8 Stream, CloudLinux 8, Oracle Linux 8, etc. |
 | rpm/el/9/         | AlmaLinux 9, CloudLinux 9, Oracle Linux 9, etc.                            |
 | rpm/el/10/        | AlmaLinux 10, CloudLinux 10, Oracle Linux 10, etc.                         |
-| deb/ubuntu/16.04/ | Ubuntu 16.04                                                               |
 | deb/ubuntu/18.04/ | Ubuntu 18.04                                                               |
 | deb/ubuntu/20.04/ | Ubuntu 20.04                                                               |
 | deb/ubuntu/22.04/ | Ubuntu 22.04                                                               |
