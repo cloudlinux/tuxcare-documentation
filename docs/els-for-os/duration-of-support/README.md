@@ -10,6 +10,7 @@ TuxCare provides Endless Lifecycle Support (ELS) for the Linux distributions aft
 | CentOS 7 | x86_64 i386 | June 2024 |
 | CentOS 8 | x86_64 | January 2022 |
 | CentOS Stream 8 | x86_64 | June 2024 |
+| CloudLinux 7 | x86_64 | June 2024 |
 | Debian 10 | amd64 arm64 armel i386 | June 2024 |
 | Oracle Linux 6 | x86_64 | December 2020 |
 | Oracle Linux 7 | x86_64 | December 2024 |
