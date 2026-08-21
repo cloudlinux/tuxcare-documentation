@@ -55,6 +55,10 @@ export default {
                     icon: '/images/centos-stream.webp',
                 },
                 {
+                    path: '/els-for-os/cloudlinux-7-els/',
+                    icon: '/images/cloudlinux.webp',
+                },
+                {
                     path: '/els-for-os/debian-10-els/',
                     icon: '/images/debian.webp',
                 },
@@ -90,7 +94,6 @@ export default {
                     path: '/els-for-os/ubuntu-20-04-els/',
                     icon: '/images/Ubuntu.webp',
                 },
-                "/els-for-os/cloudlinux-7-els/",
                 "/els-for-os/managing-els-repository/",
                 "/els-for-os/machine-readable-security-data/",
             ]
