@@ -244,6 +244,10 @@ To disable automatic updates, edit the file `/etc/sysconfig/kcare/kcare.conf`
 AUTO_UPDATE=False
 ```
 
+:::tip Note
+This is the supported way to disable both boot-time and cron-based patch application. It does not remove the `/etc/cron.d/kcare-cron` entry: the cron job still invokes `kcarectl -q --auto-update`, but neither downloads nor applies patches. Deleting that file is not a persistent workaround, as the agent package re-creates it on install and upgrade.
+:::
+
 To check the updated 'effective' version, run:
 
 ```text
