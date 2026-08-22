@@ -2,7 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { readdir, readFile, stat } from "fs/promises";
-import { join, relative, basename, dirname } from "path";
+import { join, relative, resolve, isAbsolute, basename, dirname } from "path";
 
 const DOCS_ROOT = join(dirname(new URL(import.meta.url).pathname), "..", "docs");
 
@@ -10,6 +10,30 @@ const server = new McpServer({
   name: "tuxcare-docs",
   version: "1.0.0",
 });
+
+// MCP tool annotations. A client that gets none has to treat every call as a
+// possible mutation, which is why harmless reads end up behind an approval
+// prompt. Both hints this helper sets are in its name: the tools neither write
+// nor leave the local docs tree (openWorldHint defaults to true, so the closed
+// world has to be stated). A read-only tool that did reach the network would
+// need its own annotations, not this helper.
+const readOnlyLocalTool = (name, description, inputSchema, handler) =>
+  server.registerTool(
+    name,
+    { description, inputSchema, annotations: { readOnlyHint: true, openWorldHint: false } },
+    handler
+  );
+
+// Every caller-supplied path segment goes through here. join() normalizes a
+// leading "../" straight out of DOCS_ROOT, so without this the tools read any
+// file on the host — which would make the closed-world hint above a false
+// claim, and a false hint is worse than a missing one. Returns null for
+// anything that lands outside the tree.
+function resolveInDocs(...segments) {
+  const full = resolve(DOCS_ROOT, ...segments);
+  const rel = relative(DOCS_ROOT, full);
+  return rel === "" || (!rel.startsWith("..") && !isAbsolute(rel)) ? full : null;
+}
 
 async function walkDir(dir, ext = ".md") {
   const results = [];
@@ -44,7 +68,7 @@ function extractHeadings(content) {
 }
 
 // --- Tool: list_sections ---
-server.tool(
+readOnlyLocalTool(
   "list_sections",
   "List all top-level documentation sections with their page counts",
   {},
@@ -76,13 +100,14 @@ server.tool(
 );
 
 // --- Tool: list_pages ---
-server.tool(
+readOnlyLocalTool(
   "list_pages",
   "List all documentation pages within a section (e.g. 'els-for-libraries')",
   { section: z.string().describe("Section directory name, e.g. 'els-for-libraries', 'eportal'") },
   async ({ section }) => {
-    const sectionPath = join(DOCS_ROOT, section);
+    const sectionPath = resolveInDocs(section);
     try {
+      if (!sectionPath) throw new Error("outside the docs tree");
       await stat(sectionPath);
     } catch {
       return {
@@ -108,14 +133,22 @@ server.tool(
 );
 
 // --- Tool: read_doc ---
-server.tool(
+readOnlyLocalTool(
   "read_doc",
   "Read a documentation page by its path (relative to docs/)",
   {
     path: z.string().describe("Path relative to docs/, e.g. 'els-for-libraries/grafana/README.md' or 'eportal/README.md'"),
   },
   async ({ path: docPath }) => {
-    let fullPath = join(DOCS_ROOT, docPath);
+    const base = resolveInDocs(docPath);
+    if (!base) {
+      return {
+        content: [{ type: "text", text: `File not found: ${docPath}. Use list_pages to find valid paths.` }],
+        isError: true,
+      };
+    }
+
+    let fullPath = base;
     try {
       const s = await stat(fullPath);
       if (s.isDirectory()) {
@@ -123,7 +156,7 @@ server.tool(
       }
     } catch {
       // try adding README.md
-      fullPath = join(DOCS_ROOT, docPath, "README.md");
+      fullPath = join(base, "README.md");
     }
 
     try {
@@ -139,7 +172,7 @@ server.tool(
 );
 
 // --- Tool: search_docs ---
-server.tool(
+readOnlyLocalTool(
   "search_docs",
   "Full-text search across all documentation. Returns matching excerpts with file paths.",
   {
@@ -148,8 +181,9 @@ server.tool(
     max_results: z.number().optional().default(20).describe("Maximum number of results to return (default 20)"),
   },
   async ({ query, section, max_results }) => {
-    const searchRoot = section ? join(DOCS_ROOT, section) : DOCS_ROOT;
+    const searchRoot = section ? resolveInDocs(section) : DOCS_ROOT;
     try {
+      if (!searchRoot) throw new Error("outside the docs tree");
       await stat(searchRoot);
     } catch {
       return {
@@ -210,19 +244,27 @@ server.tool(
 );
 
 // --- Tool: get_doc_structure ---
-server.tool(
+readOnlyLocalTool(
   "get_doc_structure",
   "Get the table of contents (headings) for a documentation page",
   {
     path: z.string().describe("Path relative to docs/, e.g. 'eportal/README.md'"),
   },
   async ({ path: docPath }) => {
-    let fullPath = join(DOCS_ROOT, docPath);
+    const base = resolveInDocs(docPath);
+    if (!base) {
+      return {
+        content: [{ type: "text", text: `File not found: ${docPath}` }],
+        isError: true,
+      };
+    }
+
+    let fullPath = base;
     try {
       const s = await stat(fullPath);
       if (s.isDirectory()) fullPath = join(fullPath, "README.md");
     } catch {
-      fullPath = join(DOCS_ROOT, docPath, "README.md");
+      fullPath = join(base, "README.md");
     }
 
     try {
@@ -245,7 +287,7 @@ server.tool(
 );
 
 // --- Tool: get_sidebar ---
-server.tool(
+readOnlyLocalTool(
   "get_sidebar",
   "Get the sidebar navigation structure for the documentation site",
   {},
