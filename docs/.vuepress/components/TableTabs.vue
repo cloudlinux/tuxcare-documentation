@@ -73,27 +73,35 @@ watch(activeTab, (newVal) => {
 }
 
 .tab-header {
-  border-top: 1px solid #d1d5db;
-  padding: 1rem 0;
+  display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+  background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%);
+  border: 1px solid #d9edff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
 }
 
 .label-text {
-  color: #314659;
+  color: #163055;
+  font-size: .9rem;
+  font-weight: 600;
 }
 
 .tab-select {
-  background-color: #fff;
-  color: #314659;
-  font-size: 0.9rem;
-  padding: 0.25rem 0.25rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  outline: none;
+  appearance: none; -webkit-appearance: none; cursor: pointer;
+  font-size: .9rem; font-weight: 600; color: #163055;
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="%23163055" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    no-repeat right .8rem center;
+  padding: .55rem 2.5rem .55rem .95rem;
+  border: 1.5px solid #163055; border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(22, 48, 85, .12);
+  transition: border-color .15s ease, box-shadow .15s ease;
 }
 
+.tab-select:hover { border-color: #0b5cad; box-shadow: 0 2px 6px rgba(22, 48, 85, .18); }
+
 .tab-select:focus {
-  border-color: #5897fb;
-  box-shadow: 0 0 0 1px #5897fb;
+  outline: none; border-color: #0b5cad;
+  box-shadow: 0 0 0 3px rgba(11, 92, 173, .25);
 }
 
 .bottom-line {
