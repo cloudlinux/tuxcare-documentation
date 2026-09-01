@@ -39,34 +39,34 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-core | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.7.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-jcl | 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-context | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-beans | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.7.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-expression | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-jms | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-messaging | 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-aop | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-context-support | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-tx | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-orm | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-aspects | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-r2dbc | 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-jdbc | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-web | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-webmvc | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-oxm | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-webflux | 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-websocket | 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-framework-bom | 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.15, 6.1.16, 6.1.21, 6.2.1, 6.2.15 |
-| spring-context-indexer | 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-instrument | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-test | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
-| spring-core-test | 6.0.16, 6.0.23, 6.1.7, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15 |
+| spring-core | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.7.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-jcl | 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-context | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-beans | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.7.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-expression | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-jms | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-messaging | 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-aop | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-context-support | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-tx | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-orm | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-aspects | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-r2dbc | 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-jdbc | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-web | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.2.13.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-webmvc | 3.0.5.RELEASE, 3.1.1.RELEASE, 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-oxm | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-webflux | 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-websocket | 4.0.0.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-framework-bom | 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.14, 6.1.15, 6.1.16, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-context-indexer | 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-instrument | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-test | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE, 5.0.5.RELEASE, 5.0.13.RELEASE, 5.1.5.RELEASE, 5.1.6.RELEASE, 5.1.9.RELEASE, 5.1.20.RELEASE, 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37, 5.3.39, 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
+| spring-core-test | 6.0.16, 6.0.23, 6.1.7, 6.1.14, 6.1.15, 6.1.16, 6.1.20, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
 | spring-webmvc-portlet | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE |
 | spring-instrument-tomcat | 3.0.5.RELEASE, 4.1.9.RELEASE, 4.2.9.RELEASE, 4.3.4.RELEASE, 4.3.9.RELEASE, 4.3.25.RELEASE, 4.3.30.RELEASE |
 | spring | 5.2.0.RELEASE, 5.3.7, 5.3.24, 5.3.25, 5.3.27, 5.3.29, 5.3.30, 5.3.31, 5.3.37 |
-| framework-docs | 6.0.16, 6.1.15, 6.1.16, 6.1.21, 6.2.1, 6.2.15 |
+| framework-docs | 6.0.16, 6.1.14, 6.1.15, 6.1.16, 6.1.21, 6.2.1, 6.2.15, 6.2.19 |
 </template>
 
 <template #AMQP>
@@ -214,9 +214,9 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | Module | Version |
 |---|---|
 | spring-data-bom | 2021.2.18, 2023.1.12, 2024.0.13, 2024.1.13 |
-| spring-data-build | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
-| spring-data-build-resources | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
-| spring-data-parent | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
+| spring-data-build | 2.7.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
+| spring-data-build-resources | 2.7.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
+| spring-data-parent | 2.7.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
 | spring-data-commons | 2.7.18, 3.3.13 |
 | spring-data-jpa | 2.7.18, 3.2.12, 3.3.13, 3.4.13 |
 | spring-data-jpa-parent | 3.2.12, 3.3.13, 3.4.13 |
@@ -251,26 +251,26 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | Module | Version |
 |---|---|
 | spring-security | 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.1.6 |
-| spring-security-bom | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-core | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-config | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-web | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-crypto | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-data | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-ldap | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-messaging | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-oauth2-client | 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-oauth2-core | 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-oauth2-jose | 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-oauth2-resource-server | 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-rsocket | 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-saml2-service-provider | 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-test | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-acl | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-aspects | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
-| spring-security-cas | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
+| spring-security-bom | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-core | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-config | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-web | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-crypto | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-data | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-ldap | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-messaging | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-oauth2-client | 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-oauth2-core | 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-oauth2-jose | 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-oauth2-resource-server | 5.6.10, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-rsocket | 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-saml2-service-provider | 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-test | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-acl | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-aspects | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
+| spring-security-cas | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
 | spring-security-remoting | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16 |
-| spring-security-taglibs | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13 |
+| spring-security-taglibs | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
 | spring-security-openid | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.6.10, 5.8.14, 5.8.15, 5.8.16 |
 </template>
 
@@ -285,11 +285,11 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-ws-core | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17 |
-| spring-xml | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17 |
-| spring-ws-security | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17 |
-| spring-ws-test | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17 |
-| spring-ws-support | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17 |
+| spring-ws-core | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17, 4.1.4 |
+| spring-xml | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17, 4.1.4 |
+| spring-ws-security | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17, 4.1.4 |
+| spring-ws-test | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17, 4.1.4 |
+| spring-ws-support | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.17, 4.1.4 |
 | spring-ws | 3.0.7.RELEASE, 3.1.6, 3.1.8 |
 </template>
 
@@ -342,7 +342,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-hateoas | 0.25.2.RELEASE, 1.5.6, 2.3.4, 2.4.1 |
+| spring-hateoas | 0.25.2.RELEASE, 1.5.6, 2.0.7, 2.3.4, 2.4.1 |
 </template>
 
 <template #LDAP>

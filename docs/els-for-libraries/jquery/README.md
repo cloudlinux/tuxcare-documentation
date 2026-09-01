@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* jQuery 1.8.2, 1.8.3, 1.11.3, 1.12.4, 2.1.3, 2.2.4, 3.1.1, 3.2.1, 3.3.1, 3.4.1
+* jQuery 1.4.1, 1.4.2, 1.4.3, 1.8.2, 1.8.3, 1.11.3, 1.12.4, 2.1.3, 2.2.4, 3.1.1, 3.2.1, 3.3.1, 3.4.1
 
 ## Installation
 
