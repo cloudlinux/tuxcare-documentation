@@ -65,15 +65,10 @@
 
 <WhatsNext hide-title>
 
-<!-- re-enable when available
 * ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/debian11els/oval.xml) — Open Vulnerability and Assessment Language (OVAL) security data
 * ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/debian11els/) — Common Security Advisory Framework (CSAF) security advisories
-
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Debian+11+ELS) — Track vulnerability fixes and updates
-<!-- re-enable when available
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
-* ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=Debian+11+ELS) — Full list of packages covered by ELS
--->
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates and other repository operations
 
 </WhatsNext>
