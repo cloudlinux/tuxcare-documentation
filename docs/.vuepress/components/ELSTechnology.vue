@@ -1103,7 +1103,7 @@ const techData = [
       },
       {
         name: "Ember.js",
-        versions: "0.2.7 | 1.13.11 | 2.18.2 | 3.28.6 | 4.12.13",
+        versions: "1.13.11",
         link: "./ember/",
       },
       {
