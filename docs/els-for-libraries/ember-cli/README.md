@@ -1,16 +1,14 @@
-# Ember.js
+# ember-cli
 
-Endless Lifecycle Support (ELS) for Ember.js from TuxCare provides security fixes for Ember.js versions that have reached their end of life. This allows you to continue running Ember.js applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for ember-cli from TuxCare provides security fixes for ember-cli versions that have reached their end of life. This allows you to continue running ember-cli applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* Ember.js 1.13.11
+* ember-cli 1.13.11
 
 ## Installation
 
 <ELSBadge heading>Docker compatible</ELSBadge>
-
-TuxCare publishes patched **transitive** dependencies for the supported Ember.js version as NPM packages on a secure internal registry.
 
 <ELSPrerequisites>
 
@@ -24,7 +22,7 @@ TuxCare publishes patched **transitive** dependencies for the supported Ember.js
 
 1. **Create or update the .npmrc file**
 
-   Navigate to the root directory of your Ember.js project and create a `.npmrc` file or update it if it already exists.
+   Navigate to the root directory of your ember-cli project and create a `.npmrc` file or update it if it already exists.
 
    **Example:**
 
@@ -52,7 +50,7 @@ TuxCare publishes patched **transitive** dependencies for the supported Ember.js
 
 3. **Update dependencies**
 
-   Update your `package.json` so the transitive versions for your Ember.js version resolve to TuxCare packages. You can do this in two ways:
+   Update your `package.json` file to replace ember-cli dependencies with TuxCare-maintained packages. You can do this in two ways:
 
    * **Option 1: Manual update**
 

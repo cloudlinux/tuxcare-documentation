@@ -414,7 +414,7 @@ export default {
                     icon: '/images/bootstrap-sass-logo.webp',
                 },
                 {
-                    path: '/els-for-libraries/ember/',
+                    path: '/els-for-libraries/ember-cli/',
                     icon: '/images/ember-logo.webp',
                 },
                 {
