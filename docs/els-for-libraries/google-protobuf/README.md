@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Protobuf from TuxCare provides security fixe
 
 ## Supported Versions
 
-* **Protobuf** 3.24.4
+* **Protobuf** 3.24.4, 3.25.9
 
 Other versions upon request.
 
@@ -59,10 +59,27 @@ Other versions upon request.
 
    Install the TuxCare-maintained Protobuf release that matches your project:
 
+   <TableTabs label="Choose version: ">
+
+   <template #Protobuf_3.24>
+
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require google/protobuf:3.24.4-p1+tuxcare` },
-     { title: 'composer.json', content: protobufjson }
+     { title: 'composer.json', content: protobufjson324 }
    ]" />
+
+   </template>
+
+   <template #Protobuf_3.25>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require google/protobuf:3.25.9-p1+tuxcare` },
+     { title: 'composer.json', content: protobufjson325 }
+   ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -145,10 +162,17 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const protobufjson =
+const protobufjson324 =
 `{
     "require": {
         "google/protobuf": "3.24.4-p1+tuxcare"
+    }
+}`
+
+const protobufjson325 =
+`{
+    "require": {
+        "google/protobuf": "3.25.9-p1+tuxcare"
     }
 }`
 

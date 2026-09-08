@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Firebase PHP-JWT from TuxCare provides secur
 
 ## Supported Versions
 
-* **Firebase PHP-JWT** 6.11.1
+* **Firebase PHP-JWT** 5.5.1, 6.11.1
 
 Other versions upon request.
 
@@ -59,10 +59,27 @@ Other versions upon request.
 
    Install the TuxCare-maintained Firebase PHP-JWT release that matches your project:
 
+   <TableTabs label="Choose version: ">
+
+   <template #Firebase_PHP-JWT_5.5>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require firebase/php-jwt:v5.5.1-p1+tuxcare` },
+     { title: 'composer.json', content: phpjwtjson55 }
+   ]" />
+
+   </template>
+
+   <template #Firebase_PHP-JWT_6.11>
+
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require firebase/php-jwt:6.11.1-p2+tuxcare` },
-     { title: 'composer.json', content: pkgjson }
+     { title: 'composer.json', content: phpjwtjson611 }
    ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -145,7 +162,14 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const pkgjson =
+const phpjwtjson55 =
+`{
+    "require": {
+        "firebase/php-jwt": "v5.5.1-p1+tuxcare"
+    }
+}`
+
+const phpjwtjson611 =
 `{
     "require": {
         "firebase/php-jwt": "6.11.1-p2+tuxcare"

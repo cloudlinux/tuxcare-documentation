@@ -1,10 +1,10 @@
-# CraftCMS Feed Me Plugin
+# ReactPHP HttpClient
 
-Endless Lifecycle Support (ELS) for the CraftCMS Feed Me plugin from TuxCare provides security fixes for versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for ReactPHP HttpClient from TuxCare provides security fixes for ReactPHP HttpClient (an asynchronous HTTP client for ReactPHP) versions that have reached their end of life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **CraftCMS Feed Me Plugin** 3.x
+* **ReactPHP HttpClient** 0.4.14
 
 Other versions upon request.
 
@@ -55,13 +55,13 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install CraftCMS Feed Me
+4. Install ReactPHP HttpClient
 
-   Install the TuxCare-maintained CraftCMS Feed Me release that matches your project:
+   Install the TuxCare-maintained ReactPHP HttpClient release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require verbb/feed-me:3.1.17-p5+tuxcare` },
-     { title: 'composer.json', content: packagejson }
+     { title: 'Composer CLI', content: `composer require react/http-client:v0.4.14-p1+tuxcare` },
+     { title: 'composer.json', content: pkgjson }
    ]" />
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -108,9 +108,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=verbb%2Ffeed-me) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=verbb%2Ffeed-me) — Patched versions and changelogs
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/verbb/feed-me/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=react%2Fhttp-client) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=react%2Fhttp-client) — Patched versions and changelogs
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/react/http-client/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
@@ -145,10 +145,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const packagejson =
+const pkgjson =
 `{
     "require": {
-        "verbb/feed-me": "3.1.17-p5+tuxcare"
+        "react/http-client": "v0.4.14-p1+tuxcare"
     }
 }`
 

@@ -2354,6 +2354,21 @@ const techData = [
     ecosystemIcon: "/images/php-logo.webp",
     projects: [
       {
+        name: "Apigility",
+        versions: "1.2.1",
+        link: "./zf-apigility/",
+      },
+      {
+        name: "Assetic",
+        versions: "1.4.0",
+        link: "./assetic/",
+      },
+      {
+        name: "AssetManager",
+        versions: "1.8.1",
+        link: "./assetmanager/",
+      },
+      {
         name: "AWS SDK for PHP",
         versions: "3.263.4",
         link: "./aws-sdk-php/",
@@ -2400,7 +2415,7 @@ const techData = [
       },
       {
         name: "Firebase PHP-JWT",
-        versions: "6.11.1",
+        versions: "5.5.1 | 6.11.1",
         link: "./firebase-php-jwt/",
       },
       {
@@ -2434,8 +2449,13 @@ const techData = [
         link: "./laravel/",
       },
       {
-        name: "Laminas",
+        name: "Laminas Diactoros",
         versions: "2.22.0",
+        link: "./laminas/",
+      },
+      {
+        name: "Laminas Http",
+        versions: "2.5.6",
         link: "./laminas/",
       },
       {
@@ -2444,19 +2464,29 @@ const techData = [
         link: "./laravel/",
       },
       {
+        name: "Laravel DataTables",
+        versions: "9.21.2 | 10.11.4",
+        link: "./laravel-datatables/",
+      },
+      {
         name: "Laravel Media Library",
         versions: "9.12.4 | 10.15.0",
         link: "./laravel-media-library/",
       },
       {
         name: "League Commonmark",
-        versions: "1.6.7 | 2.7.1",
+        versions: "1.6.7 | 2.7.1 | 2.8.2",
         link: "./league-commonmark/",
       },
       {
         name: "League Flysystem",
         versions: "1.0.70 | 1.1.10",
         link: "./league-flysystem/",
+      },
+      {
+        name: "League OAuth2 Client",
+        versions: "1.4.2",
+        link: "./league-oauth2-client/",
       },
       {
         name: "Livewire",
@@ -2495,7 +2525,7 @@ const techData = [
       },
       {
         name: "Protobuf",
-        versions: "3.24.4",
+        versions: "3.24.4 | 3.25.9",
         link: "./google-protobuf/",
       },
       {
@@ -2504,14 +2534,34 @@ const techData = [
         link: "./ratchet/",
       },
       {
+        name: "Ratchet Pawl",
+        versions: "0.1.2",
+        link: "./ratchet/",
+      },
+      {
+        name: "ReactPHP HttpClient",
+        versions: "0.4.14",
+        link: "./reactphp-http-client/",
+      },
+      {
         name: "Saloon",
         versions: "3.15.0",
         link: "./saloon/",
       },
       {
+        name: "svg-sanitize",
+        versions: "0.16.0",
+        link: "./svg-sanitize/",
+      },
+      {
         name: "SwiftMailer",
         versions: "5.4.12 | 6.0.2",
         link: "./swiftmailer/",
+      },
+      {
+        name: "Symfony CMF Routing",
+        versions: "1.4.1",
+        link: "./symfony-cmf-routing/",
       },
       {
         name: "Symfony HttpFoundation",
@@ -2531,6 +2581,11 @@ const techData = [
       {
         name: "Symfony Mime",
         versions: "5.4.x | 6.4.x | 7.4.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony Polyfill Intl IDN",
+        versions: "1.30.x",
         link: "./symfony/",
       },
       {

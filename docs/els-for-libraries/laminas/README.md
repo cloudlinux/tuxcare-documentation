@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Laminas from TuxCare provides security fixes
 ## Supported Versions
 
 * **laminas-diactoros** 2.22.0
+* **laminas-http** 2.5.6
 
 Other components and versions upon request.
 
@@ -59,10 +60,27 @@ Other components and versions upon request.
 
    Install the TuxCare-maintained Laminas component release that matches your project:
 
+   <TableTabs label="Choose component: ">
+
+   <template #laminas-diactoros_2.22>
+
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require laminas/laminas-diactoros:2.22.0-p1+tuxcare` },
-     { title: 'composer.json', content: laminasjson }
+     { title: 'composer.json', content: diactorosjson }
    ]" />
+
+   </template>
+
+   <template #laminas-http_2.5>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require laminas/laminas-http:2.5.6-p1+tuxcare` },
+     { title: 'composer.json', content: laminashttpjson }
+   ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -145,10 +163,17 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const laminasjson =
+const diactorosjson =
 `{
     "require": {
         "laminas/laminas-diactoros": "2.22.0-p1+tuxcare"
+    }
+}`
+
+const laminashttpjson =
+`{
+    "require": {
+        "laminas/laminas-http": "2.5.6-p1+tuxcare"
     }
 }`
 

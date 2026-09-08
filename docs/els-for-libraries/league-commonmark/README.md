@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for League CommonMark from TuxCare provides secu
 
 ## Supported Versions
 
-* **League CommonMark** 1.6.7, 2.7.1
+* **League CommonMark** 1.6.7, 2.7.1, 2.8.2
 
 Other versions upon request.
 
@@ -75,6 +75,15 @@ Other versions upon request.
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require league/commonmark:2.7.1-p1+tuxcare` },
      { title: 'composer.json', content: commonmarkjson27 }
+   ]" />
+
+   </template>
+
+   <template #League_CommonMark_2.8>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require league/commonmark:2.8.2-p2+tuxcare` },
+     { title: 'composer.json', content: commonmarkjson28 }
    ]" />
 
    </template>
@@ -173,6 +182,13 @@ const commonmarkjson27 =
 `{
     "require": {
         "league/commonmark": "2.7.1-p1+tuxcare"
+    }
+}`
+
+const commonmarkjson28 =
+`{
+    "require": {
+        "league/commonmark": "2.8.2-p2+tuxcare"
     }
 }`
 
