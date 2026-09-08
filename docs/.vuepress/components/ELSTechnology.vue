@@ -95,6 +95,16 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache ActiveMQ Classic",
+        versions: "6.1.8",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Ant",
+        versions: "1.9.4",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Avro",
         versions: "1.7.6 | 1.7.7 | 1.8.2 | 1.10.2 | 1.11.0 | 1.11.3",
         link: "./java-libraries/",
@@ -121,7 +131,7 @@ const techData = [
       },
       {
         name: "Apache Commons Configuration",
-        versions: "2.12.0",
+        versions: "1.10 | 2.12.0",
         link: "./java-libraries/",
       },
       {
@@ -206,7 +216,7 @@ const techData = [
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.14 | 1.2.15 | 1.2.16 | 1.2.17 | 2.17.1 | 2.17.2 | 2.18.0 | 2.22.1 | 2.23.1 | 2.24.3",
+        versions: "1.2.14 | 1.2.15 | 1.2.16 | 1.2.17 | 2.5 | 2.11.0 | 2.12.4 | 2.17.1 | 2.17.2 | 2.18.0 | 2.22.1 | 2.23.1 | 2.24.3",
         link: "./apache-log4j/",
       },
       {
@@ -297,7 +307,7 @@ const techData = [
       },
       {
         name: "c3p0",
-        versions: "0.9.5.5",
+        versions: "0.9.5.4 | 0.9.5.5",
         link: "./java-libraries/",
       },
       {
@@ -348,6 +358,11 @@ const techData = [
       {
         name: "Eclipse Parsson",
         versions: "1.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Eclipse Sisu",
+        versions: "0.0.0.M5",
         link: "./java-libraries/",
       },
       {
@@ -607,7 +622,7 @@ const techData = [
       },
       {
         name: "Plexus Utils",
-        versions: "1.2 | 1.4.5 | 1.5.8 | 2.0.4 | 3.0.15 | 3.0.17 | 3.0.18 | 3.0.20 | 3.0.24 | 3.1.0 | 3.2.0 | 3.3.1 | 3.4.2 | 3.5.1 | 3.6.0",
+        versions: "1.2 | 1.4.5 | 1.5.6 | 1.5.8 | 2.0.4 | 2.1 | 3.0.15 | 3.0.17 | 3.0.18 | 3.0.20 | 3.0.24 | 3.1.0 | 3.2.0 | 3.2.1 | 3.3.1 | 3.4.2 | 3.5.1 | 3.6.0 | 4.0.1",
         link: "./java-libraries/",
       },
       {
@@ -710,7 +725,7 @@ const techData = [
       },
       {
         name: "Spring® Security",
-        versions: "4.2 | 5.6 | 5.7 | 5.8 | 6.0 | 6.1 | 6.2 | 6.3 | 6.4",
+        versions: "4.2 | 5.6 | 5.7 | 5.8 | 6.0 | 6.1 | 6.2 | 6.3 | 6.4 | 6.5",
         link: "./spring/",
         detailsHash: "Security",
       },
@@ -721,7 +736,7 @@ const techData = [
       },
       {
         name: "Spring® Web Services",
-        versions: "3.0.7.RELEASE | 3.1.6 | 3.1.8 | 4.0.17",
+        versions: "3.0.7.RELEASE | 3.1.6 | 3.1.8 | 4.0.17 | 4.1.4",
         link: "./spring/",
       },
       {
@@ -731,7 +746,7 @@ const techData = [
       },
       {
         name: "Spring® HATEOAS",
-        versions: "0.25.2.RELEASE | 1.5.6 | 2.3.4 | 2.4.1",
+        versions: "0.25.2.RELEASE | 1.5.6 | 2.0.7 | 2.3.4 | 2.4.1",
         link: "./spring/",
       },
       {
@@ -1063,7 +1078,7 @@ const techData = [
       },
       {
         name: "decode-uri-component",
-        versions: "0.2.0",
+        versions: "0.2.0 | 0.2.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1318,7 +1333,7 @@ const techData = [
       },
       {
         name: "jQuery",
-        versions: "1.8.2 | 1.8.3 | 1.11.3 | 1.12.4 | 2.1.3 | 2.2.4 | 3.1.1 | 3.2.1 | 3.3.1 | 3.4.1",
+        versions: "1.4.1 | 1.4.2 | 1.4.3 | 1.8.2 | 1.8.3 | 1.11.3 | 1.12.4 | 2.1.3 | 2.2.4 | 3.1.1 | 3.2.1 | 3.3.1 | 3.4.1",
         link: "./jquery/",
       },
       {
@@ -1958,7 +1973,7 @@ const techData = [
       },
       {
         name: "webpack-dev-server",
-        versions: "2.7.1 | 2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.11.1 | 4.15.1 | 4.15.2",
+        versions: "2.7.1 | 2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.11.1 | 4.15.1 | 4.15.2 | 5.2.2",
         link: "./webpack-dev-server/",
       },
       {
@@ -2495,7 +2510,7 @@ const techData = [
       },
       {
         name: "Protobuf",
-        versions: "3.24.4",
+        versions: "3.24.4 | 3.25.9",
         link: "./google-protobuf/",
       },
       {

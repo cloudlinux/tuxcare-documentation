@@ -6,12 +6,14 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 * **Aircompressor** 0.27
 * **Apache ActiveMQ Artemis** 2.26.0, 2.33.0, 2.37.0, 2.40.0
+* **Apache ActiveMQ Classic** 6.1.8
+* **Apache Ant** 1.9.4
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
 * **Apache Commons Collections** 3.2, 3.2.1
 * **Apache Commons Compress** 1.8.1, 1.12, 1.14, 1.15, 1.18, 1.19, 1.20, 1.21, 1.24.0, 1.25.0, 1.26.2
-* **Apache Commons Configuration** 2.12.0
+* **Apache Commons Configuration** 1.10, 2.12.0
 * **Apache Commons Digester** 2.0, 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2, 1.3.1, 1.5
 * **Apache Commons HttpClient** 3.1
@@ -34,7 +36,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **AssertJ** 2.9.0, 3.11.1, 3.18.1, 3.19.0, 3.23.1, 3.24.2, 3.25.3
 * **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.77, 1.78.1
-* **c3p0** 0.9.5.5
+* **c3p0** 0.9.5.4, 0.9.5.5
 * **Cassandra Java Driver** 4.18.1
 * **Couchbase Java Client** 3.6.3
 * **Couchbase JVM Core IO** 2.6.3
@@ -45,6 +47,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Eclipse Aether** 1.0.2.v20150114
 * **Eclipse JGit** 5.7.0, 5.13.3
 * **Eclipse Parsson** 1.0.0
+* **Eclipse Sisu** 0.0.0.M5
 * **EdDSA** 0.3.0
 * **el-spec** 3.0.0
 * **EWS Java API** 2.0
@@ -90,7 +93,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 2.8.0, 2.10.0
-* **Plexus Utils** 1.2, 1.4.5, 1.5.8, 2.0.4, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.24, 3.1.0, 3.2.0, 3.3.1, 3.4.2, 3.5.1, 3.6.0
+* **Plexus Utils** 1.2, 1.4.5, 1.5.6, 1.5.8, 2.0.4, 2.1, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.24, 3.1.0, 3.2.0, 3.2.1, 3.3.1, 3.4.2, 3.5.1, 3.6.0, 4.0.1
 * **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
