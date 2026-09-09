@@ -17,8 +17,6 @@ Select your subscription to see the matching setup steps:
 
 </ELSPrerequisites>
 
-Select your package manager:
-
 <TableTabs label="Choose your package manager: " :bottom-line="false" :labels="{ Yarn_Classic: 'Yarn 1 (Classic)', Yarn_Berry: 'Yarn 2 – 4.14 (Berry)', Yarn_415: 'Yarn 4.15+' }">
 
 <template #npm>
@@ -355,8 +353,6 @@ Select your package manager:
 * A JavaScript project with `package.json`. If you're starting from scratch, run your package manager's init command (`npm init -y`, `pnpm init`, `yarn init`, `bun init`) in your project directory to create one.
 
 </ELSPrerequisites>
-
-Select your package manager:
 
 <TableTabs label="Choose your package manager: " :bottom-line="false" :labels="{ Yarn_Classic: 'Yarn 1 (Classic)', Yarn_Berry: 'Yarn 2 – 4.14 (Berry)', Yarn_415: 'Yarn 4.15+' }">
 
@@ -780,8 +776,6 @@ Select your package manager:
 * A JavaScript project with `package.json`. If you're starting from scratch, run your package manager's init command (`npm init -y`, `pnpm init`, `yarn init`, `bun init`) in your project directory to create one.
 
 </ELSPrerequisites>
-
-Select your package manager:
 
 <TableTabs label="Choose your package manager: " :bottom-line="false" :labels="{ Yarn_Classic: 'Yarn 1 (Classic)', Yarn_Berry: 'Yarn 2 – 4.14 (Berry)', Yarn_415: 'Yarn 4.15+' }">
 
