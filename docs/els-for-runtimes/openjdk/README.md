@@ -178,7 +178,14 @@ Each release provides three files:
    javac -version
    ```
 
-   OpenJDK 17 reports `17.0.x`, OpenJDK 11 reports `11.0.x`, and OpenJDK 8 reports `1.8.0_xxx`. `java -version` prints to stderr — that is expected.
+   Example output:
+
+   ```text
+   openjdk version "17.0.14" 2026-01-21
+   OpenJDK Runtime Environment (build 17.0.14+7)
+   OpenJDK 64-Bit Server VM (build 17.0.14+7, mixed mode, sharing)
+   javac 17.0.14
+   ```
 
    :::warning
    Use the single-dash `-version`: it works on every version. The double-dash `--version` was added in JDK 9, so it works on OpenJDK 11 and 17 but not on OpenJDK 8.
