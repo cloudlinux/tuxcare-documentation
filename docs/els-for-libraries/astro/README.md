@@ -10,7 +10,7 @@ Endless Lifecycle Support (ELS) for Astro from TuxCare provides security fixes f
 
 <ELSBadge heading>Docker compatible</ELSBadge>
 
-:::tip Have a CLN / SecureChain token?
+:::tip Have a SecureChain token?
 Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
 :::
 

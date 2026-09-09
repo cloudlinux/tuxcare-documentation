@@ -216,6 +216,10 @@ Other libraries upon request.
 
 <ELSBadge heading>Docker compatible</ELSBadge>
 
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
+
 <ELSPrerequisites>
 
 * **npm** package manager installed
