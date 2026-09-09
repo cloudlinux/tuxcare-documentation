@@ -27,11 +27,11 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **basic-ftp** 5.0.5, 5.3.1
 * **bn.js** 4.11.8, 4.12.0
 * **body-parser** 1.8.4, 1.13.3, 1.14.2, 1.19.0, 1.20.0, 1.20.1, 1.20.2
-* **bower** 1.8.4
+* **bower** 1.8.4, 1.8.14
 * **brace-expansion** 1.1.11, 1.1.12, 2.0.1, 2.1.2
 * **braces** 0.1.5, 1.8.5, 2.3.1, 2.3.2, 3.0.2, 3.0.3
 * **browserify-sign** 4.0.4, 4.2.1
-* **browserslist** 4.10.0, 4.13.0, 4.27.0
+* **browserslist** 4.10.0, 4.13.0, 4.14.2, 4.27.0
 * **bson** 0.5.7, 1.0.9
 * **chownr** 0.0.2, 1.0.1
 * **cipher-base** 1.0.4
@@ -54,7 +54,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **diff** 1.0.2, 1.4.0, 3.5.0, 7.0.0
 * **dns-packet** 1.3.1
 * **dompurify** 2.3.0, 2.4.0, 2.4.3, 2.4.7, 2.5.8, 2.5.9, 3.0.3, 3.1.6, 3.2.3, 3.2.7, 3.4.8
-* **dset** 3.1.3
+* **dset** 3.1.2, 3.1.3
 * **ejs** 1.0.0, 2.7.4, 3.1.9
 * **elliptic** 6.4.1, 6.5.4, 6.5.5, 6.6.0, 6.6.1
 * **engine.io** 1.8.3, 3.1.5, 3.2.1
@@ -86,7 +86,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **happy-dom** 9.10.9, 14.12.3, 15.11.7
 * **hawk** 0.13.1, 1.0.0, 1.1.1, 2.3.1, 3.1.0
 * **highcharts** 6.0.7, 6.1.0, 6.1.3, 6.2.0, 7.2.0, 7.2.2, 8.2.2
-* **highlight.js** 9.18.5
+* **highlight.js** 8.9.1, 9.18.5
 * **hoek** 0.8.5, 0.9.1, 2.11.1, 2.12.0, 2.14.0, 2.16.3, 4.2.1
 * **hosted-git-info** 2.1.4, 2.7.1
 * **http-proxy-middleware** 0.0.5, 0.17.2, 0.17.3, 0.18.0, 0.19.1, 0.20.0, 1.0.0, 1.1.0, 1.3.1, 2.0.6, 2.0.7, 2.0.8, 3.0.3
@@ -95,7 +95,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **immutable** 3.8.1, 3.8.2, 3.8.3, 4.1.0, 4.3.5, 4.3.7, 5.0.3
 * **ini** 1.3.5
 * **ip** 1.1.5, 1.1.9, 2.0.0, 2.0.1
+* **ip-address** 6.4.0, 9.0.5
 * **is-my-json-valid** 2.10.1, 2.12.2
+* **jquery-mobile** 1.4.5
 * **jquery-validation** 1.19.0
 * **js-cookie** 2.2.1
 * **js-yaml** 3.3.1, 3.7.0, 3.14.1, 3.14.2, 3.15.0, 4.1.0
@@ -112,7 +114,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **lodash-es** 4.17.11, 4.17.15, 4.17.21
 * **lodash.merge** 3.3.2
 * **lodash.template** 3.6.2, 4.4.0, 4.5.0
-* **log4js** 3.0.6, 4.5.1
+* **log4js** 3.0.3, 3.0.6, 4.5.1
 * **luxon** 2.3.0
 * **markdown-it** 4.0.3, 4.3.0, 8.4.2, 13.0.2
 * **marked** 0.2.10, 0.3.19, 0.7.0, 0.8.2, 1.2.7, 4.0.6, 4.0.7, 4.0.9
@@ -137,10 +139,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **nguniversal-express-engine** 10.1.0
 * **node-forge** 0.10.0
 * **node-notifier** 5.4.5, 7.0.2
+* **node-sass** 4.14.1, 6.0.1
 * **nodemailer** 0.7.1, 2.7.2, 6.10.1
 * **npm-user-validate** 0.1.2, 0.1.5
 * **nth-check** 1.0.2
 * **object-path** 0.11.4
+* **pacote** 18.0.6, 20.0.0, 20.0.1
 * **parse-git-config** 3.0.0
 * **parsejson** 0.0.3
 * **path-to-regexp** 0.1.3, 0.1.12, 6.2.1
@@ -154,6 +158,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **pug** 2.0.4
 * **qs** 0.5.1, 0.6.6, 1.0.2, 1.2.2, 2.2.4, 2.2.5, 2.3.3, 2.4.2, 3.1.0, 4.0.0, 5.1.0, 5.2.0, 5.2.1, 6.5.3, 6.5.5, 6.7.0, 6.10.3, 6.10.7, 6.11.0, 6.14.0
 * **quill** 1.3.7
+* **react-router-dom** 6.30.6
+* **react-router-dom-v5-compat** 6.30.4, 6.30.6
+* **react-router-native** 6.30.6
 * **react-server-dom-esm** 0.0.0-13a913d5-20260727
 * **react-server-dom-parcel** 19.2.0
 * **react-server-dom-turbopack** 19.2.0
@@ -180,7 +187,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **swagger-ui** 2.2.10
 * **swagger-ui-dist** 3.52.5
 * **swiper** 8.4.7, 11.2.10
+* **systeminformation** 5.23.8
 * **tar** 1.0.3, 2.1.1, 2.2.1, 2.2.2, 4.4.19, 6.0.2, 6.1.15, 6.2.0, 6.2.1
+* **tar-fs** 1.5.1, 3.0.4
 * **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.1, 5.3.0, 5.5.1, 5.7.1, 5.10.0
 * **tinymce** 4.9.11, 5.10.9, 6.8.6
 * **tmp** 0.0.24, 0.0.28, 0.0.30, 0.0.31, 0.0.33, 0.1.0, 0.2.1, 0.2.3
@@ -192,14 +201,14 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **underscore** 1.4.4, 1.6.0, 1.7.0, 1.13.4
 * **underscore.string** 2.2.1, 2.3.3
 * **uuid** 3.4.0, 8.3.2, 9.0.1, 11.0.5
-* **validator** 8.2.0, 10.11.0
+* **validator** 8.2.0, 10.11.0, 13.12.0
 * **webpack-bundle-analyzer** 2.13.1
 * **webpack-dev-middleware** 1.10.2, 1.12.0, 1.12.2, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3, 7.4.5
 * **webpack-subresource-integrity** 1.4.0, 1.4.1
 * **websocket-driver** 0.6.5
 * **websocket-extensions** 0.1.1
 * **word-wrap** 1.2.3
-* **ws** 0.8.1, 1.1.1, 1.1.2, 1.1.5, 3.3.3, 4.1.0, 6.2.1, 7.4.6, 7.5.9, 8.16.0, 8.18.0, 8.20.0
+* **ws** 0.8.1, 1.1.1, 1.1.2, 1.1.5, 3.3.3, 4.1.0, 6.0.0, 6.2.1, 7.4.5, 7.4.6, 7.5.9, 8.13.0, 8.16.0, 8.18.0, 8.20.0
 * **xlsx** 0.18.5
 * **xml2js** 0.2.6, 0.2.8, 0.4.23
 * **xmldom** 0.1.31, 0.6.0

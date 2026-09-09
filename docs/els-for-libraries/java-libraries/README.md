@@ -4,24 +4,25 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 
 ## Supported Java Libraries
 
-* **Aircompressor** 0.27
+* **Aircompressor** 0.8, 0.10, 0.20, 0.21, 0.27
 * **Apache ActiveMQ Artemis** 2.26.0, 2.33.0, 2.37.0, 2.40.0
 * **Apache ActiveMQ Classic** 6.1.8
 * **Apache Ant** 1.9.4
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
-* **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
+* **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.0, 1.9.2, 1.9.4, 1.10.0, 1.10.1
 * **Apache Commons Collections** 3.2, 3.2.1
 * **Apache Commons Compress** 1.8.1, 1.12, 1.14, 1.15, 1.18, 1.19, 1.20, 1.21, 1.24.0, 1.25.0, 1.26.2
-* **Apache Commons Configuration** 1.10, 2.12.0
+* **Apache Commons Configuration** 1.10, 2.11.0, 2.12.0
 * **Apache Commons Digester** 2.0, 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2, 1.3.1, 1.5
 * **Apache Commons HttpClient** 3.1
-* **Apache Commons IO** 2.2, 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
+* **Apache Commons IO** 2.0.1, 2.2, 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
 * **Apache HttpComponents Client** 4.2, 4.2.6, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
 * **Apache HttpComponents Client 5** 5.5.2
+* **Apache HttpComponents Core 5** 5.2.5
 * **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
 * **Apache POI** 3.10-FINAL, 4.1.2
@@ -41,7 +42,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Couchbase Java Client** 3.6.3
 * **Couchbase JVM Core IO** 2.6.3
 * **Couchbase JVM Core IO Deps** 1.6.3
-* **DNSJava** 2.1.7
+* **DNSJava** 2.1.7, 3.5.2
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
 * **Eclipse Aether** 1.0.2.v20150114
@@ -58,6 +59,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
 * **Grails** 2.5.6, 5.3.6, 6.2.1, 6.2.3
+* **Grails Plugin Converters** 5.0.0
 * **H2 Database** 1.3.176, 1.4.200, 2.1.210
 * **Hazelcast** 4.2.8
 * **HornetQ** 2.4.9.Final
@@ -72,15 +74,16 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **jose4j** 0.8.0
 * **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
-* **JSON Smart v2** 1.3.2, 2.4.8
+* **JSON Smart v2** 1.3.2, 2.4.8, 2.5.0
 * **json-io** 2.9.4
+* **JsonPath** 2.2.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
 * **jsoup** 1.7.2, 1.7.3
 * **JUnit** 4.13
 * **Lettuce** 6.1.10.RELEASE, 6.3.2.RELEASE
 * **Logback** 1.1.7, 1.2.3, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18
 * **LZ4** 1.8.0, 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
-* **Micronaut** 3.6.0, 3.8.5, 3.10.4
+* **Micronaut** 3.6.0, 3.8.5, 3.10.4, 4.5.4
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
 * **MySQL Connector/J** 5.1.49
@@ -93,11 +96,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 2.8.0, 2.10.0
-* **Plexus Utils** 1.2, 1.4.5, 1.5.6, 1.5.8, 2.0.4, 2.1, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.24, 3.1.0, 3.2.0, 3.2.1, 3.3.1, 3.4.2, 3.5.1, 3.6.0, 4.0.1
+* **Plexus Utils** 1.2, 1.4.5, 1.5.6, 1.5.8, 1.5.15, 2.0.4, 2.0.5, 2.0.6, 2.1, 3.0.1, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.24, 3.1.0, 3.2.0, 3.2.1, 3.3.1, 3.4.1, 3.4.2, 3.5.1, 3.6.0, 4.0.0, 4.0.1, 4.0.2
 * **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
-* **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2022.0.15
-* **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.15, 1.1.31
+* **RabbitMQ Java Client** 5.19.0
+* **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2020.0.47, 2022.0.13, 2022.0.15, 2023.0.19
+* **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31
 * **Retrofit** 2.9.0
 * **RSocket** 1.1.3, 1.1.5
 * **SLF4J** 1.6.1, 1.7.21

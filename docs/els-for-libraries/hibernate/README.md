@@ -5,7 +5,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Hibernate provides security patche
 ## Supported Versions
 
 * Hibernate Commons Annotations 5.1.2.Final
-* Hibernate ORM 4.3.11.Final, 5.1.2.Final, 5.4.3.Final, 5.4.30.Final, 5.4.31.Final, 5.4.32.Final, 5.4.33.Final, 5.5.6.Final, 5.5.9.Final, 5.6.15.Final, 6.2.5.Final, 6.4.10.Final, 6.5.3.Final, 6.6.39.Final
+* Hibernate ORM 4.3.11.Final, 5.1.2.Final, 5.4.3.Final, 5.4.30.Final, 5.4.31.Final, 5.4.32.Final, 5.4.33.Final, 5.5.6.Final, 5.5.9.Final, 5.6.15.Final, 6.2.5.Final, 6.2.20.Final, 6.4.10.Final, 6.5.3.Final, 6.6.38.Final, 6.6.39.Final
 * Hibernate Search 5.11.10.Final
 * Hibernate Validator 5.4.3.Final, 6.2.5.Final
 
