@@ -10,6 +10,10 @@ Angular versions from 4 to 19 are supported.
 
 <ELSBadge heading>Docker compatible</ELSBadge>
 
+:::tip Have a SecureChain token?
+Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+:::
+
 <ELSPrerequisites>
 
 * **npm** version 9.6.3 or later  
