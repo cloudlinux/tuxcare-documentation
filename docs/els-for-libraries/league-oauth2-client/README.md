@@ -1,10 +1,10 @@
-# CraftCMS Feed Me Plugin
+# League OAuth2 Client
 
-Endless Lifecycle Support (ELS) for the CraftCMS Feed Me plugin from TuxCare provides security fixes for versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for League OAuth2 Client from TuxCare provides security fixes for League OAuth2 Client (an OAuth 2.0 client library) versions that have reached their end of life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **CraftCMS Feed Me Plugin** 3.x
+* **League OAuth2 Client** 1.4.2
 
 Other versions upon request.
 
@@ -55,13 +55,13 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install CraftCMS Feed Me
+4. Install League OAuth2 Client
 
-   Install the TuxCare-maintained CraftCMS Feed Me release that matches your project:
+   Install the TuxCare-maintained League OAuth2 Client release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require verbb/feed-me:3.1.17-p5+tuxcare` },
-     { title: 'composer.json', content: packagejson }
+     { title: 'Composer CLI', content: `composer require league/oauth2-client:1.4.2-p1+tuxcare` },
+     { title: 'composer.json', content: pkgjson }
    ]" />
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -108,9 +108,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=verbb%2Ffeed-me) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=verbb%2Ffeed-me) — Patched versions and changelogs
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/verbb/feed-me/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=league%2Foauth2-client) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=league%2Foauth2-client) — Patched versions and changelogs
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/league/oauth2-client/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
@@ -145,10 +145,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const packagejson =
+const pkgjson =
 `{
     "require": {
-        "verbb/feed-me": "3.1.17-p5+tuxcare"
+        "league/oauth2-client": "1.4.2-p1+tuxcare"
     }
 }`
 

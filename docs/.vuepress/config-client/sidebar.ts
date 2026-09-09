@@ -253,6 +253,18 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/zf-apigility/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/assetic/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/assetmanager/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/aws-sdk-php/',
                     icon: '/images/aws.webp',
                 },
@@ -313,6 +325,10 @@ export default {
                     icon: '/images/laravel-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/laravel-datatables/',
+                    icon: '/images/Yajra.webp',
+                },
+                {
                     path: '/els-for-libraries/laravel-media-library/',
                     icon: '/images/spatie.webp',
                 },
@@ -323,6 +339,10 @@ export default {
                 {
                     path: '/els-for-libraries/league-flysystem/',
                     icon: '/images/flysystem.webp',
+                },
+                {
+                    path: '/els-for-libraries/league-oauth2-client/',
+                    icon: '/images/php-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/livewire/',
@@ -361,8 +381,16 @@ export default {
                     icon: '/images/ratchet.webp',
                 },
                 {
+                    path: '/els-for-libraries/reactphp-http-client/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/saloon/',
                     icon: '/images/saloon.webp',
+                },
+                {
+                    path: '/els-for-libraries/svg-sanitize/',
+                    icon: '/images/php-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/swiftmailer/',
@@ -370,6 +398,10 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/symfony/',
+                    icon: '/images/symfony-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/symfony-cmf-routing/',
                     icon: '/images/symfony-logo.webp',
                 },
                 {

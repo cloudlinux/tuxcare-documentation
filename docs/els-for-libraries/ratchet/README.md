@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Ratchet from TuxCare provides security fixes
 ## Supported Versions
 
 * **Ratchet** 0.3.6
+* **Ratchet Pawl** 0.1.2
 
 Other versions upon request.
 
@@ -59,10 +60,27 @@ Other versions upon request.
 
    Install the TuxCare-maintained Ratchet release that matches your project:
 
+   <TableTabs label="Choose package: ">
+
+   <template #Ratchet_0.3>
+
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require cboden/ratchet:v0.3.6-p4+tuxcare` },
-     { title: 'composer.json', content: pkgjson }
+     { title: 'composer.json', content: ratchetjson }
    ]" />
+
+   </template>
+
+   <template #Ratchet_Pawl_0.1>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require ratchet/pawl:v0.1.2-p2+tuxcare` },
+     { title: 'composer.json', content: pawljson }
+   ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -145,10 +163,17 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const pkgjson =
+const ratchetjson =
 `{
     "require": {
         "cboden/ratchet": "v0.3.6-p4+tuxcare"
+    }
+}`
+
+const pawljson =
+`{
+    "require": {
+        "ratchet/pawl": "v0.1.2-p2+tuxcare"
     }
 }`
 
