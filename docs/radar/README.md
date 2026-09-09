@@ -13,7 +13,7 @@ First you need to install our repository configuration:
 RPM-based distributions (AlmaLinux, RHEL etc):
 
 ```text
-cat > /etc/yum.repos.d/tuxcare-radar.repo <<EOL
+cat > /etc/yum.repos.d/tuxcare-radar.repo <<EOF
 [tuxcare-radar]
 name=TuxCare Radar
 baseurl=https://repo.tuxcare.com/radar/\$releasever/\$basearch/
@@ -21,20 +21,24 @@ enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 gpgkey=https://repo.tuxcare.com/radar/RPM-GPG-KEY-TuxCare
-EOL
+EOF
 ```
 
 APT-based distributions (Debian, Ubuntu etc):
 
 ```text
-curl -s https://repo.tuxcare.com/radar/tuxcare.gpg -o /usr/share/keyrings/tuxcare.gpg
-
+curl -fsSL https://repo.tuxcare.com/radar/tuxcare.gpg -o /usr/share/keyrings/tuxcare.gpg
+chmod 0644 /usr/share/keyrings/tuxcare.gpg
 source /etc/os-release
 
-printf '%s' \
-  "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/tuxcare.gpg] " \
-  "https://repo.tuxcare.com/radar/$ID/$VERSION_ID " \
-  "stable main" > /etc/apt/sources.list.d/tuxcare-radar.list
+cat > /etc/apt/sources.list.d/tuxcare-radar.sources <<EOF
+Types: deb
+URIs: https://repo.tuxcare.com/radar/$ID/$VERSION_ID
+Suites: stable
+Components: main
+Architectures: amd64 arm64
+Signed-By: /usr/share/keyrings/tuxcare.gpg
+EOF
 ```
 
 You should now be able to install Radar as simply as running one of the following:
@@ -53,7 +57,11 @@ apt-get install tuxcare-radar
 ```
 
 :::warning
-If you do an in-place upgrade of your APT-based OS, you should change the version number in `/etc/apt/sources.list.d/tuxcare-radar.list` beforehand.
+On Ubuntu 16.04 you may need to also install the `apt-transport-https` and `ca-certificates` packages to allow APT to use https repositories, if you haven't already done so.
+:::
+
+:::warning
+If you do an in-place upgrade of your APT-based OS, you should change the version number in `/etc/apt/sources.list.d/tuxcare-radar.*` beforehand.
 :::
 
 ## Configuration
