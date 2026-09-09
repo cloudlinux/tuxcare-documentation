@@ -19,6 +19,10 @@ defineProps({
   labels: {
     type: Object,
     default: () => ({})
+  },
+  bottomLine: {
+    type: Boolean,
+    default: true
   }
 })
 
@@ -61,7 +65,7 @@ watch(activeTab, (newVal) => {
       <slot :name="currentTab" />
     </div>
 
-    <div class="bottom-line" />
+    <div v-if="bottomLine" class="bottom-line" />
   </div>
 </template>
 
