@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for ember-cli from TuxCare provides security fix
 
 ## Supported Versions
 
-* ember-cli 1.13.11
+* ember-cli 0.2.7, 1.13.11, 2.18.2, 3.28.6
 
 ## Installation
 
