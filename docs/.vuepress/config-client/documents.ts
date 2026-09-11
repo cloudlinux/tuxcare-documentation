@@ -35,6 +35,11 @@ export default [
         link: "/eportal-api/",
     },
     {
+        title: "Endless Lifecycle Support",
+        description: "extends security patching for end-of-life operating systems, runtimes, libraries and applications. Start here to see how ELS is delivered and which product fits your case.",
+        link: "/endless-lifecycle-support/",
+    },
+    {
         title: "ELS for Operating Systems",
         description: "allows you to continue running your Linux server after the operating system’s end of life.",
         link: "/els-for-os/",
