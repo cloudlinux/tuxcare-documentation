@@ -1,0 +1,1 @@
+const t=JSON.parse(`{"key":"v-69c05f1a","path":"/els-for-os/cloudlinux-7-els/","title":"CloudLinux 7 ELS","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"How it works","slug":"how-it-works","link":"#how-it-works","children":[]},{"level":2,"title":"What's Next?","slug":"whats-next","link":"#whats-next","children":[]}]}`);export{t as data};
