@@ -2,6 +2,10 @@
 
 # Endless Lifecycle Support for Open-Source Applications
 
+:::tip
+New to ELS? [Endless Lifecycle Support](/endless-lifecycle-support/) explains how ELS is delivered and how to get access.
+:::
+
 <ELSApplication />
 
 ## Vulnerability Coverage and Target Response Times
