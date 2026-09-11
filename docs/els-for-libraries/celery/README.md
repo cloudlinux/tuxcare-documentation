@@ -1,6 +1,6 @@
 # Celery
 
-Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for Celery. This allows you to continue running your Celery applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Celery from TuxCare provides security fixes for Celery. This allows you to continue running your Celery applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
