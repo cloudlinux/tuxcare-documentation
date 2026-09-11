@@ -50,14 +50,6 @@ Endless Lifecycle Support (ELS) for PostgreSQL from TuxCare provides security fi
 
 </ELSSteps>
 
-## Removing the repository
-
-To remove the PostgreSQL ELS repository:
-
-```text
-sh install-postgresql-els-repo.sh --delete
-```
-
 ## What's Next?
 
 <WhatsNext hide-title>

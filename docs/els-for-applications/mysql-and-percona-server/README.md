@@ -49,14 +49,6 @@ Endless Lifecycle Support (ELS) for MySQL and Percona Server from TuxCare provid
 
 </ELSSteps>
 
-## Removing the repository
-
-To remove the MySQL ELS repository:
-
-```text
-sh install-mysql-els-repo.sh --delete
-```
-
 ## What's Next?
 
 <WhatsNext hide-title>

@@ -26,6 +26,38 @@ This page provides instructions for upgrading to newer TuxCare-patched applicati
 
 If you encounter any issues, please contact [TuxCare support](https://tuxcare.com/support-portal/).
 
+## Removing the ELS repository
+
+The ELS repository is removed by running the installation script with the `--delete` flag.
+
+<TableTabs label="Choose the application: " :labels="{ MariaDB: 'MariaDB', MySQL_and_Percona_Server: 'MySQL and Percona Server', PostgreSQL: 'PostgreSQL' }">
+
+<template #MariaDB>
+
+```text
+sh install-mariadb-els-repo.sh --delete
+```
+
+</template>
+
+<template #MySQL_and_Percona_Server>
+
+```text
+sh install-mysql-els-repo.sh --delete
+```
+
+</template>
+
+<template #PostgreSQL>
+
+```text
+sh install-postgresql-els-repo.sh --delete
+```
+
+</template>
+
+</TableTabs>
+
 ## Source code
 
 TuxCare provides source code for patched applications in the [Nexus repository](https://nexus.repo.tuxcare.com). Source archives and JARs follow the standard naming conventions with a `-sources` classifier or suffix.

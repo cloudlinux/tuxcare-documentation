@@ -45,14 +45,6 @@ Endless Lifecycle Support (ELS) for MariaDB from TuxCare provides security fixes
 
 </ELSSteps>
 
-## Removing the repository
-
-To remove the MariaDB ELS repository:
-
-```text
-sh install-mariadb-els-repo.sh --delete
-```
-
 ## What's Next?
 
 <WhatsNext hide-title>
