@@ -30,11 +30,29 @@
 3. Verify that the installation was successful by running the following command
 
    ```
-   yum info els-define
+   yum info els-os-release
    ```
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
    After that, you can install updates from the repository using a standard `yum upgrade` command.
+
+   Example:
+
+   ```
+   [els@amazonlinux2 ~]# yum info els-os-release
+   Loaded plugins: priorities
+   Installed Packages
+   Name        : els-os-release
+   Arch        : noarch
+   Version     : 1.0.0
+   Release     : 2.amzn2
+   Size        : 3.4 k
+   Repo        : installed
+   Summary     : TuxCare OS ELS repository configuration
+   License     : GPLv2+
+   Description : This package configures the TuxCare ELS repository for Amazon
+               : Linux 2 system.
+   ```
 
 </ELSSteps>
 
