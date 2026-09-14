@@ -888,7 +888,7 @@ const techData = [
       },
       {
         name: "ajv",
-        versions: "4.11.8 | 5.5.2 | 6.4.0 | 6.5.3 | 6.9.1 | 6.10.0 | 6.11.0 | 6.12.3 | 6.12.4 | 6.12.6 | 6.14.0 | 8.6.2 | 8.9.0 | 8.11.0 | 8.12.0 | 8.17.1",
+        versions: "4.11.8 | 5.5.2 | 6.4.0 | 6.5.3 | 6.9.1 | 6.10.0 | 6.10.2 | 6.11.0 | 6.12.3 | 6.12.4 | 6.12.6 | 6.14.0 | 8.6.2 | 8.9.0 | 8.11.0 | 8.12.0 | 8.17.1",
         link: "./javascript-libraries/",
       },
       {
@@ -928,12 +928,12 @@ const techData = [
       },
       {
         name: "babel-core",
-        versions: "7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-helpers",
-        versions: "7.15.4 | 7.18.9 | 7.21.0 | 7.21.5 | 7.24.0 | 7.24.1 | 7.25.6 | 7.26.0 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.15.4 | 7.18.9 | 7.21.0 | 7.21.5 | 7.24.0 | 7.24.1 | 7.25.6 | 7.26.0 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
@@ -943,17 +943,17 @@ const techData = [
       },
       {
         name: "babel-runtime",
-        versions: "7.11.2 | 7.12.5 | 7.12.18 | 7.14.8 | 7.15.4 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.6 | 7.22.15 | 7.23.1 | 7.23.2 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.4 | 7.24.7 | 7.25.7 | 7.26.0",
+        versions: "7.11.2 | 7.11.5 | 7.12.5 | 7.12.13 | 7.12.18 | 7.14.8 | 7.15.4 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.6 | 7.22.15 | 7.23.1 | 7.23.2 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.4 | 7.24.7 | 7.25.7 | 7.26.0",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-runtime-corejs2",
-        versions: "7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-runtime-corejs3",
-        versions: "7.15.3 | 7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.15.3 | 7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1282,8 +1282,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "hapi-content",
+        versions: "5.0.2",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "hapi-hoek",
         versions: "6.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "hapi-wreck",
+        versions: "17.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1358,7 +1368,7 @@ const techData = [
       },
       {
         name: "jQuery",
-        versions: "1.4.1 | 1.4.2 | 1.4.3 | 1.8.2 | 1.8.3 | 1.11.3 | 1.12.4 | 2.1.3 | 2.2.4 | 3.1.1 | 3.2.1 | 3.3.1 | 3.4.1",
+        versions: "1.3.2 | 1.4.1 | 1.4.2 | 1.4.3 | 1.8.2 | 1.8.3 | 1.11.3 | 1.12.4 | 2.1.3 | 2.2.4 | 3.1.1 | 3.2.1 | 3.3.1 | 3.4.1",
         link: "./jquery/",
       },
       {
@@ -1422,6 +1432,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "jwt-simple",
+        versions: "0.3.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "knex",
         versions: "0.95.15",
         link: "./javascript-libraries/",
@@ -1440,6 +1455,11 @@ const techData = [
         name: "koa",
         versions: "1.7.1",
         link: "./koa/",
+      },
+      {
+        name: "koa-cors",
+        versions: "3.4.3",
+        link: "./javascript-libraries/",
       },
       {
         name: "Lodash",
@@ -1633,7 +1653,7 @@ const techData = [
       },
       {
         name: "nodemailer",
-        versions: "0.7.1 | 2.7.2 | 6.10.1",
+        versions: "0.7.1 | 2.7.2 | 6.10.1 | 9.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1753,12 +1773,12 @@ const techData = [
       },
       {
         name: "react-router",
-        versions: "6.3.0 | 6.30.6 | 7.5.1",
+        versions: "6.3.0 | 6.30.3 | 6.30.6 | 7.5.1",
         link: "./react-router/",
       },
       {
         name: "react-router-dom",
-        versions: "6.30.6",
+        versions: "6.30.3 | 6.30.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1768,7 +1788,7 @@ const techData = [
       },
       {
         name: "react-router-native",
-        versions: "6.30.6",
+        versions: "6.30.3 | 6.30.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1893,7 +1913,7 @@ const techData = [
       },
       {
         name: "svgo",
-        versions: "2.8.0",
+        versions: "2.8.0 | 4.0.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1987,6 +2007,21 @@ const techData = [
         link: "./undici/",
       },
       {
+        name: "unhead",
+        versions: "1.11.20",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "unhead-schema",
+        versions: "1.11.20",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "unhead-vue",
+        versions: "1.11.20",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "uuid",
         versions: "3.4.0 | 8.3.2 | 9.0.1 | 11.0.5",
         link: "./javascript-libraries/",
@@ -1997,8 +2032,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "visualcaptcha.jquery",
+        versions: "0.0.8",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "Vite",
-        versions: "2.9.18 | 3.2.11 | 4.5.5 | 4.5.14 | 5.4.14 | 5.4.21 | 6.4.2",
+        versions: "2.9.18 | 3.2.11 | 4.1.5 | 4.5.5 | 4.5.14 | 5.4.14 | 5.4.21 | 6.4.2 | 7.3.2 | 7.3.3 | 8.0.8 | 8.0.10 | 8.0.12",
         link: "./vite/",
       },
       {
@@ -2020,6 +2060,121 @@ const techData = [
         name: "vue-template-compiler",
         versions: "2.6.11 | 2.6.14 | 2.7.16",
         link: "./vue-template-compiler/",
+      },
+      {
+        name: "web3",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-bzz",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-helpers",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-method",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-promievent",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-requestmanager",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-core-subscriptions",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-abi",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-accounts",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-contract",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-ens",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-iban",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth-personal",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth2-beaconchain",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-eth2-core",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-net",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-providers-http",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-providers-ipc",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-providers-ws",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-shh",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "web3-utils",
+        versions: "1.10.4",
+        link: "./javascript-libraries/",
       },
       {
         name: "webpack",
@@ -2104,6 +2259,11 @@ const techData = [
       {
         name: "yarn",
         versions: "1.15.2 | 1.21.0 | 1.22.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "yeoman-environment",
+        versions: "3.19.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2491,6 +2651,36 @@ const techData = [
       {
         name: "Drupal",
         versions: "8.9.x | 9.5.x",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Bootstrap Site Alert",
+        versions: "7.1.6",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Colorbox",
+        versions: "2.1.2 | 7.2.19",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal GDPR",
+        versions: "3.1.0 | 7.1.0",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Link",
+        versions: "7.1.13",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal OpenID Connect",
+        versions: "7.1.3",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal SpamSpan",
+        versions: "3.2.0 | 7.1.4",
         link: "./drupal/",
       },
       {

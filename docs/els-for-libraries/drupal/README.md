@@ -1,10 +1,16 @@
 # Drupal
 
-Endless Lifecycle Support (ELS) for Drupal from TuxCare provides security fixes for Drupal core versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Drupal from TuxCare provides security fixes for Drupal core and contributed modules that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
 * **drupal/core** 8.9.x, 9.5.x
+* **drupal/bootstrap_site_alert** 7.1.6
+* **drupal/colorbox** 2.1.2, 7.2.19
+* **drupal/gdpr** 3.1.0, 7.1.0
+* **drupal/link** 7.1.13
+* **drupal/openid_connect** 7.1.3
+* **drupal/spamspan** 3.2.0, 7.1.4
 
 Other versions upon request.
 

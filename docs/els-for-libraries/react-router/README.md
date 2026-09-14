@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for react-router from TuxCare provides security 
 
 ## Supported Versions
 
-* react-router 6.3.0, 6.30.6, 7.5.1
+* react-router 6.3.0, 6.30.3, 6.30.6, 7.5.1
 
 ## Installation
 
@@ -70,6 +70,32 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
       },
       "overrides": {
         "react-router@6.3.0": "npm:@els-js/react-router@>=6.3.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #react_router_6.30.3>
+
+      ```text
+      "dependencies": {
+        "react-router": "npm:@els-js/react-router@>=6.30.3-tuxcare.1"
+      },
+      "overrides": {
+        "react-router@6.30.3": "npm:@els-js/react-router@>=6.30.3-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #react_router_6.30.6>
+
+      ```text
+      "dependencies": {
+        "react-router": "npm:@els-js/react-router@>=6.30.6-tuxcare.1"
+      },
+      "overrides": {
+        "react-router@6.30.6": "npm:@els-js/react-router@>=6.30.6-tuxcare.1"
       }
       ```
 
