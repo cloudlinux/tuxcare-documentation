@@ -9,19 +9,19 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ag-grid** 16.0.1, 17.1.0, 17.1.1, 18.0.1, 18.1.2
 * **ag-grid-community** 20.2.0, 21.0.0, 23.0.2, 23.2.1, 24.1.0, 25.0.0, 26.0.0, 26.1.0, 26.2.0, 26.2.1, 28.1.0, 28.1.1, 28.2.0, 29.1.0, 30.1.0, 30.2.0, 31.1.1
 * **ag-grid-enterprise** 16.0.1, 17.1.1, 18.0.1, 20.2.0, 21.0.0, 23.0.2, 23.2.1, 24.1.0, 25.0.0, 26.1.0, 26.2.0, 26.2.1, 28.1.0, 28.1.3, 30.1.0, 31.1.1
-* **ajv** 4.11.8, 5.5.2, 6.4.0, 6.5.3, 6.9.1, 6.10.0, 6.11.0, 6.12.3, 6.12.4, 6.12.6, 6.14.0, 8.6.2, 8.9.0, 8.11.0, 8.12.0, 8.17.1
+* **ajv** 4.11.8, 5.5.2, 6.4.0, 6.5.3, 6.9.1, 6.10.0, 6.10.2, 6.11.0, 6.12.3, 6.12.4, 6.12.6, 6.14.0, 8.6.2, 8.9.0, 8.11.0, 8.12.0, 8.17.1
 * **animations** 6.0.1
 * **ansi-html** 0.0.7
 * **ansi-regex** 3.0.0
 * **async** 2.6.1, 2.6.3
 * **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.24.0, 0.26.0, 0.26.1, 0.27.2, 0.33.0, 1.6.2, 1.6.8, 1.7.5, 1.7.7, 1.7.9
 * **azure-identity** 4.0.1
-* **babel-core** 7.18.9, 7.21.0, 7.21.5, 7.29.0
-* **babel-helpers** 7.15.4, 7.18.9, 7.21.0, 7.21.5, 7.24.0, 7.24.1, 7.25.6, 7.26.0, 7.29.0
+* **babel-core** 7.11.5, 7.12.13, 7.18.9, 7.21.0, 7.21.5, 7.29.0
+* **babel-helpers** 7.11.5, 7.12.13, 7.15.4, 7.18.9, 7.21.0, 7.21.5, 7.24.0, 7.24.1, 7.25.6, 7.26.0, 7.29.0
 * **babel-plugin-transform-modules-systemjs** 7.15.4, 7.23.9, 7.24.1, 7.25.0
-* **babel-runtime** 7.11.2, 7.12.5, 7.12.18, 7.14.8, 7.15.4, 7.16.7, 7.18.9, 7.21.0, 7.21.5, 7.22.6, 7.22.15, 7.23.1, 7.23.2, 7.23.9, 7.24.0, 7.24.1, 7.24.4, 7.24.7, 7.25.7, 7.26.0
-* **babel-runtime-corejs2** 7.18.9, 7.21.0, 7.21.5, 7.29.0
-* **babel-runtime-corejs3** 7.15.3, 7.18.9, 7.21.0, 7.21.5, 7.29.0
+* **babel-runtime** 7.11.2, 7.11.5, 7.12.5, 7.12.13, 7.12.18, 7.14.8, 7.15.4, 7.16.7, 7.18.9, 7.21.0, 7.21.5, 7.22.6, 7.22.15, 7.23.1, 7.23.2, 7.23.9, 7.24.0, 7.24.1, 7.24.4, 7.24.7, 7.25.7, 7.26.0
+* **babel-runtime-corejs2** 7.11.5, 7.12.13, 7.18.9, 7.21.0, 7.21.5, 7.29.0
+* **babel-runtime-corejs3** 7.11.5, 7.12.13, 7.15.3, 7.18.9, 7.21.0, 7.21.5, 7.29.0
 * **babel-traverse** 6.26.0, 7.15.4
 * **base64url** 0.0.6
 * **basic-ftp** 5.0.5, 5.3.1
@@ -82,7 +82,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **got** 2.9.2, 6.7.1, 8.3.2, 9.6.0
 * **growl** 1.7.0
 * **handlebars** 1.0.12, 1.3.0, 2.0.0, 3.0.3, 3.0.8, 4.7.7, 4.7.8, 4.7.9
+* **hapi-content** 5.0.2
 * **hapi-hoek** 6.2.4
+* **hapi-wreck** 17.2.0
 * **happy-dom** 9.10.9, 14.12.3, 15.11.7
 * **hawk** 0.13.1, 1.0.0, 1.1.1, 2.3.1, 3.1.0
 * **highcharts** 6.0.7, 6.1.0, 6.1.3, 6.2.0, 7.2.0, 7.2.2, 8.2.2
@@ -107,7 +109,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **jsonpointer** 1.1.0, 2.0.0, 4.1.0
 * **jspdf** 1.4.1, 2.5.1, 2.5.2, 3.0.4
 * **jws** 0.2.6
+* **jwt-simple** 0.3.1
 * **knex** 0.95.15
+* **koa-cors** 3.4.3
 * **linkify-it** 1.2.4, 4.0.1
 * **linkifyjs** 4.1.3
 * **loader-utils** 0.2.17, 1.1.0, 1.2.3, 2.0.0
@@ -140,7 +144,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **node-forge** 0.10.0
 * **node-notifier** 5.4.5, 7.0.2
 * **node-sass** 4.14.1, 6.0.1
-* **nodemailer** 0.7.1, 2.7.2, 6.10.1
+* **nodemailer** 0.7.1, 2.7.2, 6.10.1, 9.1.0
 * **npm-user-validate** 0.1.2, 0.1.5
 * **nth-check** 1.0.2
 * **object-path** 0.11.4
@@ -158,9 +162,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **pug** 2.0.4
 * **qs** 0.5.1, 0.6.6, 1.0.2, 1.2.2, 2.2.4, 2.2.5, 2.3.3, 2.4.2, 3.1.0, 4.0.0, 5.1.0, 5.2.0, 5.2.1, 6.5.3, 6.5.5, 6.7.0, 6.10.3, 6.10.7, 6.11.0, 6.14.0
 * **quill** 1.3.7
-* **react-router-dom** 6.30.6
+* **react-router-dom** 6.30.3, 6.30.6
 * **react-router-dom-v5-compat** 6.30.4, 6.30.6
-* **react-router-native** 6.30.6
+* **react-router-native** 6.30.3, 6.30.6
 * **react-server-dom-esm** 0.0.0-13a913d5-20260727
 * **react-server-dom-parcel** 19.2.0
 * **react-server-dom-turbopack** 19.2.0
@@ -183,7 +187,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **ssri** 7.1.0
 * **storybook** 7.0.7, 8.6.14, 9.1.16, 10.1.9
 * **stringstream** 0.0.4, 0.0.5
-* **svgo** 2.8.0
+* **svgo** 2.8.0, 4.0.2
 * **swagger-ui** 2.2.10
 * **swagger-ui-dist** 3.52.5
 * **swiper** 8.4.7, 11.2.10
@@ -200,8 +204,35 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **uglify-js** 1.1.1, 1.3.5, 2.3.6
 * **underscore** 1.4.4, 1.6.0, 1.7.0, 1.13.4
 * **underscore.string** 2.2.1, 2.3.3
+* **unhead** 1.11.20
+* **unhead-schema** 1.11.20
+* **unhead-vue** 1.11.20
 * **uuid** 3.4.0, 8.3.2, 9.0.1, 11.0.5
 * **validator** 8.2.0, 10.11.0, 13.12.0
+* **visualcaptcha.jquery** 0.0.8
+* **web3** 1.10.4
+* **web3-bzz** 1.10.4
+* **web3-core** 1.10.4
+* **web3-core-helpers** 1.10.4
+* **web3-core-method** 1.10.4
+* **web3-core-promievent** 1.10.4
+* **web3-core-requestmanager** 1.10.4
+* **web3-core-subscriptions** 1.10.4
+* **web3-eth** 1.10.4
+* **web3-eth-abi** 1.10.4
+* **web3-eth-accounts** 1.10.4
+* **web3-eth-contract** 1.10.4
+* **web3-eth-ens** 1.10.4
+* **web3-eth-iban** 1.10.4
+* **web3-eth-personal** 1.10.4
+* **web3-eth2-beaconchain** 1.10.4
+* **web3-eth2-core** 1.10.4
+* **web3-net** 1.10.4
+* **web3-providers-http** 1.10.4
+* **web3-providers-ipc** 1.10.4
+* **web3-providers-ws** 1.10.4
+* **web3-shh** 1.10.4
+* **web3-utils** 1.10.4
 * **webpack-bundle-analyzer** 2.13.1
 * **webpack-dev-middleware** 1.10.2, 1.12.0, 1.12.2, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3, 7.4.5
 * **webpack-subresource-integrity** 1.4.0, 1.4.1
@@ -217,6 +248,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **yaml** 1.10.2, 2.5.0
 * **yargs-parser** 4.2.1, 7.0.0, 10.1.0, 11.1.1, 13.1.2
 * **yarn** 1.15.2, 1.21.0, 1.22.1
+* **yeoman-environment** 3.19.3
 * **zod** 3.21.4, 3.25.76
 
 Other libraries upon request.
