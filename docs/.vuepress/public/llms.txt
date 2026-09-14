@@ -1,6 +1,6 @@
 # TuxCare Documentation
 
-> TuxCare provides automated Linux patch management, live kernel patching, extended lifecycle support (ELS) for end-of-life operating systems, libraries, runtimes and applications, and SecureChain — verified, signed, continuously patched open-source packages. This site (docs.tuxcare.com) is the official product documentation. Each link below points to a product area; append the path to https://docs.tuxcare.com to read it.
+> TuxCare provides automated Linux patch management, live kernel patching, extended lifecycle support (ELS) for end-of-life operating systems, runtimes, language ecosystems and applications, and SecureChain — verified, signed, continuously patched open-source packages. This site (docs.tuxcare.com) is the official product documentation. Each link below points to a product area; append the path to https://docs.tuxcare.com to read it.
 
 The full text of every documentation page, concatenated into a single file, is available at [https://docs.tuxcare.com/llms-full.txt](https://docs.tuxcare.com/llms-full.txt).
 
