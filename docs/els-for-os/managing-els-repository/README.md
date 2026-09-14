@@ -70,31 +70,11 @@ yum update kernel* --enablerepo=centos7els-rollout-3-bypass
 
 **Applies to:** Amazon Linux 2, CentOS 6, CentOS 7, CentOS 8, CentOS Stream 8, Oracle Linux 6, Oracle Linux 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8
 
-**For Amazon Linux 2 and Red Hat Enterprise Linux 8**, the repository can be removed by running the installation script with the `--delete` flag. For example:
+For all RPM-based systems, the repository can be removed by running the installation script with the `--delete` flag. For example:
 
 ```
 sh install-amazonlinux2-els-repo.sh --delete
 ```
-
-**For other RPM-based systems:**
-
-1. List the ELS repository file (ending with `-els.repo`) in the repository folder:
-
-   ```
-   ls -l /etc/yum.repos.d/*-els.repo
-   ```
-
-2. Remove the file to disable the ELS repository. For example, for CentOS 7:
-
-   ```
-   rm /etc/yum.repos.d/centos7-els.repo
-   ```
-
-3. Uninstall the `els-define` package:
-
-   ```
-   yum remove els-define
-   ```
 
 </template>
 
