@@ -2,6 +2,10 @@
 
 # Endless Lifecycle Support for Language Ecosystems
 
+:::tip
+New to ELS? [Endless Lifecycle Support](/endless-lifecycle-support/) explains how ELS is delivered and how to get access.
+:::
+
 <ELSTechnology />
 
 ## Installation for Language Ecosystems
