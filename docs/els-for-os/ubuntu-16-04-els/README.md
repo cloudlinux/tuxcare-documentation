@@ -30,7 +30,7 @@
 3. Verify that the installation was successful by running the following command
 
    ```
-   apt-cache show els-define
+   apt-cache show els-os-release
    ```
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
@@ -39,22 +39,18 @@
    Example:
 
    ```
-   [els@ubuntu16 ~]# apt-cache show els-define
-   Package: els-define
-   Version: 1-1.0.1
-   Architecture: amd64
-   Maintainer: Darya Malyavkina <dmalyavkina@cloudlinux.com>
-   Installed-Size: 10
-   Homepage: https://tuxcare.com/els-for-os/
+   root@ubuntu1604:~# apt-cache show els-os-release
+   Package: els-os-release
+   Status: install ok installed
    Priority: optional
    Section: utils
-   Filename: pool/main/e/els-define/els-define_1-1.0.1_amd64.deb
-   Size: 1302
-   SHA256: a6b68c43c88a148ecc4806d0b4eb309deb5af418c8e1d0ea980fd453f5aec8dd
-   SHA1: 4907b9796c40327dbd45ecf2fd0806a32e2c24bd
-   MD5sum: 42f69c642c27052b15e4470533fdab62
-   Description: ELS define package for Ubuntu 16.04
-   Description-md5: 39e3bb446b4c63607f8f0358484545bf
+   Installed-Size: 22
+   Architecture: amd64
+   Version: 1.0.0-3
+   Replaces: els-define
+   Conflicts: els-define
+   Description: ELS os release package for deb systems
+   Homepage: https://tuxcare.com/extended-lifecycle-support/
    ```
 
 </ELSSteps>
