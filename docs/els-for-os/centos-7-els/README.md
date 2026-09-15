@@ -1,5 +1,7 @@
 # CentOS 7 ELS
 
+<ELSVendorEol os="centos-7-els" />
+
 ## Installation
 
 <ELSPrerequisites>

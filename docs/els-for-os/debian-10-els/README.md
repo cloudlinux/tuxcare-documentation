@@ -1,5 +1,7 @@
 # Debian 10 ELS
 
+<ELSVendorEol os="debian-10-els" />
+
 ## Installation
 
 <ELSPrerequisites>

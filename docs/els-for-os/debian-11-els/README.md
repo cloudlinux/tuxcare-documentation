@@ -1,5 +1,7 @@
 # Debian 11 ELS
 
+<ELSVendorEol os="debian-11-els" />
+
 ## Installation
 
 <ELSPrerequisites>

@@ -1,5 +1,7 @@
 # Ubuntu 16.04 ELS
 
+<ELSVendorEol os="ubuntu-16-04-els" />
+
 ## Installation
 
 <ELSPrerequisites>

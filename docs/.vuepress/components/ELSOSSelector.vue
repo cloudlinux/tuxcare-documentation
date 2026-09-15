@@ -9,7 +9,7 @@
       <a
         v-for="(os, index) in operatingSystems"
         :key="index"
-        :href="os.link"
+        :href="`./${os.slug}`"
         class="os-card"
       >
         <span class="os-card-icon">
@@ -30,109 +30,7 @@
 </template>
 
 <script setup>
-// `eol` is the month the vendor's own standard support runs to — Red Hat
-// Maintenance Support, Oracle Premier Support, and the equivalent elsewhere.
-// Paid extensions (Ubuntu ESM, Oracle Extended Support, Red Hat ELS) are
-// deliberately not counted. Some of these dates are still in the future, so
-// the card wording stays tense-neutral.
-const operatingSystems = [
-  {
-    name: "Amazon Linux 2",
-    icon: "/images/amazon-linux.webp",
-    link: "./amazon-linux-2-els",
-    eol: "June 2026",
-  },
-  {
-    name: "Alpine Linux 3.18",
-    icon: "/images/alpine-linux.webp",
-    link: "./alpine-linux-3-18-els",
-    eol: "May 2025",
-  },
-  {
-    name: "CentOS 6",
-    icon: "/images/centos.webp",
-    link: "./centos-6-els",
-    eol: "November 2020",
-  },
-  {
-    name: "CentOS 7",
-    icon: "/images/centos.webp",
-    link: "./centos-7-els",
-    eol: "June 2024",
-  },
-  {
-    name: "CentOS 8",
-    icon: "/images/centos.webp",
-    link: "./centos-8-els",
-    eol: "December 2021",
-  },
-  {
-    name: "CentOS Stream 8",
-    icon: "/images/centos-stream.webp",
-    link: "./centos-stream-8-els",
-    eol: "May 2024",
-  },
-  {
-    name: "CloudLinux 7",
-    icon: "/images/cloudlinux.webp",
-    link: "./cloudlinux-7-els",
-    eol: "June 2024",
-  },
-  {
-    name: "Debian 10",
-    icon: "/images/debian.webp",
-    link: "./debian-10-els",
-    eol: "June 2024",
-  },
-  {
-    name: "Debian 11",
-    icon: "/images/debian.webp",
-    link: "./debian-11-els",
-    eol: "August 2026",
-  },
-  {
-    name: "Oracle Linux 6",
-    icon: "/images/Oracle-Linux.webp",
-    link: "./oracle-linux-6-els",
-    eol: "March 2021",
-  },
-  {
-    name: "Oracle Linux 7",
-    icon: "/images/Oracle-Linux.webp",
-    link: "./oracle-linux-7-els",
-    eol: "December 2024",
-  },
-  {
-    name: "Red Hat Enterprise Linux 7",
-    icon: "/images/redhat.webp",
-    link: "./red-hat-enterprise-linux-7-els",
-    eol: "June 2024",
-  },
-  {
-    name: "Red Hat Enterprise Linux 8",
-    icon: "/images/redhat.webp",
-    link: "./red-hat-enterprise-linux-8-els",
-    eol: "May 2029",
-  },
-  {
-    name: "Ubuntu 16.04",
-    icon: "/images/Ubuntu.webp",
-    link: "./ubuntu-16-04-els",
-    eol: "April 2021",
-  },
-  {
-    name: "Ubuntu 18.04",
-    icon: "/images/Ubuntu.webp",
-    link: "./ubuntu-18-04-els",
-    eol: "May 2023",
-  },
-  {
-    name: "Ubuntu 20.04",
-    icon: "/images/Ubuntu.webp",
-    link: "./ubuntu-20-04-els",
-    eol: "May 2025",
-  },
-];
+import operatingSystems from "../config-client/osReleases";
 </script>
 
 <style scoped>
@@ -160,6 +58,9 @@ const operatingSystems = [
 .os-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* Every row sizes to the tallest card in the grid, so cards stay identical
+     across rows and not just within one — names wrap to two lines unevenly. */
+  grid-auto-rows: 1fr;
   gap: 0.75rem;
 }
 
@@ -220,7 +121,7 @@ const operatingSystems = [
 }
 
 .os-card-eol {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: #5c6370;
   line-height: 1.3;
 }
