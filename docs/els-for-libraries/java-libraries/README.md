@@ -47,7 +47,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Dom4j** 1.6.1
 * **Eclipse Aether** 1.0.2.v20150114
 * **Eclipse JGit** 5.7.0, 5.13.3
-* **Eclipse Parsson** 1.0.0
+* **Eclipse Parsson** 1.0.0, 1.1.1
 * **Eclipse Sisu** 0.0.0.M5
 * **EdDSA** 0.3.0
 * **el-spec** 3.0.0
@@ -77,7 +77,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **JSON Smart v2** 1.3.2, 2.4.8, 2.5.0
 * **json-io** 2.9.4
 * **JsonPath** 2.2.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
-* **jsoup** 1.7.2, 1.7.3
+* **jsoup** 1.7.2, 1.7.3, 1.17.2
 * **JUnit** 4.13
 * **Lettuce** 6.1.10.RELEASE, 6.3.2.RELEASE
 * **Logback** 1.1.7, 1.2.3, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18

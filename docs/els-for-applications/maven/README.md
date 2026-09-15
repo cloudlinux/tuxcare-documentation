@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Maven provides security pat
 
 ## Supported Versions
 
-* Apache Maven 3.8.1
+* Apache Maven 3.0.5, 3.2.5, 3.8.1
 * Apache Maven Shared Utils 3.2.1
 
 ## Installation
