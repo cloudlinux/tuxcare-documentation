@@ -30,7 +30,7 @@
 3. Verify that the installation was successful by running the following command
 
    ```
-   yum info els-define
+   yum info els-os-release
    ```
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
@@ -39,20 +39,19 @@
    Example:
 
    ```
-   [els@centos7 ~]# yum info els-define
+   [els@centos7 ~]# yum info els-os-release
    Loaded plugins: fastestmirror
-   Loading mirror speeds from cached hostfile
    Installed Packages
-   Name        : els-define
-   Arch        : x86_64
-   Version     : 1
-   Release     : 1.0.4.el7
-   Size        : 52
+   Name        : els-os-release
+   Arch        : noarch
+   Version     : 1.0.0
+   Release     : 2.el7
+   Size        : 8.2 k
    Repo        : installed
-   From repo   : centos7-els
-   Summary     : CentOS Server els-release file
-   License     : GPLv2
-   Description : CentOS Server els-release file
+   Summary     : TuxCare OS ELS repository configuration
+   License     : GPLv2+
+   Description : This package configures the TuxCare ELS repository for
+               : CentOS/RHEL systems.
    ```
 
 </ELSSteps>
