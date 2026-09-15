@@ -17,7 +17,7 @@
         </span>
         <span class="os-card-text">
           <span class="os-card-name">{{ os.name }}</span>
-          <span v-if="os.eol" class="os-card-eol">Vendor support ended {{ os.eol }}</span>
+          <span v-if="os.eol" class="os-card-eol">Vendor support until {{ os.eol }}</span>
         </span>
         <span class="os-card-arrow">&rarr;</span>
       </a>
@@ -30,9 +30,11 @@
 </template>
 
 <script setup>
-// `eol` is the month the vendor's own standard support ended — paid extensions
-// (Ubuntu ESM, Oracle Extended Support) are deliberately not counted. Omit the
-// field where that date has not arrived yet, and the card shows no EOL line.
+// `eol` is the month the vendor's own standard support runs to — Red Hat
+// Maintenance Support, Oracle Premier Support, and the equivalent elsewhere.
+// Paid extensions (Ubuntu ESM, Oracle Extended Support, Red Hat ELS) are
+// deliberately not counted. Some of these dates are still in the future, so
+// the card wording stays tense-neutral.
 const operatingSystems = [
   {
     name: "Amazon Linux 2",
@@ -92,6 +94,7 @@ const operatingSystems = [
     name: "Oracle Linux 6",
     icon: "/images/Oracle-Linux.webp",
     link: "./oracle-linux-6-els",
+    eol: "March 2021",
   },
   {
     name: "Oracle Linux 7",
@@ -109,6 +112,7 @@ const operatingSystems = [
     name: "Red Hat Enterprise Linux 8",
     icon: "/images/redhat.webp",
     link: "./red-hat-enterprise-linux-8-els",
+    eol: "May 2029",
   },
   {
     name: "Ubuntu 16.04",
@@ -216,7 +220,7 @@ const operatingSystems = [
 }
 
 .os-card-eol {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #5c6370;
   line-height: 1.3;
 }
