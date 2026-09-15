@@ -15,7 +15,10 @@
         <span class="os-card-icon">
           <img :src="os.icon" alt="" aria-hidden="true" />
         </span>
-        <span class="os-card-name">{{ os.name }}</span>
+        <span class="os-card-text">
+          <span class="os-card-name">{{ os.name }}</span>
+          <span v-if="os.eol" class="os-card-eol">Vendor support ended {{ os.eol }}</span>
+        </span>
         <span class="os-card-arrow">&rarr;</span>
       </a>
     </div>
@@ -27,51 +30,63 @@
 </template>
 
 <script setup>
+// `eol` is the month the vendor's own standard support ended — paid extensions
+// (Ubuntu ESM, Oracle Extended Support) are deliberately not counted. Omit the
+// field where that date has not arrived yet, and the card shows no EOL line.
 const operatingSystems = [
   {
     name: "Amazon Linux 2",
     icon: "/images/amazon-linux.webp",
     link: "./amazon-linux-2-els",
+    eol: "June 2026",
   },
   {
     name: "Alpine Linux 3.18",
     icon: "/images/alpine-linux.webp",
     link: "./alpine-linux-3-18-els",
+    eol: "May 2025",
   },
   {
     name: "CentOS 6",
     icon: "/images/centos.webp",
     link: "./centos-6-els",
+    eol: "November 2020",
   },
   {
     name: "CentOS 7",
     icon: "/images/centos.webp",
     link: "./centos-7-els",
+    eol: "June 2024",
   },
   {
     name: "CentOS 8",
     icon: "/images/centos.webp",
     link: "./centos-8-els",
+    eol: "December 2021",
   },
   {
     name: "CentOS Stream 8",
     icon: "/images/centos-stream.webp",
     link: "./centos-stream-8-els",
+    eol: "May 2024",
   },
   {
     name: "CloudLinux 7",
     icon: "/images/cloudlinux.webp",
     link: "./cloudlinux-7-els",
+    eol: "June 2024",
   },
   {
     name: "Debian 10",
     icon: "/images/debian.webp",
     link: "./debian-10-els",
+    eol: "June 2024",
   },
   {
     name: "Debian 11",
     icon: "/images/debian.webp",
     link: "./debian-11-els",
+    eol: "August 2026",
   },
   {
     name: "Oracle Linux 6",
@@ -82,11 +97,13 @@ const operatingSystems = [
     name: "Oracle Linux 7",
     icon: "/images/Oracle-Linux.webp",
     link: "./oracle-linux-7-els",
+    eol: "December 2024",
   },
   {
     name: "Red Hat Enterprise Linux 7",
     icon: "/images/redhat.webp",
     link: "./red-hat-enterprise-linux-7-els",
+    eol: "June 2024",
   },
   {
     name: "Red Hat Enterprise Linux 8",
@@ -97,16 +114,19 @@ const operatingSystems = [
     name: "Ubuntu 16.04",
     icon: "/images/Ubuntu.webp",
     link: "./ubuntu-16-04-els",
+    eol: "April 2021",
   },
   {
     name: "Ubuntu 18.04",
     icon: "/images/Ubuntu.webp",
     link: "./ubuntu-18-04-els",
+    eol: "May 2023",
   },
   {
     name: "Ubuntu 20.04",
     icon: "/images/Ubuntu.webp",
     link: "./ubuntu-20-04-els",
+    eol: "May 2025",
   },
 ];
 </script>
@@ -181,11 +201,23 @@ const operatingSystems = [
   object-fit: contain;
 }
 
-.os-card-name {
+.os-card-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.os-card-name {
   font-size: 0.9rem;
   font-weight: 500;
   color: #1b1f27;
+  line-height: 1.3;
+}
+
+.os-card-eol {
+  font-size: 0.75rem;
+  color: #5c6370;
   line-height: 1.3;
 }
 
