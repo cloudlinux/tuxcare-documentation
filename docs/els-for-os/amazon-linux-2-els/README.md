@@ -1,5 +1,7 @@
 # Amazon Linux 2 ELS
 
+<ELSVendorEol os="amazon-linux-2-els" />
+
 ## Installation
 
 <ELSPrerequisites>

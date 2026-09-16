@@ -1,5 +1,7 @@
 # Ubuntu 20.04 ELS
 
+<ELSVendorEol os="ubuntu-20-04-els" />
+
 ## Installation
 
 <ELSPrerequisites>

@@ -1,5 +1,7 @@
 # Alpine Linux 3.18 ELS
 
+<ELSVendorEol os="alpine-linux-3-18-els" />
+
 ## Installation
 
 <ELSPrerequisites>

@@ -1,5 +1,7 @@
 # CentOS 6 ELS
 
+<ELSVendorEol os="centos-6-els" />
+
 ## Installation
 
 <ELSPrerequisites>

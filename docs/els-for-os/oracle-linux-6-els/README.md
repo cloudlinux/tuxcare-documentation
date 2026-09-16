@@ -1,5 +1,7 @@
 # Oracle Linux 6 ELS
 
+<ELSVendorEol os="oracle-linux-6-els" />
+
 ## Installation
 
 <ELSPrerequisites>

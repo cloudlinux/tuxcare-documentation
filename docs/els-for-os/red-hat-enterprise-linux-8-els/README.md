@@ -1,5 +1,7 @@
 # Red Hat Enterprise Linux 8 ELS
 
+<ELSVendorEol os="red-hat-enterprise-linux-8-els" />
+
 ## Installation
 
 <ELSPrerequisites>
