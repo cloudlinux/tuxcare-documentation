@@ -84,7 +84,11 @@ export default [
         name: "Red Hat Enterprise Linux 8",
         icon: "/images/redhat.webp",
         slug: "red-hat-enterprise-linux-8-els",
-        eol: "May 2029"
+        eol: "May 2029",
+        // Set while the date is still ahead: Red Hat is patching this release
+        // until then, so the page does not yet claim TuxCare ELS is what keeps
+        // it updated. Drop the flag once the date passes.
+        eolUpcoming: true
     },
     {
         name: "Ubuntu 16.04",

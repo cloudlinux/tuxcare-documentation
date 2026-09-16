@@ -1,6 +1,6 @@
 <template>
   <p v-if="release" class="os-vendor-eol">
-    End of life from {{ release.eol }}. TuxCare ELS continues to deliver security updates.
+    End of life from {{ release.eol }}.<template v-if="!release.eolUpcoming"> TuxCare ELS continues to deliver security updates.</template>
   </p>
 </template>
 
