@@ -17,7 +17,7 @@
         </span>
         <span class="os-card-text">
           <span class="os-card-name">{{ os.name }}</span>
-          <span v-if="os.eol" class="os-card-eol">Vendor support until {{ os.eol }}</span>
+          <span v-if="os.eol" class="os-card-eol">End of life from {{ os.eol }}</span>
         </span>
         <span class="os-card-arrow">&rarr;</span>
       </a>
