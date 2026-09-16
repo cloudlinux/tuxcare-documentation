@@ -25,6 +25,14 @@ export default {
             ]
         },
     ],
+    '/endless-lifecycle-support/': [
+        {
+            collapsable: false,
+            children: [
+                "/endless-lifecycle-support/",
+            ]
+        },
+    ],
     '/els-for-os/': [
         {
             collapsable: false,
