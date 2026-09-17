@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* jQuery 1.3.2, 1.4.1, 1.4.2, 1.4.3, 1.8.2, 1.8.3, 1.11.3, 1.12.4, 2.1.3, 2.2.4, 3.1.1, 3.2.1, 3.3.1, 3.4.1
+* jQuery 1.3.2, 1.4.1, 1.4.2, 1.4.3, 1.8.2, 1.8.3, 1.11.3, 1.12.4, 2.1.3, 2.2.4, 3.1.1, 3.2.1, 3.3.1, 3.4.1, 3.6.0
 
 ## Installation
 
@@ -215,6 +215,19 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
       },
       "overrides": {
         "jquery@3.4.1": "npm:@els-js/jquery@>=3.4.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #jQuery_3.6.0>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=3.6.0-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@3.6.0": "npm:@els-js/jquery@>=3.6.0-tuxcare.1"
       }
       ```
 
