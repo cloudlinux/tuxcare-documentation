@@ -19,7 +19,8 @@ Security advisories and patch definitions are published for the database applica
 | MariaDB | EL 7 | [errata](https://security.tuxcare.com/errata/els_mariadb/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_mariadb/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_mariadb/el7/) |
 | MariaDB | EL 8 | [errata](https://security.tuxcare.com/errata/els_mariadb/el8/) | — | — |
 | MariaDB | EL 9 | [errata](https://security.tuxcare.com/errata/els_mariadb/el9/) | — | — |
-| MySQL and Percona Server | EL 7 | [errata](https://security.tuxcare.com/errata/els_mysql/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_mysql/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_mysql/el7/) |
+| MySQL | EL 7 | [errata](https://security.tuxcare.com/errata/els_mysql/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_mysql/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_mysql/el7/) |
+| Percona Server | EL 7 | [errata](https://errata.tuxcare.com/els_percona/) | [oval.xml](https://repo.tuxcare.com/security/oval/els_percona/el7/oval.xml) | [csaf](https://repo.tuxcare.com/security/csaf/v2/els_percona/el7/) |
 | PostgreSQL | EL 7 | [errata](https://security.tuxcare.com/errata/els_postgresql/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_postgresql/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_postgresql/el7/) |
 | PostgreSQL | EL 9 | [errata](https://security.tuxcare.com/errata/els_postgresql/el9/) | [oval.xml](https://security.tuxcare.com/oval/els_postgresql/el9/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_postgresql/el9/) |
 
