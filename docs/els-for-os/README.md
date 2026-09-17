@@ -8,9 +8,28 @@ Our ELS service is designed to provide solutions for organizations that are not 
 
 ## Support Duration
 
-TuxCare provides continuous security patching for all supported end-of-life (EOL) technologies for as long as your organization requires them, eliminating the need for rushed or disruptive upgrades.
+TuxCare provides continuous security patching for all supported end-of-life (EOL) operating systems for as long as your organization requires them, eliminating the need for rushed or disruptive upgrades. For each supported operating system, TuxCare commits to a support term of 25 years from the original EOL date, giving you a defined horizon for migration planning. The table below lists the original EOL date and the resulting TuxCare EOL date for every distribution.
 
 All updates are delivered at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
+
+| **Distribution** | **Original EOL date** | **TuxCare EOL date** |
+|---|---|---|
+| Amazon Linux 2 | June 30, 2026 | June 30, 2051 |
+| Alpine Linux 3.18 | May 9, 2025 | May 9, 2050 |
+| CentOS 6 | November 30, 2020 | November 30, 2045 |
+| CentOS 7 | June 30, 2024 | June 30, 2049 |
+| CentOS 8 | December 31, 2021 | December 31, 2046 |
+| CentOS Stream 8 | May 31, 2024 | May 31, 2049 |
+| CloudLinux 7 | June 30, 2024 | June 30, 2049 |
+| Debian 10 | June 30, 2024 | June 30, 2049 |
+| Debian 11 | August 31, 2026 | August 31, 2051 |
+| Oracle Linux 6 | March 31, 2021 | March 31, 2046 |
+| Oracle Linux 7 | December 31, 2024 | December 31, 2049 |
+| Red Hat Enterprise Linux 7 | June 30, 2024 | June 30, 2049 |
+| Red Hat Enterprise Linux 8 | May 31, 2029 | May 31, 2054 |
+| Ubuntu 16.04 | April 30, 2021 | April 30, 2046 |
+| Ubuntu 18.04 | May 31, 2023 | May 31, 2048 |
+| Ubuntu 20.04 | May 31, 2025 | May 31, 2050 |
 
 ## Technical Support
 
