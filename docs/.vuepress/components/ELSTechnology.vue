@@ -2739,6 +2739,11 @@ const techData = [
         link: "./guzzle/",
       },
       {
+        name: "PHP-HTTP Guzzle6 Adapter",
+        versions: "1.1.1",
+        link: "./php-http-guzzle6-adapter/",
+      },
+      {
         name: "Httpful",
         versions: "0.3.2",
         link: "./httpful/",
