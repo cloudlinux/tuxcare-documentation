@@ -26,7 +26,6 @@ All updates are delivered at a fixed price for the full term of your contract, e
 | Oracle Linux 6 | March 31, 2021 | March 31, 2046 |
 | Oracle Linux 7 | December 31, 2024 | December 31, 2049 |
 | Red Hat Enterprise Linux 7 | June 30, 2024 | June 30, 2049 |
-| Red Hat Enterprise Linux 8 | May 31, 2029 | May 31, 2054 |
 | Ubuntu 16.04 | April 30, 2021 | April 30, 2046 |
 | Ubuntu 18.04 | May 31, 2023 | May 31, 2048 |
 | Ubuntu 20.04 | May 31, 2025 | May 31, 2050 |
