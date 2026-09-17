@@ -1,14 +1,6 @@
 # JavaScript
 
-SecureChain delivers verified, signed, continuously patched JavaScript packages from a TuxCare-managed npm registry. Packages install with standard `npm` tooling.
-
-## Installation
-
-Select your subscription to see the matching setup steps:
-
-<TableTabs label="Choose your subscription: " :labels="{ SecureChain_ELS: 'SecureChain + ELS' }">
-
-<template #SecureChain>
+SecureChain delivers verified, signed, continuously patched JavaScript packages from a TuxCare-managed npm registry. This page shows how to connect a project to it — with the SecureChain CLI or by hand.
 
 <ELSPrerequisites>
 
@@ -16,6 +8,63 @@ Select your subscription to see the matching setup steps:
 * A JavaScript project with `package.json`. If you're starting from scratch, run your package manager's init command (`npm init -y`, `pnpm init`, `yarn init`, `bun init`) in your project directory to create one.
 
 </ELSPrerequisites>
+
+## Installation
+
+There are two ways to connect a project to SecureChain. Both lead to the same result: your package manager installs the TuxCare builds from the TuxCare registry.
+
+* **[Option 1: SecureChain CLI](#option-1-securechain-cli-recommended)** — recommended. One tool configures the registry, finds the packages that have a patched build, including transitive ones, pins them and verifies the result.
+* **[Option 2: Manual setup](#option-2-manual-setup)** — you edit the package manager's configuration yourself and install nothing extra.
+
+### Option 1: SecureChain CLI (recommended)
+
+`securechain` is a single binary that does the work of the manual setup for you. It detects your package manager (`npm`, `pnpm`, `yarn` or `bun`), points it at the TuxCare registry, compares the whole resolved dependency tree with the TuxCare catalogue, pins the patched builds — through `overrides` or `resolutions` for transitive packages — and verifies that the installed tree really changed. In CI, `securechain check` fails the build when a patched build exists and the project is not on it.
+
+<ELSSteps>
+
+1. Install the CLI
+
+   ```text
+   curl -fsSL https://securechain.tuxcare.com/get/securechain | sh
+   ```
+
+   Docker, npm, pip, apt, dnf and other methods are listed in [SecureChain CLI — Installation](/securechain/cli/#installation).
+
+2. Log in and connect the project
+
+   Run these in the root directory of your project:
+
+   ```text
+   securechain auth login
+   securechain init
+   ```
+
+   `auth login` asks for your TuxCare token. `init` writes the registry configuration (`.npmrc`, or `.yarnrc.yml` for Yarn 2+) and the project file `.securechain.yaml`.
+
+3. See what is covered, then apply the patched builds
+
+   ```text
+   securechain check
+   securechain harden
+   ```
+
+   `check` only reads: it lists every package that has a patched build and the CVEs that build closes. `harden` pins those builds, refreshes the lockfile, reinstalls and verifies the result. Add `--dry-run` to preview the change first.
+
+4. Commit the changes
+
+   Commit the files `init` created together with `package.json` and the lockfile.
+
+</ELSSteps>
+
+Every command, the options, CI usage and machines with no internet access are described on the [SecureChain CLI](/securechain/cli/) page.
+
+### Option 2: Manual setup
+
+Use this path if you prefer not to install the CLI. Select your subscription to see the matching setup steps:
+
+<TableTabs label="Choose your subscription: " :labels="{ SecureChain_ELS: 'SecureChain + ELS' }">
+
+<template #SecureChain>
 
 <TableTabs label="Choose your package manager: " :bottom-line="false" :labels="{ Yarn_Classic: 'Yarn 1 (Classic)', Yarn_Berry: 'Yarn 2 – 4.14 (Berry)', Yarn_415: 'Yarn 4.15+' }">
 
@@ -346,13 +395,6 @@ Select your subscription to see the matching setup steps:
 </template>
 
 <template #ELS>
-
-<ELSPrerequisites>
-
-* TuxCare CLN token — contact sales@tuxcare.com
-* A JavaScript project with `package.json`. If you're starting from scratch, run your package manager's init command (`npm init -y`, `pnpm init`, `yarn init`, `bun init`) in your project directory to create one.
-
-</ELSPrerequisites>
 
 <TableTabs label="Choose your package manager: " :bottom-line="false" :labels="{ Yarn_Classic: 'Yarn 1 (Classic)', Yarn_Berry: 'Yarn 2 – 4.14 (Berry)', Yarn_415: 'Yarn 4.15+' }">
 
@@ -769,13 +811,6 @@ Select your subscription to see the matching setup steps:
 </template>
 
 <template #SecureChain_ELS>
-
-<ELSPrerequisites>
-
-* TuxCare CLN token — contact sales@tuxcare.com
-* A JavaScript project with `package.json`. If you're starting from scratch, run your package manager's init command (`npm init -y`, `pnpm init`, `yarn init`, `bun init`) in your project directory to create one.
-
-</ELSPrerequisites>
 
 <TableTabs label="Choose your package manager: " :bottom-line="false" :labels="{ Yarn_Classic: 'Yarn 1 (Classic)', Yarn_Berry: 'Yarn 2 – 4.14 (Berry)', Yarn_415: 'Yarn 4.15+' }">
 

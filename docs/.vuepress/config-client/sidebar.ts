@@ -602,6 +602,10 @@ export default {
             children: [
                 "/securechain/",
                 {
+                    path: '/securechain/cli/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/securechain/javascript/',
                     icon: '/images/javascript.webp',
                 },
