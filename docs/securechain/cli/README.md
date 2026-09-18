@@ -30,7 +30,7 @@ The CLI never changes anything without telling you what it changed, every writin
 
 Choose how you want to install the CLI:
 
-<TableTabs label="Choose an installation method: " :labels="{ Install_script: 'Install script (curl)', Docker: 'Docker', npm: 'npm', pip: 'pip (PyPI)', apt: 'apt (Debian, Ubuntu)', dnf: 'dnf / yum (RHEL, AlmaLinux, Rocky, Fedora)', Maven: 'Maven plugin', Gradle: 'Gradle plugin', Manual_download: 'Manual download' }">
+<TableTabs label="Choose an installation method: " :labels="{ Install_script: 'Install script (curl)', npm: 'npm', Docker: 'Docker', pip: 'pip (PyPI)', apt: 'apt (Debian, Ubuntu)', dnf: 'dnf / yum (RHEL, AlmaLinux, Rocky, Fedora)', Maven: 'Maven plugin', Gradle: 'Gradle plugin', Manual_download: 'Manual download' }">
 
 <template #Install_script>
 
@@ -52,6 +52,22 @@ On Windows, use the **npm**, **pip (PyPI)** or **Manual download** option.
 
 </template>
 
+<template #npm>
+
+The package `@tuxcare/securechain` carries the binary for your platform — nothing is downloaded at install time.
+
+```text
+npm install --global @tuxcare/securechain
+```
+
+Or run it without installing:
+
+```text
+npx @tuxcare/securechain check
+```
+
+</template>
+
 <template #Docker>
 
 The image is published on Docker Hub as `tuxcare/securechain`. Mount your project and pass the token:
@@ -70,22 +86,6 @@ Two variants are published for every release:
 :::tip
 `latest` follows the newest final release and is handy for a first run. In CI, pin a version — for example `tuxcare/securechain:0.1.0-toolchains`.
 :::
-
-</template>
-
-<template #npm>
-
-The package `@tuxcare/securechain` carries the binary for your platform — nothing is downloaded at install time.
-
-```text
-npm install --global @tuxcare/securechain
-```
-
-Or run it without installing:
-
-```text
-npx @tuxcare/securechain check
-```
 
 </template>
 
@@ -239,19 +239,21 @@ securechain version
 
 The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects work the same way — the CLI detects the package manager from the lockfile or the `packageManager` field in `package.json`.
 
-Make your token available first. Every command reads it from the `TUXCARE_TOKEN` environment variable, and nothing the CLI writes into your repository contains the token itself:
-
-```text
-export TUXCARE_TOKEN=<TOKEN>
-```
-
-:::warning
-Replace `<TOKEN>` with your TuxCare token. In CI, store it as a masked secret variable.
-:::
-
 <ELSSteps>
 
-1. Log in
+1. Set your token
+
+   Every `securechain` command reads the token from the `TUXCARE_TOKEN` environment variable. On your machine, export it in the shell where you run the commands, before the first one. In CI, add it as a masked secret variable of the pipeline — the CLI picks it up from the environment the same way:
+
+   ```text
+   export TUXCARE_TOKEN=<TOKEN>
+   ```
+
+   :::warning
+   Replace `<TOKEN>` with your TuxCare token.
+   :::
+
+2. Log in
 
    ```text
    securechain auth login
@@ -259,7 +261,7 @@ Replace `<TOKEN>` with your TuxCare token. In CI, store it as a masked secret va
 
    The CLI validates the token and remembers what your subscription covers — SecureChain, ELS, or both. `securechain auth status` shows it at any time, and `securechain auth logout` removes it from the machine.
 
-2. Connect the project — `init`
+3. Connect the project — `init`
 
    Run it once, in the root of the project:
 
@@ -293,7 +295,7 @@ Replace `<TOKEN>` with your TuxCare token. In CI, store it as a masked secret va
 
    The choice is saved in `.securechain.yaml`, and every later command uses it without being told again. Accepted values: `npm`, `pnpm`, `yarn-classic`, `yarn-berry`, `bun`. The `--ecosystem` flag also works on any single command, for that run only.
 
-3. Install the dependencies
+4. Install the dependencies
 
    The CLI reads the tree your package manager resolved, so the project has to be installed:
 
@@ -301,7 +303,7 @@ Replace `<TOKEN>` with your TuxCare token. In CI, store it as a masked secret va
    npm install
    ```
 
-4. See what the catalogue covers — `check`
+5. See what the catalogue covers — `check`
 
    `check` reads and never writes. It is the command to run in CI.
 
@@ -332,7 +334,7 @@ Replace `<TOKEN>` with your TuxCare token. In CI, store it as a masked secret va
 
    Every finding names the package, the patched build and the CVEs it closes, and says which command fixes it. Add `--explain` to see the evidence behind each finding. `securechain status` prints the same picture without acting as a gate: findings do not make it fail.
 
-5. Apply the patched builds — `harden`
+6. Apply the patched builds — `harden`
 
    Preview first. `--dry-run` prints the exact diff and writes nothing:
 
@@ -350,7 +352,7 @@ Replace `<TOKEN>` with your TuxCare token. In CI, store it as a masked secret va
 
    Commit `package.json` and the lockfile together, then run `securechain check` again: it should now exit `0`.
 
-6. Keep up with new builds — `update`
+7. Keep up with new builds — `update`
 
    TuxCare keeps releasing patched builds for the versions you are on. When `check` reports `catalogue-drift`, roll the project forward:
 

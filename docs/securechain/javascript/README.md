@@ -30,7 +30,19 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
 
    Docker, npm, pip, apt, dnf and other methods are listed in [SecureChain CLI — Installation](/securechain/cli/#installation).
 
-2. Log in and connect the project
+2. Set your token
+
+   Every `securechain` command reads the token from the `TUXCARE_TOKEN` environment variable. On your machine, export it in the shell where you run the commands. In CI, add it as a masked secret variable of the pipeline — the CLI picks it up from the environment the same way:
+
+   ```text
+   export TUXCARE_TOKEN=<TOKEN>
+   ```
+
+   :::warning
+   Replace `<TOKEN>` with your TuxCare CLN token.
+   :::
+
+3. Log in and connect the project
 
    Run these in the root directory of your project:
 
@@ -39,9 +51,9 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
    securechain init
    ```
 
-   `auth login` asks for your TuxCare token. `init` writes the registry configuration (`.npmrc`, or `.yarnrc.yml` for Yarn 2+) and the project file `.securechain.yaml`.
+   `auth login` validates the token and remembers what your subscription covers. `init` writes the registry configuration (`.npmrc`, or `.yarnrc.yml` for Yarn 2+) and the project file `.securechain.yaml`.
 
-3. See what is covered, then apply the patched builds
+4. See what is covered, then apply the patched builds
 
    ```text
    securechain check
@@ -50,7 +62,7 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
 
    `check` only reads: it lists every package that has a patched build and the CVEs that build closes. `harden` pins those builds, refreshes the lockfile, reinstalls and verifies the result. Add `--dry-run` to preview the change first.
 
-4. Commit the changes
+5. Commit the changes
 
    Commit the files `init` created together with `package.json` and the lockfile.
 
