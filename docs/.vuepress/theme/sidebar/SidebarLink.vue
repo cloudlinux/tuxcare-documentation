@@ -148,10 +148,13 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1, closeSide
         margin-left 1rem
 
   .sidebar-sub-headers
-    margin-left 3rem
+    margin-left 1.5rem
 
     &:first-child
       margin-left 0
+
+    .sidebar-sub-headers
+      margin-left 3rem
 
 .sidebar-link-icon
   max-width 1.5rem
@@ -229,7 +232,8 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1, closeSide
   .sidebar .sidebar-sub-header .sidebar-sub-headers > .sidebar-sub-header > div:not(.active)
     margin-left 3.2rem
 
-  .sidebar .sidebar-sub-header .sidebar-sub-headers
+  .sidebar .sidebar-sub-header .sidebar-sub-headers,
+  .sidebar .sidebar-sub-header .sidebar-sub-headers .sidebar-sub-headers
     margin-left 0
 
   .sidebar-sub-headers > div:is(.active)
