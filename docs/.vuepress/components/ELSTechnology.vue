@@ -181,17 +181,17 @@ const techData = [
       },
       {
         name: "Apache HttpComponents Client",
-        versions: "4.2 | 4.2.6 | 4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
+        versions: "4.2 | 4.2.1 | 4.2.6 | 4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
         link: "./java-libraries/",
       },
       {
         name: "Apache HttpComponents Client 5",
-        versions: "5.5.2",
+        versions: "5.0.3 | 5.5.2",
         link: "./java-libraries/",
       },
       {
         name: "Apache HttpComponents Core 5",
-        versions: "5.2.5",
+        versions: "5.1.3 | 5.2.5",
         link: "./java-libraries/",
       },
       {
@@ -607,7 +607,7 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.94.Final | 4.1.107.Final | 4.1.108.Final | 4.1.111.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.119.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
+        versions: "3.10.6.Final | 4.1.43.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.79.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.94.Final | 4.1.107.Final | 4.1.108.Final | 4.1.111.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.119.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
         link: "./java-libraries/",
       },
       {
@@ -633,6 +633,11 @@ const techData = [
       {
         name: "Okio",
         versions: "2.8.0 | 2.10.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Plexus Sec Dispatcher",
+        versions: "2.0",
         link: "./java-libraries/",
       },
       {
@@ -672,7 +677,7 @@ const techData = [
       },
       {
         name: "Reactor Netty",
-        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.0.48 | 1.1.13 | 1.1.15 | 1.1.31",
+        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.0.48 | 1.1.13 | 1.1.15 | 1.1.31 | 1.2.13 | 1.2.18",
         link: "./java-libraries/",
       },
       {
@@ -718,7 +723,7 @@ const techData = [
       },
       {
         name: "Spring® AMQP",
-        versions: "2.1.8.RELEASE | 2.3.16 | 2.4.17 | 3.0.10 | 3.1.8 | 3.1.12",
+        versions: "2.1.8.RELEASE | 2.3.16 | 2.4.12 | 2.4.17 | 3.0.10 | 3.1.8 | 3.1.12",
         link: "./spring/",
       },
       {
@@ -851,6 +856,11 @@ const techData = [
     ecosystem: "JavaScript",
     ecosystemIcon: "/images/javascript.webp",
     projects: [
+      {
+        name: "ai-sdk",
+        versions: "3.0.27",
+        link: "./javascript-libraries/",
+      },
       {
         name: "Angular",
         versions: "4-19",
@@ -1303,7 +1313,7 @@ const techData = [
       },
       {
         name: "happy-dom",
-        versions: "9.10.9 | 14.12.3 | 15.11.7",
+        versions: "9.10.9 | 9.20.3 | 14.12.3 | 15.11.7",
         link: "./javascript-libraries/",
       },
       {
@@ -1467,6 +1477,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "launch-editor",
+        versions: "2.2.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "Lodash",
         versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.4 | 4.17.5 | 4.17.11 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
         link: "./lodash/",
@@ -1524,6 +1539,11 @@ const techData = [
       {
         name: "marked",
         versions: "0.2.10 | 0.3.19 | 0.7.0 | 0.8.2 | 1.2.7 | 4.0.6 | 4.0.7 | 4.0.9",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "medplum",
+        versions: "3.3.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1903,7 +1923,7 @@ const techData = [
       },
       {
         name: "storybook",
-        versions: "7.0.7 | 8.6.14 | 9.1.16 | 10.1.9",
+        versions: "7.0.7 | 8.5.8 | 8.6.14 | 9.1.16 | 10.1.9",
         link: "./javascript-libraries/",
       },
       {
@@ -2032,6 +2052,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "valibot",
+        versions: "0.41.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "validator",
         versions: "8.2.0 | 10.11.0 | 13.12.0",
         link: "./javascript-libraries/",
@@ -2045,6 +2070,11 @@ const techData = [
         name: "Vite",
         versions: "2.9.18 | 3.2.11 | 4.1.5 | 4.5.5 | 4.5.14 | 5.4.14 | 5.4.21 | 6.4.2 | 7.3.2 | 7.3.3 | 8.0.8 | 8.0.10 | 8.0.12",
         link: "./vite/",
+      },
+      {
+        name: "vitest",
+        versions: "3.2.4 | 3.2.7 | 4.0.18",
+        link: "./javascript-libraries/",
       },
       {
         name: "Vuetify",
@@ -2208,7 +2238,7 @@ const techData = [
       },
       {
         name: "websocket-driver",
-        versions: "0.6.5",
+        versions: "0.6.5 | 0.7.4",
         link: "./javascript-libraries/",
       },
       {
@@ -2223,7 +2253,7 @@ const techData = [
       },
       {
         name: "ws",
-        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 7.4.5 | 7.4.6 | 7.5.9 | 8.13.0 | 8.16.0 | 8.18.0 | 8.20.0",
+        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 7.4.5 | 7.4.6 | 7.5.9 | 8.13.0 | 8.16.0 | 8.17.0 | 8.18.0 | 8.20.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2253,7 +2283,7 @@ const techData = [
       },
       {
         name: "yaml",
-        versions: "1.10.2 | 2.5.0",
+        versions: "1.10.2 | 2.4.2 | 2.5.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2444,7 +2474,7 @@ const techData = [
       },
       {
         name: "paramiko",
-        versions: "3.0.0",
+        versions: "2.12.0 | 3.0.0",
         link: "./python-libraries/",
       },
       {
@@ -2709,6 +2739,11 @@ const techData = [
         link: "./guzzle/",
       },
       {
+        name: "PHP-HTTP Guzzle6 Adapter",
+        versions: "1.1.1",
+        link: "./php-http-guzzle6-adapter/",
+      },
+      {
         name: "Httpful",
         versions: "0.3.2",
         link: "./httpful/",
@@ -2725,7 +2760,7 @@ const techData = [
       },
       {
         name: "Laminas Diactoros",
-        versions: "2.22.0",
+        versions: "1.8.7p2 | 2.22.0",
         link: "./laminas/",
       },
       {
@@ -2894,6 +2929,11 @@ const techData = [
         link: "./yii2-dev/",
       },
       {
+        name: "Zend Form",
+        versions: "2.1.6",
+        link: "./zendframework/",
+      },
+      {
         name: "Zend Framework",
         versions: "2.4.13",
         link: "./zendframework/",
@@ -2906,6 +2946,11 @@ const techData = [
       {
         name: "Zend HTTP",
         versions: "2.5.6",
+        link: "./zendframework/",
+      },
+      {
+        name: "Zend View",
+        versions: "2.1.6",
         link: "./zendframework/",
       },
     ],

@@ -313,6 +313,11 @@ export default {
                     icon: '/images/guzzle.webp',
                 },
                 {
+                    path: '/els-for-libraries/php-http-guzzle6-adapter/',
+                    title: 'PHP-HTTP Guzzle6 Adapter',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-libraries/httpful/',
                     icon: '/images/php-logo.webp',
                 },
