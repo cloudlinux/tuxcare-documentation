@@ -106,6 +106,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **js-yaml** 3.3.1, 3.7.0, 3.14.1, 3.14.2, 3.15.0, 4.1.0
 * **json5** 0.4.0, 0.5.1, 1.0.1, 1.0.2
 * **jsoneditor** 5.19.0
+* **jsonpath** 1.1.1
 * **jsonpath-plus** 5.1.0, 6.0.1, 7.2.0
 * **jsonpointer** 1.1.0, 2.0.0, 4.1.0
 * **jspdf** 1.4.1, 2.5.1, 2.5.2, 3.0.4
@@ -179,9 +180,10 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **serialize-javascript** 1.9.1, 2.1.2, 3.1.0, 4.0.0, 5.0.1, 6.0.2
 * **serve-static** 1.10.3
 * **set-value** 2.0.0
+* **sharp** 0.27.2
 * **shell-quote** 1.4.3, 1.6.1, 1.7.2, 1.7.3
 * **shelljs** 0.1.4, 0.3.0, 0.8.2, 0.8.4
-* **socket.io** 2.0.4, 2.1.1
+* **socket.io** 2.0.4, 2.1.1, 3.1.1
 * **socket.io-parser** 3.1.3, 3.2.0, 3.3.4, 3.4.3, 4.2.4
 * **sockjs** 0.3.18, 0.3.19
 * **ssr-window** 4.0.2

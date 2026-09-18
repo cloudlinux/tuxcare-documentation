@@ -7,6 +7,7 @@ Endless Lifecycle Support (ELS) for Zend Framework from TuxCare provides securit
 * **Zend Framework 1** 1.10.6, 1.11.0, 1.12.10
 * **Zend Framework** 2.4.13
 * **Zend HTTP** 2.5.6
+* **Zend Session** 2.1.6
 
 Other versions upon request.
 
