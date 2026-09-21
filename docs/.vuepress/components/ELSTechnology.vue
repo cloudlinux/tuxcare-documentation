@@ -487,7 +487,7 @@ const techData = [
       },
       {
         name: "Jackson",
-        versions: "1.9.13 | 2.12.1 | 2.14.1 | 2.14.2",
+        versions: "1.9.13 | 2.12.1 | 2.14.1 | 2.14.2 | 2.17.2 | 2.17.3",
         link: "./jackson/",
       },
       {
