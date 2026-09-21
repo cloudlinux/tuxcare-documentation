@@ -91,6 +91,15 @@ Other versions upon request.
 
    </template>
 
+   <template #zend-session>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require zendframework/zend-session:2.1.6-p2+tuxcare` },
+     { title: 'composer.json', content: zendsessionjson }
+   ]" />
+
+   </template>
+
    </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
@@ -192,6 +201,13 @@ const zendhttpjson =
 `{
     "require": {
         "zendframework/zend-http": "2.5.6-p2+tuxcare"
+    }
+}`
+
+const zendsessionjson =
+`{
+    "require": {
+        "zendframework/zend-session": "2.1.6-p2+tuxcare"
     }
 }`
 
