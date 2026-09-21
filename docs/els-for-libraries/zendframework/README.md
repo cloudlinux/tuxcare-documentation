@@ -7,6 +7,7 @@ Endless Lifecycle Support (ELS) for Zend Framework from TuxCare provides securit
 * **Zend Framework 1** 1.10.6, 1.11.0, 1.12.10
 * **Zend Framework** 2.4.13
 * **Zend HTTP** 2.5.6
+* **Zend Session** 2.1.6
 
 Other versions upon request.
 
@@ -86,6 +87,15 @@ Other versions upon request.
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p2+tuxcare` },
      { title: 'composer.json', content: zendhttpjson }
+   ]" />
+
+   </template>
+
+   <template #zend-session>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require zendframework/zend-session:2.1.6-p2+tuxcare` },
+     { title: 'composer.json', content: zendsessionjson }
    ]" />
 
    </template>
@@ -191,6 +201,13 @@ const zendhttpjson =
 `{
     "require": {
         "zendframework/zend-http": "2.5.6-p2+tuxcare"
+    }
+}`
+
+const zendsessionjson =
+`{
+    "require": {
+        "zendframework/zend-session": "2.1.6-p2+tuxcare"
     }
 }`
 
