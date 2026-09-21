@@ -107,6 +107,10 @@ Other versions upon request.
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require zendframework/zend-view:2.1.6-p1+tuxcare` },
      { title: 'composer.json', content: zendviewjson }
+   ]" />
+
+   </template>
+
    <template #zend-session>
 
    <CodeTabs :tabs="[
@@ -231,6 +235,9 @@ const zendviewjson =
 `{
     "require": {
         "zendframework/zend-view": "2.1.6-p1+tuxcare"
+    }
+}`
+
 const zendsessionjson =
 `{
     "require": {

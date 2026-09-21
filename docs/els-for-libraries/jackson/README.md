@@ -4,7 +4,28 @@ TuxCare's Endless Lifecycle Support (ELS) for Jackson provides security patches 
 
 ## Supported Versions
 
-* Jackson 1.9.13, 2.12.1, 2.14.1, 2.14.2
+| Jackson artifact | Supported release lines |
+|---|---|
+| jackson-databind | 2.1, 2.2, 2.4 – 2.21 |
+| jackson-core | 2.1, 2.2, 2.4 – 2.21 |
+| jackson-annotations | 2.1, 2.2, 2.4 – 2.21 |
+| jackson-bom | 2.6 – 2.21 |
+| jackson-modules-java8 (incl. jackson-datatype-jsr310) | 2.9 – 2.19, 2.21 |
+| jackson-modules-base | 2.4 – 2.19 |
+| jackson-dataformats-binary (CBOR, Smile, Avro, Protobuf, Ion) | 2.4 – 2.6, 2.8 – 2.19, 2.21 |
+| jackson-dataformats-text (YAML, CSV, Properties, TOML) | 2.6 – 2.18, 2.21 |
+| jackson-dataformat-xml | 2.9, 2.10, 2.13, 2.15 – 2.17 |
+| jackson-jaxrs-providers (incl. jackson-jaxrs-json-provider) | 2.4 – 2.6, 2.8 – 2.16, 2.18, 2.19 |
+| jackson-jakarta-rs-providers | 2.13, 2.15, 2.16 |
+| jackson-jr | 2.7 – 2.9, 2.11 – 2.19 |
+| jackson-module-kotlin | 2.15, 2.16, 2.18 |
+| jackson-module-scala | 2.4, 2.6, 2.10, 2.12 – 2.16 |
+| jackson-module-jsonschema | 2.4, 2.8, 2.9, 2.14 – 2.16, 2.21 |
+| jackson-datatype-joda | 2.4, 2.9, 2.15, 2.16, 2.18, 2.21 |
+| jackson-datatypes-collections (Guava, HPPC, PCollections) | 2.4, 2.9, 2.15, 2.16 |
+| jackson-datatype-hibernate | 2.15, 2.16 |
+| jackson-datatypes-misc | 2.15, 2.16 |
+| jackson-core-asl / jackson-mapper-asl (Jackson 1.x) | 1.5, 1.7 – 1.9 |
 
 ## Installation
 

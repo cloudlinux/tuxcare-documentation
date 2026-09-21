@@ -20,12 +20,9 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apache Commons IO** 2.0.1, 2.2, 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
-* **Apache HttpComponents Client** 4.2, 4.2.1, 4.2.6, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
+* **Apache HttpComponents Client** 4.2, 4.2.1, 4.2.6, 4.5.1, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
 * **Apache HttpComponents Client 5** 5.0.3, 5.5.2
 * **Apache HttpComponents Core 5** 5.1.3, 5.2.5
-* **Apache HttpComponents Client** 4.2, 4.2.6, 4.5.1, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
-* **Apache HttpComponents Client 5** 5.5.2
-* **Apache HttpComponents Core 5** 5.2.5
 * **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
 * **Apache POI** 3.10-FINAL, 4.1.2

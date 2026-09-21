@@ -313,11 +313,6 @@ export default {
                     icon: '/images/guzzle.webp',
                 },
                 {
-                    path: '/els-for-libraries/php-http-guzzle6-adapter/',
-                    title: 'PHP-HTTP Guzzle6 Adapter',
-                    icon: '/images/TuxCare_color_icon.webp',
-                },
-                {
                     path: '/els-for-libraries/httpful/',
                     icon: '/images/php-logo.webp',
                 },
@@ -356,6 +351,11 @@ export default {
                 {
                     path: '/els-for-libraries/monolog/',
                     icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
+                    path: '/els-for-libraries/php-http-guzzle6-adapter/',
+                    title: 'PHP-HTTP Guzzle6 Adapter',
+                    icon: '/images/guzzle6-adapter.webp',
                 },
                 {
                     path: '/els-for-libraries/php-svg-lib/',
