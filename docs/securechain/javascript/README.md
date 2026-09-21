@@ -1,11 +1,11 @@
 # JavaScript
 
-SecureChain delivers verified, signed, continuously patched JavaScript packages from a TuxCare-managed npm registry. This page shows how to connect a project to it — with the SecureChain CLI or by hand.
+SecureChain delivers verified, signed, continuously patched JavaScript packages from a TuxCare-managed npm registry. This page shows how to connect a project to it — with the SecureChain CLI or manually.
 
 <ELSPrerequisites>
 
-* TuxCare CLN token — contact sales@tuxcare.com
-* A JavaScript project with `package.json`. If you're starting from scratch, run your package manager's init command (`npm init -y`, `pnpm init`, `yarn init`, `bun init`) in your project directory to create one.
+* TuxCare CLN token — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* A JavaScript project with `package.json`. If you are starting from scratch, run your package manager's init command (`npm init -y`, `pnpm init`, `yarn init`, `bun init`) in your project directory to create one.
 
 </ELSPrerequisites>
 
@@ -14,11 +14,11 @@ SecureChain delivers verified, signed, continuously patched JavaScript packages 
 There are two ways to connect a project to SecureChain. Both lead to the same result: your package manager installs the TuxCare builds from the TuxCare registry.
 
 * **[Option 1: SecureChain CLI](#option-1-securechain-cli-recommended)** — recommended. One tool configures the registry, finds the packages that have a patched build, including transitive ones, pins them and verifies the result.
-* **[Option 2: Manual setup](#option-2-manual-setup)** — you edit the package manager's configuration yourself and install nothing extra.
+* **[Option 2: Manual Setup](#option-2-manual-setup)** — you edit the package manager's configuration yourself and install nothing extra.
 
 ### Option 1: SecureChain CLI (recommended)
 
-`securechain` is a single binary that does the work of the manual setup for you. It detects your package manager (`npm`, `pnpm`, `yarn` or `bun`), points it at the TuxCare registry, compares the whole resolved dependency tree with the TuxCare catalogue, pins the patched builds — through `overrides` or `resolutions` for transitive packages — and verifies that the installed tree really changed. In CI, `securechain check` fails the build when a patched build exists and the project is not on it.
+`securechain` is a single binary that does the work of the manual setup. It detects your package manager (`npm`, `pnpm`, `yarn` or `bun`), points it at the TuxCare registry, compares the whole resolved dependency tree with the TuxCare catalogue, pins the patched builds — through `overrides` or `resolutions` for transitive packages — and verifies that the installed tree really changed. In CI, `securechain check` fails the build when a patched build exists and the project is not on it.
 
 <ELSSteps>
 
@@ -51,7 +51,7 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
    securechain init
    ```
 
-   `auth login` validates the token and remembers what your subscription covers. `init` writes the registry configuration (`.npmrc`, or `.yarnrc.yml` for Yarn 2+) and the project file `.securechain.yaml`.
+   `auth login` validates the token and stores what your subscription covers. `init` writes the registry configuration (`.npmrc`, or `.yarnrc.yml` for Yarn 2+) and the project file `.securechain.yaml`.
 
 4. See what is covered, then apply the patched builds
 
@@ -60,7 +60,7 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
    securechain harden
    ```
 
-   `check` only reads: it lists every package that has a patched build and the CVEs that build closes. `harden` pins those builds, refreshes the lockfile, reinstalls and verifies the result. Add `--dry-run` to preview the change first.
+   `check` makes no changes: it lists every package that has a patched build and the CVEs that build closes. `harden` pins those builds, refreshes the lockfile, reinstalls and verifies the result. Add `--dry-run` to preview the change first.
 
 5. Commit the changes
 
@@ -68,9 +68,9 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
 
 </ELSSteps>
 
-Every command, the options, CI usage and machines with no internet access are described on the [SecureChain CLI](/securechain/cli/) page.
+Every command, the options, CI usage and air-gapped machines are described on the [SecureChain CLI](/securechain/cli/) page.
 
-### Option 2: Manual setup
+### Option 2: Manual Setup
 
 Use this path if you prefer not to install the CLI. Select your subscription to see the matching setup steps:
 
@@ -108,9 +108,9 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
 
    You can keep the package names and versions in `package.json` as they are.
 
-   The package manager is now pointed at SecureChain from the previous step, so the packages are pulled automatically from the TuxCare registry: SecureChain builds where they exist, and the public upstream packages for the rest — served through the same endpoint, so no other registry configuration is needed.
+   The previous step configured the package manager to use the TuxCare registry, so packages are pulled from it automatically: SecureChain builds where they exist, and the public upstream packages for the rest. Both come from the same endpoint, so no other registry configuration is needed.
 
-   The freshly generated `package-lock.json` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `package-lock.json`, which records the TuxCare URLs and checksums.
 
 3. Verify the setup
 
@@ -160,9 +160,9 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
 
    You can keep the package names and versions in `package.json` as they are.
 
-   The package manager is now pointed at SecureChain from the previous step, so the packages are pulled automatically from the TuxCare registry: SecureChain builds where they exist, and the public upstream packages for the rest — served through the same endpoint, so no other registry configuration is needed.
+   The previous step configured the package manager to use the TuxCare registry, so packages are pulled from it automatically: SecureChain builds where they exist, and the public upstream packages for the rest. Both come from the same endpoint, so no other registry configuration is needed.
 
-   The freshly generated `pnpm-lock.yaml` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `pnpm-lock.yaml`, which records the TuxCare URLs and checksums.
 
 3. Verify the setup
 
@@ -215,9 +215,9 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
 
    You can keep the package names and versions in `package.json` as they are.
 
-   The package manager is now pointed at SecureChain from the previous step, so the packages are pulled automatically from the TuxCare registry: SecureChain builds where they exist, and the public upstream packages for the rest — served through the same endpoint, so no other registry configuration is needed.
+   The previous step configured the package manager to use the TuxCare registry, so packages are pulled from it automatically: SecureChain builds where they exist, and the public upstream packages for the rest. Both come from the same endpoint, so no other registry configuration is needed.
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 3. Verify the setup
 
@@ -268,9 +268,9 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
 
    You can keep the package names and versions in `package.json` as they are.
 
-   The package manager is now pointed at SecureChain from the previous step, so the packages are pulled automatically from the TuxCare registry: SecureChain builds where they exist, and the public upstream packages for the rest — served through the same endpoint, so no other registry configuration is needed.
+   The previous step configured the package manager to use the TuxCare registry, so packages are pulled from it automatically: SecureChain builds where they exist, and the public upstream packages for the rest. Both come from the same endpoint, so no other registry configuration is needed.
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 3. Verify the setup
 
@@ -324,9 +324,9 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
 
    You can keep the package names and versions in `package.json` as they are.
 
-   The package manager is now pointed at SecureChain from the previous step, so the packages are pulled automatically from the TuxCare registry: SecureChain builds where they exist, and the public upstream packages for the rest — served through the same endpoint, so no other registry configuration is needed.
+   The previous step configured the package manager to use the TuxCare registry, so packages are pulled from it automatically: SecureChain builds where they exist, and the public upstream packages for the rest. Both come from the same endpoint, so no other registry configuration is needed.
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 3. Verify the setup
 
@@ -376,9 +376,9 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
 
    You can keep the package names and versions in `package.json` as they are.
 
-   The package manager is now pointed at SecureChain from the previous step, so the packages are pulled automatically from the TuxCare registry: SecureChain builds where they exist, and the public upstream packages for the rest — served through the same endpoint, so no other registry configuration is needed.
+   The previous step configured the package manager to use the TuxCare registry, so packages are pulled from it automatically: SecureChain builds where they exist, and the public upstream packages for the rest. Both come from the same endpoint, so no other registry configuration is needed.
 
-   The freshly generated lockfile records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated lockfile, which records the TuxCare URLs and checksums.
 
 3. Verify the setup
 
@@ -454,7 +454,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    npm install
    ```
 
-   The freshly generated `package-lock.json` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `package-lock.json`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -522,7 +522,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    pnpm install
    ```
 
-   The freshly generated `pnpm-lock.yaml` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `pnpm-lock.yaml`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -591,7 +591,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    yarn install
    ```
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -658,7 +658,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    yarn install
    ```
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -728,7 +728,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    yarn install
    ```
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -794,7 +794,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    bun install
    ```
 
-   The freshly generated lockfile records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated lockfile, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -873,7 +873,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    npm install
    ```
 
-   The freshly generated `package-lock.json` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `package-lock.json`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -944,7 +944,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    pnpm install
    ```
 
-   The freshly generated `pnpm-lock.yaml` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `pnpm-lock.yaml`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -1016,7 +1016,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    yarn install
    ```
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -1086,7 +1086,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    yarn install
    ```
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -1159,7 +1159,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    yarn install
    ```
 
-   The freshly generated `yarn.lock` records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated `yarn.lock`, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -1228,7 +1228,7 @@ Use this path if you prefer not to install the CLI. Select your subscription to 
    bun install
    ```
 
-   The freshly generated lockfile records the TuxCare URLs and checksums; commit it.
+   Commit the regenerated lockfile, which records the TuxCare URLs and checksums.
 
 4. Verify the setup
 
@@ -1299,6 +1299,5 @@ pnpm, Bun and Yarn 1 (Classic) read the same `.npmrc`, so every check below appl
 
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
-* ![](/images/wrench.webp) [Managing the SecureChain repository](/securechain/managing-securechain-repository/) — Upgrade to a newer version
 
 </WhatsNext>
