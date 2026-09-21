@@ -4,7 +4,9 @@ TuxCare's Endless Lifecycle Support (ELS) for Jackson provides security patches 
 
 ## Supported Versions
 
-* Jackson 1.9.13, 2.12.1, 2.14.1, 2.14.2
+* Jackson 1.9.13, 2.12.1, 2.14.1, 2.14.2, 2.17.2, 2.17.3
+
+Specific supported artifacts are listed in the [CVE Tracker](https://tuxcare.com/cve-tracker/products?product=Jackson).
 
 ## Installation
 

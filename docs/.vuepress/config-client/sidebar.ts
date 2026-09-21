@@ -353,6 +353,11 @@ export default {
                     icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
+                    path: '/els-for-libraries/php-http-guzzle6-adapter/',
+                    title: 'PHP-HTTP Guzzle6 Adapter',
+                    icon: '/images/guzzle6-adapter.webp',
+                },
+                {
                     path: '/els-for-libraries/php-svg-lib/',
                     icon: '/images/dompdf-logo.webp',
                 },

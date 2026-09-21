@@ -1,13 +1,12 @@
-# Laminas
+# PHP-HTTP Guzzle6 Adapter
 
-Endless Lifecycle Support (ELS) for Laminas from TuxCare provides security fixes for Laminas components that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for the PHP-HTTP Guzzle6 Adapter from TuxCare provides security fixes for versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **laminas-diactoros** 1.8.7p2, 2.22.0
-* **laminas-http** 2.5.6
+* **PHP-HTTP Guzzle6 Adapter** 1.1.1
 
-Other components and versions upon request.
+Other versions upon request.
 
 ## Installation
 
@@ -56,40 +55,14 @@ Other components and versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Laminas components
+4. Install the adapter
 
-   Install the TuxCare-maintained Laminas component release that matches your project:
-
-   <TableTabs label="Choose component: ">
-
-   <template #laminas-diactoros_1.8>
+   Install the TuxCare-maintained release:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require laminas/laminas-diactoros:1.8.7p2-1+tuxcare` },
-     { title: 'composer.json', content: diactorosjson187 }
+     { title: 'Composer CLI', content: `composer require php-http/guzzle6-adapter:v1.1.1-p1+tuxcare` },
+     { title: 'composer.json', content: pkgjson }
    ]" />
-
-   </template>
-
-   <template #laminas-diactoros_2.22>
-
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require laminas/laminas-diactoros:2.22.0-p1+tuxcare` },
-     { title: 'composer.json', content: diactorosjson }
-   ]" />
-
-   </template>
-
-   <template #laminas-http_2.5>
-
-   <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require laminas/laminas-http:2.5.6-p1+tuxcare` },
-     { title: 'composer.json', content: laminashttpjson }
-   ]" />
-
-   </template>
-
-   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -135,9 +108,10 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=laminas) — Track vulnerability fixes and updates
-* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=laminas) — Patched versions and changelogs
-* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/laminas/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=php-http%2Fguzzle6-adapter) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=php-http%2Fguzzle6-adapter) — Patched versions and changelogs
+* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?q=php-http%2Fguzzle6-adapter) — Components covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/php-http/guzzle6-adapter/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
@@ -172,24 +146,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const diactorosjson187 =
+const pkgjson =
 `{
     "require": {
-        "laminas/laminas-diactoros": "1.8.7p2-1+tuxcare"
-    }
-}`
-
-const diactorosjson =
-`{
-    "require": {
-        "laminas/laminas-diactoros": "2.22.0-p1+tuxcare"
-    }
-}`
-
-const laminashttpjson =
-`{
-    "require": {
-        "laminas/laminas-http": "2.5.6-p1+tuxcare"
+        "php-http/guzzle6-adapter": "v1.1.1-p1+tuxcare"
     }
 }`
 
