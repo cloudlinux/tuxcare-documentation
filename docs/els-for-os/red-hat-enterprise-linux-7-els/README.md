@@ -1,5 +1,7 @@
 # Red Hat Enterprise Linux 7 ELS
 
+<ELSVendorEol os="red-hat-enterprise-linux-7-els" />
+
 ## Installation
 
 <ELSPrerequisites>

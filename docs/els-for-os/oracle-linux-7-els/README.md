@@ -1,5 +1,7 @@
 # Oracle Linux 7 ELS
 
+<ELSVendorEol os="oracle-linux-7-els" />
+
 ## Installation
 
 <ELSPrerequisites>

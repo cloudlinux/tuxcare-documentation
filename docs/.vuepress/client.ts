@@ -19,6 +19,7 @@ import ELSTechnology from "./components/ELSTechnology.vue";
 import ELSRTechnology from "./components/ELSRTechnology.vue";
 import SecureChainEcosystemSelector from "./components/SecureChainEcosystemSelector.vue";
 import ELSOSSelector from "./components/ELSOSSelector.vue";
+import ELSVendorEol from "./components/ELSVendorEol.vue";
 import ELSPrerequisites from "./components/ELSPrerequisites.vue";
 import ELSSteps from "./components/ELSSteps.vue";
 import WhatsNext from "./components/WhatsNext.vue";
@@ -58,6 +59,7 @@ export default defineClientConfig({
         app.component("ELSRTechnology", ELSRTechnology);
         app.component("SecureChainEcosystemSelector", SecureChainEcosystemSelector);
         app.component("ELSOSSelector", ELSOSSelector);
+        app.component("ELSVendorEol", ELSVendorEol);
         app.component("ELSPrerequisites", ELSPrerequisites);
         app.component("ELSSteps", ELSSteps);
         app.component("WhatsNext", WhatsNext);

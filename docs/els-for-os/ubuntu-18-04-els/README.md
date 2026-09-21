@@ -1,5 +1,7 @@
 # Ubuntu 18.04 ELS
 
+<ELSVendorEol os="ubuntu-18-04-els" />
+
 ## Installation
 
 <ELSPrerequisites>

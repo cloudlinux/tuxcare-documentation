@@ -1,5 +1,7 @@
 # CentOS Stream 8 ELS
 
+<ELSVendorEol os="centos-stream-8-els" />
+
 ## Installation
 
 <ELSPrerequisites>

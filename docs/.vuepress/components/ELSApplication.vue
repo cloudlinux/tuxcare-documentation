@@ -89,8 +89,14 @@ const applications = [
   {
     name: "MySQL",
     versions: "8.0",
-    link: "./mysql-and-percona-server/",
+    link: "./mysql/",
     icon: "/images/mysql.webp",
+  },
+  {
+    name: "Percona Server",
+    versions: "8.0",
+    link: "./percona-server/",
+    icon: "/images/percona_server.webp",
   },
   {
     name: "PostgreSQL",

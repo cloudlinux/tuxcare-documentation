@@ -1,5 +1,7 @@
 # Amazon Linux 2 ELS
 
+<ELSVendorEol os="amazon-linux-2-els" />
+
 ## Installation
 
 <ELSPrerequisites>
@@ -7,7 +9,7 @@
 * A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
 * TCP port 443 open to `cln.cloudlinux.com` and `repo.tuxcare.com`
-* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* Architecture: x86_64 and aarch64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 </ELSPrerequisites>
 

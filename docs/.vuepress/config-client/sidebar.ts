@@ -607,6 +607,10 @@ export default {
             children: [
                 "/securechain/",
                 {
+                    path: '/securechain/cli/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/securechain/javascript/',
                     icon: '/images/javascript.webp',
                 },
@@ -655,9 +659,14 @@ export default {
                     icon: '/images/minio.webp',
                 },
                 {
-                    path: '/els-for-applications/mysql-and-percona-server/',
-                    title: 'MySQL and Percona Server',
+                    path: '/els-for-applications/mysql/',
+                    title: 'MySQL',
                     icon: '/images/mysql.webp',
+                },
+                {
+                    path: '/els-for-applications/percona-server/',
+                    title: 'Percona Server',
+                    icon: '/images/percona_server.webp',
                 },
                 {
                     path: '/els-for-applications/postgresql/',
