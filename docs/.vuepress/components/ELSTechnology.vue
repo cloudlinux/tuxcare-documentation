@@ -49,7 +49,7 @@
               >
                 <span class="project-name">{{ project.name }}</span>
                 <span class="project-versions">
-                  <span v-if="project.detailsHash">
+                  <span v-if="project.versionsVary">
                     versions vary per module
                   </span>
                   <span v-else>{{ project.versions }}</span>
@@ -59,7 +59,7 @@
               <div v-else class="project-row">
                 <span class="project-name">{{ project.name }}</span>
                 <span class="project-versions">
-                  <span v-if="project.detailsHash">
+                  <span v-if="project.versionsVary">
                     versions vary per module — details
                   </span>
                   <span v-else>{{ project.versions }}</span>
@@ -715,95 +715,113 @@ const techData = [
         versions: "3.0 | 3.1 | 4.0 | 4.1 | 4.2 | 4.3 | 5.0 | 5.1 | 5.2 | 5.3 | 6.0 | 6.1 | 6.2",
         link: "./spring/",
         detailsHash: "Framework",
+        versionsVary: true,
       },
       {
         name: "Spring® AMQP",
         versions: "2.1.8.RELEASE | 2.3.16 | 2.4.17 | 3.0.10 | 3.1.8 | 3.1.12",
         link: "./spring/",
+        detailsHash: "AMQP",
       },
       {
         name: "Spring® Batch",
         versions: "4.3.10 | 5.1.2 | 5.1.3 | 5.2.6",
         link: "./spring/",
+        detailsHash: "Batch",
       },
       {
         name: "Spring® Boot",
         versions: "2.1 | 2.3 | 2.4 | 2.5 | 2.6 | 2.7 | 3.0 | 3.1 | 3.2 | 3.3 | 3.4 | 3.5",
         link: "./spring/",
         detailsHash: "Boot",
+        versionsVary: true,
       },
       {
         name: "Spring® Cloud",
         versions: "3.1.6 | 3.1.9",
         link: "./spring/",
+        detailsHash: "Cloud",
       },
       {
         name: "Spring® Data",
         versions: "2021.2 | 2023.1 | 2024.0 | 2024.1 | 2025.0",
         link: "./spring/",
         detailsHash: "Data",
+        versionsVary: true,
       },
       {
         name: "Spring® Security",
         versions: "4.2 | 5.6 | 5.7 | 5.8 | 6.0 | 6.1 | 6.2 | 6.3 | 6.4 | 6.5",
         link: "./spring/",
         detailsHash: "Security",
+        versionsVary: true,
       },
       {
         name: "Spring® Security OAuth",
         versions: "1.1.1",
         link: "./spring/",
+        detailsHash: "Security_OAuth",
       },
       {
         name: "Spring® Web Services",
         versions: "3.0.7.RELEASE | 3.1.6 | 3.1.8 | 4.0.15 | 4.0.17 | 4.1.4",
         link: "./spring/",
+        detailsHash: "Web_Services",
       },
       {
         name: "Spring® Integration",
         versions: "5.5.20 | 6.3.11 | 6.4.10 | 6.5.10",
         link: "./spring/",
+        detailsHash: "Integration",
       },
       {
         name: "Spring® HATEOAS",
         versions: "0.25.2.RELEASE | 1.5.6 | 2.0.7 | 2.3.4 | 2.4.1",
         link: "./spring/",
+        detailsHash: "HATEOAS",
       },
       {
         name: "Spring® LDAP",
         versions: "2.4.1 | 2.4.4 | 3.0.6 | 3.2.12",
         link: "./spring/",
         detailsHash: "LDAP",
+        versionsVary: true,
       },
       {
         name: "Spring® GraphQL",
         versions: "1.0.6 | 1.2.9 | 1.3.5 | 1.3.7 | 1.4.6",
         link: "./spring/",
+        detailsHash: "GraphQL",
       },
       {
         name: "Spring® Retry",
         versions: "1.3.4",
         link: "./spring/",
+        detailsHash: "Retry",
       },
       {
         name: "Spring® Plugin",
         versions: "2.0.0 | 3.0.0",
         link: "./spring/",
+        detailsHash: "Plugin",
       },
       {
         name: "Spring® Web Flow",
         versions: "2.3.1 | 2.3.3 | 3.0.2",
         link: "./spring/",
+        detailsHash: "Web_Flow",
       },
       {
         name: "Spring® for Apache Pulsar",
         versions: "1.0.12 | 1.1.13 | 1.2.13 | 1.2.18",
         link: "./spring/",
+        detailsHash: "Pulsar",
       },
       {
         name: "Spring® Authorization Server",
         versions: "1.1.4 | 1.2.7 | 1.3.7 | 1.5.8",
         link: "./spring/",
+        detailsHash: "Authorization_Server",
       },
       {
         name: "Thymeleaf",
