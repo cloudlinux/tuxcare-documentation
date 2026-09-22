@@ -28,13 +28,13 @@ Percona Server ships from its own `percona-els` repository. For MySQL Community 
 1. Download the installer script
 
    ```text
-   wget https://repo.tuxcare.com/percona-els/install-percona-els-repo.sh
+   wget https://repo.tuxcare.com/percona-els/install-percona-els-rpm-repo.sh
    ```
 
 2. Run the installer script with your license key
 
    ```text
-   sh install-percona-els-repo.sh --license-key XXXXXXXX
+   sh install-percona-els-rpm-repo.sh --license-key XXXXXXXX
    ```
 
 3. Verify the repository is enabled
