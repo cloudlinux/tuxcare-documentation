@@ -13,7 +13,7 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 
 Each package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. SBOMs are provided in industry-standard formats — SPDX and CycloneDX — so they can be consumed by any SBOM-aware scanner or supply-chain tool.
 
-SBOMs are generated across all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET). For JavaScript, Python, and PHP they are published on [security.tuxcare.com](https://security.tuxcare.com/) and are publicly accessible. Java SBOMs are still published to [TuxCare Nexus](https://nexus.repo.tuxcare.com/), where **access requires TuxCare credentials**.
+SBOMs are generated across all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET). For JavaScript, Python, and PHP they are published on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/) and are publicly accessible. Java SBOMs are still published to [TuxCare Nexus](https://nexus.repo.tuxcare.com/), where **access requires TuxCare credentials**.
 
 SBOMs are currently published for:
 
@@ -45,7 +45,7 @@ Each VEX document reports the CVEs that directly affect the artifact. The feed c
 
 ## Package Signature Verification (GPG)
 
-Every package TuxCare builds is signed with a detached OpenPGP signature so you can confirm, before installing or updating, that the artifact was produced by TuxCare and has not been altered in transit. The signature is published as a separate `.asc` file — on [security.tuxcare.com](https://security.tuxcare.com/) for JavaScript, in TuxCare Nexus for the other ecosystems — and is created with TuxCare's signing key (SHA-256 detached signature).
+Every package TuxCare builds is signed with a detached OpenPGP signature so you can confirm, before installing or updating, that the artifact was produced by TuxCare and has not been altered in transit. The signature is published as a separate `.asc` file — on [security.tuxcare.com](https://security.tuxcare.com/signatures/) for JavaScript, in TuxCare Nexus for the other ecosystems — and is created with TuxCare's signing key (SHA-256 detached signature).
 
 A successful verification proves two things about the artifact:
 
@@ -80,7 +80,7 @@ Import the public key once. It can verify every TuxCare-signed package, so this 
 
 ### Verify a Package
 
-The verification procedure is the same for every ELS for Language Ecosystems language (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature (from security.tuxcare.com for JavaScript, from TuxCare Nexus for the other ecosystems), and run `gpg --verify`. Select your ecosystem below.
+The verification procedure is the same for every ELS for Language Ecosystems language (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature (from [security.tuxcare.com](https://security.tuxcare.com/signatures/) for JavaScript, from TuxCare Nexus for the other ecosystems), and run `gpg --verify`. Select your ecosystem below.
 
 :::warning
 The signature location and artifact naming vary by ecosystem. The Java, JavaScript, PHP, and Python steps below are confirmed; the .NET steps shown are representative — confirm the exact signatures location and artifact naming for .NET with your TuxCare contact.

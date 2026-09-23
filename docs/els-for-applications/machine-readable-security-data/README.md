@@ -31,7 +31,7 @@ Each application package built by TuxCare ships with an SBOM that lists its comp
 SBOMs for these applications are published as follows:
 
 * Java applications (Apache Tomcat, WildFly, Apache Hive, Apache Hadoop) - [els-java-sbom](https://nexus.repo.tuxcare.com/#browse/browse:els-java-sbom) on TuxCare Nexus; access requires credentials
-* Go applications (Grafana, Loki, MinIO) - [els_lang_go](https://security.tuxcare.com/sbom/cyclonedx/els_lang_go/) on security.tuxcare.com, publicly accessible; each SBOM is accompanied by its detached `.asc` signature in the same directory
+* Go applications (Grafana, Loki, MinIO) - [els_lang_go](https://security.tuxcare.com/sbom/cyclonedx/els_lang_go/) on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), publicly accessible; each SBOM is accompanied by its detached `.asc` signature in the same directory
 
 To check whether an SBOM is available for other applications or to request a copy, reach out to [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
