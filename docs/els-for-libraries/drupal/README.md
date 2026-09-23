@@ -76,36 +76,15 @@ Other versions upon request.
 
 4. Install the package
 
-   Select your module, then install the TuxCare-maintained release that matches your project:
+   Select your package, then install the TuxCare-maintained release that matches your project:
 
-   <TableTabs label="Choose module: " :labels="{
-     core: 'drupal/core',
-     access_code: 'drupal/access_code',
-     bootstrap_site_alert: 'drupal/bootstrap_site_alert',
-     coffee: 'drupal/coffee',
-     colorbox: 'drupal/colorbox',
-     commerce_paybox: 'drupal/commerce_paybox',
-     facebook_pixel: 'drupal/facebook_pixel',
-     filefield_paths: 'drupal/filefield_paths',
-     flag: 'drupal/flag',
-     form_builder: 'drupal/form_builder',
-     gdpr: 'drupal/gdpr',
-     i18n: 'drupal/i18n',
-     link: 'drupal/link',
-     openid_connect: 'drupal/openid_connect',
-     protected_pages: 'drupal/protected_pages',
-     shs: 'drupal/shs',
-     spamspan: 'drupal/spamspan',
-     term_reference_tree: 'drupal/term_reference_tree',
-     tfa_basic: 'drupal/tfa_basic',
-     webform_multifile: 'drupal/webform_multifile'
-   }">
+   <TableTabs label="Choose package: ">
 
    <template #core>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/core:9.5.11-p6+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/core', '9.5.11-p6+tuxcare') }
+     { title: 'composer.json', content: corejson }
    ]" />
 
    </template>
@@ -114,7 +93,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/access_code:7.1.1-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/access_code', '7.1.1-p1+tuxcare') }
+     { title: 'composer.json', content: accesscodejson }
    ]" />
 
    </template>
@@ -123,7 +102,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/bootstrap_site_alert:7.1.6-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/bootstrap_site_alert', '7.1.6-p1+tuxcare') }
+     { title: 'composer.json', content: bootstrapsitealertjson }
    ]" />
 
    </template>
@@ -132,7 +111,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/coffee:7.2.3-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/coffee', '7.2.3-p1+tuxcare') }
+     { title: 'composer.json', content: coffeejson }
    ]" />
 
    </template>
@@ -141,7 +120,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/colorbox:7.2.19-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/colorbox', '7.2.19-p1+tuxcare') }
+     { title: 'composer.json', content: colorboxjson }
    ]" />
 
    </template>
@@ -150,7 +129,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/commerce_paybox:7.1.5-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/commerce_paybox', '7.1.5-p1+tuxcare') }
+     { title: 'composer.json', content: commercepayboxjson }
    ]" />
 
    </template>
@@ -159,7 +138,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/facebook_pixel:7.1.1-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/facebook_pixel', '7.1.1-p1+tuxcare') }
+     { title: 'composer.json', content: facebookpixeljson }
    ]" />
 
    </template>
@@ -168,7 +147,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/filefield_paths:7.1.2-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/filefield_paths', '7.1.2-p1+tuxcare') }
+     { title: 'composer.json', content: filefieldpathsjson }
    ]" />
 
    </template>
@@ -177,7 +156,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/flag:7.3.9-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/flag', '7.3.9-p1+tuxcare') }
+     { title: 'composer.json', content: flagjson }
    ]" />
 
    </template>
@@ -186,7 +165,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/form_builder:7.1.22-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/form_builder', '7.1.22-p1+tuxcare') }
+     { title: 'composer.json', content: formbuilderjson }
    ]" />
 
    </template>
@@ -195,7 +174,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/gdpr:7.1.0-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/gdpr', '7.1.0-p1+tuxcare') }
+     { title: 'composer.json', content: gdprjson }
    ]" />
 
    </template>
@@ -204,7 +183,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/i18n:7.1.35-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/i18n', '7.1.35-p1+tuxcare') }
+     { title: 'composer.json', content: i18njson }
    ]" />
 
    </template>
@@ -213,7 +192,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/link:7.1.13-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/link', '7.1.13-p1+tuxcare') }
+     { title: 'composer.json', content: linkjson }
    ]" />
 
    </template>
@@ -222,7 +201,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/openid_connect:7.1.3-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/openid_connect', '7.1.3-p1+tuxcare') }
+     { title: 'composer.json', content: openidconnectjson }
    ]" />
 
    </template>
@@ -231,7 +210,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/protected_pages:7.2.4-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/protected_pages', '7.2.4-p1+tuxcare') }
+     { title: 'composer.json', content: protectedpagesjson }
    ]" />
 
    </template>
@@ -240,7 +219,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/shs:7.1.10-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/shs', '7.1.10-p1+tuxcare') }
+     { title: 'composer.json', content: shsjson }
    ]" />
 
    </template>
@@ -249,7 +228,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/spamspan:7.1.4-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/spamspan', '7.1.4-p1+tuxcare') }
+     { title: 'composer.json', content: spamspanjson }
    ]" />
 
    </template>
@@ -258,7 +237,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/term_reference_tree:7.1.11-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/term_reference_tree', '7.1.11-p1+tuxcare') }
+     { title: 'composer.json', content: termreferencetreejson }
    ]" />
 
    </template>
@@ -267,7 +246,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/tfa_basic:7.1.2-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/tfa_basic', '7.1.2-p1+tuxcare') }
+     { title: 'composer.json', content: tfabasicjson }
    ]" />
 
    </template>
@@ -276,7 +255,7 @@ Other versions upon request.
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/webform_multifile:7.1.6-p1+tuxcare` },
-     { title: 'composer.json', content: requireJson('drupal/webform_multifile', '7.1.6-p1+tuxcare') }
+     { title: 'composer.json', content: webformmultifilejson }
    ]" />
 
    </template>
@@ -410,10 +389,143 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const requireJson = (pkg, version) =>
+const corejson =
 `{
     "require": {
-        "${pkg}": "${version}"
+        "drupal/core": "9.5.11-p6+tuxcare"
+    }
+}`
+
+const accesscodejson =
+`{
+    "require": {
+        "drupal/access_code": "7.1.1-p1+tuxcare"
+    }
+}`
+
+const bootstrapsitealertjson =
+`{
+    "require": {
+        "drupal/bootstrap_site_alert": "7.1.6-p1+tuxcare"
+    }
+}`
+
+const coffeejson =
+`{
+    "require": {
+        "drupal/coffee": "7.2.3-p1+tuxcare"
+    }
+}`
+
+const colorboxjson =
+`{
+    "require": {
+        "drupal/colorbox": "7.2.19-p1+tuxcare"
+    }
+}`
+
+const commercepayboxjson =
+`{
+    "require": {
+        "drupal/commerce_paybox": "7.1.5-p1+tuxcare"
+    }
+}`
+
+const facebookpixeljson =
+`{
+    "require": {
+        "drupal/facebook_pixel": "7.1.1-p1+tuxcare"
+    }
+}`
+
+const filefieldpathsjson =
+`{
+    "require": {
+        "drupal/filefield_paths": "7.1.2-p1+tuxcare"
+    }
+}`
+
+const flagjson =
+`{
+    "require": {
+        "drupal/flag": "7.3.9-p1+tuxcare"
+    }
+}`
+
+const formbuilderjson =
+`{
+    "require": {
+        "drupal/form_builder": "7.1.22-p1+tuxcare"
+    }
+}`
+
+const gdprjson =
+`{
+    "require": {
+        "drupal/gdpr": "7.1.0-p1+tuxcare"
+    }
+}`
+
+const i18njson =
+`{
+    "require": {
+        "drupal/i18n": "7.1.35-p1+tuxcare"
+    }
+}`
+
+const linkjson =
+`{
+    "require": {
+        "drupal/link": "7.1.13-p1+tuxcare"
+    }
+}`
+
+const openidconnectjson =
+`{
+    "require": {
+        "drupal/openid_connect": "7.1.3-p1+tuxcare"
+    }
+}`
+
+const protectedpagesjson =
+`{
+    "require": {
+        "drupal/protected_pages": "7.2.4-p1+tuxcare"
+    }
+}`
+
+const shsjson =
+`{
+    "require": {
+        "drupal/shs": "7.1.10-p1+tuxcare"
+    }
+}`
+
+const spamspanjson =
+`{
+    "require": {
+        "drupal/spamspan": "7.1.4-p1+tuxcare"
+    }
+}`
+
+const termreferencetreejson =
+`{
+    "require": {
+        "drupal/term_reference_tree": "7.1.11-p1+tuxcare"
+    }
+}`
+
+const tfabasicjson =
+`{
+    "require": {
+        "drupal/tfa_basic": "7.1.2-p1+tuxcare"
+    }
+}`
+
+const webformmultifilejson =
+`{
+    "require": {
+        "drupal/webform_multifile": "7.1.6-p1+tuxcare"
     }
 }`
 
