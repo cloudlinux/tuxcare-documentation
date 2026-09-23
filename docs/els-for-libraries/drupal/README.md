@@ -80,7 +80,7 @@ Other versions upon request.
 
    <TableTabs label="Choose package: ">
 
-   <template #core>
+   <template #Drupal_Core>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/core:9.5.11-p6+tuxcare` },
@@ -89,7 +89,7 @@ Other versions upon request.
 
    </template>
 
-   <template #access_code>
+   <template #Drupal_Access_Code>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/access_code:7.1.1-p1+tuxcare` },
@@ -98,7 +98,7 @@ Other versions upon request.
 
    </template>
 
-   <template #bootstrap_site_alert>
+   <template #Drupal_Bootstrap_Site_Alert>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/bootstrap_site_alert:7.1.6-p1+tuxcare` },
@@ -107,7 +107,7 @@ Other versions upon request.
 
    </template>
 
-   <template #coffee>
+   <template #Drupal_Coffee>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/coffee:7.2.3-p1+tuxcare` },
@@ -116,7 +116,7 @@ Other versions upon request.
 
    </template>
 
-   <template #colorbox>
+   <template #Drupal_Colorbox>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/colorbox:7.2.19-p1+tuxcare` },
@@ -125,7 +125,7 @@ Other versions upon request.
 
    </template>
 
-   <template #commerce_paybox>
+   <template #Drupal_Commerce_Paybox>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/commerce_paybox:7.1.5-p1+tuxcare` },
@@ -134,7 +134,7 @@ Other versions upon request.
 
    </template>
 
-   <template #facebook_pixel>
+   <template #Drupal_Facebook_Pixel>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/facebook_pixel:7.1.1-p1+tuxcare` },
@@ -143,7 +143,7 @@ Other versions upon request.
 
    </template>
 
-   <template #filefield_paths>
+   <template #Drupal_File_Field_Paths>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/filefield_paths:7.1.2-p1+tuxcare` },
@@ -152,7 +152,7 @@ Other versions upon request.
 
    </template>
 
-   <template #flag>
+   <template #Drupal_Flag>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/flag:7.3.9-p1+tuxcare` },
@@ -161,7 +161,7 @@ Other versions upon request.
 
    </template>
 
-   <template #form_builder>
+   <template #Drupal_Form_Builder>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/form_builder:7.1.22-p1+tuxcare` },
@@ -170,7 +170,7 @@ Other versions upon request.
 
    </template>
 
-   <template #gdpr>
+   <template #Drupal_GDPR>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/gdpr:7.1.0-p1+tuxcare` },
@@ -179,7 +179,7 @@ Other versions upon request.
 
    </template>
 
-   <template #i18n>
+   <template #Drupal_Internationalization>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/i18n:7.1.35-p1+tuxcare` },
@@ -188,7 +188,7 @@ Other versions upon request.
 
    </template>
 
-   <template #link>
+   <template #Drupal_Link>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/link:7.1.13-p1+tuxcare` },
@@ -197,7 +197,7 @@ Other versions upon request.
 
    </template>
 
-   <template #openid_connect>
+   <template #Drupal_OpenID_Connect>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/openid_connect:7.1.3-p1+tuxcare` },
@@ -206,7 +206,7 @@ Other versions upon request.
 
    </template>
 
-   <template #protected_pages>
+   <template #Drupal_Protected_Pages>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/protected_pages:7.2.4-p1+tuxcare` },
@@ -215,7 +215,7 @@ Other versions upon request.
 
    </template>
 
-   <template #shs>
+   <template #Drupal_Simple_Hierarchical_Select>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/shs:7.1.10-p1+tuxcare` },
@@ -224,7 +224,7 @@ Other versions upon request.
 
    </template>
 
-   <template #spamspan>
+   <template #Drupal_SpamSpan>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/spamspan:7.1.4-p1+tuxcare` },
@@ -233,7 +233,7 @@ Other versions upon request.
 
    </template>
 
-   <template #term_reference_tree>
+   <template #Drupal_Taxonomy_Term_Reference_Tree>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/term_reference_tree:7.1.11-p1+tuxcare` },
@@ -242,7 +242,7 @@ Other versions upon request.
 
    </template>
 
-   <template #tfa_basic>
+   <template #Drupal_TFA_Basic>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/tfa_basic:7.1.2-p1+tuxcare` },
@@ -251,7 +251,7 @@ Other versions upon request.
 
    </template>
 
-   <template #webform_multifile>
+   <template #Drupal_Webform_Multiple_File_Upload>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/webform_multifile:7.1.6-p1+tuxcare` },

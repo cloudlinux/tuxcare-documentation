@@ -68,7 +68,7 @@ Other versions upon request.
 
    <TableTabs label="Choose package: ">
 
-   <template #process>
+   <template #Symfony_Process>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p2+tuxcare` },
@@ -77,7 +77,7 @@ Other versions upon request.
 
    </template>
 
-   <template #http-foundation>
+   <template #Symfony_HttpFoundation>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/http-foundation:4.4.49-p2+tuxcare` },
@@ -86,7 +86,7 @@ Other versions upon request.
 
    </template>
 
-   <template #http-kernel>
+   <template #Symfony_HttpKernel>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/http-kernel:7.4.10-p1+tuxcare` },
@@ -95,7 +95,7 @@ Other versions upon request.
 
    </template>
 
-   <template #mailer>
+   <template #Symfony_Mailer>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/mailer:6.4.34-p1+tuxcare` },
@@ -104,7 +104,7 @@ Other versions upon request.
 
    </template>
 
-   <template #mime>
+   <template #Symfony_Mime>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/mime:7.4.9-p1+tuxcare` },
@@ -113,7 +113,7 @@ Other versions upon request.
 
    </template>
 
-   <template #routing>
+   <template #Symfony_Routing>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/routing:7.4.9-p1+tuxcare` },
@@ -122,7 +122,7 @@ Other versions upon request.
 
    </template>
 
-   <template #yaml>
+   <template #Symfony_Yaml>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/yaml:4.4.45-p1+tuxcare` },
@@ -131,7 +131,7 @@ Other versions upon request.
 
    </template>
 
-   <template #polyfill-intl-idn>
+   <template #Symfony_Polyfill_Intl_IDN>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/polyfill-intl-idn:v1.30.0-p1+tuxcare` },
