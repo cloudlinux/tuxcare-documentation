@@ -8,8 +8,9 @@ Endless Lifecycle Support (ELS) for PostgreSQL from TuxCare provides security fi
 | :----------------------------------------------------------: | :----------: | :--------: | :----------------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)               | RPM          | 7.x        | 9.6, 11            |
 | EL 9 (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.)    | RPM          | 9.x        | 14                 |
+| Ubuntu                                                      | DEB          | 22.04      | 13                 |
 
-**Supported architecture:** x86_64 (64-bit)
+**Supported architectures:** x86_64 (64-bit) for RPM, amd64 for DEB
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -26,21 +27,24 @@ Endless Lifecycle Support (ELS) for PostgreSQL from TuxCare provides security fi
 
 1. Download the installer script
 
-   ```text
-   wget https://repo.tuxcare.com/postgresql-els/install-postgresql-els-repo.sh
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `wget https://repo.tuxcare.com/postgresql-els/install-postgresql-els-rpm-repo.sh` },
+     { title: 'DEB', content: `wget https://repo.tuxcare.com/postgresql-els/install-postgresql-els-deb-repo.sh` }
+   ]" />
 
 2. Run the installer script with your license key
 
-   ```text
-   sh install-postgresql-els-repo.sh --license-key XXXXXXXX
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `sh install-postgresql-els-rpm-repo.sh --license-key XXXXXXXX` },
+     { title: 'DEB', content: `bash install-postgresql-els-deb-repo.sh --license-key XXXXXXXX` }
+   ]" />
 
 3. Verify the repository is enabled
 
-   ```text
-   yum info els-postgresql-release
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum info els-postgresql-release` },
+     { title: 'DEB', content: `apt-cache show els-postgresql-release` }
+   ]" />
 
    On EL 9, use `dnf` instead:
 
