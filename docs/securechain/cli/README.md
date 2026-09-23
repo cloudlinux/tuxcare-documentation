@@ -22,216 +22,222 @@ The CLI never changes anything without saying what it changed, every writing com
 
 <ELSPrerequisites>
 
-* A TuxCare token — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* TuxCare registry token — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
 * The package manager your project uses (`npm`, `pnpm`, `yarn` or `bun`) installed on the machine: the CLI reads the tree that tool resolves
 * Linux, macOS or Windows, x86-64 or ARM64
 
 </ELSPrerequisites>
 
-<TableTabs label="Choose an installation method: " :labels="{ Install_script: 'Install script (curl)', npm: 'npm', Docker: 'Docker', pip: 'pip (PyPI)', apt: 'apt (Debian, Ubuntu)', dnf: 'dnf / yum (RHEL, AlmaLinux, Rocky, Fedora)', Maven: 'Maven plugin', Gradle: 'Gradle plugin', Manual_download: 'Manual download' }">
+<ELSSteps>
 
-<template #Install_script>
+1. Choose an installation method
 
-For Linux and macOS. The script detects your OS and architecture, downloads the matching binary, checks its SHA-256 checksum and installs it. `sudo` is not required: when `/usr/local/bin` is not writable, the binary goes to `~/.local/bin`.
+   <TableTabs label="Choose an installation method: " :labels="{ Install_script: 'Install script (curl)', npm: 'npm', Docker: 'Docker', pip: 'pip (PyPI)', apt: 'apt (Debian, Ubuntu)', dnf: 'dnf / yum (RHEL, AlmaLinux, Rocky, Fedora)', Maven: 'Maven plugin', Gradle: 'Gradle plugin', Manual_download: 'Manual download' }">
 
-```text
-curl -fsSL https://securechain.tuxcare.com/get/securechain | sh
-```
+   <template #Install_script>
 
-To install a specific version, or to choose the directory:
+   For Linux and macOS. The script detects your OS and architecture, downloads the matching binary, checks its SHA-256 checksum and installs it. `sudo` is not required: when `/usr/local/bin` is not writable, the binary goes to `~/.local/bin`.
 
-```text
-curl -fsSL https://securechain.tuxcare.com/get/securechain | SECURECHAIN_VERSION=v0.1.0 SECURECHAIN_INSTALL_DIR="$HOME/bin" sh
-```
+   ```text
+   curl -fsSL https://securechain.tuxcare.com/get/securechain | sh
+   ```
 
-:::tip
-For Windows, use the **npm**, **pip (PyPI)** or **Manual download** option.
-:::
+   To install a specific version, or to choose the directory:
 
-</template>
+   ```text
+   curl -fsSL https://securechain.tuxcare.com/get/securechain | SECURECHAIN_VERSION=v0.1.0 SECURECHAIN_INSTALL_DIR="$HOME/bin" sh
+   ```
 
-<template #npm>
+   :::tip
+   For Windows, use the **npm**, **pip (PyPI)** or **Manual download** option.
+   :::
 
-The package `@tuxcare/securechain` carries the binary for your platform — there is no separate download at install time.
+   </template>
 
-```text
-npm install --global @tuxcare/securechain
-```
+   <template #npm>
 
-Or run it without installing:
+   The package `@tuxcare/securechain` carries the binary for your platform — there is no separate download at install time.
 
-```text
-npx @tuxcare/securechain check
-```
+   ```text
+   npm install --global @tuxcare/securechain
+   ```
 
-</template>
+   Or run it without installing:
 
-<template #Docker>
+   ```text
+   npx @tuxcare/securechain check
+   ```
 
-The image is published on Docker Hub as `tuxcare/securechain`. Mount your project and pass the token:
+   </template>
 
-```text
-docker run --rm -v "$PWD":/work -w /work -e TUXCARE_TOKEN tuxcare/securechain:latest-toolchains check
-```
+   <template #Docker>
 
-Two variants are published for every release:
+   The image is published on Docker Hub as `tuxcare/securechain`. Mount your project and pass the token:
 
-| Tag | Contents |
-| :-- | :-- |
-| `tuxcare/securechain:latest` | The binary and nothing else. Use it as a base, or where the package manager is already in your image. |
-| `tuxcare/securechain:latest-toolchains` | The binary plus `npm`, `mvn` and `pip`, for a standalone scanning job that has no package manager of its own. |
+   ```text
+   docker run --rm -v "$PWD":/work -w /work -e TUXCARE_TOKEN tuxcare/securechain:latest-toolchains check
+   ```
 
-:::tip
-`latest` follows the newest final release and is handy for a first run. In CI, pin a version — for example `tuxcare/securechain:0.1.0-toolchains`.
-:::
+   Two variants are published for every release:
 
-</template>
+   | Tag | Contents |
+   | :-- | :-- |
+   | `tuxcare/securechain:latest` | The binary and nothing else. Use it as a base, or where the package manager is already in your image. |
+   | `tuxcare/securechain:latest-toolchains` | The binary plus `npm`, `mvn` and `pip`, for a standalone scanning job that has no package manager of its own. |
 
-<template #pip>
+   :::tip
+   `latest` follows the newest final release and is handy for a first run. In CI, pin a version — for example `tuxcare/securechain:0.1.0-toolchains`.
+   :::
 
-The `securechain` package on PyPI is a platform wheel with the binary inside. `pipx` and `uv` keep it out of your project's own environment:
+   </template>
 
-```text
-pipx install securechain
-```
+   <template #pip>
 
-With `uv`, you can run it without installing:
+   The `securechain` package on PyPI is a platform wheel with the binary inside. `pipx` and `uv` keep it out of your project's own environment:
 
-```text
-uvx securechain check
-```
+   ```text
+   pipx install securechain
+   ```
 
-</template>
+   With `uv`, you can run it without installing:
 
-<template #apt>
+   ```text
+   uvx securechain check
+   ```
 
-```text
-curl -fsSL https://securechain.tuxcare.com/apt/tuxcare-securechain.gpg | sudo tee /etc/apt/keyrings/tuxcare-securechain.gpg >/dev/null
-curl -fsSL https://securechain.tuxcare.com/apt/securechain.sources | sudo tee /etc/apt/sources.list.d/securechain.sources >/dev/null
-sudo apt-get update && sudo apt-get install -y securechain
-```
+   </template>
 
-The repository metadata is signed with the TuxCare SecureChain key, and updates arrive with the rest of your system's packages.
+   <template #apt>
 
-</template>
+   ```text
+   curl -fsSL https://securechain.tuxcare.com/apt/tuxcare-securechain.gpg | sudo tee /etc/apt/keyrings/tuxcare-securechain.gpg >/dev/null
+   curl -fsSL https://securechain.tuxcare.com/apt/securechain.sources | sudo tee /etc/apt/sources.list.d/securechain.sources >/dev/null
+   sudo apt-get update && sudo apt-get install -y securechain
+   ```
 
-<template #dnf>
+   The repository metadata is signed with the TuxCare SecureChain key, and updates arrive with the rest of your system's packages.
 
-```text
-sudo curl -fsSL -o /etc/yum.repos.d/securechain.repo https://securechain.tuxcare.com/yum/securechain.repo
-sudo dnf install -y securechain
-```
+   </template>
 
-On a system without `dnf`, use `yum install -y securechain`. The repository metadata is signed with the TuxCare SecureChain key.
+   <template #dnf>
 
-</template>
+   ```text
+   sudo curl -fsSL -o /etc/yum.repos.d/securechain.repo https://securechain.tuxcare.com/yum/securechain.repo
+   sudo dnf install -y securechain
+   ```
 
-<template #Maven>
+   On a system without `dnf`, use `yum install -y securechain`. The repository metadata is signed with the TuxCare SecureChain key.
 
-A Java build does not need a separate installation: the plugin downloads the binary for your platform, verifies its checksum, caches it in `~/.m2` and runs it.
+   </template>
 
-Add the TuxCare plugin repository and the plugin to `pom.xml`:
+   <template #Maven>
 
-```xml
-<pluginRepositories>
-  <pluginRepository>
-    <id>tuxcare</id>
-    <url>https://artifacts.tuxcare.com/repository/maven-plugin-securechain/</url>
-    <releases><enabled>true</enabled></releases>
-    <snapshots><enabled>false</enabled></snapshots>
-  </pluginRepository>
-</pluginRepositories>
-```
+   A Java build does not need a separate installation: the plugin downloads the binary for your platform, verifies its checksum, caches it in `~/.m2` and runs it.
 
-Then the plugin itself, inside `<build><plugins>`:
+   Add the TuxCare plugin repository and the plugin to `pom.xml`:
 
-```xml
-<plugin>
-  <groupId>com.tuxcare</groupId>
-  <artifactId>securechain-maven-plugin</artifactId>
-  <version>0.1.0</version>
-  <executions>
-    <execution><goals><goal>check</goal></goals><phase>verify</phase></execution>
-  </executions>
-</plugin>
-```
+   ```xml
+   <pluginRepositories>
+     <pluginRepository>
+       <id>tuxcare</id>
+       <url>https://artifacts.tuxcare.com/repository/maven-plugin-securechain/</url>
+       <releases><enabled>true</enabled></releases>
+       <snapshots><enabled>false</enabled></snapshots>
+     </pluginRepository>
+   </pluginRepositories>
+   ```
 
-Or run it once, with no change to `pom.xml`:
+   Then the plugin itself, inside `<build><plugins>`:
 
-```text
-mvn com.tuxcare:securechain-maven-plugin:check
-```
+   ```xml
+   <plugin>
+     <groupId>com.tuxcare</groupId>
+     <artifactId>securechain-maven-plugin</artifactId>
+     <version>0.1.0</version>
+     <executions>
+       <execution><goals><goal>check</goal></goals><phase>verify</phase></execution>
+     </executions>
+   </plugin>
+   ```
 
-</template>
+   Or run it once, with no change to `pom.xml`:
 
-<template #Gradle>
+   ```text
+   mvn com.tuxcare:securechain-maven-plugin:check
+   ```
 
-Like the Maven plugin, the Gradle plugin downloads the binary for your platform, verifies its checksum, caches it and runs it.
+   </template>
 
-In `settings.gradle.kts`:
+   <template #Gradle>
 
-```kotlin
-pluginManagement {
-    repositories {
-        maven { url = uri("https://artifacts.tuxcare.com/repository/maven-plugin-securechain/") }
-        gradlePluginPortal()
-    }
-}
-```
+   Like the Maven plugin, the Gradle plugin downloads the binary for your platform, verifies its checksum, caches it and runs it.
 
-In `build.gradle.kts`:
+   In `settings.gradle.kts`:
 
-```kotlin
-plugins {
-    id("com.tuxcare.securechain") version "0.1.0"
-}
-```
+   ```kotlin
+   pluginManagement {
+       repositories {
+           maven { url = uri("https://artifacts.tuxcare.com/repository/maven-plugin-securechain/") }
+           gradlePluginPortal()
+       }
+   }
+   ```
 
-Then:
+   In `build.gradle.kts`:
 
-```text
-./gradlew securechainCheck
-```
+   ```kotlin
+   plugins {
+       id("com.tuxcare.securechain") version "0.1.0"
+   }
+   ```
 
-</template>
+   Then:
 
-<template #Manual_download>
+   ```text
+   ./gradlew securechainCheck
+   ```
 
-Every release is published at `https://securechain.tuxcare.com/get/<version>/`, with a `checksums.txt`, a signature for every file and the public key `securechain.pub`.
+   </template>
 
-| Platform | File |
-| :-- | :-- |
-| Linux x86-64 | `securechain-linux-amd64` |
-| Linux ARM64 | `securechain-linux-arm64` |
-| macOS Intel | `securechain-darwin-amd64` |
-| macOS Apple silicon | `securechain-darwin-arm64` |
-| Windows x86-64 | `securechain-windows-amd64.exe` |
-| Windows ARM64 | `securechain-windows-arm64.exe` |
+   <template #Manual_download>
 
-For example, on Linux x86-64:
+   Every release is published at `https://securechain.tuxcare.com/get/<version>/`, with a `checksums.txt`, a signature for every file and the public key `securechain.pub`.
 
-```text
-curl -fsSLO https://securechain.tuxcare.com/get/v0.1.0/securechain-linux-amd64
-curl -fsSLO https://securechain.tuxcare.com/get/v0.1.0/checksums.txt
-sha256sum --check --ignore-missing checksums.txt
-install -m 0755 securechain-linux-amd64 /usr/local/bin/securechain
-```
+   | Platform | File |
+   | :-- | :-- |
+   | Linux x86-64 | `securechain-linux-amd64` |
+   | Linux ARM64 | `securechain-linux-arm64` |
+   | macOS Intel | `securechain-darwin-amd64` |
+   | macOS Apple silicon | `securechain-darwin-arm64` |
+   | Windows x86-64 | `securechain-windows-amd64.exe` |
+   | Windows ARM64 | `securechain-windows-arm64.exe` |
 
-The latest stable version number is published at `https://securechain.tuxcare.com/get/latest/latest`.
+   For example, on Linux x86-64:
 
-:::warning
-On macOS, download with `curl` as shown above. A binary downloaded through a web browser is quarantined by the system and is blocked on first launch.
-:::
+   ```text
+   curl -fsSLO https://securechain.tuxcare.com/get/v0.1.0/securechain-linux-amd64
+   curl -fsSLO https://securechain.tuxcare.com/get/v0.1.0/checksums.txt
+   sha256sum --check --ignore-missing checksums.txt
+   install -m 0755 securechain-linux-amd64 /usr/local/bin/securechain
+   ```
 
-</template>
+   The latest stable version number is published at `https://securechain.tuxcare.com/get/latest/latest`.
 
-</TableTabs>
+   :::warning
+   On macOS, download with `curl` as shown above. A binary downloaded through a web browser is quarantined by the system and is blocked on first launch.
+   :::
 
-Check the installation:
+   </template>
 
-```text
-securechain version
-```
+   </TableTabs>
+
+2. Check the installation
+
+   ```text
+   securechain version
+   ```
+
+</ELSSteps>
 
 ## Connecting a Project
 
@@ -248,7 +254,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
    ```
 
    :::warning
-   Replace `<TOKEN>` with your TuxCare token.
+   Replace `<TOKEN>` with your TuxCare registry token.
    :::
 
 2. Log in
@@ -259,7 +265,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
 
    The CLI validates the token and stores what your subscription covers — SecureChain, ELS, or both. `auth status` shows it at any time; `auth logout` removes it from the machine.
 
-3. Connect the project — `init`
+3. Connect the project
 
    Run it in the root of the project:
 
@@ -267,7 +273,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
    securechain init
    ```
 
-   Output example:
+   :::details Output example
 
    ```text
    securechain init
@@ -283,15 +289,21 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
        2. run `securechain check` to see what the catalogue covers and what `harden` or `update` would change.
    ```
 
+   :::
+
    `init` points the package manager at the TuxCare registry (`.npmrc`, or `.yarnrc.yml` for Yarn 2+), writes the project configuration `.securechain.yaml`, and adds Dependabot and Renovate rules that keep the patched versions in place. Running it again updates only the lines it wrote and leaves the rest of each file untouched. Commit the files it creates.
 
-   **Choosing the package manager yourself.** Detection needs a lockfile or a `packageManager` field. If the project has neither — a Bun project before its first `bun install`, say — name it:
+   :::details Choosing the package manager yourself
+
+   Detection needs a lockfile or a `packageManager` field. If the project has neither — a Bun project before its first `bun install`, say — name it:
 
    ```text
    securechain init --ecosystem bun
    ```
 
    The choice is saved in `.securechain.yaml` and reused by every later command. Accepted values: `npm`, `pnpm`, `yarn-classic`, `yarn-berry`, `bun`. The `--ecosystem` flag also works on any single command, for that run only.
+
+   :::
 
 4. Install the dependencies
 
@@ -301,7 +313,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
    npm install
    ```
 
-5. See what the catalogue covers — `check`
+5. See what the catalogue covers
 
    `check` makes no changes. It is the command to run in CI.
 
@@ -309,7 +321,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
    securechain check
    ```
 
-   Output example:
+   :::details Output example
 
    ```text
    securechain check
@@ -330,27 +342,33 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
      ✖ exit 1 (findings)
    ```
 
+   :::
+
    Every finding names the package, the patched build, the CVEs it closes and the command that fixes it. Add `--explain` for the evidence. `securechain status` prints the same picture without gating: findings do not make it fail.
 
-6. Apply the patched builds — `harden`
+6. Apply the patched builds
 
-   Preview first. `--dry-run` prints the exact diff and writes nothing:
+   * Preview the change. `--dry-run` prints the exact diff and writes nothing:
 
-   ```text
-   securechain harden --dry-run
-   ```
+     ```text
+     securechain harden --dry-run
+     ```
 
-   Then apply:
+   * Apply it:
 
-   ```text
-   securechain harden
-   ```
+     ```text
+     securechain harden
+     ```
+
+   * Commit `package.json` and the lockfile together, then check the result — it should now exit `0`:
+
+     ```text
+     securechain check
+     ```
 
    `harden` pins the patched builds in `package.json` — directly for the packages you declared, through `overrides` for transitive ones — refreshes the lockfile, reinstalls and verifies that the installed tree holds the builds it selected. If the result does not match the plan, every file is restored.
 
-   Commit `package.json` and the lockfile together, then run `securechain check` again: it should now exit `0`.
-
-7. Keep up with new builds — `update`
+7. Keep up with new builds
 
    TuxCare releases new patched builds for the versions you already use. When `check` reports `catalogue-drift`, roll the project forward:
 
@@ -358,7 +376,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
    securechain update
    ```
 
-   Output example:
+   :::details Output example
 
    ```text
      ✎ wrote: package.json
@@ -368,11 +386,19 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
        · 1 pin rolled forward across 1 file
    ```
 
+   :::
+
    `update` never changes a package's base version — `0.4.2` stays `0.4.2` — so it is a patch, never an upgrade. `update --check-only` reports what is behind, writes nothing and exits `1` — a second gate for CI.
 
 </ELSSteps>
 
-### All Commands
+### Commands and Options
+
+The full surface of the tool: what each command does, and the options every command accepts.
+
+#### Commands
+
+Run them from the root of the project, or point at it with `--dir`.
 
 | Command | What it does |
 | :-- | :-- |
@@ -393,13 +419,14 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
 | `securechain version` | Prints the version. |
 | `securechain completion <shell>` | Prints a shell completion script for `bash`, `zsh`, `fish` or `powershell`. |
 
-Every writing command — `init`, `harden`, `update`, `migrate` — accepts `--dry-run`.
+#### Options
 
-### Options for Every Command
+Every command accepts all of these. A value on the command line wins over the one saved in `.securechain.yaml`.
 
 | Option | Default | Meaning |
 | :-- | :-- | :-- |
 | `--dir <path>` | `.` | The project root. |
+| `--dry-run`* | off | **Prints the exact change and writes nothing.** |
 | `--ecosystem <name>` | auto-detected | Use this package manager for this run. With `init`, the choice is saved. |
 | `--feed-max-age <duration>` | `24h` | How old the catalogue may be. See below. |
 | `--offline` | off | Never touch the network. Needs a catalogue already on the machine. |
@@ -407,6 +434,8 @@ Every writing command — `init`, `harden`, `update`, `migrate` — accepts `--d
 | `--token <token>` | `TUXCARE_TOKEN` | The subscription token. Prefer the environment variable in CI. |
 | `--no-color` | off | Plain output, with no colours or symbols. |
 | `--timeout <duration>` | `10m` | A deadline for the whole command. |
+
+\* Writing commands only: `init`, `harden`, `update`, `migrate`.
 
 **How old the catalogue may be — `--feed-max-age`.** The CLI keeps a copy of the catalogue on the machine and refreshes it when it is older than this value (24 hours by default). Pass the flag to change it for one run:
 
@@ -424,7 +453,9 @@ A value on the command line always wins over the file. Durations are written as 
 
 ### Using the CLI in CI
 
-`check` exits `0` when the project is on every patched build the subscription covers, and `1` when it is not — so it needs no wrapper:
+`check` exits `0` when the project is on every patched build the subscription covers, and `1` when it is not — so it needs no wrapper.
+
+:::details Pipeline example
 
 ```yaml
 securechain:
@@ -439,6 +470,8 @@ securechain:
       junit: report.xml
 ```
 
+:::
+
 `--output sarif` feeds GitHub and GitLab code scanning, and `--output json` is a stable, versioned format to script against.
 
 | Exit code | Meaning |
@@ -452,7 +485,7 @@ securechain:
 | `6` | Verification failed: the change was rolled back. |
 | `7` | Internal error. |
 
-### Air-Gapped Machines — `feed export` and `feed import`
+### Air-Gapped Machines
 
 The CLI needs the TuxCare catalogue to know which patched builds exist. On an isolated machine — an air-gapped build server, a locked-down CI runner — it cannot download the catalogue, so you carry it across as a file.
 
