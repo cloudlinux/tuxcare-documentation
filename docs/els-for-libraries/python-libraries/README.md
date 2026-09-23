@@ -31,7 +31,7 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **MySQL Connector/Python** 8.4.0
 * **orjson** 3.8.5
 * **pandas** 2.2.0, 2.2.2
-* **paramiko** 3.0.0
+* **paramiko** 2.12.0, 3.0.0
 * **pdfkit** 0.6.1
 * **pip** 9.0
 * **Pillow** 8.4.0, 9.4.0, 9.5.0, 10.4.0, 11.2.1, 11.3.0
