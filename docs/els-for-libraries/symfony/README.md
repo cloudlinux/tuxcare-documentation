@@ -62,153 +62,81 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Symfony components
+4. Install the package
 
-   Install the TuxCare-maintained Symfony component release that matches your project:
+   Select your package, then install the TuxCare-maintained release that matches your project:
 
-   <TableTabs label="Choose version: ">
+   <TableTabs label="Choose package: ">
 
    <template #Symfony_Process>
 
-   ```text
-   composer require symfony/process:6.4.13-p2+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/process": "6.4.13-p2+tuxcare"
-       }
-   }
-   ```
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/process:6.4.13-p2+tuxcare` },
+     { title: 'composer.json', content: processjson }
+   ]" />
 
    </template>
 
    <template #Symfony_HttpFoundation>
 
-   ```text
-   composer require symfony/http-foundation:4.4.49-p2+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/http-foundation": "4.4.49-p2+tuxcare"
-       }
-   }
-   ```
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/http-foundation:4.4.49-p2+tuxcare` },
+     { title: 'composer.json', content: httpfoundationjson }
+   ]" />
 
    </template>
 
    <template #Symfony_HttpKernel>
 
-   ```text
-   composer require symfony/http-kernel:7.4.10-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/http-kernel": "7.4.10-p1+tuxcare"
-       }
-   }
-   ```
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/http-kernel:7.4.10-p1+tuxcare` },
+     { title: 'composer.json', content: httpkerneljson }
+   ]" />
 
    </template>
 
    <template #Symfony_Mailer>
 
-   ```text
-   composer require symfony/mailer:6.4.34-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/mailer": "6.4.34-p1+tuxcare"
-       }
-   }
-   ```
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/mailer:6.4.34-p1+tuxcare` },
+     { title: 'composer.json', content: mailerjson }
+   ]" />
 
    </template>
 
    <template #Symfony_Mime>
 
-   ```text
-   composer require symfony/mime:7.4.9-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/mime": "7.4.9-p1+tuxcare"
-       }
-   }
-   ```
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/mime:7.4.9-p1+tuxcare` },
+     { title: 'composer.json', content: mimejson }
+   ]" />
 
    </template>
 
    <template #Symfony_Routing>
 
-   ```text
-   composer require symfony/routing:7.4.9-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/routing": "7.4.9-p1+tuxcare"
-       }
-   }
-   ```
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/routing:7.4.9-p1+tuxcare` },
+     { title: 'composer.json', content: routingjson }
+   ]" />
 
    </template>
 
    <template #Symfony_Yaml>
 
-   ```text
-   composer require symfony/yaml:4.4.45-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/yaml": "4.4.45-p1+tuxcare"
-       }
-   }
-   ```
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/yaml:4.4.45-p1+tuxcare` },
+     { title: 'composer.json', content: yamljson }
+   ]" />
 
    </template>
 
    <template #Symfony_Polyfill_Intl_IDN>
 
-   ```text
-   composer require symfony/polyfill-intl-idn:v1.30.0-p1+tuxcare
-   ```
-
-   `composer.json`:
-
-   ```text
-   {
-       "require": {
-           "symfony/polyfill-intl-idn": "v1.30.0-p1+tuxcare"
-       }
-   }
-   ```
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/polyfill-intl-idn:v1.30.0-p1+tuxcare` },
+     { title: 'composer.json', content: polyfillintlidnjson }
+   ]" />
 
    </template>
 
@@ -295,5 +223,61 @@ const composerjson =
 
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
+
+const processjson =
+`{
+    "require": {
+        "symfony/process": "6.4.13-p2+tuxcare"
+    }
+}`
+
+const httpfoundationjson =
+`{
+    "require": {
+        "symfony/http-foundation": "4.4.49-p2+tuxcare"
+    }
+}`
+
+const httpkerneljson =
+`{
+    "require": {
+        "symfony/http-kernel": "7.4.10-p1+tuxcare"
+    }
+}`
+
+const mailerjson =
+`{
+    "require": {
+        "symfony/mailer": "6.4.34-p1+tuxcare"
+    }
+}`
+
+const mimejson =
+`{
+    "require": {
+        "symfony/mime": "7.4.9-p1+tuxcare"
+    }
+}`
+
+const routingjson =
+`{
+    "require": {
+        "symfony/routing": "7.4.9-p1+tuxcare"
+    }
+}`
+
+const yamljson =
+`{
+    "require": {
+        "symfony/yaml": "4.4.45-p1+tuxcare"
+    }
+}`
+
+const polyfillintlidnjson =
+`{
+    "require": {
+        "symfony/polyfill-intl-idn": "v1.30.0-p1+tuxcare"
+    }
+}`
 
 </script>

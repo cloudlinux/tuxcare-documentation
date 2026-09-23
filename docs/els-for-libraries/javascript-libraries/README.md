@@ -17,10 +17,10 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **async** 2.6.1, 2.6.3
 * **axios** 0.15.3, 0.18.1, 0.19.2, 0.21.1, 0.21.4, 0.24.0, 0.26.0, 0.26.1, 0.27.2, 0.33.0, 1.6.2, 1.6.8, 1.7.5, 1.7.7, 1.7.9
 * **azure-identity** 4.0.1
-* **babel-core** 7.11.5, 7.12.13, 7.18.9, 7.21.0, 7.21.5, 7.29.0
-* **babel-helpers** 7.11.5, 7.12.13, 7.15.4, 7.18.9, 7.21.0, 7.21.5, 7.24.0, 7.24.1, 7.25.6, 7.26.0, 7.29.0
+* **babel-core** 7.11.5, 7.12.13, 7.18.9, 7.21.0, 7.21.5, 7.24.5, 7.29.0
+* **babel-helpers** 7.11.5, 7.12.13, 7.15.4, 7.18.9, 7.21.0, 7.21.5, 7.24.0, 7.24.1, 7.24.5, 7.25.6, 7.26.0, 7.29.0
 * **babel-plugin-transform-modules-systemjs** 7.15.4, 7.23.9, 7.24.1, 7.25.0
-* **babel-runtime** 7.11.2, 7.11.5, 7.12.5, 7.12.13, 7.12.18, 7.14.8, 7.15.4, 7.16.7, 7.18.9, 7.21.0, 7.21.5, 7.22.6, 7.22.15, 7.23.1, 7.23.2, 7.23.9, 7.24.0, 7.24.1, 7.24.4, 7.24.7, 7.25.7, 7.26.0, 7.29.0
+* **babel-runtime** 7.11.2, 7.11.5, 7.12.5, 7.12.13, 7.12.18, 7.14.8, 7.15.4, 7.16.7, 7.18.9, 7.21.0, 7.21.5, 7.22.6, 7.22.15, 7.23.1, 7.23.2, 7.23.9, 7.24.0, 7.24.1, 7.24.4, 7.24.5, 7.25.7, 7.26.0, 7.29.0
 * **babel-runtime-corejs2** 7.11.5, 7.12.13, 7.18.9, 7.21.0, 7.21.5, 7.29.0
 * **babel-runtime-corejs3** 7.11.5, 7.12.13, 7.15.3, 7.18.9, 7.21.0, 7.21.5, 7.29.0
 * **babel-traverse** 6.26.0, 7.15.4
@@ -40,6 +40,8 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **ckeditor** 4.5.11
 * **ckeditor4** 4.17.1
 * **clean-css** 2.2.23, 3.4.28
+* **cli** 0.4.5
+* **colord** 2.9.3
 * **concat-stream** 1.4.8, 1.4.10, 1.5.0
 * **connect** 1.9.2, 2.6.0, 2.7.5, 2.12.0
 * **cookie** 0.0.5, 0.1.3, 0.3.1, 0.4.0, 0.4.2, 0.5.0, 0.6.0, 0.7.2
@@ -70,6 +72,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **fast-uri** 2.4.0, 2.4.2, 2.4.3, 3.0.1, 3.0.3
 * **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.5.3, 4.5.6, 4.5.7
 * **fastify-middie** 8.3.3
+* **fflate** 0.8.2
 * **file-type** 17.1.6
 * **find-my-way** 9.6.0
 * **flatted** 2.0.2, 3.2.9, 3.3.1, 3.3.2, 3.3.3
@@ -96,7 +99,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **http-proxy-middleware** 0.0.5, 0.17.2, 0.17.3, 0.18.0, 0.19.1, 0.20.0, 1.0.0, 1.1.0, 1.3.1, 2.0.6, 2.0.7, 2.0.8, 3.0.3
 * **i18next** 23.16.8
 * **i18next-http-backend** 1.4.4, 2.5.2
-* **immutable** 3.8.1, 3.8.2, 3.8.3, 4.1.0, 4.3.5, 4.3.7, 5.0.3
+* **immutable** 3.8.1, 3.8.2, 3.8.3, 4.1.0, 4.3.5, 4.3.7, 5.0.3, 5.1.5
 * **ini** 1.3.3, 1.3.5
 * **ip** 1.1.5, 1.1.9, 2.0.0, 2.0.1
 * **ip-address** 6.4.0, 9.0.5
@@ -104,7 +107,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **jquery-mobile** 1.4.5
 * **jquery-validation** 1.19.0
 * **js-cookie** 2.2.1
-* **js-yaml** 3.3.1, 3.7.0, 3.14.1, 3.14.2, 3.15.0, 4.1.0
+* **js-yaml** 3.3.1, 3.7.0, 3.14.1, 3.14.2, 3.15.0, 4.1.0, 4.1.1, 4.3.0
 * **json5** 0.4.0, 0.5.1, 1.0.1, 1.0.2
 * **jsoneditor** 5.19.0
 * **jsonpath** 1.1.1
@@ -153,7 +156,9 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **npm-user-validate** 0.1.2, 0.1.5
 * **nth-check** 1.0.2
 * **object-path** 0.11.4
-* **pacote** 18.0.6, 20.0.0, 20.0.1
+* **octokit-plugin-paginate-rest** 2.21.3
+* **pac-resolver** 4.2.0
+* **pacote** 17.0.7, 18.0.6, 20.0.0, 20.0.1
 * **parse-git-config** 3.0.0
 * **parsejson** 0.0.3
 * **path-to-regexp** 0.1.3, 0.1.12, 6.2.1
@@ -242,7 +247,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **web3-shh** 1.10.4
 * **web3-utils** 1.10.4
 * **webpack-bundle-analyzer** 2.13.1
-* **webpack-dev-middleware** 1.10.2, 1.12.0, 1.12.2, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3, 7.4.5
+* **webpack-dev-middleware** 1.10.2, 1.11.0, 1.12.0, 1.12.2, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3, 7.4.5
 * **webpack-subresource-integrity** 1.4.0, 1.4.1
 * **websocket-driver** 0.6.5, 0.7.4
 * **websocket-extensions** 0.1.1

@@ -11,15 +11,22 @@ NuGet is the standard package manager for .NET, used to deliver the reusable com
 * jose-jwt 2.6.2
 * log4net 1.2.15, 1.2.16
 * Microsoft.Azure.Storage.DataMovement 1.2.0, 1.2.1
+* Microsoft.Build 17.3.5
+* Microsoft.Build.Tasks.Core 17.3.5
+* Microsoft.Build.Utilities.Core 17.3.5
 * Microsoft.Data.SqlClient 1.1.4, 1.1.5
 * Microsoft.Owin 3.1.0, 3.1.1
 * MimeKit 3.6.1, 3.6.2
 * Newtonsoft.Json 4.5.11, 4.5.12, 6.0.8, 6.0.9, 8.0.3, 8.0.4, 9.0.1, 9.0.2, 10.0.3, 10.0.4, 11.0.2, 11.0.3, 12.0.3, 12.0.4, 13.0.5
 * NHibernate 4.1.2.4001
+* NuGet.Packaging 6.3.5
+* NuGet.Packaging.Core 6.3.5
+* NuGet.ProjectModel 6.3.5
 * Refit 6.3.2, 6.3.3
 * RestSharp 108.0.3, 108.0.4, 110.2.0, 110.2.1, 111.4.1, 111.4.2
 * SharpZipLib 0.86.0, 0.86.1
 * SixLabors.ImageSharp 1.0.5
+* Snappier 1.0.1
 * System.Formats.Asn1 5.0.1, 7.0.1
 * System.Text.Json 7.0.5
 
