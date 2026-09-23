@@ -407,7 +407,7 @@ const techData = [
       },
       {
         name: "Google Guava",
-        versions: "16.0.1 | 18.0 | 20.0 | 25.1-android | 25.1-jre | 27.1-android | 27.1-jre | 30.1-jre | 31.1-jre",
+        versions: "16.0.1 | 18.0 | 19.0 | 20.0 | 25.1-android | 25.1-jre | 27.1-android | 27.1-jre | 30.1-jre | 31.1-jre",
         link: "./java-libraries/",
       },
       {
@@ -771,7 +771,7 @@ const techData = [
       },
       {
         name: "Spring® LDAP",
-        versions: "2.4.1 | 2.4.4 | 3.0.6 | 3.2.12",
+        versions: "2.3.1.RELEASE | 2.4.1 | 2.4.4 | 3.0.6 | 3.2.12",
         link: "./spring/",
         detailsHash: "LDAP",
       },
@@ -928,12 +928,12 @@ const techData = [
       },
       {
         name: "babel-core",
-        versions: "7.11.5 | 7.12.13 | 7.18.9 | 7.21.0 | 7.21.5 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.18.9 | 7.21.0 | 7.21.5 | 7.24.5 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-helpers",
-        versions: "7.11.5 | 7.12.13 | 7.15.4 | 7.18.9 | 7.21.0 | 7.21.5 | 7.24.0 | 7.24.1 | 7.25.6 | 7.26.0 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.15.4 | 7.18.9 | 7.21.0 | 7.21.5 | 7.24.0 | 7.24.1 | 7.24.5 | 7.25.6 | 7.26.0 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
@@ -943,7 +943,7 @@ const techData = [
       },
       {
         name: "babel-runtime",
-        versions: "7.11.2 | 7.11.5 | 7.12.5 | 7.12.13 | 7.12.18 | 7.14.8 | 7.15.4 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.6 | 7.22.15 | 7.23.1 | 7.23.2 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.4 | 7.24.7 | 7.25.7 | 7.26.0 | 7.29.0",
+        versions: "7.11.2 | 7.11.5 | 7.12.5 | 7.12.13 | 7.12.18 | 7.14.8 | 7.15.4 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.6 | 7.22.15 | 7.23.1 | 7.23.2 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.4 | 7.24.5 | 7.24.7 | 7.25.7 | 7.26.0 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1039,6 +1039,16 @@ const techData = [
       {
         name: "clean-css",
         versions: "2.2.23 | 3.4.28",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "cli",
+        versions: "0.4.5",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "colord",
+        versions: "2.9.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1208,12 +1218,17 @@ const techData = [
       },
       {
         name: "fastify",
-        versions: "3.29.5 | 4.29.1 | 5.11.3",
+        versions: "3.29.5 | 4.29.1 | 5.2.1 | 5.11.3 | 5.12.0",
         link: "./fastify/",
       },
       {
         name: "fastify-middie",
         versions: "8.3.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "fflate",
+        versions: "0.8.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1348,7 +1363,7 @@ const techData = [
       },
       {
         name: "immutable",
-        versions: "3.8.1 | 3.8.2 | 3.8.3 | 4.1.0 | 4.3.5 | 4.3.7 | 5.0.3",
+        versions: "3.8.1 | 3.8.2 | 3.8.3 | 4.1.0 | 4.3.5 | 4.3.7 | 5.0.3 | 5.1.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1398,7 +1413,7 @@ const techData = [
       },
       {
         name: "js-yaml",
-        versions: "3.3.1 | 3.7.0 | 3.14.1 | 3.14.2 | 3.15.0 | 4.1.0",
+        versions: "3.3.1 | 3.7.0 | 3.14.1 | 3.14.2 | 3.15.0 | 4.1.0 | 4.1.1 | 4.3.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1552,6 +1567,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "modelcontextprotocol-sdk",
+        versions: "1.17.3 | 1.24.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "moment",
         versions: "2.0.0 | 2.10.6 | 2.24.0",
         link: "./javascript-libraries/",
@@ -1687,8 +1707,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "octokit-plugin-paginate-rest",
+        versions: "2.21.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "pac-resolver",
+        versions: "4.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "pacote",
-        versions: "18.0.6 | 20.0.0 | 20.0.1",
+        versions: "17.0.7 | 18.0.6 | 20.0.0 | 20.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -2193,7 +2223,7 @@ const techData = [
       },
       {
         name: "webpack-dev-middleware",
-        versions: "1.10.2 | 1.12.0 | 1.12.2 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 7.4.5",
+        versions: "1.10.2 | 1.11.0 | 1.12.0 | 1.12.2 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 7.4.5",
         link: "./javascript-libraries/",
       },
       {
@@ -2339,12 +2369,12 @@ const techData = [
       },
       {
         name: "Flask",
-        versions: "0.12.5 | 1.1.2 | 1.1.4 | 2.2.1",
+        versions: "0.12.5 | 1.1.2 | 1.1.4 | 2.2.1 | 2.2.5",
         link: "./flask/",
       },
       {
         name: "flask-cors",
-        versions: "4.0.2",
+        versions: "3.0.10 | 4.0.2 | 5.0.1",
         link: "./python-libraries/",
       },
       {
@@ -2659,8 +2689,18 @@ const techData = [
         link: "./drupal/",
       },
       {
+        name: "Drupal Access Code",
+        versions: "7.1.1",
+        link: "./drupal/",
+      },
+      {
         name: "Drupal Bootstrap Site Alert",
         versions: "7.1.6",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Coffee",
+        versions: "7.2.3",
         link: "./drupal/",
       },
       {
@@ -2669,8 +2709,38 @@ const techData = [
         link: "./drupal/",
       },
       {
+        name: "Drupal Commerce Paybox",
+        versions: "7.1.5",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Facebook Pixel",
+        versions: "7.1.1",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal File (Field) Paths",
+        versions: "7.1.2",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Flag",
+        versions: "7.3.9",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Form Builder",
+        versions: "7.1.22",
+        link: "./drupal/",
+      },
+      {
         name: "Drupal GDPR",
         versions: "3.1.0 | 7.1.0",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Internationalization",
+        versions: "7.1.35",
         link: "./drupal/",
       },
       {
@@ -2684,8 +2754,33 @@ const techData = [
         link: "./drupal/",
       },
       {
+        name: "Drupal Protected Pages",
+        versions: "7.2.4",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Simple Hierarchical Select",
+        versions: "7.1.10",
+        link: "./drupal/",
+      },
+      {
         name: "Drupal SpamSpan",
         versions: "3.2.0 | 7.1.4",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Taxonomy Term Reference Tree",
+        versions: "7.1.11",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal TFA Basic",
+        versions: "7.1.2",
+        link: "./drupal/",
+      },
+      {
+        name: "Drupal Webform Multiple File Upload",
+        versions: "7.1.6",
         link: "./drupal/",
       },
       {
@@ -2940,6 +3035,21 @@ const techData = [
         link: "./dotnet/",
       },
       {
+        name: "Microsoft.Build",
+        versions: "17.3.5",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Build.Tasks.Core",
+        versions: "17.3.5",
+        link: "./dotnet/",
+      },
+      {
+        name: "Microsoft.Build.Utilities.Core",
+        versions: "17.3.5",
+        link: "./dotnet/",
+      },
+      {
         name: "Microsoft.Data.SqlClient",
         versions: "1.1.4 | 1.1.5",
         link: "./dotnet/",
@@ -2965,6 +3075,21 @@ const techData = [
         link: "./dotnet/",
       },
       {
+        name: "NuGet.Packaging",
+        versions: "6.3.5",
+        link: "./dotnet/",
+      },
+      {
+        name: "NuGet.Packaging.Core",
+        versions: "6.3.5",
+        link: "./dotnet/",
+      },
+      {
+        name: "NuGet.ProjectModel",
+        versions: "6.3.5",
+        link: "./dotnet/",
+      },
+      {
         name: "Refit",
         versions: "6.3.2 | 6.3.3",
         link: "./dotnet/",
@@ -2982,6 +3107,11 @@ const techData = [
       {
         name: "SixLabors.ImageSharp",
         versions: "1.0.5",
+        link: "./dotnet/",
+      },
+      {
+        name: "Snappier",
+        versions: "1.0.1",
         link: "./dotnet/",
       },
       {

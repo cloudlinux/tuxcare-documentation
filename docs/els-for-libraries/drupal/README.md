@@ -5,12 +5,25 @@ Endless Lifecycle Support (ELS) for Drupal from TuxCare provides security fixes 
 ## Supported Versions
 
 * **drupal/core** 8.9.x, 9.5.x
+* **drupal/access_code** 7.1.1
 * **drupal/bootstrap_site_alert** 7.1.6
+* **drupal/coffee** 7.2.3
 * **drupal/colorbox** 2.1.2, 7.2.19
+* **drupal/commerce_paybox** 7.1.5
+* **drupal/facebook_pixel** 7.1.1
+* **drupal/filefield_paths** 7.1.2
+* **drupal/flag** 7.3.9
+* **drupal/form_builder** 7.1.22
 * **drupal/gdpr** 3.1.0, 7.1.0
+* **drupal/i18n** 7.1.35
 * **drupal/link** 7.1.13
 * **drupal/openid_connect** 7.1.3
+* **drupal/protected_pages** 7.2.4
+* **drupal/shs** 7.1.10
 * **drupal/spamspan** 3.2.0, 7.1.4
+* **drupal/term_reference_tree** 7.1.11
+* **drupal/tfa_basic** 7.1.2
+* **drupal/webform_multifile** 7.1.6
 
 Other versions upon request.
 

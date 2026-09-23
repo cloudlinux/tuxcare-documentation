@@ -55,7 +55,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **excel-streaming-reader** 5.0.2
 * **GlassFish** 3.0.0
 * **Google Gson** 2.2.4, 2.4, 2.8.5, 2.8.9, 2.9.1, 2.10.1, 2.11.0
-* **Google Guava** 16.0.1, 18.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
+* **Google Guava** 16.0.1, 18.0, 19.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
 * **Grails** 2.5.6, 5.3.6, 6.2.1, 6.2.3

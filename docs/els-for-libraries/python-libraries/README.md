@@ -12,7 +12,7 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **dnspython** 2.3.0
 * **dulwich** 0.25.2
 * **fastmcp** 2.14.5, 2.14.7
-* **flask-cors** 4.0.2
+* **flask-cors** 3.0.10, 4.0.2, 5.0.1
 * **future** 1.0.0
 * **GitPython** 3.1.31
 * **gunicorn** 20.0.4, 20.1.0, 21.2.0, 22.0.0, 23.0.0
