@@ -131,7 +131,6 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **mime** 1.2.6, 1.2.11, 1.3.0, 1.3.4, 1.3.6
 * **minimatch** 0.0.4, 0.0.5, 0.2.5, 0.2.14, 0.3.0, 1.0.0, 2.0.10, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 5.1.0, 9.0.3
 * **minimist** 0.0.8, 0.0.9, 0.0.10, 1.2.0, 1.2.1, 1.2.8
-* **modelcontextprotocol-sdk** 1.17.3, 1.24.0
 * **moment** 2.0.0, 2.10.6, 2.24.0
 * **moment-timezone** 0.4.1
 * **morgan** 1.5.3, 1.6.1

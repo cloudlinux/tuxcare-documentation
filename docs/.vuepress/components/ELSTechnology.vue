@@ -1567,11 +1567,6 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "modelcontextprotocol-sdk",
-        versions: "1.17.3 | 1.24.0",
-        link: "./javascript-libraries/",
-      },
-      {
         name: "moment",
         versions: "2.0.0 | 2.10.6 | 2.24.0",
         link: "./javascript-libraries/",
