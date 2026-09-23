@@ -74,14 +74,214 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Drupal core
+4. Install the package
 
-   Install the TuxCare-maintained Drupal core release that matches your project:
+   Select your module, then install the TuxCare-maintained release that matches your project:
+
+   <TableTabs label="Choose module: " :labels="{
+     core: 'drupal/core',
+     access_code: 'drupal/access_code',
+     bootstrap_site_alert: 'drupal/bootstrap_site_alert',
+     coffee: 'drupal/coffee',
+     colorbox: 'drupal/colorbox',
+     commerce_paybox: 'drupal/commerce_paybox',
+     facebook_pixel: 'drupal/facebook_pixel',
+     filefield_paths: 'drupal/filefield_paths',
+     flag: 'drupal/flag',
+     form_builder: 'drupal/form_builder',
+     gdpr: 'drupal/gdpr',
+     i18n: 'drupal/i18n',
+     link: 'drupal/link',
+     openid_connect: 'drupal/openid_connect',
+     protected_pages: 'drupal/protected_pages',
+     shs: 'drupal/shs',
+     spamspan: 'drupal/spamspan',
+     term_reference_tree: 'drupal/term_reference_tree',
+     tfa_basic: 'drupal/tfa_basic',
+     webform_multifile: 'drupal/webform_multifile'
+   }">
+
+   <template #core>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require drupal/core:9.5.11-p6+tuxcare` },
-     { title: 'composer.json', content: packagejson }
+     { title: 'composer.json', content: requireJson('drupal/core', '9.5.11-p6+tuxcare') }
    ]" />
+
+   </template>
+
+   <template #access_code>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/access_code:7.1.1-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/access_code', '7.1.1-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #bootstrap_site_alert>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/bootstrap_site_alert:7.1.6-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/bootstrap_site_alert', '7.1.6-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #coffee>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/coffee:7.2.3-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/coffee', '7.2.3-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #colorbox>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/colorbox:7.2.19-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/colorbox', '7.2.19-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #commerce_paybox>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/commerce_paybox:7.1.5-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/commerce_paybox', '7.1.5-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #facebook_pixel>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/facebook_pixel:7.1.1-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/facebook_pixel', '7.1.1-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #filefield_paths>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/filefield_paths:7.1.2-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/filefield_paths', '7.1.2-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #flag>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/flag:7.3.9-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/flag', '7.3.9-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #form_builder>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/form_builder:7.1.22-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/form_builder', '7.1.22-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #gdpr>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/gdpr:7.1.0-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/gdpr', '7.1.0-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #i18n>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/i18n:7.1.35-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/i18n', '7.1.35-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #link>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/link:7.1.13-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/link', '7.1.13-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #openid_connect>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/openid_connect:7.1.3-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/openid_connect', '7.1.3-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #protected_pages>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/protected_pages:7.2.4-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/protected_pages', '7.2.4-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #shs>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/shs:7.1.10-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/shs', '7.1.10-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #spamspan>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/spamspan:7.1.4-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/spamspan', '7.1.4-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #term_reference_tree>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/term_reference_tree:7.1.11-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/term_reference_tree', '7.1.11-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #tfa_basic>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/tfa_basic:7.1.2-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/tfa_basic', '7.1.2-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   <template #webform_multifile>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require drupal/webform_multifile:7.1.6-p1+tuxcare` },
+     { title: 'composer.json', content: requireJson('drupal/webform_multifile', '7.1.6-p1+tuxcare') }
+   ]" />
+
+   </template>
+
+   </TableTabs>
 
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
@@ -210,10 +410,10 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const packagejson =
+const requireJson = (pkg, version) =>
 `{
     "require": {
-        "drupal/core": "9.5.11-p6+tuxcare"
+        "${pkg}": "${version}"
     }
 }`
 
