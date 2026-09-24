@@ -50,7 +50,33 @@ docs/
 ├── enterprise-support-for-almalinux/
 ├── eportal/             # Enterprise portal docs
 └── ...
+styles/TuxCare/          # Vale prose-lint rules (see Prose Linting)
+.vale.ini                # Vale configuration
 ```
+
+## Prose Linting (Vale)
+
+The repository includes a [Vale](https://vale.sh) style (`.vale.ini` + `styles/TuxCare/`) that checks Markdown against the TuxCare style guide: terminology (TuxCare, Node.js, .NET, open-source, …), image alt text and format, typography, tone, and inclusive language. It is an additional check on top of normal review and runs locally only — there is no CI step yet.
+
+Install Vale once ([installation docs](https://docs.vale.sh/topics/installation)):
+
+```bash
+brew install vale      # macOS
+choco install vale     # Windows
+snap install vale      # Linux
+```
+
+Run from the repository root (Vale picks up `.vale.ini` automatically):
+
+```bash
+vale docs/els-for-runtimes/php/README.md   # a single file
+vale docs/                                 # all docs
+
+# Only Markdown files changed on your branch
+git diff --name-only master... -- '*.md' | xargs vale
+```
+
+Errors are the ones to fix before merging; warnings and suggestions are hints. The [VS Code Vale extension](https://marketplace.visualstudio.com/items?itemName=ChrisChinchilla.vale-vscode) shows the same findings inline. Some rules are adapted from [Vale at Red Hat](https://github.com/redhat-documentation/vale-at-red-hat) (MIT) — see `styles/TuxCare/ATTRIBUTION.md`.
 
 ## Troubleshooting
 

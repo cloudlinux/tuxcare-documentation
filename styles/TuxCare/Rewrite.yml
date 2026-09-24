@@ -1,0 +1,10 @@
+extends: existence
+message: "Reword '%s' — usually the whole sentence needs restructuring (e.g. 'X allows you to Y' → 'With X, you can Y')."
+level: suggestion
+ignorecase: true
+tokens:
+  - allows you to
+  - enables you to
+  - lets you
+  - makes it possible to
+  - gives you the ability to

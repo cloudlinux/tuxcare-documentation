@@ -1,0 +1,25 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: error
+ignorecase: false
+action:
+  name: replace
+swap:
+  "Tuxcare": TuxCare
+  "tux care": TuxCare
+  "TUXCARE": TuxCare
+  "Secure Chain": SecureChain
+  "CVE Dashboard": CVE Tracker
+  "CVE dashboard": CVE Tracker
+  "open source": open-source
+  "Open Source": open-source
+  "Open-Source": open-source
+  "NodeJS": Node.js
+  'Node\.JS': Node.js
+  '\.Net\b': .NET
+  "Redhat": Red Hat
+  "RedHat": Red Hat
+  "Almalinux": AlmaLinux
+  "ALMALINUX": AlmaLinux
+  "Cloudlinux": CloudLinux
+  "Kernelcare": KernelCare
