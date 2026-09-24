@@ -397,7 +397,7 @@ During installation, the installer creates a folder with PHP configuration and s
 
 <template #Manual>
 
-Manual installation requires a tokenized URL that gives access to the TuxCare PHP for Windows repository. The token is placed right after the domain:
+Manual installation requires a tokenized URL (obtain via [sales@tuxcare.com](mailto:sales@tuxcare.com)) that gives access to the TuxCare PHP for Windows repository. The token is placed right after the domain:
 
 ```text
 https://windows.tuxcare.com/<YOUR-TOKEN>/php/
