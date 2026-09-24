@@ -17,21 +17,13 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
 
 * TuxCare registry token — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
 * A JavaScript project with `package.json`. If you are starting from scratch, run your package manager's init command (`npm init -y`, `pnpm init`, `yarn init`, `bun init`) in your project directory to create one.
-* The SecureChain CLI itself — step 1 installs it. Docker, npm, pip, apt, dnf and the other methods are on the [SecureChain CLI](/securechain/cli/#installation) page.
+* The SecureChain CLI installed — the quickest way is `curl -fsSL https://securechain.tuxcare.com/get/securechain | sh`. Docker, npm, pip, apt, dnf and the other methods are on the [SecureChain CLI](/securechain/cli/#installation) page.
 
 </ELSPrerequisites>
 
 <ELSSteps>
 
-1. Install the CLI
-
-   ```text
-   curl -fsSL https://securechain.tuxcare.com/get/securechain | sh
-   ```
-
-   Docker, npm, pip, apt, dnf and other methods are listed in [SecureChain CLI — Installation](/securechain/cli/#installation).
-
-2. Set your token
+1. Set your token
 
    Every `securechain` command reads the token from the `TUXCARE_TOKEN` environment variable. On your machine, export it in the shell where you run the commands. In CI, add it as a masked secret variable of the pipeline — the CLI picks it up from the environment the same way:
 
@@ -43,7 +35,7 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
    Replace `<TOKEN>` with your TuxCare registry token.
    :::
 
-3. Log in and connect the project
+2. Log in and connect the project
 
    Run these in the root directory of your project:
 
@@ -54,7 +46,7 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
 
    `auth login` validates the token and stores what your subscription covers. `init` writes the registry configuration (`.npmrc`, or `.yarnrc.yml` for Yarn 2+) and the project file `.securechain.yaml`.
 
-4. See what is covered, then apply the patched builds
+3. See what is covered, then apply the patched builds
 
    ```text
    securechain check
@@ -63,7 +55,7 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
 
    `check` makes no changes: it lists every package that has a patched build and the CVEs that build closes. `harden` pins those builds, refreshes the lockfile, reinstalls and verifies the result. Add `--dry-run` to preview the change first.
 
-5. Commit the changes
+4. Commit the changes
 
    Commit the files `init` created together with `package.json` and the lockfile.
 
@@ -1316,5 +1308,6 @@ pnpm, Bun and Yarn 1 (Classic) read the same `.npmrc`, so every check below appl
 
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/wrench.webp) [Managing the SecureChain repository](/securechain/managing-securechain-repository/) — Upgrade to a newer version
 
 </WhatsNext>

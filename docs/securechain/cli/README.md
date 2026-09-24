@@ -245,33 +245,41 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
 
 <ELSSteps>
 
-1. Set your token
+1. Set your token and log in
 
-   Every `securechain` command reads the token from the `TUXCARE_TOKEN` environment variable. Export it in your shell, or add it as a masked secret variable in CI:
+   * Every `securechain` command reads the token from the `TUXCARE_TOKEN` environment variable. Export it in your shell, or add it as a masked secret variable in CI:
 
-   ```text
-   export TUXCARE_TOKEN=<TOKEN>
-   ```
+     ```text
+     export TUXCARE_TOKEN=<TOKEN>
+     ```
 
-   :::warning
-   Replace `<TOKEN>` with your TuxCare registry token.
-   :::
+     :::warning
+     Replace `<TOKEN>` with your TuxCare registry token.
+     :::
 
-2. Log in
+   * Log in:
 
-   ```text
-   securechain auth login
-   ```
+     ```text
+     securechain auth login
+     ```
 
    The CLI validates the token and stores what your subscription covers — SecureChain, ELS, or both. `auth status` shows it at any time; `auth logout` removes it from the machine.
 
-3. Connect the project
+2. Connect the project
 
-   Run it in the root of the project:
+   * Run it in the root of the project:
 
-   ```text
-   securechain init
-   ```
+     ```text
+     securechain init
+     ```
+
+   * **Or** name the package manager yourself. Detection needs a lockfile or a `packageManager` field — a Bun project before its first `bun install` has neither:
+
+     ```text
+     securechain init --ecosystem bun
+     ```
+
+     The choice is saved in `.securechain.yaml` and reused by every later command. Accepted values: `npm`, `pnpm`, `yarn-classic`, `yarn-berry`, `bun`. The `--ecosystem` flag also works on any single command, for that run only.
 
    :::details Output example
 
@@ -293,19 +301,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
 
    `init` points the package manager at the TuxCare registry (`.npmrc`, or `.yarnrc.yml` for Yarn 2+), writes the project configuration `.securechain.yaml`, and adds Dependabot and Renovate rules that keep the patched versions in place. Running it again updates only the lines it wrote and leaves the rest of each file untouched. Commit the files it creates.
 
-   :::details Choosing the package manager yourself
-
-   Detection needs a lockfile or a `packageManager` field. If the project has neither — a Bun project before its first `bun install`, say — name it:
-
-   ```text
-   securechain init --ecosystem bun
-   ```
-
-   The choice is saved in `.securechain.yaml` and reused by every later command. Accepted values: `npm`, `pnpm`, `yarn-classic`, `yarn-berry`, `bun`. The `--ecosystem` flag also works on any single command, for that run only.
-
-   :::
-
-4. Install the dependencies
+3. Install the dependencies
 
    The CLI reads the resolved tree, so the project must be installed first:
 
@@ -313,7 +309,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
    npm install
    ```
 
-5. See what the catalogue covers
+4. See what the catalogue covers
 
    `check` makes no changes. It is the command to run in CI.
 
@@ -346,7 +342,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
 
    Every finding names the package, the patched build, the CVEs it closes and the command that fixes it. Add `--explain` for the evidence. `securechain status` prints the same picture without gating: findings do not make it fail.
 
-6. Apply the patched builds
+5. Apply the patched builds
 
    * Preview the change. `--dry-run` prints the exact diff and writes nothing:
 
@@ -368,7 +364,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
 
    `harden` pins the patched builds in `package.json` — directly for the packages you declared, through `overrides` for transitive ones — refreshes the lockfile, reinstalls and verifies that the installed tree holds the builds it selected. If the result does not match the plan, every file is restored.
 
-7. Keep up with new builds
+6. Keep up with new builds
 
    TuxCare releases new patched builds for the versions you already use. When `check` reports `catalogue-drift`, roll the project forward:
 
@@ -426,7 +422,7 @@ Every command accepts all of these. A value on the command line wins over the on
 | Option | Default | Meaning |
 | :-- | :-- | :-- |
 | `--dir <path>` | `.` | The project root. |
-| `--dry-run`* | off | **Prints the exact change and writes nothing.** |
+| `--dry-run` | off | **Prints the exact change and writes nothing.**<br>**Writing commands only:** `init`, `harden`, `update`, `migrate`. |
 | `--ecosystem <name>` | auto-detected | Use this package manager for this run. With `init`, the choice is saved. |
 | `--feed-max-age <duration>` | `24h` | How old the catalogue may be. See below. |
 | `--offline` | off | Never touch the network. Needs a catalogue already on the machine. |
@@ -435,9 +431,9 @@ Every command accepts all of these. A value on the command line wins over the on
 | `--no-color` | off | Plain output, with no colours or symbols. |
 | `--timeout <duration>` | `10m` | A deadline for the whole command. |
 
-\* Writing commands only: `init`, `harden`, `update`, `migrate`.
+:::details Setting the catalogue age with --feed-max-age
 
-**How old the catalogue may be — `--feed-max-age`.** The CLI keeps a copy of the catalogue on the machine and refreshes it when it is older than this value (24 hours by default). Pass the flag to change it for one run:
+The CLI keeps a copy of the catalogue on the machine and refreshes it when it is older than this value (24 hours by default). Pass the flag to change it for one run:
 
 ```text
 securechain check --feed-max-age 24h
@@ -450,6 +446,8 @@ securechain init --feed-max-age 168h
 ```
 
 A value on the command line always wins over the file. Durations are written as `36h`, `168h` and so on.
+
+:::
 
 ### Using the CLI in CI
 
@@ -485,7 +483,7 @@ securechain:
 | `6` | Verification failed: the change was rolled back. |
 | `7` | Internal error. |
 
-### Air-Gapped Machines
+## Air-Gapped Machines
 
 The CLI needs the TuxCare catalogue to know which patched builds exist. On an isolated machine — an air-gapped build server, a locked-down CI runner — it cannot download the catalogue, so you carry it across as a file.
 
@@ -531,13 +529,15 @@ The CLI needs the TuxCare catalogue to know which patched builds exist. On an is
 The catalogue's age counts from when TuxCare published it, not from when you imported it: with the default 24-hour `--feed-max-age`, a file imported today is refused tomorrow. For a weekly transfer, set the limit for the project — `securechain init --feed-max-age 168h` — and note what it means: a patched build released during that week is invisible on the isolated machine until the next import.
 :::
 
-The isolated machine still needs a way to install the packages themselves — typically an internal mirror of the TuxCare registry.
+The isolated machine still needs a way to install the packages themselves — typically an internal mirror of the TuxCare registry. See [Managing the SecureChain repository](/securechain/managing-securechain-repository/).
 
 ## What's Next?
 
 <WhatsNext hide-title>
 
 * ![](/images/box.webp) [JavaScript](/securechain/javascript/) — Point the CLI at a JavaScript project and install patched builds
+* ![](/images/wrench.webp) [Managing the SecureChain repository](/securechain/managing-securechain-repository/) — Upgrade to a newer version
+* ![](/images/book.webp) [SecureChain for Open Source Software](/securechain/) — What SecureChain covers and how fast
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
 
