@@ -301,66 +301,159 @@ Replace `alt-package-name` with the specific name of the package you are looking
 
 ## Installation on Windows
 
-TuxCare provides two ways to install ELS PHP on Windows: **manually** by downloading and configuring PHP from the repository, or using the **TuxCare Installer** — a graphical tool that automates the process.
+TuxCare provides two ways to install ELS PHP on Windows: using the **TuxCare Installer** (recommended) — a graphical tool that automates the process, or **manually** by downloading and configuring PHP from the repository.
 
 <ELSPrerequisites id="windows-prerequisites">
 
-* Secure download link (tokenized URL) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* License key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
 * Administrator access to the Windows system
 
 </ELSPrerequisites>
 
+:::tip
+Customers who previously received an authentication token can continue to use it: select **Use previous token** in the TuxCare Installer, or use the tokenized URL for manual installation.
+:::
+
+<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)' }">
+
+<template #TuxCare_Installer>
+
+TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
+
+<ELSSteps>
+
+1. Download the installer and launch it
+
+   Download the installer from the following link:
+
+   ```text
+   https://windows.tuxcare.com/php/TuxCare.Installer.exe
+   ```
+
+   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
+
+2. Select Register
+
+   Click **Register**.
+
+   ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
+
+   :::tip
+   If you previously registered on this machine with an authentication token and saved it, you can click **Use previous token** instead.
+   :::
+
+3. Register with your license key
+
+   Click **I have a license key**.
+
+   ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
+
+   Enter your license key to complete the registration.
+
+   ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
+
+4. Select a PHP version
+
+   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
+
+   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
+
+   :::tip
+   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
+
+   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
+   :::
+
+5. Choose installation path and load modules
+
+   * By default, the installer uses `C:\Program Files`.
+   * Click **Change** to install to a different location.
+   * Click **Load** to fetch the required PHP archive.
+   * Select the modules you need and click **Continue**.
+
+   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
+
+6. Verify the installation
+
+   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
+   Copyright (c) 1997-2016 The PHP Group
+   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+   ```
+
+</ELSSteps>
+
+During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
+
+</template>
+
+<template #Manual>
+
+Manual installation requires a tokenized URL that gives access to the TuxCare PHP for Windows repository. The token is placed right after the domain:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+```
+
 :::warning Troubleshooting: browser credential prompts
-Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://TOKEN@windows.tuxcare.com/php/`). Without it, the server issues a redirect that strips the authentication token, causing the browser to prompt for credentials on every page. With the trailing slash, credentials are cached and subfolder navigation works as expected.
+Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://windows.tuxcare.com/TOKEN/php/`). Without it, the server may issue a redirect that drops the token, causing the browser to prompt for credentials. With the trailing slash, subfolder navigation works as expected.
 
 <details>
 <summary>How to use a tokenized URL</summary>
 
-Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL:
+Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL path:
 
 ```text
-https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+https://windows.tuxcare.com/<YOUR-TOKEN>/php/
 ```
 
 **Always include the trailing slash.** This applies to all directory URLs, including version subfolders:
 
-- ✅ `https://TOKEN@windows.tuxcare.com/php/` — works correctly
-- ❌ `https://TOKEN@windows.tuxcare.com/php` — may prompt for credentials
+- ✅ `https://windows.tuxcare.com/TOKEN/php/` — works correctly
+- ❌ `https://windows.tuxcare.com/TOKEN/php` — may prompt for credentials
 
 **Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
 
 - **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
 - **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
 
-**Browsing subdirectories.** Once you open the URL with a trailing slash in a private window, the browser caches your credentials for the session. If you are still prompted when entering a subdirectory, manually insert the token into the URL — prepend `<YOUR-TOKEN>@` before `windows.tuxcare.com` in the address bar.
+**Browsing subdirectories.** If you are prompted for credentials when entering a subdirectory, manually insert the token into the URL — add `<YOUR-TOKEN>/` right after `windows.tuxcare.com/` in the address bar.
 
 **Example walkthrough:**
 
 1. Open the repository root:
    ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
    ```
 2. Click on `7.4.33/`. If the browser navigates to `https://windows.tuxcare.com/php/7.4.33/` and prompts for a password, edit the address bar and add the token:
    ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/7.4.33/
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/
    ```
 3. Click on `tuxcare.els8/`. If prompted again, add the token to the URL:
    ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/7.4.33/tuxcare.els8/
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/tuxcare.els8/
    ```
 4. You see the ZIP files listed. Click on the file to download it directly.
 
 **Downloading files directly.** If you already know which file you need, skip browsing and build the full URL from the repository root, version, release folder, and file name:
 
 ```text
-https://<YOUR-TOKEN>@windows.tuxcare.com
+https://windows.tuxcare.com/<YOUR-TOKEN>
   /php/<version>/tuxcare.els<N>/<filename>.zip
 ```
 
 PowerShell:
 
 ```text
-$base = "https://<YOUR-TOKEN>@windows.tuxcare.com"
+$base = "https://windows.tuxcare.com/<YOUR-TOKEN>"
 $file = "/php/7.4.33/tuxcare.els8/" +
   "php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
 Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
@@ -369,7 +462,7 @@ Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
 curl:
 
 ```text
-BASE="https://<YOUR-TOKEN>@windows.tuxcare.com"
+BASE="https://windows.tuxcare.com/<YOUR-TOKEN>"
 FILE="/php/7.4.33/tuxcare.els8/\
 php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
 curl -O "${BASE}${FILE}"
@@ -379,18 +472,14 @@ curl -O "${BASE}${FILE}"
 <br>
 :::
 
-<TableTabs>
-
-<template #Manual>
-
 <ELSSteps>
 
 1. Open the repository in your browser
 
-   Navigate to your tokenized URL (see [Prerequisites](#windows-prerequisites) above):
+   Navigate to your tokenized URL:
 
    ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
    ```
 
    You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
@@ -478,72 +567,6 @@ curl -O "${BASE}${FILE}"
    To verify that the required extensions are loaded, run `php -m`.
 
 </ELSSteps>
-
-</template>
-
-<template #TuxCare_Installer>
-
-TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
-
-<ELSSteps>
-
-1. Download the installer and launch it
-
-   Download the installer using your tokenized URL (see [Prerequisites](#windows-prerequisites) above):
-
-   ```text
-   https://<YOUR-TOKEN>@windows.tuxcare.com/php/installer/TuxCare.Installer.exe
-   ```
-
-   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
-
-2. Register with your license key or authentication token
-
-   ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
-
-   :::tip
-   If you've already registered on this machine and saved your credentials, the installer detects and uses the saved token automatically.
-   :::
-
-3. Select a PHP version
-
-   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
-
-   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
-
-   :::tip
-   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
-
-   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
-   :::
-
-4. Choose installation path and load modules
-
-   By default, the installer uses `C:\Program Files`. Click **Change** to install to a different location.
-
-   Click **Load** to fetch the required PHP archive. Select the modules you need and click **Continue**.
-
-   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
-
-5. Verify the installation
-
-   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
-
-   ```text
-   php -v
-   ```
-
-   You should see output like:
-
-   ```text
-   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
-   Copyright (c) 1997-2016 The PHP Group
-   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
-   ```
-
-</ELSSteps>
-
-During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
 
 </template>
 
