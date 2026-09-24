@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for PHPUnit from TuxCare provides security fixes
 
 ## Supported Versions
 
-* **PHPUnit** 4.8.10, 6.5.14, 7.5.20, 8.4.3, 9.5.28, 10.4.2, 11.4.4, 12.4.5
+* **PHPUnit** 4.8.10, 5.7.27, 6.5.14, 7.5.20, 8.4.3, 9.5.28, 10.4.2, 11.4.4, 12.4.5
 
 Other versions upon request.
 
