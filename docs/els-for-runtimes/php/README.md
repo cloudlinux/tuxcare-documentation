@@ -305,7 +305,7 @@ TuxCare provides two ways to install ELS PHP on Windows: using the **TuxCare Ins
 
 <ELSPrerequisites id="windows-prerequisites">
 
-* License key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
 * Administrator access to the Windows system
 
 </ELSPrerequisites>
@@ -344,13 +344,13 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
 3. Register with your license key
 
-   Click **I have a license key**.
+   * Click **I have a license key**.
 
-   ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
+     ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
 
-   Enter your license key to complete the registration.
+   * Enter your license key to complete the registration.
 
-   ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
+     ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
 
 4. Select a PHP version
 
