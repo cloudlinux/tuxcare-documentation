@@ -442,7 +442,7 @@ const techData = [
       },
       {
         name: "Hibernate",
-        versions: "4.3.11.Final | 5.1.2.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final | 6.2.20.Final | 6.4.10.Final | 6.5.3.Final | 6.6.38.Final | 6.6.39.Final",
+        versions: "4.3.11.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.20.Final | 6.4.10.Final | 6.5.3.Final | 6.6.38.Final | 6.6.39.Final",
         link: "./hibernate/",
       },
       {
@@ -457,7 +457,7 @@ const techData = [
       },
       {
         name: "Hibernate Validator",
-        versions: "5.4.3.Final | 6.2.5.Final",
+        versions: "5.4.3.Final | 6.0.17.Final | 6.2.5.Final",
         link: "./hibernate/",
       },
       {
@@ -896,7 +896,7 @@ const techData = [
       },
       {
         name: "adm-zip",
-        versions: "0.4.4 | 0.4.7 | 0.4.16 | 0.5.18",
+        versions: "0.4.4 | 0.4.7 | 0.4.16 | 0.5.10 | 0.5.12 | 0.5.16 | 0.5.17 | 0.5.18",
         link: "./javascript-libraries/",
       },
       {
@@ -960,8 +960,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "babel-generator",
+        versions: "7.23.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "babel-helpers",
         versions: "7.11.5 | 7.12.13 | 7.15.4 | 7.18.9 | 7.21.0 | 7.21.5 | 7.24.0 | 7.24.1 | 7.24.5 | 7.25.6 | 7.26.0 | 7.29.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "babel-parser",
+        versions: "7.23.0",
         link: "./javascript-libraries/",
       },
       {
@@ -987,6 +997,11 @@ const techData = [
       {
         name: "babel-traverse",
         versions: "6.26.0 | 7.15.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "babel-types",
+        versions: "7.23.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1236,7 +1251,7 @@ const techData = [
       },
       {
         name: "fast-uri",
-        versions: "2.4.0 | 2.4.2 | 2.4.3 | 3.0.1 | 3.0.3",
+        versions: "2.4.0 | 2.4.2 | 2.4.3 | 2.4.5 | 3.0.1 | 3.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1256,7 +1271,7 @@ const techData = [
       },
       {
         name: "fflate",
-        versions: "0.8.2",
+        versions: "0.8.1 | 0.8.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1751,7 +1766,7 @@ const techData = [
       },
       {
         name: "pacote",
-        versions: "17.0.7 | 18.0.6 | 20.0.0 | 20.0.1",
+        versions: "17.0.7 | 18.0.6 | 20.0.0 | 20.0.1 | 21.0.1 | 21.0.4",
         link: "./javascript-libraries/",
       },
       {
@@ -1796,7 +1811,7 @@ const techData = [
       },
       {
         name: "PostCSS",
-        versions: "5.2.18 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.6",
+        versions: "5.2.18 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.2 | 8.5.3 | 8.5.6 | 8.5.20 | 8.5.21 | 8.5.22",
         link: "./postcss/",
       },
       {
@@ -1821,7 +1836,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.4 | 2.2.5 | 2.3.3 | 2.4.2 | 3.1.0 | 4.0.0 | 5.1.0 | 5.2.0 | 5.2.1 | 6.5.3 | 6.5.5 | 6.7.0 | 6.10.3 | 6.10.7 | 6.11.0 | 6.14.0",
+        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.4 | 2.2.5 | 2.3.3 | 2.4.2 | 3.1.0 | 4.0.0 | 5.1.0 | 5.2.0 | 5.2.1 | 6.2.6 | 6.4.3 | 6.5.3 | 6.5.5 | 6.7.0 | 6.10.3 | 6.10.7 | 6.11.0 | 6.14.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2296,7 +2311,7 @@ const techData = [
       },
       {
         name: "ws",
-        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 7.4.5 | 7.4.6 | 7.5.9 | 8.13.0 | 8.16.0 | 8.17.0 | 8.18.0 | 8.20.0",
+        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 6.2.2 | 6.2.3 | 7.4.5 | 7.4.6 | 7.5.9 | 8.2.3 | 8.5.0 | 8.11.0 | 8.13.0 | 8.16.0 | 8.17.0 | 8.18.0 | 8.20.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2938,7 +2953,7 @@ const techData = [
       },
       {
         name: "PHPUnit",
-        versions: "4.8.10 | 6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
+        versions: "4.8.10 | 5.7.27 | 6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
         link: "./phpunit/",
       },
       {
