@@ -1,0 +1,10 @@
+extends: existence
+message: "Use .webp for images — found '%s'. (Diagrams/screenshots export to webp.)"
+level: warning
+scope: raw
+nonword: true
+raw:
+  # Second branch added: the markdown-only pattern missed `<img src="…">`, which the
+  # docs also use. Single pattern with explicit alternation — Vale concatenates
+  # multiple `raw` entries rather than OR-ing them.
+  - '(?i)!\[[^\]]*\]\([^)]+\.(?:png|jpe?g|gif|bmp|tiff)\)|<img[^>]+src="[^"]+\.(?:png|jpe?g|gif|bmp|tiff)"'
