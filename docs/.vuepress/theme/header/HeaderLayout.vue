@@ -113,10 +113,6 @@ const onClick = (event) => {
     img
       display block
 
-    &:focus-visible
-      outline 2px solid #fff
-      outline-offset 2px
-
   &-header__logo-wrapper
     display flex
     align-items center

@@ -200,11 +200,6 @@ watch(() => props.isOpenDrawer, () => {
     color $crossColor
     cursor pointer
 
-  &:focus-visible
-    outline 2px solid #fff
-    outline-offset 4px
-    border-radius 2px
-
 .drawer-main
   background $drawerMainBackgroundColor
   padding $layout-vertical-padding  $layout-horizontal-padding

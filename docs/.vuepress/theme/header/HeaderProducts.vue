@@ -140,11 +140,6 @@ onUnmounted(() => {
   color inherit
   cursor pointer
 
-  &:focus-visible
-    outline 2px solid #fff
-    outline-offset 4px
-    border-radius 2px
-
   &__img
     display none
 
