@@ -1,15 +1,24 @@
 <template>
-  <div>
-    <div class="drawer" :class="{'is-open': isOpenDrawer, 'drawer--animated': animationsReady}" tabindex="0">
+  <!-- The desktop footer is shown as part of the open drawer, so the dialog
+       wraps both and the focus trap covers the footer links too. -->
+  <div ref="dialogRef"
+       :role="isOpenDrawer ? 'dialog' : undefined"
+       :aria-modal="isOpenDrawer ? 'true' : undefined"
+       :aria-labelledby="isOpenDrawer ? 'drawer-title' : undefined"
+       :inert="!isOpenDrawer"
+       @keydown.esc="onCloseDrawer"
+       @keydown.tab="trapFocus"
+  >
+    <div class="drawer" :class="{'is-open': isOpenDrawer, 'drawer--animated': animationsReady}">
       <div class="drawer-header">
         <div class="drawer-header__wrapper">
-          <h2 class="drawer-header__paragraph">How can we help you?</h2>
+          <h2 id="drawer-title" class="drawer-header__paragraph">How can we help you?</h2>
           <div id="drawerSearch"></div>
         </div>
-        <div class="drawer-cross">
-          <img @click="onCloseDrawer" class="drawer-cross__img" :src="withBase('/global/cross.svg')" alt="cross">
-          <p @click="onCloseDrawer" class="drawer-cross__text">close</p>
-        </div>
+        <button type="button" class="drawer-cross" @click="onCloseDrawer">
+          <img class="drawer-cross__img" :src="withBase('/global/cross.svg')" alt="">
+          <span class="drawer-cross__text">close</span>
+        </button>
       </div>
       <section role="region" aria-label="Search results">
         <div class="drawer-main">
@@ -17,7 +26,7 @@
             <div class="drawer-main__breadcrumb">
               <!-- Optional breadcrumb can stay here -->
             </div>
-            <DrawerSearchResult :modelValue="modelValue" :data="drawerArticleResult" @closeDrawer="onCloseDrawer"/>
+            <DrawerSearchResult :modelValue="modelValue" :data="drawerArticleResult" @closeDrawer="onResultSelected"/>
           </div>
         </div>
         <Footer v-if="isOpenDrawer && isMobileWidth" class="drawer-footer__mobile"/>
@@ -56,14 +65,39 @@ const props = defineProps({
   }
 });
 
+// closeDrawer payload: { restoreFocus } — false when a search result was picked,
+// because focus then belongs to the page being navigated to.
 const emit = defineEmits(['closeDrawer', 'update:modelValue']);
+const dialogRef = ref(null);
 
 const drawerArticleResult = computed(() => {
   return props.homeLayoutSearchResult; // Now directly returning all results since there are no tabs
 });
 
 const onCloseDrawer = () => {
-  emit('closeDrawer');
+  if (props.isOpenDrawer) emit('closeDrawer', { restoreFocus: true });
+}
+
+const onResultSelected = () => emit('closeDrawer', { restoreFocus: false });
+
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+// Keep Tab / Shift+Tab inside the open drawer.
+const trapFocus = (event) => {
+  if (!props.isOpenDrawer || !dialogRef.value) return;
+  const focusable = [...dialogRef.value.querySelectorAll(FOCUSABLE)]
+      .filter(el => el.offsetParent !== null || getComputedStyle(el).position === 'fixed');
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  const active = document.activeElement;
+  if (event.shiftKey && (active === first || !dialogRef.value.contains(active))) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && (active === last || !dialogRef.value.contains(active))) {
+    event.preventDefault();
+    first.focus();
+  }
 }
 
 // The drawer starts hidden (translateY(-100%)). Enabling the slide transition
@@ -143,6 +177,12 @@ watch(() => props.isOpenDrawer, () => {
 
 .drawer-cross
   margin-top 0.75rem
+  background none
+  border 0
+  padding 0
+  font inherit
+  color inherit
+  cursor pointer
   display flex
   flex-direction column
   justify-content flex-end
@@ -156,8 +196,14 @@ watch(() => props.isOpenDrawer, () => {
 
   &__text
     margin 0
+    line-height 1.7
     color $crossColor
     cursor pointer
+
+  &:focus-visible
+    outline 2px solid #fff
+    outline-offset 4px
+    border-radius 2px
 
 .drawer-main
   background $drawerMainBackgroundColor

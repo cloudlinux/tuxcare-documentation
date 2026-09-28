@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar-drawer__mobile">
+  <div class="sidebar-drawer__mobile" tabindex="-1" @keydown.esc="closeOnEscape">
     <Sidebar
         :closeSidebarDrawer="closeSidebarDrawer"
         :items="allPages"
@@ -22,6 +22,7 @@
 </template>
 
 <script lang="ts" setup>
+import {nextTick} from "vue";
 import Sidebar from "../sidebar/Sidebar.vue";
 import DSelect from "../components/DSelect.vue";
 
@@ -50,6 +51,12 @@ const props = defineProps({
   },
 })
 defineEmits(['changeSidebarItems','update:model-value'])
+
+// Escape closes the drawer and returns focus to the button that opened it.
+const closeOnEscape = () => {
+  props.closeSidebarDrawer()
+  nextTick(() => (document.querySelector('.page-mobile__sidebar-menu') as HTMLElement | null)?.focus())
+}
 </script>
 
 <style lang="stylus">
@@ -58,6 +65,9 @@ defineEmits(['changeSidebarItems','update:model-value'])
   z-index 2000 !important
   width 100vw !important
   position relative
+
+  &:focus
+    outline none
 
 @media (max-width: $mobileBreakpoint)
   .sidebar-header

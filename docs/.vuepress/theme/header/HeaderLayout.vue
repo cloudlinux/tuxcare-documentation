@@ -25,7 +25,9 @@
           class="links"
           :style="{ 'max-width': linksWrapMaxWidth + 'px'}"
       >
-        <img @click="openMobileAlgoliaDrawer" class="navbar-header__mobile-search" :src="withBase(headerDefaultSearchIcon)" alt="icon image"/>
+        <button type="button" class="navbar-header__mobile-search" aria-label="Search documentation" @click="openMobileAlgoliaDrawer">
+          <img :src="withBase(headerDefaultSearchIcon)" alt=""/>
+        </button>
         <HeaderProducts :isMobileWidth="isMobileWidth"/>
 
         <a v-for="item in locales.navbarLinks" 
@@ -102,6 +104,18 @@ const onClick = (event) => {
 
   &-header__mobile-search
     display none
+    background none
+    border 0
+    padding 0
+    color inherit
+    cursor pointer
+
+    img
+      display block
+
+    &:focus-visible
+      outline 2px solid #fff
+      outline-offset 2px
 
   &-header__logo-wrapper
     display flex

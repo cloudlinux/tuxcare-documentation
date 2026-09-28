@@ -5,6 +5,7 @@
            @input="$emit('update:modelValue', $event.target.value)"
            @keydown.enter.prevent="performSearch"
            id="algolia-search-input"
+           aria-label="Search documentation"
            :placeholder="placeholder"
            :class="activeSearchClass"
            maxlength="100"
@@ -197,6 +198,11 @@ watch(
   font-size: $searchColorFontSize
   line-height: 1rem
   outline: none
+
+  // White field on the dark drawer header: draw the ring inside the field.
+  &:focus-visible
+    outline 2px solid #0a4ea8
+    outline-offset -4px
 
   &-icon
     position absolute

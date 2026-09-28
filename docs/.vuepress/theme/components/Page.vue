@@ -4,11 +4,14 @@
 
     <Breadcrumb class="page-breadcrumb"/>
 
-    <img @click="openMobileSidebarMenu"
-         class="page-mobile__sidebar-menu"
-         :src="withBase('/global/sidebar-menu.svg')"
-         alt="sidebar hamburger menu"
-    />
+    <button type="button"
+            class="page-mobile__sidebar-menu"
+            aria-label="Open documentation menu"
+            :aria-expanded="isOpenMobileSidebarMenu"
+            @click="openMobileSidebarMenu"
+    >
+      <img :src="withBase('/global/sidebar-menu.svg')" alt=""/>
+    </button>
 
     <div class="page-nav-wrapper">
       <PageNav :sidebar-items="sidebarItems" :allPages="allPages"/>
@@ -37,7 +40,7 @@
 import {endingSlashRE, normalize, outboundRE} from '../util'
 import BackToTop from './BackToTop.vue';
 import {usePageData, usePageFrontmatter, usePageLang, withBase} from "@vuepress/client";
-import {computed, inject, ref} from "vue";
+import {computed, inject, nextTick, ref} from "vue";
 import Breadcrumb from "./Breadcrumb.vue";
 import PageNav from "./PageNav.vue";
 
@@ -69,7 +72,12 @@ const frontmatter = usePageFrontmatter()
 
 const isOpenMobileSidebarMenu = ref(props.isMobileWidth)
 
-const openMobileSidebarMenu = () => isOpenMobileSidebarMenu.value = true
+// The drawer is rendered by Layout.vue after this page; move focus into it so
+// keyboard users don't have to tab through the covered page content first.
+const openMobileSidebarMenu = () => {
+  isOpenMobileSidebarMenu.value = true
+  nextTick(() => document.querySelector('.sidebar-drawer__mobile')?.focus({preventScroll: true}))
+}
 const closeSidebarDrawer = () => isOpenMobileSidebarMenu.value = false
 
 const editLink = computed(() => {
@@ -131,6 +139,13 @@ defineExpose({
 
   &-mobile__sidebar-menu
     display none
+    background none
+    border 0
+    padding 0
+    cursor pointer
+
+    img
+      display block
 
   &-breadcrumb
     margin-left 3rem

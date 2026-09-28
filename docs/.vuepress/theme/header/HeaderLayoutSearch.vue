@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import {computed, inject, ref, watch} from "vue";
+import {computed, inject, nextTick, ref, watch} from "vue";
 import {usePageFrontmatter} from "@vuepress/client";
 import Drawer from "../drawer/Drawer.vue";
 import DrawerSearch from "../drawer/DrawerSearch.vue";
@@ -68,17 +68,40 @@ const getResultsFromSearch = (hits) => {
 
 const isGlobalLayout = computed(() =>  frontmatter.value.layout === 'HomeLayout')
 
+// Element that opened the drawer, to return focus to on close.
+let drawerOpener = null
+const SEARCH_INPUT_ID = 'algolia-search-input'
+
+// Opening/closing teleports DrawerSearch in or out of the drawer, which remounts
+// the input, so focus has to be placed on the new #algolia-search-input.
+const focusSearchInput = () => {
+  const input = document.getElementById(SEARCH_INPUT_ID)
+  if (input && input.offsetParent !== null) input.focus()
+}
+
 const openDrawer = () => {
+  const wasOpen = isOpenDrawer.value
   isOpenDrawer.value = true
   mobileDrawerVisible.value = true
   if(props.closeSidebarDrawer) props.closeSidebarDrawer()
+  if (!wasOpen) {
+    drawerOpener = document.activeElement
+    nextTick(focusSearchInput)
+  }
 }
 
-const closeDrawer = () => {
+const closeDrawer = ({restoreFocus = true} = {}) => {
   homeLayoutSearchResult.value.length = 0;
   searchTextValue.value = ''
   isOpenDrawer.value = false
   mobileDrawerVisible.value = false
+  const opener = drawerOpener
+  drawerOpener = null
+  if (!restoreFocus) return
+  nextTick(() => {
+    if (opener && opener.isConnected && opener.id !== SEARCH_INPUT_ID) opener.focus()
+    else focusSearchInput()
+  })
 }
 defineExpose({
   openDrawer,
@@ -116,6 +139,11 @@ defineExpose({
     margin-bottom 7.25rem
     outline: none
 
+  // White field on the dark home header: draw the ring inside the field.
+  &:focus-visible
+    outline 2px solid #0a4ea8
+    outline-offset -4px
+
   &-default
     border-radius $defaultSearchBorderRadius
     border: none
@@ -129,6 +157,11 @@ defineExpose({
 
   &-default::placeholder
     color: white;
+
+  // Dark field on the dark navbar: a white ring outside the field.
+  &-default:focus-visible
+    outline 2px solid #fff
+    outline-offset 2px
 
 
   &-icon
