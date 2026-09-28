@@ -48,7 +48,7 @@ The CLI never changes anything without saying what it changed, every writing com
    curl -fsSL https://securechain.tuxcare.com/get/securechain | SECURECHAIN_VERSION=v0.1.12 SECURECHAIN_INSTALL_DIR="$HOME/bin" sh
    ```
 
-   To install the latest version, run:
+   To see the latest version, run:
 
    ```text
    curl -fsSL https://securechain.tuxcare.com/get/latest/latest
@@ -241,10 +241,6 @@ The CLI never changes anything without saying what it changed, every writing com
    sha256sum --check --ignore-missing checksums.txt
    install -m 0755 securechain-linux-amd64 /usr/local/bin/securechain
    ```
-
-   :::warning
-   On macOS, download with `curl` as shown above. A binary downloaded through a web browser is quarantined by the system and is blocked on first launch.
-   :::
 
    </template>
 
