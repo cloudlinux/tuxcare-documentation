@@ -1,5 +1,5 @@
 <template>
-  <main id="main-content" class="page" role="main">
+  <main id="main-content" class="page" role="main" tabindex="-1">
     <slot name="top"/>
 
     <Breadcrumb class="page-breadcrumb"/>
@@ -18,7 +18,7 @@
 
     <div v-if="allowGithubEdit" class="page-edit">
       <div class="edit-link">
-        <img :src="withBase(githubEditIcon)" alt="icon pen"/>
+        <img :src="withBase(githubEditIcon)" alt=""/>
         <a
             :href="editLink"
             target="_blank"

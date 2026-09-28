@@ -1,7 +1,7 @@
 <template>
   <div class="os-selector">
     <div class="os-selector-heading">
-      <h3>Which OS are you running?</h3>
+      <h2>Which OS are you running?</h2>
       <p>Select your operating system to get started with ELS.</p>
     </div>
 
@@ -43,10 +43,11 @@ import operatingSystems from "../config-client/osReleases";
   margin-bottom: 1.25rem;
 }
 
-.os-selector-heading h3 {
+.os-selector-heading h2 {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+  padding-bottom: 0;
 }
 
 .os-selector-heading p {

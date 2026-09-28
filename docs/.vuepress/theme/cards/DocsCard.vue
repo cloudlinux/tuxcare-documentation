@@ -8,7 +8,7 @@
     @keydown.space.prevent="goTo()"
   >
     <div class="docs-card-container__header">
-      <img width="20" height="20" :src="withBase('collections-bookmark.svg')" alt="document icon">
+      <img width="20" height="20" :src="withBase('collections-bookmark.svg')" alt="">
       <p v-if="card.title" class="docs-card-container__header-paragraph">{{ card.title }}</p>
     </div>
     <div class="docs-card-container__main">

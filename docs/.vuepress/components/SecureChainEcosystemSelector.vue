@@ -1,7 +1,7 @@
 <template>
   <div class="ecosystem-selector">
     <div class="ecosystem-selector-heading">
-      <h3>Select your ecosystem to get started with SecureChain.</h3>
+      <h2>Select your ecosystem to get started with SecureChain.</h2>
     </div>
 
     <div class="ecosystem-grid">
@@ -45,10 +45,11 @@ const ecosystems = [
   margin-bottom: 1.25rem;
 }
 
-.ecosystem-selector-heading h3 {
+.ecosystem-selector-heading h2 {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+  padding-bottom: 0;
 }
 
 .ecosystem-selector-heading p {

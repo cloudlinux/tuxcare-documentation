@@ -1,7 +1,8 @@
 <template>
   <div class="theme-container">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <HeaderLayout :isMobileWidth="isMobileWidth"/>
-    <main id="main-content" role="main">
+    <main id="main-content" role="main" tabindex="-1">
       <DocsCardsWrapper/>
     </main>
     <Footer/>

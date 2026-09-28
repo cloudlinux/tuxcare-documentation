@@ -1,5 +1,6 @@
 <template>
   <div class="theme-container">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <HeaderLayout  :closeSidebarDrawer="pageRef?.closeSidebarDrawer" :isMobileWidth="isMobileWidth"/>
     <Sidebar
         v-if="allPages.length && !pageRef?.isOpenMobileSidebarMenu && !isMobileWidth"

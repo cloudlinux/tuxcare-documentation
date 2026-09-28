@@ -1,7 +1,7 @@
 <template>
   <div ref="rootRef" class="prereqs">
     <div class="prereqs-header">
-      <h4 ref="headingRef" :id="headingId"><slot name="title">Prerequisites</slot></h4>
+      <h3 ref="headingRef" :id="headingId"><slot name="title">Prerequisites</slot></h3>
     </div>
     <div class="prereqs-body">
       <slot />
@@ -51,7 +51,7 @@ onMounted(() => {
   scroll-margin-top: 6rem;
 }
 
-.prereqs-header h4 {
+.prereqs-header h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
   font-weight: 700;
@@ -61,7 +61,7 @@ onMounted(() => {
 /* The anchor floats left at its natural position with a fixed width and a
    minimal gap; the body list below is indented to match (see .prereqs-body).
    font-size in rem (not em) keeps it identical to the ELSSteps anchor. */
-.prereqs-header h4 :deep(a.prereq-anchor) {
+.prereqs-header h3 :deep(a.prereq-anchor) {
   opacity: 0;
   font-size: 1rem;
   width: 0.7rem;
@@ -74,11 +74,11 @@ onMounted(() => {
   transition: opacity 0.15s ease;
 }
 
-.prereqs-header h4:hover {
+.prereqs-header h3:hover {
   cursor: pointer;
 }
 
-.prereqs-header h4:hover :deep(a.prereq-anchor) {
+.prereqs-header h3:hover :deep(a.prereq-anchor) {
   opacity: 1;
 }
 

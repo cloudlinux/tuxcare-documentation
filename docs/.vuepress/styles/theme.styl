@@ -233,7 +233,7 @@ div[class*="language-"]
   .token.prolog,
   .token.doctype,
   .token.cdata
-    color #5c6370
+    color #969eac
     font-style italic
 
   .token.punctuation
@@ -278,7 +278,7 @@ div[class*="language-"]
   .token.regex,
   .token.important,
   .token.variable
-    color #e06c75
+    color #f07a83
 
   .token.important,
   .token.bold
@@ -409,3 +409,25 @@ div[class*="language-"].hide-fade .code-fade-mask
       margin 0
   a.header-anchor
     font-size 0 !important
+
+// Skip link (WCAG 2.4.1): hidden until focused, then pinned top-left.
+.skip-link
+  position fixed
+  top 0.5rem
+  left 0.5rem
+  z-index 10000
+  padding 0.5rem 1rem
+  background #fff
+  color #0a4ea8
+  font-weight 600
+  text-decoration underline
+  border-radius 4px
+  transform translateY(-200%)
+
+  &:focus
+    transform none
+    outline 2px solid #0a4ea8
+    outline-offset 2px
+
+#main-content:focus
+  outline none

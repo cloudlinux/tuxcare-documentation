@@ -10,7 +10,7 @@
               class="logo"
               v-if="siteLogo"
               :src="withBase(siteLogo)"
-              alt="logo header"
+              alt="TuxCare Documentation home"
           >
         </router-link>
         <HeaderLayoutSearch

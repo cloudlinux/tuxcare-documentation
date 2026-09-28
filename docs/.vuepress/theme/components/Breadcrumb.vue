@@ -61,6 +61,7 @@ const breadCrumbs = computed(() => {
 .breadcrumb
   color $breadcrumbColor
   text-decoration none
+  padding-block 4px
 
   &:not(:last-child)::after
     content " > "

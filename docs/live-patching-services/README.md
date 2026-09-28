@@ -270,7 +270,7 @@ To see applied patches, run:
 
 ##### kcarectl
 
-| | |
+| Option | Description |
 |-|-|
 |`-i, --info` | Display information about patches installed by KernelCare.|
 |`-u, --update` | Download latest patches, and apply them to current kernel.|
@@ -307,7 +307,7 @@ Currently available userspace patch type is `libs`. To apply patches only for sh
 
 Print certain system information. Default is `-s`
 
-| | |
+| Option | Description |
 |-|-|
 |`-a, --all` | print all information in the following order, except omit `-p` and `-i` if unknown|
 |`-s, --kernel-name` | print the kernel name|
@@ -344,7 +344,7 @@ If there was a connection problem during uploading the report, the report will b
 
 `kcarectl` behavior can be configured using `/etc/sysconfig/kcare/kcare.conf`
 
-| | |
+| Parameter | Description |
 |-|-|
 |`AUTO_UPDATE=YES\|NO` | `YES` - enable auto-update; `NO` - disable auto-update.|
 |`PATCH_METHOD=normal\|nofreeze\|smart` | `Normal` - (default) use freezer;<br>`Nofreeze` - don't use freezer to freeze processes;<br> `Smart` - smart freezer freezes only threads that need to be frozen for patching [kernelcare 2.3+].|
@@ -380,9 +380,8 @@ To disable the patch, set the corresponding kcare option to `1`
 
 Patches that can be disabled:
 
-| | |
-|-|-|
 |Patch |  _sysctl_ option|
+|-|-|
 |CVE-2015-5157 | kcare_modify_ldt|
 
 #### Extra patchset
@@ -801,7 +800,7 @@ You can easily automate KernelCare deployment with Ansible, Puppet, Chef or othe
 
 ##### Health Check
 
-Systems protected by KernelCare can be monitored by means of CloudLinux Network (CLN) portal available at [https://cln.cloudlinux.com](https://cln.cloudlinux.com). Registered KernelCare installations are grouped by license keys. Kernels that are marked with the exclamation sign in <span style="color:#E76930">amber</span> do not have the latest patches installed.
+Systems protected by KernelCare can be monitored by means of CloudLinux Network (CLN) portal available at [https://cln.cloudlinux.com](https://cln.cloudlinux.com). Registered KernelCare installations are grouped by license keys. Kernels that are marked with the exclamation sign in <span style="color:#C2410C">amber</span> do not have the latest patches installed.
 
 ![monit](/images/KC-Ent-monit.png)
 
@@ -990,7 +989,7 @@ Kernel is safe
 
 As soon as you have these files in place, it is possible to proceed with disabling SMT.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RUGCvEO1hAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" title="Video: How to disable the CPU simultaneous multithreading (SMT) without reboot" src="https://www.youtube.com/embed/RUGCvEO1hAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ##### SMT Control
 
@@ -1317,7 +1316,7 @@ microcode       : 17
 microcode       : 17
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EydWy-b9uns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" title="Video: How to update microcode without reboot with vendor-provided package" src="https://www.youtube.com/embed/EydWy-b9uns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Plesk related
 

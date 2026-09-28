@@ -14,8 +14,8 @@
       </div>
       <span class="footer-social-text">{{ locales.stayInTouch }}</span>
       <div class="social-icons-wrapper">
-        <a v-for="item in social" class="social-icons-link" :href="item?.url" target="_blank" rel="noopener noreferrer" :aria-label="item?.text || 'social link'">
-          <img v-if="item.icon" class="social-icons-link-img" :src="withBase(item?.icon)" alt="footer logo"/>
+        <a v-for="item in social" class="social-icons-link" :href="item?.url" target="_blank" rel="noopener noreferrer" :aria-label="(item?.text || 'Social link') + ' (opens in new tab)'">
+          <img v-if="item.icon" class="social-icons-link-img" :src="withBase(item?.icon)" alt=""/>
         </a>
       </div>
     </div>

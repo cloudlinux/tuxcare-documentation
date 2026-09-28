@@ -225,8 +225,10 @@ watch(
 .search-submit-btn
   background none
   border none
-  padding 0
-  margin 0
+  padding 4px
+  margin -4px
+  min-width 24px
+  min-height 24px
   cursor pointer
   display flex
   align-items center
