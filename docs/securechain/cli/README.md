@@ -45,10 +45,14 @@ The CLI never changes anything without saying what it changed, every writing com
    To install a specific version, or to choose the directory:
 
    ```text
-   curl -fsSL https://securechain.tuxcare.com/get/securechain | SECURECHAIN_VERSION=v0.1.10 SECURECHAIN_INSTALL_DIR="$HOME/bin" sh
+   curl -fsSL https://securechain.tuxcare.com/get/securechain | SECURECHAIN_VERSION=v0.1.12 SECURECHAIN_INSTALL_DIR="$HOME/bin" sh
    ```
 
-   The newest final version is named in `https://securechain.tuxcare.com/get/latest/latest`.
+   To install the latest version, run:
+
+   ```text
+   curl -fsSL https://securechain.tuxcare.com/get/latest/latest
+   ```
 
    :::tip
    For Windows, use the **npm**, **pip (PyPI)** or **Manual download** option.
@@ -100,7 +104,7 @@ The CLI never changes anything without saying what it changed, every writing com
    | `tuxcare/securechain:latest-toolchains` | The binary plus `npm`, `mvn` and `pip`, for a standalone scanning job that has no package manager of its own. |
 
    :::tip
-   `latest` follows the newest final release and is handy for a first run. In CI, pin a version — for example `tuxcare/securechain:0.1.10-toolchains`.
+   `latest` follows the newest final release and is handy for a first run. In CI, pin a version — for example `tuxcare/securechain:0.1.12-toolchains`.
    :::
 
    </template>
@@ -140,7 +144,7 @@ The CLI never changes anything without saying what it changed, every writing com
    sudo dnf install -y securechain
    ```
 
-   On a system without `dnf`, use `yum install -y securechain`. Both the repository metadata and every package are signed with the TuxCare SecureChain key, and the repository file turns on checking of both (`repo_gpgcheck=1`, `gpgcheck=1`).
+   On a system without `dnf`, use `yum install -y securechain`. TuxCare signs the repository metadata and every package with the SecureChain key, and the repository file turns on signature checks for each (`repo_gpgcheck=1` and `gpgcheck=1`).
 
    </template>
 
@@ -167,14 +171,14 @@ The CLI never changes anything without saying what it changed, every writing com
    <plugin>
      <groupId>com.tuxcare</groupId>
      <artifactId>securechain-maven-plugin</artifactId>
-     <version>0.1.10</version>
+     <version>0.1.12</version>
      <executions>
        <execution><goals><goal>check</goal></goals><phase>verify</phase></execution>
      </executions>
    </plugin>
    ```
 
-   The plugin's version is also the CLI version it runs; use the newest one named in `https://securechain.tuxcare.com/get/latest/latest`.
+   The plugin's version is also the CLI version it runs; use the newest one.
 
    Or run it once, with no change to `pom.xml`:
 
@@ -203,7 +207,7 @@ The CLI never changes anything without saying what it changed, every writing com
 
    ```kotlin
    plugins {
-       id("com.tuxcare.securechain") version "0.1.10"
+       id("com.tuxcare.securechain") version "0.1.12"
    }
    ```
 
@@ -228,7 +232,7 @@ The CLI never changes anything without saying what it changed, every writing com
    | Windows x86-64 | `securechain-windows-amd64.exe` |
    | Windows ARM64 | `securechain-windows-arm64.exe` |
 
-   For example, the newest release on Linux x86-64 — the newest final version is named in `https://securechain.tuxcare.com/get/latest/latest`:
+   For example, the newest release on Linux x86-64:
 
    ```text
    VERSION=$(curl -fsSL https://securechain.tuxcare.com/get/latest/latest)
@@ -470,7 +474,7 @@ A value on the command line always wins over the file. Durations are written as 
 
 ### Using the CLI in CI
 
-`check` exits `0` when the project is on every patched build the subscription covers, and `1` when it is not, so it works as a gate in any CI. For GitLab and GitHub there are ready-made wrappers that install a pinned, checksum-verified CLI and wire its report into the platform. In both, store your token as a masked secret named `TUXCARE_TOKEN`.
+`check` exits with `0` when the project uses every patched build that your subscription covers, and with `1` otherwise, so you can use it as a gate in any CI system. For GitLab and GitHub, TuxCare provides ready-made wrappers that install a pinned, checksum-verified CLI and show its report in the platform. On either platform, store your token as a masked secret named `TUXCARE_TOKEN`.
 
 **GitLab — the CI/CD component** (listed in the GitLab CI/CD Catalog; the report shows up as a JUnit test report):
 
@@ -481,7 +485,7 @@ include:
       stage: test
 ```
 
-`@0` follows the newest `0.x` release. To pin one release, use its tag, for example `@v0.1.10`.
+`@0` follows the newest `0.x` release. To pin one release, use its tag, for example `@v0.1.12`.
 
 **GitHub — the Action** (the findings go to GitHub code scanning as SARIF):
 
