@@ -281,7 +281,8 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
 
      The choice is saved in `.securechain.yaml` and reused by every later command. Accepted values: `npm`, `pnpm`, `yarn-classic`, `yarn-berry`, `bun`. The `--ecosystem` flag also works on any single command, for that run only.
 
-   :::details Output example
+   <details>
+   <summary>Output example</summary>
 
    ```text
    securechain init
@@ -297,7 +298,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
        2. run `securechain check` to see what the catalogue covers and what `harden` or `update` would change.
    ```
 
-   :::
+   </details>
 
    `init` points the package manager at the TuxCare registry (`.npmrc`, or `.yarnrc.yml` for Yarn 2+), writes the project configuration `.securechain.yaml`, and adds Dependabot and Renovate rules that keep the patched versions in place. Running it again updates only the lines it wrote and leaves the rest of each file untouched. Commit the files it creates.
 
@@ -317,7 +318,8 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
    securechain check
    ```
 
-   :::details Output example
+   <details>
+   <summary>Output example</summary>
 
    ```text
    securechain check
@@ -338,7 +340,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
      ✖ exit 1 (findings)
    ```
 
-   :::
+   </details>
 
    Every finding names the package, the patched build, the CVEs it closes and the command that fixes it. Add `--explain` for the evidence. `securechain status` prints the same picture without gating: findings do not make it fail.
 
@@ -372,7 +374,8 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
    securechain update
    ```
 
-   :::details Output example
+   <details>
+   <summary>Output example</summary>
 
    ```text
      ✎ wrote: package.json
@@ -382,7 +385,7 @@ The examples below use an **npm** project. `pnpm`, `yarn` and `bun` projects wor
        · 1 pin rolled forward across 1 file
    ```
 
-   :::
+   </details>
 
    `update` never changes a package's base version — `0.4.2` stays `0.4.2` — so it is a patch, never an upgrade. `update --check-only` reports what is behind, writes nothing and exits `1` — a second gate for CI.
 
@@ -431,7 +434,8 @@ Every command accepts all of these. A value on the command line wins over the on
 | `--no-color` | off | Plain output, with no colours or symbols. |
 | `--timeout <duration>` | `10m` | A deadline for the whole command. |
 
-:::details Setting the catalogue age with --feed-max-age
+<details>
+<summary>Setting the catalogue age with --feed-max-age</summary>
 
 The CLI keeps a copy of the catalogue on the machine and refreshes it when it is older than this value (24 hours by default). Pass the flag to change it for one run:
 
@@ -447,13 +451,14 @@ securechain init --feed-max-age 168h
 
 A value on the command line always wins over the file. Durations are written as `36h`, `168h` and so on.
 
-:::
+</details>
 
 ### Using the CLI in CI
 
 `check` exits `0` when the project is on every patched build the subscription covers, and `1` when it is not — so it needs no wrapper.
 
-:::details Pipeline example
+<details>
+<summary>Pipeline example</summary>
 
 ```yaml
 securechain:
@@ -468,7 +473,7 @@ securechain:
       junit: report.xml
 ```
 
-:::
+</details>
 
 `--output sarif` feeds GitHub and GitLab code scanning, and `--output json` is a stable, versioned format to script against.
 
@@ -535,9 +540,7 @@ The isolated machine still needs a way to install the packages themselves — ty
 
 <WhatsNext hide-title>
 
-* ![](/images/box.webp) [JavaScript](/securechain/javascript/) — Point the CLI at a JavaScript project and install patched builds
 * ![](/images/wrench.webp) [Managing the SecureChain repository](/securechain/managing-securechain-repository/) — Upgrade to a newer version
-* ![](/images/book.webp) [SecureChain for Open Source Software](/securechain/) — What SecureChain covers and how fast
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
 

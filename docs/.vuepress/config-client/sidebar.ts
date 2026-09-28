@@ -609,6 +609,7 @@ export default {
                     path: '/securechain/cli/',
                     icon: '/images/TuxCare_color_icon.webp',
                 },
+                "/securechain/managing-securechain-repository/",
             ]
         },
     ],

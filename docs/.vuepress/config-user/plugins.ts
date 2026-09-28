@@ -19,11 +19,6 @@ export default [
         after: () => '</div>',
     } as ContainerPluginOptions),
     containerPlugin({
-        type: 'details',
-        before: info => `<details class="details custom-block"><summary>${info}</summary>`,
-        after: () => '</details>',
-    } as ContainerPluginOptions),
-    containerPlugin({
         type: 'danger',
         before: info => `<div class="danger custom-block"><p class="custom-block-title">${info}</p>`,
         after: () => '</div>',
