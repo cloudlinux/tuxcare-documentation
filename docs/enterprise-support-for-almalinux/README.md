@@ -83,8 +83,8 @@ Vulnerability scanner vendors may prefer the Common Security Advisory Framework 
 
 ### RSS releases feeds
 
-* ESU 9.2: [https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu](https://cve.tuxcare.com/rss_feed/releases/almalinux9.2esu)
-* ESU 9.6: [https://cve.tuxcare.com/rss_feed/releases/tuxcare9.6esu](https://cve.tuxcare.com/rss_feed/releases/tuxcare9.6esu)
+* [ESU 9.2 RSS](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=AlmaLinux+9.2+ESU)
+* [ESU 9.6 RSS](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=TuxCare+9.6+ESU)
 
 ### Technical support
 
