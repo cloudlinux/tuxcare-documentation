@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Percona Server from TuxCare provides securit
 
 Percona Server ships from its own `percona-els` repository. For MySQL Community Server, see [MySQL](/els-for-applications/mysql/).
 
-## Supported OS and Percona Server versions
+## Supported Versions
 
 | OS                                                      | Package Type | OS Version | Percona Server version |
 | :-----------------------------------------------------: | :----------: | :--------: | :--------------------: |
