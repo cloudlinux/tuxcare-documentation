@@ -217,7 +217,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | spring-data-build | 2.7.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
 | spring-data-build-resources | 2.7.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
 | spring-data-parent | 2.7.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
-| spring-data-commons | 2.7.18, 3.1.8, 3.2.12, 3.3.12, 3.3.13, 3.4.13, 3.5.13 |
+| spring-data-commons | 2.4.8, 2.7.18, 3.1.8, 3.2.3, 3.2.12, 3.3.12, 3.3.13, 3.4.12, 3.4.13, 3.5.12, 3.5.13 |
 | spring-data-jpa | 2.7.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
 | spring-data-jpa-parent | 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
 | spring-data-jpa-distribution | 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
@@ -228,11 +228,11 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | spring-data-cassandra-parent | 3.4.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
 | spring-data-cassandra | 3.4.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
 | spring-data-cassandra-distribution | 3.4.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
-| spring-data-mongodb | 3.4.16, 3.4.18, 4.2.12, 4.3.12, 4.3.13, 4.4.13, 4.5.13 |
+| spring-data-mongodb | 3.1.8, 3.4.16, 3.4.18, 4.2.12, 4.3.12, 4.3.13, 4.4.13, 4.5.13 |
 | spring-data-mongodb-distribution | 3.4.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
 | spring-data-mongodb-parent | 3.4.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
 | spring-data-rest-webmvc | 3.7.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
-| spring-data-rest-core | 3.4.9, 3.6.10, 3.7.16, 3.7.18, 4.1.8, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
+| spring-data-rest-core | 3.4.8, 3.4.9, 3.6.10, 3.7.16, 3.7.18, 4.1.8, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
 | spring-data-rest-distribution | 3.7.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
 | spring-data-rest-hal-explorer | 3.7.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
 | spring-data-rest-parent | 3.7.18, 4.2.12, 4.3.13, 4.4.13, 4.5.13 |
@@ -240,7 +240,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | spring-data-elasticsearch | 4.4.18, 5.2.12, 5.3.13, 5.4.13, 5.5.13 |
 | spring-data-neo4j | 6.3.18, 7.2.12, 7.3.13, 7.4.13, 7.5.13 |
 | spring-data-r2dbc | 1.5.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
-| spring-data-relational | 2.3.10, 2.4.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
+| spring-data-relational | 2.1.8, 2.3.10, 2.4.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
 | spring-data-relational-parent | 2.4.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
 | spring-data-jdbc | 2.3.10, 2.4.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
 | spring-data-jdbc-distribution | 2.4.18, 3.2.12, 3.3.13, 3.4.13, 3.5.13 |
