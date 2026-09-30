@@ -32,7 +32,7 @@ The CLI never changes anything without saying what it changed, every writing com
 
 1. Choose an installation method
 
-   <TableTabs label="Choose an installation method: " :labels="{ Install_script: 'Install script (curl)', npm: 'npm', Docker: 'Docker', pip: 'pip (PyPI)', apt: 'apt (Debian, Ubuntu)', dnf: 'dnf / yum (RHEL, AlmaLinux, Rocky, Fedora)', Maven: 'Maven plugin', Gradle: 'Gradle plugin', Manual_download: 'Manual download' }">
+   <TableTabs label="Choose an installation method: " :labels="{ Install_script: 'Install script (curl)', npm: 'npm', Homebrew: 'Homebrew (macOS, Linux)', Docker: 'Docker', pip: 'pip (PyPI)', apt: 'apt (Debian, Ubuntu)', dnf: 'dnf / yum (RHEL, AlmaLinux, Rocky, Fedora)', Maven: 'Maven plugin', Gradle: 'Gradle plugin', Manual_download: 'Manual download' }">
 
    <template #Install_script>
 
@@ -45,7 +45,13 @@ The CLI never changes anything without saying what it changed, every writing com
    To install a specific version, or to choose the directory:
 
    ```text
-   curl -fsSL https://securechain.tuxcare.com/get/securechain | SECURECHAIN_VERSION=v0.1.0 SECURECHAIN_INSTALL_DIR="$HOME/bin" sh
+   curl -fsSL https://securechain.tuxcare.com/get/securechain | SECURECHAIN_VERSION=v0.1.12 SECURECHAIN_INSTALL_DIR="$HOME/bin" sh
+   ```
+
+   To see the latest version, run:
+
+   ```text
+   curl -fsSL https://securechain.tuxcare.com/get/latest/latest
    ```
 
    :::tip
@@ -70,6 +76,18 @@ The CLI never changes anything without saying what it changed, every writing com
 
    </template>
 
+   <template #Homebrew>
+
+   The formula in the TuxCare tap is updated with every release and installs the same checksum-verified binary:
+
+   ```text
+   brew install tuxcare/tap/securechain
+   ```
+
+   Later releases arrive with `brew upgrade securechain`.
+
+   </template>
+
    <template #Docker>
 
    The image is published on Docker Hub as `tuxcare/securechain`. Mount your project and pass the token:
@@ -86,7 +104,7 @@ The CLI never changes anything without saying what it changed, every writing com
    | `tuxcare/securechain:latest-toolchains` | The binary plus `npm`, `mvn` and `pip`, for a standalone scanning job that has no package manager of its own. |
 
    :::tip
-   `latest` follows the newest final release and is handy for a first run. In CI, pin a version — for example `tuxcare/securechain:0.1.0-toolchains`.
+   `latest` follows the newest final release and is handy for a first run. In CI, pin a version — for example `tuxcare/securechain:0.1.12-toolchains`.
    :::
 
    </template>
@@ -126,7 +144,7 @@ The CLI never changes anything without saying what it changed, every writing com
    sudo dnf install -y securechain
    ```
 
-   On a system without `dnf`, use `yum install -y securechain`. The repository metadata is signed with the TuxCare SecureChain key.
+   On a system without `dnf`, use `yum install -y securechain`. TuxCare signs the repository metadata and every package with the SecureChain key, and the repository file turns on signature checks for each (`repo_gpgcheck=1` and `gpgcheck=1`).
 
    </template>
 
@@ -153,12 +171,14 @@ The CLI never changes anything without saying what it changed, every writing com
    <plugin>
      <groupId>com.tuxcare</groupId>
      <artifactId>securechain-maven-plugin</artifactId>
-     <version>0.1.0</version>
+     <version>0.1.12</version>
      <executions>
        <execution><goals><goal>check</goal></goals><phase>verify</phase></execution>
      </executions>
    </plugin>
    ```
+
+   The plugin's version is also the CLI version it runs; use the newest one.
 
    Or run it once, with no change to `pom.xml`:
 
@@ -187,7 +207,7 @@ The CLI never changes anything without saying what it changed, every writing com
 
    ```kotlin
    plugins {
-       id("com.tuxcare.securechain") version "0.1.0"
+       id("com.tuxcare.securechain") version "0.1.12"
    }
    ```
 
@@ -212,20 +232,15 @@ The CLI never changes anything without saying what it changed, every writing com
    | Windows x86-64 | `securechain-windows-amd64.exe` |
    | Windows ARM64 | `securechain-windows-arm64.exe` |
 
-   For example, on Linux x86-64:
+   For example, the newest release on Linux x86-64:
 
    ```text
-   curl -fsSLO https://securechain.tuxcare.com/get/v0.1.0/securechain-linux-amd64
-   curl -fsSLO https://securechain.tuxcare.com/get/v0.1.0/checksums.txt
+   VERSION=$(curl -fsSL https://securechain.tuxcare.com/get/latest/latest)
+   curl -fsSLO "https://securechain.tuxcare.com/get/$VERSION/securechain-linux-amd64"
+   curl -fsSLO "https://securechain.tuxcare.com/get/$VERSION/checksums.txt"
    sha256sum --check --ignore-missing checksums.txt
    install -m 0755 securechain-linux-amd64 /usr/local/bin/securechain
    ```
-
-   The latest stable version number is published at `https://securechain.tuxcare.com/get/latest/latest`.
-
-   :::warning
-   On macOS, download with `curl` as shown above. A binary downloaded through a web browser is quarantined by the system and is blocked on first launch.
-   :::
 
    </template>
 
@@ -455,7 +470,34 @@ A value on the command line always wins over the file. Durations are written as 
 
 ### Using the CLI in CI
 
-`check` exits `0` when the project is on every patched build the subscription covers, and `1` when it is not — so it needs no wrapper.
+`check` exits with `0` when the project uses every patched build that your subscription covers, and with `1` otherwise, so you can use it as a gate in any CI system. For GitLab and GitHub, TuxCare provides ready-made wrappers that install a pinned, checksum-verified CLI and show its report in the platform. On either platform, store your token as a masked secret named `TUXCARE_TOKEN`.
+
+**GitLab — the CI/CD component** (listed in the GitLab CI/CD Catalog; the report shows up as a JUnit test report):
+
+```yaml
+include:
+  - component: $CI_SERVER_FQDN/tuxcare/securechain-ci/check@0
+    inputs:
+      stage: test
+```
+
+`@0` follows the newest `0.x` release. To pin one release, use its tag, for example `@v0.1.12`.
+
+**GitHub — the Action** (the findings go to GitHub code scanning as SARIF):
+
+```yaml
+permissions:
+  contents: read
+  security-events: write
+steps:
+  - uses: actions/checkout@v4
+  - run: npm ci
+  - uses: TuxCare/securechain-action@v0
+    env:
+      TUXCARE_TOKEN: ${{ secrets.TUXCARE_TOKEN }}
+```
+
+**Any other CI** — install the CLI and run `check` yourself:
 
 <details>
 <summary>Pipeline example</summary>
@@ -487,6 +529,10 @@ securechain:
 | `5` | Toolchain: the project is not installed, or the package manager failed. |
 | `6` | Verification failed: the change was rolled back. |
 | `7` | Internal error. |
+
+:::tip
+If `check` keeps exiting `4` with a signature-verification error while the network is fine, update the CLI: the catalogue format grows over time, and an old version can refuse a catalogue that a current one reads.
+:::
 
 ## Air-Gapped Machines
 
@@ -534,7 +580,7 @@ The CLI needs the TuxCare catalogue to know which patched builds exist. On an is
 The catalogue's age counts from when TuxCare published it, not from when you imported it: with the default 24-hour `--feed-max-age`, a file imported today is refused tomorrow. For a weekly transfer, set the limit for the project — `securechain init --feed-max-age 168h` — and note what it means: a patched build released during that week is invisible on the isolated machine until the next import.
 :::
 
-The isolated machine still needs a way to install the packages themselves — typically an internal mirror of the TuxCare registry. See [Managing the SecureChain repository](/securechain/managing-securechain-repository/).
+The isolated machine still needs a way to install the packages themselves — typically an internal mirror of the TuxCare registry that the machine can reach.
 
 ## What's Next?
 
