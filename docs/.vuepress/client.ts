@@ -51,6 +51,17 @@ export default defineClientConfig({
                 });
             });
 
+            // RouterLink marks same-page #hash links in content as
+            // aria-current="page", which misreports them as the current page.
+            safely(() => {
+                document.querySelectorAll<HTMLAnchorElement>('.content a[aria-current]').forEach((a) => {
+                    const href = a.getAttribute('href') || '';
+                    if (href.startsWith('#') || (a.hash && a.pathname === window.location.pathname)) {
+                        a.removeAttribute('aria-current');
+                    }
+                });
+            });
+
             // Horizontally scrollable code blocks must be keyboard focusable
             // (WCAG 2.1.1). CodeTabs sets this in its own template.
             safely(() => {
