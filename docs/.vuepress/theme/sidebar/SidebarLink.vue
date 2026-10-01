@@ -138,6 +138,7 @@ function renderHeader(h, to, text, active, childHeaders, ctx, icon, hasList) {
     onClick: (e) => {
       if (e.target !== e.currentTarget) return;
       ctx.expansion.toggle(to, active);
+      ctx.onLinkChosen();
       ctx.$router.push(to);
     }
   }, [
