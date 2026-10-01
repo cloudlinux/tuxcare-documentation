@@ -1,15 +1,15 @@
 <template>
   <div class="cve-tracker">
     <!-- Loading State -->
-    <div v-if="loading" class="loading-container">
-      <div class="loading-spinner"></div>
+    <div v-if="loading" class="loading-container" role="status">
+      <div class="loading-spinner" aria-hidden="true"></div>
       <p class="loading-text">Loading resolved CVEs...</p>
     </div>
     <!-- Error State -->
-    <div v-else-if="error" class="error-container">
-      <h5 class="error-title">Error Loading CVE Data</h5>
+    <div v-else-if="error" class="error-container" role="alert">
+      <p class="error-title">Error Loading CVE Data</p>
       <p class="error-message">{{ error }}</p>
-      <button class="retry-button" @click="fetchCVEData">
+      <button type="button" class="retry-button" @click="fetchCVEData">
         Retry
       </button>
     </div>
@@ -40,9 +40,15 @@
       </div>
       <!-- Table Container -->
       <div class="table-container">
-        <div class="table-wrapper">
+        <div
+          class="table-wrapper"
+          role="region"
+          :aria-label="`Resolved CVEs for ${project}`"
+          tabindex="0"
+        >
           <div ref="tableContainer">
             <table ref="cveTable" class="cve-table">
+              <caption class="cve-caption">Resolved CVEs for {{ project }}</caption>
               <thead>
                 <tr>
                   <th class="col-cve">CVE Name</th>
@@ -222,7 +228,8 @@ export default {
         order: [[1, 'desc'], [2, 'desc']], // Sort by severity, then score
         pageLength: 10,
         lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
-        scrollX: true, // Enable horizontal scrolling on mobile
+        // No scrollX: it splits the header into a separate table, which breaks
+        // header/cell association for screen readers. .table-wrapper scrolls.
         autoWidth: false, // Better control over column widths
         // Use DataTables 2.x layout option for proper inline controls
         layout: {
@@ -257,9 +264,23 @@ export default {
           search: "Search:",
           lengthMenu: "Show _MENU_ entries",
           info: "Showing _START_ to _END_ of _TOTAL_ CVEs",
-          emptyTable: "No resolved CVEs found"
+          emptyTable: "No resolved CVEs found",
+          aria: {
+            paginate: {
+              first: "First page",
+              previous: "Previous page",
+              next: "Next page",
+              last: "Last page"
+            }
+          }
         }
       })
+
+      // Give the generated controls explicit accessible names
+      const wrapper = window.jQuery(this.$refs.tableContainer)
+      wrapper.find('.dt-search input').attr('aria-label', 'Search resolved CVEs')
+      wrapper.find('.dt-length select').attr('aria-label', 'Number of CVEs per page')
+      wrapper.find('.dt-info').attr({ role: 'status', 'aria-live': 'polite' })
     }
   }
 }
@@ -275,6 +296,17 @@ export default {
   font-family -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
   width 98%
   max-width 98%
+
+.cve-tracker .cve-caption
+  caption-side top
+  text-align left
+  font-weight 600
+  font-size 0.875rem
+  padding 0.5rem 0.75rem
+
+.cve-tracker .table-wrapper:focus-visible
+  outline 2px solid #1d4ed8
+  outline-offset 2px
 
 // Hide Score column
 .cve-tracker .cve-table
@@ -311,16 +343,17 @@ export default {
 .cve-tracker .error-container
   background-color #fef2f2
   border 1px solid #fecaca
-  color #dc2626
+  color #b91c1c
   padding 1rem
   border-radius 8px
 .cve-tracker .error-title
+  font-size 1rem
   font-weight 600
   margin-bottom 0.5rem
 .cve-tracker .error-message
   margin-bottom 0.75rem
 .cve-tracker .retry-button
-  background-color #3b82f6
+  background-color #1d4ed8
   color white
   padding 0.5rem 1rem
   border none
@@ -329,7 +362,7 @@ export default {
   cursor pointer
   transition background-color 0.2s
   &:hover
-    background-color #2563eb
+    background-color #1e40af
 
 // Stats Grid
 .cve-tracker .stats-grid
@@ -357,9 +390,9 @@ export default {
 .cve-tracker .stat-critical
   background-color #dc2626
 .cve-tracker .stat-medium
-  background-color #d97706
+  background-color #b45309
 .cve-tracker .stat-low
-  background-color #16a34a
+  background-color #15803d
 .cve-tracker .stat-none
   background-color #6b7280
 .cve-tracker .stat-number
@@ -368,7 +401,6 @@ export default {
   line-height 1
 .cve-tracker .stat-label
   font-size 0.75rem
-  opacity 0.9
   margin-top 0.25rem
 
 // Table Styles
@@ -437,7 +469,7 @@ export default {
   white-space nowrap
 .cve-tracker .version-vulnerable
   background-color #fef2f2
-  color #dc2626
+  color #b91c1c
   padding 0.125rem 0.375rem
   border-radius 3px
   font-size 0.65rem
@@ -449,7 +481,7 @@ export default {
   white-space nowrap
 .cve-tracker .version-fixed
   background-color #f0fdf4
-  color #16a34a
+  color #15803d
   padding 0.125rem 0.375rem
   border-radius 3px
   font-size 0.65rem
@@ -487,13 +519,13 @@ export default {
   background-color #dc2626
   color white
 .cve-tracker .severity-high
-  background-color #ea580c
+  background-color #c2410c
   color white
 .cve-tracker .severity-medium
-  background-color #ca8a04
+  background-color #a16207
   color white
 .cve-tracker .severity-low
-  background-color #16a34a
+  background-color #15803d
   color white
 .cve-tracker .severity-none
   background-color #6b7280
@@ -552,7 +584,7 @@ export default {
   color white
 
 // DataTables 2.x default layout styling - minimal overrides
-.cve-tracker :deep(.dt-layout-row)
+.cve-tracker .dt-layout-row
   display flex
   align-items center
   justify-content space-between
@@ -562,12 +594,12 @@ export default {
     margin-bottom 0
     margin-top 1rem
 
-.cve-tracker :deep(.dt-layout-cell)
+.cve-tracker .dt-layout-cell
   display flex
   align-items center
 
-.cve-tracker :deep(.dt-length label),
-.cve-tracker :deep(.dt-search label)
+.cve-tracker .dt-length label,
+.cve-tracker .dt-search label
   display flex
   align-items center
   gap 0.5rem
@@ -575,34 +607,32 @@ export default {
   white-space nowrap
   font-size 0.875rem
 
-.cve-tracker :deep(.dt-info),
-.cve-tracker :deep(.dt-paging)
+.cve-tracker .dt-info,
+.cve-tracker .dt-paging
   color #374151
   font-size 0.875rem
 
-.cve-tracker :deep(.dataTables_filter input),
-.cve-tracker :deep(.dt-search input),
-.cve-tracker :deep(.dt-input)
-  border 1px solid #d1d5db
+.cve-tracker .dataTables_filter input,
+.cve-tracker .dt-search input,
+.cve-tracker .dt-input
+  border 1px solid #6b7280
   border-radius 6px
   padding 0.5rem 0.75rem
   font-size 0.875rem
-  &:focus
-    outline none
-    border-color #3b82f6
-    box-shadow 0 0 0 3px rgba(59, 130, 246, 0.1)
-.cve-tracker :deep(.dataTables_length select),
-.cve-tracker :deep(.dt-length select)
-  border 1px solid #d1d5db
+  &:focus-visible
+    outline 2px solid #1d4ed8
+    outline-offset 1px
+.cve-tracker .dataTables_length select,
+.cve-tracker .dt-length select
+  border 1px solid #6b7280
   border-radius 6px
   padding 0.5rem 0.75rem
   font-size 0.875rem
-  &:focus
-    outline none
-    border-color #3b82f6
-    box-shadow 0 0 0 3px rgba(59, 130, 246, 0.1)
-.cve-tracker :deep(.dataTables_paginate .paginate_button),
-.cve-tracker :deep(.dt-paging button)
+  &:focus-visible
+    outline 2px solid #1d4ed8
+    outline-offset 1px
+.cve-tracker .dataTables_paginate .paginate_button,
+.cve-tracker .dt-paging button
   padding 0.5rem 0.75rem
   font-size 0.875rem
   border 1px solid #d1d5db
@@ -613,12 +643,12 @@ export default {
   &:hover
     background-color #f9fafb
     text-decoration none
-.cve-tracker :deep(.dataTables_paginate .paginate_button.current),
-.cve-tracker :deep(.dt-paging button.current)
-  background-color #3b82f6
+.cve-tracker .dataTables_paginate .paginate_button.current,
+.cve-tracker .dt-paging button.current
+  background-color #1d4ed8
   color white
-  border-color #3b82f6
+  border-color #1d4ed8
   &:hover
-    background-color #2563eb
-    border-color #2563eb
+    background-color #1e40af
+    border-color #1e40af
 </style>
