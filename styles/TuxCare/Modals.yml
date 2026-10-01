@@ -1,0 +1,10 @@
+extends: existence
+message: "Vague modal phrasing '%s' — be direct (use 'can', 'must', or an imperative)."
+level: suggestion
+ignorecase: true
+tokens:
+  - should be able to
+  - may want to
+  - might want to
+  - you may wish to
+  - it is possible to

@@ -1,0 +1,20 @@
+extends: existence
+message: "Images need descriptive alt text — found '%s'."
+level: error
+scope: raw
+nonword: true
+raw:
+  # Keep this as ONE pattern. Vale concatenates multiple `raw` entries instead of
+  # OR-ing them, so splitting the two branches below silently matches nothing.
+  #
+  # Branch 1 — empty alt on a standalone image line. Content images sit alone on
+  # their own line, while decorative <WhatsNext> icons are inline before their own
+  # link text (`* ![](/images/eye.webp) [CVE Tracker](...) — ...`). Anchoring to a
+  # whole line therefore skips the icons without a path allowlist, which matters
+  # because Go RE2 has no lookahead and TokenIgnores does not apply under
+  # `scope: raw`. Empty alt is the correct accessible choice for those icons —
+  # giving them alt text would make a screen reader announce "eye icon CVE Tracker".
+  #
+  # Branch 2 — placeholder alt that describes nothing. This is the common real gap:
+  # 9 of the 10 found in the ELSDOC-381 audit were `![image](...)`, not `![](...)`.
+  - '(?im)^[ \t]*!\[[ \t]*\]\([^)]*\)[ \t]*$|!\[[ \t]*(?:image|img|screenshot|picture|photo|figure|example|alt[ \t]*text)[ \t]*\]\('

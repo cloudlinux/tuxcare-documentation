@@ -1,0 +1,27 @@
+# NOT RELIABLE — left here for reference and disabled in .vale.ini.
+#
+# Verified against Vale 3.9.1 on the ELS docs: this reports 4 errors, and all four
+# are false positives (the Machine-Readable Security Data pages, each of which has
+# exactly one real H1). The cause is not Vale — shell snippets are passed to
+# <CodeTabs :tabs="[{ title: 'RPM', content: `…` }]" /> as backtick template
+# literals, which markdown does not treat as code blocks, so a `# or:` comment
+# inside one is a genuine H1 to any markdown parser. markdownlint MD025 makes the
+# identical mistake (11 alerts on one page), so this is not a Vale-vs-markdownlint
+# choice.
+#
+# No config fixes it: `scope: raw` is required for the token to match at all, but it
+# bypasses BlockIgnores/TokenIgnores; a lowercase-first heuristic fails because
+# phantom comments are also capitalised (`# GPG signature verification:`); and
+# indenting the snippet lines does not help (ATX headings are recognised up to 3
+# spaces). It also cannot catch pages with ZERO H1 — `occurrence`/`max` only fires
+# above the threshold.
+#
+# To make an H1 check enforceable, the docs would have to stop putting `#`-comment
+# lines inside CodeTabs template literals (move that content into slots or fenced
+# code blocks). Until then, H1 discipline stays a review item in the Style Guide.
+extends: occurrence
+message: "Use exactly one H1 (single top-level '# ' heading) per page."
+level: warning
+scope: raw
+max: 1
+token: "(?m)^# "

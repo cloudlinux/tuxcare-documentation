@@ -1,0 +1,9 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: error
+ignorecase: false
+nonword: true
+action:
+  name: replace
+swap:
+  '\.Net\b': .NET

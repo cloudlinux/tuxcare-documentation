@@ -1,0 +1,11 @@
+extends: existence
+message: "Avoid marketing language: '%s'."
+level: warning
+ignorecase: true
+tokens:
+  - seamless(ly)?
+  - cutting[- ]edge
+  - state[- ]of[- ]the[- ]art
+  - best[- ]in[- ]class
+  - world[- ]class
+  - effortless(ly)?
