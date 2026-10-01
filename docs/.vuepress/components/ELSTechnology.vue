@@ -5,12 +5,16 @@
   </div>
 
   <div class="supported-product-sorting">
+    <label for="els-tech-search" class="sr-only">Search for a technology</label>
     <input
+      id="els-tech-search"
       v-model="search"
-      type="text"
+      type="search"
+      autocomplete="off"
       placeholder="Search for a Technology"
       class="search-box"
     />
+    <p class="sr-only" role="status" aria-live="polite">{{ resultsMessage }}</p>
 
     <div class="sp-sort-head">
       <ul>
@@ -20,22 +24,45 @@
       </ul>
     </div>
 
-    <div class="sp-sort-body">
+    <p v-if="filteredData.length === 0" class="no-results">
+      No matching technologies. Contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.
+    </p>
+
+    <div v-else class="sp-sort-body">
       <div class="ecosystem-tabs">
-        <ul>
+        <ul role="tablist" aria-label="Ecosystem" aria-orientation="vertical">
           <li
             v-for="(item, index) in filteredData"
-            :key="index"
-            :class="{ active: activeTab === index }"
-            @click="activeTab = index"
+            :key="item.ecosystem"
+            role="presentation"
           >
-            <img :src="item.ecosystemIcon" class="ecosystem-icon" alt="" aria-hidden="true" />
-            {{ item.ecosystem }}
+            <button
+              :id="'els-tab-' + index"
+              :ref="(el) => (tabRefs[index] = el)"
+              type="button"
+              role="tab"
+              :class="{ active: activeTab === index }"
+              :aria-selected="activeTab === index ? 'true' : 'false'"
+              aria-controls="els-tabpanel"
+              :tabindex="activeTab === index ? 0 : -1"
+              @click="activeTab = index"
+              @keydown="onTabKey($event, index)"
+            >
+              <img :src="item.ecosystemIcon" class="ecosystem-icon" alt="" aria-hidden="true" />
+              {{ item.ecosystem }}
+            </button>
           </li>
         </ul>
       </div>
 
-      <div class="sp-sort-row" v-if="filteredData[activeTab]">
+      <div
+        v-if="filteredData[activeTab]"
+        id="els-tabpanel"
+        class="sp-sort-row"
+        role="tabpanel"
+        :aria-labelledby="'els-tab-' + activeTab"
+        tabindex="0"
+      >
         <div class="scroll-container">
           <ul class="project-list">
             <li
@@ -54,7 +81,7 @@
                   </span>
                   <span v-else>{{ project.versions }}</span>
                 </span>
-                <span class="project-arrow">&rarr;</span>
+                <span class="project-arrow" aria-hidden="true">&rarr;</span>
               </a>
               <div v-else class="project-row">
                 <span class="project-name">{{ project.name }}</span>
@@ -74,10 +101,11 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, nextTick } from "vue";
 
 const search = ref("");
 const activeTab = ref(0);
+const tabRefs = [];
 
 const techData = [
   {
@@ -3230,6 +3258,57 @@ watch(filteredData, (result) => {
   if (activeTab.value >= result.length) activeTab.value = 0;
 });
 
+// Roving-tabindex keyboard support for the ecosystem tablist (WAI-ARIA
+// tabs pattern). Both arrow axes work, since the list stacks vertically
+// on desktop and wraps horizontally on narrow screens.
+function onTabKey(event, index) {
+  const count = filteredData.value.length;
+  let next = null;
+  switch (event.key) {
+    case "ArrowDown":
+    case "ArrowRight":
+      next = (index + 1) % count;
+      break;
+    case "ArrowUp":
+    case "ArrowLeft":
+      next = (index - 1 + count) % count;
+      break;
+    case "Home":
+      next = 0;
+      break;
+    case "End":
+      next = count - 1;
+      break;
+    default:
+      return;
+  }
+  event.preventDefault();
+  activeTab.value = next;
+  nextTick(() => tabRefs[next]?.focus());
+}
+
+// Announce the result count politely, debounced so screen readers are not
+// interrupted on every keystroke.
+const resultsMessage = ref("");
+let resultsTimer;
+watch(search, () => {
+  clearTimeout(resultsTimer);
+  resultsTimer = setTimeout(() => {
+    if (!search.value) {
+      resultsMessage.value = "";
+      return;
+    }
+    const total = filteredData.value.reduce(
+      (sum, item) => sum + item.projects.length,
+      0
+    );
+    resultsMessage.value =
+      total === 0
+        ? "No matching technologies"
+        : `${total} ${total === 1 ? "technology" : "technologies"} found`;
+  }, 400);
+});
+
 function getFilteredProjects(item) {
   return item.projects;
 }
@@ -3263,8 +3342,32 @@ function getProjectHref(project) {
   font-size: 1rem;
   margin: 0 auto 1rem auto;
   border-radius: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #767676;
   display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.heading p a,
+.no-results a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.no-results {
+  text-align: center;
+  margin: 1rem 0;
+  color: #5c6370;
 }
 
 .sp-sort-head ul {
@@ -3313,23 +3416,36 @@ function getProjectHref(project) {
 }
 
 .ecosystem-tabs li {
+  margin-bottom: 0.4rem;
+}
+
+.ecosystem-tabs button {
+  width: 100%;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
   display: flex;
   align-items: center;
   cursor: pointer;
   background-color: #fff;
   min-height: 2.5rem;
-  margin-bottom: 0.4rem;
   border-bottom: none;
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
   transition: background-color 0.15s ease;
 }
 
-.ecosystem-tabs li:hover {
+.ecosystem-tabs button:focus-visible {
+  outline: 2px solid #0B5CAD;
+  outline-offset: -2px;
+}
+
+.ecosystem-tabs button:hover {
   background-color: #f5f7fa;
 }
 
-.ecosystem-tabs li.active {
+.ecosystem-tabs button.active {
   background-color: #FEF6F2;
   color: #000;
   font-weight: bold;
@@ -3374,20 +3490,24 @@ function getProjectHref(project) {
   cursor: pointer;
 }
 
-a.project-row.clickable:hover {
+a.project-row.clickable:hover,
+a.project-row.clickable:focus-visible {
   background: #FEF6F2;
   box-shadow: 0 2px 8px rgba(244, 130, 67, 0.1);
 }
 
-a.project-row.clickable:hover .project-arrow {
+a.project-row.clickable:hover .project-arrow,
+a.project-row.clickable:focus-visible .project-arrow {
   opacity: 1;
   transform: translateX(0);
-  color: #F48243;
+  color: #B34F12;
 }
 
 a.project-row.clickable:hover .project-name,
-a.project-row.clickable:hover .project-versions {
-  color: #F48243;
+a.project-row.clickable:hover .project-versions,
+a.project-row.clickable:focus-visible .project-name,
+a.project-row.clickable:focus-visible .project-versions {
+  color: #B34F12;
 }
 
 .project-list > li:last-child .project-row {
@@ -3419,6 +3539,56 @@ a.project-row.clickable:hover .project-versions {
   transition: all 0.2s ease;
   color: #5c6370;
   flex-shrink: 0;
+}
+
+.sp-sort-row:focus-visible {
+  outline: 2px solid #0B5CAD;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    width: 100%;
+  }
+
+  .sp-sort-head {
+    display: none;
+  }
+
+  .sp-sort-body {
+    flex-direction: column;
+  }
+
+  .ecosystem-tabs,
+  .sp-sort-row {
+    width: 100%;
+  }
+
+  .ecosystem-tabs ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ecosystem-tabs li {
+    margin-bottom: 0;
+  }
+
+  .ecosystem-tabs button {
+    width: auto;
+  }
+
+  .project-row {
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+
+  .project-name {
+    flex: 1 1 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
 }
 </style>
 
