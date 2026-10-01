@@ -1,0 +1,93 @@
+name: Accessibility check
+
+# WCAG 2.2 AA check of the built site. Builds the docs, serves dist/ and runs
+# scripts/a11y-check.mjs: axe-core (via Playwright + Chromium) on a curated set
+# of pages that covers every layout and custom component, at desktop and mobile
+# widths, plus a few keyboard smoke checks. Serious/critical violations fail
+# the check; moderate/minor ones are listed as warnings in the job summary.
+# Kept separate from the deploy workflow so it never blocks a production deploy.
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "package.json"
+      - "yarn.lock"
+      - "scripts/a11y-check.mjs"
+      - "scripts/a11y-allowlist.json"
+      - ".github/workflows/a11y.yml"
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "Pages to scan"
+        type: choice
+        options:
+          - curated
+          - all
+        default: curated
+
+permissions:
+  contents: read
+
+concurrency:
+  group: a11y-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    # A full-site scan (~180 pages x 2 viewports) needs more time.
+    timeout-minutes: ${{ inputs.scope == 'all' && 40 || 15 }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "yarn"
+
+      - name: Install Dependencies
+        run: yarn install --non-interactive --frozen-lockfile
+
+      # Only the VuePress build is needed; the llms-full.txt generator that
+      # `yarn docs:build` runs first does not affect any HTML page.
+      - name: Build Site
+        run: yarn vuepress build docs
+
+      # Cache the browser download, keyed on the pinned Playwright version.
+      - name: Get Playwright version
+        id: playwright
+        run: echo "version=$(node -p "require('playwright/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright.outputs.version }}-chromium
+
+      - name: Install Chromium
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      # System libraries are not part of the cache.
+      - name: Install Chromium system dependencies
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      - name: Run accessibility check
+        run: yarn a11y ${{ inputs.scope == 'all' && '--all' || '' }}
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-report
+          path: a11y-report.json
+          if-no-files-found: ignore
+          retention-days: 14

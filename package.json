@@ -6,6 +6,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "node scripts/generate-llms-full.mjs && vuepress build docs",
+    "a11y": "node scripts/a11y-check.mjs",
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
@@ -26,8 +27,10 @@
     "vue-select": "4.0.0-beta.6"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
     "@vitejs/plugin-vue": "4.1.0",
     "@vuepress/plugin-register-components": "2.0.0-beta.61",
+    "playwright": "1.63.0",
     "typescript": "5.0.2",
     "vite": "4.3.0",
     "vue-tsc": "1.2.0",
