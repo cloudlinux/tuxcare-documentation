@@ -637,7 +637,7 @@ Although this guide uses **alt-php82** in its examples, the same installation st
 
 This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names and paths to match the version you downloaded.
 
-<ELSPrerequisites>
+<ELSPrerequisites id="saxonc-prerequisites">
 
 * Saxon 12+ (required for PHP 8.2+ compatibility) — download from [saxonica.com](https://www.saxonica.com/download/c.xml)
 * `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support
