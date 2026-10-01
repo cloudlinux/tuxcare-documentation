@@ -1,14 +1,23 @@
 <template>
-  <div class="breadcrumb-wrapper">
-    <router-link
-      v-for="(crumb, index) in breadCrumbs"
-      :key="crumb.path"
-      class="breadcrumb"
-      :to="crumb.path"
-    >
-      {{ crumb.title }}
-    </router-link>
-  </div>
+  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+      <li
+        v-for="(crumb, index) in breadCrumbs"
+        :key="crumb.path"
+        class="breadcrumb-item"
+      >
+        <span
+          v-if="index === breadCrumbs.length - 1"
+          class="breadcrumb breadcrumb--current"
+          aria-current="page"
+        >{{ crumb.title }}</span>
+        <template v-else>
+          <router-link class="breadcrumb" :to="crumb.path">{{ crumb.title }}</router-link>
+          <span class="breadcrumb-separator" aria-hidden="true">&gt;</span>
+        </template>
+      </li>
+    </ol>
+  </nav>
 </template>
 
 <script setup>
@@ -58,29 +67,35 @@ const breadCrumbs = computed(() => {
 <style lang="stylus" scoped>
 @import '../../styles/config.styl'
 
+.breadcrumb-list
+  display flex
+  flex-wrap wrap
+  align-items center
+  list-style none
+  margin 0
+  padding 0
+
+.breadcrumb-item
+  display inline-flex
+  align-items center
+
 .breadcrumb
+  display inline-block
+  min-height 24px
+  line-height 24px
   color $breadcrumbColor
   text-decoration none
-  padding-block 4px
 
-  &:not(:last-child)::after
-    content " > "
-    font-family inherit
-    font-size inherit
+  &:hover
+    color #1994f9
+
+.breadcrumb--current
+  cursor default
+
+  &:hover
     color $breadcrumbColor
 
-  &:not(:last-child)
-    cursor pointer
-
-    &:hover
-      color #1994f9
-
-  &:last-child
-    cursor default
-    color $breadcrumbColor
-
-
+.breadcrumb-separator
+  margin 0 0.3em
+  color $breadcrumbColor
 </style>
-
-
-
