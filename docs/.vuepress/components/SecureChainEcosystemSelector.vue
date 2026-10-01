@@ -15,7 +15,7 @@
           <img :src="eco.icon" alt="" aria-hidden="true" />
         </span>
         <span class="ecosystem-card-name">{{ eco.name }}</span>
-        <span class="ecosystem-card-arrow">&rarr;</span>
+        <span class="ecosystem-card-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
 
@@ -78,17 +78,19 @@ const ecosystems = [
   cursor: pointer;
 }
 
-.ecosystem-card:hover {
+.ecosystem-card:hover,
+.ecosystem-card:focus-visible {
   border-color: #F48243;
   background: #FEF6F2;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(244, 130, 67, 0.12);
 }
 
-.ecosystem-card:hover .ecosystem-card-arrow {
+.ecosystem-card:hover .ecosystem-card-arrow,
+.ecosystem-card:focus-visible .ecosystem-card-arrow {
   opacity: 1;
   transform: translateX(0);
-  color: #F48243;
+  color: #B34F12;
 }
 
 .ecosystem-card-icon {
@@ -135,11 +137,12 @@ const ecosystems = [
 
 .ecosystem-selector-footer a {
   color: #0B5CAD;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .ecosystem-selector-footer a:hover {
-  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 @media (max-width: 768px) {
