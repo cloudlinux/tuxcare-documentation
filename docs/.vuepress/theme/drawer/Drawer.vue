@@ -32,10 +32,10 @@
             <DrawerSearchResult :modelValue="modelValue" :searchedQuery="searchedQuery" :data="drawerArticleResult" @closeDrawer="onResultSelected"/>
           </div>
         </div>
-        <Footer v-if="isOpenDrawer && isMobileWidth" class="drawer-footer__mobile"/>
+        <Footer v-if="isOpenDrawer && isMobileWidth" class="drawer-footer__mobile" :landmark="false"/>
       </section>
     </div>
-    <Footer v-if="isOpenDrawer && !isMobileWidth" class="drawer-footer"/>
+    <Footer v-if="isOpenDrawer && !isMobileWidth" class="drawer-footer" :landmark="false"/>
   </div>
 </template>
 

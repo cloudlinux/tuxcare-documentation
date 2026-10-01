@@ -1,5 +1,10 @@
 <template>
-  <footer class="footer" :class="{'footer-default-layout': !isGlobalLayout}" role="contentinfo">
+  <!-- Inside the search dialog this is a plain block: the page already has one
+       contentinfo landmark, and a dialog shouldn't add another. -->
+  <component :is="landmark ? 'footer' : 'div'"
+             class="footer"
+             :class="{'footer-default-layout': !isGlobalLayout}"
+             :role="landmark ? 'contentinfo' : undefined">
     <div class="footer__img">
       <a :href="cloudlinuxSite" aria-label="TuxCare website">
         <img :src="withBase(footerCustomLogo)"
@@ -19,13 +24,20 @@
         </a>
       </div>
     </div>
-  </footer>
+  </component>
 </template>
 
 
 <script setup>
 import {computed, inject} from "vue";
 import {usePageFrontmatter, withBase} from "@vuepress/client";
+
+defineProps({
+  landmark: {
+    type: Boolean,
+    default: true
+  },
+})
 
 const {social, cloudlinuxSite, footerCustomLogo, footerCustomAltText, locales} = inject('themeConfig');
 const frontmatter = usePageFrontmatter()
