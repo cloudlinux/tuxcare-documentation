@@ -1,0 +1,13 @@
+extends: conditional
+message: "Define '%s' on first use, e.g. 'Endless Lifecycle Support (ELS)'."
+level: suggestion
+ignorecase: false
+# Closed list instead of a generic [A-Z]{2,5} pattern. The open form produced 807
+# suggestions across the ELS docs with an unbounded noise tail — NET (from .NET),
+# EL, VS, RPM, DEB, PATH, FILE, FINAL, OK, ZIP, EE — and the trailing `s?` meant
+# plurals (CVEs, SBOMs, JARs) bypassed the exceptions list as separate acronyms.
+# These six are the product- and standard-specific acronyms the Style Guide
+# actually requires defining; industry-standard ones (CVE, CVSS, EOL, API, CLI,
+# GPG, RSS, JSON, TLS, …) are deliberately not enforced.
+first: '\b(ELS|VEX|SBOM|SLSA|OVAL|CSAF)\b'
+second: '\((ELS|VEX|SBOM|SLSA|OVAL|CSAF)\)'

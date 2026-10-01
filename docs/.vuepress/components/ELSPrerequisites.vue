@@ -132,7 +132,9 @@ onMounted(() => {
   color: #374151;
 }
 
-.prereqs-body :deep(code) {
+/* Inline code only: :not(pre) leaves fenced blocks to the highlighter, the
+   same way ELSSteps does it. */
+.prereqs-body :deep(:not(pre) > code) {
   background: rgba(37, 99, 235, 0.08);
   padding: 0.1rem 0.35rem;
   border-radius: 4px;

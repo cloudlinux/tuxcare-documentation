@@ -4,13 +4,15 @@ Endless Lifecycle Support (ELS) for Percona Server from TuxCare provides securit
 
 Percona Server ships from its own `percona-els` repository. For MySQL Community Server, see [MySQL](/els-for-applications/mysql/).
 
-## Supported OS and Percona Server versions
+## Supported Versions
 
 | OS                                                      | Package Type | OS Version | Percona Server version |
 | :-----------------------------------------------------: | :----------: | :--------: | :--------------------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)          | RPM          | 7.x        | 8.0                    |
+| EL 8 (AlmaLinux, Rocky, RHEL, Oracle Linux)            | RPM          | 8.x        | 8.0                    |
+| Ubuntu                                                 | DEB          | 22.04, 24.04 | 8.0                  |
 
-**Supported architecture:** x86_64 (64-bit)
+**Supported architectures:** x86_64 (64-bit) for RPM, amd64 for DEB
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -27,21 +29,24 @@ Percona Server ships from its own `percona-els` repository. For MySQL Community 
 
 1. Download the installer script
 
-   ```text
-   wget https://repo.tuxcare.com/percona-els/install-percona-els-rpm-repo.sh
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `wget https://repo.tuxcare.com/percona-els/install-percona-els-rpm-repo.sh` },
+     { title: 'DEB', content: `wget https://repo.tuxcare.com/percona-els/install-percona-els-deb-repo.sh` }
+   ]" />
 
 2. Run the installer script with your license key
 
-   ```text
-   sh install-percona-els-rpm-repo.sh --license-key XXXXXXXX
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `sh install-percona-els-rpm-repo.sh --license-key XXXXXXXX` },
+     { title: 'DEB', content: `bash install-percona-els-deb-repo.sh --license-key XXXXXXXX` }
+   ]" />
 
 3. Verify the repository is enabled
 
-   ```text
-   yum info els-percona-release
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `yum info els-percona-release` },
+     { title: 'DEB', content: `apt-cache show els-percona-release` }
+   ]" />
 
 </ELSSteps>
 

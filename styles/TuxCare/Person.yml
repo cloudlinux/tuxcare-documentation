@@ -1,0 +1,7 @@
+extends: existence
+message: "Avoid first person ('%s') in documentation — address the reader as 'you' or rephrase."
+level: warning
+ignorecase: true
+# "we recommend" is a sanctioned voice exception (negative lookahead).
+raw:
+  - '\b(we(?! recommend)|we''re|we''ve|we''ll|our|ours|let''s)\b'

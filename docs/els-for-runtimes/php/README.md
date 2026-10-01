@@ -14,7 +14,7 @@ Here are the key features and characteristics of alt-php:
 
 * **Enhanced Compatibility** - alt-php is designed to ensure maximum compatibility with various web applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of PHP applications.
 
-* **Updates and Support** - CloudLinux provides regular updates for alt-php, including bug fixes, performance improvements, and updates for new PHP versions. This helps ensure the security and currency of PHP usage.
+* **Updates and Support** - TuxCare provides regular updates for alt-php, including bug fixes, performance improvements, and updates for new PHP versions. This helps ensure the security and currency of PHP usage.
 
 * **Management Tools** - alt-php usually comes with a set of management tools, such as PHP Selector, allowing users to manage PHP versions and enable/disable various PHP extensions.
 
@@ -59,7 +59,7 @@ TuxCare provides additional security support for PHP versions after the end of s
 
 *EOL — end of life, SST — security support time*
 
-| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by CloudLinux    | SST by CloudLinux after vendor's EOL (years) |
+| Version |  Released  | EOL by vendor | SST by vendor (years) |    EOL by TuxCare    | SST by TuxCare after vendor's EOL (years) |
 |:-------:|:----------:|:-------------:|:---------------------:|:-----------------------:|:--------------------------------------------:|
 |   4.4   | 07.11.2005 |  08.07.2008   |          2.7          | [01.07.2023](https://blog.cloudlinux.com/php-4.4-end-of-life-0) | 14.9 |
 |   5.1   | 23.11.2005 |  24.08.2006   |          0.8          | [01.04.2024](https://blog.cloudlinux.com/php-5.1-end-of-life)   | 17.6 |

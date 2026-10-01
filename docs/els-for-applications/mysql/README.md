@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for MySQL from TuxCare provides security fixes f
 
 This product ships MySQL Community Server only. Percona Server is patched separately — see [Percona Server](/els-for-applications/percona-server/).
 
-## Supported OS and MySQL versions
+## Supported Versions
 
 | OS                                                      | Package Type | OS Version | MySQL version |
 | :-----------------------------------------------------: | :----------: | :--------: | :-----------: |

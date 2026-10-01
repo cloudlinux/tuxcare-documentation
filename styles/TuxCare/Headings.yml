@@ -1,0 +1,35 @@
+extends: capitalization
+message: "Heading should be Title Case (capitalize principal words; keep a/an/the/of/to/and lowercase): '%s'."
+level: suggestion
+scope: heading
+match: $title
+exceptions:
+  - TuxCare
+  - ELS
+  - EOL
+  - CVE
+  - VEX
+  - SBOM
+  - CSAF
+  - OVAL
+  - SLSA
+  - OS
+  - PHP
+  - Node.js
+  - .NET
+  - npm
+  - pip
+  - yum
+  - apt
+  - dnf
+  - SecureChain
+  - AlmaLinux
+  - CloudLinux
+  - RHEL
+  - SaxonC
+  - eXchange
+  - Windows
+  - Linux
+  - Red Hat
+  - Tracker
+  - Installer

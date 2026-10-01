@@ -888,7 +888,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 9.4.63 | 9.4.64 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 10.0.31 | 10.0.32 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30",
+        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 9.4.63 | 9.4.64 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 10.0.31 | 10.0.32 | 10.0.33 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30 | 11.0.33",
         link: "./jetty/",
       },
       {
@@ -1049,12 +1049,12 @@ const techData = [
       },
       {
         name: "bn.js",
-        versions: "4.11.8 | 4.12.0 | 4.12.2 | 5.2.2",
+        versions: "4.11.8 | 4.11.9 | 4.12.0 | 4.12.2 | 5.2.2",
         link: "./javascript-libraries/",
       },
       {
         name: "body-parser",
-        versions: "1.8.4 | 1.13.3 | 1.14.2 | 1.19.0 | 1.20.0 | 1.20.1 | 1.20.2",
+        versions: "1.8.4 | 1.13.3 | 1.14.2 | 1.19.0 | 1.20.0 | 1.20.1 | 1.20.2 | 1.20.3 | 1.20.4 | 1.20.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1089,7 +1089,7 @@ const techData = [
       },
       {
         name: "browserslist",
-        versions: "4.10.0 | 4.13.0 | 4.14.2 | 4.27.0",
+        versions: "1.7.7 | 2.11.3 | 3.2.8 | 4.10.0 | 4.13.0 | 4.14.2 | 4.24.4 | 4.27.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1168,6 +1168,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "css-what",
+        versions: "3.3.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "csvtojson",
         versions: "2.0.8",
         link: "./javascript-libraries/",
@@ -1185,6 +1190,11 @@ const techData = [
       {
         name: "decode-uri-component",
         versions: "0.2.0 | 0.2.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "deepmerge-ts",
+        versions: "4.3.0 | 7.1.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1279,12 +1289,12 @@ const techData = [
       },
       {
         name: "fast-uri",
-        versions: "2.4.0 | 2.4.2 | 2.4.3 | 2.4.5 | 3.0.1 | 3.0.3",
+        versions: "2.4.0 | 2.4.2 | 2.4.3 | 2.4.5 | 3.0.1 | 3.0.3 | 3.1.4",
         link: "./javascript-libraries/",
       },
       {
         name: "fast-xml-parser",
-        versions: "3.14.0 | 3.17.5 | 3.19.0 | 4.2.7 | 4.4.0 | 4.5.3 | 4.5.6 | 4.5.7",
+        versions: "3.14.0 | 3.17.5 | 3.19.0 | 4.2.7 | 4.4.0 | 4.5.1 | 4.5.3 | 4.5.6 | 4.5.7",
         link: "./javascript-libraries/",
       },
       {
@@ -1413,6 +1423,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "hono",
+        versions: "3.12.12",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "hosted-git-info",
         versions: "2.1.4 | 2.7.1",
         link: "./javascript-libraries/",
@@ -1449,7 +1464,7 @@ const techData = [
       },
       {
         name: "ip-address",
-        versions: "6.4.0 | 9.0.5",
+        versions: "6.4.0 | 7.1.0 | 9.0.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1484,7 +1499,12 @@ const techData = [
       },
       {
         name: "js-yaml",
-        versions: "3.3.1 | 3.7.0 | 3.14.1 | 3.14.2 | 3.15.0 | 4.1.0 | 4.1.1 | 4.3.0",
+        versions: "3.3.1 | 3.7.0 | 3.14.1 | 3.14.2 | 3.15.0 | 4.1.0 | 4.1.1 | 4.2.0 | 4.3.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "json-bigint",
+        versions: "0.3.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1589,7 +1609,7 @@ const techData = [
       },
       {
         name: "linkify-it",
-        versions: "1.2.4 | 4.0.1",
+        versions: "1.2.4 | 2.2.0 | 4.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1639,12 +1659,17 @@ const techData = [
       },
       {
         name: "minimatch",
-        versions: "0.0.4 | 0.0.5 | 0.2.5 | 0.2.14 | 0.3.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 9.0.3",
+        versions: "0.0.4 | 0.0.5 | 0.2.5 | 0.2.14 | 0.3.0 | 0.4.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 7.4.6 | 9.0.3",
         link: "./javascript-libraries/",
       },
       {
         name: "minimist",
         versions: "0.0.8 | 0.0.9 | 0.0.10 | 1.2.0 | 1.2.1 | 1.2.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "modelcontextprotocol-sdk",
+        versions: "1.13.3 | 1.17.3 | 1.24.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1684,7 +1709,7 @@ const techData = [
       },
       {
         name: "multer",
-        versions: "1.4.5-lts | 1.4.5-lts.1 | 1.4.5-lts.2",
+        versions: "1.4.5-lts | 1.4.5-lts.1 | 1.4.5-lts.2 | 2.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1699,7 +1724,7 @@ const techData = [
       },
       {
         name: "MySQL2",
-        versions: "2.3.3",
+        versions: "2.3.3 | 3.20.0",
         link: "./mysql2/",
       },
       {
@@ -1744,7 +1769,7 @@ const techData = [
       },
       {
         name: "node-forge",
-        versions: "0.10.0",
+        versions: "0.10.0 | 1.3.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1814,7 +1839,7 @@ const techData = [
       },
       {
         name: "path-to-regexp",
-        versions: "0.1.3 | 0.1.12 | 6.2.1",
+        versions: "0.1.3 | 0.1.10 | 0.1.12 | 6.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1839,7 +1864,7 @@ const techData = [
       },
       {
         name: "PostCSS",
-        versions: "5.2.18 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.2 | 8.5.3 | 8.5.6 | 8.5.20 | 8.5.21 | 8.5.22",
+        versions: "5.2.18 | 6.0.1 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.2 | 8.5.3 | 8.5.6 | 8.5.17 | 8.5.19 | 8.5.20 | 8.5.21 | 8.5.22",
         link: "./postcss/",
       },
       {
@@ -1864,7 +1889,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.4 | 2.2.5 | 2.3.3 | 2.4.2 | 3.1.0 | 4.0.0 | 5.1.0 | 5.2.0 | 5.2.1 | 6.2.6 | 6.4.3 | 6.5.3 | 6.5.5 | 6.7.0 | 6.10.3 | 6.10.7 | 6.11.0 | 6.14.0",
+        versions: "0.5.1 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.4 | 2.2.5 | 2.3.3 | 2.4.2 | 3.1.0 | 4.0.0 | 5.1.0 | 5.2.0 | 5.2.1 | 6.2.6 | 6.4.3 | 6.5.3 | 6.5.5 | 6.7.0 | 6.10.3 | 6.10.7 | 6.11.0 | 6.13.0 | 6.14.0 | 6.15.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2013,6 +2038,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "stream-json",
+        versions: "1.9.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "stringstream",
         versions: "0.0.4 | 0.0.5",
         link: "./javascript-libraries/",
@@ -2024,7 +2054,7 @@ const techData = [
       },
       {
         name: "svgo",
-        versions: "2.8.0 | 4.0.2",
+        versions: "1.3.2 | 2.8.0 | 4.0.2",
         link: "./javascript-libraries/",
       },
       {
@@ -2114,7 +2144,7 @@ const techData = [
       },
       {
         name: "undici",
-        versions: "5.5.1 | 5.28.5 | 5.29.0 | 6.11.1",
+        versions: "5.5.1 | 5.28.5 | 5.29.0 | 6.11.1 | 6.19.7 | 7.28.0",
         link: "./undici/",
       },
       {
@@ -2309,12 +2339,12 @@ const techData = [
       },
       {
         name: "webpack-dev-middleware",
-        versions: "1.10.2 | 1.11.0 | 1.12.0 | 1.12.2 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 7.4.5",
+        versions: "1.10.2 | 1.11.0 | 1.12.0 | 1.12.2 | 3.0.1 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 5.3.4 | 7.4.5",
         link: "./javascript-libraries/",
       },
       {
         name: "webpack-dev-server",
-        versions: "2.7.1 | 2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.11.0 | 4.11.1 | 4.15.1 | 4.15.2 | 5.2.2",
+        versions: "2.7.1 | 2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.9.3 | 4.11.0 | 4.11.1 | 4.15.1 | 4.15.2 | 5.2.2",
         link: "./webpack-dev-server/",
       },
       {
@@ -2339,7 +2369,7 @@ const techData = [
       },
       {
         name: "ws",
-        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 6.2.2 | 6.2.3 | 7.4.5 | 7.4.6 | 7.5.9 | 8.2.3 | 8.5.0 | 8.11.0 | 8.13.0 | 8.16.0 | 8.17.0 | 8.18.0 | 8.20.0",
+        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 6.2.2 | 6.2.3 | 7.4.5 | 7.4.6 | 7.5.9 | 8.2.3 | 8.5.0 | 8.11.0 | 8.13.0 | 8.14.2 | 8.16.0 | 8.17.0 | 8.17.1 | 8.18.0 | 8.18.3 | 8.20.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2821,7 +2851,7 @@ const techData = [
       },
       {
         name: "Drupal GDPR",
-        versions: "3.1.0 | 7.1.0",
+        versions: "3.0.0 | 3.1.0 | 7.1.0",
         link: "./drupal/",
       },
       {
