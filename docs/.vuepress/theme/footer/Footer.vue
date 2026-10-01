@@ -96,17 +96,6 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
   position static
   width 100%
 
-.sr-only
-  position absolute
-  width 1px
-  height 1px
-  padding 0
-  margin -1px
-  overflow hidden
-  clip rect(0, 0, 0, 0)
-  white-space nowrap
-  border 0
-
 // The docs sidebar is fixed to the left edge; start the page footer after it
 // so the logo link and copyright are not hidden underneath (WCAG 2.4.11).
 @media (min-width: $mobileBreakpoint + 1)
@@ -117,7 +106,7 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
 // Less room next to the sidebar: let the footer items wrap instead of
 // squeezing the social icons.
 @media (min-width: $mobileBreakpoint + 1) and (max-width: 1365px)
-  .footer-default-layout:not(.drawer-footer)
+  .footer:not(.drawer-footer)
     flex-wrap wrap
     height auto
     min-height $footerHeight

@@ -115,17 +115,6 @@ const onClick = (event) => {
     img
       display block
 
-  .sr-only
-    position absolute
-    width 1px
-    height 1px
-    padding 0
-    margin -1px
-    overflow hidden
-    clip rect(0, 0, 0, 0)
-    white-space nowrap
-    border 0
-
   &-header__logo-wrapper
     display flex
     align-items center
@@ -228,4 +217,5 @@ html
     position absolute
   html
     scroll-padding-top 0.5rem
+    scroll-padding-bottom 5rem
 </style>

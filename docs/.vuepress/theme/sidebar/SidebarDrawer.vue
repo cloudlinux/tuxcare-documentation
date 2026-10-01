@@ -104,6 +104,12 @@ onBeforeUnmount(() => setModalOpen('sidebar', false))
   &:focus
     outline none
 
+// On short screens the header scrolls away (HeaderLayout.vue), so start at the top.
+@media (max-width: $mobileBreakpoint) and (max-height: 480px)
+  .sidebar-drawer__mobile,
+  .sidebar-drawer__mobile .sidebar
+    top 0
+
 .sidebar-drawer__close
   position absolute
   top 0.75rem
