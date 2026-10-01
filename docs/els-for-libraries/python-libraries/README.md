@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 ## Supported Python Libraries
 
 * **aiohttp** 3.8.1, 3.8.4, 3.8.5, 3.8.6
+* **anyio** 3.7.1
 * **apache-airflow-providers-http** 4.13.3
 * **certifi** 2021.10.8, 2022.12.7, 2023.7.22
 * **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3, 44.0.3, 45.0.7, 46.0.7
@@ -36,8 +37,9 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **pip** 9.0
 * **Pillow** 8.4.0, 9.4.0, 9.5.0, 10.4.0, 11.2.1, 11.3.0
 * **protobuf** 3.17.0, 3.20.3, 4.24.3, 4.25.8
+* **py** 1.11.0
 * **pyarrow** 12.0.1
-* **pydantic** 1.10.5
+* **pydantic** 1.10.0, 1.10.5
 * **PyJWT** 1.7.1, 2.3.0, 2.8.0, 2.10.1
 * **pymongo** 3.13.0
 * **pymysql** 0.10.1
@@ -50,6 +52,7 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **redis-py** 4.5.1
 * **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
 * **scikit-learn** 1.0.2
+* **sentence-transformers** 2.7.0
 * **setuptools** 59.8.0, 60.0.0, 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.3.2, 75.8.0
 * **torch** 1.13.1
 * **tornado** 5.1.1, 6.1.0
