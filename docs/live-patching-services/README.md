@@ -668,7 +668,7 @@ An additional address is used for KernelCare agent installation/update:
 repo.cloudlinux.com
 ```
 
-![through firewall](/images/patchingthroughfirewall.png)
+![Diagram: servers connect through a firewall to the KernelCare patch server](/images/patchingthroughfirewall.png)
 
 ##### Patching servers through proxy
 
@@ -703,7 +703,7 @@ If you define these settings in the config, you don't need to export them each `
 
 All `kcarectl` launches will be aware of proxy settings from the config. In this case, you need to set proxy settings only once.
 
-![through proxy](/images/patchingthroughproxy.png)
+![Diagram: servers connect through a proxy and a firewall to the KernelCare patch server](/images/patchingthroughproxy.png)
 
 #### KernelCare on AWS - Deployment User Guide
 
@@ -744,11 +744,11 @@ cln.cloudlinux.com
 patches.kernelcare.com
 ```
 
-![aws arch](/images/AWS_arch2.png)
+![Diagram: an EC2 instance with KernelCare in AWS Cloud connects over HTTPS/TLS (TCP 443) to patches.kernelcare.com for binary patch updates and to cln.cloudlinux.com for registration and statistics](/images/AWS_arch2.png)
 
 If your servers don't have direct Internet access but can gain access to the Internet using a proxy, the configuration is not that different. KernelCare can pick up standard environment variables for proxies.
 
-![aws proxy](/images/AWS_proxy_arch2.png)
+![Diagram: an EC2 instance with KernelCare in AWS Cloud connects through a proxy over HTTPS/TLS (TCP 443) to patches.kernelcare.com for binary patch updates and to cln.cloudlinux.com for registration and statistics](/images/AWS_proxy_arch2.png)
 
 Make sure you have environment settings for your proxy setup, and everything else will be the same as if the servers were directly connected to the Internet:
 
@@ -857,13 +857,13 @@ The alternate feed option is enabled by setting `PREFIX` variable in `/etc/sysco
 
 The best way to handle QA and Production environments is to use Sticky tag feature of KernelCare license keys issued from CloudLinux Network (CLN) portal. To use this tag, go to CLN portal -> KernelCare tab -> click on the target key -> Edit Key Info window.
 
-![activation keys](/images/KC-Ent-list.png)
+![CLN KernelCare Activation Keys page with an arrow pointing to the key to open](/images/KC-Ent-list.png)
 
-![key details](/images/KC-Ent-edit.png)
+![CLN Activation Key Details page with an arrow pointing to Edit Key](/images/KC-Ent-edit.png)
 
 You should provide a separate key for each environment and set them to a particular sticky tag which is actually the date to which all the servers in an environment have to be patched.
 
-![edit key](/images/KC-Ent-sticky.png)
+![Edit activation key dialog with an arrow pointing to the Sticky tag date field](/images/KC-Ent-sticky.png)
 
 The date in the Sticky tag field can be any date from May 28, 2018 up to one day before today. To use the Sticky tag feature on the servers to be patched, run:
 
@@ -916,7 +916,7 @@ As soon as you have added funds (See **Billing Info/Add Funds** below) to your a
 
 1. Enter IP address in the **Add IP License** field, choose a license type in the pull-down menu (KernelCare) and click **Add license**.
 
-![reseller ui](/images/reseller001.jpg)
+![IP Reseller Partner UI with license prices, balance, the Add IP License field and license type selector](/images/reseller001.jpg)
 
 2. To delete a license click **Delete** in front of the needed IP address.
 
@@ -924,7 +924,7 @@ As soon as you have added funds (See **Billing Info/Add Funds** below) to your a
 
 In the **Operations List** you are able to edit or delete the key.
 
-![reseller ops](/images/reseller007_zoom96.png)
+![KernelCare Keys tab with the Add Key form and a key list with Operations buttons](/images/reseller007_zoom96.png)
 
 ##### Billing Info/Add Funds
 
@@ -934,13 +934,13 @@ To add funds:
 
 2. Click **Add** to add credit card details, then enter funds amount and click **TopUp** or **Process to Checkout** to pay via PayPal.
 
-![reseller billing](/images/reseller002.jpg)
+![Billing page with Billing Info, Add Funds via Credit Card and Add Funds via PayPal sections](/images/reseller002.jpg)
 
 While adding credit card details, you can also choose the **Auto add funds** option - the funds amount you choose in the pull down menu will be automatically added when your balance is below $100.
 
 If you choose **Auto repay**, your card will be automatically charged when your balance becomes negative. The minimum charge is $20 (e.g. for a balance of -$15 you will be charged at $20, for a balance of -$134.2 you will be charged at $134.2).
 
-![add funds](/images/reseller003.jpg)
+![Edit Credit Card form with Auto add funds, Auto repay and Do not add funds automatically options](/images/reseller003.jpg)
 
 :::tip Note
 If your balance is shown as negative, it means that you have to deposit more funds.
@@ -950,7 +950,7 @@ If your balance is shown as negative, it means that you have to deposit more fun
 
 CloudLinux and KernelCare IP license adding and removing is compatible with different hosting and domain management and billing systems and platforms. You can find comprehensive information on all possible CloudLinux modules and plug-ins APIs in API Section.
 
-![reseller api](/images/reseller004.jpg)
+![CloudLinux partner API page with links to REST and XMLRPC API documentation and WHMCS and Blesta plugins](/images/reseller004.jpg)
 
 ##### Profile
 
@@ -1334,9 +1334,9 @@ To get the KernelCare activation key from the extended Plesk license key, you wi
 
 1. Navigate to *Tools & Settings -> Plesk -> License Management -> Additional License Keys*
 
-  ![plesk keys](/images/LicenseManagement.png)
+  ![Plesk Tools & Settings page with License Management highlighted under Plesk](/images/LicenseManagement.png)
 
-  ![more keys](/images/AdditionalLicenseKeys.png)
+  ![Plesk License Management page with the Additional License Keys tab highlighted](/images/AdditionalLicenseKeys.png)
 
 2. Click *Download key* next to the KernelCare license listed on the page and open the file downloaded in some text editor
 
