@@ -163,6 +163,12 @@ table
   display: block
   overflow-x: auto
 
+  // client.ts makes overflowing tables focusable so they can be scrolled
+  // with the keyboard; show where focus is.
+  &[tabindex]:focus-visible
+    outline 2px solid $accentColor
+    outline-offset 2px
+
 tr
   border-top 1px solid #dfe2e5
 
@@ -203,6 +209,12 @@ th, td
   font-size: .85em
   background-color: rgba(27,31,35,.05)
   border-radius: 3px
+
+// Long unbroken inline code (paths, URLs) must wrap instead of being clipped
+// by .content's overflow-x hidden at 320px (WCAG 1.4.10). Table cells are
+// excluded: tables scroll horizontally on their own.
+.content :not(pre):not(td):not(th) > code
+  overflow-wrap anywhere
 
 // Dark code-block surface — shared by every language-* wrapper and the
 // fade mask below so the right-edge gradient blends in. Font-size matches
@@ -431,3 +443,74 @@ div[class*="language-"].hide-fade .code-fade-mask
 
 #main-content:focus
   outline none
+
+// Focus/anchor targets must not land under the fixed navbar (top) or the
+// fixed back-to-top / chat launcher (bottom right) — WCAG 2.4.11.
+html
+  scroll-padding-top calc(4rem + 0.5rem)
+  scroll-padding-bottom 13rem
+
+// Code blocks become keyboard focusable (client.ts) — make focus visible.
+div[class*="language-"] > pre:focus-visible
+  outline 2px solid #1994f9
+  outline-offset -2px
+
+// Visually hidden, still read by screen readers (live regions, link hints).
+.sr-only
+  position absolute !important
+  width 1px !important
+  height 1px !important
+  padding 0 !important
+  margin -1px !important
+  overflow hidden !important
+  clip rect(0, 0, 0, 0) !important
+  white-space nowrap !important
+  border 0 !important
+
+// Inline links in prose must not rely on colour alone (WCAG 1.4.1): #0B5CAD
+// vs #314659 body text is only ~1.5:1. Underline links inside paragraphs,
+// list items and table cells; leave header anchors and component UI (cards,
+// buttons) alone.
+.content:not(.custom)
+  p, li, td, th, dd
+    > a:not(.header-anchor):not([class]),
+    > a.router-link-active:not(.header-anchor),
+    > a.external-link
+      text-decoration underline
+      text-underline-offset 2px
+
+      &:hover, &:focus-visible
+        text-decoration-thickness 2px
+
+// Forced-colors (Windows High Contrast): box-shadow focus rings vanish, so
+// make sure every focused control gets a real outline.
+@media (forced-colors: active)
+  a:focus-visible,
+  button:focus-visible,
+  select:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible
+    outline 2px solid Highlight !important
+    outline-offset 2px
+
+// Respect the user's reduced-motion preference (WCAG 2.3.3 best practice):
+// near-instant transitions, no looping decoration. Loading spinners keep a
+// slow spin so the page doesn't look frozen.
+@media (prefers-reduced-motion: reduce)
+  html
+    scroll-behavior auto !important
+
+  *, *::before, *::after
+    animation-duration 0.01ms !important
+    animation-iteration-count 1 !important
+    transition-duration 0.01ms !important
+    scroll-behavior auto !important
+
+  .pulse-ring, .tooltip-text
+    animation none !important
+
+  .spinner, .loading-spinner
+    animation-duration 1.5s !important
+    animation-iteration-count infinite !important
