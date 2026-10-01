@@ -1815,7 +1815,7 @@ in db.
 
 ### Backup and restore for ePortal docker container
 
-Volume backup process can be performed according to the instructions given [here](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes).
+Volume backup process can be performed according to [Docker's guide to backing up, restoring or migrating data volumes](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes).
 For example:
 ```text
 docker run --rm --volumes-from eportal -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /var/lib/eportal/data/

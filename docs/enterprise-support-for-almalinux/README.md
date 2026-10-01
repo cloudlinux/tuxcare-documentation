@@ -111,7 +111,7 @@ The TuxCare ESU/FIPS packages and repositories are cryptographically signed with
 
 **Requirements**
 
-* AlmaLinux 9.2 or AlmaLinux/Rocky Linux 9.6 operating system (download images from [here](https://tuxcare.com/almalinux-enterprise-support/get-almalinux/))
+* AlmaLinux 9.2 or AlmaLinux/Rocky Linux 9.6 operating system ([download AlmaLinux ESU images](https://tuxcare.com/almalinux-enterprise-support/get-almalinux/))
 * x86_64 or aarch64 architecture
 * Extended Security Updates license key (should be obtained from [portal.tuxcare.com](https://portal.tuxcare.com))
 * Internet access
@@ -656,7 +656,7 @@ $ aws sts get-caller-identity --query Account --output text
 123456789012
 ```
 
-Alternatively you can make a request to the AWS API from within a running instance, as described [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html#retrieve-iid), for example using IMDSv1:
+Alternatively you can make a request to the AWS API from within a running instance, as described in [Retrieve the instance identity document](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html#retrieve-iid) in the AWS documentation, for example using IMDSv1:
 
 ```text
 $ curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | grep accountId

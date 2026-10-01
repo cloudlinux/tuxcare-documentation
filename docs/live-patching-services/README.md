@@ -908,7 +908,7 @@ KernelCare is available in the English language only.
 
 #### Reseller Partner UI
 
-Once you have got the reseller partner access, in the IP Reseller Partner UI you can view and manage IP licenses, billing options and profile details. Here you can track your balance, license count and license prices as well as using an IP address search to find customers. You can find more information about KernelCare licensing [here](https://www.kernelcare.com/pricing/).
+Once you have got the reseller partner access, in the IP Reseller Partner UI you can view and manage IP licenses, billing options and profile details. Here you can track your balance, license count and license prices as well as using an IP address search to find customers. You can find more information on the [KernelCare pricing page](https://www.kernelcare.com/pricing/).
 
 ##### Server Section
 

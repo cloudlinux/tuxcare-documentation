@@ -4,7 +4,7 @@
 
 Below are the instructions for installing the TuxCare FIPS 140-3 validated modules for AlmaLinux and Rocky Linux 9.6, they should be run as root.
 
-**For commercial customers of our ESU product, please use the instructions [here](/enterprise-support-for-almalinux/#enabling-fips-140-3-mode) instead.**
+**For commercial customers of our ESU product, please use the [ESU instructions for enabling FIPS 140-3 mode](/enterprise-support-for-almalinux/#enabling-fips-140-3-mode) instead.**
 
 By installing this software, you agree to be bound by the terms of the [TuxCare Community EULA](https://tuxcare.com/wp-content/uploads/2023/09/COMMUNITY-EULA.txt).
 
