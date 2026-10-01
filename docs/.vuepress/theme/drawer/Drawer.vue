@@ -2,6 +2,7 @@
   <!-- The desktop footer is shown as part of the open drawer, so the dialog
        wraps both and the focus trap covers the footer links too. -->
   <div ref="dialogRef"
+       :class="{'drawer-dialog--open': isOpenDrawer}"
        :role="isOpenDrawer ? 'dialog' : undefined"
        :aria-modal="isOpenDrawer ? 'true' : undefined"
        :aria-labelledby="isOpenDrawer ? 'drawer-title' : undefined"
@@ -129,6 +130,13 @@ onBeforeUnmount(() => {
 // widget floats above the dialogs, so hide it (it is also made inert).
 body.modal-open #bot-ui
   display none !important
+
+// Give the open dialog a real box over the viewport (its panels are fixed),
+// so assistive tech can highlight it and nothing behind it is clickable.
+.drawer-dialog--open
+  position fixed
+  inset 0
+  z-index 1000
 
 .drawer
   position fixed
