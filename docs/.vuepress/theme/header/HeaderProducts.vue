@@ -17,8 +17,9 @@
              :src="withBase(arrowDownIcon)"
              alt=""/>
       </button>
+     <!-- The menu stays in the DOM (v-show) so aria-controls always points to it. -->
      <teleport v-if="isMobileWidth" to="body">
-       <div v-if="openedMenu"
+       <div v-show="openedMenu"
             id="header-products-menu"
             ref="mobileMenu"
             class="dropdown-wrapper"
@@ -30,7 +31,7 @@
           </p>
        </div>
      </teleport>
-      <div v-if="openedMenu && !isMobileWidth" id="header-products-menu" class="dropdown-wrapper">
+      <div v-if="!isMobileWidth" v-show="openedMenu" id="header-products-menu" class="dropdown-wrapper">
         <p class="dropdown-content__paragraph" v-for="(product, index) in productsList" :key="product">
           <a class="dropdown-content__link" :href="productsURLs[index]">{{ product }}</a>
         </p>
