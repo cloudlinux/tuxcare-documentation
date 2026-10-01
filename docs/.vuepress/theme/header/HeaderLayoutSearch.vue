@@ -11,6 +11,7 @@
           @openDrawer="openDrawer"
           :isOpenDrawer="isOpenDrawer"
           @result="getResultsFromSearch"
+          @searching="onSearching"
       />
     </teleport>
     <DrawerSearch
@@ -21,6 +22,7 @@
         @openDrawer="openDrawer"
         :isOpenDrawer="isOpenDrawer"
         @result="getResultsFromSearch"
+        @searching="onSearching"
     />
     <Drawer
         :homeLayoutSearchResult="homeLayoutSearchResult"
@@ -28,6 +30,8 @@
         @closeDrawer="closeDrawer"
         :isOpenDrawer="isOpenDrawer"
         :isMobileWidth="isMobileWidth"
+        :searchedQuery="searchedQuery"
+        :statusMessage="searchStatus"
     />
   </div>
 </template>
@@ -35,8 +39,10 @@
 <script setup>
 import {computed, inject, nextTick, ref, watch} from "vue";
 import {usePageFrontmatter} from "@vuepress/client";
+import {useRoute} from "vue-router";
 import Drawer from "../drawer/Drawer.vue";
 import DrawerSearch from "../drawer/DrawerSearch.vue";
+import {canFocus} from "../composables/useFocusTrap";
 
 const props = defineProps({
   isMobileWidth: {
@@ -50,20 +56,44 @@ const props = defineProps({
 
 const {headerSearch, algoliaOptions} = inject('themeConfig')
 const frontmatter = usePageFrontmatter()
+const route = useRoute()
 
 const isOpenDrawer = ref(false)
 const mobileDrawerVisible = ref(false)
 const searchTextValue = ref('')
 const homeLayoutSearchResult = ref([]);
+// Query of the last search that returned (not the text being typed).
+const searchedQuery = ref('')
 
 watch(() => searchTextValue.value, () => {
   if (!searchTextValue.value) {
     homeLayoutSearchResult.value = [];
+    searchedQuery.value = '';
   }
 })
 
-const getResultsFromSearch = (hits) => {
+// Message for the drawer's live region.
+const searchStatus = ref('')
+let statusTimer = null
+const setSearchStatus = (message, delay = 0) => {
+  clearTimeout(statusTimer)
+  // Clear first so the same message is announced again on a repeat search.
+  searchStatus.value = ''
+  statusTimer = setTimeout(() => searchStatus.value = message, delay)
+}
+
+const onSearching = ({query, failed = false}) => {
+  setSearchStatus(failed ? 'Search failed. Please try again.' : 'Searching…')
+}
+
+const getResultsFromSearch = (hits, query = searchTextValue.value) => {
   homeLayoutSearchResult.value = hits;
+  searchedQuery.value = query
+  const count = hits.length
+  // Wait for a drawer that is opening now to leave the inert state first.
+  setSearchStatus(count
+      ? `${count} ${count === 1 ? 'result' : 'results'} for “${query}”`
+      : `No results for “${query}”`, isOpenDrawer.value ? 0 : 150)
 }
 
 const isGlobalLayout = computed(() =>  frontmatter.value.layout === 'HomeLayout')
@@ -83,7 +113,8 @@ const openDrawer = () => {
   const wasOpen = isOpenDrawer.value
   isOpenDrawer.value = true
   mobileDrawerVisible.value = true
-  if(props.closeSidebarDrawer) props.closeSidebarDrawer()
+  // Focus goes to the search input, not back to the sidebar menu button.
+  if(props.closeSidebarDrawer) props.closeSidebarDrawer({returnFocus: false})
   if (!wasOpen) {
     drawerOpener = document.activeElement
     nextTick(focusSearchInput)
@@ -93,16 +124,27 @@ const openDrawer = () => {
 const closeDrawer = ({restoreFocus = true} = {}) => {
   homeLayoutSearchResult.value.length = 0;
   searchTextValue.value = ''
+  searchedQuery.value = ''
+  clearTimeout(statusTimer)
+  searchStatus.value = ''
   isOpenDrawer.value = false
   mobileDrawerVisible.value = false
   const opener = drawerOpener
   drawerOpener = null
   if (!restoreFocus) return
   nextTick(() => {
-    if (opener && opener.isConnected && opener.id !== SEARCH_INPUT_ID) opener.focus()
+    // The opener may be hidden by now (e.g. the mobile search button after
+    // the viewport crossed the breakpoint); fall back to the search input.
+    if (opener && opener.id !== SEARCH_INPUT_ID && canFocus(opener)) opener.focus()
     else focusSearchInput()
   })
 }
+
+// Don't leave the modal drawer open over a page the user navigated to
+// (browser Back/Forward, or a link outside the drawer).
+watch(() => route.fullPath, () => {
+  if (isOpenDrawer.value) closeDrawer({restoreFocus: false})
+}, {flush: 'pre'})
 defineExpose({
   openDrawer,
   closeDrawer,

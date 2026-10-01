@@ -11,15 +11,16 @@
            maxlength="100"
     />
     <div :class="activeSearchIconClass">
+      <!-- The button stays mounted while loading so a focused button keeps focus. -->
       <button
-        v-if="!loading"
         type="submit"
         class="search-submit-btn"
-        aria-label="Submit search"
+        :aria-label="loading ? 'Searching' : 'Submit search'"
+        :aria-disabled="loading ? 'true' : undefined"
       >
-        <img alt="" :src="withBase(activeSearchIcon)"/>
+        <img v-if="!loading" alt="" :src="withBase(activeSearchIcon)"/>
+        <span v-else class="spinner" aria-hidden="true"></span>
       </button>
-      <div v-if="loading" class="spinner"></div>
     </div>
   </form>
 </template>
@@ -49,7 +50,7 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(["openDrawer", 'update:modelValue', 'result'])
+const emit = defineEmits(["openDrawer", 'update:modelValue', 'result', 'searching'])
 const frontmatter = usePageFrontmatter()
 
 const isGlobalLayout = computed(() => {
@@ -162,13 +163,18 @@ async function queryGlobalSearch(query, n_results=10) {
 const loading = ref(false); // Reactive variable for loading state
 
 const performSearch = async () => {
+  if (loading.value) return; // ignore repeat submits while a search is running
+  const query = props.modelValue;
   loading.value = true; // Set loading to true when search starts
-  const data = await queryGlobalSearch(props.modelValue, MAX_HITS_PER_PAGE);
+  emit('searching', { query });
+  const data = await queryGlobalSearch(query, MAX_HITS_PER_PAGE);
   loading.value = false; // Set loading to false when search finishes
   if (data) {
     const hits = parseDocs(data);
-    emit('result', hits);
+    emit('result', hits, query);
     emit('openDrawer');
+  } else {
+    emit('searching', { query, failed: true });
   }
 }
 
@@ -260,6 +266,8 @@ watch(
     text-align center
 
 .spinner
+  display block
+  box-sizing content-box
   border 4px solid rgba(0, 0, 0, 0.1)
   border-top 4px solid #3498db
   border-radius 50%

@@ -14,6 +14,8 @@
         <div class="drawer-header__wrapper">
           <h2 id="drawer-title" class="drawer-header__paragraph">How can we help you?</h2>
           <div id="drawerSearch"></div>
+          <!-- Always mounted so result counts are announced (WCAG 4.1.3). -->
+          <p class="sr-only" role="status" aria-live="polite" aria-atomic="true">{{ statusMessage }}</p>
         </div>
         <button type="button" class="drawer-cross" @click="onCloseDrawer">
           <img class="drawer-cross__img" :src="withBase('/global/cross.svg')" alt="">
@@ -26,7 +28,7 @@
             <div class="drawer-main__breadcrumb">
               <!-- Optional breadcrumb can stay here -->
             </div>
-            <DrawerSearchResult :modelValue="modelValue" :data="drawerArticleResult" @closeDrawer="onResultSelected"/>
+            <DrawerSearchResult :modelValue="modelValue" :searchedQuery="searchedQuery" :data="drawerArticleResult" @closeDrawer="onResultSelected"/>
           </div>
         </div>
         <Footer v-if="isOpenDrawer && isMobileWidth" class="drawer-footer__mobile"/>
@@ -39,8 +41,10 @@
 <script setup>
 import { withBase } from "@vuepress/client";
 import Footer from "../footer/Footer.vue";
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import DrawerSearchResult from "./DrawerSearchResult.vue";
+import { useFocusTrap } from "../composables/useFocusTrap";
+import { setModalOpen } from "../composables/useModalOpen";
 
 const props = defineProps({
   isOpenDrawer: {
@@ -62,6 +66,14 @@ const props = defineProps({
     type: Array,
     required: true,
     default: () => []
+  },
+  searchedQuery: {
+    type: String,
+    default: ''
+  },
+  statusMessage: {
+    type: String,
+    default: ''
   }
 });
 
@@ -80,25 +92,8 @@ const onCloseDrawer = () => {
 
 const onResultSelected = () => emit('closeDrawer', { restoreFocus: false });
 
-const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
-
 // Keep Tab / Shift+Tab inside the open drawer.
-const trapFocus = (event) => {
-  if (!props.isOpenDrawer || !dialogRef.value) return;
-  const focusable = [...dialogRef.value.querySelectorAll(FOCUSABLE)]
-      .filter(el => el.offsetParent !== null || getComputedStyle(el).position === 'fixed');
-  if (!focusable.length) return;
-  const first = focusable[0];
-  const last = focusable[focusable.length - 1];
-  const active = document.activeElement;
-  if (event.shiftKey && (active === first || !dialogRef.value.contains(active))) {
-    event.preventDefault();
-    last.focus();
-  } else if (!event.shiftKey && (active === last || !dialogRef.value.contains(active))) {
-    event.preventDefault();
-    first.focus();
-  }
-}
+const trapFocus = useFocusTrap(dialogRef, () => props.isOpenDrawer);
 
 // The drawer starts hidden (translateY(-100%)). Enabling the slide transition
 // only after the first paint prevents the close animation from flashing on
@@ -112,6 +107,15 @@ onMounted(() => {
 
 watch(() => props.isOpenDrawer, () => {
   document.body.classList.toggle('disable-scroll', props.isOpenDrawer);
+  setModalOpen('search', props.isOpenDrawer);
+});
+
+// The header swaps search instances between layouts; don't leave the page
+// scroll-locked when an open drawer is unmounted.
+onBeforeUnmount(() => {
+  if (!props.isOpenDrawer) return;
+  document.body.classList.remove('disable-scroll');
+  setModalOpen('search', false);
 });
 </script>
 
@@ -120,6 +124,11 @@ watch(() => props.isOpenDrawer, () => {
 
 .disable-scroll
   overflow hidden !important
+
+// Set by composables/useModalOpen.js while a theme dialog is open; the chat
+// widget floats above the dialogs, so hide it (it is also made inert).
+body.modal-open #bot-ui
+  display none !important
 
 .drawer
   position fixed
@@ -139,6 +148,9 @@ watch(() => props.isOpenDrawer, () => {
   // .drawer--animated once the component has mounted.
   &.drawer--animated
     transition: 0.4s ease
+
+    @media (prefers-reduced-motion: reduce)
+      transition none
 
   &-header
     padding 1.25rem $layout-horizontal-padding
