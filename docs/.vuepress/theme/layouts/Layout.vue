@@ -1,6 +1,6 @@
 <template>
   <div class="theme-container">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content" :inert="isDrawerOpen || undefined">Skip to content</a>
     <HeaderLayout  :closeSidebarDrawer="pageRef?.closeSidebarDrawer" :isMobileWidth="isMobileWidth"/>
     <Sidebar
         v-if="allPages.length && !pageRef?.isOpenMobileSidebarMenu && !isMobileWidth"
@@ -19,13 +19,15 @@
         </div>
       </template>
     </Sidebar>
+    <!-- While the mobile drawer (a modal dialog) is open, the page behind it is inert. -->
     <Page ref="pageRef"
+          :inert="isDrawerOpen || undefined"
           :sidebarItems="sidebarItems"
           :allPages="allPages"
           :isMobileWidth="isMobileWidth"
     />
     <SidebarDrawer
-        v-if="allPages.length && pageRef?.isOpenMobileSidebarMenu && isMobileWidth"
+        v-if="isDrawerOpen"
         @changeSidebarItems="changeSidebarItems"
         :all-pages="allPages"
         :documents="documents"
@@ -33,7 +35,8 @@
         :closeSidebarDrawer="pageRef?.closeSidebarDrawer"
         :isMobileWidth="isMobileWidth"
     />
-    <Footer/>
+    <Footer :inert="isDrawerOpen || undefined"/>
+    <div class="sr-only" aria-live="polite" aria-atomic="true">{{ announcement }}</div>
   </div>
 </template>
 
@@ -49,6 +52,7 @@ import {computed, inject, onMounted, onUnmounted, ref} from "vue";
 import { usePageData } from "@vuepress/client";
 import {pagesData} from "../../.temp/internal/pagesData.js";
 import {resolveSidebarItems} from "../util.js";
+import {useRouteAnnouncer} from "../composables/useRouteAnnouncer";
 
 const { documents,MOBILE_BREAKPOINT } = inject('themeConfig')
 
@@ -60,6 +64,9 @@ const page = usePageData()
 const allPages = ref([])
 
 const isMobileWidth = ref(false);
+const isDrawerOpen = computed(() => !!(allPages.value.length && pageRef.value?.isOpenMobileSidebarMenu && isMobileWidth.value))
+// Focus can't move into the inert page while the drawer is open.
+const {announcement} = useRouteAnnouncer(() => !isDrawerOpen.value)
 const sidebarItems = computed(() => page.value && allPages.value.length ? resolveSidebarItems(page.value, route, allPages.value) : [])
 
 const changeSidebarItems = (e) => router.push(e.link)

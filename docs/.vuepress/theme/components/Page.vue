@@ -5,6 +5,7 @@
     <Breadcrumb class="page-breadcrumb"/>
 
     <button type="button"
+            ref="menuButton"
             class="page-mobile__sidebar-menu"
             aria-label="Open documentation menu"
             :aria-expanded="isOpenMobileSidebarMenu"
@@ -40,9 +41,11 @@
 import {endingSlashRE, normalize, outboundRE} from '../util'
 import BackToTop from './BackToTop.vue';
 import {usePageData, usePageFrontmatter, usePageLang, withBase} from "@vuepress/client";
-import {computed, inject, nextTick, ref} from "vue";
+import {computed, inject, nextTick, ref, watch} from "vue";
+import {useRoute} from "vue-router";
 import Breadcrumb from "./Breadcrumb.vue";
 import PageNav from "./PageNav.vue";
+import {canFocus} from "../composables/useFocusTrap";
 
 const {
   githubEditIcon, githubRepository, allowGithubEdit,
@@ -70,7 +73,9 @@ const page = usePageData()
 const lang = usePageLang()
 const frontmatter = usePageFrontmatter()
 
+const route = useRoute()
 const isOpenMobileSidebarMenu = ref(props.isMobileWidth)
+const menuButton = ref(null)
 
 // The drawer is rendered by Layout.vue after this page; move focus into it so
 // keyboard users don't have to tab through the covered page content first.
@@ -78,7 +83,42 @@ const openMobileSidebarMenu = () => {
   isOpenMobileSidebarMenu.value = true
   nextTick(() => document.querySelector('.sidebar-drawer__mobile')?.focus({preventScroll: true}))
 }
-const closeSidebarDrawer = () => isOpenMobileSidebarMenu.value = false
+
+// Focus the #hash target of the current route, or the main content.
+const focusContent = () => {
+  const id = route.hash ? decodeURIComponent(route.hash.slice(1)) : ''
+  const target = id && document.getElementById(id)
+  if (target) {
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1')
+    target.focus({preventScroll: true})
+  } else {
+    document.getElementById('main-content')?.focus({preventScroll: true})
+  }
+}
+
+/**
+ * Close the mobile drawer and decide where focus goes, since the focused
+ * element inside the drawer is removed with it.
+ * returnFocus: 'menu' (default) back to the menu button (Escape, close button),
+ * 'content' to the page content (a link was chosen), false when the caller
+ * moves focus itself (opening search).
+ */
+const closeSidebarDrawer = ({returnFocus = 'menu'} = {}) => {
+  if (!isOpenMobileSidebarMenu.value) return
+  isOpenMobileSidebarMenu.value = false
+  if (returnFocus === 'menu') {
+    nextTick(() => canFocus(menuButton.value) ? menuButton.value.focus() : focusContent())
+  } else if (returnFocus === 'content') {
+    // Runs after the router has handled the link click (hash links resolve
+    // right away; a new page is focused again by Layout once it loads).
+    setTimeout(focusContent, 0)
+  }
+}
+
+// The drawer only exists below the mobile breakpoint.
+watch(() => props.isMobileWidth, (isMobile) => {
+  if (!isMobile) closeSidebarDrawer({returnFocus: 'content'})
+})
 
 const editLink = computed(() => {
   if (frontmatter.value.editLink === false) return
@@ -142,6 +182,8 @@ defineExpose({
     background none
     border 0
     padding 0
+    min-width 1.5rem
+    min-height 1.5rem
     cursor pointer
 
     img
