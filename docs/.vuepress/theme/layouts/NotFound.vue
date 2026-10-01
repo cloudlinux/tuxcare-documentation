@@ -1,33 +1,37 @@
 <template>
-  <div class="custom-container">
+  <main id="main-content" class="custom-container" tabindex="-1">
     <div class="not-found-content">
       <div class="error-header">
         <div class="error-code">404</div>
         <h1>Page Not Found</h1>
         <p class="error-message">Sorry, the page you are looking for does not exist.</p>
-        <button @click="goHome" class="primary-button">
-          <span class="button-icon">←</span> Back to Home
-        </button>
+        <router-link to="/" class="primary-button">
+          <span class="button-icon" aria-hidden="true">←</span> Back to Home
+        </router-link>
+        <p class="error-help">
+          Can't find what you need?
+          <a :href="supportLink.url" target="_blank" rel="noopener noreferrer">{{ supportLink.text }}<span class="sr-only"> (opens in new tab)</span></a>
+        </p>
       </div>
-      
-      <div class="documents-section">
-        <h2>Browse Our Documentation</h2>
-        <div class="documents-cards">
-          <div v-for="doc in docs" :key="doc.link" class="card">
+
+      <section class="documents-section" aria-labelledby="documents-section-title">
+        <h2 id="documents-section-title">Browse Our Documentation</h2>
+        <ul class="documents-cards">
+          <li v-for="doc in docs" :key="doc.link" class="card">
             <div class="card-content">
               <h3>{{ doc.title }}</h3>
               <p>{{ doc.description }}</p>
             </div>
             <div class="card-footer">
-              <button @click="navigateTo(doc.link)" class="card-button">
-                Read More <span class="button-arrow">→</span>
-              </button>
+              <router-link :to="doc.link" class="card-button">
+                Read More<span class="sr-only"> about {{ doc.title }}</span> <span class="button-arrow" aria-hidden="true">→</span>
+              </router-link>
             </div>
-          </div>
-        </div>
-      </div>
+          </li>
+        </ul>
+      </section>
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>
@@ -35,18 +39,12 @@ import { useRoute, useRouter } from "vue-router";
 import { onMounted, ref } from "vue";
 import { pagesData } from "../../.temp/internal/pagesData.js";
 import documents from "../../config-client/documents";
+import navbarLinks from "../../config-client/navbarLinks";
 
 const route = useRoute();
 const router = useRouter();
 const docs = ref(documents);
-
-const goHome = () => {
-  router.push("/");
-};
-
-const navigateTo = (link) => {
-  router.push(link);
-};
+const supportLink = navbarLinks[0];
 
 const getRecursiveLevelPath = (child, rootPath) => {
   let haveSolution = false;
@@ -218,6 +216,37 @@ onMounted(async () => {
   box-shadow: 0 4px 12px rgba(67, 160, 105, 0.3);
 }
 
+.primary-button,
+.card-button {
+  text-decoration: none;
+}
+
+.error-help {
+  margin: 24px 0 0;
+  color: var(--text-light);
+}
+
+.error-help a {
+  color: #0B5CAD;
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.custom-container:focus {
+  outline: none;
+}
+
 .button-icon {
   margin-right: 8px;
   font-weight: bold;
@@ -242,6 +271,9 @@ onMounted(async () => {
 }
 
 .documents-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
