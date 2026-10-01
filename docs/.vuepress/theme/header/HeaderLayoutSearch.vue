@@ -24,20 +24,25 @@
         @result="getResultsFromSearch"
         @searching="onSearching"
     />
-    <Drawer
-        :homeLayoutSearchResult="homeLayoutSearchResult"
-        v-model="searchTextValue"
-        @closeDrawer="closeDrawer"
-        :isOpenDrawer="isOpenDrawer"
-        :isMobileWidth="isMobileWidth"
-        :searchedQuery="searchedQuery"
-        :statusMessage="searchStatus"
-    />
+    <!-- The modal drawer lives under <body>, outside the header landmark, so screen
+         readers announce it as a dialog rather than as part of the banner.
+         Server-rendered in place; moved once mounted to keep hydration matching. -->
+    <teleport to="body" :disabled="!isMounted">
+      <Drawer
+          :homeLayoutSearchResult="homeLayoutSearchResult"
+          v-model="searchTextValue"
+          @closeDrawer="closeDrawer"
+          :isOpenDrawer="isOpenDrawer"
+          :isMobileWidth="isMobileWidth"
+          :searchedQuery="searchedQuery"
+          :statusMessage="searchStatus"
+      />
+    </teleport>
   </div>
 </template>
 
 <script setup>
-import {computed, inject, nextTick, ref, watch} from "vue";
+import {computed, inject, nextTick, onMounted, ref, watch} from "vue";
 import {usePageFrontmatter} from "@vuepress/client";
 import {useRoute} from "vue-router";
 import Drawer from "../drawer/Drawer.vue";
@@ -59,6 +64,8 @@ const frontmatter = usePageFrontmatter()
 const route = useRoute()
 
 const isOpenDrawer = ref(false)
+const isMounted = ref(false)
+onMounted(() => isMounted.value = true)
 const mobileDrawerVisible = ref(false)
 const searchTextValue = ref('')
 const homeLayoutSearchResult = ref([]);

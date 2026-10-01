@@ -3,9 +3,9 @@
        wraps both and the focus trap covers the footer links too. -->
   <div ref="dialogRef"
        :class="{'drawer-dialog--open': isOpenDrawer}"
-       :role="isOpenDrawer ? 'dialog' : undefined"
-       :aria-modal="isOpenDrawer ? 'true' : undefined"
-       :aria-labelledby="isOpenDrawer ? 'drawer-title' : undefined"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="drawer-title"
        :inert="!isOpenDrawer"
        @keydown.esc="onCloseDrawer"
        @keydown.tab="trapFocus"
@@ -133,10 +133,12 @@ body.modal-open #bot-ui
 
 // Give the open dialog a real box over the viewport (its panels are fixed),
 // so assistive tech can highlight it and nothing behind it is clickable.
+// It is teleported to <body>, so it must stack above the fixed header
+// (z-index 9999 on mobile) and the skip link (10000).
 .drawer-dialog--open
   position fixed
   inset 0
-  z-index 1000
+  z-index 10001
 
 .drawer
   position fixed
