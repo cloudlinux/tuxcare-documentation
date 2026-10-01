@@ -79,9 +79,14 @@ const menuButton = ref(null)
 
 // The drawer is rendered by Layout.vue after this page; move focus into it so
 // keyboard users don't have to tab through the covered page content first.
+// Focus its close button: screen readers announce the dialog name on entering it,
+// but not when the dialog container itself is focused.
 const openMobileSidebarMenu = () => {
   isOpenMobileSidebarMenu.value = true
-  nextTick(() => document.querySelector('.sidebar-drawer__mobile')?.focus({preventScroll: true}))
+  nextTick(() => {
+    const drawer = document.querySelector('.sidebar-drawer__mobile')
+    ;(drawer?.querySelector('.sidebar-drawer__close') || drawer)?.focus({preventScroll: true})
+  })
 }
 
 // Focus the #hash target of the current route, or the main content.
