@@ -26,7 +26,6 @@ import WhatsNext from "./components/WhatsNext.vue";
 import ELSApplication from "./components/ELSApplication.vue";
 import GlobalCopyCode from "./components/GlobalCopyCode.vue";
 
-import ResolvedCveTable from './components/ResolvedCveTable.vue'
 import ELSBadge from './components/ELSBadge.vue'
 import ContactSales from './components/ContactSales.vue'
 
@@ -116,7 +115,6 @@ export default defineClientConfig({
 
         app.config.globalProperties.$eventBus = mitt();
         app.component("CodeTabs", CodeTabs);
-        app.component("ResolvedCveTable", ResolvedCveTable);
         app.component("TableTabs", TableTabs);
         app.component("ELSTechnology", ELSTechnology);
         app.component("ELSRTechnology", ELSRTechnology);
