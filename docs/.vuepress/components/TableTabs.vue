@@ -1,18 +1,26 @@
 <script setup>
-import { ref, computed, useSlots, onMounted, watch, nextTick } from 'vue'
+import { ref, computed, useSlots, onMounted, watch, nextTick, useId } from 'vue'
 
 const slots = useSlots()
 const tabKeys = Object.keys(slots)
 const activeTab = ref(tabKeys[0] ?? '')
 const currentTab = computed(() => activeTab.value)
 const wrapperRef = ref(null)
+// Unique per instance (SSR-safe) so the <label for> pairing works and several
+// TableTabs on one page never share an id.
+const selectId = `tabletabs-${useId()}`
 
 function formatKey(key) {
   return key.replace(/[__]/g, ' ')
 }
 
-defineProps({
+const props = defineProps({
   label: {
+    type: String,
+    default: ''
+  },
+  // Accessible name used when there is no visible label.
+  ariaLabel: {
     type: String,
     default: ''
   },
@@ -26,7 +34,31 @@ defineProps({
   }
 })
 
+// Without a visible label, name the select after the section it sits in
+// (the nearest preceding heading), falling back to a generic name.
+const fallbackName = ref('Select table view')
+const selectName = computed(() => props.label ? undefined : (props.ariaLabel || fallbackName.value))
+
+function nearestHeadingText(el) {
+  let node = el
+  while (node && node !== document.body) {
+    let sib = node.previousElementSibling
+    while (sib) {
+      if (/^H[1-6]$/.test(sib.tagName)) {
+        return sib.textContent.replace(/^#\s*/, '').trim()
+      }
+      sib = sib.previousElementSibling
+    }
+    node = node.parentElement
+  }
+  return ''
+}
+
 onMounted(() => {
+  if (!props.label && !props.ariaLabel && wrapperRef.value) {
+    const heading = nearestHeadingText(wrapperRef.value)
+    if (heading) fallbackName.value = `${heading}: select table view`
+  }
   const hash = decodeURIComponent(window.location.hash.slice(1))
   if (tabKeys.includes(hash)) {
     activeTab.value = hash
@@ -49,19 +81,19 @@ watch(activeTab, (newVal) => {
 </script>
 
 <template>
-  <div ref="wrapperRef" class="table-tabs" :id="activeTab">
+  <div ref="wrapperRef" class="table-tabs">
     <div class="tab-header">
-      <span v-if="label" class="label-text">
+      <label v-if="label" :for="selectId" class="label-text">
         {{ label }}
-      </span>
-      <select v-model="activeTab" class="tab-select">
+      </label>
+      <select :id="selectId" v-model="activeTab" class="tab-select" :aria-label="selectName" :aria-controls="`${selectId}-panel`">
         <option v-for="key in tabKeys" :key="key" :value="key">
           {{ labels[key] || formatKey(key) }}
         </option>
       </select>
     </div>
 
-    <div class="tab-content">
+    <div class="tab-content" :id="`${selectId}-panel`">
       <slot :name="currentTab" />
     </div>
 
@@ -103,9 +135,15 @@ watch(activeTab, (newVal) => {
 
 .tab-select:hover { border-color: #0b5cad; box-shadow: 0 2px 6px rgba(22, 48, 85, .18); }
 
-.tab-select:focus {
-  outline: none; border-color: #0b5cad;
-  box-shadow: 0 0 0 3px rgba(11, 92, 173, .25);
+/* Outline (not box-shadow only) so the ring survives forced-colors mode and
+   reaches 3:1 against the light header (WCAG 2.4.7, 1.4.11). */
+.tab-select:focus-visible {
+  outline: 2px solid #0b5cad; outline-offset: 2px;
+  border-color: #0b5cad;
+}
+
+@media (forced-colors: active) {
+  .tab-select:focus-visible { outline-color: Highlight; }
 }
 
 .bottom-line {
