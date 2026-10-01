@@ -2,6 +2,8 @@
 
 SecureChain delivers verified, signed, continuously patched JavaScript packages from a TuxCare-managed npm registry. This page shows how to connect a project to it — with the SecureChain CLI or by hand.
 
+## Getting started
+
 <ELSPrerequisites>
 
 * TuxCare CLN token — contact sales@tuxcare.com
