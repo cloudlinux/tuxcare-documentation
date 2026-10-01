@@ -482,7 +482,7 @@ Once you are happy with these patches, set the same Sticky Tag for Production se
 
 Let's assume that you have a kernel patch that you want to "stick" with. All you need is to find a proper label for that patch.
 
-![sticky-proper-label](/images/sticky-proper-label.png)
+![KernelCare patch page for kernel-5.4.0-1019.19 with the release date 2020-09-16 highlighted](/images/sticky-proper-label.png)
 
 As you can see, the patch was released at 2020-09-16 (16th September 2020). And if you apply a supported date format, it becomes `16092020`, that will be the sticky patch value.
 
@@ -496,11 +496,11 @@ It's rather simple. New scan results after installing a package and applying a p
 
 For example, Nessus for an old kernel shows a lot of detected CVEs before apply live patches:
 
-![before](/images/scanner-manipulation-before.png)
+![Nessus scan results before live patching, listing several high-severity CentOS 7 kernel advisories](/images/scanner-manipulation-before.png)
 
 After the live patches were applied, there are no kernel-related CVEs:
 
-![after](/images/scanner-manipulation-after.png)
+![Nessus scan results after live patching, with no kernel advisories in the list](/images/scanner-manipulation-after.png)
 
 ##### What if my scanner is producing false positives?
 
@@ -604,23 +604,23 @@ If you don't have a MOK password, `mokutil` will ask you to create one. The pass
 
    First, go down to the 'Enroll Mok':
 
-![alt text](/images/uefi-enroll-mok.png "Select Enroll MOK")
+![Perform MOK management menu with Enroll MOK selected](/images/uefi-enroll-mok.png "Select Enroll MOK")
 
 Then the firmware gives you the option of viewing the new MOK or continuing. Let's continue.
 
-![alt text](/images/uefi-continue.png "Select Continue")
+![Enroll MOK menu with Continue selected](/images/uefi-continue.png "Select Continue")
 
 It then asks you to confirm the enrollment.
 
-![alt text](/images/uefi-yes.png "Select Yes")
+![Enroll the key(s)? prompt with Yes selected](/images/uefi-yes.png "Select Yes")
 
 Then you will need to enter the password you used when running `mokutil --import`.
 
-![alt text](/images/uefi-password.png "Enter the password")
+![Enroll the key(s)? password prompt](/images/uefi-password.png "Enter the password")
 
 Finally, the firmware will ask you to reboot.
 
-![alt text](/images/uefi-ok.png  "Select OK")
+![The system must now be rebooted message with OK selected](/images/uefi-ok.png "Select OK")
 
 #### Verification
 
@@ -802,7 +802,7 @@ You can easily automate KernelCare deployment with Ansible, Puppet, Chef or othe
 
 Systems protected by KernelCare can be monitored by means of CloudLinux Network (CLN) portal available at [https://cln.cloudlinux.com](https://cln.cloudlinux.com). Registered KernelCare installations are grouped by license keys. Kernels that are marked with the exclamation sign in <span style="color:#C2410C">amber</span> do not have the latest patches installed.
 
-![monit](/images/KC-Ent-monit.png)
+![CLN Activation Key Details page listing registered servers, with an amber exclamation mark next to kernels that lack the latest patches](/images/KC-Ent-monit.png)
 
 In either case, you can check whether the latest available patch has been applied by running the following command on a system protected by KernelCare:
 
@@ -956,8 +956,8 @@ CloudLinux and KernelCare IP license adding and removing is compatible with diff
 
 You can edit your profile information by clicking on **Profile** section. Edit the necessary info and click **Update Account**.
 
-![profile](/images/reseller5.jpg)
-![contacts](/images/reseller006.jpg)
+![Edit your CloudLinux profile form with login, billing contact and company information](/images/reseller5.jpg)
+![Contact information form with the Update Account button](/images/reseller006.jpg)
 
 #### How To
 
@@ -989,7 +989,9 @@ Kernel is safe
 
 As soon as you have these files in place, it is possible to proceed with disabling SMT.
 
-<iframe width="560" height="315" title="Video: How to disable the CPU simultaneous multithreading (SMT) without reboot" src="https://www.youtube.com/embed/RUGCvEO1hAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px"><iframe style="width:100%;height:auto;aspect-ratio:16/9;vertical-align:top" width="560" height="315" title="Video: How to disable the CPU simultaneous multithreading (SMT) without reboot" src="https://www.youtube.com/embed/RUGCvEO1hAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+Watch on YouTube: [How to disable the CPU simultaneous multithreading (SMT) without reboot](https://www.youtube.com/watch?v=RUGCvEO1hAE)
 
 ##### SMT Control
 
@@ -1316,7 +1318,9 @@ microcode       : 17
 microcode       : 17
 ```
 
-<iframe width="560" height="315" title="Video: How to update microcode without reboot with vendor-provided package" src="https://www.youtube.com/embed/EydWy-b9uns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px"><iframe style="width:100%;height:auto;aspect-ratio:16/9;vertical-align:top" width="560" height="315" title="Video: How to update microcode without reboot with vendor-provided package" src="https://www.youtube.com/embed/EydWy-b9uns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+Watch on YouTube: [How to update microcode without reboot with vendor-provided package](https://www.youtube.com/watch?v=EydWy-b9uns)
 
 #### Plesk related
 
@@ -1474,7 +1478,7 @@ The UChecker (originated from "userspace checker") works with all modern Linux D
 
 This activity diagram shows how UChecker works:
 
-![uchecker](/images/uchecker.jpg)
+![UChecker activity diagram: get the latest BuildIDs from KernelCare, then for each running process and each linked shared library, parse the ELF (from disk, or from mapped memory if the library was replaced or deleted), read its BuildID and report whether the library is up to date](/images/uchecker.jpg)
 
 ##### UChecker Usage
 
