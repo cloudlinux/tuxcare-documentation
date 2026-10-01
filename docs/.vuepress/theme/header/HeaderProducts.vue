@@ -9,7 +9,14 @@
               :aria-label="productsTitle"
               @click="openedMenu = !openedMenu"
               @keydown.tab="onToggleTab">
-        <img class="header-products-container__img" alt="" :src="withBase('/global/hamburger-menu.svg')">
+        <!-- Grid ("apps") icon on mobile, so it doesn't look like the docs menu button. -->
+        <svg class="header-products-container__img" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+          <g fill="white" fill-opacity="0.76">
+            <rect x="0" y="0" width="5" height="5" rx="1"/><rect x="7.5" y="0" width="5" height="5" rx="1"/><rect x="15" y="0" width="5" height="5" rx="1"/>
+            <rect x="0" y="7.5" width="5" height="5" rx="1"/><rect x="7.5" y="7.5" width="5" height="5" rx="1"/><rect x="15" y="7.5" width="5" height="5" rx="1"/>
+            <rect x="0" y="15" width="5" height="5" rx="1"/><rect x="7.5" y="15" width="5" height="5" rx="1"/><rect x="15" y="15" width="5" height="5" rx="1"/>
+          </g>
+        </svg>
         <span class="header-products-wrapper-paragraph">{{ productsTitle }}</span>
         <img class="products-icon__default"
              :class="{'products-icon__rotate': openedMenu}"
@@ -133,7 +140,10 @@ onUnmounted(() => {
 .header-products-container
   display: flex;
   align-items center
+  justify-content center
   gap 0.875rem
+  min-width 1.5rem
+  min-height 1.5rem
   background none
   border 0
   padding 0
