@@ -444,10 +444,10 @@ div[class*="language-"].hide-fade .code-fade-mask
 #main-content:focus
   outline none
 
-// Focus/anchor targets must not land under the fixed navbar (top) or the
-// fixed back-to-top / chat launcher (bottom right) — WCAG 2.4.11.
+// Focused elements must not land under the fixed back-to-top / chat launcher
+// at the bottom right (WCAG 2.4.11). scroll-padding-top for the fixed navbar
+// is set with the header (HeaderLayout.vue).
 html
-  scroll-padding-top calc(4rem + 0.5rem)
   scroll-padding-bottom 13rem
 
 // Code blocks become keyboard focusable (client.ts) — make focus visible.
@@ -471,11 +471,12 @@ div[class*="language-"] > pre:focus-visible
 // vs #314659 body text is only ~1.5:1. Underline links inside paragraphs,
 // list items and table cells; leave header anchors and component UI (cards,
 // buttons) alone.
+// Markdown links have no class (or only RouterLink's), unlike component links.
 .content:not(.custom)
   p, li, td, th, dd
-    > a:not(.header-anchor):not([class]),
-    > a.router-link-active:not(.header-anchor),
-    > a.external-link
+    a:not([class]),
+    a[class=""],
+    a[class^="router-link"]
       text-decoration underline
       text-underline-offset 2px
 
