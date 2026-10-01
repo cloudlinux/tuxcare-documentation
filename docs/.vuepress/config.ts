@@ -20,6 +20,27 @@ export default defineUserConfig({
     anchor: {
       // Shared rule: strip punctuation/signs (, . ? ! ' etc.) from anchor urls.
       slugify,
+      // Same output as VuePress's default `permalink.ariaHidden` ("# " before
+      // the heading text), plus tabindex="-1" so the aria-hidden anchor is
+      // never a keyboard stop (axe aria-hidden-focus). Built into the static
+      // HTML, so it does not depend on client-side JS running.
+      permalink: (slug, _opts, state, idx) => {
+        const children = state.tokens[idx + 1].children;
+        const linkOpen = new state.Token("link_open", "a", 1);
+        linkOpen.attrs = [
+          ["class", "header-anchor"],
+          ["href", `#${slug}`],
+          ["aria-hidden", "true"],
+          ["tabindex", "-1"],
+        ];
+        const symbol = new state.Token("html_inline", "", 0);
+        symbol.content = "#";
+        symbol.meta = { isPermalinkSymbol: true };
+        const linkClose = new state.Token("link_close", "a", -1);
+        const space = new state.Token("text", "", 0);
+        space.content = " ";
+        children.unshift(linkOpen, symbol, linkClose, space);
+      },
     },
     headers: {
       level: [2, 3, 4, 5],
