@@ -129,6 +129,15 @@ export default {
       return this.showTooltip && !this.showChat;
     },
   },
+  watch: {
+    // Close the modal chat on navigation; the layout may be swapped and the new page must not stay behind it.
+    // Focus is left to the route announcer, which moves it to the new page.
+    "$route.path"() {
+      if (!this.showChat) return;
+      this.showChat = false;
+      this.setPageInert(false);
+    },
+  },
   mounted() {
     window.addEventListener("resize", this.handleResize);
     document.addEventListener("keydown", this.onDocumentKeydown);
@@ -199,20 +208,15 @@ export default {
         this.showTooltip = false;
       }
     },
-    // Don't let the hint bubble or the launcher cover page content that receives keyboard focus.
+    // Don't let the hint bubble cover page content that receives keyboard focus.
+    // The launcher itself is kept clear by scroll-padding-bottom in theme.styl.
     onDocumentFocusin(event) {
       const target = event.target;
       if (this.showChat || !target || !target.getBoundingClientRect || this.$el.contains(target)) return;
       const overlaps = (a, b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
-      const rect = target.getBoundingClientRect();
       const tooltip = this.$refs.tooltip;
-      if (this.shouldShowTooltip && tooltip && overlaps(rect, tooltip.getBoundingClientRect())) {
+      if (this.shouldShowTooltip && tooltip && overlaps(target.getBoundingClientRect(), tooltip.getBoundingClientRect())) {
         this.showTooltip = false;
-      }
-      const toggle = this.$refs.toggleBtn;
-      if (toggle) {
-        const t = toggle.getBoundingClientRect();
-        if (overlaps(rect, t)) window.scrollBy(0, rect.bottom - t.top + 8);
       }
     },
     handleResize() {
