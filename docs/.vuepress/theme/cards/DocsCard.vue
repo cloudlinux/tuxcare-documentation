@@ -47,7 +47,8 @@ defineProps({
     opacity 1
     transform translateX(0)
 
-  &:focus-within
+  // Ring on the whole card for keyboard focus only (not on mouse click).
+  &:has(.docs-card-link:focus-visible)
     outline 2px solid $buttonColorBg
     outline-offset 2px
 
@@ -70,9 +71,6 @@ defineProps({
     color inherit
     text-decoration none
 
-    &:focus
-      outline none
-
     &::after
       content ""
       position absolute
@@ -87,6 +85,11 @@ defineProps({
       line-height 1.3125rem
       color $textColor
       margin 0;
+      // Sit above the stretched link so the description can be selected and
+      // copied; the rest of the card stays clickable.
+      position relative
+      z-index 1
+      cursor text
 
   &__footer
     padding $cardFooterPaddingVertically $cardFooterPaddingHorizontally
@@ -112,6 +115,16 @@ defineProps({
       opacity 0
       transform translateX(-4px)
       transition all 0.2s ease
+
+// The card shows the focus ring instead (see :has above). Browsers without
+// :has() keep the link's own focus outline.
+@css {
+  @supports selector(:has(*)) {
+    .docs-card-container .docs-card-link:focus-visible {
+      outline: none;
+    }
+  }
+}
 
 @media (max-width: $mobileBreakpoint)
   .docs-card-container
