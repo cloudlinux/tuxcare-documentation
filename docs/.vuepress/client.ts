@@ -210,7 +210,8 @@ export default defineClientConfig({
 
             MAX_VISIBLE_RESULT: 12,
             MAX_VISIBLE_ROWS: 12,
-            MAX_HITS_PER_PAGE: 12,
+            // Fetch more than MAX_VISIBLE_RESULT so "Show more" has results to reveal.
+            MAX_HITS_PER_PAGE: 24,
         })
     }
 })
