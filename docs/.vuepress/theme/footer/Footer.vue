@@ -10,11 +10,11 @@
 
     <div class="social">
       <div class="social_links">
-        <a v-for="item in locales.bottomLinks" :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
+        <a v-for="item in locales.bottomLinks" :key="item.url" :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.text }}<span class="sr-only"> (opens in new tab)</span></a>
       </div>
       <span class="footer-social-text">{{ locales.stayInTouch }}</span>
       <div class="social-icons-wrapper">
-        <a v-for="item in social" class="social-icons-link" :href="item?.url" target="_blank" rel="noopener noreferrer" :aria-label="(item?.text || 'Social link') + ' (opens in new tab)'">
+        <a v-for="item in social" :key="item.url" class="social-icons-link" :href="item?.url" target="_blank" rel="noopener noreferrer" :aria-label="(item?.text || 'Social link') + ' (opens in new tab)'">
           <img v-if="item.icon" class="social-icons-link-img" :src="withBase(item?.icon)" alt=""/>
         </a>
       </div>
@@ -85,6 +85,7 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
 
   &-icons-link
     display: flex
+    flex-shrink 0
     height 3.125rem
 
     &-img
@@ -94,6 +95,37 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
 .footer-default-layout
   position static
   width 100%
+
+.sr-only
+  position absolute
+  width 1px
+  height 1px
+  padding 0
+  margin -1px
+  overflow hidden
+  clip rect(0, 0, 0, 0)
+  white-space nowrap
+  border 0
+
+// The docs sidebar is fixed to the left edge; start the page footer after it
+// so the logo link and copyright are not hidden underneath (WCAG 2.4.11).
+@media (min-width: $mobileBreakpoint + 1)
+  .footer-default-layout:not(.drawer-footer)
+    margin-left $sidebarWidth
+    width auto
+
+// Less room next to the sidebar: let the footer items wrap instead of
+// squeezing the social icons.
+@media (min-width: $mobileBreakpoint + 1) and (max-width: 1365px)
+  .footer-default-layout:not(.drawer-footer)
+    flex-wrap wrap
+    height auto
+    min-height $footerHeight
+    gap 1rem 2rem
+
+    .social
+      flex-wrap wrap
+      row-gap 1rem
 
 .sidebar-width
   width $sidebarWidth + 2rem
