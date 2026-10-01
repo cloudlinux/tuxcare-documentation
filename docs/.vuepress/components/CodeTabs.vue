@@ -33,8 +33,9 @@
         </svg>
       </button>
 
-      <!-- tabindex + region: the block scrolls horizontally, so keyboard users must be able to focus it (WCAG 2.1.1). -->
-      <pre ref="preRef" tabindex="0" role="region" :aria-label="`${tabs[activeTab].title} code`"><code ref="codeRef" class="language-bash">{{ tabs[activeTab].content }}</code></pre>
+      <!-- The block scrolls horizontally, so keyboard users must be able to focus it (WCAG 2.1.1).
+           No role="region": the tabpanel already names it, and many CodeTabs share tab titles. -->
+      <pre ref="preRef" tabindex="0"><code ref="codeRef" class="language-bash">{{ tabs[activeTab].content }}</code></pre>
       <span class="code-fade-mask" aria-hidden="true"></span>
     </div>
   </div>
