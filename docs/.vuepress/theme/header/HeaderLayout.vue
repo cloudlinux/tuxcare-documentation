@@ -30,11 +30,13 @@
         </button>
         <HeaderProducts :isMobileWidth="isMobileWidth"/>
 
-        <a v-for="item in locales.navbarLinks" 
+        <a v-for="item in locales.navbarLinks"
+        :key="item.url"
         :href="item.url"
-        target="_blank" 
-        :class="item.class" 
-        @click="onClick(item.event)">{{ item.text }}</a>
+        target="_blank"
+        rel="noopener noreferrer"
+        :class="item.class"
+        @click="onClick(item.event)">{{ item.text }}<span class="sr-only"> (opens in new tab)</span></a>
 
       </div>
     </div>
@@ -79,7 +81,7 @@ const homeUrl = computed(() => {
 })
 
 const onClick = (event) => {
-  if (event.type) {
+  if (event?.type) {
     switch (event.type) {
         case 'event':
           var event = new CustomEvent(event.name);
@@ -112,6 +114,17 @@ const onClick = (event) => {
 
     img
       display block
+
+  .sr-only
+    position absolute
+    width 1px
+    height 1px
+    padding 0
+    margin -1px
+    overflow hidden
+    clip rect(0, 0, 0, 0)
+    white-space nowrap
+    border 0
 
   &-header__logo-wrapper
     display flex
@@ -174,6 +187,21 @@ const onClick = (event) => {
   line-height 1rem
 
 
+// Keep keyboard focus from scrolling under the fixed header (WCAG 2.4.11).
+html
+  scroll-padding-top $navbarHeight + 0.5rem
+
+// Narrow desktop widths (incl. 200% zoom): tighten the header row so the
+// "Submit support request" button is not cut off.
+@media (min-width: $mobileBreakpoint + 1) and (max-width: 900px)
+  .navbar
+    .navbar-header__logo-wrapper
+      gap 1rem
+    .logo
+      margin-right 0
+  .navbar .btn
+    padding 0.7rem 1rem
+
 @media (max-width: $mobileBreakpoint)
   .navbar
     padding  $layout-vertical-padding 1.25rem
@@ -182,10 +210,22 @@ const onClick = (event) => {
     z-index 9999
 
     &-header__mobile-search
-      display block
+      display flex
+      align-items center
+      justify-content center
+      min-width 24px
+      min-height 24px
       margin-right 1.25rem
   .links > a
     display none !important
   .header-mobile__hidden
     display none !important
+
+// Very short viewports (landscape phones, 400% zoom): let the header scroll
+// away with the page so it does not cover most of the screen (WCAG 1.4.10, 2.4.11).
+@media (max-width: $mobileBreakpoint) and (max-height: 480px)
+  .navbar.fixed
+    position absolute
+  html
+    scroll-padding-top 0.5rem
 </style>
