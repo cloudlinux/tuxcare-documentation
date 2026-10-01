@@ -1,8 +1,11 @@
 <script>
 import {groupHeaders, isActive} from '../util'
-import {h} from "vue"
+import {h, inject} from "vue"
 import {usePageData} from "@vuepress/client";
 import {RouterLink, useRoute,useRouter} from "vue-router";
+
+// Expand/collapse state shared by every link of one sidebar (see Sidebar.vue).
+const noExpansion = {isExpanded: () => false, toggle: () => {}}
 
 export default {
   functional: true,
@@ -12,28 +15,75 @@ export default {
     const $page = usePageData();
     const $route = useRoute();
     const $router = useRouter();
+    const expansion = inject('sidebarExpansion', noExpansion);
+    // A link chosen in the mobile drawer closes it; focus then goes to the content.
+    const onLinkChosen = () => closeSidebarDrawer && closeSidebarDrawer({returnFocus: 'content'});
+    const ctx = {$router, expansion, onLinkChosen};
     const selfActive = isActive($route, item?.path);
     const active = item?.type === 'auto'
         ? selfActive || item.children.some(c => isActive($route, item.basePath + '#' + c.slug))
         : selfActive;
-    const link = renderHeader(h, item?.path, item.title || item?.path, active, item.headers, closeSidebarDrawer, $router, item?.icon);
     const configDepth = $page.value.frontmatter?.sidebarDepth != null
         ? $page.value.frontmatter?.sidebarDepth
         : 5;
     const maxDepth = configDepth == null ? 1 : configDepth;
+    const hasList = maxDepth >= 1;
     if (item?.type === 'auto') {
-      return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth, 1, closeSidebarDrawer)]
+      const link = renderHeader(h, item?.path, item.title || item?.path, active, item.headers, ctx, item?.icon, hasList);
+      return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth, 1, ctx, item?.path)]
     } else {
       if (item.headers && item.headers.length) {
         const children = groupHeaders(item.headers);
-        return [link, renderChildren(h, children, item?.path, $route, maxDepth, 1, closeSidebarDrawer)];
+        const link = renderHeader(h, item?.path, item.title || item?.path, active, item.headers, ctx, item?.icon, hasList);
+        return [link, renderChildren(h, children, item?.path, $route, maxDepth, 1, ctx, item?.path)];
       }
-      return renderLink(h, item?.path, item.title || item?.path, active, item.children, 0, closeSidebarDrawer, item?.icon);
+      return renderLink(h, item?.path, item.title || item?.path, active, 0, ctx, item?.icon);
     }
   }
 }
 
-function renderLink(h, to, text, active, children, depth = 0, closeSidebarDrawer, icon) {
+// Stable id for the sub-list a toggle button controls.
+const listId = (to) => 'sidebar-list-' + to.replace(/[^\w-]+/g, '-')
+
+// Same-page #hash links are plain anchors: RouterLink would mark every one of
+// them aria-current="page", since the router ignores the hash when matching.
+function renderAnchor(h, to, attrs, content, {$router, onLinkChosen}) {
+  if (!to.includes('#')) {
+    return h(RouterLink, {
+      ...attrs,
+      to,
+      activeClass: '',
+      exactActiveClass: '',
+      onClick: onLinkChosen,
+    }, () => content);
+  }
+  return h('a', {
+    ...attrs,
+    href: $router.resolve(to).href,
+    onClick: (e) => {
+      onLinkChosen();
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      $router.push(to);
+    },
+  }, content);
+}
+
+function renderToggle(h, to, text, expanded, hasList, onToggle) {
+  return h('button', {
+    type: 'button',
+    class: 'sidebar-toggle',
+    'aria-expanded': String(expanded),
+    'aria-controls': hasList ? listId(to) : undefined,
+    'aria-label': `${text} subsections`,
+    onClick: (e) => {
+      e.stopPropagation();
+      onToggle();
+    },
+  });
+}
+
+function renderLink(h, to, text, active, depth = 0, ctx, icon, toggle) {
   const linkContent = icon
     ? [
         h('img', {
@@ -48,66 +98,70 @@ function renderLink(h, to, text, active, children, depth = 0, closeSidebarDrawer
       ]
     : [text];
 
-  const link = h(RouterLink, {
+  const link = renderAnchor(h, to, {
     'data-anchor': to,
-    to,
-    activeClass: '',
-    exactActiveClass: '',
     class: {
       active,
       'sidebar-link': true,
       'sidebar-link--with-icon': !!icon,
       ['link-depth-level-' + depth]: true,
     },
-  }, () => linkContent);
+  }, linkContent, ctx);
 
+  // `toggle` is set for sub-headings whose nested list can be collapsed.
+  if (!toggle) return h('div', {class: {active}}, [link]);
+
+  const expanded = ctx.expansion.isExpanded(to);
   return h('div', {
     class: {
       active,
-      'collapsed': true,
-      'sidebar-link-container': !!children?.length
+      'collapsed': !expanded,
+      'sidebar-link-container': true
     },
-    onClick: (e) => {
-      const classes = e.target.classList;
-      classes.toggle('collapsed')
-      e.target.tagName !== 'DIV' && closeSidebarDrawer()
-    },
-  }, [link]);
+  }, [renderToggle(h, to, text, expanded, toggle.hasList, () => ctx.expansion.toggle(to)), link]);
 }
 
-function renderHeader(h, to, text, active, childHeaders, closeSidebarDrawer, $router, icon) {
+function renderHeader(h, to, text, active, childHeaders, ctx, icon, hasList) {
   const hasDirectChildren = !!childHeaders && childHeaders.some(child => child.level !== 1);
+  // Page entries: sub-headings show for the current page unless toggled.
+  const expanded = ctx.expansion.isExpanded(to, active);
   return h('div', {
     class: {
       active,
-      'collapsed': active,
+      'collapsed': expanded,
       'sidebar-header': true,
       'sidebar-link': true,
       'sidebar-header--empty': !hasDirectChildren,
       'sidebar-header--with-icon': !!icon,
     },
+    // Mouse clicks on the row (outside the link and the toggle) open the page.
     onClick: (e) => {
-      const classes = e.target.classList;
-      const link = e.target.querySelector('a');
-      classes.toggle('collapsed')
-      link && $router.push(link.getAttribute('href'))
+      if (e.target !== e.currentTarget) return;
+      ctx.expansion.toggle(to, active);
+      ctx.$router.push(to);
     }
-  }, [renderLink(h, to, text, active, null, 0, closeSidebarDrawer, icon)])
+  }, [
+    hasDirectChildren && renderToggle(h, to, text, expanded, hasList, () => ctx.expansion.toggle(to, active)),
+    renderLink(h, to, text, active, 0, ctx, icon)
+  ])
 }
 
-function renderChildren(h, children, path, route, maxDepth, depth = 1, closeSidebarDrawer) {
+function renderChildren(h, children, path, route, maxDepth, depth = 1, ctx, to) {
   if (!children || depth > maxDepth) return null;
 
-  return h('ul', {class: 'sidebar-sub-headers'}, children.map(c => {
-    const active = isActive(route, path + '#' + c.slug);
+  return h('ul', {class: 'sidebar-sub-headers', id: to ? listId(to) : undefined}, children.map(c => {
+    const childTo = path + '#' + c.slug;
+    const active = isActive(route, childTo);
+    const collapsible = depth < 3 && !!c.children?.length;
+    const hasList = depth + 1 <= maxDepth;
     return h('li', {
       class: {
         'collapsible': depth < 3,
         'sidebar-sub-header': true
       }
     }, [
-      renderLink(h, path + '#' + c.slug, c.title, active, c.children, depth,closeSidebarDrawer),
-      renderChildren(h, c.children, path, route, maxDepth, depth + 1,closeSidebarDrawer)
+      renderLink(h, childTo, c.title, active, depth, ctx, undefined, collapsible && {hasList}),
+      renderChildren(h, c.children, path, route, maxDepth, depth + 1, ctx, childTo)
     ])
   }))
 }
@@ -124,6 +178,7 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1, closeSide
       margin-left 2rem
 
     & > .sidebar-link-container
+      position relative
       background-image url("../../public/expand-more-down.svg")
       background-repeat no-repeat
       background-position: left 1.0625rem top 1rem
@@ -155,6 +210,25 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1, closeSide
 
     .sidebar-sub-headers
       margin-left 3rem
+
+// Expand/collapse button over the arrow drawn by the row (at least 24x24px).
+.sidebar-toggle
+  position absolute
+  left 0.5625rem
+  top 0.5rem
+  width 2rem
+  height 1.5rem
+  margin 0
+  padding 0
+  background none
+  border 0
+  cursor pointer
+
+  .sidebar-header > &
+    left 0
+    top 50%
+    width 1.625rem
+    transform translateY(-50%)
 
 .sidebar-link-icon
   max-width 1.5rem
