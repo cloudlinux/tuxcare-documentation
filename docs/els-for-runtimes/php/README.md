@@ -20,7 +20,7 @@ Here are the key features and characteristics of alt-php:
 
 alt-php provides a more flexible and convenient environment for working with different PHP versions on a single server, which is particularly useful in a web hosting environment where multiple users have varying requirements for PHP versions for their web applications.
 
-## Supported OS and PHP versions
+## Supported OS and PHP Versions
 
 <TableTabs>
 
@@ -299,531 +299,9 @@ Replace `alt-package-name` with the specific name of the package you are looking
 
 </TableTabs>
 
-## Installation on Windows
+### PHP extensions list
 
-TuxCare provides two ways to install ELS PHP on Windows: using the **TuxCare Installer** (recommended) — a graphical tool that automates the process, or **manually** by downloading and configuring PHP from the repository.
-
-<ELSPrerequisites id="windows-prerequisites">
-
-* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
-* Administrator access to the Windows system
-
-</ELSPrerequisites>
-
-:::tip
-Customers who previously received an authentication token can continue to use it: select **Use previous token** in the TuxCare Installer, or use the tokenized URL for manual installation.
-:::
-
-<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)' }">
-
-<template #TuxCare_Installer>
-
-TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
-
-<ELSSteps>
-
-1. Download the installer and launch it
-
-   Download the installer from the following link:
-
-   ```text
-   https://windows.tuxcare.com/php/TuxCare.Installer.exe
-   ```
-
-   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
-
-2. Select Register
-
-   Click **Register**.
-
-   ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
-
-   :::tip
-   If you previously registered on this machine with an authentication token and saved it, you can click **Use previous token** instead.
-   :::
-
-3. Register with your license key
-
-   * Click **I have a license key**.
-
-     ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
-
-   * Enter your license key to complete the registration.
-
-     ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
-
-4. Select a PHP version
-
-   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
-
-   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
-
-   :::tip
-   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
-
-   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
-   :::
-
-5. Choose installation path and load modules
-
-   * By default, the installer uses `C:\Program Files`.
-   * Click **Change** to install to a different location.
-   * Click **Load** to fetch the required PHP archive.
-   * Select the modules you need and click **Continue**.
-
-   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
-
-6. Verify the installation
-
-   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
-
-   ```text
-   php -v
-   ```
-
-   You should see output like:
-
-   ```text
-   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
-   Copyright (c) 1997-2016 The PHP Group
-   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
-   ```
-
-</ELSSteps>
-
-During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
-
-</template>
-
-<template #Manual>
-
-Manual installation requires a tokenized URL (obtain via [sales@tuxcare.com](mailto:sales@tuxcare.com)) that gives access to the TuxCare PHP for Windows repository. The token is placed right after the domain:
-
-```text
-https://windows.tuxcare.com/<YOUR-TOKEN>/php/
-```
-
-:::warning Troubleshooting: browser credential prompts
-Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://windows.tuxcare.com/TOKEN/php/`). Without it, the server may issue a redirect that drops the token, causing the browser to prompt for credentials. With the trailing slash, subfolder navigation works as expected.
-
-<details>
-<summary>How to use a tokenized URL</summary>
-
-Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL path:
-
-```text
-https://windows.tuxcare.com/<YOUR-TOKEN>/php/
-```
-
-**Always include the trailing slash.** This applies to all directory URLs, including version subfolders:
-
-- ✅ `https://windows.tuxcare.com/TOKEN/php/` — works correctly
-- ❌ `https://windows.tuxcare.com/TOKEN/php` — may prompt for credentials
-
-**Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
-
-- **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
-- **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
-
-**Browsing subdirectories.** If you are prompted for credentials when entering a subdirectory, manually insert the token into the URL — add `<YOUR-TOKEN>/` right after `windows.tuxcare.com/` in the address bar.
-
-**Example walkthrough:**
-
-1. Open the repository root:
-   ```text
-   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
-   ```
-2. Click on `7.4.33/`. If the browser navigates to `https://windows.tuxcare.com/php/7.4.33/` and prompts for a password, edit the address bar and add the token:
-   ```text
-   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/
-   ```
-3. Click on `tuxcare.els8/`. If prompted again, add the token to the URL:
-   ```text
-   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/tuxcare.els8/
-   ```
-4. You see the ZIP files listed. Click on the file to download it directly.
-
-**Downloading files directly.** If you already know which file you need, skip browsing and build the full URL from the repository root, version, release folder, and file name:
-
-```text
-https://windows.tuxcare.com/<YOUR-TOKEN>
-  /php/<version>/tuxcare.els<N>/<filename>.zip
-```
-
-PowerShell:
-
-```text
-$base = "https://windows.tuxcare.com/<YOUR-TOKEN>"
-$file = "/php/7.4.33/tuxcare.els8/" +
-  "php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
-Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
-```
-
-curl:
-
-```text
-BASE="https://windows.tuxcare.com/<YOUR-TOKEN>"
-FILE="/php/7.4.33/tuxcare.els8/\
-php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
-curl -O "${BASE}${FILE}"
-```
-
-</details>
-<br>
-:::
-
-<ELSSteps>
-
-1. Open the repository in your browser
-
-   Navigate to your tokenized URL:
-
-   ```text
-   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
-   ```
-
-   You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
-
-2. Choose the correct archive
-
-   Inside each version folder you will find subfolders named `tuxcare.elsN/`, where `N` is the TuxCare release number. Always select the subfolder with the **highest** number, as it contains the latest security updates. Each archive follows this naming pattern:
-
-   ```text
-   php-<version>-tuxcare-els<N>-<thread>-Win32-<vc>-<arch>-signed.zip
-   ```
-
-   Select the archive that matches your environment:
-
-   | Component | Options | How to choose |
-   | --- | --- | --- |
-   | **Thread safety** | `nts` (Non-Thread Safe) or `ts` (Thread Safe) | Use `nts` for IIS with FastCGI, nginx, or CLI. Use `ts` only for Apache `mod_php`. |
-   | **Architecture** | `x64` or `x86` | Use `x64` for 64-bit Windows (most common). Use `x86` only for 32-bit systems. |
-   | **VC runtime** | `vc15`, `vs16`, `vs17`, etc. | Indicates the required Visual C++ Redistributable. Download from [Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) if not installed. |
-
-   For example, to install PHP 7.4 (NTS, 64-bit), download `php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip`. This archive requires the **Visual C++ Redistributable for Visual Studio 2017** (`vc15`).
-
-3. Extract the archive
-
-   Create a destination folder (e.g. `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
-
-   Alternatively, use PowerShell:
-
-   ```text
-   New-Item -ItemType Directory -Path "C:\PHP" -Force
-   Expand-Archive `
-     -Path "$HOME\Downloads\php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip" `
-     -DestinationPath "C:\PHP"
-   ```
-
-   After extraction, your directory should contain `php.exe`, `php.ini-development`, `php.ini-production`, and an `ext` folder with extension DLLs.
-
-4. Configure php.ini
-
-   Create a configuration file from one of the provided templates — copy `php.ini-development` for development or `php.ini-production` for production to `php.ini`:
-
-   ```text
-   Copy-Item "C:\PHP\php.ini-production" "C:\PHP\php.ini"
-   ```
-
-   Open `C:\PHP\php.ini` in a text editor, set the extension directory, and enable the extensions your application requires:
-
-   ```text
-   extension_dir = "C:\PHP\ext"
-   extension=curl
-   extension=mbstring
-   extension=mysqli
-   extension=openssl
-   ```
-
-5. Add PHP to the System PATH
-
-   To make `php` available from any terminal, add the PHP directory to the System PATH. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path**, click **Edit**, then click **New** and add `C:\PHP`.
-
-   Alternatively, use PowerShell (run as Administrator):
-
-   ```text
-   $currentPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
-   [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;C:\PHP", "Machine")
-   ```
-
-   Close and reopen any terminal windows for the change to take effect.
-
-6. Verify the installation
-
-   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
-
-   ```text
-   php -v
-   ```
-
-   You should see output like:
-
-   ```text
-   PHP 7.4.33 (cli) (built: Mar 10 2026 10:12:00)
-   Copyright (c) The PHP Group
-   Zend Engine v3.4.0, Copyright (c) Zend Technologies
-   ```
-
-   To verify that the required extensions are loaded, run `php -m`.
-
-</ELSSteps>
-
-</template>
-
-</TableTabs>
-<br>
-<details>
- <summary>How to find System PATH</summary>
-
- 1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
- 2. Click **Advanced system settings**.
-
-    ![Windows System window with the Advanced system settings link highlighted](/images/php-windows-advanced-settings.webp)
-
- 3. Click on **Environment Variables**.
-
-    ![Advanced tab of Windows System Properties with the Environment Variables button highlighted](/images/php-windows-environment-variables.webp)
-
- 4. Under *System variables*, find **Path** and click **Edit**.
-
-    ![Windows Environment Variables dialog with the Path entry selected under System variables](/images/php-windows-add-path.webp)
-
- 5. You will see your PHP `C:\PHP` directory added.
-
-    ![Windows Edit environment variable dialog showing the PHP installation directory added to Path](/images/php-windows-add-path-2.webp)
-</details>
-
-### Additional configurations
-
-Depending on your ELS PHP usage purpose, additional configurations may be required. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
-
-#### Change default PHP version
-
-If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
-
-#### Extensions
-
-Extensions are managed through the `php.ini` file located in your PHP installation directory (e.g. `C:\PHP`). Open it in a text editor and find the extensions section. Remove the semicolon `;` at the beginning of a line to enable an extension, or add `;` to disable it.
-
-```text
-;extension=curl
-extension=gd2
-;extension=mbstring
-extension=mysqli
-extension=pdo_mysql
-```
-
-#### Increase upload/memory limits
-
-If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits. Open the `php.ini` file and set the values as needed:
-
-```text
-upload_max_filesize=40M
-post_max_size=40M
-memory_limit=256M
-```
-
-#### Uninstallation
-
-To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
-
-To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
-
-## SaxonC Use Case
-
-You can extend alt-php with additional modules. Below is an example of installing the SaxonC PHP extension.
-
-Although this guide uses **alt-php82** in its examples, the same installation steps apply to **alt-php83** and newer versions. Replace `php82` with your target version in all commands and file paths.
-
-This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names and paths to match the version you downloaded.
-
-<ELSPrerequisites id="saxonc-prerequisites">
-
-* Saxon 12+ (required for PHP 8.2+ compatibility) — download from [saxonica.com](https://www.saxonica.com/download/c.xml)
-* `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support
-* `alt-php82-devel` (or matching version)
-
-| Edition   | License     | Key Features                            |
-| --------- | ----------- | --------------------------------------- |
-| SaxonC-HE | Open Source | XSLT 3.0, XPath 3.1, XQuery 3.1 (Basic) |
-| SaxonC-PE | Commercial  | HE + ICU localization, JSON support     |
-| SaxonC-EE | Commercial  | PE + Schema validation, Optimization    |
-
-</ELSPrerequisites>
-
-### Set up SaxonC
-
-<ELSSteps>
-
-1. Download SaxonC
-
-   Download from the [official Saxonica download page](https://www.saxonica.com/download/c.xml). Create a working directory and move the downloaded zip file into it:
-
-   ```text
-   mkdir saxon && cd saxon
-   mv ../SaxonCHE-linux-x86_64-12-9-0.zip .
-   ```
-
-2. Extract the archive
-
-   Unzip the downloaded file and verify:
-
-   ```text
-   unzip SaxonCHE-linux-x86_64-12-9-0.zip
-   ls
-   ```
-
-   Example output:
-
-   ```text
-   SaxonCHE-linux-x86_64-12-9-0  SaxonCHE-linux-x86_64-12-9-0.zip
-   ```
-
-3. Install the libraries
-
-   Starting with version 12.6, `/opt/saxonica/` is the recommended installation path. Navigate into the extracted directory and copy all Saxon files:
-
-   ```text
-   cd SaxonCHE-linux-x86_64-12-9-0
-   sudo mkdir -p /opt/saxonica/
-   sudo cp -r SaxonCHE/* /opt/saxonica/
-   ```
-
-   The installed structure should contain `bin`, `include`, and `lib` directories.
-
-4. Configure environment variables
-
-   Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`.
-
-   The `LD_LIBRARY_PATH` variable must point to the Saxon libraries:
-
-   ```text
-   export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
-   ```
-
-   To run the Transform, Query, and Validate (EE only) binaries, set the `PATH` variable:
-
-   ```text
-   export PATH="/opt/saxonica/bin:$PATH"
-   ```
-
-   :::tip
-   If the PHP web server can't find the Saxon libraries, you may also need to add `/opt/saxonica/lib` to a new file in `/etc/ld.so.conf.d/` and run `ldconfig`.
-   :::
-
-</ELSSteps>
-
-### Build the PHP extension
-
-<ELSSteps>
-
-1. Install alt-php82-devel
-
-   Install the development package required for compiling PHP extensions:
-
-   ```text
-   dnf install alt-php82-devel
-   ```
-
-   Verify that `phpize` is available:
-
-   ```text
-   ls /opt/alt/php82/usr/bin/phpize
-   ```
-
-2. Prepare the build environment
-
-   Navigate to the PHP extension source directory within the extracted Saxon archive and run `phpize` to prepare the build:
-
-   ```text
-   cd php/src/
-   /opt/alt/php82/usr/bin/phpize
-   ```
-
-   Example output:
-
-   ```text
-   Configuring for:
-   PHP Api Version:         20220829
-   Zend Module Api No:      20220829
-   Zend Extension Api No:   420220829
-   ```
-
-3. Configure and compile
-
-   Configure the extension build with Saxon support and link to the Saxon libraries:
-
-   ```text
-   ./configure --with-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
-   ```
-
-   Compile and install:
-
-   ```text
-   make
-   sudo make install
-   ```
-
-   Example output:
-
-   ```text
-   Installing shared extensions:     /opt/alt/php82/usr/lib64/php/modules/
-   ```
-
-4. Enable the extension
-
-   Create a configuration file that tells PHP to load the extension:
-
-   ```text
-   tee -a /opt/alt/php82/etc/php.d/20-saxon.ini <<EOF
-   ; configuration for php Saxon HE/PE/EE module
-   extension=saxon.so
-   EOF
-   ```
-
-   Verify that the Saxon extension appears in the list of loaded modules:
-
-   ```text
-   /opt/alt/php82/usr/bin/php -m | grep saxon
-   ```
-
-   Example output:
-
-   ```text
-   saxonc
-   ```
-
-5. Verify with a test script
-
-   Run a quick test to confirm the extension works:
-
-   ```text
-   /opt/alt/php82/usr/bin/php -ddisplay_errors=E_ALL  << 'EOF'
-   <?php
-     $saxonProc = new Saxon\SaxonProcessor();
-     $transformer = $saxonProc->newXslt30Processor();
-     $executable = $transformer->compileFromString("
-       <xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
-           <xsl:template name='go'><a/></xsl:template>
-       </xsl:stylesheet>
-   ");
-     $root = $executable->callTemplateReturningValue("go");
-     $node = $root->getHead()->getNodeValue();
-     echo "$node \n";
-   EOF
-   ```
-
-   Example output:
-
-   ```text
-   <a/>
-   ```
-
-   If you are using php-fpm or Apache, restart the services.
-
-</ELSSteps>
-
-## PHP extensions list
+The following lists cover the Linux (alt-php) builds of ELS PHP. For ELS PHP for Windows, see [Windows extensions list](#windows-extensions-list).
 
 PHP extensions are modules that extend the functionality of the PHP programming language. These extensions provide additional capabilities for working with various types of data, performing specific tasks, interacting with external resources and supporting various protocols.
 
@@ -3056,6 +2534,634 @@ The PHP core includes many built-in extensions that provide basic functionality,
   </template>
 
 </TableTabs>
+
+## Installation on Windows
+
+TuxCare provides two ways to install ELS PHP on Windows: using the **TuxCare Installer** (recommended) — a graphical tool that automates the process, or **manually** by downloading and configuring PHP from the repository.
+
+<ELSPrerequisites id="windows-prerequisites">
+
+* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
+* Administrator access to the Windows system
+
+</ELSPrerequisites>
+
+:::tip
+Customers who previously received an authentication token can continue to use it: select **Use previous token** in the TuxCare Installer, or use the tokenized URL for manual installation.
+:::
+
+<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)' }">
+
+<template #TuxCare_Installer>
+
+TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
+
+<ELSSteps>
+
+1. Download the installer and launch it
+
+   Download the installer from the following link:
+
+   ```text
+   https://windows.tuxcare.com/php/TuxCare.Installer.exe
+   ```
+
+   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
+
+2. Select Register
+
+   Click **Register**.
+
+   ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
+
+   :::tip
+   If you previously registered on this machine with an authentication token and saved it, you can click **Use previous token** instead.
+   :::
+
+3. Register with your license key
+
+   * Click **I have a license key**.
+
+     ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
+
+   * Enter your license key to complete the registration.
+
+     ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
+
+4. Select a PHP version
+
+   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
+
+   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
+
+   :::tip
+   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
+
+   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
+   :::
+
+5. Choose installation path and load modules
+
+   * By default, the installer uses `C:\Program Files`.
+   * Click **Change** to install to a different location.
+   * Click **Load** to fetch the required PHP archive.
+   * Select the modules you need and click **Continue**.
+
+   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
+
+6. Verify the installation
+
+   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
+   Copyright (c) 1997-2016 The PHP Group
+   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+   ```
+
+</ELSSteps>
+
+During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
+
+</template>
+
+<template #Manual>
+
+Manual installation requires a tokenized URL (obtain via [sales@tuxcare.com](mailto:sales@tuxcare.com)) that gives access to the TuxCare PHP for Windows repository. The token is placed right after the domain:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+```
+
+:::warning Troubleshooting: browser credential prompts
+Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://windows.tuxcare.com/TOKEN/php/`). Without it, the server may issue a redirect that drops the token, causing the browser to prompt for credentials. With the trailing slash, subfolder navigation works as expected.
+
+<details>
+<summary>How to use a tokenized URL</summary>
+
+Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL path:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+```
+
+**Always include the trailing slash.** This applies to all directory URLs, including version subfolders:
+
+- ✅ `https://windows.tuxcare.com/TOKEN/php/` — works correctly
+- ❌ `https://windows.tuxcare.com/TOKEN/php` — may prompt for credentials
+
+**Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
+
+- **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
+- **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
+
+**Browsing subdirectories.** If you are prompted for credentials when entering a subdirectory, manually insert the token into the URL — add `<YOUR-TOKEN>/` right after `windows.tuxcare.com/` in the address bar.
+
+**Example walkthrough:**
+
+1. Open the repository root:
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+   ```
+2. Click on `7.4.33/`. If the browser navigates to `https://windows.tuxcare.com/php/7.4.33/` and prompts for a password, edit the address bar and add the token:
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/
+   ```
+3. Click on `tuxcare.els8/`. If prompted again, add the token to the URL:
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/tuxcare.els8/
+   ```
+4. You see the ZIP files listed. Click on the file to download it directly.
+
+**Downloading files directly.** If you already know which file you need, skip browsing and build the full URL from the repository root, version, release folder, and file name:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>
+  /php/<version>/tuxcare.els<N>/<filename>.zip
+```
+
+PowerShell:
+
+```text
+$base = "https://windows.tuxcare.com/<YOUR-TOKEN>"
+$file = "/php/7.4.33/tuxcare.els8/" +
+  "php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
+Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
+```
+
+curl:
+
+```text
+BASE="https://windows.tuxcare.com/<YOUR-TOKEN>"
+FILE="/php/7.4.33/tuxcare.els8/\
+php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
+curl -O "${BASE}${FILE}"
+```
+
+</details>
+<br>
+:::
+
+<ELSSteps>
+
+1. Open the repository in your browser
+
+   Navigate to your tokenized URL:
+
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+   ```
+
+   You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
+
+2. Choose the correct archive
+
+   Inside each version folder you will find subfolders named `tuxcare.elsN/`, where `N` is the TuxCare release number. Always select the subfolder with the **highest** number, as it contains the latest security updates. Each archive follows this naming pattern:
+
+   ```text
+   php-<version>-tuxcare-els<N>-<thread>-Win32-<vc>-<arch>-signed.zip
+   ```
+
+   Select the archive that matches your environment:
+
+   | Component | Options | How to choose |
+   | --- | --- | --- |
+   | **Thread safety** | `nts` (Non-Thread Safe) or `ts` (Thread Safe) | Use `nts` for IIS with FastCGI, nginx, or CLI. Use `ts` only for Apache `mod_php`. |
+   | **Architecture** | `x64` or `x86` | Use `x64` for 64-bit Windows (most common). Use `x86` only for 32-bit systems. |
+   | **VC runtime** | `vc15`, `vs16`, `vs17`, etc. | Indicates the required Visual C++ Redistributable. Download from [Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) if not installed. |
+
+   For example, to install PHP 7.4 (NTS, 64-bit), download `php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip`. This archive requires the **Visual C++ Redistributable for Visual Studio 2017** (`vc15`).
+
+3. Extract the archive
+
+   Create a destination folder (e.g. `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
+
+   Alternatively, use PowerShell:
+
+   ```text
+   New-Item -ItemType Directory -Path "C:\PHP" -Force
+   Expand-Archive `
+     -Path "$HOME\Downloads\php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip" `
+     -DestinationPath "C:\PHP"
+   ```
+
+   After extraction, your directory should contain `php.exe`, `php.ini-development`, `php.ini-production`, and an `ext` folder with extension DLLs.
+
+4. Configure php.ini
+
+   Create a configuration file from one of the provided templates — copy `php.ini-development` for development or `php.ini-production` for production to `php.ini`:
+
+   ```text
+   Copy-Item "C:\PHP\php.ini-production" "C:\PHP\php.ini"
+   ```
+
+   Open `C:\PHP\php.ini` in a text editor, set the extension directory, and enable the extensions your application requires:
+
+   ```text
+   extension_dir = "C:\PHP\ext"
+   extension=curl
+   extension=mbstring
+   extension=mysqli
+   extension=openssl
+   ```
+
+5. Add PHP to the System PATH
+
+   To make `php` available from any terminal, add the PHP directory to the System PATH. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path**, click **Edit**, then click **New** and add `C:\PHP`.
+
+   Alternatively, use PowerShell (run as Administrator):
+
+   ```text
+   $currentPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+   [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;C:\PHP", "Machine")
+   ```
+
+   Close and reopen any terminal windows for the change to take effect.
+
+6. Verify the installation
+
+   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 7.4.33 (cli) (built: Mar 10 2026 10:12:00)
+   Copyright (c) The PHP Group
+   Zend Engine v3.4.0, Copyright (c) Zend Technologies
+   ```
+
+   To verify that the required extensions are loaded, run `php -m`.
+
+</ELSSteps>
+
+</template>
+
+</TableTabs>
+<br>
+<details>
+ <summary>How to find System PATH</summary>
+
+ 1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
+ 2. Click **Advanced system settings**.
+
+    ![Windows System window with the Advanced system settings link highlighted](/images/php-windows-advanced-settings.webp)
+
+ 3. Click on **Environment Variables**.
+
+    ![Advanced tab of Windows System Properties with the Environment Variables button highlighted](/images/php-windows-environment-variables.webp)
+
+ 4. Under *System variables*, find **Path** and click **Edit**.
+
+    ![Windows Environment Variables dialog with the Path entry selected under System variables](/images/php-windows-add-path.webp)
+
+ 5. You will see your PHP `C:\PHP` directory added.
+
+    ![Windows Edit environment variable dialog showing the PHP installation directory added to Path](/images/php-windows-add-path-2.webp)
+</details>
+
+### Additional configurations
+
+Depending on your ELS PHP usage purpose, additional configurations may be required. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
+
+#### Change default PHP version
+
+If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
+
+#### Extensions
+
+Extensions are managed through the `php.ini` file located in your PHP installation directory (e.g. `C:\PHP`). Open it in a text editor and find the extensions section. Remove the semicolon `;` at the beginning of a line to enable an extension, or add `;` to disable it.
+
+```text
+;extension=curl
+extension=gd2
+;extension=mbstring
+extension=mysqli
+extension=pdo_mysql
+```
+
+##### Windows extensions list
+
+The following lists cover the Windows builds of ELS PHP. **Built-in** extensions are part of the PHP build and always available. **Loadable** extensions are DLLs in the `ext` folder that you enable in `php.ini` as shown above. Extensions marked *TS only* or *NTS only* are available only in the Thread Safe or Non-Thread Safe build.
+
+<TableTabs>
+
+  <template #PHP_5.2_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, com_dotnet, ctype, date, dom, filter, ftp, hash, iconv, json, libxml, odbc, pcre, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zlib
+
+  **Loadable:** adt, amf, bcompiler, bitset, blenc, bz2, bz2_filter, classkit, cpdf, crack, curl, cvsclient, db, dba, dbase, dbx, dio, docblock, domxml, doublemetaphone, event, exif, fdf, fileinfo, filepro, gd2, gettext, gmp, gopher, haru, htscanner, http, hyperwave, ibm_db2, id3, ifx, iisfunc (TS only), imap, ingres2, interbase, ioncube_loader, ldap, lzf, mailparse, maxdb, mbstring, mcrypt, mcrypt_filter, mcve, memcache, mhash, mime_magic, ming, msql, mssql, mysql, mysqli, netools, ntuser, oci8, oggvorbis, openssl, operator, oracle, params, parsekit, pdflib, pdo, pdo_firebird, pdo_ibm, pdo_informix, pdo_mssql, pdo_mysql, pdo_oci, pdo_oci8, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlite_external, pdo_user, pgsql, phar, phk, php5activescript (TS only), phpdoc, pop3, printer, pspell, radius, rar, runkit, sam, sdo, shmop, smtp, snmp, soap, sockets, spl_types, sqlite, ssh2, stats, stem, sybase_ct, threads (TS only), tidy, timezonedb, translit, uploadprogress, win32ps, win32scheduler, win32service, win32std, xmlrpc, xsl, yami, zip, zlib_filter
+
+  </div>
+
+  </template>
+
+  <template #PHP_5.4_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, ereg, filter, ftp, hash, iconv, json, libxml, mcrypt, mhash, mysqlnd, odbc, pcre, PDO, Phar, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dbx, enchant, exif, fileinfo, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysql, mysqli, oci8, oci8_11g, openssl, pdo_dblib, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sqlite3, sqlsrv, sybase_ct, tidy, wincache (NTS only), xmlrpc, xsl, ZendLoader (NTS only)
+
+  </div>
+
+  </template>
+
+  <template #PHP_5.6_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, ereg, filter, hash, iconv, json, libxml, mcrypt, mhash, mysqlnd, odbc, pcre, PDO, Phar, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysql, mysqli, oci8_12c, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sqlite3, sqlsrv, sybase_ct, tidy, xmlrpc, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_7.2_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_7.3_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_7.4_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd2, gettext, gmp, imap, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_8.0_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd, gettext, gmp, imap, intl, ldap, mbstring, mysqli, oci8_19, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_8.1_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd, gettext, gmp, imap, intl, ldap, mbstring, mysqli, oci8_19, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xsl
+
+  </div>
+
+  </template>
+
+</TableTabs>
+
+#### Increase upload/memory limits
+
+If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits. Open the `php.ini` file and set the values as needed:
+
+```text
+upload_max_filesize=40M
+post_max_size=40M
+memory_limit=256M
+```
+
+#### Uninstallation
+
+To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
+
+To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
+
+## SaxonC Use Case
+
+You can extend alt-php with additional modules. Below is an example of installing the SaxonC PHP extension.
+
+Although this guide uses **alt-php82** in its examples, the same installation steps apply to **alt-php83** and newer versions. Replace `php82` with your target version in all commands and file paths.
+
+This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names and paths to match the version you downloaded.
+
+<ELSPrerequisites id="saxonc-prerequisites">
+
+* Saxon 12+ (required for PHP 8.2+ compatibility) — download from [saxonica.com](https://www.saxonica.com/download/c.xml)
+* `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support
+* `alt-php82-devel` (or matching version)
+
+| Edition   | License     | Key Features                            |
+| --------- | ----------- | --------------------------------------- |
+| SaxonC-HE | Open Source | XSLT 3.0, XPath 3.1, XQuery 3.1 (Basic) |
+| SaxonC-PE | Commercial  | HE + ICU localization, JSON support     |
+| SaxonC-EE | Commercial  | PE + Schema validation, Optimization    |
+
+</ELSPrerequisites>
+
+### Set up SaxonC
+
+<ELSSteps>
+
+1. Download SaxonC
+
+   Download from the [official Saxonica download page](https://www.saxonica.com/download/c.xml). Create a working directory and move the downloaded zip file into it:
+
+   ```text
+   mkdir saxon && cd saxon
+   mv ../SaxonCHE-linux-x86_64-12-9-0.zip .
+   ```
+
+2. Extract the archive
+
+   Unzip the downloaded file and verify:
+
+   ```text
+   unzip SaxonCHE-linux-x86_64-12-9-0.zip
+   ls
+   ```
+
+   Example output:
+
+   ```text
+   SaxonCHE-linux-x86_64-12-9-0  SaxonCHE-linux-x86_64-12-9-0.zip
+   ```
+
+3. Install the libraries
+
+   Starting with version 12.6, `/opt/saxonica/` is the recommended installation path. Navigate into the extracted directory and copy all Saxon files:
+
+   ```text
+   cd SaxonCHE-linux-x86_64-12-9-0
+   sudo mkdir -p /opt/saxonica/
+   sudo cp -r SaxonCHE/* /opt/saxonica/
+   ```
+
+   The installed structure should contain `bin`, `include`, and `lib` directories.
+
+4. Configure environment variables
+
+   Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`.
+
+   The `LD_LIBRARY_PATH` variable must point to the Saxon libraries:
+
+   ```text
+   export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
+   ```
+
+   To run the Transform, Query, and Validate (EE only) binaries, set the `PATH` variable:
+
+   ```text
+   export PATH="/opt/saxonica/bin:$PATH"
+   ```
+
+   :::tip
+   If the PHP web server can't find the Saxon libraries, you may also need to add `/opt/saxonica/lib` to a new file in `/etc/ld.so.conf.d/` and run `ldconfig`.
+   :::
+
+</ELSSteps>
+
+### Build the PHP extension
+
+<ELSSteps>
+
+1. Install alt-php82-devel
+
+   Install the development package required for compiling PHP extensions:
+
+   ```text
+   dnf install alt-php82-devel
+   ```
+
+   Verify that `phpize` is available:
+
+   ```text
+   ls /opt/alt/php82/usr/bin/phpize
+   ```
+
+2. Prepare the build environment
+
+   Navigate to the PHP extension source directory within the extracted Saxon archive and run `phpize` to prepare the build:
+
+   ```text
+   cd php/src/
+   /opt/alt/php82/usr/bin/phpize
+   ```
+
+   Example output:
+
+   ```text
+   Configuring for:
+   PHP Api Version:         20220829
+   Zend Module Api No:      20220829
+   Zend Extension Api No:   420220829
+   ```
+
+3. Configure and compile
+
+   Configure the extension build with Saxon support and link to the Saxon libraries:
+
+   ```text
+   ./configure --with-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
+   ```
+
+   Compile and install:
+
+   ```text
+   make
+   sudo make install
+   ```
+
+   Example output:
+
+   ```text
+   Installing shared extensions:     /opt/alt/php82/usr/lib64/php/modules/
+   ```
+
+4. Enable the extension
+
+   Create a configuration file that tells PHP to load the extension:
+
+   ```text
+   tee -a /opt/alt/php82/etc/php.d/20-saxon.ini <<EOF
+   ; configuration for php Saxon HE/PE/EE module
+   extension=saxon.so
+   EOF
+   ```
+
+   Verify that the Saxon extension appears in the list of loaded modules:
+
+   ```text
+   /opt/alt/php82/usr/bin/php -m | grep saxon
+   ```
+
+   Example output:
+
+   ```text
+   saxonc
+   ```
+
+5. Verify with a test script
+
+   Run a quick test to confirm the extension works:
+
+   ```text
+   /opt/alt/php82/usr/bin/php -ddisplay_errors=E_ALL  << 'EOF'
+   <?php
+     $saxonProc = new Saxon\SaxonProcessor();
+     $transformer = $saxonProc->newXslt30Processor();
+     $executable = $transformer->compileFromString("
+       <xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
+           <xsl:template name='go'><a/></xsl:template>
+       </xsl:stylesheet>
+   ");
+     $root = $executable->callTemplateReturningValue("go");
+     $node = $root->getHead()->getNodeValue();
+     echo "$node \n";
+   EOF
+   ```
+
+   Example output:
+
+   ```text
+   <a/>
+   ```
+
+   If you are using php-fpm or Apache, restart the services.
+
+</ELSSteps>
 
 ## What's Next?
 
