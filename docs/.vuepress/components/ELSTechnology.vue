@@ -249,7 +249,7 @@ const techData = [
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.14 | 1.2.15 | 1.2.16 | 1.2.17 | 2.5 | 2.11.0 | 2.12.4 | 2.17.1 | 2.17.2 | 2.18.0 | 2.22.1 | 2.23.1 | 2.24.3",
+        versions: "1.2.14 | 1.2.15 | 1.2.16 | 1.2.17 | 2.5 | 2.7 | 2.11.0 | 2.12.4 | 2.13.3 | 2.17.1 | 2.17.2 | 2.18.0 | 2.22.1 | 2.23.1 | 2.24.3",
         link: "./apache-log4j/",
       },
       {
@@ -803,7 +803,7 @@ const techData = [
       },
       {
         name: "Spring® Integration",
-        versions: "5.5.20 | 6.3.11 | 6.4.10 | 6.5.10",
+        versions: "5.5.16 | 5.5.20 | 6.3.11 | 6.4.10 | 6.5.10",
         link: "./spring/",
         detailsHash: "Integration",
       },
@@ -924,7 +924,7 @@ const techData = [
       },
       {
         name: "adm-zip",
-        versions: "0.4.4 | 0.4.7 | 0.4.16 | 0.5.10 | 0.5.12 | 0.5.16 | 0.5.17 | 0.5.18",
+        versions: "0.4.4 | 0.4.7 | 0.4.16 | 0.5.10 | 0.5.12 | 0.5.16 | 0.5.17 | 0.5.18 | 0.6.0",
         link: "./javascript-libraries/",
       },
       {
@@ -974,7 +974,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.26.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.6.2 | 1.6.8 | 1.7.5 | 1.7.7 | 1.7.9 | 1.13.5 | 1.16.0",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.26.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.6.2 | 1.6.8 | 1.7.5 | 1.7.7 | 1.7.9 | 1.13.5 | 1.16.0 | 1.18.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1074,7 +1074,7 @@ const techData = [
       },
       {
         name: "brace-expansion",
-        versions: "1.1.11 | 1.1.12 | 1.1.18 | 2.0.1 | 2.0.2 | 2.1.2 | 4.0.1",
+        versions: "1.1.11 | 1.1.12 | 1.1.14 | 1.1.15 | 1.1.16 | 1.1.18 | 1.1.20 | 2.0.1 | 2.0.2 | 2.1.2 | 4.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1194,7 +1194,7 @@ const techData = [
       },
       {
         name: "deepmerge-ts",
-        versions: "4.3.0 | 7.1.6",
+        versions: "4.3.0 | 7.1.5 | 7.1.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1204,7 +1204,7 @@ const techData = [
       },
       {
         name: "devalue",
-        versions: "2.0.1 | 4.3.0 | 4.3.1 | 4.3.2 | 4.3.3",
+        versions: "2.0.1 | 4.3.0 | 4.3.1 | 4.3.2 | 4.3.3 | 5.9.0 | 5.9.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1219,7 +1219,7 @@ const techData = [
       },
       {
         name: "dompurify",
-        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3 | 3.2.7 | 3.4.8",
+        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3 | 3.2.7 | 3.4.8 | 3.4.14",
         link: "./javascript-libraries/",
       },
       {
@@ -1289,7 +1289,7 @@ const techData = [
       },
       {
         name: "fast-uri",
-        versions: "2.4.0 | 2.4.2 | 2.4.3 | 2.4.5 | 3.0.1 | 3.0.3 | 3.1.4",
+        versions: "2.4.0 | 2.4.2 | 2.4.3 | 2.4.5 | 3.0.1 | 3.0.3 | 3.1.0 | 3.1.2 | 3.1.3 | 3.1.4 | 3.1.5 | 3.1.6 | 3.1.7",
         link: "./javascript-libraries/",
       },
       {
@@ -1299,7 +1299,7 @@ const techData = [
       },
       {
         name: "fastify",
-        versions: "3.29.5 | 4.29.1 | 5.2.1 | 5.11.3 | 5.12.0",
+        versions: "3.29.5 | 4.29.1 | 5.2.1 | 5.7.4 | 5.11.3 | 5.12.0 | 5.12.1",
         link: "./fastify/",
       },
       {
@@ -1369,7 +1369,7 @@ const techData = [
       },
       {
         name: "got",
-        versions: "2.9.2 | 6.7.1 | 8.3.2 | 9.6.0",
+        versions: "2.9.2 | 6.7.1 | 7.1.0 | 8.3.2 | 9.6.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1464,7 +1464,7 @@ const techData = [
       },
       {
         name: "ip-address",
-        versions: "6.4.0 | 7.1.0 | 9.0.5",
+        versions: "6.4.0 | 7.1.0 | 9.0.5 | 10.7.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1734,17 +1734,17 @@ const techData = [
       },
       {
         name: "nestjs-core",
-        versions: "10.4.22",
+        versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
         link: "./javascript-libraries/",
       },
       {
         name: "nestjs-microservices",
-        versions: "10.4.22",
+        versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
         link: "./javascript-libraries/",
       },
       {
         name: "nestjs-platform-express",
-        versions: "10.4.22",
+        versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
         link: "./javascript-libraries/",
       },
       {
@@ -1759,7 +1759,7 @@ const techData = [
       },
       {
         name: "next",
-        versions: "12.3.7 | 13.5.11 | 14.2.35 | 16.0.6",
+        versions: "12.3.7 | 13.5.11 | 14.2.35 | 15.1.2 | 15.5.23 | 15.5.24 | 15.5.25 | 15.5.26 | 16.0.6",
         link: "./next/",
       },
       {
@@ -1859,7 +1859,7 @@ const techData = [
       },
       {
         name: "piscina",
-        versions: "4.6.1",
+        versions: "4.6.1 | 4.8.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1984,7 +1984,7 @@ const techData = [
       },
       {
         name: "serialize-javascript",
-        versions: "1.9.1 | 2.1.2 | 3.1.0 | 4.0.0 | 5.0.1 | 6.0.2",
+        versions: "1.9.1 | 2.1.2 | 3.1.0 | 4.0.0 | 5.0.1 | 6.0.2 | 7.1.1",
         link: "./javascript-libraries/",
       },
       {
@@ -2144,7 +2144,7 @@ const techData = [
       },
       {
         name: "undici",
-        versions: "5.5.1 | 5.28.5 | 5.29.0 | 6.11.1 | 6.19.7 | 7.28.0",
+        versions: "5.5.1 | 5.28.5 | 5.29.0 | 6.11.1 | 6.19.5 | 6.19.7 | 6.20.0 | 6.28.0 | 7.28.0",
         link: "./undici/",
       },
       {
@@ -2329,7 +2329,7 @@ const techData = [
       },
       {
         name: "webpack",
-        versions: "5.50.0 | 5.55.0 | 5.76.1 | 5.88.2 | 5.94.0",
+        versions: "5.50.0 | 5.55.0 | 5.76.1 | 5.82.1 | 5.88.2 | 5.94.0",
         link: "./webpack/",
       },
       {
@@ -2339,12 +2339,12 @@ const techData = [
       },
       {
         name: "webpack-dev-middleware",
-        versions: "1.10.2 | 1.11.0 | 1.12.0 | 1.12.2 | 3.0.1 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 5.3.4 | 7.4.2 | 7.4.5",
+        versions: "1.10.2 | 1.11.0 | 1.12.0 | 1.12.2 | 3.0.1 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 5.3.4 | 6.1.3 | 7.4.2 | 7.4.5 | 8.1.1",
         link: "./javascript-libraries/",
       },
       {
         name: "webpack-dev-server",
-        versions: "2.7.1 | 2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.9.3 | 4.11.0 | 4.11.1 | 4.15.1 | 4.15.2 | 5.2.2",
+        versions: "2.7.1 | 2.11.5 | 3.1.14 | 3.11.0 | 3.11.2 | 3.11.3 | 4.7.3 | 4.9.3 | 4.11.0 | 4.11.1 | 4.15.1 | 4.15.2 | 5.2.2 | 5.2.5",
         link: "./webpack-dev-server/",
       },
       {
@@ -2986,7 +2986,7 @@ const techData = [
       },
       {
         name: "League Flysystem",
-        versions: "1.0.70 | 1.1.10",
+        versions: "1.0.70 | 1.1.10 | 3.33.0",
         link: "./league-flysystem/",
       },
       {
