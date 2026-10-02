@@ -313,862 +313,6 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
    <div class="notranslate">
 
-   | |  |  |  | |
-   |-|-|-|-|-|
-   |Reflection <br>SPL <br>SimpleXML <br>apc <br>apm <br>ares <br>bcmath <br>bcompiler <br>big_int <br>bitset <br>bloomy <br>bz2 <br>bz2_filter <br>calendar <br>coin_acceptor <br>crack <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>enchant <br>exif <br>ffmpeg* | fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip <br>geos <br>gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>huffman <br>iconv <br>idn <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader| json <br>ldap <br>libxml <br>lzf <br>mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>msgpack <br>mssql <br>mysql <br>mysqli <br>ncurses <br>oauth <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird |  <br>pdo_mysql <br>pdo_oci* <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pgsql <br>phar <br>posix <br>pspell <br>quickhash <br>radius <br>rar <br>readline <br>recode <br>redis <br>rsync <br>session <br>shmop <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl_types <br>sqlite <br>ssh2 <br>standard <br>stats <br>stem | stomp <br>suhosin <br>sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>translit <br>uploadprogress <br>uuid <br>wddx <br>xcache <br>xcache_3 <br>xdebug <br>xhprof <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xsl <br>yaf <br>yaz <br>zend_optimizer <br>zip <br>zlib|
-   </div>
-
-   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_5.3_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |amqp<br> apc <br>apcu <br>apm <br>ares <br>bcmath <br>bcompiler <br>big_int <br>bitset <br>bloomy <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>clamav* <br>coin_acceptor <br>core <br>crack <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br> filter <br>ftp | functional <br> gd <br>gender <br>geoip <br> geos <br> gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>huffman <br>iconv <br>idn <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libevent <br>libxml <br>lzf | mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br> pdo_oci* <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pgsql | phalcon* <br>phar <br> posix <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br> solr <br>spl <br>spl_types <br>sqlite <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin | sybase_ct <br>sysvmsg <br> sysvsem <br> sysvshm <br>tidy <br> tideways <br>timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache* <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xsl <br> xhprof <br>yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_5.4_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm** <br>amqp <br> apc <br>apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>core <br>ctype <br>curl <br>clos_ssa <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br>eaccelerator <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>functional <br>gd <br> gender | geoip <br> geos <br>gettext <br>gmagick <br>gmp <br>gnupg <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inclued <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring| mcrypt <br>memcache <br>memcached <br>mhash <br>mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8* <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql <br>phalcon* <br>phar  | posix <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br> solr <br>sourceguardian <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin <br>sybase_ct <br>sysvmsg | sysvsem <br>sysvshm <br>tidy <br> tideways <br> timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache* <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray** <br>xsl <br> xhprof <br> jsmin <br> yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_5.5_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br>amqp <br> apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>clamav* <br>core <br>ctype <br>curl <br> clos_ssa <br>date <br>dba <br>dbase <br>dbx <br>dom <br>doublemetaphone <br> diseval <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip | geos <br> gettext <br>gmagick <br>gmp <br>gnupg <br>gRPC <br>haru <br>hash <br>hidef <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>jsmin <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt | memcache <br>memcached <br>mhash <br>mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8* <br>odbc <br>opcache* <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql | phalcon* <br>phalcon3 <br>phar <br>posix <br>postal* <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br> solr <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br>suhosin | sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br> tideways <br>timezonedb <br>tokenizer <br>trader <br>translit <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>weakref <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray <br>xsl <br> xhprof <br>yaf <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq |
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_5.6_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br> amqp <br> apcu <br>apm <br>ares <br>bcmath <br>big_int <br>bitset <br>brotli <br>bz2 <br>bz2_filter <br>calendar <br>core <br>ctype <br>curl <br> clos_ssa* <br>date <br>dba <br> dbase <br>dbx <br>dom <br>doublemetaphone <br> diseval <br>eio <br>enchant <br>ereg <br>exif <br>ffmpeg* <br>fileinfo <br>filter <br>ftp <br>gd <br>gender <br>geoip <br>gettext | geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>haru <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libevent <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt <br>memcache <br>memcached <br>mhash | mongo <br>mongodb <br>msgpack <br>mssql <br>mysql <br>mysqli <br>mysqlnd <br>ncurses <br>nd_mysql <br>nd_mysqli <br>nd_pdo_mysql <br>oauth <br>oci8 <br>odbc <br>opcache* <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br> pdo_oci* <br>pgsql <br>phalcon* <br>phalcon3 | phar <br>posix <br> postal* <br>propro <br>pspell <br>quickhash <br>radius <br>raphf <br>rar <br>readline <br>recode <br>redis <br>reflection <br>rsync <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl <br>spl_types <br>sqlite3 <br>ssh2 <br>standard <br>stats <br>stem <br>stomp <br> solr | suhosin <br>sybase_ct <br>sysvmsg <br>sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br>translit <br> tideways <br>uploadprogress <br>uri_template <br>uuid <br>wddx <br>xcache_3 <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xrange <br>xray <br>xsl <br> xhprof <br>yaml <br>yaz <br>zend_guard_loader <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_7.0_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br>amqp <br> apcu <br>bcmath <br>bitset <br>brotli <br>bz2 <br>clos_ssa* <br> calendar <br>core <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dom <br> diseval <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br> gearman <br> gender <br> geos | geoip <br>gettext <br>gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br>json <br>ldap <br>libsodium <br>libxml <br>lzf <br> luasandbox*  <br>mailparse <br>mbstring <br>mcrypt | memcached <br> memcache <br>mongodb <br>mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8* <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdf <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br> psr <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pdo_sqlsrv <br> pdo_oci  <br>pgsql <br>phalcon3 <br>phar | posix <br> postal* <br>propro <br>pspell <br> phalcon4 <br>raphf <br>rar <br>readline <br> rrd <br>redis <br>reflection <br> recode <br>session <br>shmop <br>simplexml <br>snmp<br>snuffleupagus <br>soap <br>sockets <br>sourceguardian <br> sodium <br> solr <br>spl <br>sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>suhosin7 <br>sysvmsg | swoole <br> sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>vld* <br>wddx <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br> xray <br>xsl <br>yaml <br>yaz <br> yaf <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  ::: tip Note
-  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
-  Please find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
-  :::
-
-  </template>
-
-  <template #PHP_7.1_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br>amqp <br> snuffleupagus <br> vld <br> apcu <br>bcmath <br>brotli <br>bz2 <br> clos_ssa* <br> calendar <br>core <br>ctype <br>curl <br>date <br>dba <br>dbase <br>dom <br> diseval <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br>gearman <br>gender <br>geoip <br>gettext | geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>htscanner <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br> jsmin <br> json <br>ldap <br>libsodium <br>libxml <br>lzf <br> luasandbox* <br>mailparse <br>mbstring <br>mcrypt <br>memcached | memcache <br> mongodb <br>mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8 <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdo <br>pdo_dblib <br>pdo_firebird <br>pdo_mysql <br>pdo_odbc <br>pdo_pgsql psr <br> <br>pdo_sqlite <br>pdo_sqlsrv <br>pgsql <br>phalcon3 <br>phar <br> pdf | pdo_oci <br> phalcon4 <br> posix <br>propro <br>pspell <br>psr* <br>raphf <br>rar <br>readline <br>redis <br>reflection <br>rrd <br> recode <br> solr <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>sourceguardian <br>spl <br> sodium <br> sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>suhosin7 <br>sysvmsg | swoole <br> sysvsem <br>sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>wddx <br>xdebug <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xsl <br>xray <br> yaz <br> yaml <br> yaf <br>zip <br>zlib <br>zmq|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  ::: tip Note
-  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
-  Please find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
-  :::
-
-  </template>
-
-  <template #PHP_7.2_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |aapm* <br> jsmin <br> psr <br> rrd <br> yaz <br> amqp <br> snuffleupagus <br> vld <br> apcu <br>bcmath <br>brotli <br>bz2 <br>calendar <br> clos_ssa* <br> core <br>ctype <br>curl <br>date <br>dba <br>dom <br> dbase <br> diseval  <br>eio <br>enchant <br>exif <br>fileinfo <br>filter <br>ftp <br> ffmpeg* <br>gd <br>gender <br>geoip <br>gettext | gearman <br> geos <br> gmagick <br>gmp <br>gnupg <br>gRPC <br>hash <br>http <br>iconv <br>igbinary <br>imagick <br>imap <br>inotify <br>interbase <br>intl <br>ioncube_loader <br>json <br>ldap <br>libxml <br>lzf <br> luasandbox* <br> mcrypt <br> memcache <br> mailparse <br>mbstring <br>memcached <br>mongodb | mysqli <br>mysqlnd <br>nd_mysqli <br>nd_pdo_mysql <br>_newrelic_ <br>oauth <br>oci8 <br>odbc <br>opcache <br>openssl <br>pcntl <br>pcre <br>pdo <br>pdo_dblib <br>pdo_firebird <br> pdf <br> pdo_oci <br> phalcon4  <br> pdo_mysql <br>pdo_odbc <br>pdo_pgsql <br>pdo_sqlite <br>pdo_sqlsrv <br>pgsql <br>phalcon3 <br>phar | posix <br>propro <br>pspell <br>raphf <br>readline <br>redis <br>reflection <br> recode <br> sodium <br> sourceguardian <br> swoole  <br>session <br>shmop <br>simplexml <br>snmp <br>soap <br>sockets <br>spl <br>sqlite3 <br>sqlsrv <br>ssh2 <br>standard <br>stats <br>sysvmsg <br>sysvsem | sysvshm <br>tidy <br>timezonedb <br>tokenizer <br>trader <br> tideways_xhprof <br>uploadprogress <br>uuid <br>vips* <br>wddx <br>xml <br>xmlreader <br>xmlrpc <br>xmlwriter <br>xsl <br> xdebug <br> yaf <br>yaml <br>zip <br>zlib <br>zmq <br> xray|
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  ::: tip Note 
-  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
-  You can find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
-  :::
-
-  </template>
-
-  <template #PHP_7.3_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | | |
-  |-|-|-|-|-|-|
-  |ffmpeg* <br> aapm* <br>amqp <br> clos_ssa* <br> gearman <br> jsmin <br> mailparse <br> memcache <br> psr <br> rrd <br> solr <br> tideways_xhprof <br> zmq <br> snuffleupagus <br> vld <br> apcu <br> bz2 <br> brotli <br> calendar <br> core <br> ctype <br> curl <br> date <br> exif <br>enchant <br> filter <br> ftp <br> gettext <br> gmp <br>gnupg <br> hash <br> iconv <br> interbase <br> luasandbox* | libxml <br>mysqlnd <br>opcache <br> openssl <br> pcntl <br> pcre <br>pdo_pgsql <br> phar <br> readline <br> reflection <br> session <br> shmop <br> simplexml <br> sourceguardian <br> spl <br> sqlite3 <br>standard <br> snmp <br> stats <br> tokenizer | trader <br>xmlreader <br>bcmath <br>fileinfo <br> grpc <br>intl <br>lzf <br>nd_mysqli <br>pdf <br>pdo <br>posix <br>swoole <br>uploadprogress <br>xmlrpc <br>gd <br>http <br>ioncube_loader <br> mbstring | nd_pdo_mysql <br>pdo_dblib <br>pdo_sqlite <br>propro <br>soap <br>sysvmsg <br>uuid <br>xmlwriter <br>dbase <br>gender <br>igbinary <br>mcrypt <br>newrelic <br> pdo_firebird <br>pdo_sqlsrv <br>pspell <br>sockets <br>sysvsem <br>vips* <br>xsl | dba <br>geoip <br>imagick <br>json <br>memcached <br>oauth <br>pdo_mysql <br>pgsql <br> raphf <br>sodium <br>sysvshm <br>yaml <br>dom <br>geos <br>imap <br>ldap <br>mongodb <br>oci8 <br>pdo_oci | phalcon3 <br>recode <br>sqlsrv <br> tidy <br>wddx <br>yaz <br>eio <br>gmagick <br>inotify <br>leveldb <br>mysqli <br>odbc <br>pdo_odbc <br>phalcon4 <br>redis <br>ssh2 <br>timezonedb <br>xdebug <br>zip <br> xml <br> zlib <br> xray <br> yaf| 
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  :::tip Note
-  To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
-  You can find more info about <span class="notranslate">New Relic License Key</span> in the <span class="notranslate">[New Relic documentation](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key)</span>.
-  :::
-
-  </template>
-
-  <template #PHP_7.4_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |leveldb <br> sourceguardian <br> ffmpeg* <br> amqp <br> clos_ssa* <br> gearman <br> ioncube_loader <br> jsmin <br> mailparse <br> mcrypt <br> memcache <br> psr <br> rrd <br> solr <br> ssh2 <br> tideways_xhprof <br> yaz <br> zmq <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> eio <br> enchant <br> exif <br> fileinfo <br> filter <br> ftp <br> gd <br> gender <br> geoip <br> geos | gettext <br> gmagick <br> gmp <br> gnupg <br> grpc <br> hash <br> http <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> json <br> ldap <br> libxml <br> luasandbox* <br> lzf <br> mbstring <br> memcached <br> mongodb | mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> snuffleupagus <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> pdo_pgsql <br> vld <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phalcon4 <br> phar <br> posix <br> propro <br> pspell <br> raphf <br> readline <br> redis <br> reflection <br>phalcon5 <br> session <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets <br> sodium <br> spl <br> sqlite3 <br> sqlsrv <br> standard | stats <br> swoole <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> xray <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc <br> xmlwriter <br> xsl <br> yaml <br> zip <br> zlib |
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_8.0_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |brotli <br> amqp <br> clos_ssa* <br> core <br> date <br> filter <br> gearman <br> geoip <br> gmagick <br> gnupg* <br> grpc <br> apcu <br> bcmath <br> bz2 <br> calendar <br> ctype <br> curl <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo | hash <br> igbinary <br> inotify <br> jsmin <br> json <br> libxml <br> mcrypt <br> memcache ftp <br> gd <br> gettext <br> gmp <br> iconv <br> imagick <br> imap <br> intl <br> ldap <br> lzf <br> mailparse <br> mbstring | mongodb <br> newrelic <br> oauth <br> oci8 <br> openssl <br> pcntl <br> pcre <br> pdo_oci <br> pdo_sqlsrv <br> readline <br> redis <br> reflection <br> rrd <br> session memcached <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> odbc <br> opcache <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql <br> pdo_odbc | snuffleupagus <br> solr <br> SPL <br> sqlsrv <br> ssh2 <br> standard <br> swoole <br> tideways_xhprof <br> trader pdo_pgsql <br> pdo_sqlite <br> pgsql <br> phar <br> posix <br> pspell <br> psr <br> raphf <br> shmop <br> simplexml <br> snmp <br> soap <br> sockets | uploadprogress <br> uuid <br> vips* <br> vld <br> xdebug <br> xmlrpc** <br> yaml <br> yaz <br> zip <br> zlib sodium <br> sqlite3 <br> sysvmsg <br> sysvsem <br> sysvshm <br> tidy <br> timezonedb <br> tokenizer <br> xml <br> xmlreader <br> xmlwriter <br> xsl <br> zmq <br>sourceguardian <br> phalcon5 <br> xray |
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_8.1_extensions>
-
-  <div class="notranslate">
-
-  | |  |  |  | |
-  |-|-|-|-|-|
-  |amqp <br> apcu <br> bcmath <br> brotli <br> bz2 <br> calendar <br> clos_ssa*** <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase <br> dom <br> enchant <br> exif <br> ffi** <br> fileinfo <br> filter <br> ftp | gd <br> geoip <br> gearman <br> gettext <br> gmagick <br> gmp <br> gnupg** <br> grpc <br> hash <br> ioncube_loader <br> iconv <br> igbinary <br> imagick <br> imap <br> inotify <br> intl <br> jsmin <br> json <br> ldap <br> libxml <br> lzf <br> mailparse <br> mbstring <br> mcrypt | memcache <br> memcached <br> mongodb <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> newrelic <br> oauth <br> oci8 <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre <br> pdf <br> pdo <br> pdo_dblib <br> pdo_mysql <br> pdo_oci <br> pdo_odbc <br> phalcon5 <br> pdo_pgsql <br> pdo_firebird <br> pdo_sqlite <br> pdo_sqlsrv | pgsql <br> phar <br> posix <br> process <br> pspell <br> psr <br> rrd <br> raphf <br> readline <br> redis <br> Reflection <br> session <br> shmop <br> SimpleXML v snmp <br> solr <br> sourceguardian <br> soap <br> sockets <br> sodium <br> SPL <br> sqlite3 <br> sqlsrv <br> ssh2 <br> standard <br> swoole | sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof <br> tidy <br> timezonedb <br> tokenizer <br> trader <br> uploadprogress <br> uuid <br> vips* <br> xdebug <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaf <br> yaml <br> zip <br> zlib <br> zmq <br> xray |
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_8.2_extensions>
-
-  | | | | | |
-  |-|-|-|-|-|
-  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> swoole** <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> vips* <br> xdebug** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_8.3_extensions>
-
-  | | | | | |
-  |-|-|-|-|-|
-  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> elastic_apm <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phalcon5 <br> phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> snuffleupagus <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc. 
-
-  </template>
-
-  <template #PHP_8.4_extensions>
-
-  | | | | | |
-  |-|-|-|-|-|
-  |amqp** <br> apcu** <br> bcmath <br> brotli** <br> bz2 <br> calendar <br> Core <br> ctype <br> curl <br> date <br> dba <br> dbase** <br> dom <br> elastic_apm <br> enchant <br> exif <br> ffi <br> fileinfo <br> filter <br> ftp <br> gd <br> gearman** <br> geoip** | gettext <br> gmagick** <br> gmp <br> gnupg* <br> grpc** <br> hash <br> iconv <br> igbinary** <br> imagick** <br> imap <br> inotify** <br> intl <br> ioncube_loader <br> jsmin** <br> json <br> ldap <br> libxml <br> lzf** <br> mailparse** <br> mbstring <br> mcrypt** <br> memcache** <br> memcached** | mongodb** <br> mysqli <br> mysqlnd <br> nd_mysqli <br> nd_pdo_mysql <br> oauth** <br> oci8** <br> odbc <br> opcache <br> openssl <br> pcntl <br> pcre** <br> pdf <br> pdo <br> pdo_dblib <br> pdo_firebird <br> pdo_mysql* <br> pdo_oci** <br> pdo_odbc <br> pdo_pgsql <br> pdo_sqlite <br> pdo_sqlsrv** <br> pgsql | phalcon5 <br> phar <br> posix <br> pspell <br> psr** <br> random <br> raphf** <br> readline <br> redis** <br> Reflection <br> rrd** <br> session <br> shmop <br> SimpleXML <br> snmp <br> snuffleupagus <br> soap <br> sockets <br> sodium <br> solr** <br> SPL <br> sqlite3 <br> sqlsrv** <br> ssh2** | standard <br> sysvmsg <br> sysvsem <br> sysvshm <br> tideways_xhprof** <br> tidy <br> timezonedb** <br> tokenizer <br> trader** <br> uploadprogress** <br> uuid** <br> xml <br> xmlreader <br> xmlrpc** <br> xmlwriter <br> xsl <br> yaml** <br> zip <br> zlib <br> zmq**|
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-</TableTabs>
-
-## Installation on Windows
-
-TuxCare provides two ways to install ELS PHP on Windows: using the **TuxCare Installer** (recommended) — a graphical tool that automates the process, or **manually** by downloading and configuring PHP from the repository.
-
-<ELSPrerequisites id="windows-prerequisites">
-
-* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
-* Administrator access to the Windows system
-
-</ELSPrerequisites>
-
-:::tip
-Customers who previously received an authentication token can continue to use it: select **Use previous token** in the TuxCare Installer, or use the tokenized URL for manual installation.
-:::
-
-<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)' }">
-
-<template #TuxCare_Installer>
-
-TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
-
-<ELSSteps>
-
-1. Download the installer and launch it
-
-   Download the installer from the following link:
-
-   ```text
-   https://windows.tuxcare.com/php/TuxCare.Installer.exe
-   ```
-
-   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
-
-2. Select Register
-
-   Click **Register**.
-
-   ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
-
-   :::tip
-   If you previously registered on this machine with an authentication token and saved it, you can click **Use previous token** instead.
-   :::
-
-3. Register with your license key
-
-   * Click **I have a license key**.
-
-     ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
-
-   * Enter your license key to complete the registration.
-
-     ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
-
-4. Select a PHP version
-
-   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
-
-   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
-
-   :::tip
-   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
-
-   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
-   :::
-
-5. Choose installation path and load modules
-
-   * By default, the installer uses `C:\Program Files`.
-   * Click **Change** to install to a different location.
-   * Click **Load** to fetch the required PHP archive.
-   * Select the modules you need and click **Continue**.
-
-   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
-
-6. Verify the installation
-
-   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
-
-   ```text
-   php -v
-   ```
-
-   You should see output like:
-
-   ```text
-   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
-   Copyright (c) 1997-2016 The PHP Group
-   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
-   ```
-
-</ELSSteps>
-
-During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
-
-</template>
-
-<template #Manual>
-
-Manual installation requires a tokenized URL (obtain via [sales@tuxcare.com](mailto:sales@tuxcare.com)) that gives access to the TuxCare PHP for Windows repository. The token is placed right after the domain:
-
-```text
-https://windows.tuxcare.com/<YOUR-TOKEN>/php/
-```
-
-:::warning Troubleshooting: browser credential prompts
-Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://windows.tuxcare.com/TOKEN/php/`). Without it, the server may issue a redirect that drops the token, causing the browser to prompt for credentials. With the trailing slash, subfolder navigation works as expected.
-
-<details>
-<summary>How to use a tokenized URL</summary>
-
-Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL path:
-
-```text
-https://windows.tuxcare.com/<YOUR-TOKEN>/php/
-```
-
-**Always include the trailing slash.** This applies to all directory URLs, including version subfolders:
-
-- ✅ `https://windows.tuxcare.com/TOKEN/php/` — works correctly
-- ❌ `https://windows.tuxcare.com/TOKEN/php` — may prompt for credentials
-
-**Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
-
-- **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
-- **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
-
-**Browsing subdirectories.** If you are prompted for credentials when entering a subdirectory, manually insert the token into the URL — add `<YOUR-TOKEN>/` right after `windows.tuxcare.com/` in the address bar.
-
-**Example walkthrough:**
-
-1. Open the repository root:
-   ```text
-   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
-   ```
-2. Click on `7.4.33/`. If the browser navigates to `https://windows.tuxcare.com/php/7.4.33/` and prompts for a password, edit the address bar and add the token:
-   ```text
-   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/
-   ```
-3. Click on `tuxcare.els8/`. If prompted again, add the token to the URL:
-   ```text
-   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/tuxcare.els8/
-   ```
-4. You see the ZIP files listed. Click on the file to download it directly.
-
-**Downloading files directly.** If you already know which file you need, skip browsing and build the full URL from the repository root, version, release folder, and file name:
-
-```text
-https://windows.tuxcare.com/<YOUR-TOKEN>
-  /php/<version>/tuxcare.els<N>/<filename>.zip
-```
-
-PowerShell:
-
-```text
-$base = "https://windows.tuxcare.com/<YOUR-TOKEN>"
-$file = "/php/7.4.33/tuxcare.els8/" +
-  "php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
-Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
-```
-
-curl:
-
-```text
-BASE="https://windows.tuxcare.com/<YOUR-TOKEN>"
-FILE="/php/7.4.33/tuxcare.els8/\
-php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
-curl -O "${BASE}${FILE}"
-```
-
-</details>
-<br>
-:::
-
-<ELSSteps>
-
-1. Open the repository in your browser
-
-   Navigate to your tokenized URL:
-
-   ```text
-   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
-   ```
-
-   You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
-
-2. Choose the correct archive
-
-   Inside each version folder you will find subfolders named `tuxcare.elsN/`, where `N` is the TuxCare release number. Always select the subfolder with the **highest** number, as it contains the latest security updates. Each archive follows this naming pattern:
-
-   ```text
-   php-<version>-tuxcare-els<N>-<thread>-Win32-<vc>-<arch>-signed.zip
-   ```
-
-   Select the archive that matches your environment:
-
-   | Component | Options | How to choose |
-   | --- | --- | --- |
-   | **Thread safety** | `nts` (Non-Thread Safe) or `ts` (Thread Safe) | Use `nts` for IIS with FastCGI, nginx, or CLI. Use `ts` only for Apache `mod_php`. |
-   | **Architecture** | `x64` or `x86` | Use `x64` for 64-bit Windows (most common). Use `x86` only for 32-bit systems. |
-   | **VC runtime** | `vc15`, `vs16`, `vs17`, etc. | Indicates the required Visual C++ Redistributable. Download from [Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) if not installed. |
-
-   For example, to install PHP 7.4 (NTS, 64-bit), download `php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip`. This archive requires the **Visual C++ Redistributable for Visual Studio 2017** (`vc15`).
-
-3. Extract the archive
-
-   Create a destination folder (e.g. `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
-
-   Alternatively, use PowerShell:
-
-   ```text
-   New-Item -ItemType Directory -Path "C:\PHP" -Force
-   Expand-Archive `
-     -Path "$HOME\Downloads\php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip" `
-     -DestinationPath "C:\PHP"
-   ```
-
-   After extraction, your directory should contain `php.exe`, `php.ini-development`, `php.ini-production`, and an `ext` folder with extension DLLs.
-
-4. Configure php.ini
-
-   Create a configuration file from one of the provided templates — copy `php.ini-development` for development or `php.ini-production` for production to `php.ini`:
-
-   ```text
-   Copy-Item "C:\PHP\php.ini-production" "C:\PHP\php.ini"
-   ```
-
-   Open `C:\PHP\php.ini` in a text editor, set the extension directory, and enable the extensions your application requires:
-
-   ```text
-   extension_dir = "C:\PHP\ext"
-   extension=curl
-   extension=mbstring
-   extension=mysqli
-   extension=openssl
-   ```
-
-5. Add PHP to the System PATH
-
-   To make `php` available from any terminal, add the PHP directory to the System PATH. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path**, click **Edit**, then click **New** and add `C:\PHP`.
-
-   Alternatively, use PowerShell (run as Administrator):
-
-   ```text
-   $currentPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
-   [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;C:\PHP", "Machine")
-   ```
-
-   Close and reopen any terminal windows for the change to take effect.
-
-6. Verify the installation
-
-   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
-
-   ```text
-   php -v
-   ```
-
-   You should see output like:
-
-   ```text
-   PHP 7.4.33 (cli) (built: Mar 10 2026 10:12:00)
-   Copyright (c) The PHP Group
-   Zend Engine v3.4.0, Copyright (c) Zend Technologies
-   ```
-
-   To verify that the required extensions are loaded, run `php -m`.
-
-</ELSSteps>
-
-</template>
-
-</TableTabs>
-<br>
-<details>
- <summary>How to find System PATH</summary>
-
- 1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
- 2. Click **Advanced system settings**.
-
-    ![Windows System window with the Advanced system settings link highlighted](/images/php-windows-advanced-settings.webp)
-
- 3. Click on **Environment Variables**.
-
-    ![Advanced tab of Windows System Properties with the Environment Variables button highlighted](/images/php-windows-environment-variables.webp)
-
- 4. Under *System variables*, find **Path** and click **Edit**.
-
-    ![Windows Environment Variables dialog with the Path entry selected under System variables](/images/php-windows-add-path.webp)
-
- 5. You will see your PHP `C:\PHP` directory added.
-
-    ![Windows Edit environment variable dialog showing the PHP installation directory added to Path](/images/php-windows-add-path-2.webp)
-</details>
-
-### Additional configurations
-
-Depending on your ELS PHP usage purpose, additional configurations may be required. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
-
-#### Change default PHP version
-
-If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
-
-#### Extensions
-
-Extensions are managed through the `php.ini` file located in your PHP installation directory (e.g. `C:\PHP`). Open it in a text editor and find the extensions section. Remove the semicolon `;` at the beginning of a line to enable an extension, or add `;` to disable it.
-
-```text
-;extension=curl
-extension=gd2
-;extension=mbstring
-extension=mysqli
-extension=pdo_mysql
-```
-
-##### Windows extensions list
-
-The following lists cover the Windows builds of ELS PHP. **Built-in** extensions are part of the PHP build and always available. **Loadable** extensions are DLLs in the `ext` folder that you enable in `php.ini` as shown above. Extensions marked *TS only* or *NTS only* are available only in the Thread Safe or Non-Thread Safe build.
-
-<TableTabs>
-
-  <template #PHP_5.2_Windows_extensions>
-
-  <div class="notranslate">
-
-  **Built-in:** bcmath, calendar, com_dotnet, ctype, date, dom, filter, ftp, hash, iconv, json, libxml, odbc, pcre, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zlib
-
-  **Loadable:** adt, amf, bcompiler, bitset, blenc, bz2, bz2_filter, classkit, cpdf, crack, curl, cvsclient, db, dba, dbase, dbx, dio, docblock, domxml, doublemetaphone, event, exif, fdf, fileinfo, filepro, gd2, gettext, gmp, gopher, haru, htscanner, http, hyperwave, ibm_db2, id3, ifx, iisfunc (TS only), imap, ingres2, interbase, ioncube_loader, ldap, lzf, mailparse, maxdb, mbstring, mcrypt, mcrypt_filter, mcve, memcache, mhash, mime_magic, ming, msql, mssql, mysql, mysqli, netools, ntuser, oci8, oggvorbis, openssl, operator, oracle, params, parsekit, pdflib, pdo, pdo_firebird, pdo_ibm, pdo_informix, pdo_mssql, pdo_mysql, pdo_oci, pdo_oci8, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlite_external, pdo_user, pgsql, phar, phk, php5activescript (TS only), phpdoc, pop3, printer, pspell, radius, rar, runkit, sam, sdo, shmop, smtp, snmp, soap, sockets, spl_types, sqlite, ssh2, stats, stem, sybase_ct, threads (TS only), tidy, timezonedb, translit, uploadprogress, win32ps, win32scheduler, win32service, win32std, xmlrpc, xsl, yami, zip, zlib_filter
-
-  </div>
-
-  </template>
-
-  <template #PHP_5.4_Windows_extensions>
-
-<ELSPrerequisites id="saxonc-prerequisites">
-
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, ereg, filter, ftp, hash, iconv, json, libxml, mcrypt, mhash, mysqlnd, odbc, pcre, PDO, Phar, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dbx, enchant, exif, fileinfo, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysql, mysqli, oci8, oci8_11g, openssl, pdo_dblib, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sqlite3, sqlsrv, sybase_ct, tidy, wincache (NTS only), xmlrpc, xsl, ZendLoader (NTS only)
-
-  </div>
-
-  </template>
-
-  <template #PHP_5.6_Windows_extensions>
-
-  <div class="notranslate">
-
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, ereg, filter, hash, iconv, json, libxml, mcrypt, mhash, mysqlnd, odbc, pcre, PDO, Phar, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysql, mysqli, oci8_12c, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sqlite3, sqlsrv, sybase_ct, tidy, xmlrpc, xsl
-
-  </div>
-
-  </template>
-
-  <template #PHP_7.2_Windows_extensions>
-
-  <div class="notranslate">
-
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
-
-  </div>
-
-  </template>
-
-  <template #PHP_7.3_Windows_extensions>
-
-  <div class="notranslate">
-
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
-
-  </div>
-
-  </template>
-
-  <template #PHP_7.4_Windows_extensions>
-
-  <div class="notranslate">
-
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd2, gettext, gmp, imap, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
-
-  </div>
-
-  </template>
-
-  <template #PHP_8.0_Windows_extensions>
-
-  <div class="notranslate">
-
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd, gettext, gmp, imap, intl, ldap, mbstring, mysqli, oci8_19, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xsl
-
-  </div>
-
-  </template>
-
-  <template #PHP_8.1_Windows_extensions>
-
-  <div class="notranslate">
-
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd, gettext, gmp, imap, intl, ldap, mbstring, mysqli, oci8_19, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xsl
-
-  </div>
-
-  </template>
-
-</TableTabs>
-
-#### Increase upload/memory limits
-
-If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits. Open the `php.ini` file and set the values as needed:
-
-```text
-upload_max_filesize=40M
-post_max_size=40M
-memory_limit=256M
-```
-
-#### Uninstallation
-
-To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
-
-To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
-
-## SaxonC Use Case
-
-You can extend alt-php with additional modules. Below is an example of installing the SaxonC PHP extension.
-
-Although this guide uses **alt-php82** in its examples, the same installation steps apply to **alt-php83** and newer versions. Replace `php82` with your target version in all commands and file paths.
-
-This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names and paths to match the version you downloaded.
-
-<ELSPrerequisites>
-
-* Saxon 12+ (required for PHP 8.2+ compatibility) — download from [saxonica.com](https://www.saxonica.com/download/c.xml)
-* `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support
-* `alt-php82-devel` (or matching version)
-
-| Edition   | License     | Key Features                            |
-| --------- | ----------- | --------------------------------------- |
-| SaxonC-HE | Open Source | XSLT 3.0, XPath 3.1, XQuery 3.1 (Basic) |
-| SaxonC-PE | Commercial  | HE + ICU localization, JSON support     |
-| SaxonC-EE | Commercial  | PE + Schema validation, Optimization    |
-
-</ELSPrerequisites>
-
-### Set up SaxonC
-
-<ELSSteps>
-
-1. Download SaxonC
-
-   Download from the [official Saxonica download page](https://www.saxonica.com/download/c.xml). Create a working directory and move the downloaded zip file into it:
-
-   ```text
-   mkdir saxon && cd saxon
-   mv ../SaxonCHE-linux-x86_64-12-9-0.zip .
-   ```
-
-2. Extract the archive
-
-   Unzip the downloaded file and verify:
-
-   ```text
-   unzip SaxonCHE-linux-x86_64-12-9-0.zip
-   ls
-   ```
-
-   Example output:
-
-   ```text
-   SaxonCHE-linux-x86_64-12-9-0  SaxonCHE-linux-x86_64-12-9-0.zip
-   ```
-
-3. Install the libraries
-
-   Starting with version 12.6, `/opt/saxonica/` is the recommended installation path. Navigate into the extracted directory and copy all Saxon files:
-
-   ```text
-   cd SaxonCHE-linux-x86_64-12-9-0
-   sudo mkdir -p /opt/saxonica/
-   sudo cp -r SaxonCHE/* /opt/saxonica/
-   ```
-
-   The installed structure should contain `bin`, `include`, and `lib` directories.
-
-4. Configure environment variables
-
-   Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`.
-
-   The `LD_LIBRARY_PATH` variable must point to the Saxon libraries:
-
-   ```text
-   export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
-   ```
-
-   To run the Transform, Query, and Validate (EE only) binaries, set the `PATH` variable:
-
-   ```text
-   export PATH="/opt/saxonica/bin:$PATH"
-   ```
-
-   :::tip
-   If the PHP web server can't find the Saxon libraries, you may also need to add `/opt/saxonica/lib` to a new file in `/etc/ld.so.conf.d/` and run `ldconfig`.
-   :::
-
-</ELSSteps>
-
-### Build the PHP extension
-
-<ELSSteps>
-
-1. Install alt-php82-devel
-
-   Install the development package required for compiling PHP extensions:
-
-   ```text
-   dnf install alt-php82-devel
-   ```
-
-   Verify that `phpize` is available:
-
-   ```text
-   ls /opt/alt/php82/usr/bin/phpize
-   ```
-
-2. Prepare the build environment
-
-   Navigate to the PHP extension source directory within the extracted Saxon archive and run `phpize` to prepare the build:
-
-   ```text
-   cd php/src/
-   /opt/alt/php82/usr/bin/phpize
-   ```
-
-   Example output:
-
-   ```text
-   Configuring for:
-   PHP Api Version:         20220829
-   Zend Module Api No:      20220829
-   Zend Extension Api No:   420220829
-   ```
-
-3. Configure and compile
-
-   Configure the extension build with Saxon support and link to the Saxon libraries:
-
-   ```text
-   ./configure --with-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
-   ```
-
-   Compile and install:
-
-   ```text
-   make
-   sudo make install
-   ```
-
-   Example output:
-
-   ```text
-   Installing shared extensions:     /opt/alt/php82/usr/lib64/php/modules/
-   ```
-
-4. Enable the extension
-
-   Create a configuration file that tells PHP to load the extension:
-
-   ```text
-   tee -a /opt/alt/php82/etc/php.d/20-saxon.ini <<EOF
-   ; configuration for php Saxon HE/PE/EE module
-   extension=saxon.so
-   EOF
-   ```
-
-   Verify that the Saxon extension appears in the list of loaded modules:
-
-   ```text
-   /opt/alt/php82/usr/bin/php -m | grep saxon
-   ```
-
-   Example output:
-
-   ```text
-   saxonc
-   ```
-
-5. Verify with a test script
-
-   Run a quick test to confirm the extension works:
-
-   ```text
-   /opt/alt/php82/usr/bin/php -ddisplay_errors=E_ALL  << 'EOF'
-   <?php
-     $saxonProc = new Saxon\SaxonProcessor();
-     $transformer = $saxonProc->newXslt30Processor();
-     $executable = $transformer->compileFromString("
-       <xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
-           <xsl:template name='go'><a/></xsl:template>
-       </xsl:stylesheet>
-   ");
-     $root = $executable->callTemplateReturningValue("go");
-     $node = $root->getHead()->getNodeValue();
-     echo "$node \n";
-   EOF
-   ```
-
-   Example output:
-
-   ```text
-   <a/>
-   ```
-
-   If you are using php-fpm or Apache, restart the services.
-
-</ELSSteps>
-
-## PHP extensions list
-
-PHP extensions are modules that extend the functionality of the PHP programming language. These extensions provide additional capabilities for working with various types of data, performing specific tasks, interacting with external resources and supporting various protocols.
-
-The PHP core includes many built-in extensions that provide basic functionality, such as working with databases, string processing, working with images, and others. However, to support more specific tasks and third-party libraries, you can use additional PHP extensions.
-
-<TableTabs>
-
-  <template #PHP_5.2_extensions>
-
-   <div class="notranslate">
-
    <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
    <li>Reflection</li>
    <li>SPL</li>
@@ -3390,6 +2534,634 @@ The PHP core includes many built-in extensions that provide basic functionality,
   </template>
 
 </TableTabs>
+
+## Installation on Windows
+
+TuxCare provides two ways to install ELS PHP on Windows: using the **TuxCare Installer** (recommended) — a graphical tool that automates the process, or **manually** by downloading and configuring PHP from the repository.
+
+<ELSPrerequisites id="windows-prerequisites">
+
+* A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
+* Administrator access to the Windows system
+
+</ELSPrerequisites>
+
+:::tip
+Customers who previously received an authentication token can continue to use it: select **Use previous token** in the TuxCare Installer, or use the tokenized URL for manual installation.
+:::
+
+<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)' }">
+
+<template #TuxCare_Installer>
+
+TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
+
+<ELSSteps>
+
+1. Download the installer and launch it
+
+   Download the installer from the following link:
+
+   ```text
+   https://windows.tuxcare.com/php/TuxCare.Installer.exe
+   ```
+
+   Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
+
+2. Select Register
+
+   Click **Register**.
+
+   ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
+
+   :::tip
+   If you previously registered on this machine with an authentication token and saved it, you can click **Use previous token** instead.
+   :::
+
+3. Register with your license key
+
+   * Click **I have a license key**.
+
+     ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
+
+   * Enter your license key to complete the registration.
+
+     ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
+
+4. Select a PHP version
+
+   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
+
+   ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
+
+   :::tip
+   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
+
+   ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
+   :::
+
+5. Choose installation path and load modules
+
+   * By default, the installer uses `C:\Program Files`.
+   * Click **Change** to install to a different location.
+   * Click **Load** to fetch the required PHP archive.
+   * Select the modules you need and click **Continue**.
+
+   ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
+
+6. Verify the installation
+
+   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 5.6.40 (cli) (built: May 30 2025 15:43:43)
+   Copyright (c) 1997-2016 The PHP Group
+   Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+   ```
+
+</ELSSteps>
+
+During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
+
+</template>
+
+<template #Manual>
+
+Manual installation requires a tokenized URL (obtain via [sales@tuxcare.com](mailto:sales@tuxcare.com)) that gives access to the TuxCare PHP for Windows repository. The token is placed right after the domain:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+```
+
+:::warning Troubleshooting: browser credential prompts
+Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://windows.tuxcare.com/TOKEN/php/`). Without it, the server may issue a redirect that drops the token, causing the browser to prompt for credentials. With the trailing slash, subfolder navigation works as expected.
+
+<details>
+<summary>How to use a tokenized URL</summary>
+
+Your tokenized URL provides access to the TuxCare PHP for Windows repository. It contains an authentication token embedded in the URL path:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+```
+
+**Always include the trailing slash.** This applies to all directory URLs, including version subfolders:
+
+- ✅ `https://windows.tuxcare.com/TOKEN/php/` — works correctly
+- ❌ `https://windows.tuxcare.com/TOKEN/php` — may prompt for credentials
+
+**Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
+
+- **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
+- **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
+
+**Browsing subdirectories.** If you are prompted for credentials when entering a subdirectory, manually insert the token into the URL — add `<YOUR-TOKEN>/` right after `windows.tuxcare.com/` in the address bar.
+
+**Example walkthrough:**
+
+1. Open the repository root:
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+   ```
+2. Click on `7.4.33/`. If the browser navigates to `https://windows.tuxcare.com/php/7.4.33/` and prompts for a password, edit the address bar and add the token:
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/
+   ```
+3. Click on `tuxcare.els8/`. If prompted again, add the token to the URL:
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/7.4.33/tuxcare.els8/
+   ```
+4. You see the ZIP files listed. Click on the file to download it directly.
+
+**Downloading files directly.** If you already know which file you need, skip browsing and build the full URL from the repository root, version, release folder, and file name:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>
+  /php/<version>/tuxcare.els<N>/<filename>.zip
+```
+
+PowerShell:
+
+```text
+$base = "https://windows.tuxcare.com/<YOUR-TOKEN>"
+$file = "/php/7.4.33/tuxcare.els8/" +
+  "php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
+Invoke-WebRequest -Uri "$base$file" -OutFile "php-7.4.33.zip"
+```
+
+curl:
+
+```text
+BASE="https://windows.tuxcare.com/<YOUR-TOKEN>"
+FILE="/php/7.4.33/tuxcare.els8/\
+php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip"
+curl -O "${BASE}${FILE}"
+```
+
+</details>
+<br>
+:::
+
+<ELSSteps>
+
+1. Open the repository in your browser
+
+   Navigate to your tokenized URL:
+
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/php/
+   ```
+
+   You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
+
+2. Choose the correct archive
+
+   Inside each version folder you will find subfolders named `tuxcare.elsN/`, where `N` is the TuxCare release number. Always select the subfolder with the **highest** number, as it contains the latest security updates. Each archive follows this naming pattern:
+
+   ```text
+   php-<version>-tuxcare-els<N>-<thread>-Win32-<vc>-<arch>-signed.zip
+   ```
+
+   Select the archive that matches your environment:
+
+   | Component | Options | How to choose |
+   | --- | --- | --- |
+   | **Thread safety** | `nts` (Non-Thread Safe) or `ts` (Thread Safe) | Use `nts` for IIS with FastCGI, nginx, or CLI. Use `ts` only for Apache `mod_php`. |
+   | **Architecture** | `x64` or `x86` | Use `x64` for 64-bit Windows (most common). Use `x86` only for 32-bit systems. |
+   | **VC runtime** | `vc15`, `vs16`, `vs17`, etc. | Indicates the required Visual C++ Redistributable. Download from [Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) if not installed. |
+
+   For example, to install PHP 7.4 (NTS, 64-bit), download `php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip`. This archive requires the **Visual C++ Redistributable for Visual Studio 2017** (`vc15`).
+
+3. Extract the archive
+
+   Create a destination folder (e.g. `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
+
+   Alternatively, use PowerShell:
+
+   ```text
+   New-Item -ItemType Directory -Path "C:\PHP" -Force
+   Expand-Archive `
+     -Path "$HOME\Downloads\php-7.4.33-tuxcare-els8-nts-Win32-vc15-x64-signed.zip" `
+     -DestinationPath "C:\PHP"
+   ```
+
+   After extraction, your directory should contain `php.exe`, `php.ini-development`, `php.ini-production`, and an `ext` folder with extension DLLs.
+
+4. Configure php.ini
+
+   Create a configuration file from one of the provided templates — copy `php.ini-development` for development or `php.ini-production` for production to `php.ini`:
+
+   ```text
+   Copy-Item "C:\PHP\php.ini-production" "C:\PHP\php.ini"
+   ```
+
+   Open `C:\PHP\php.ini` in a text editor, set the extension directory, and enable the extensions your application requires:
+
+   ```text
+   extension_dir = "C:\PHP\ext"
+   extension=curl
+   extension=mbstring
+   extension=mysqli
+   extension=openssl
+   ```
+
+5. Add PHP to the System PATH
+
+   To make `php` available from any terminal, add the PHP directory to the System PATH. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path**, click **Edit**, then click **New** and add `C:\PHP`.
+
+   Alternatively, use PowerShell (run as Administrator):
+
+   ```text
+   $currentPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+   [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;C:\PHP", "Machine")
+   ```
+
+   Close and reopen any terminal windows for the change to take effect.
+
+6. Verify the installation
+
+   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+
+   ```text
+   php -v
+   ```
+
+   You should see output like:
+
+   ```text
+   PHP 7.4.33 (cli) (built: Mar 10 2026 10:12:00)
+   Copyright (c) The PHP Group
+   Zend Engine v3.4.0, Copyright (c) Zend Technologies
+   ```
+
+   To verify that the required extensions are loaded, run `php -m`.
+
+</ELSSteps>
+
+</template>
+
+</TableTabs>
+<br>
+<details>
+ <summary>How to find System PATH</summary>
+
+ 1. Right-click **This PC** and select **Properties**, or search for **Settings > System > About** in the Start menu.
+ 2. Click **Advanced system settings**.
+
+    ![Windows System window with the Advanced system settings link highlighted](/images/php-windows-advanced-settings.webp)
+
+ 3. Click on **Environment Variables**.
+
+    ![Advanced tab of Windows System Properties with the Environment Variables button highlighted](/images/php-windows-environment-variables.webp)
+
+ 4. Under *System variables*, find **Path** and click **Edit**.
+
+    ![Windows Environment Variables dialog with the Path entry selected under System variables](/images/php-windows-add-path.webp)
+
+ 5. You will see your PHP `C:\PHP` directory added.
+
+    ![Windows Edit environment variable dialog showing the PHP installation directory added to Path](/images/php-windows-add-path-2.webp)
+</details>
+
+### Additional configurations
+
+Depending on your ELS PHP usage purpose, additional configurations may be required. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
+
+#### Change default PHP version
+
+If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
+
+#### Extensions
+
+Extensions are managed through the `php.ini` file located in your PHP installation directory (e.g. `C:\PHP`). Open it in a text editor and find the extensions section. Remove the semicolon `;` at the beginning of a line to enable an extension, or add `;` to disable it.
+
+```text
+;extension=curl
+extension=gd2
+;extension=mbstring
+extension=mysqli
+extension=pdo_mysql
+```
+
+##### Windows extensions list
+
+The following lists cover the Windows builds of ELS PHP. **Built-in** extensions are part of the PHP build and always available. **Loadable** extensions are DLLs in the `ext` folder that you enable in `php.ini` as shown above. Extensions marked *TS only* or *NTS only* are available only in the Thread Safe or Non-Thread Safe build.
+
+<TableTabs>
+
+  <template #PHP_5.2_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, com_dotnet, ctype, date, dom, filter, ftp, hash, iconv, json, libxml, odbc, pcre, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zlib
+
+  **Loadable:** adt, amf, bcompiler, bitset, blenc, bz2, bz2_filter, classkit, cpdf, crack, curl, cvsclient, db, dba, dbase, dbx, dio, docblock, domxml, doublemetaphone, event, exif, fdf, fileinfo, filepro, gd2, gettext, gmp, gopher, haru, htscanner, http, hyperwave, ibm_db2, id3, ifx, iisfunc (TS only), imap, ingres2, interbase, ioncube_loader, ldap, lzf, mailparse, maxdb, mbstring, mcrypt, mcrypt_filter, mcve, memcache, mhash, mime_magic, ming, msql, mssql, mysql, mysqli, netools, ntuser, oci8, oggvorbis, openssl, operator, oracle, params, parsekit, pdflib, pdo, pdo_firebird, pdo_ibm, pdo_informix, pdo_mssql, pdo_mysql, pdo_oci, pdo_oci8, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlite_external, pdo_user, pgsql, phar, phk, php5activescript (TS only), phpdoc, pop3, printer, pspell, radius, rar, runkit, sam, sdo, shmop, smtp, snmp, soap, sockets, spl_types, sqlite, ssh2, stats, stem, sybase_ct, threads (TS only), tidy, timezonedb, translit, uploadprogress, win32ps, win32scheduler, win32service, win32std, xmlrpc, xsl, yami, zip, zlib_filter
+
+  </div>
+
+  </template>
+
+  <template #PHP_5.4_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, ereg, filter, ftp, hash, iconv, json, libxml, mcrypt, mhash, mysqlnd, odbc, pcre, PDO, Phar, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dbx, enchant, exif, fileinfo, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysql, mysqli, oci8, oci8_11g, openssl, pdo_dblib, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sqlite3, sqlsrv, sybase_ct, tidy, wincache (NTS only), xmlrpc, xsl, ZendLoader (NTS only)
+
+  </div>
+
+  </template>
+
+  <template #PHP_5.6_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, ereg, filter, hash, iconv, json, libxml, mcrypt, mhash, mysqlnd, odbc, pcre, PDO, Phar, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysql, mysqli, oci8_12c, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sqlite3, sqlsrv, sybase_ct, tidy, xmlrpc, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_7.2_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_7.3_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_7.4_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd2, gettext, gmp, imap, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_8.0_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd, gettext, gmp, imap, intl, ldap, mbstring, mysqli, oci8_19, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xsl
+
+  </div>
+
+  </template>
+
+  <template #PHP_8.1_Windows_extensions>
+
+  <div class="notranslate">
+
+  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
+
+  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd, gettext, gmp, imap, intl, ldap, mbstring, mysqli, oci8_19, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xsl
+
+  </div>
+
+  </template>
+
+</TableTabs>
+
+#### Increase upload/memory limits
+
+If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits. Open the `php.ini` file and set the values as needed:
+
+```text
+upload_max_filesize=40M
+post_max_size=40M
+memory_limit=256M
+```
+
+#### Uninstallation
+
+To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
+
+To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
+
+## SaxonC Use Case
+
+You can extend alt-php with additional modules. Below is an example of installing the SaxonC PHP extension.
+
+Although this guide uses **alt-php82** in its examples, the same installation steps apply to **alt-php83** and newer versions. Replace `php82` with your target version in all commands and file paths.
+
+This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names and paths to match the version you downloaded.
+
+<ELSPrerequisites id="saxonc-prerequisites">
+
+* Saxon 12+ (required for PHP 8.2+ compatibility) — download from [saxonica.com](https://www.saxonica.com/download/c.xml)
+* `httpd` (or `apache2`), `gcc-c++` (or `g++`) with minimum C++14 support
+* `alt-php82-devel` (or matching version)
+
+| Edition   | License     | Key Features                            |
+| --------- | ----------- | --------------------------------------- |
+| SaxonC-HE | Open Source | XSLT 3.0, XPath 3.1, XQuery 3.1 (Basic) |
+| SaxonC-PE | Commercial  | HE + ICU localization, JSON support     |
+| SaxonC-EE | Commercial  | PE + Schema validation, Optimization    |
+
+</ELSPrerequisites>
+
+### Set up SaxonC
+
+<ELSSteps>
+
+1. Download SaxonC
+
+   Download from the [official Saxonica download page](https://www.saxonica.com/download/c.xml). Create a working directory and move the downloaded zip file into it:
+
+   ```text
+   mkdir saxon && cd saxon
+   mv ../SaxonCHE-linux-x86_64-12-9-0.zip .
+   ```
+
+2. Extract the archive
+
+   Unzip the downloaded file and verify:
+
+   ```text
+   unzip SaxonCHE-linux-x86_64-12-9-0.zip
+   ls
+   ```
+
+   Example output:
+
+   ```text
+   SaxonCHE-linux-x86_64-12-9-0  SaxonCHE-linux-x86_64-12-9-0.zip
+   ```
+
+3. Install the libraries
+
+   Starting with version 12.6, `/opt/saxonica/` is the recommended installation path. Navigate into the extracted directory and copy all Saxon files:
+
+   ```text
+   cd SaxonCHE-linux-x86_64-12-9-0
+   sudo mkdir -p /opt/saxonica/
+   sudo cp -r SaxonCHE/* /opt/saxonica/
+   ```
+
+   The installed structure should contain `bin`, `include`, and `lib` directories.
+
+4. Configure environment variables
+
+   Add the following lines to your `.bashrc` or `/etc/profile.d/saxon.sh`.
+
+   The `LD_LIBRARY_PATH` variable must point to the Saxon libraries:
+
+   ```text
+   export LD_LIBRARY_PATH="/opt/saxonica/lib:$LD_LIBRARY_PATH"
+   ```
+
+   To run the Transform, Query, and Validate (EE only) binaries, set the `PATH` variable:
+
+   ```text
+   export PATH="/opt/saxonica/bin:$PATH"
+   ```
+
+   :::tip
+   If the PHP web server can't find the Saxon libraries, you may also need to add `/opt/saxonica/lib` to a new file in `/etc/ld.so.conf.d/` and run `ldconfig`.
+   :::
+
+</ELSSteps>
+
+### Build the PHP extension
+
+<ELSSteps>
+
+1. Install alt-php82-devel
+
+   Install the development package required for compiling PHP extensions:
+
+   ```text
+   dnf install alt-php82-devel
+   ```
+
+   Verify that `phpize` is available:
+
+   ```text
+   ls /opt/alt/php82/usr/bin/phpize
+   ```
+
+2. Prepare the build environment
+
+   Navigate to the PHP extension source directory within the extracted Saxon archive and run `phpize` to prepare the build:
+
+   ```text
+   cd php/src/
+   /opt/alt/php82/usr/bin/phpize
+   ```
+
+   Example output:
+
+   ```text
+   Configuring for:
+   PHP Api Version:         20220829
+   Zend Module Api No:      20220829
+   Zend Extension Api No:   420220829
+   ```
+
+3. Configure and compile
+
+   Configure the extension build with Saxon support and link to the Saxon libraries:
+
+   ```text
+   ./configure --with-saxon --with-php-config=/opt/alt/php82/usr/bin/php-config LDFLAGS="-L/opt/saxonica/lib"
+   ```
+
+   Compile and install:
+
+   ```text
+   make
+   sudo make install
+   ```
+
+   Example output:
+
+   ```text
+   Installing shared extensions:     /opt/alt/php82/usr/lib64/php/modules/
+   ```
+
+4. Enable the extension
+
+   Create a configuration file that tells PHP to load the extension:
+
+   ```text
+   tee -a /opt/alt/php82/etc/php.d/20-saxon.ini <<EOF
+   ; configuration for php Saxon HE/PE/EE module
+   extension=saxon.so
+   EOF
+   ```
+
+   Verify that the Saxon extension appears in the list of loaded modules:
+
+   ```text
+   /opt/alt/php82/usr/bin/php -m | grep saxon
+   ```
+
+   Example output:
+
+   ```text
+   saxonc
+   ```
+
+5. Verify with a test script
+
+   Run a quick test to confirm the extension works:
+
+   ```text
+   /opt/alt/php82/usr/bin/php -ddisplay_errors=E_ALL  << 'EOF'
+   <?php
+     $saxonProc = new Saxon\SaxonProcessor();
+     $transformer = $saxonProc->newXslt30Processor();
+     $executable = $transformer->compileFromString("
+       <xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
+           <xsl:template name='go'><a/></xsl:template>
+       </xsl:stylesheet>
+   ");
+     $root = $executable->callTemplateReturningValue("go");
+     $node = $root->getHead()->getNodeValue();
+     echo "$node \n";
+   EOF
+   ```
+
+   Example output:
+
+   ```text
+   <a/>
+   ```
+
+   If you are using php-fpm or Apache, restart the services.
+
+</ELSSteps>
 
 ## What's Next?
 
