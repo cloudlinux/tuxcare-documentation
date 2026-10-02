@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-c271a6b2","path":"/service-descriptions/","title":"Service Descriptions","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Essential and Enhanced Support","slug":"essential-and-enhanced-support","link":"#essential-and-enhanced-support","children":[]}]}');export{e as data};
