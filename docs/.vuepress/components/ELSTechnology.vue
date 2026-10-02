@@ -5,12 +5,16 @@
   </div>
 
   <div class="supported-product-sorting">
+    <label for="els-tech-search" class="sr-only">Search for a technology</label>
     <input
+      id="els-tech-search"
       v-model="search"
-      type="text"
+      type="search"
+      autocomplete="off"
       placeholder="Search for a Technology"
       class="search-box"
     />
+    <p class="sr-only" role="status" aria-live="polite">{{ resultsMessage }}</p>
 
     <div class="sp-sort-head">
       <ul>
@@ -20,22 +24,45 @@
       </ul>
     </div>
 
-    <div class="sp-sort-body">
+    <p v-if="filteredData.length === 0" class="no-results">
+      No matching technologies. Contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.
+    </p>
+
+    <div v-else class="sp-sort-body">
       <div class="ecosystem-tabs">
-        <ul>
+        <ul role="tablist" aria-label="Ecosystem" aria-orientation="vertical">
           <li
             v-for="(item, index) in filteredData"
-            :key="index"
-            :class="{ active: activeTab === index }"
-            @click="activeTab = index"
+            :key="item.ecosystem"
+            role="presentation"
           >
-            <img :src="item.ecosystemIcon" class="ecosystem-icon" alt="" aria-hidden="true" />
-            {{ item.ecosystem }}
+            <button
+              :id="'els-tab-' + index"
+              :ref="(el) => (tabRefs[index] = el)"
+              type="button"
+              role="tab"
+              :class="{ active: activeTab === index }"
+              :aria-selected="activeTab === index ? 'true' : 'false'"
+              aria-controls="els-tabpanel"
+              :tabindex="activeTab === index ? 0 : -1"
+              @click="activeTab = index"
+              @keydown="onTabKey($event, index)"
+            >
+              <img :src="item.ecosystemIcon" class="ecosystem-icon" alt="" aria-hidden="true" />
+              {{ item.ecosystem }}
+            </button>
           </li>
         </ul>
       </div>
 
-      <div class="sp-sort-row" v-if="filteredData[activeTab]">
+      <div
+        v-if="filteredData[activeTab]"
+        id="els-tabpanel"
+        class="sp-sort-row"
+        role="tabpanel"
+        :aria-labelledby="'els-tab-' + activeTab"
+        tabindex="0"
+      >
         <div class="scroll-container">
           <ul class="project-list">
             <li
@@ -54,7 +81,7 @@
                   </span>
                   <span v-else>{{ project.versions }}</span>
                 </span>
-                <span class="project-arrow">&rarr;</span>
+                <span class="project-arrow" aria-hidden="true">&rarr;</span>
               </a>
               <div v-else class="project-row">
                 <span class="project-name">{{ project.name }}</span>
@@ -74,10 +101,11 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, nextTick } from "vue";
 
 const search = ref("");
 const activeTab = ref(0);
+const tabRefs = [];
 
 const techData = [
   {
@@ -607,7 +635,7 @@ const techData = [
       },
       {
         name: "Netty",
-        versions: "3.10.6.Final | 4.1.43.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.79.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.94.Final | 4.1.107.Final | 4.1.108.Final | 4.1.111.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.119.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
+        versions: "3.10.6.Final | 4.1.43.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.79.Final | 4.1.82.Final | 4.1.87.Final | 4.1.92.Final | 4.1.93.Final | 4.1.94.Final | 4.1.99.Final | 4.1.107.Final | 4.1.108.Final | 4.1.111.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.119.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
         link: "./java-libraries/",
       },
       {
@@ -787,7 +815,7 @@ const techData = [
       },
       {
         name: "Spring® LDAP",
-        versions: "2.3.1.RELEASE | 2.4.1 | 2.4.4 | 3.0.6 | 3.2.12",
+        versions: "2.3.1.RELEASE | 2.3.2.RELEASE | 2.3.3.RELEASE | 2.4.1 | 2.4.4 | 3.0.6 | 3.2.12",
         link: "./spring/",
         detailsHash: "LDAP",
         versionsVary: true,
@@ -860,7 +888,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 9.4.63 | 9.4.64 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 10.0.31 | 10.0.32 | 10.0.33 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30 | 11.0.33",
+        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.51.v20230217 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 9.4.63 | 9.4.64 | 9.4.65 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 10.0.31 | 10.0.32 | 10.0.33 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30 | 11.0.33",
         link: "./jetty/",
       },
       {
@@ -916,7 +944,7 @@ const techData = [
       },
       {
         name: "ajv",
-        versions: "4.11.8 | 5.5.2 | 6.4.0 | 6.5.3 | 6.9.1 | 6.10.0 | 6.10.2 | 6.11.0 | 6.12.3 | 6.12.4 | 6.12.6 | 6.14.0 | 8.6.2 | 8.9.0 | 8.11.0 | 8.12.0 | 8.17.1",
+        versions: "4.11.8 | 5.5.2 | 6.4.0 | 6.5.3 | 6.9.1 | 6.10.0 | 6.10.2 | 6.11.0 | 6.12.3 | 6.12.4 | 6.12.6 | 6.14.0 | 8.6.2 | 8.6.3 | 8.9.0 | 8.11.0 | 8.12.0 | 8.17.1",
         link: "./javascript-libraries/",
       },
       {
@@ -946,7 +974,7 @@ const techData = [
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.26.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.6.2 | 1.6.8 | 1.7.5 | 1.7.7 | 1.7.9",
+        versions: "0.15.3 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.4 | 0.24.0 | 0.26.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.6.2 | 1.6.8 | 1.7.5 | 1.7.7 | 1.7.9 | 1.13.5 | 1.16.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1046,7 +1074,7 @@ const techData = [
       },
       {
         name: "brace-expansion",
-        versions: "1.1.11 | 1.1.12 | 2.0.1 | 2.1.2",
+        versions: "1.1.11 | 1.1.12 | 1.1.18 | 2.0.1 | 2.0.2 | 2.1.2 | 4.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1421,7 +1449,7 @@ const techData = [
       },
       {
         name: "immutable",
-        versions: "3.8.1 | 3.8.2 | 3.8.3 | 4.1.0 | 4.3.5 | 4.3.7 | 5.0.3 | 5.1.5",
+        versions: "3.7.6 | 3.8.1 | 3.8.2 | 3.8.3 | 4.1.0 | 4.3.5 | 4.3.7 | 5.0.3 | 5.1.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1606,7 +1634,7 @@ const techData = [
       },
       {
         name: "marked",
-        versions: "0.2.10 | 0.3.19 | 0.7.0 | 0.8.2 | 1.2.7 | 4.0.6 | 4.0.7 | 4.0.9",
+        versions: "0.2.10 | 0.3.19 | 0.7.0 | 0.8.2 | 1.2.7 | 2.1.3 | 4.0.6 | 4.0.7 | 4.0.9",
         link: "./javascript-libraries/",
       },
       {
@@ -1846,7 +1874,7 @@ const techData = [
       },
       {
         name: "protobufjs",
-        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.6",
+        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.3 | 6.11.6",
         link: "./javascript-libraries/",
       },
       {
@@ -2136,7 +2164,7 @@ const techData = [
       },
       {
         name: "uuid",
-        versions: "3.4.0 | 8.3.2 | 9.0.1 | 11.0.5",
+        versions: "3.4.0 | 8.3.2 | 9.0.1 | 10.0.0 | 11.0.5",
         link: "./javascript-libraries/",
       },
       {
@@ -2156,7 +2184,7 @@ const techData = [
       },
       {
         name: "Vite",
-        versions: "2.9.18 | 3.2.11 | 4.1.5 | 4.5.5 | 4.5.14 | 5.4.14 | 5.4.21 | 6.4.2 | 7.3.2 | 7.3.3 | 8.0.8 | 8.0.10 | 8.0.12",
+        versions: "2.9.18 | 3.2.11 | 4.1.5 | 4.5.0 | 4.5.5 | 4.5.14 | 5.0.12 | 5.4.10 | 5.4.14 | 5.4.21 | 6.4.2 | 6.4.3 | 7.3.2 | 7.3.3 | 8.0.8 | 8.0.9 | 8.0.10 | 8.0.12",
         link: "./vite/",
       },
       {
@@ -2311,7 +2339,7 @@ const techData = [
       },
       {
         name: "webpack-dev-middleware",
-        versions: "1.10.2 | 1.11.0 | 1.12.0 | 1.12.2 | 3.0.1 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 5.3.4 | 7.4.5",
+        versions: "1.10.2 | 1.11.0 | 1.12.0 | 1.12.2 | 3.0.1 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 5.3.4 | 7.4.2 | 7.4.5",
         link: "./javascript-libraries/",
       },
       {
@@ -2341,7 +2369,7 @@ const techData = [
       },
       {
         name: "ws",
-        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 6.2.2 | 6.2.3 | 7.4.5 | 7.4.6 | 7.5.9 | 8.2.3 | 8.5.0 | 8.11.0 | 8.13.0 | 8.14.2 | 8.16.0 | 8.17.0 | 8.17.1 | 8.18.0 | 8.18.3 | 8.20.0",
+        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 3.3.3 | 4.1.0 | 6.0.0 | 6.2.1 | 6.2.2 | 6.2.3 | 7.4.5 | 7.4.6 | 7.5.3 | 7.5.9 | 8.2.3 | 8.5.0 | 8.11.0 | 8.13.0 | 8.14.2 | 8.16.0 | 8.17.0 | 8.17.1 | 8.18.0 | 8.18.3 | 8.20.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2408,6 +2436,11 @@ const techData = [
       {
         name: "aiohttp",
         versions: "3.8.1 | 3.8.4 | 3.8.5 | 3.8.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "anyio",
+        versions: "3.7.1",
         link: "./python-libraries/",
       },
       {
@@ -2586,13 +2619,18 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "py",
+        versions: "1.11.0",
+        link: "./python-libraries/",
+      },
+      {
         name: "pyarrow",
         versions: "12.0.1",
         link: "./python-libraries/",
       },
       {
         name: "pydantic",
-        versions: "1.10.5",
+        versions: "1.10.0 | 1.10.5",
         link: "./python-libraries/",
       },
       {
@@ -2653,6 +2691,11 @@ const techData = [
       {
         name: "scikit-learn",
         versions: "1.0.2",
+        link: "./python-libraries/",
+      },
+      {
+        name: "sentence-transformers",
+        versions: "2.7.0",
         link: "./python-libraries/",
       },
       {
@@ -3260,6 +3303,57 @@ watch(filteredData, (result) => {
   if (activeTab.value >= result.length) activeTab.value = 0;
 });
 
+// Roving-tabindex keyboard support for the ecosystem tablist (WAI-ARIA
+// tabs pattern). Both arrow axes work, since the list stacks vertically
+// on desktop and wraps horizontally on narrow screens.
+function onTabKey(event, index) {
+  const count = filteredData.value.length;
+  let next = null;
+  switch (event.key) {
+    case "ArrowDown":
+    case "ArrowRight":
+      next = (index + 1) % count;
+      break;
+    case "ArrowUp":
+    case "ArrowLeft":
+      next = (index - 1 + count) % count;
+      break;
+    case "Home":
+      next = 0;
+      break;
+    case "End":
+      next = count - 1;
+      break;
+    default:
+      return;
+  }
+  event.preventDefault();
+  activeTab.value = next;
+  nextTick(() => tabRefs[next]?.focus());
+}
+
+// Announce the result count politely, debounced so screen readers are not
+// interrupted on every keystroke.
+const resultsMessage = ref("");
+let resultsTimer;
+watch(search, () => {
+  clearTimeout(resultsTimer);
+  resultsTimer = setTimeout(() => {
+    if (!search.value) {
+      resultsMessage.value = "";
+      return;
+    }
+    const total = filteredData.value.reduce(
+      (sum, item) => sum + item.projects.length,
+      0
+    );
+    resultsMessage.value =
+      total === 0
+        ? "No matching technologies"
+        : `${total} ${total === 1 ? "technology" : "technologies"} found`;
+  }, 400);
+});
+
 function getFilteredProjects(item) {
   return item.projects;
 }
@@ -3293,8 +3387,21 @@ function getProjectHref(project) {
   font-size: 1rem;
   margin: 0 auto 1rem auto;
   border-radius: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #767676;
   display: block;
+}
+
+
+.heading p a,
+.no-results a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.no-results {
+  text-align: center;
+  margin: 1rem 0;
+  color: #5c6370;
 }
 
 .sp-sort-head ul {
@@ -3343,23 +3450,36 @@ function getProjectHref(project) {
 }
 
 .ecosystem-tabs li {
+  margin-bottom: 0.4rem;
+}
+
+.ecosystem-tabs button {
+  width: 100%;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
   display: flex;
   align-items: center;
   cursor: pointer;
   background-color: #fff;
   min-height: 2.5rem;
-  margin-bottom: 0.4rem;
   border-bottom: none;
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
   transition: background-color 0.15s ease;
 }
 
-.ecosystem-tabs li:hover {
+.ecosystem-tabs button:focus-visible {
+  outline: 2px solid #0B5CAD;
+  outline-offset: -2px;
+}
+
+.ecosystem-tabs button:hover {
   background-color: #f5f7fa;
 }
 
-.ecosystem-tabs li.active {
+.ecosystem-tabs button.active {
   background-color: #FEF6F2;
   color: #000;
   font-weight: bold;
@@ -3404,20 +3524,24 @@ function getProjectHref(project) {
   cursor: pointer;
 }
 
-a.project-row.clickable:hover {
+a.project-row.clickable:hover,
+a.project-row.clickable:focus-visible {
   background: #FEF6F2;
   box-shadow: 0 2px 8px rgba(244, 130, 67, 0.1);
 }
 
-a.project-row.clickable:hover .project-arrow {
+a.project-row.clickable:hover .project-arrow,
+a.project-row.clickable:focus-visible .project-arrow {
   opacity: 1;
   transform: translateX(0);
-  color: #F48243;
+  color: #B34F12;
 }
 
 a.project-row.clickable:hover .project-name,
-a.project-row.clickable:hover .project-versions {
-  color: #F48243;
+a.project-row.clickable:hover .project-versions,
+a.project-row.clickable:focus-visible .project-name,
+a.project-row.clickable:focus-visible .project-versions {
+  color: #B34F12;
 }
 
 .project-list > li:last-child .project-row {
@@ -3449,6 +3573,56 @@ a.project-row.clickable:hover .project-versions {
   transition: all 0.2s ease;
   color: #5c6370;
   flex-shrink: 0;
+}
+
+.sp-sort-row:focus-visible {
+  outline: 2px solid #0B5CAD;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    width: 100%;
+  }
+
+  .sp-sort-head {
+    display: none;
+  }
+
+  .sp-sort-body {
+    flex-direction: column;
+  }
+
+  .ecosystem-tabs,
+  .sp-sort-row {
+    width: 100%;
+  }
+
+  .ecosystem-tabs ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ecosystem-tabs li {
+    margin-bottom: 0;
+  }
+
+  .ecosystem-tabs button {
+    width: auto;
+  }
+
+  .project-row {
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+
+  .project-name {
+    flex: 1 1 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
 }
 </style>
 

@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar" aria-label="Documentation sidebar">
+  <nav class="sidebar" aria-label="Documentation">
     <slot name="top"/>
     <ul class="sidebar-links" v-if="sidebarItems.length">
       <li v-for="(item, i) in sidebarItems" :key="i">
@@ -20,7 +20,7 @@
       </li>
     </ul>
     <slot name="bottom"/>
-  </aside>
+  </nav>
 </template>
 
 
@@ -28,7 +28,7 @@
 import SidebarGroup from './SidebarGroup.vue'
 import SidebarLink from './SidebarLink.vue'
 import {isActive, resolveSidebarItems} from '../util'
-import {computed, onMounted, onUnmounted, ref, watch} from "vue";
+import {computed, onMounted, onUnmounted, provide, reactive, ref, watch} from "vue";
 import {useRoute} from "vue-router";
 import {usePageData} from "@vuepress/client";
 
@@ -67,6 +67,45 @@ const refreshIndex = () => {
 const toggleGroup = (index) => {
   openGroupIndex.value = index === openGroupIndex.value ? -1 : index
 }
+
+// Expanded state of collapsible entries, keyed by link path. Sub-headings
+// ("/page/#slug") follow the scroll position; page entries follow the current
+// page unless the user toggled them.
+const expanded = reactive(new Map())
+const isExpanded = (key, defaultValue = false) => expanded.has(key) ? expanded.get(key) : defaultValue
+provide('sidebarExpansion', {
+  isExpanded,
+  toggle: (key, defaultValue = false) => expanded.set(key, !isExpanded(key, defaultValue)),
+})
+
+// Expand exactly these sub-headings (collapsing the others) or, with
+// `only` false, just add them.
+const expandSubHeadings = (keys, only = true) => {
+  if (only) {
+    expanded.forEach((value, key) => {
+      if (value && key.includes('#') && !keys.includes(key)) expanded.set(key, false)
+    })
+  }
+  keys.forEach(key => expanded.get(key) || expanded.set(key, true))
+}
+
+// Keys of the collapsible sub-headings that contain the given sidebar link.
+const subHeadingKeysFor = (sidebar, link) =>
+    [...sidebar.querySelectorAll('li.collapsible.sidebar-sub-header')]
+        .filter(li => li.contains(link))
+        .map(li => li.querySelector(':scope > .sidebar-link-container > a')?.getAttribute('data-anchor'))
+        .filter(Boolean)
+
+// Mark the in-page link for the current section, next to the "active" class.
+// Only #hash links: the page link itself keeps RouterLink's aria-current="page".
+const setCurrentLocation = (sidebar, link) => {
+  sidebar.querySelectorAll('a[aria-current="location"]').forEach(a => a.removeAttribute('aria-current'))
+  if (link?.getAttribute('data-anchor')?.includes('#')) link.setAttribute('aria-current', 'location')
+}
+
+watch(() => route.path, () => {
+  expanded.forEach((value, key) => key.includes('#') || expanded.delete(key))
+})
 
 watch(() => route, () => {
   refreshIndex()
@@ -112,7 +151,6 @@ const updateSidebarActiveState = () => {
   if (!sidebar) return
 
   const sidebarAnchors = sidebar.querySelectorAll('a')
-  const sidebarAnchorsContainer = sidebar.querySelectorAll('.collapsible.sidebar-sub-header')
   const pageAnchors = document.querySelectorAll('.header-anchor')
   
   // Get all visible headings sorted by their position (topmost first)
@@ -156,17 +194,10 @@ const updateSidebarActiveState = () => {
   
   if (activeLink) {
     activeLink.classList.add('active')
-    
-    // Expand/collapse collapsible containers
-    sidebarAnchorsContainer.forEach(container => {
-      container.querySelectorAll('.sidebar-link-container').forEach(cl => {
-        if (container.querySelector(`a[data-anchor="${currentAnchor}"]`)) {
-          cl.classList.remove("collapsed")
-        } else {
-          cl.classList.add("collapsed")
-        }
-      })
-    })
+    setCurrentLocation(sidebar, activeLink)
+
+    // Expand the sub-headings around the current section, collapse the rest
+    expandSubHeadings(subHeadingKeysFor(sidebar, activeLink))
   }
 }
 
@@ -250,15 +281,10 @@ const handleHashChange = () => {
     // Remove the "active" class from all sidebar links and add it only to the current one
     sidebarAnchors.forEach((link) => link.classList.remove('active'));
     targetAnchor.classList.add('active');
+    setCurrentLocation(sidebar, targetAnchor);
 
-    // Expand the parent collapsible sidebar item, if any
-    const parentCollapsible = targetAnchor.closest('.collapsible');
-    if (parentCollapsible) {
-      const linkContainer = parentCollapsible.querySelector('.sidebar-link-container');
-      if (linkContainer) {
-        linkContainer.classList.remove('collapsed');
-      }
-    }
+    // Expand the collapsible sidebar items around it, if any
+    expandSubHeadings(subHeadingKeysFor(sidebar, targetAnchor), false);
   }
   
   // Re-setup observer after hash change to ensure proper tracking

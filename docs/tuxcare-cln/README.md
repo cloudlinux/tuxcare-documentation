@@ -30,7 +30,7 @@ Dashboard helps quickly navigate to your _Products_. It has the following tabs:
 
 Click _Dashboard_. You will be redirected to the _My Products_ page.
 
-![](/images/dashboard.png)
+![My Products page with license counts for KernelCare Enterprise, LibraryCare, DatabaseCare and ELS products](/images/dashboard.png)
 
 The following actions are available:
 
@@ -41,7 +41,7 @@ The following actions are available:
 
 Click _Dashboard → Servers_ to go to _All Servers_ page. A list of all servers with installed products belonged to this account is available.
 
-![](/images/allservers.png)
+![All Servers page with filters, search and a server list showing name, IP, registration date, group, installed products and actions](/images/allservers.png)
 
 The table includes all servers that have been activated in all products within the account. The table contains the following columns:
 
@@ -51,7 +51,7 @@ The table includes all servers that have been activated in all products within t
 * **Group** – server group (please refer to the [TuxCare portal documentation](https://docs.cln.cloudlinux.com/dashboard/#server-groups) to find more information about server group)
 * **Installed products** — shows a logo of a product activated on a server
 * **Actions**
-    * To remove an item, click on ![](/images/remove.png)
+    * To remove an item, click on ![Remove](/images/remove.png)
 
 Click the server name to show server details:
 
@@ -68,7 +68,7 @@ The following filters are available:
 
 Click _Live Patching Services_ You will be redirected to the _Server License Types_ page.
 
-![](/images/serverlicensetypes.png)
+![Live Patching Services Server License Types page with license counts for KernelCare Enterprise, LibraryCare, QEMUCare and DatabaseCare](/images/serverlicensetypes.png)
 
 Here you can see the number of server licenses and manage licenses and billing cycle by contacting TuxCare Sales team.
 
@@ -76,7 +76,7 @@ Here you can see the number of server licenses and manage licenses and billing c
 
 Click _Extended Support Services_ You will be redirected to the _Server License Types_ page.
 
-![](/images/serverlicensetypes1.png)
+![Extended Support Services Server License Types page with license counts for each ELS product, with Manage servers and Manage activation keys links](/images/serverlicensetypes1.png)
 
 ### Server License Types
 
@@ -89,7 +89,7 @@ Here you can see the the number of server licenses for each product.
 
 Click _Extended Support Services → Activation Keys_. You will be redirected to the _Activation Keys_ page.
 
-![](/images/activationkeys.png)
+![Activation Keys page with license type filters and a list of keys showing license type, note and servers used/limits](/images/activationkeys.png)
 
 **Activation Key** is a string of numbers and letters used to activate a product.
 
@@ -99,7 +99,7 @@ The table includes all activation keys for all products within the account. The 
 * **License type** — a type of server license that is used and determines a limit of server users
 * **Note** — any information you’ve added to this activation key
 * **Servers (used/limits)** – a number of servers that have already been activated with this key (used) and a total number of servers that can be registered with this particular key (limits)
-* **Tick** – tick an activation key or keys to perform a remove action (use ![](/images/delete.png))
+* **Tick** – tick an activation key or keys to perform a remove action (use ![Delete](/images/delete.png))
 
 :::tip Note
 The default activation key cannot be deleted.
@@ -116,7 +116,7 @@ Click an activation key to go to this [Activation Key Details](/tuxcare-cln/#act
 
 Click _Extended Support Services → Activation Keys → Product_. You will be redirected to the _Product Activation Keys_ page.
 
-![](/images/productactivationkeypage.png)
+![ELS for Ubuntu Activation Keys page with the default activation key, the Generate new activation key button, server license count and key list](/images/productactivationkeypage.png)
 
 * If there are no activation keys for the product, you can create one by clicking the _Create activation key_.
 * If there is the default activation key for the product, you can generate a new one by clicking the _Generate new activation key_. A new key will be created automatically and added to the table.
@@ -128,7 +128,7 @@ The table includes all activation keys for the product. The table contains the f
 * **Note** — any information you’ve added to this activation key
 * **Servers (used/limits)** – a number of servers that have already been activated with this key (used) and a total number of servers that can be registered with this particular key (limits)
 
-To remove a key, select it and click ![](/images/delete.png).
+To remove a key, select it and click ![Delete](/images/delete.png).
 
 The following filters are available:
 
@@ -139,13 +139,13 @@ Click a key to go to the _Activation Key Details_ page for this key.
 
 #### Activation Key Details
 
-![](/images/activationkeydetails.png)
+![Activation Key Details page with key information, Edit Key and Remove activation key buttons, and the Servers List](/images/activationkeydetails.png)
 
 Here you can:
 
 * See the activation key complete information
 * Edit key. Click _Edit key_
-* Remove key. Click ![](/images/delete1.png)
+* Remove key. Click ![Remove activation key](/images/delete1.png)
 * Review _Servers List_
 
 The table includes all servers registered with the key. The table contains the following columns:
@@ -164,7 +164,7 @@ The following filters are available:
 
 Click _Extended Support Services → Servers_. You will be redirected to the _Servers_ page.
 
-![](/images/servers.png)
+![Extended Lifecycle Support servers page with product filters and a server list showing name, IP, registration date, installed products and actions](/images/servers.png)
 
 The table includes all servers activated for all products within Extended Lifecycle Support. The table contains the following columns:
 
@@ -173,7 +173,7 @@ The table includes all servers activated for all products within Extended Lifecy
 * **Registered** — a date when a server was activated. A server sends this information to TuxCare portal
 * **Installed products** — shows a logo of a product activated on a server
 * **Actions**
-    * To remove an item, click on ![](/images/remove.png)
+    * To remove an item, click on ![Remove](/images/remove.png)
 
 Click the server name to show server details:
 
@@ -190,7 +190,7 @@ The following filters are available:
 
 Click _Extended Support Services → Servers → Product_. You will be redirected to the _Product Servers_ page.
 
-![](/images/productservers.png)
+![ELS for Ubuntu servers page with the Get Server List button and an expanded server row showing the product and last check-in date](/images/productservers.png)
 
 The table includes all servers activated for the product within Extended Lifecycle Support. The table contains the following columns:
 
@@ -199,7 +199,7 @@ The table includes all servers activated for the product within Extended Lifecyc
 * **Registered** — a date when a server was activated. A server sends this information to TuxCare portal
 * **Installed products** — shows a logo of a product activated on a server
 * **Actions**
-    * To remove an item, click on ![](/images/remove.png)
+    * To remove an item, click on ![Remove](/images/remove.png)
 
 Click the server name to show server details:
 
@@ -219,7 +219,7 @@ You can download the servers list by clicking the _Get servers list_.
 
 Click _Billing_, you will be redirected to the _Balance and Top up_ page.
 
-![](/images/billingmain.png)
+![Billing page with the Top up your account form, current balance and current plan price table](/images/billingmain.png)
 
 Here you find the following:
 
@@ -240,19 +240,19 @@ The following tabs are available:
 
 #### Billing information
 
-![](/images/billingcontacts.png)
+![Payment methods page with the Billing information tab open, showing the Email for billing field](/images/billingcontacts.png)
 
 Here, you can change your email for billing. Click _Save_ to apply changes.
 
 #### Payment methods
 
-![](/images/paymentmethods.png)
+![Payment methods page with the Payment method tab open, showing a saved card](/images/paymentmethods.png)
 
 Here, you can manage your payment method. Click _Save_ to apply changes.
 
 #### Autopayment
 
-![](/images/autopayment.png)
+![Payment methods page with the Autopayment tab open, showing the Autopayment type selector](/images/autopayment.png)
 
 Here, you can change your autopayment type:
 
@@ -264,7 +264,7 @@ Click _Save_ to apply changes.
 
 ### Invoices
 
-![](/images/invoices.png)
+![Invoices page listing invoices with ID, created date, type, pay period, total, balance, and view and download actions](/images/invoices.png)
 
 The table contains the followings columns:
 
@@ -275,16 +275,16 @@ The table contains the followings columns:
 * **Total** — a total amount received/need to pay
 * **Balance** – the current balance
 * **Actions** — the following actions are available:
-    * **View invoice** — click ![](/images/eye.png) to view invoice in-details. It opens in a new popup.
-    * **Download invoice** — click ![](/images/download.png) to download an invoice.
+    * **View invoice** — click ![View invoice](/images/eye.png) to view invoice in-details. It opens in a new popup.
+    * **Download invoice** — click ![Download invoice](/images/download.png) to download an invoice.
 
-Click ![](/images/details.png) to view the invoice details.
+Click ![Expand](/images/details.png) to view the invoice details.
 
 ## Settings
 
 To go to account details, click _User_ icon → _Settings_ in the top right corner. You will be redirected to the _Account details_ page.
 
-![](/images/accountsettings.png)
+![User menu open in the top right corner with Settings highlighted](/images/accountsettings.png)
 
 ### Account details
 
@@ -296,7 +296,7 @@ The following tabs are available:
 
 #### Personal information
 
-![](/images/personalinformation.png)
+![Account details page with the Personal Information form](/images/personalinformation.png)
 
 All fields marked * are required.
 
@@ -311,13 +311,13 @@ Click _Save_ to apply changes.
 
 #### Company information
 
-![](/images/companyinformation.png)
+![Account details page with the Company Information form](/images/companyinformation.png)
 
 Click _Save_ to apply changes.
 
 #### Billing contact information
 
-![](/images/billinginformation.png)
+![Account details page with the Billing contact information form](/images/billinginformation.png)
 
 Click _Save_ to apply changes.
 
@@ -325,7 +325,7 @@ Click _Save_ to apply changes.
 
 You can create additional logins for your account in the form of the email address. The sub login can have any role with different permissions listed below. A master Server Administrator account has the full scope of permissions; this role can create account sub logins.
 
-![](/images/accountsublogins.png)
+![Account sub logins page with the Add sub login form: email, password and role](/images/accountsublogins.png)
 
 Click _Save_ to apply changes.
 
@@ -395,6 +395,6 @@ Click _Save_ to apply changes.
 
 It is possible to set reports receiving for an account to the desired email address.
 
-![](/images/reports.png)
+![Reports page with the Add Config button and a report configuration showing product, emails, frequency and active status](/images/reports.png)
 
 To add a new report configuration, click _Add config_.

@@ -43,6 +43,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Couchbase JVM Core IO** 2.6.3
 * **Couchbase JVM Core IO Deps** 1.6.3
 * **DNSJava** 2.1.7, 3.5.2
+* **docker-java** 3.2.11, 3.2.13, 3.3.0, 3.3.6, 3.4.2
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
 * **Eclipse Aether** 1.0.2.v20150114
@@ -90,7 +91,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **NekoHTML** 1.9.22
 * **Neo4j Bolt Connection** 2.0.0
 * **Neo4j Java Driver** 5.28.5
-* **Netty** 3.10.6.Final, 4.1.43.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.79.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.94.Final, 4.1.107.Final, 4.1.108.Final, 4.1.111.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.119.Final, 4.1.122.Final, 4.1.130.Final, 4.1.135.Final
+* **Netty** 3.10.6.Final, 4.1.43.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.79.Final, 4.1.82.Final, 4.1.87.Final, 4.1.92.Final, 4.1.93.Final, 4.1.94.Final, 4.1.99.Final, 4.1.107.Final, 4.1.108.Final, 4.1.111.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.119.Final, 4.1.122.Final, 4.1.130.Final, 4.1.135.Final
 * **Netty Incubator** 0.0.21.Final
 * **Nimbus JOSE + JWT** 8.23, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
@@ -110,6 +111,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
 * **Sonatype Sisu** 2.3.0
+* **Testcontainers** 1.19.8
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
 * **Undertow** 2.2.24.Final, 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final
 * **Woodstox** 5.0.3, 5.3.0
@@ -130,7 +132,7 @@ Other libraries upon request.
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>

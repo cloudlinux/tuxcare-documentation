@@ -1,39 +1,75 @@
 <template>
   <div class="code-tabs">
-    <div class="tab-buttons">
-      <button v-for="(tab, index) in tabs" :key="index" :class="{ active: activeTab === index }" @click="activeTab = index">
+    <div class="tab-buttons" role="tablist" :aria-label="label">
+      <button
+        v-for="(tab, index) in tabs"
+        :key="index"
+        :ref="(el) => setTabRef(el, index)"
+        :id="`${uid}-tab-${index}`"
+        type="button"
+        role="tab"
+        :aria-selected="activeTab === index ? 'true' : 'false'"
+        :aria-controls="`${uid}-panel`"
+        :tabindex="activeTab === index ? 0 : -1"
+        :class="{ active: activeTab === index }"
+        @click="activeTab = index"
+        @keydown="onTabKeydown($event, index)"
+      >
         {{ tab.title }}
       </button>
     </div>
 
-    <div class="tab-content code-block-wrapper" ref="wrapperRef">
-      <button class="copy-button" @click="copyCode" aria-label="Copy code">
-        <img v-if="!copied" src="/images/copy.webp" width="16" height="16" alt="Copy" />
-        <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+    <div
+      class="tab-content code-block-wrapper"
+      ref="wrapperRef"
+      role="tabpanel"
+      :id="`${uid}-panel`"
+      :aria-labelledby="`${uid}-tab-${activeTab}`"
+    >
+      <button type="button" class="copy-button" @click="copyCode" :aria-label="copied ? 'Copied' : 'Copy code'">
+        <img v-if="!copied" src="/images/copy.webp" width="16" height="16" alt="" />
+        <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
           <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
         </svg>
       </button>
 
-      <pre ref="preRef"><code ref="codeRef" class="language-bash">{{ tabs[activeTab].content }}</code></pre>
+      <!-- The block scrolls horizontally, so keyboard users must be able to focus it (WCAG 2.1.1).
+           No role="region": the tabpanel already names it, and many CodeTabs share tab titles. -->
+      <pre ref="preRef" tabindex="0"><code ref="codeRef" class="language-bash">{{ tabs[activeTab].content }}</code></pre>
       <span class="code-fade-mask" aria-hidden="true"></span>
     </div>
   </div>
 </template>
 
 <script>
+import { useId } from 'vue'
+import { copyText, ensureLiveRegion } from '../utils/announce'
+
 export default {
   name: 'CodeTabs',
   props: {
     tabs: {
       type: Array,
       required: true
+    },
+    // Accessible name of the tab list.
+    label: {
+      type: String,
+      default: 'Code variants'
     }
+  },
+  setup() {
+    // SSR-safe unique prefix for tab/panel ids.
+    return { uid: `codetabs-${useId()}` }
   },
   data() {
     return {
       activeTab: 0,
       copied: false
     }
+  },
+  created() {
+    this.tabRefs = []
   },
   watch: {
     activeTab() {
@@ -42,6 +78,7 @@ export default {
     }
   },
   mounted() {
+    ensureLiveRegion()
     this.highlight()
     this.$nextTick(this.updateFade)
     if (typeof window !== 'undefined') {
@@ -72,12 +109,42 @@ export default {
       const canScrollRight = pre.scrollLeft + pre.clientWidth < pre.scrollWidth - 2
       wrapper.classList.toggle('hide-fade', !canScrollRight)
     },
-    copyCode() {
+    setTabRef(el, index) {
+      if (el) this.tabRefs[index] = el
+    },
+    // WAI-ARIA tabs keyboard model: arrows move (and wrap), Home/End jump.
+    onTabKeydown(event, index) {
+      const last = this.tabs.length - 1
+      let next = null
+      switch (event.key) {
+        case 'ArrowRight':
+        case 'ArrowDown':
+          next = index === last ? 0 : index + 1
+          break
+        case 'ArrowLeft':
+        case 'ArrowUp':
+          next = index === 0 ? last : index - 1
+          break
+        case 'Home':
+          next = 0
+          break
+        case 'End':
+          next = last
+          break
+        default:
+          return
+      }
+      event.preventDefault()
+      this.activeTab = next
+      const tab = this.tabRefs[next]
+      if (tab) tab.focus()
+    },
+    async copyCode() {
       const text = this.tabs[this.activeTab].content
-      navigator.clipboard.writeText(text).then(() => {
+      if (await copyText(text)) {
         this.copied = true
         setTimeout(() => (this.copied = false), 2000)
-      })
+      }
     }
   }
 }
@@ -111,6 +178,13 @@ export default {
   color: #fff;
   border-bottom: 2px solid #1994f9;
   font-weight: bold;
+}
+
+.tab-buttons button:focus-visible,
+.copy-button:focus-visible,
+pre:focus-visible {
+  outline: 2px solid #1994f9;
+  outline-offset: -2px;
 }
 
 .tab-content {

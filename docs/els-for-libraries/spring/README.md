@@ -350,14 +350,15 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-ldap-core | 2.3.1.RELEASE, 2.4.1, 2.4.4, 3.0.6, 3.2.12 |
-| spring-ldap-odm | 2.4.4, 3.0.6, 3.2.12 |
-| spring-ldap-test | 2.4.4, 3.0.6, 3.2.12 |
-| spring-ldap-sandbox | 2.4.4, 3.0.6, 3.2.12 |
-| spring-ldap-ldif-core | 2.4.4, 3.0.6, 3.2.12 |
-| spring-ldap-core-tiger | 2.4.4 |
-| spring-ldap-odm-sample | 2.4.4, 3.0.6, 3.2.12 |
-| spring-ldap-plain-sample | 2.4.4, 3.0.6, 3.2.12 |
+| spring-ldap-core | 2.3.1.RELEASE, 2.3.2.RELEASE, 2.3.3.RELEASE, 2.4.1, 2.4.4, 3.0.6, 3.2.12 |
+| spring-ldap-odm | 2.3.2.RELEASE, 2.4.1, 2.4.4, 3.0.6, 3.2.12 |
+| spring-ldap-test | 2.3.2.RELEASE, 2.4.1, 2.4.4, 3.0.6, 3.2.12 |
+| spring-ldap-sandbox | 2.4.1, 2.4.4, 3.0.6, 3.2.12 |
+| spring-ldap-ldif-core | 2.3.2.RELEASE, 2.4.1, 2.4.4, 3.0.6, 3.2.12 |
+| spring-ldap-ldif-batch | 2.3.2.RELEASE |
+| spring-ldap-core-tiger | 2.3.2.RELEASE, 2.4.1, 2.4.4 |
+| spring-ldap-odm-sample | 2.4.1, 2.4.4, 3.0.6, 3.2.12 |
+| spring-ldap-plain-sample | 2.4.1, 2.4.4, 3.0.6, 3.2.12 |
 </template>
 
 <template #GraphQL>
@@ -428,7 +429,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS for Spring® can be consumed through your own repository manager instead of connecting to TuxCare directly. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, ELS for Spring® can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>

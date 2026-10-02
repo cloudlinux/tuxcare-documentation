@@ -1,42 +1,35 @@
 <template>
-  <div
-    class="docs-card-container"
-    role="link"
-    tabindex="0"
-    @click="goTo()"
-    @keydown.enter.prevent="goTo()"
-    @keydown.space.prevent="goTo()"
-  >
+  <div class="docs-card-container">
     <div class="docs-card-container__header">
-      <img width="20" height="20" :src="withBase('collections-bookmark.svg')" alt="document icon">
-      <p v-if="card.title" class="docs-card-container__header-paragraph">{{ card.title }}</p>
+      <img width="20" height="20" :src="withBase('collections-bookmark.svg')" alt="">
+      <p v-if="card.title" class="docs-card-container__header-paragraph">
+        <router-link :to="card.link" class="docs-card-link">{{ card.title }}</router-link>
+      </p>
     </div>
     <div class="docs-card-container__main">
       <p v-if="card.description" class="docs-card-container__main-paragraph">{{ card.description }}</p>
     </div>
-    <div class="docs-card-container__footer">
+    <div class="docs-card-container__footer" aria-hidden="true">
       <span class="docs-card-container__footer-btn">View Documentation</span>
       <span class="docs-card-container__footer-arrow">&rarr;</span>
     </div>
   </div>
 </template>
 <script setup>
-import { useRouter } from "vue-router"
 import { withBase } from "@vuepress/client";
-const props = defineProps({
+defineProps({
   card: {
     type: Object,
     default: null
   },
 })
-const router = useRouter()
-const goTo = () => router.push(props.card?.link)
 </script>
 
 <style lang="stylus">
 @import '../../styles/config.styl'
 
 .docs-card-container
+  position relative
   display: flex;
   flex-direction column
   justify-content space-between
@@ -54,7 +47,8 @@ const goTo = () => router.push(props.card?.link)
     opacity 1
     transform translateX(0)
 
-  &:focus-visible
+  // Ring on the whole card for keyboard focus only (not on mouse click).
+  &:has(.docs-card-link:focus-visible)
     outline 2px solid $buttonColorBg
     outline-offset 2px
 
@@ -72,6 +66,16 @@ const goTo = () => router.push(props.card?.link)
       font-weight $cardParagraphWeight
       margin 0;
 
+  // The title link is the card's only link; stretch its hit area over the card.
+  .docs-card-link
+    color inherit
+    text-decoration none
+
+    &::after
+      content ""
+      position absolute
+      inset 0
+
   &__main
     padding 1.125rem 1.25rem 0 1.25rem
     margin-bottom 1.9375rem
@@ -81,6 +85,11 @@ const goTo = () => router.push(props.card?.link)
       line-height 1.3125rem
       color $textColor
       margin 0;
+      // Sit above the stretched link so the description can be selected and
+      // copied; the rest of the card stays clickable.
+      position relative
+      z-index 1
+      cursor text
 
   &__footer
     padding $cardFooterPaddingVertically $cardFooterPaddingHorizontally
@@ -106,6 +115,16 @@ const goTo = () => router.push(props.card?.link)
       opacity 0
       transform translateX(-4px)
       transition all 0.2s ease
+
+// The card shows the focus ring instead (see :has above). Browsers without
+// :has() keep the link's own focus outline.
+@css {
+  @supports selector(:has(*)) {
+    .docs-card-container .docs-card-link:focus-visible {
+      outline: none;
+    }
+  }
+}
 
 @media (max-width: $mobileBreakpoint)
   .docs-card-container
