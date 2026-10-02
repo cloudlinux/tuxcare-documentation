@@ -1,7 +1,7 @@
 <template>
   <div class="os-selector">
     <div class="os-selector-heading">
-      <h3>Which OS are you running?</h3>
+      <h2>Which OS are you running?</h2>
       <p>Select your operating system to get started with ELS.</p>
     </div>
 
@@ -19,7 +19,7 @@
           <span class="os-card-name">{{ os.name }}</span>
           <span v-if="os.eol" class="os-card-eol">End of life from {{ os.eol }}</span>
         </span>
-        <span class="os-card-arrow">&rarr;</span>
+        <span class="os-card-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
 
@@ -43,10 +43,11 @@ import operatingSystems from "../config-client/osReleases";
   margin-bottom: 1.25rem;
 }
 
-.os-selector-heading h3 {
+.os-selector-heading h2 {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+  padding-bottom: 0;
 }
 
 .os-selector-heading p {
@@ -78,17 +79,19 @@ import operatingSystems from "../config-client/osReleases";
   cursor: pointer;
 }
 
-.os-card:hover {
+.os-card:hover,
+.os-card:focus-visible {
   border-color: #F48243;
   background: #FEF6F2;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(244, 130, 67, 0.12);
 }
 
-.os-card:hover .os-card-arrow {
+.os-card:hover .os-card-arrow,
+.os-card:focus-visible .os-card-arrow {
   opacity: 1;
   transform: translateX(0);
-  color: #F48243;
+  color: #B34F12;
 }
 
 .os-card-icon {
@@ -147,11 +150,12 @@ import operatingSystems from "../config-client/osReleases";
 
 .os-selector-footer a {
   color: #0B5CAD;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .os-selector-footer a:hover {
-  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 @media (max-width: 768px) {

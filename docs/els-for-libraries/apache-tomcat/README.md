@@ -8,7 +8,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security 
 Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
 
 :::tip
-Apache Tomcat® is also available for installation as a standalone server. You can find the corresponding instructions [here](/els-for-applications/apache-tomcat/).
+Apache Tomcat® is also available for installation as a standalone server. See [ELS for Apache Tomcat® as a standalone server](/els-for-applications/apache-tomcat/).
 :::
 
 ## Supported Versions
@@ -26,7 +26,7 @@ Apache Tomcat® is also available for installation as a standalone server. You c
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>

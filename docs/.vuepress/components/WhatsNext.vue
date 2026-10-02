@@ -2,12 +2,16 @@
   <div class="whats-next">
     <div v-if="!hideTitle || (versions && versions.length)" class="whats-next-header">
       <h4 v-if="!hideTitle"><slot name="title">What's next?</slot></h4>
-      <div v-if="versions && versions.length" class="wn-tabs">
+      <!-- Filter toggles, not tabs: they show/hide links in one list, so
+           aria-pressed is the right pattern (no tabpanel to control). -->
+      <div v-if="versions && versions.length" class="wn-tabs" role="group" aria-label="Filter by version">
         <button
           v-for="(ver, i) in versions"
           :key="ver"
+          type="button"
+          :aria-pressed="activeTab === i ? 'true' : 'false'"
           :class="['wn-tab', { active: activeTab === i }]"
-          @click="switchTab(i)"
+          @click="switchTab(i, true)"
         >{{ ver }}</button>
       </div>
     </div>
@@ -19,6 +23,7 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from "vue";
+import { announce } from "../utils/announce";
 
 const props = defineProps({
   versions: {
@@ -34,19 +39,21 @@ const props = defineProps({
 const body = ref(null);
 const activeTab = ref(0);
 
-function switchTab(i) {
+function switchTab(i, userAction = false) {
   activeTab.value = i;
   if (!body.value) return;
   const items = body.value.querySelectorAll(".wn-item");
+  let shown = 0;
   items.forEach((li) => {
     const tag = li.dataset.versionTag;
-    if (!tag) {
-      li.style.display = "";
-      return;
-    }
     const activeLabel = props.versions[i] || "";
-    li.style.display = activeLabel.includes(tag) || tag === activeLabel ? "" : "none";
+    const visible = !tag || activeLabel.includes(tag) || tag === activeLabel;
+    li.style.display = visible ? "" : "none";
+    if (visible) shown += 1;
   });
+  if (userAction) {
+    announce(`Showing ${shown} link${shown === 1 ? "" : "s"} for ${props.versions[i]}`);
+  }
 }
 
 onMounted(async () => {
@@ -129,6 +136,8 @@ onMounted(async () => {
       } else {
         iconEl.textContent = iconEmoji;
       }
+      // Decorative: keep the icon out of the link's accessible name.
+      iconEl.setAttribute("aria-hidden", "true");
       cardLink.appendChild(iconEl);
     }
 
@@ -147,10 +156,18 @@ onMounted(async () => {
       bodyEl.appendChild(descEl);
     }
 
+    if (isExternal) {
+      const newTabEl = document.createElement("span");
+      newTabEl.className = "sr-only";
+      newTabEl.textContent = " (opens in new tab)";
+      titleEl.appendChild(newTabEl);
+    }
+
     cardLink.appendChild(bodyEl);
 
     const arrowEl = document.createElement("span");
     arrowEl.className = "wn-arrow";
+    arrowEl.setAttribute("aria-hidden", "true");
     arrowEl.innerHTML = "&rarr;";
     cardLink.appendChild(arrowEl);
 
@@ -210,10 +227,27 @@ onMounted(async () => {
   color: #1b1f27;
 }
 
+/* Selected state needs a non-colour cue with >= 3:1 contrast (WCAG 1.4.11):
+   a dark underline bar plus heavier text. */
 .wn-tab.active {
   background: #fff;
   color: #1b1f27;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+  box-shadow: inset 0 -2px 0 #163055, 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.wn-tab:focus-visible {
+  outline: 2px solid #0b5cad;
+  outline-offset: 1px;
+}
+
+/* box-shadow is dropped in forced-colors mode; keep a visible selected cue. */
+@media (forced-colors: active) {
+  .wn-tab.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
 }
 
 .whats-next-body :deep(ul) {
@@ -246,7 +280,8 @@ onMounted(async () => {
   width: 100%;
 }
 
-.whats-next-body :deep(.wn-card:hover) {
+.whats-next-body :deep(.wn-card:hover),
+.whats-next-body :deep(.wn-card:focus-visible) {
   border-color: #F48243;
   background: #FEF6F2;
   transform: translateY(-2px);
@@ -301,7 +336,8 @@ onMounted(async () => {
   flex-shrink: 0;
 }
 
-.whats-next-body :deep(.wn-card:hover .wn-arrow) {
+.whats-next-body :deep(.wn-card:hover .wn-arrow),
+.whats-next-body :deep(.wn-card:focus-visible .wn-arrow) {
   opacity: 1;
   transform: translateX(0);
   color: #F48243;

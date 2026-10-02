@@ -1,7 +1,7 @@
 <template>
   <div ref="rootRef" class="prereqs">
     <div class="prereqs-header">
-      <h4 ref="headingRef" :id="headingId"><slot name="title">Prerequisites</slot></h4>
+      <component :is="headingTag" ref="headingRef" :id="headingId" class="prereqs-title"><slot name="title">Prerequisites</slot></component>
     </div>
     <div class="prereqs-body">
       <slot />
@@ -10,18 +10,29 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 
 // id is rendered server-side so the section anchor exists in the static HTML.
 // Override with <ELSPrerequisites id="..."> if a page has more than one block.
-const props = defineProps<{ id?: string }>();
-const headingId = props.id ?? 'prerequisites';
+//
+// level: heading level of the "Prerequisites" title. The default (3) fits the
+// usual placement under a "## Installation"-style section. Pass :level="2"
+// when the block sits directly under the page <h1>, so no level is skipped.
+const props = withDefaults(defineProps<{ id?: string; level?: number | string }>(), {
+  id: undefined,
+  level: 3,
+});
+const headingId = computed(() => props.id || 'prerequisites');
+const headingTag = computed(() => {
+  const n = Math.min(6, Math.max(2, Number(props.level) || 3));
+  return `h${n}`;
+});
 
 const rootRef = ref<HTMLElement | null>(null);
 const headingRef = ref<HTMLElement | null>(null);
 
 function anchorPrerequisites() {
-  const heading = headingRef.value;
+  const heading = headingRef.value as HTMLElement | null;
   if (!heading || heading.dataset.anchored) return;
   heading.dataset.anchored = '1';
 
@@ -51,7 +62,7 @@ onMounted(() => {
   scroll-margin-top: 6rem;
 }
 
-.prereqs-header h4 {
+.prereqs-header .prereqs-title {
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
   font-weight: 700;
@@ -61,7 +72,7 @@ onMounted(() => {
 /* The anchor floats left at its natural position with a fixed width and a
    minimal gap; the body list below is indented to match (see .prereqs-body).
    font-size in rem (not em) keeps it identical to the ELSSteps anchor. */
-.prereqs-header h4 :deep(a.prereq-anchor) {
+.prereqs-header .prereqs-title :deep(a.prereq-anchor) {
   opacity: 0;
   font-size: 1rem;
   width: 0.7rem;
@@ -74,11 +85,11 @@ onMounted(() => {
   transition: opacity 0.15s ease;
 }
 
-.prereqs-header h4:hover {
+.prereqs-header .prereqs-title:hover {
   cursor: pointer;
 }
 
-.prereqs-header h4:hover :deep(a.prereq-anchor) {
+.prereqs-header .prereqs-title:hover :deep(a.prereq-anchor) {
   opacity: 1;
 }
 

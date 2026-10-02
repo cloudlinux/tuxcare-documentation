@@ -1,15 +1,27 @@
 <template>
-  <div>
-    <div class="drawer" :class="{'is-open': isOpenDrawer, 'drawer--animated': animationsReady}" tabindex="0">
+  <!-- The desktop footer is shown as part of the open drawer, so the dialog
+       wraps both and the focus trap covers the footer links too. -->
+  <div ref="dialogRef"
+       :class="{'drawer-dialog--open': isOpenDrawer}"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="drawer-title"
+       :inert="!isOpenDrawer"
+       @keydown.esc="onCloseDrawer"
+       @keydown.tab="trapFocus"
+  >
+    <div class="drawer" :class="{'is-open': isOpenDrawer, 'drawer--animated': animationsReady}">
       <div class="drawer-header">
         <div class="drawer-header__wrapper">
-          <h2 class="drawer-header__paragraph">How can we help you?</h2>
+          <h2 id="drawer-title" class="drawer-header__paragraph">How can we help you?</h2>
           <div id="drawerSearch"></div>
+          <!-- Always mounted so result counts are announced (WCAG 4.1.3). -->
+          <p class="sr-only" role="status" aria-live="polite" aria-atomic="true">{{ statusMessage }}</p>
         </div>
-        <div class="drawer-cross">
-          <img @click="onCloseDrawer" class="drawer-cross__img" :src="withBase('/global/cross.svg')" alt="cross">
-          <p @click="onCloseDrawer" class="drawer-cross__text">close</p>
-        </div>
+        <button type="button" class="drawer-cross" @click="onCloseDrawer">
+          <img class="drawer-cross__img" :src="withBase('/global/cross.svg')" alt="">
+          <span class="drawer-cross__text">close</span>
+        </button>
       </div>
       <section role="region" aria-label="Search results">
         <div class="drawer-main">
@@ -17,21 +29,23 @@
             <div class="drawer-main__breadcrumb">
               <!-- Optional breadcrumb can stay here -->
             </div>
-            <DrawerSearchResult :modelValue="modelValue" :data="drawerArticleResult" @closeDrawer="onCloseDrawer"/>
+            <DrawerSearchResult :modelValue="modelValue" :searchedQuery="searchedQuery" :data="drawerArticleResult" @closeDrawer="onResultSelected"/>
           </div>
         </div>
-        <Footer v-if="isOpenDrawer && isMobileWidth" class="drawer-footer__mobile"/>
+        <Footer v-if="isOpenDrawer && isMobileWidth" class="drawer-footer__mobile" :landmark="false"/>
       </section>
     </div>
-    <Footer v-if="isOpenDrawer && !isMobileWidth" class="drawer-footer"/>
+    <Footer v-if="isOpenDrawer && !isMobileWidth" class="drawer-footer" :landmark="false"/>
   </div>
 </template>
 
 <script setup>
 import { withBase } from "@vuepress/client";
 import Footer from "../footer/Footer.vue";
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import DrawerSearchResult from "./DrawerSearchResult.vue";
+import { useFocusTrap } from "../composables/useFocusTrap";
+import { setModalOpen } from "../composables/useModalOpen";
 
 const props = defineProps({
   isOpenDrawer: {
@@ -53,18 +67,34 @@ const props = defineProps({
     type: Array,
     required: true,
     default: () => []
+  },
+  searchedQuery: {
+    type: String,
+    default: ''
+  },
+  statusMessage: {
+    type: String,
+    default: ''
   }
 });
 
+// closeDrawer payload: { restoreFocus } — false when a search result was picked,
+// because focus then belongs to the page being navigated to.
 const emit = defineEmits(['closeDrawer', 'update:modelValue']);
+const dialogRef = ref(null);
 
 const drawerArticleResult = computed(() => {
   return props.homeLayoutSearchResult; // Now directly returning all results since there are no tabs
 });
 
 const onCloseDrawer = () => {
-  emit('closeDrawer');
+  if (props.isOpenDrawer) emit('closeDrawer', { restoreFocus: true });
 }
+
+const onResultSelected = () => emit('closeDrawer', { restoreFocus: false });
+
+// Keep Tab / Shift+Tab inside the open drawer.
+const trapFocus = useFocusTrap(dialogRef, () => props.isOpenDrawer);
 
 // The drawer starts hidden (translateY(-100%)). Enabling the slide transition
 // only after the first paint prevents the close animation from flashing on
@@ -78,6 +108,15 @@ onMounted(() => {
 
 watch(() => props.isOpenDrawer, () => {
   document.body.classList.toggle('disable-scroll', props.isOpenDrawer);
+  setModalOpen('search', props.isOpenDrawer);
+});
+
+// The header swaps search instances between layouts; don't leave the page
+// scroll-locked when an open drawer is unmounted.
+onBeforeUnmount(() => {
+  if (!props.isOpenDrawer) return;
+  document.body.classList.remove('disable-scroll');
+  setModalOpen('search', false);
 });
 </script>
 
@@ -86,6 +125,20 @@ watch(() => props.isOpenDrawer, () => {
 
 .disable-scroll
   overflow hidden !important
+
+// Set by composables/useModalOpen.js while a theme dialog is open; the chat
+// widget floats above the dialogs, so hide it (it is also made inert).
+body.modal-open #bot-ui
+  display none !important
+
+// Give the open dialog a real box over the viewport (its panels are fixed),
+// so assistive tech can highlight it and nothing behind it is clickable.
+// It is teleported to <body>, so it must stack above the fixed header
+// (z-index 9999 on mobile) and the skip link (10000).
+.drawer-dialog--open
+  position fixed
+  inset 0
+  z-index 10001
 
 .drawer
   position fixed
@@ -105,6 +158,9 @@ watch(() => props.isOpenDrawer, () => {
   // .drawer--animated once the component has mounted.
   &.drawer--animated
     transition: 0.4s ease
+
+    @media (prefers-reduced-motion: reduce)
+      transition none
 
   &-header
     padding 1.25rem $layout-horizontal-padding
@@ -143,6 +199,12 @@ watch(() => props.isOpenDrawer, () => {
 
 .drawer-cross
   margin-top 0.75rem
+  background none
+  border 0
+  padding 0
+  font inherit
+  color inherit
+  cursor pointer
   display flex
   flex-direction column
   justify-content flex-end
@@ -156,6 +218,7 @@ watch(() => props.isOpenDrawer, () => {
 
   &__text
     margin 0
+    line-height 1.7
     color $crossColor
     cursor pointer
 

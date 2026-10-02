@@ -26,7 +26,6 @@ import WhatsNext from "./components/WhatsNext.vue";
 import ELSApplication from "./components/ELSApplication.vue";
 import GlobalCopyCode from "./components/GlobalCopyCode.vue";
 
-import ResolvedCveTable from './components/ResolvedCveTable.vue'
 import ELSBadge from './components/ELSBadge.vue'
 import ContactSales from './components/ContactSales.vue'
 
@@ -36,24 +35,86 @@ export default defineClientConfig({
         GlobalCopyCode,
     ],
     async enhance({ app, router }) {
+        // Runtime backstop for markup the build can't fix on its own. Header
+        // anchors already get tabindex="-1" at build time (config.ts
+        // markdown.anchor); this also covers anchors added by components.
+        // Each step is isolated so one failure can't skip the others.
+        const safely = (fn: () => void) => {
+            try { fn(); } catch (e) { /* keep the remaining fixes running */ }
+        };
         const applyA11yRuntimeFixes = () => {
-            // VuePress header anchors are decorative links; remove them from keyboard tab order.
-            document.querySelectorAll('a.header-anchor[aria-hidden="true"]').forEach((el) => {
-                el.setAttribute('tabindex', '-1');
+            // Decorative aria-hidden anchors must not be keyboard stops.
+            safely(() => {
+                document.querySelectorAll('a.header-anchor[aria-hidden="true"]:not([tabindex="-1"])').forEach((el) => {
+                    el.setAttribute('tabindex', '-1');
+                });
             });
 
-            // Make horizontally scrollable code blocks keyboard focusable.
-            document.querySelectorAll('div[class*="language-"] > pre').forEach((pre) => {
-                const preElement = pre;
-                if (!preElement.hasAttribute('tabindex')) {
-                    preElement.setAttribute('tabindex', '0');
-                }
+            // RouterLink marks same-page #hash links in content as
+            // aria-current="page", which misreports them as the current page.
+            safely(() => {
+                document.querySelectorAll<HTMLAnchorElement>('.content a[aria-current]').forEach((a) => {
+                    const href = a.getAttribute('href') || '';
+                    if (href.startsWith('#') || (a.hash && a.pathname === window.location.pathname)) {
+                        a.removeAttribute('aria-current');
+                    }
+                });
             });
+
+            // Horizontally scrollable code blocks must be keyboard focusable
+            // (WCAG 2.1.1). CodeTabs sets this in its own template.
+            safely(() => {
+                document.querySelectorAll('div[class*="language-"] > pre:not([tabindex])').forEach((pre) => {
+                    pre.setAttribute('tabindex', '0');
+                });
+            });
+
+            // Markdown tables are display:block + overflow-x:auto; when one
+            // actually overflows, make it focusable so it can be scrolled with
+            // the keyboard. Name it after the nearest preceding heading.
+            safely(() => {
+                document.querySelectorAll<HTMLTableElement>('.content table').forEach((table) => {
+                    if (table.closest('.code-tabs')) return;
+                    const overflows = table.scrollWidth > table.clientWidth + 1;
+                    if (overflows && !table.hasAttribute('tabindex')) {
+                        table.setAttribute('tabindex', '0');
+                        table.dataset.a11yScroll = '1';
+                        if (!table.hasAttribute('aria-label') && !table.querySelector('caption')) {
+                            const heading = findPrecedingHeading(table);
+                            if (heading) table.setAttribute('aria-label', `${heading} table`);
+                        }
+                    } else if (!overflows && table.dataset.a11yScroll) {
+                        table.removeAttribute('tabindex');
+                        delete table.dataset.a11yScroll;
+                    }
+                });
+            });
+        };
+
+        const findPrecedingHeading = (el: Element): string => {
+            let node: Element | null = el;
+            while (node && node !== document.body) {
+                let sib = node.previousElementSibling;
+                while (sib) {
+                    if (/^H[1-6]$/.test(sib.tagName)) {
+                        return (sib.textContent || '').replace(/^#\s*/, '').trim();
+                    }
+                    sib = sib.previousElementSibling;
+                }
+                node = node.parentElement;
+            }
+            return '';
+        };
+
+        const scheduleA11yFixes = () => {
+            setTimeout(applyA11yRuntimeFixes, 0);
+            // Second pass for content that renders late (client-only
+            // components, async route chunks).
+            setTimeout(applyA11yRuntimeFixes, 500);
         };
 
         app.config.globalProperties.$eventBus = mitt();
         app.component("CodeTabs", CodeTabs);
-        app.component("ResolvedCveTable", ResolvedCveTable);
         app.component("TableTabs", TableTabs);
         app.component("ELSTechnology", ELSTechnology);
         app.component("ELSRTechnology", ELSRTechnology);
@@ -68,10 +129,24 @@ export default defineClientConfig({
         app.component("ContactSales", ContactSales);
 
         if (!__VUEPRESS_SSR__) {
-            setTimeout(applyA11yRuntimeFixes, 0);
-            router.afterEach(() => {
-                setTimeout(applyA11yRuntimeFixes, 0);
-            });
+            scheduleA11yFixes();
+            router.isReady().then(scheduleA11yFixes).catch(() => {});
+            router.afterEach(scheduleA11yFixes);
+            // Re-run (throttled, so a stream of mutations can't starve it) on
+            // resize and when content is swapped in place, e.g. a TableTabs
+            // tab change renders a new table.
+            let a11yTimer: ReturnType<typeof setTimeout> | undefined;
+            const debouncedA11yFixes = () => {
+                if (a11yTimer) return;
+                a11yTimer = setTimeout(() => {
+                    a11yTimer = undefined;
+                    applyA11yRuntimeFixes();
+                }, 150);
+            };
+            window.addEventListener('resize', debouncedA11yFixes, { passive: true });
+            if (typeof MutationObserver !== 'undefined') {
+                new MutationObserver(debouncedA11yFixes).observe(document.body, { childList: true, subtree: true });
+            }
         }
     },
     layouts: {
@@ -133,7 +208,8 @@ export default defineClientConfig({
 
             MAX_VISIBLE_RESULT: 12,
             MAX_VISIBLE_ROWS: 12,
-            MAX_HITS_PER_PAGE: 12,
+            // Fetch more than MAX_VISIBLE_RESULT so "Show more" has results to reveal.
+            MAX_HITS_PER_PAGE: 24,
         })
     }
 })

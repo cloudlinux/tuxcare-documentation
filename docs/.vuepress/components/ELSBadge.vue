@@ -32,7 +32,7 @@ defineProps({
 
 .els-badge--green {
   background: #e6f7ee;
-  color: #16a34a;
+  color: #166534; /* 6.4:1 on #e6f7ee (WCAG 1.4.3) */
   border: 1px solid #bbf0d0;
 }
 
@@ -44,7 +44,7 @@ defineProps({
 
 .els-badge--orange {
   background: #fff7ed;
-  color: #ea580c;
+  color: #c2410c; /* 4.9:1 on #fff7ed */
   border: 1px solid #fed7aa;
 }
 

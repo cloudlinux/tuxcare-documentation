@@ -8,10 +8,11 @@
       :clearable="false"
       :searchable="false"
       :options="options"
+      :map-keydown="mapKeydown"
   >
     <template #open-indicator="{ attributes }">
       <div v-if="withIcon" class="select-icon" v-bind="attributes">
-        <img :src="withBase(searchSelectIcon)" alt="search Icon"/>
+        <img :src="withBase(searchSelectIcon)" alt=""/>
       </div>
       <span v-else/>
     </template>
@@ -24,7 +25,12 @@ import 'vue-select/dist/vue-select.css';
 import {inject, onMounted, onUnmounted, ref} from "vue";
 import {withBase} from "@vuepress/client";
 
-defineProps({
+const props = defineProps({
+  // Accessible name of the control; matches the visible "Select TuxCare docs" label.
+  label: {
+    type: String,
+    default: 'Select TuxCare docs'
+  },
   withIcon: {
     type: Boolean,
     default: true
@@ -53,10 +59,42 @@ const closeDropdown = () => {
   if (!dropdown.value) return
   dropdown.value.open = false
 }
-onMounted(() => window.addEventListener('click', (event) => {
+const onWindowClick = (event) => {
   if (!dropdown.value?.$el.contains(event.target)) closeDropdown()
-}))
-onUnmounted(() => window.removeEventListener('click', closeDropdown))
+}
+
+// Keyboard support for the (non-searchable) select:
+// Enter / Space / Arrow keys open the list, Esc closes it without moving
+// focus away from the control.
+const mapKeydown = (map, vm) => {
+  const openIfClosed = (fallback) => (e) => {
+    if (!vm.open) {
+      e.preventDefault()
+      vm.open = true
+      return
+    }
+    return fallback?.(e)
+  }
+  return {
+    ...map,
+    13: openIfClosed(map[13]),
+    32: openIfClosed(map[13]),
+    38: openIfClosed(map[38]),
+    40: openIfClosed(map[40]),
+    27: (e) => {
+      e.preventDefault()
+      vm.open = false
+    },
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('click', onWindowClick)
+  // vue-select hard-codes aria-label="Search for option" on the combobox;
+  // its input is labelled by the combobox, so naming it fixes both.
+  dropdown.value?.$el.querySelector('[role="combobox"]')?.setAttribute('aria-label', props.label)
+})
+onUnmounted(() => window.removeEventListener('click', onWindowClick))
 </script>
 
 <style lang="stylus">
@@ -75,8 +113,16 @@ onUnmounted(() => window.removeEventListener('click', closeDropdown))
     text-overflow: ellipsis;
     max-width: 12.5rem
 
+  // Visually hidden but still focusable: vue-select's keyboard handling lives
+  // on this input, so it must stay in the tab order.
   .vs__search
-    display none
+    position absolute
+    width 1px
+    height 1px
+    padding 0
+    margin 0
+    border 0
+    opacity 0
 
   .vs__dropdown
     &-toggle
@@ -86,6 +132,10 @@ onUnmounted(() => window.removeEventListener('click', closeDropdown))
       outline none
       border-radius $selectBorderRadius
       background white
+
+  &:focus-within .vs__dropdown-toggle
+    outline 2px solid $accentColor
+    outline-offset 2px
 
     &-menu
       margin-top 0.3125rem

@@ -2,16 +2,21 @@
   <aside id="bot-ui" role="complementary" aria-label="AI assistant chat">
     <!-- Conditionally show toggle button with highlight -->
     <div class="toggle-container" v-show="!(isMobile && showChat)">
-      <div v-if="shouldShowTooltip" class="pulse-ring"></div>
+      <div v-if="shouldShowTooltip" class="pulse-ring" aria-hidden="true"></div>
       <button
+        ref="toggleBtn"
+        type="button"
         class="chat-toggle"
         @click="toggleChat"
         :class="{ 'chat-open': showChat }"
+        :aria-label="showChat ? 'Close AI assistant chat' : 'Open AI assistant chat'"
+        :aria-expanded="showChat ? 'true' : 'false'"
+        :aria-controls="showChat ? 'bot-chat-panel' : null"
       >
         <img
           v-if="!showChat"
           src="../assets/icons/bot-icon.webp"
-          alt="Bot icon"
+          alt=""
           class="bot-icon"
         />
         <svg
@@ -23,15 +28,22 @@
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
         >
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
       
-      <div v-if="shouldShowTooltip" class="highlight-container">
+      <div v-if="shouldShowTooltip" ref="tooltip" class="highlight-container">
         <div class="tooltip-text">
-          <div class="tooltip-close" @click="dismissTooltip">×</div>
+          <button
+            type="button"
+            class="tooltip-close"
+            aria-label="Dismiss chat hint"
+            @click="dismissTooltip"
+          ><span aria-hidden="true">×</span></button>
           <div class="tooltip-title"><b>Need help?</b></div>
           <div class="tooltip-subtitle">I'm a multilingual AI chatbot, trained to answer all your questions!</div>
         </div>
@@ -40,12 +52,24 @@
 
     <div
       v-if="showChat"
+      id="bot-chat-panel"
+      ref="dialog"
       class="chat-container"
       :class="{ fullscreen: isMobile, 'desktop-view': !isMobile }"
+      role="dialog"
+      aria-modal="true"
+      aria-label="TuxCare AI assistant"
     >
       <div class="chat-header">
         <div class="header-actions">
-          <button class="close-btn" @click="toggleChat">
+          <button
+            ref="closeBtn"
+            type="button"
+            class="close-btn"
+            aria-label="Close AI assistant chat"
+            @click="closeChat"
+            @keydown.tab.shift.prevent="focusIframe"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -54,6 +78,8 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
             >
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -64,8 +90,10 @@
 
       <div class="iframe-container" ref="iframeContainer">
         <iframe
+          ref="iframe"
           :src="iframeUrl"
           class="chat-iframe"
+          title="TuxCare AI assistant chat"
           frameborder="0"
           allow="clipboard-read; clipboard-write; fullscreen"
           @load="onIframeLoad"
@@ -74,6 +102,8 @@
           <div class="spinner"></div>
         </div>
       </div>
+      <!-- Focus trap: tabbing past the end of the chat wraps back to the close button -->
+      <span class="focus-sentinel" tabindex="0" @focus="focusCloseBtn"></span>
     </div>
   </aside>
 </template>
@@ -88,6 +118,7 @@ export default {
       windowWidth: 0, // Changed from window.innerWidth to avoid SSR error
       showTooltip: true,
       tooltipDismissDuration: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
+      inertElements: [],
     };
   },
   computed: {
@@ -98,19 +129,94 @@ export default {
       return this.showTooltip && !this.showChat;
     },
   },
+  watch: {
+    // Close the modal chat on navigation; the layout may be swapped and the new page must not stay behind it.
+    // Focus is left to the route announcer, which moves it to the new page.
+    "$route.path"() {
+      if (!this.showChat) return;
+      this.showChat = false;
+      this.setPageInert(false);
+    },
+  },
   mounted() {
     window.addEventListener("resize", this.handleResize);
+    document.addEventListener("keydown", this.onDocumentKeydown);
+    document.addEventListener("focusin", this.onDocumentFocusin);
     this.handleResize(); // Set initial windowWidth on client-side
     this.updateTooltipVisibility();
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.handleResize);
+    document.removeEventListener("keydown", this.onDocumentKeydown);
+    document.removeEventListener("focusin", this.onDocumentFocusin);
+    this.setPageInert(false);
   },
   methods: {
     toggleChat() {
-      this.showChat = !this.showChat;
       if (this.showChat) {
-        this.dismissTooltip();
+        this.closeChat();
+      } else {
+        this.openChat();
+      }
+    },
+    openChat() {
+      this.showChat = true;
+      this.dismissTooltip();
+      this.$nextTick(() => {
+        this.setPageInert(true);
+        this.focusCloseBtn();
+      });
+    },
+    closeChat() {
+      if (!this.showChat) return;
+      this.showChat = false;
+      this.setPageInert(false);
+      // The toggle is hidden on mobile while the chat is open; focus it after it re-renders.
+      this.$nextTick(() => {
+        if (this.$refs.toggleBtn) this.$refs.toggleBtn.focus();
+      });
+    },
+    focusCloseBtn() {
+      if (this.$refs.closeBtn) this.$refs.closeBtn.focus();
+    },
+    focusIframe() {
+      if (this.$refs.iframe) this.$refs.iframe.focus();
+    },
+    // Hide the rest of the page from keyboard and screen readers while the modal chat is open.
+    setPageInert(on) {
+      if (on) {
+        const parent = this.$el && this.$el.parentElement;
+        if (!parent) return;
+        Array.from(parent.children).forEach((el) => {
+          if (el !== this.$el && !el.hasAttribute("inert")) {
+            el.setAttribute("inert", "");
+            this.inertElements.push(el);
+          }
+        });
+      } else {
+        this.inertElements.forEach((el) => el.removeAttribute("inert"));
+        this.inertElements = [];
+      }
+    },
+    onDocumentKeydown(event) {
+      if (event.key !== "Escape" && event.key !== "Esc") return;
+      if (this.showChat) {
+        event.preventDefault();
+        this.closeChat();
+      } else if (this.shouldShowTooltip) {
+        // Hide the hint for this page view only; don't persist, as Escape may target other widgets.
+        this.showTooltip = false;
+      }
+    },
+    // Don't let the hint bubble cover page content that receives keyboard focus.
+    // The launcher itself is kept clear by scroll-padding-bottom in theme.styl.
+    onDocumentFocusin(event) {
+      const target = event.target;
+      if (this.showChat || !target || !target.getBoundingClientRect || this.$el.contains(target)) return;
+      const overlaps = (a, b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+      const tooltip = this.$refs.tooltip;
+      if (this.shouldShowTooltip && tooltip && overlaps(target.getBoundingClientRect(), tooltip.getBoundingClientRect())) {
+        this.showTooltip = false;
       }
     },
     handleResize() {
@@ -150,6 +256,7 @@ export default {
 };
 </script>
 
+
 <style lang="stylus" scoped>
 $primary-color = #0d1e30
 $background-color = white
@@ -178,7 +285,7 @@ mobile-breakpoint = 768px
   height: 66px
   border-radius: 50%
   background: rgba(13, 30, 48, 0.3)
-  animation: pulse 2s infinite
+  animation: pulse 2s 3 forwards
   z-index: -1
 }
 
@@ -227,7 +334,8 @@ mobile-breakpoint = 768px
   align-items: flex-end;
   pointer-events: auto;
   z-index: 10001;
-  max-width: 90vw;
+  width: max-content;
+  max-width: unquote("min(500px, calc(100vw - 40px))");
 }
 
 .tooltip-text {
@@ -236,26 +344,33 @@ mobile-breakpoint = 768px
   padding: 12px 20px;
   border-radius: 20px;
   font-size: 0.95rem; /* Increase this value to make the tooltip text larger */
-  animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out 2;
   position: relative;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-wrap: break-word;
   text-align: right;
   font-weight: 500;
   box-shadow: 0 0 15px $primary-color;
   overflow: visible;
   text-overflow: clip;
   
-  /* Stop animation on hover */
-  &:hover {
+  /* Stop animation on hover or keyboard focus */
+  &:hover,
+  &:focus-within {
     animation-play-state: paused;
   }
 }
 
 .tooltip-close {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  width: 20px;
-  height: 20px;
+  top: -10px;
+  right: -10px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
   background: white;
   border: 1px solid #ddd;
   border-radius: 50%;
@@ -276,6 +391,11 @@ mobile-breakpoint = 768px
     transform: scale(1.1);
     color: #333;
   }
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
 }
 
 .tooltip-title {
@@ -285,7 +405,6 @@ mobile-breakpoint = 768px
 }
 
 .tooltip-subtitle {
-  white-space: nowrap;
   position: relative;
   z-index: 2;
 }
@@ -340,6 +459,12 @@ mobile-breakpoint = 768px
       display: flex
       align-items: center
       justify-content: center
+      padding: 4px
+
+      &:focus-visible {
+        outline: 2px solid white
+        outline-offset: 2px
+      }
 
       svg {
         stroke: white
@@ -358,6 +483,14 @@ mobile-breakpoint = 768px
   position: relative
   width: 100%
   height: calc(100% - 60px)
+}
+
+.focus-sentinel {
+  position: absolute
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
 }
 
 .chat-iframe {
@@ -433,16 +566,31 @@ mobile-breakpoint = 768px
   .highlight-container {
     bottom: calc(100% + 15px)
     right: 0
+    max-width: calc(100vw - 30px)
   }
 
   .tooltip-text {
     font-size: 0.9rem; /* Adjust this value to change the tooltip text size on mobile devices */
     padding: 10px 16px;
-    max-width: 90vw;
   }
-  
-  .tooltip-subtitle {
-    white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #bot-ui,
+  .chat-container,
+  .chat-toggle,
+  .tooltip-close {
+    transition: none
+  }
+
+  .pulse-ring,
+  .tooltip-text {
+    animation: none
+  }
+
+  .chat-toggle:hover,
+  .tooltip-close:hover {
+    transform: none
   }
 }
 </style>

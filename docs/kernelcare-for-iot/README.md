@@ -4,7 +4,7 @@ Provides live security patching for ARM64-based embedded systems for enterprise 
 
 For the list of supported distributions and chipsets, [visit this page](https://tuxcare.com/live-patching-services/kernelcare-iot/).
 
-### How KernelCare IoT works
+## How KernelCare IoT works
 
 * The KernelCare team is constantly monitoring security mailing lists to check for vulnerabilities. As soon as one is found, the team prepares a patch and then sends it to distribution servers.
 * An agent will run a process on your device, checking with the distribution servers every 4 hours until it finds a new patch and then safely apply it to the running kernel without needing to stop it.

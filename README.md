@@ -37,6 +37,7 @@ yarn docs:dev
 | `yarn dev` | Start Vite dev server |
 | `yarn build` | Build with TypeScript compilation |
 | `yarn preview` | Preview production build locally |
+| `yarn a11y` | Run the WCAG 2.2 AA accessibility check on the built site |
 
 ## Project Structure
 
@@ -53,6 +54,35 @@ docs/
 styles/TuxCare/          # Vale prose-lint rules (see Prose Linting)
 .vale.ini                # Vale configuration
 ```
+
+## Accessibility Check
+
+The site must meet WCAG 2.2 AA. The `Accessibility check` workflow (`.github/workflows/a11y.yml`) runs on every pull request that touches `docs/`, and you can run the same check locally:
+
+```bash
+# Build the site, then install Chromium for Playwright (first time only)
+yarn vuepress build docs
+npx playwright install chromium
+
+# Scan the curated page set (every layout and custom component, desktop and mobile)
+yarn a11y
+
+# Scan every built page, or only specific pages
+yarn a11y --all
+yarn a11y --page /els-for-os/ --page /securechain/
+```
+
+The script (`scripts/a11y-check.mjs`) serves `docs/.vuepress/dist` on port 8099 (`--port` to change it), runs [axe-core](https://github.com/dequelabs/axe-core) with the WCAG 2.0/2.1/2.2 A and AA rules, and runs a few keyboard checks (skip link, Products menu, search drawer, home cards). Serious and critical violations fail the check; moderate and minor ones are printed as warnings. The full results are written to `a11y-report.json`.
+
+If you add a page with a new custom component, add that page to `CURATED_PAGES` in the script. To accept a known issue, add an entry to `scripts/a11y-allowlist.json` with the rule, a selector, and a reason:
+
+```json
+[
+  { "rule": "color-contrast", "selector": ".some-class", "pages": ["/some-page/"], "reason": "Why this is acceptable" }
+]
+```
+
+Prefer fixing the issue. Use the allowlist only for issues you can't fix, such as third-party markup.
 
 ## Prose Linting (Vale)
 

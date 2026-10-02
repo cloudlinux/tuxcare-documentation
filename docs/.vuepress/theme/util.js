@@ -166,10 +166,10 @@ function resolvePath(relative, base, append) {
  */
 
 export function resolveSidebarItems(page, route, pages) {
-    const {base, config} = resolveMatchingConfig(route, sidebarItems)
-    return config
-        ? config.map(item => resolveItem(item, pages, base))
-        : []
+    // Pages outside every sidebar config (e.g. /endless-lifecycle-support/) have no match.
+    const match = resolveMatchingConfig(route, sidebarItems)
+    if (!match || !match.config) return []
+    return match.config.map(item => resolveItem(item, pages, match.base))
 }
 
 /**
