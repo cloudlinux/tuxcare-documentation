@@ -249,7 +249,7 @@ const techData = [
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.14 | 1.2.15 | 1.2.16 | 1.2.17 | 2.5 | 2.6.2 | 2.7 | 2.11.0 | 2.11.1 | 2.12.4 | 2.13.3 | 2.17.1 | 2.17.2 | 2.18.0 | 2.19.0 | 2.22.1 | 2.23.1 | 2.24.3",
+        versions: "1.2.14 | 1.2.15 | 1.2.16 | 1.2.17 | 2.5 | 2.6.2 | 2.7 | 2.11.0 | 2.11.1 | 2.12.4 | 2.13.3 | 2.17.1 | 2.17.2 | 2.18.0 | 2.19.0 | 2.20.0 | 2.22.1 | 2.23.1 | 2.24.1 | 2.24.3",
         link: "./apache-log4j/",
       },
       {
@@ -1144,7 +1144,7 @@ const techData = [
       },
       {
         name: "cookie",
-        versions: "0.0.5 | 0.1.3 | 0.3.1 | 0.4.0 | 0.4.2 | 0.5.0 | 0.6.0 | 0.7.2",
+        versions: "0.0.5 | 0.1.0 | 0.1.3 | 0.3.1 | 0.4.0 | 0.4.2 | 0.5.0 | 0.6.0 | 0.7.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1204,7 +1204,7 @@ const techData = [
       },
       {
         name: "devalue",
-        versions: "2.0.1 | 4.3.0 | 4.3.1 | 4.3.2 | 4.3.3 | 5.9.0 | 5.9.2",
+        versions: "2.0.1 | 4.3.0 | 4.3.1 | 4.3.2 | 4.3.3 | 5.9.0 | 5.9.1 | 5.9.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1310,6 +1310,11 @@ const techData = [
       {
         name: "fflate",
         versions: "0.8.1 | 0.8.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "figlet",
+        versions: "1.9.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1499,7 +1504,7 @@ const techData = [
       },
       {
         name: "js-yaml",
-        versions: "3.3.1 | 3.7.0 | 3.14.1 | 3.14.2 | 3.15.0 | 4.1.0 | 4.1.1 | 4.2.0 | 4.3.0",
+        versions: "3.3.1 | 3.7.0 | 3.13.1 | 3.14.1 | 3.14.2 | 3.15.0 | 3.15.2 | 4.1.0 | 4.1.1 | 4.2.0 | 4.3.0 | 4.3.1 | 5.4.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1659,7 +1664,7 @@ const techData = [
       },
       {
         name: "minimatch",
-        versions: "0.0.4 | 0.0.5 | 0.2.5 | 0.2.14 | 0.3.0 | 0.4.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 7.4.6 | 9.0.3",
+        versions: "0.0.4 | 0.0.5 | 0.2.5 | 0.2.14 | 0.3.0 | 0.4.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 7.4.6 | 9.0.3 | 10.1.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1769,7 +1774,7 @@ const techData = [
       },
       {
         name: "node-forge",
-        versions: "0.10.0 | 1.3.3",
+        versions: "0.10.0 | 1.3.1 | 1.3.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1859,7 +1864,7 @@ const techData = [
       },
       {
         name: "piscina",
-        versions: "4.6.1 | 4.8.0",
+        versions: "4.4.0 | 4.6.1 | 4.8.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1870,6 +1875,11 @@ const techData = [
       {
         name: "prismjs",
         versions: "1.27.0 | 1.29.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "probe-image-size",
+        versions: "7.3.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2089,12 +2099,12 @@ const techData = [
       },
       {
         name: "tar-fs",
-        versions: "1.5.1 | 3.0.4",
+        versions: "1.5.1 | 2.1.1 | 3.0.4",
         link: "./javascript-libraries/",
       },
       {
         name: "terser",
-        versions: "3.17.0 | 4.6.3 | 4.6.10 | 4.8.1 | 5.3.0 | 5.5.1 | 5.7.1 | 5.10.0",
+        versions: "3.17.0 | 4.6.3 | 4.6.10 | 4.8.0 | 4.8.1 | 5.3.0 | 5.5.1 | 5.7.1 | 5.10.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2354,7 +2364,7 @@ const techData = [
       },
       {
         name: "websocket-driver",
-        versions: "0.6.5 | 0.7.4",
+        versions: "0.6.5 | 0.7.4 | 0.7.5",
         link: "./javascript-libraries/",
       },
       {
@@ -2384,7 +2394,7 @@ const techData = [
       },
       {
         name: "xmldom",
-        versions: "0.1.31 | 0.6.0",
+        versions: "0.1.31 | 0.6.0 | 0.9.8",
         link: "./javascript-libraries/",
       },
       {
@@ -2435,7 +2445,7 @@ const techData = [
     projects: [
       {
         name: "aiohttp",
-        versions: "3.8.1 | 3.8.4 | 3.8.5 | 3.8.6",
+        versions: "3.8.1 | 3.8.4 | 3.8.5 | 3.8.6 | 3.10.11",
         link: "./python-libraries/",
       },
       {
@@ -2472,6 +2482,11 @@ const techData = [
         name: "Django",
         versions: "3.2.25 | 4.0 | 4.2 | 5.0 | 5.0.1 | 5.0.2 | 5.1 | 5.1.4 | 5.1.9 | 5.1.10",
         link: "./django/",
+      },
+      {
+        name: "dulwich",
+        versions: "0.21.7 | 0.25.2",
+        link: "./python-libraries/",
       },
       {
         name: "dnspython",
@@ -2515,7 +2530,7 @@ const techData = [
       },
       {
         name: "h11",
-        versions: "0.9.0",
+        versions: "0.9.0 | 0.12.0",
         link: "./python-libraries/",
       },
       {
@@ -2615,7 +2630,7 @@ const techData = [
       },
       {
         name: "protobuf",
-        versions: "3.17.0 | 3.20.3 | 4.24.3 | 4.25.8",
+        versions: "3.17.0 | 3.20.3 | 4.24.3 | 4.25.8 | 4.25.9",
         link: "./python-libraries/",
       },
       {
@@ -2730,7 +2745,7 @@ const techData = [
       },
       {
         name: "urllib3",
-        versions: "1.25.11 | 1.26.4 | 1.26.20 | 2.0.7",
+        versions: "1.25.11 | 1.26.4 | 1.26.20 | 2.0.7 | 2.5.0",
         link: "./python-libraries/",
       },
       {
