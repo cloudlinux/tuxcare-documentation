@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Werkzeug from TuxCare provides security fixe
 
 ## Supported Versions
 
-* **Werkzeug** 1.0.1, 2.2.3, 2.3.8
+* **Werkzeug** 0.16.1, 1.0.1, 2.2.3, 2.3.8
 
 Other versions upon request.
 

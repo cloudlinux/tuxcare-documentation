@@ -4,20 +4,20 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 
 ## Supported Python Libraries
 
-* **aiohttp** 3.8.1, 3.8.4, 3.8.5, 3.8.6
+* **aiohttp** 3.8.1, 3.8.4, 3.8.5, 3.8.6, 3.10.11
 * **anyio** 3.7.1
 * **apache-airflow-providers-http** 4.13.3
 * **certifi** 2021.10.8, 2022.12.7, 2023.7.22
 * **cryptography** 3.4.8, 41.0.7, 42.0.0, 42.0.8, 43.0.1, 43.0.3, 44.0.3, 45.0.7, 46.0.7
 * **deepdiff** 6.2.3
 * **dnspython** 2.3.0
-* **dulwich** 0.25.2
+* **dulwich** 0.21.7, 0.25.2
 * **fastmcp** 2.14.5, 2.14.7
 * **flask-cors** 3.0.10, 4.0.2, 5.0.1
 * **future** 1.0.0
 * **GitPython** 3.1.31
 * **gunicorn** 20.0.4, 20.1.0, 21.2.0, 22.0.0, 23.0.0
-* **h11** 0.9.0
+* **h11** 0.9.0, 0.12.0
 * **httpx** 0.22.0
 * **idna** 2.1, 2.8, 2.10, 3.6
 * **jaraco-context** 5.3.0
@@ -36,7 +36,7 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **pdfkit** 0.6.1
 * **pip** 9.0
 * **Pillow** 8.4.0, 9.4.0, 9.5.0, 10.4.0, 11.2.1, 11.3.0
-* **protobuf** 3.17.0, 3.20.3, 4.24.3, 4.25.8
+* **protobuf** 3.17.0, 3.20.3, 4.24.3, 4.25.8, 4.25.9
 * **py** 1.11.0
 * **pyarrow** 12.0.1
 * **pydantic** 1.10.0, 1.10.5
@@ -59,7 +59,7 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **tqdm** 4.66.1
 * **transformers** 4.57.6
 * **twisted** 20.3.0
-* **urllib3** 1.25.11, 1.26.4, 1.26.20, 2.0.7
+* **urllib3** 1.25.11, 1.26.4, 1.26.20, 2.0.7, 2.5.0
 * **uvicorn** 0.11.6
 * **waitress** 2.1.2
 * **websockets** 8.1

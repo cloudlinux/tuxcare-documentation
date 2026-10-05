@@ -48,7 +48,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **colord** 2.9.3
 * **concat-stream** 1.4.8, 1.4.10, 1.5.0
 * **connect** 1.9.2, 2.6.0, 2.7.5, 2.12.0
-* **cookie** 0.0.5, 0.1.3, 0.3.1, 0.4.0, 0.4.2, 0.5.0, 0.6.0, 0.7.2
+* **cookie** 0.0.5, 0.1.0, 0.1.3, 0.3.1, 0.4.0, 0.4.2, 0.5.0, 0.6.0, 0.7.2
 * **cookie-signature** 1.0.0, 1.0.1
 * **copy-anything** 2.0.6
 * **cross-spawn** 0.2.9, 3.0.1, 5.1.0, 6.0.5, 7.0.3
@@ -60,7 +60,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **decode-uri-component** 0.2.0, 0.2.2
 * **deepmerge-ts** 4.3.0, 7.1.5, 7.1.6
 * **defu** 5.0.1, 6.1.2
-* **devalue** 2.0.1, 4.3.0, 4.3.1, 4.3.2, 4.3.3, 5.9.0, 5.9.2
+* **devalue** 2.0.1, 4.3.0, 4.3.1, 4.3.2, 4.3.3, 5.9.0, 5.9.1, 5.9.2
 * **diff** 1.0.2, 1.4.0, 3.5.0, 4.0.2, 5.0.0, 7.0.0
 * **dns-packet** 1.3.1
 * **dompurify** 2.3.0, 2.4.0, 2.4.3, 2.4.7, 2.5.8, 2.5.9, 3.0.3, 3.1.6, 3.2.3, 3.2.7, 3.4.8, 3.4.14
@@ -79,6 +79,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.5.1, 4.5.3, 4.5.6, 4.5.7
 * **fastify-middie** 8.3.3
 * **fflate** 0.8.1, 0.8.2
+* **figlet** 1.9.1
 * **file-type** 17.1.6
 * **find-my-way** 9.6.0
 * **flatted** 2.0.2, 3.2.9, 3.3.1, 3.3.2, 3.3.3
@@ -115,7 +116,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **jquery-mobile** 1.4.5
 * **jquery-validation** 1.19.0
 * **js-cookie** 2.2.1
-* **js-yaml** 3.3.1, 3.7.0, 3.14.1, 3.14.2, 3.15.0, 4.1.0, 4.1.1, 4.2.0, 4.3.0, 4.3.1, 5.4.0
+* **js-yaml** 3.3.1, 3.7.0, 3.13.1, 3.14.1, 3.14.2, 3.15.0, 3.15.2, 4.1.0, 4.1.1, 4.2.0, 4.3.0, 4.3.1, 5.4.0
 * **json-bigint** 0.3.1
 * **json5** 0.4.0, 0.5.1, 1.0.1, 1.0.2
 * **jsoneditor** 5.19.0
@@ -142,7 +143,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **mem** 1.1.0
 * **micromatch** 2.3.11, 3.1.10
 * **mime** 1.2.6, 1.2.11, 1.3.0, 1.3.4, 1.3.6
-* **minimatch** 0.0.4, 0.0.5, 0.2.5, 0.2.14, 0.3.0, 0.4.0, 1.0.0, 2.0.10, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 5.1.0, 7.4.6, 9.0.3
+* **minimatch** 0.0.4, 0.0.5, 0.2.5, 0.2.14, 0.3.0, 0.4.0, 1.0.0, 2.0.10, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 5.1.0, 7.4.6, 9.0.3, 10.1.1
 * **minimist** 0.0.8, 0.0.9, 0.0.10, 1.2.0, 1.2.1, 1.2.8
 * **modelcontextprotocol-sdk** 1.13.3, 1.17.3, 1.24.0
 * **moment** 2.0.0, 2.10.6, 2.24.0
@@ -166,7 +167,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **nestjs-websockets** 11.2.2, 11.2.3, 11.2.4
 * **netmask** 1.0.6
 * **nguniversal-express-engine** 10.1.0
-* **node-forge** 0.10.0, 1.3.3
+* **node-forge** 0.10.0, 1.3.1, 1.3.3
 * **node-notifier** 5.4.5, 7.0.2
 * **node-sass** 4.14.1, 6.0.1
 * **nodemailer** 0.7.1, 2.7.2, 6.10.1, 9.1.0
@@ -183,8 +184,9 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **pdfjs-dist** 2.14.305, 2.16.105, 3.11.174
 * **picocolors** 0.2.1
 * **picomatch** 2.3.1, 4.0.1, 4.0.2
-* **piscina** 4.6.1, 4.8.0
+* **piscina** 4.4.0, 4.6.1, 4.8.0
 * **prismjs** 1.27.0, 1.29.0
+* **probe-image-size** 7.3.0
 * **protobufjs** 0.12.13, 1.5.1, 2.2.1, 3.8.2, 4.1.3, 5.0.0, 5.0.3, 6.8.8, 6.10.2, 6.11.3, 6.11.6
 * **protobufjs-utf8** 1.1.0
 * **pug** 2.0.4
@@ -224,8 +226,8 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **swiper** 8.4.7, 11.2.10
 * **systeminformation** 5.23.8
 * **tar** 1.0.3, 2.1.1, 2.2.1, 2.2.2, 4.4.19, 6.0.2, 6.1.15, 6.2.0, 6.2.1
-* **tar-fs** 1.5.1, 3.0.4
-* **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.1, 5.3.0, 5.5.1, 5.7.1, 5.10.0
+* **tar-fs** 1.5.1, 2.1.1, 3.0.4
+* **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.0, 4.8.1, 5.3.0, 5.5.1, 5.7.1, 5.10.0
 * **tinymce** 4.9.11, 5.10.9, 6.8.6
 * **tmp** 0.0.24, 0.0.28, 0.0.30, 0.0.31, 0.0.33, 0.1.0, 0.2.1, 0.2.3
 * **tmpl** 1.0.4
@@ -270,13 +272,13 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **webpack-bundle-analyzer** 2.13.1
 * **webpack-dev-middleware** 1.10.2, 1.11.0, 1.12.0, 1.12.2, 3.0.1, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3, 5.3.4, 6.1.3, 7.4.2, 7.4.5, 8.1.1
 * **webpack-subresource-integrity** 1.4.0, 1.4.1
-* **websocket-driver** 0.6.5, 0.7.4
+* **websocket-driver** 0.6.5, 0.7.4, 0.7.5
 * **websocket-extensions** 0.1.1
 * **word-wrap** 1.2.3
 * **ws** 0.8.1, 1.1.1, 1.1.2, 1.1.5, 3.3.3, 4.1.0, 6.0.0, 6.2.1, 6.2.2, 6.2.3, 7.4.5, 7.4.6, 7.5.3, 7.5.9, 8.2.3, 8.5.0, 8.11.0, 8.13.0, 8.14.2, 8.16.0, 8.17.0, 8.17.1, 8.18.0, 8.18.3, 8.20.0
 * **xlsx** 0.18.5
 * **xml2js** 0.2.6, 0.2.8, 0.4.4, 0.4.23
-* **xmldom** 0.1.31, 0.6.0
+* **xmldom** 0.1.31, 0.6.0, 0.9.8
 * **xmlhttprequest-ssl** 1.5.1, 1.5.3, 1.5.5
 * **y18n** 4.0.0
 * **yaml** 1.10.2, 2.4.2, 2.5.0
