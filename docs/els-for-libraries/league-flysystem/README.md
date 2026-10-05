@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for League Flysystem from TuxCare provides secur
 
 ## Supported Versions
 
-* **League Flysystem** 1.0.70, 1.1.10
+* **League Flysystem** 1.0.70, 1.1.10, 3.33.0
 
 Other versions upon request.
 
