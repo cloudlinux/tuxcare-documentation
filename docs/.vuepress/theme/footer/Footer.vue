@@ -95,14 +95,17 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
     padding-left 0.75rem
     border-left 1px solid #ccc
 
+  // Size the icon itself, not the link: a percentage width on an image inside
+  // a content-sized flex item is resolved differently by Safari/Firefox, which
+  // stretch it to the PNG's natural width (135px / 252px) and overflow.
   &-icons-link
     display: flex
     flex-shrink 0
-    height 3.125rem
 
     &-img
-      width 100%
-      height 100%
+      display block
+      width auto
+      height 3.125rem
 
 .footer-default-layout
   position static
