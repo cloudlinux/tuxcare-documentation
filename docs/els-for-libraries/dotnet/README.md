@@ -17,7 +17,7 @@ NuGet is the standard package manager for .NET, used to deliver the reusable com
 * Microsoft.Data.SqlClient 1.1.4, 1.1.5
 * Microsoft.Owin 3.1.0, 3.1.1
 * MimeKit 3.6.1, 3.6.2
-* Newtonsoft.Json 4.5.11, 4.5.12, 6.0.8, 6.0.9, 8.0.3, 8.0.4, 9.0.1, 9.0.2, 10.0.3, 10.0.4, 11.0.2, 11.0.3, 12.0.3, 12.0.4, 13.0.5
+* Newtonsoft.Json 4.5.11, 6.0.8, 8.0.3, 9.0.1, 10.0.3, 11.0.2, 12.0.3, 13.0.5
 * NHibernate 4.1.2.4001
 * NuGet.Packaging 6.3.5
 * NuGet.Packaging.Core 6.3.5
@@ -95,6 +95,8 @@ Other versions upon request.
 
 5. Install the patched package
 
+   TuxCare releases a patched package under the next patch number of the upstream version, with a `-tuxcare.N` suffix — for example, Newtonsoft.Json `12.0.3` becomes `12.0.4-tuxcare.1`. All available versions are listed in your TuxCare Nexus account; pick the latest `-tuxcare.N` release for your base version. For details on version numbering and moving to a newer release, see [How to Upgrade to a Newer Version](/els-for-libraries/managing-els-repository/#how-to-upgrade-to-a-newer-version).
+
    Install the TuxCare-maintained release that matches your project:
 
    ```text
@@ -106,8 +108,6 @@ Other versions upon request.
    ```text
    dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare.1
    ```
-
-   **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
    :::tip
 
