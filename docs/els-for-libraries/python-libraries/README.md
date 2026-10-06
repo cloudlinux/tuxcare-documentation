@@ -27,7 +27,7 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **langchain-text-splitters** 0.3.11
 * **langgraph-checkpoint** 2.1.2
 * **LightGBM** 3.3.5
-* **lxml** 4.9.4, 5.4.0
+* **lxml** 4.6.5, 4.9.4, 5.4.0
 * **MLflow** 2.9.1, 2.22.4
 * **MySQL Connector/Python** 8.4.0
 * **orjson** 3.8.5

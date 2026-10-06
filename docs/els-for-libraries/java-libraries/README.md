@@ -10,6 +10,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apache Ant** 1.9.4
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
+* **Apache BookKeeper** 4.16.6
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.0, 1.9.2, 1.9.4, 1.10.0, 1.10.1
 * **Apache Commons Collections** 3.2, 3.2.1
 * **Apache Commons Compress** 1.8.1, 1.12, 1.14, 1.15, 1.18, 1.19, 1.20, 1.21, 1.24.0, 1.25.0, 1.26.2
@@ -71,13 +72,14 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **JasperReports** 3.7.4, 6.2.2, 6.21.5
 * **JBoss XNIO** 3.8.0, 3.8.8
 * **JDOM** 1.0, 1.1.3
+* **jFairy** 0.5.9
 * **Joda-Time** 1.3
 * **jose4j** 0.8.0
 * **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
 * **JSON Smart v2** 1.3.2, 2.4.8, 2.5.0
 * **json-io** 2.9.4
-* **JsonPath** 2.2.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
+* **JsonPath** 2.2.0, 2.4.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
 * **jsoup** 1.7.2, 1.7.3, 1.17.2
 * **JUnit** 4.13
 * **Lettuce** 6.1.10.RELEASE, 6.3.2.RELEASE
@@ -102,6 +104,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
 * **RabbitMQ Java Client** 5.19.0
+* **Reactive Pulsar Client** 0.5.9, 0.5.10
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2020.0.47, 2022.0.13, 2022.0.15, 2023.0.19
 * **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31, 1.2.13, 1.2.18
 * **Retrofit** 2.9.0
@@ -111,7 +114,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
 * **Sonatype Sisu** 2.3.0
-* **Testcontainers** 1.19.8
+* **Testcontainers** 1.18.3, 1.19.8, 1.21.4
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
 * **Undertow** 2.2.24.Final, 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final
 * **Woodstox** 5.0.3, 5.3.0
