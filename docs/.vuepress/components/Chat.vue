@@ -119,20 +119,23 @@ export default {
       showTooltip: true,
       tooltipDismissDuration: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
       inertElements: [],
+      footerInView: false,
     };
   },
   computed: {
     isMobile() {
       return this.windowWidth < 768;
     },
+    // The hint floats over the page bottom; keep the footer links readable.
     shouldShowTooltip() {
-      return this.showTooltip && !this.showChat;
+      return this.showTooltip && !this.showChat && !this.footerInView;
     },
   },
   watch: {
     // Close the modal chat on navigation; the layout may be swapped and the new page must not stay behind it.
     // Focus is left to the route announcer, which moves it to the new page.
     "$route.path"() {
+      this.$nextTick(this.checkFooterInView);
       if (!this.showChat) return;
       this.showChat = false;
       this.setPageInert(false);
@@ -142,16 +145,31 @@ export default {
     window.addEventListener("resize", this.handleResize);
     document.addEventListener("keydown", this.onDocumentKeydown);
     document.addEventListener("focusin", this.onDocumentFocusin);
+    window.addEventListener("scroll", this.onScroll, { passive: true });
     this.handleResize(); // Set initial windowWidth on client-side
+    this.checkFooterInView();
     this.updateTooltipVisibility();
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.handleResize);
     document.removeEventListener("keydown", this.onDocumentKeydown);
     document.removeEventListener("focusin", this.onDocumentFocusin);
+    window.removeEventListener("scroll", this.onScroll);
     this.setPageInert(false);
   },
   methods: {
+    onScroll() {
+      if (this.footerCheckPending) return;
+      this.footerCheckPending = true;
+      requestAnimationFrame(() => {
+        this.footerCheckPending = false;
+        this.checkFooterInView();
+      });
+    },
+    checkFooterInView() {
+      const footer = document.querySelector(".footer:not(.drawer-footer):not(.drawer-footer__mobile)");
+      this.footerInView = !!footer && footer.getBoundingClientRect().top < window.innerHeight;
+    },
     toggleChat() {
       if (this.showChat) {
         this.closeChat();
@@ -221,6 +239,7 @@ export default {
     },
     handleResize() {
       this.windowWidth = window.innerWidth;
+      this.checkFooterInView();
     },
     onIframeLoad() {
       this.isLoading = false;
