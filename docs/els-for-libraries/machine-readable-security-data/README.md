@@ -13,16 +13,16 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 
 Each package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. SBOMs are provided in industry-standard formats — SPDX and CycloneDX — so they can be consumed by any SBOM-aware scanner or supply-chain tool.
 
-SBOMs are generated across all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET). For JavaScript, Python, and PHP they are published on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/) and are publicly accessible. Java SBOMs are still published to [TuxCare Nexus](https://nexus.repo.tuxcare.com/), where **access requires TuxCare credentials**.
+SBOMs are generated across all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET). For Java, JavaScript, Python, and PHP they are published on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/) and are publicly accessible — no credentials are needed.
 
 SBOMs are currently published for:
 
 * JavaScript — [els_lang_javascript](https://security.tuxcare.com/sbom/cyclonedx/els_lang_javascript/), laid out as `<package>/<version>/<package>-<version>.sbom.json`; the SBOM's detached `.asc` signature is published under [signatures/els_lang_javascript](https://security.tuxcare.com/signatures/els_lang_javascript/) at the same `<package>/<version>/` path
 * Python — [els_lang_python](https://security.tuxcare.com/sbom/cyclonedx/els_lang_python/), laid out as `<package>/<version>/<package>-<version>-sbom.json`, with the SBOM's detached `.asc` signature next to it
 * PHP — [els_lang_php](https://security.tuxcare.com/sbom/cyclonedx/els_lang_php/), with the SBOM's detached `.asc` signature under [signatures/els_lang_php](https://security.tuxcare.com/signatures/els_lang_php/)
-* Java — `els-java-sbom` on TuxCare Nexus
+* Java — [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/)
 
-To request Nexus credentials, or to check SBOM availability for .NET and other ecosystems, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+To check SBOM availability for .NET and other ecosystems, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 ## Vulnerability Exploitability eXchange (VEX)
 
