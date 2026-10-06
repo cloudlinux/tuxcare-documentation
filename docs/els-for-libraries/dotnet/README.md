@@ -107,6 +107,8 @@ Other versions upon request.
    dotnet add package Newtonsoft.Json --version 12.0.4-tuxcare.1
    ```
 
+   TuxCare releases a patched package under the next patch number of the upstream version, with a `-tuxcare.N` suffix — for example, Newtonsoft.Json `12.0.3` becomes `12.0.4-tuxcare.1`. For details and how to move to a newer release, see [Managing the ELS repository](/els-for-libraries/managing-els-repository/#dotnet).
+
    **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
    :::tip
