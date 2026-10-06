@@ -10,6 +10,12 @@
       :options="options"
       :map-keydown="mapKeydown"
   >
+    <!-- Pages outside any product (e.g. the ELS overview) have no selection;
+         say what the control is for instead of showing an empty box. -->
+    <template #selected-option="option">
+      <span v-if="option.title">{{ option.title }}</span>
+      <span v-else class="d-select__placeholder">{{ placeholder }}</span>
+    </template>
     <template #open-indicator="{ attributes }">
       <div v-if="withIcon" class="select-icon" v-bind="attributes">
         <img :src="withBase(searchSelectIcon)" alt=""/>
@@ -30,6 +36,10 @@ const props = defineProps({
   label: {
     type: String,
     default: 'Select TuxCare docs'
+  },
+  placeholder: {
+    type: String,
+    default: 'Choose product docs'
   },
   withIcon: {
     type: Boolean,
@@ -112,6 +122,10 @@ onUnmounted(() => window.removeEventListener('click', onWindowClick))
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 12.5rem
+
+  // #6b7280 on white is 4.8:1 (WCAG 1.4.3).
+  .d-select__placeholder
+    color #6b7280
 
   // Visually hidden but still focusable: vue-select's keyboard handling lives
   // on this input, so it must stay in the tab order.
