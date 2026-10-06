@@ -17,7 +17,7 @@ NuGet is the standard package manager for .NET, used to deliver the reusable com
 * Microsoft.Data.SqlClient 1.1.4, 1.1.5
 * Microsoft.Owin 3.1.0, 3.1.1
 * MimeKit 3.6.1, 3.6.2
-* Newtonsoft.Json 4.5.11, 4.5.12, 6.0.8, 6.0.9, 8.0.3, 8.0.4, 9.0.1, 9.0.2, 10.0.3, 10.0.4, 11.0.2, 11.0.3, 12.0.3, 12.0.4, 13.0.5
+* Newtonsoft.Json 4.5.11, 6.0.8, 8.0.3, 9.0.1, 10.0.3, 11.0.2, 12.0.3, 13.0.5
 * NHibernate 4.1.2.4001
 * NuGet.Packaging 6.3.5
 * NuGet.Packaging.Core 6.3.5
