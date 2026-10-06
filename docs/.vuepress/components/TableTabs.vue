@@ -31,8 +31,33 @@ const props = defineProps({
   bottomLine: {
     type: Boolean,
     default: true
+  },
+  // Render a row of tab buttons (styled like the WhatsNext version switcher)
+  // instead of the select. Meant for a few short tabs, e.g. nested inside
+  // another TableTabs tab; button tabs do not write their key to the URL hash.
+  buttons: {
+    type: Boolean,
+    default: false
   }
 })
+
+function tabLabel(key) {
+  return props.labels[key] || formatKey(key)
+}
+
+const tabRefs = ref([])
+
+function onTabKeydown(event, index) {
+  let next = null
+  if (event.key === 'ArrowRight') next = (index + 1) % tabKeys.length
+  else if (event.key === 'ArrowLeft') next = (index - 1 + tabKeys.length) % tabKeys.length
+  else if (event.key === 'Home') next = 0
+  else if (event.key === 'End') next = tabKeys.length - 1
+  if (next === null) return
+  event.preventDefault()
+  activeTab.value = tabKeys[next]
+  nextTick(() => tabRefs.value[next]?.focus())
+}
 
 // Without a visible label, name the select after the section it sits in
 // (the nearest preceding heading), falling back to a generic name.
@@ -74,7 +99,7 @@ onMounted(() => {
 })
 
 watch(activeTab, (newVal) => {
-  if (newVal) {
+  if (newVal && !props.buttons) {
     history.replaceState(null, '', `#${encodeURIComponent(newVal)}`)
   }
 })
@@ -82,18 +107,42 @@ watch(activeTab, (newVal) => {
 
 <template>
   <div ref="wrapperRef" class="table-tabs">
-    <div class="tab-header">
+    <div v-if="buttons" class="tab-buttons" role="tablist" :aria-label="label || selectName">
+      <button
+        v-for="(key, index) in tabKeys"
+        :key="key"
+        :ref="(el) => { if (el) tabRefs[index] = el }"
+        :id="`${selectId}-tab-${index}`"
+        type="button"
+        role="tab"
+        :aria-selected="activeTab === key ? 'true' : 'false'"
+        :aria-controls="`${selectId}-panel`"
+        :tabindex="activeTab === key ? 0 : -1"
+        :class="{ active: activeTab === key }"
+        @click="activeTab = key"
+        @keydown="onTabKeydown($event, index)"
+      >
+        {{ tabLabel(key) }}
+      </button>
+    </div>
+
+    <div v-else class="tab-header">
       <label v-if="label" :for="selectId" class="label-text">
         {{ label }}
       </label>
       <select :id="selectId" v-model="activeTab" class="tab-select" :aria-label="selectName" :aria-controls="`${selectId}-panel`">
         <option v-for="key in tabKeys" :key="key" :value="key">
-          {{ labels[key] || formatKey(key) }}
+          {{ tabLabel(key) }}
         </option>
       </select>
     </div>
 
-    <div class="tab-content" :id="`${selectId}-panel`">
+    <div
+      class="tab-content"
+      :id="`${selectId}-panel`"
+      :role="buttons ? 'tabpanel' : undefined"
+      :aria-labelledby="buttons ? `${selectId}-tab-${tabKeys.indexOf(activeTab)}` : undefined"
+    >
       <slot :name="currentTab" />
     </div>
 
@@ -144,6 +193,57 @@ watch(activeTab, (newVal) => {
 
 @media (forced-colors: active) {
   .tab-select:focus-visible { outline-color: Highlight; }
+}
+
+/* Button mode: same segmented toggle as the WhatsNext version switcher
+   (light pill, active tab white with a dark underline bar). */
+.tab-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  background: #f1f3f5;
+  border-radius: 8px;
+  padding: 3px;
+  margin-bottom: 0.75rem;
+}
+
+.tab-buttons button {
+  padding: 0.3rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #5c6370;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.tab-buttons button:hover {
+  color: #1b1f27;
+}
+
+/* Selected state needs a non-colour cue with >= 3:1 contrast (WCAG 1.4.11). */
+.tab-buttons button.active {
+  background: #fff;
+  color: #1b1f27;
+  font-weight: 700;
+  box-shadow: inset 0 -2px 0 #163055, 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tab-buttons button:focus-visible {
+  outline: 2px solid #0b5cad;
+  outline-offset: 1px;
+}
+
+/* box-shadow is dropped in forced-colors mode; keep a visible selected cue. */
+@media (forced-colors: active) {
+  .tab-buttons button.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
 }
 
 .bottom-line {

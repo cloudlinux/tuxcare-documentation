@@ -299,9 +299,9 @@ Replace `alt-package-name` with the specific name of the package you are looking
 
 </TableTabs>
 
-### PHP extensions list
+### PHP Extensions List
 
-The following lists cover the Linux (alt-php) builds of ELS PHP. For ELS PHP for Windows, see [Windows extensions list](#windows-extensions-list).
+The following lists cover the Linux (alt-php) builds of ELS PHP. For ELS PHP for Windows, see [PHP Extensions List](#php-extensions-list-1) in the Windows section.
 
 PHP extensions are modules that extend the functionality of the PHP programming language. These extensions provide additional capabilities for working with various types of data, performing specific tasks, interacting with external resources and supporting various protocols.
 
@@ -2829,131 +2829,897 @@ curl -O "${BASE}${FILE}"
     ![Windows Edit environment variable dialog showing the PHP installation directory added to Path](/images/php-windows-add-path-2.webp)
 </details>
 
-### Additional configurations
+### Additional Configurations
 
 Depending on your ELS PHP usage purpose, additional configurations may be required. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
 
-#### Change default PHP version
+#### Change Default PHP Version
 
 If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
 
-#### Extensions
+#### PHP Extensions List
 
-Extensions are managed through the `php.ini` file located in your PHP installation directory (e.g. `C:\PHP`). Open it in a text editor and find the extensions section. Remove the semicolon `;` at the beginning of a line to enable an extension, or add `;` to disable it.
+ELS PHP for Windows comes with two kinds of extensions. **Built-in** extensions are part of the PHP build and always available. **Loadable** extensions are DLLs in the `ext` folder that you enable in one of two ways:
 
-```text
-;extension=curl
-extension=gd2
-;extension=mbstring
-extension=mysqli
-extension=pdo_mysql
-```
+* **TuxCare Installer** — select the modules you need at the **Choose installation path and load modules** step.
+* **Manually** — open `php.ini` in your PHP installation directory (e.g. `C:\PHP`) and remove the semicolon `;` at the start of the `extension=` line. Add `;` to disable an extension.
 
-##### Windows extensions list
-
-The following lists cover the Windows builds of ELS PHP. **Built-in** extensions are part of the PHP build and always available. **Loadable** extensions are DLLs in the `ext` folder that you enable in `php.ini` as shown above. Extensions marked *TS only* or *NTS only* are available only in the Thread Safe or Non-Thread Safe build.
+Extensions marked *TS only* or *NTS only* are available only in the Thread Safe or Non-Thread Safe build.
 
 <TableTabs>
 
   <template #PHP_5.2_Windows_extensions>
 
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
   <div class="notranslate">
 
-  **Built-in:** bcmath, calendar, com_dotnet, ctype, date, dom, filter, ftp, hash, iconv, json, libxml, odbc, pcre, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zlib
-
-  **Loadable:** adt, amf, bcompiler, bitset, blenc, bz2, bz2_filter, classkit, cpdf, crack, curl, cvsclient, db, dba, dbase, dbx, dio, docblock, domxml, doublemetaphone, event, exif, fdf, fileinfo, filepro, gd2, gettext, gmp, gopher, haru, htscanner, http, hyperwave, ibm_db2, id3, ifx, iisfunc (TS only), imap, ingres2, interbase, ioncube_loader, ldap, lzf, mailparse, maxdb, mbstring, mcrypt, mcrypt_filter, mcve, memcache, mhash, mime_magic, ming, msql, mssql, mysql, mysqli, netools, ntuser, oci8, oggvorbis, openssl, operator, oracle, params, parsekit, pdflib, pdo, pdo_firebird, pdo_ibm, pdo_informix, pdo_mssql, pdo_mysql, pdo_oci, pdo_oci8, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlite_external, pdo_user, pgsql, phar, phk, php5activescript (TS only), phpdoc, pop3, printer, pspell, radius, rar, runkit, sam, sdo, shmop, smtp, snmp, soap, sockets, spl_types, sqlite, ssh2, stats, stem, sybase_ct, threads (TS only), tidy, timezonedb, translit, uploadprogress, win32ps, win32scheduler, win32service, win32std, xmlrpc, xsl, yami, zip, zlib_filter
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>com_dotnet</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>odbc</li>
+  <li>pcre</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zlib</li>
+  </ul>
 
   </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>adt</li>
+  <li>amf</li>
+  <li>bcompiler</li>
+  <li>bitset</li>
+  <li>blenc</li>
+  <li>bz2</li>
+  <li>bz2_filter</li>
+  <li>classkit</li>
+  <li>cpdf</li>
+  <li>crack</li>
+  <li>curl</li>
+  <li>cvsclient</li>
+  <li>db</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>dbx</li>
+  <li>dio</li>
+  <li>docblock</li>
+  <li>domxml</li>
+  <li>doublemetaphone</li>
+  <li>event</li>
+  <li>exif</li>
+  <li>fdf</li>
+  <li>fileinfo</li>
+  <li>filepro</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>gopher</li>
+  <li>haru</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>hyperwave</li>
+  <li>ibm_db2</li>
+  <li>id3</li>
+  <li>ifx</li>
+  <li>iisfunc (TS only)</li>
+  <li>imap</li>
+  <li>ingres2</li>
+  <li>interbase</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>maxdb</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>mcrypt_filter</li>
+  <li>mcve</li>
+  <li>memcache</li>
+  <li>mhash</li>
+  <li>mime_magic</li>
+  <li>ming</li>
+  <li>msql</li>
+  <li>mssql</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>netools</li>
+  <li>ntuser</li>
+  <li>oci8</li>
+  <li>oggvorbis</li>
+  <li>openssl</li>
+  <li>operator</li>
+  <li>oracle</li>
+  <li>params</li>
+  <li>parsekit</li>
+  <li>pdflib</li>
+  <li>pdo</li>
+  <li>pdo_firebird</li>
+  <li>pdo_ibm</li>
+  <li>pdo_informix</li>
+  <li>pdo_mssql</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_oci8</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlite_external</li>
+  <li>pdo_user</li>
+  <li>pgsql</li>
+  <li>phar</li>
+  <li>phk</li>
+  <li>php5activescript (TS only)</li>
+  <li>phpdoc</li>
+  <li>pop3</li>
+  <li>printer</li>
+  <li>pspell</li>
+  <li>radius</li>
+  <li>rar</li>
+  <li>runkit</li>
+  <li>sam</li>
+  <li>sdo</li>
+  <li>shmop</li>
+  <li>smtp</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>spl_types</li>
+  <li>sqlite</li>
+  <li>ssh2</li>
+  <li>stats</li>
+  <li>stem</li>
+  <li>sybase_ct</li>
+  <li>threads (TS only)</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>translit</li>
+  <li>uploadprogress</li>
+  <li>win32ps</li>
+  <li>win32scheduler</li>
+  <li>win32service</li>
+  <li>win32std</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  <li>yami</li>
+  <li>zip</li>
+  <li>zlib_filter</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
 
   </template>
 
   <template #PHP_5.4_Windows_extensions>
 
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
   <div class="notranslate">
 
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, ereg, filter, ftp, hash, iconv, json, libxml, mcrypt, mhash, mysqlnd, odbc, pcre, PDO, Phar, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dbx, enchant, exif, fileinfo, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysql, mysqli, oci8, oci8_11g, openssl, pdo_dblib, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sqlite3, sqlsrv, sybase_ct, tidy, wincache (NTS only), xmlrpc, xsl, ZendLoader (NTS only)
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>ereg</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mcrypt</li>
+  <li>mhash</li>
+  <li>mysqlnd</li>
+  <li>odbc</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
 
   </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dbx</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>oci8</li>
+  <li>oci8_11g</li>
+  <li>openssl</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sybase_ct</li>
+  <li>tidy</li>
+  <li>wincache (NTS only)</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  <li>ZendLoader (NTS only)</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
 
   </template>
 
   <template #PHP_5.6_Windows_extensions>
 
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
   <div class="notranslate">
 
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, ereg, filter, hash, iconv, json, libxml, mcrypt, mhash, mysqlnd, odbc, pcre, PDO, Phar, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysql, mysqli, oci8_12c, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sqlite3, sqlsrv, sybase_ct, tidy, xmlrpc, xsl
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>ereg</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mcrypt</li>
+  <li>mhash</li>
+  <li>mysqlnd</li>
+  <li>odbc</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
 
   </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysql</li>
+  <li>mysqli</li>
+  <li>oci8_12c</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sybase_ct</li>
+  <li>tidy</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
 
   </template>
 
   <template #PHP_7.2_Windows_extensions>
 
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
   <div class="notranslate">
 
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
 
   </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_12c</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phpdbg_webhelper</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
 
   </template>
 
   <template #PHP_7.3_Windows_extensions>
 
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
   <div class="notranslate">
 
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, fileinfo, ftp, gd2, gettext, gmp, imap, interbase, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>wddx</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
 
   </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_12c</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phpdbg_webhelper</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
 
   </template>
 
   <template #PHP_7.4_Windows_extensions>
 
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
   <div class="notranslate">
 
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd2, gettext, gmp, imap, intl, ioncube_loader, ldap, mbstring, mysqli, oci8_12c, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xmlrpc, xsl
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
 
   </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd2</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>intl</li>
+  <li>ioncube_loader</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_12c</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phpdbg_webhelper</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xmlrpc</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
 
   </template>
 
   <template #PHP_8.0_Windows_extensions>
 
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
   <div class="notranslate">
 
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd, gettext, gmp, imap, intl, ldap, mbstring, mysqli, oci8_19, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, phpdbg_webhelper, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xsl
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
 
   </div>
+
+  </template>
+
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>intl</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_19</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phpdbg_webhelper</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
 
   </template>
 
   <template #PHP_8.1_Windows_extensions>
 
+  <TableTabs buttons :bottom-line="false">
+
+  <template #Built-in>
+
   <div class="notranslate">
 
-  **Built-in:** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, xml, xmlreader, xmlwriter, zip, zlib
-
-  **Loadable:** bz2, com_dotnet, curl, dba, enchant, exif, ffi, fileinfo, ftp, gd, gettext, gmp, imap, intl, ldap, mbstring, mysqli, oci8_19, odbc, opcache, openssl, pdo_firebird, pdo_mysql, pdo_oci, pdo_odbc, pdo_pgsql, pdo_sqlite, pdo_sqlsrv, pgsql, shmop, snmp, soap, sockets, sodium, sqlite3, sqlsrv, sysvshm, tidy, xsl
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bcmath</li>
+  <li>calendar</li>
+  <li>Core</li>
+  <li>ctype</li>
+  <li>date</li>
+  <li>dom</li>
+  <li>filter</li>
+  <li>hash</li>
+  <li>iconv</li>
+  <li>json</li>
+  <li>libxml</li>
+  <li>mysqlnd</li>
+  <li>pcre</li>
+  <li>PDO</li>
+  <li>Phar</li>
+  <li>readline</li>
+  <li>Reflection</li>
+  <li>session</li>
+  <li>SimpleXML</li>
+  <li>SPL</li>
+  <li>standard</li>
+  <li>tokenizer</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlwriter</li>
+  <li>zip</li>
+  <li>zlib</li>
+  </ul>
 
   </div>
 
   </template>
 
+  <template #Loadable>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>bz2</li>
+  <li>com_dotnet</li>
+  <li>curl</li>
+  <li>dba</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi</li>
+  <li>fileinfo</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gettext</li>
+  <li>gmp</li>
+  <li>imap</li>
+  <li>intl</li>
+  <li>ldap</li>
+  <li>mbstring</li>
+  <li>mysqli</li>
+  <li>oci8_19</li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci</li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>sysvshm</li>
+  <li>tidy</li>
+  <li>xsl</li>
+  </ul>
+
+  </div>
+
+  </template>
+
+  </TableTabs>
+
+  </template>
+
 </TableTabs>
 
-#### Increase upload/memory limits
+#### Increase Upload/Memory Limits
 
 If you're integrating PHP with applications like WordPress, you might need to increase memory and upload size limits. Open the `php.ini` file and set the values as needed:
 
@@ -2991,7 +3757,7 @@ This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names a
 
 </ELSPrerequisites>
 
-### Set up SaxonC
+### Set Up SaxonC
 
 <ELSSteps>
 
@@ -3053,7 +3819,7 @@ This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names a
 
 </ELSSteps>
 
-### Build the PHP extension
+### Build the PHP Extension
 
 <ELSSteps>
 
