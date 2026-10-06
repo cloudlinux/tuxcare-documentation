@@ -257,10 +257,6 @@ The following steps use the .NET SDK installation as an example. If you are inst
 
   Currently, to update .NET, you need to manually download the latest installer and follow the installation steps described above. After installing the new version, it's recommended to remove the previous one. In the future, an automatic update mechanism for the components will be provided.
 
-* **How are TuxCare .NET runtime packages versioned?**
-
-  TuxCare releases patched runtime packages under the next patch number of the Microsoft version, with a `-tuxcare.N` suffix — for example, `6.0.36` becomes `6.0.37-tuxcare.1`. For details and examples, see [Managing the ELS repository](/els-for-libraries/managing-els-repository/#dotnet).
-
 * **What should I do if there are conflicts during installation?**
 
   If you encounter conflicts, try uninstalling the previous version before installing the new one. In most cases, .NET versions can coexist without issues, but removing the older version may help resolve compatibility problems.
