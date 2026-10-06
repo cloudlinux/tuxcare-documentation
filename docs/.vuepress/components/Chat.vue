@@ -119,20 +119,26 @@ export default {
       showTooltip: true,
       tooltipDismissDuration: 3 * 24 * 60 * 60 * 1000, // 3 days in milliseconds
       inertElements: [],
+      hintOverFooter: false,
     };
   },
   computed: {
     isMobile() {
       return this.windowWidth < 768;
     },
+    // The hint floats over the page bottom; keep the footer links readable.
     shouldShowTooltip() {
-      return this.showTooltip && !this.showChat;
+      return this.showTooltip && !this.showChat && !this.hintOverFooter;
     },
   },
   watch: {
     // Close the modal chat on navigation; the layout may be swapped and the new page must not stay behind it.
     // Focus is left to the route announcer, which moves it to the new page.
     "$route.path"() {
+      this.$nextTick(() => {
+        this.observePageSize();
+        this.checkHintOverFooter();
+      });
       if (!this.showChat) return;
       this.showChat = false;
       this.setPageInert(false);
@@ -142,6 +148,8 @@ export default {
     window.addEventListener("resize", this.handleResize);
     document.addEventListener("keydown", this.onDocumentKeydown);
     document.addEventListener("focusin", this.onDocumentFocusin);
+    window.addEventListener("scroll", this.scheduleFooterCheck, { passive: true });
+    this.observePageSize();
     this.handleResize(); // Set initial windowWidth on client-side
     this.updateTooltipVisibility();
   },
@@ -149,9 +157,43 @@ export default {
     window.removeEventListener("resize", this.handleResize);
     document.removeEventListener("keydown", this.onDocumentKeydown);
     document.removeEventListener("focusin", this.onDocumentFocusin);
+    window.removeEventListener("scroll", this.scheduleFooterCheck);
+    if (this.pageResizeObserver) this.pageResizeObserver.disconnect();
     this.setPageInert(false);
   },
   methods: {
+    // Content loading in (images, components) moves the footer without a scroll
+    // event. html/body/#app are viewport-sized, so watch the theme container,
+    // which the layout swaps on navigation.
+    observePageSize() {
+      if (typeof ResizeObserver === "undefined") return;
+      if (!this.pageResizeObserver) this.pageResizeObserver = new ResizeObserver(this.scheduleFooterCheck);
+      this.pageResizeObserver.disconnect();
+      const page = document.querySelector(".theme-container");
+      if (page) this.pageResizeObserver.observe(page);
+    },
+    scheduleFooterCheck() {
+      if (this.footerCheckPending) return;
+      this.footerCheckPending = true;
+      requestAnimationFrame(() => {
+        this.footerCheckPending = false;
+        this.checkHintOverFooter();
+      });
+    },
+    // Hide the hint only while it actually covers the page footer. The hint is
+    // fixed, so its last measured box stays valid while it is hidden (until a resize).
+    checkHintOverFooter() {
+      const tooltip = this.$refs.tooltip;
+      if (tooltip) this.hintRect = tooltip.getBoundingClientRect();
+      const footer = document.querySelector(".footer:not(.drawer-footer):not(.drawer-footer__mobile)");
+      const t = this.hintRect;
+      if (!footer || !t) {
+        this.hintOverFooter = false;
+        return;
+      }
+      const f = footer.getBoundingClientRect();
+      this.hintOverFooter = f.top < t.bottom && f.bottom > t.top && f.left < t.right && f.right > t.left;
+    },
     toggleChat() {
       if (this.showChat) {
         this.closeChat();
@@ -221,6 +263,10 @@ export default {
     },
     handleResize() {
       this.windowWidth = window.innerWidth;
+      // The hint's width follows the viewport: show it again so it can be re-measured.
+      this.hintRect = null;
+      this.hintOverFooter = false;
+      this.$nextTick(this.checkHintOverFooter);
     },
     onIframeLoad() {
       this.isLoading = false;
