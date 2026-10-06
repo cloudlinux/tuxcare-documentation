@@ -1,10 +1,3 @@
----
-head:
-  - - meta
-    - name: robots
-      content: noindex, nofollow
----
-
 # Managing the SecureChain repository
 
 This page describes how to upgrade an already-installed SecureChain package to a newer release.
@@ -19,7 +12,7 @@ TuxCare keeps releasing patched builds for the package versions you already use 
 
 ### Option 1: SecureChain CLI (recommended)
 
-The CLI compares the installed tree with the TuxCare catalogue, so you do not need to look versions up yourself. Run the commands in the root directory of a project that is already connected to SecureChain (see [SecureChain CLI — Usage](/securechain/cli/#usage)).
+The CLI compares the installed tree with the TuxCare catalogue, so you do not need to look versions up yourself. Run the commands in the root directory of a project that is already connected to SecureChain (see [Connecting a Project](/securechain/cli/#connecting-a-project)).
 
 <ELSSteps>
 
