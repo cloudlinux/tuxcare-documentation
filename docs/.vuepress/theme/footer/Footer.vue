@@ -59,6 +59,7 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
   display flex
   align-items center
   justify-content space-between
+  column-gap 1.5rem
 
 
   &__img img
@@ -118,9 +119,15 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
     margin-left $sidebarWidth
     width auto
 
-// Less room next to the sidebar: let the footer items wrap instead of
-// squeezing the social icons.
-@media (min-width: $mobileBreakpoint + 1) and (max-width: 1365px)
+// Keep the social icons clear of the fixed chat button in the bottom-right
+// corner (Chat.vue: 56px wide, 20px from the edge).
+@media (min-width: $mobileBreakpoint + 1)
+  .footer:not(.drawer-footer):not(.drawer-footer__mobile)
+    padding-right 6.5rem
+
+// Less room next to the sidebar and the chat button: let the footer items
+// wrap instead of squeezing them.
+@media (min-width: $mobileBreakpoint + 1) and (max-width: 1499px)
   .footer:not(.drawer-footer)
     flex-wrap wrap
     height auto
@@ -153,4 +160,8 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
     gap 1.5625rem
     margin-top 1.25rem
     flex-direction column
+
+  // Room below the copyright for the fixed chat button.
+  .footer:not(.drawer-footer):not(.drawer-footer__mobile)
+    padding-bottom 6rem
 </style>
