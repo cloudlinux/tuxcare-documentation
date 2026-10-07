@@ -1,8 +1,8 @@
 # Managing the SecureChain repository
 
-This page describes how to upgrade an already-installed SecureChain package to a newer release.
+This page describes how to move a project that is already connected to SecureChain to a newer patched release.
 
-TuxCare keeps releasing patched builds for the package versions you already use — the base version stays the same (`0.4.2` remains `0.4.2`), only the `-tuxcare.N` suffix moves forward. There are two ways to pick up such a release: with the [SecureChain CLI](/securechain/cli/) (recommended) or by hand.
+TuxCare keeps releasing patched builds for the package versions you already use — the base version stays the same (`0.4.2` remains `0.4.2`), only the `-tuxcare.N` suffix moves forward. The [SecureChain CLI](/securechain/cli/) compares the installed tree with the TuxCare catalogue and moves the project forward, so you do not need to look versions up yourself.
 
 ## How to Upgrade to a Newer Version
 
@@ -10,9 +10,7 @@ TuxCare keeps releasing patched builds for the package versions you already use 
 
 <template #JavaScript>
 
-### Option 1: SecureChain CLI (recommended)
-
-The CLI compares the installed tree with the TuxCare catalogue, so you do not need to look versions up yourself. Run the commands in the root directory of a project that is already connected to SecureChain (see [Developer start](https://sc.tuxcare.cloud/guide/developer) in the SecureChain user guide).
+Run the commands in the root directory of a project that is connected to SecureChain (see [JavaScript](/securechain/javascript/)).
 
 <ELSSteps>
 
@@ -24,46 +22,17 @@ The CLI compares the installed tree with the TuxCare catalogue, so you do not ne
 
    A `catalogue-drift` finding names every package that has a newer patched build than the one installed, and the CVEs that build closes. `securechain update --check-only` reports the same and writes nothing — it exits `1` when something is behind, which makes it a gate for CI.
 
-2. Roll the project forward
+2. Move the project forward
 
    ```text
    securechain update
    ```
 
-   `update` rewrites the pins in `package.json` (or `overrides` for transitive packages) to the newer patched builds, refreshes the lockfile, reinstalls and verifies that the installed tree changed. Add `--dry-run` to preview the change first.
+   `update` moves the project to the newer patched builds, reinstalls, and verifies the result. Add `--dry-run` to preview the change without writing anything.
 
 3. Commit the changes
 
-   Commit `package.json` and the lockfile together. Run `securechain check` again: it should now exit `0`.
-
-</ELSSteps>
-
-### Option 2: Manual update
-
-<ELSSteps>
-
-1. Find the latest version available to your subscription. The registry answers with your token from `.npmrc`:
-
-   ```text
-   npm view <package> versions
-   ```
-
-   The newest `-tuxcare.N` entry for your base version is the release to move to.
-
-2. To upgrade, install the new version of the package — `npm install` will replace the previously installed release:
-
-    ```text
-    npm install <package>@<new-version>
-    ```
-
-    :::tip
-    If `npm install` does not pick up the new version, clear the npm cache and reinstall:
-
-    ```text
-    rm -rf node_modules package-lock.json && npm cache clean --force
-    npm install
-    ```
-    :::
+   Commit `package.json` and the lockfile. Run `securechain check` again: it should now exit `0`.
 
 </ELSSteps>
 
