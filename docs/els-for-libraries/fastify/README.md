@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for fastify from TuxCare provides security fixes
 
 ## Supported Versions
 
-* fastify 3.29.5, 4.29.1, 5.11.3
+* fastify 3.29.5, 4.29.1, 5.2.1, 5.7.4, 5.11.3, 5.12.0, 5.12.1
 
 ## Installation
 
@@ -154,7 +154,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=fastify) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Fastify) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/fastify/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

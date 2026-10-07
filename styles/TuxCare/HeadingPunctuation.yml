@@ -1,0 +1,9 @@
+extends: existence
+message: "Do not use end punctuation in headings."
+level: warning
+nonword: true
+scope: heading
+action:
+  name: remove
+tokens:
+  - "[.!]$"

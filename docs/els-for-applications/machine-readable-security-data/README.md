@@ -19,18 +19,20 @@ Security advisories and patch definitions are published for the database applica
 | MariaDB | EL 7 | [errata](https://security.tuxcare.com/errata/els_mariadb/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_mariadb/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_mariadb/el7/) |
 | MariaDB | EL 8 | [errata](https://security.tuxcare.com/errata/els_mariadb/el8/) | — | — |
 | MariaDB | EL 9 | [errata](https://security.tuxcare.com/errata/els_mariadb/el9/) | — | — |
-| MySQL and Percona Server | EL 7 | [errata](https://security.tuxcare.com/errata/els_mysql/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_mysql/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_mysql/el7/) |
+| MySQL | EL 7 | [errata](https://security.tuxcare.com/errata/els_mysql/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_mysql/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_mysql/el7/) |
+| Percona Server | EL 7 | [errata](https://security.tuxcare.com/errata/els_percona/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_percona/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_percona/el7/) |
 | PostgreSQL | EL 7 | [errata](https://security.tuxcare.com/errata/els_postgresql/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_postgresql/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_postgresql/el7/) |
 | PostgreSQL | EL 9 | [errata](https://security.tuxcare.com/errata/els_postgresql/el9/) | [oval.xml](https://security.tuxcare.com/oval/els_postgresql/el9/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_postgresql/el9/) |
+| PostgreSQL | Ubuntu 22.04 | [errata](https://security.tuxcare.com/errata/els_postgresql/ubuntu22.04/) | [oval.xml](https://security.tuxcare.com/oval/els_postgresql/ubuntu22.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_postgresql/ubuntu22.04/) |
 
 ## Software Bill of Materials (SBOM)
 
 Each application package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. SBOMs are provided in industry-standard formats — SPDX and CycloneDX — so they can be consumed by any SBOM-aware scanner or supply-chain tool.
 
-SBOMs for these applications are published to TuxCare Nexus and require credentials:
+SBOMs for these applications are published as follows:
 
-* Java applications (Apache Tomcat, WildFly, Apache Hive, Apache Hadoop) - [els-java-sbom](https://nexus.repo.tuxcare.com/#browse/browse:els-java-sbom)
-* Go applications (Grafana, Loki, MinIO) - [els-golang-sbom](https://nexus.repo.tuxcare.com/#browse/browse:els-golang-sbom)
+* Java applications (Apache Tomcat, WildFly, Apache Hive, Apache Hadoop) - [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/) on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), publicly accessible
+* Go applications (Grafana, Loki, MinIO) - [els_lang_go](https://security.tuxcare.com/sbom/cyclonedx/els_lang_go/) on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), publicly accessible; each SBOM is accompanied by its detached `.asc` signature in the same directory
 
 To check whether an SBOM is available for other applications or to request a copy, reach out to [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
@@ -81,7 +83,7 @@ Import the public key once. It can verify every TuxCare-signed archive, so this 
 ELS applications are distributed as archives you download from TuxCare Nexus. To verify one, download its detached `.asc` signature from Nexus and run `gpg --verify` against the archive you downloaded. Select your ecosystem below.
 
 :::warning
-The signature repository and artifact naming differ per ecosystem: for the Java-based applications the `.asc` is published in `els-java-sbom`, and for the Go-based applications in `els-golang-sbom` (separate from the `els-golang` archive itself). Confirm the exact path and artifact naming for your archive with your TuxCare contact.
+The signature location and artifact naming differ per ecosystem: for the Java-based applications the `.asc` is published in `els-java-sbom`, and for the Go-based applications next to the archive itself in `els-golang`. Not every Go archive has a signature published yet. Confirm the exact path and artifact naming for your archive with your TuxCare contact.
 :::
 
 <TableTabs label="Choose ecosystem: ">
@@ -126,20 +128,20 @@ The signature repository and artifact naming differ per ecosystem: for the Java-
 
 1. **Obtain the exact published archive**
 
-   Download the archive as described in the application's setup page (see, for example, [Grafana](/els-for-applications/grafana/)). Verification works on the byte-for-byte artifact that was signed, so keep the downloaded `.tar.gz` as-is:
+   Download the archive as described in the application's setup page (see, for example, [Loki](/els-for-applications/loki/)). Verification works on the byte-for-byte artifact that was signed, so keep the downloaded `.tar.gz` as-is:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -O \
-     https://nexus.repo.tuxcare.com/repository/els-golang/grafana/debian13/grafana-10.4.1-tuxcare.1.tar.gz
+     https://nexus.repo.tuxcare.com/repository/els-golang/loki/debian12/loki-2.8.3-tuxcare.1.tar.gz
    ```
 
 2. **Download the matching signature**
 
-   For the Go-based applications, the `.asc` is published in the SBOM repository (`els-golang-sbom`). Authenticate with your TuxCare Nexus credentials:
+   For the Go-based applications, the `.asc` is published next to the archive in the same `els-golang` repository. Authenticate with your TuxCare Nexus credentials:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -O \
-     https://nexus.repo.tuxcare.com/repository/els-golang-sbom/grafana/debian13/grafana-10.4.1-tuxcare.1.tar.gz.asc
+     https://nexus.repo.tuxcare.com/repository/els-golang/loki/debian12/loki-2.8.3-tuxcare.1.tar.gz.asc
    ```
 
 3. **Verify the signature against the archive**
@@ -147,7 +149,7 @@ The signature repository and artifact naming differ per ecosystem: for the Java-
    Pass the signature file first, then the archive you downloaded:
 
    ```text
-   gpg --verify grafana-10.4.1-tuxcare.1.tar.gz.asc grafana-10.4.1-tuxcare.1.tar.gz
+   gpg --verify loki-2.8.3-tuxcare.1.tar.gz.asc loki-2.8.3-tuxcare.1.tar.gz
    ```
 
    A valid signature produces output similar to:
@@ -246,9 +248,9 @@ run "gpg verify ${ARCHIVE}" gpg --verify "${ARCHIVE}.asc" "${ARCHIVE}"
 #!/usr/bin/env bash
 set -o pipefail
 LOG=/var/log/tuxcare-integrity.log
-ARCHIVE=grafana-10.4.1-tuxcare.1.tar.gz
-ARCHIVE_URL=https://nexus.repo.tuxcare.com/repository/els-golang/grafana/debian13/${ARCHIVE}
-SIG_URL=https://nexus.repo.tuxcare.com/repository/els-golang-sbom/grafana/debian13/${ARCHIVE}.asc
+ARCHIVE=loki-2.8.3-tuxcare.1.tar.gz
+ARCHIVE_URL=https://nexus.repo.tuxcare.com/repository/els-golang/loki/debian12/${ARCHIVE}
+SIG_URL=https://nexus.repo.tuxcare.com/repository/els-golang/loki/debian12/${ARCHIVE}.asc
 
 run() {
   # $1 = event label, remaining args = the command to check

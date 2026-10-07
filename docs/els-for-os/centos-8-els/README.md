@@ -1,5 +1,7 @@
 # CentOS 8 ELS
 
+<ELSVendorEol os="centos-8-els" />
+
 ## Installation
 
 <ELSPrerequisites>

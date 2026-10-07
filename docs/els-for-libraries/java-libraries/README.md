@@ -1,6 +1,6 @@
 # Java Libraries
 
-Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for a variety of Java Libraries. This allows you to continue running your Java applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides security fixes for a variety of Java Libraries. This allows you to continue running your Java applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Java Libraries
 
@@ -10,6 +10,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Ant** 1.9.4
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
+* **Apache BookKeeper** 4.16.6
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.0, 1.9.2, 1.9.4, 1.10.0, 1.10.1
 * **Apache Commons Collections** 3.2, 3.2.1
 * **Apache Commons Compress** 1.8.1, 1.12, 1.14, 1.15, 1.18, 1.19, 1.20, 1.21, 1.24.0, 1.25.0, 1.26.2
@@ -20,9 +21,9 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Commons IO** 2.0.1, 2.2, 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.11.0
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
-* **Apache HttpComponents Client** 4.2, 4.2.6, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
-* **Apache HttpComponents Client 5** 5.5.2
-* **Apache HttpComponents Core 5** 5.2.5
+* **Apache HttpComponents Client** 4.2, 4.2.1, 4.2.6, 4.5.1, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10
+* **Apache HttpComponents Client 5** 5.0.3, 5.5.2
+* **Apache HttpComponents Core 5** 5.1.3, 5.2.5
 * **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
 * **Apache POI** 3.10-FINAL, 4.1.2
@@ -43,11 +44,12 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Couchbase JVM Core IO** 2.6.3
 * **Couchbase JVM Core IO Deps** 1.6.3
 * **DNSJava** 2.1.7, 3.5.2
+* **docker-java** 3.2.11, 3.2.13, 3.3.0, 3.3.6, 3.4.2
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
 * **Eclipse Aether** 1.0.2.v20150114
 * **Eclipse JGit** 5.7.0, 5.13.3
-* **Eclipse Parsson** 1.0.0
+* **Eclipse Parsson** 1.0.0, 1.1.1
 * **Eclipse Sisu** 0.0.0.M5
 * **EdDSA** 0.3.0
 * **el-spec** 3.0.0
@@ -55,7 +57,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **excel-streaming-reader** 5.0.2
 * **GlassFish** 3.0.0
 * **Google Gson** 2.2.4, 2.4, 2.8.5, 2.8.9, 2.9.1, 2.10.1, 2.11.0
-* **Google Guava** 16.0.1, 18.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
+* **Google Guava** 16.0.1, 18.0, 19.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
 * **Grails** 2.5.6, 5.3.6, 6.2.1, 6.2.3
@@ -70,14 +72,15 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **JasperReports** 3.7.4, 6.2.2, 6.21.5
 * **JBoss XNIO** 3.8.0, 3.8.8
 * **JDOM** 1.0, 1.1.3
+* **jFairy** 0.5.9
 * **Joda-Time** 1.3
 * **jose4j** 0.8.0
 * **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
 * **JSON Smart v2** 1.3.2, 2.4.8, 2.5.0
 * **json-io** 2.9.4
-* **JsonPath** 2.2.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
-* **jsoup** 1.7.2, 1.7.3
+* **JsonPath** 2.2.0, 2.4.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
+* **jsoup** 1.7.2, 1.7.3, 1.17.2
 * **JUnit** 4.13
 * **Lettuce** 6.1.10.RELEASE, 6.3.2.RELEASE
 * **Logback** 1.1.7, 1.2.3, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18
@@ -90,18 +93,20 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **NekoHTML** 1.9.22
 * **Neo4j Bolt Connection** 2.0.0
 * **Neo4j Java Driver** 5.28.5
-* **Netty** 3.10.6.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.94.Final, 4.1.107.Final, 4.1.108.Final, 4.1.111.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.119.Final, 4.1.122.Final, 4.1.130.Final, 4.1.135.Final
+* **Netty** 3.10.6.Final, 4.1.43.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.79.Final, 4.1.82.Final, 4.1.87.Final, 4.1.92.Final, 4.1.93.Final, 4.1.94.Final, 4.1.99.Final, 4.1.107.Final, 4.1.108.Final, 4.1.111.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.119.Final, 4.1.122.Final, 4.1.130.Final, 4.1.135.Final
 * **Netty Incubator** 0.0.21.Final
 * **Nimbus JOSE + JWT** 8.23, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 2.8.0, 2.10.0
+* **Plexus Sec Dispatcher** 2.0
 * **Plexus Utils** 1.2, 1.4.5, 1.5.6, 1.5.8, 1.5.15, 2.0.4, 2.0.5, 2.0.6, 2.1, 3.0.1, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.24, 3.1.0, 3.2.0, 3.2.1, 3.3.1, 3.4.1, 3.4.2, 3.5.1, 3.6.0, 4.0.0, 4.0.1, 4.0.2
 * **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
 * **RabbitMQ Java Client** 5.19.0
+* **Reactive Pulsar Client** 0.5.9, 0.5.10
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2020.0.47, 2022.0.13, 2022.0.15, 2023.0.19
-* **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31
+* **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31, 1.2.13, 1.2.18
 * **Retrofit** 2.9.0
 * **RSocket** 1.1.3, 1.1.5
 * **SLF4J** 1.6.1, 1.7.21
@@ -109,6 +114,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
 * **Sonatype Sisu** 2.3.0
+* **Testcontainers** 1.18.3, 1.19.8, 1.21.4
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
 * **Undertow** 2.2.24.Final, 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final
 * **Woodstox** 5.0.3, 5.3.0
@@ -129,7 +135,7 @@ Other libraries upon request.
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. You can find the corresponding instructions [here](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>
@@ -230,7 +236,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [Source code](/els-for-libraries/managing-els-repository/#javaSources) — Access source JARs in Nexus
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#java) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

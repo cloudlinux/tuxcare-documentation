@@ -1,6 +1,8 @@
 # CloudLinux 7 ELS
 
-You do not need an Endless Lifecycle Support (ELS) for CentOS 7 subscription if you are already using CloudLinux OS 7. You can find more information [here](https://docs.cloudlinux.com/cln/billing/).
+<ELSVendorEol os="cloudlinux-7-els" />
+
+You do not need an Endless Lifecycle Support (ELS) for CentOS 7 subscription if you are already using CloudLinux OS 7. You can find more information in the [CLN billing documentation](https://docs.cloudlinux.com/cln/billing/).
 
 ## How it works
 

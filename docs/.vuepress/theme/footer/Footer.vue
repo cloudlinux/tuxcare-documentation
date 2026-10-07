@@ -1,5 +1,10 @@
 <template>
-  <footer class="footer" :class="{'footer-default-layout': !isGlobalLayout}" role="contentinfo">
+  <!-- Inside the search dialog this is a plain block: the page already has one
+       contentinfo landmark, and a dialog shouldn't add another. -->
+  <component :is="landmark ? 'footer' : 'div'"
+             class="footer"
+             :class="{'footer-default-layout': !isGlobalLayout}"
+             :role="landmark ? 'contentinfo' : undefined">
     <div class="footer__img">
       <a :href="cloudlinuxSite" aria-label="TuxCare website">
         <img :src="withBase(footerCustomLogo)"
@@ -10,22 +15,29 @@
 
     <div class="social">
       <div class="social_links">
-        <a v-for="item in locales.bottomLinks" :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
+        <a v-for="item in locales.bottomLinks" :key="item.url" :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.text }}<span class="sr-only"> (opens in new tab)</span></a>
       </div>
       <span class="footer-social-text">{{ locales.stayInTouch }}</span>
       <div class="social-icons-wrapper">
-        <a v-for="item in social" class="social-icons-link" :href="item?.url" target="_blank" rel="noopener noreferrer" :aria-label="item?.text || 'social link'">
-          <img v-if="item.icon" class="social-icons-link-img" :src="withBase(item?.icon)" alt="footer logo"/>
+        <a v-for="item in social" :key="item.url" class="social-icons-link" :href="item?.url" target="_blank" rel="noopener noreferrer" :aria-label="(item?.text || 'Social link') + ' (opens in new tab)'">
+          <img v-if="item.icon" class="social-icons-link-img" :src="withBase(item?.icon)" alt=""/>
         </a>
       </div>
     </div>
-  </footer>
+  </component>
 </template>
 
 
 <script setup>
 import {computed, inject} from "vue";
 import {usePageFrontmatter, withBase} from "@vuepress/client";
+
+defineProps({
+  landmark: {
+    type: Boolean,
+    default: true
+  },
+})
 
 const {social, cloudlinuxSite, footerCustomLogo, footerCustomAltText, locales} = inject('themeConfig');
 const frontmatter = usePageFrontmatter()
@@ -47,6 +59,7 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
   display flex
   align-items center
   justify-content space-between
+  column-gap 1.5rem
 
 
   &__img img
@@ -83,17 +96,47 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
     padding-left 0.75rem
     border-left 1px solid #ccc
 
+  // Size the icon itself, not the link: a percentage width on an image inside
+  // a content-sized flex item is resolved differently by Safari/Firefox, which
+  // stretch it to the PNG's natural width (135px / 252px) and overflow.
   &-icons-link
     display: flex
-    height 3.125rem
+    flex-shrink 0
 
     &-img
-      width 100%
-      height 100%
+      display block
+      width auto
+      height 3.125rem
 
 .footer-default-layout
   position static
   width 100%
+
+// The docs sidebar is fixed to the left edge; start the page footer after it
+// so the logo link and copyright are not hidden underneath (WCAG 2.4.11).
+@media (min-width: $mobileBreakpoint + 1)
+  .footer-default-layout:not(.drawer-footer)
+    margin-left $sidebarWidth
+    width auto
+
+// Keep the social icons clear of the fixed chat button in the bottom-right
+// corner (Chat.vue: 56px wide, 20px from the edge).
+@media (min-width: $mobileBreakpoint + 1)
+  .footer:not(.drawer-footer):not(.drawer-footer__mobile)
+    padding-right 6.5rem
+
+// Less room next to the sidebar and the chat button: let the footer items
+// wrap instead of squeezing them.
+@media (min-width: $mobileBreakpoint + 1) and (max-width: 1499px)
+  .footer:not(.drawer-footer)
+    flex-wrap wrap
+    height auto
+    min-height $footerHeight
+    gap 1rem 2rem
+
+    .social
+      flex-wrap wrap
+      row-gap 1rem
 
 .sidebar-width
   width $sidebarWidth + 2rem
@@ -117,4 +160,8 @@ const footerLogoAlt = computed(() => footerCustomAltText || "TuxCare");
     gap 1.5625rem
     margin-top 1.25rem
     flex-direction column
+
+  // Room below the copyright for the fixed chat button.
+  .footer:not(.drawer-footer):not(.drawer-footer__mobile)
+    padding-bottom 6rem
 </style>

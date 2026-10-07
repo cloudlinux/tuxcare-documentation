@@ -10,12 +10,12 @@ Our ELS for Apache Tomcat® service is designed to provide solutions for organiz
 This guide outlines the steps needed for Apache Tomcat® server setup and configuration.
 
 :::tip
-Apache Tomcat® is also available for installation as a library for Maven and Gradle projects. You can find the corresponding instructions [here](/els-for-libraries/apache-tomcat/).
+Apache Tomcat® is also available for installation as a library for Maven and Gradle projects. See [ELS for Apache Tomcat® as a library](/els-for-libraries/apache-tomcat/).
 :::
 
 ## Supported Versions
 
-* Apache Tomcat® 7.0.109, 8.5.100, 9.0.46, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100, 10.1.18, 10.1.42
+* Apache Tomcat® 7.0.70, 7.0.109, 8.5.100, 9.0.46, 9.0.50, 9.0.75, 9.0.83, 9.0.87, 9.0.90, 9.0.100, 10.1.18, 10.1.42
 
 ## Installation
 

@@ -1,8 +1,11 @@
 <template>
-  <section v-if="data.length" class="drawer-main__search-results">
+  <section v-if="data.length" ref="resultsRef" class="drawer-main__search-results">
     <template v-for="(item, index) in visibleResults" :key="item.objectID || index">
-      <div class="search-result" @click="gotTo(parseUrl(item.url))">
-        <a :href="item.url" class="search-result__title" v-html="highlightMatchingWords(getTitleForArticle(item.title), modelValue)"></a>
+      <div class="search-result">
+        <a :href="item.url"
+           class="search-result__title"
+           @click="onResultClick($event, item)"
+           v-html="highlightMatchingWords(getTitleForArticle(item.title), modelValue)"></a>
         <div
           class="search-result__breadcrumb"
           v-html="highlightMatchingWords(getBreadcrumbsForArticle(item.title), modelValue)"
@@ -13,17 +16,18 @@
         ></div>
       </div>
     </template>
-    <div v-if="countOfHiddenResults > 0" class="show-more" @click="showAllHiddenResult">
-      <p>Show {{ countOfHiddenResults }} more results</p>
-    </div>
+    <button v-if="countOfHiddenResults > 0" type="button" class="show-more" @click="showAllHiddenResult">
+      Show {{ countOfHiddenResults }} more results
+    </button>
   </section>
   <div v-else>
     <p v-if="!modelValue.length" class="no_results">Please type your search query, then press Enter or click the search button.</p>
+    <p v-else-if="searchedQuery" class="no_results">No results for “{{ searchedQuery }}”</p>
   </div>
 </template>
 
 <script setup>
-import { computed, inject, ref } from "vue";
+import { computed, inject, nextTick, ref } from "vue";
 import { marked } from "marked";
 
 const renderer = new marked.Renderer();
@@ -56,6 +60,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  searchedQuery: {
+    type: String,
+    default: "",
+  },
 });
 
 const { MAX_VISIBLE_RESULT } = inject("themeConfig");
@@ -77,6 +85,14 @@ const gotTo = (url) => {
   window.location.href = parsedCurrentUrl.origin + url;
 };
 
+// The link itself handles the click, so mouse and keyboard both get the
+// drawer-close / same-page reload handling. Modified clicks open as usual.
+const onResultClick = (event, item) => {
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  gotTo(parseUrl(item.url));
+};
+
 const parseUrl = (url) => {
   const parsed = new URL(url);
   return parsed.pathname + parsed.hash;
@@ -90,8 +106,12 @@ const countOfHiddenResults = computed(() => {
   return props.data.length - visibleResults.value.length;
 });
 
+const resultsRef = ref(null);
+
+// Reveal the rest and move focus to the first newly shown result.
 const showAllHiddenResult = () => {
   isShowAllResult.value = true;
+  nextTick(() => resultsRef.value?.querySelectorAll(".search-result__title")[MAX_VISIBLE_RESULT]?.focus());
 };
 
 const getTitleForArticle = (title) => {
@@ -137,6 +157,15 @@ const highlightMatchingWords = (text, query) => {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
 
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Increased shadow on hover
@@ -153,6 +182,13 @@ const highlightMatchingWords = (text, query) => {
     color: $drawerSearchResultTitleColor;
     margin: 0;
     line-height: 1.4; // Increased line height for better readability
+
+    // Stretch the link over the card so the whole card stays clickable.
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
   }
 
   &__text {
@@ -178,14 +214,17 @@ const highlightMatchingWords = (text, query) => {
 }
 
 .show-more {
+  display: block;
+  width: 100%;
   text-align: center;
   margin: 1rem 0;
+  padding: 1em 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  color: $mainColor;
+  font-weight: bold;
   cursor: pointer;
-
-  p {
-    color: $mainColor;
-    font-weight: bold;
-  }
 }
 
 .no_results {

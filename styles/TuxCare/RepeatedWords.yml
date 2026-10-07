@@ -1,0 +1,13 @@
+extends: repetition
+message: "'%s' is repeated."
+level: warning
+ignorecase: false
+alpha: true
+action:
+  name: edit
+  params:
+    - regex
+    - '(\w+)(\s\w+)'
+    - "$1"
+tokens:
+  - '[^\s]+'

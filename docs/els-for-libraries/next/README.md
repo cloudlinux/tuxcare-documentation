@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Next.js from TuxCare provides security fixes
 
 ## Supported Versions
 
-* Next.js 12.3.7, 13.5.11, 14.2.35, 16.0.6
+* Next.js 12.3.7, 13.5.11, 14.2.35, 15.1.2, 15.5.23, 15.5.24, 15.5.25, 15.5.26, 16.0.6
 
 ## Installation
 
@@ -148,7 +148,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Next.js) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Next.js) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/next/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

@@ -6,7 +6,10 @@ Endless Lifecycle Support (ELS) for Zend Framework from TuxCare provides securit
 
 * **Zend Framework 1** 1.10.6, 1.11.0, 1.12.10
 * **Zend Framework** 2.4.13
+* **Zend Form** 2.1.6
+* **Zend View** 2.1.6
 * **Zend HTTP** 2.5.6
+* **Zend Session** 2.1.6
 
 Other versions upon request.
 
@@ -81,11 +84,38 @@ Other versions upon request.
 
    </template>
 
+   <template #zend-form>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require zendframework/zend-form:2.1.6-p1+tuxcare` },
+     { title: 'composer.json', content: zendformjson }
+   ]" />
+
+   </template>
+
    <template #zend-http>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require zendframework/zend-http:2.5.6-p2+tuxcare` },
      { title: 'composer.json', content: zendhttpjson }
+   ]" />
+
+   </template>
+
+   <template #zend-view>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require zendframework/zend-view:2.1.6-p1+tuxcare` },
+     { title: 'composer.json', content: zendviewjson }
+   ]" />
+
+   </template>
+
+   <template #zend-session>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require zendframework/zend-session:2.1.6-p2+tuxcare` },
+     { title: 'composer.json', content: zendsessionjson }
    ]" />
 
    </template>
@@ -187,10 +217,31 @@ const zf2json =
     }
 }`
 
+const zendformjson =
+`{
+    "require": {
+        "zendframework/zend-form": "2.1.6-p1+tuxcare"
+    }
+}`
+
 const zendhttpjson =
 `{
     "require": {
         "zendframework/zend-http": "2.5.6-p2+tuxcare"
+    }
+}`
+
+const zendviewjson =
+`{
+    "require": {
+        "zendframework/zend-view": "2.1.6-p1+tuxcare"
+    }
+}`
+
+const zendsessionjson =
+`{
+    "require": {
+        "zendframework/zend-session": "2.1.6-p2+tuxcare"
     }
 }`
 

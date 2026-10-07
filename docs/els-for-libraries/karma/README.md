@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for karma from TuxCare provides security fixes f
 
 ## Supported Versions
 
-* karma 1.5.0, 1.7.0, 3.0.0, 4.0.0, 4.0.1, 4.1.0, 4.4.1, 5.0.0, 5.0.9
+* karma 1.5.0, 1.7.0, 3.0.0, 4.0.0, 4.0.1, 4.1.0, 4.4.1, 5.0.0, 5.0.9, 5.2.3
 
 ## Installation
 
@@ -153,7 +153,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=karma) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=karma) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/karma/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

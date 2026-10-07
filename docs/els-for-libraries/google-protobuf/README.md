@@ -1,4 +1,4 @@
-# Protobuf
+# Protobuf for PHP
 
 Endless Lifecycle Support (ELS) for Protobuf from TuxCare provides security fixes for Protobuf library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 

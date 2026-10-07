@@ -10,7 +10,7 @@ TuxCare ePortal is the web management console dedicated to KernelCare Enterprise
 
 ePortal software can help protect servers located behind the firewall (i.e. with no internet access) and can be installed both on-premises and in the cloud.
 
-![Overview](/images/eportal-overview.svg)
+![ePortal architecture: inside a private network, the administrator and hosts connect to NGINX on the ePortal instance, which serves patches from the file system; a task scheduler gets the latest info from patches.kernelcare.com, and a proxy forwarder gets the agent from repo.cloudlinux.com](/images/eportal-overview.svg)
 
 ## ePortal Hardware Requirements
 
@@ -406,7 +406,7 @@ Cache mode allows to greatly reduce disk usage requirements and speed up initial
 
 In cache mode ePortal downloads only lightweight meta information about patchsets and proxies patch requests from KernelCare agent to the patch server (Patch Source). Downloaded patch binaries are cached for 2 weeks and accessible for following requests directly from ePortal and doesn't consume public internet bandwidth.
 
-![Cache mode](/images/eportal-cache-mode.svg)
+![ePortal in cache mode: the task scheduler stores only the latest patch info in the patches database, and the proxy forwarder gets patches from patches.kernelcare.com and the agent from repo.cloudlinux.com on request](/images/eportal-cache-mode.svg)
 
 ### Enable cache mode
 
@@ -452,7 +452,7 @@ CACHE_MODE = True
 
 ePortal can fetch packages and patches via a customer's proxy server.
 
-![Proxy](/images/eportal-with-proxy.svg)
+![ePortal behind a customer's proxy server: the proxy forwarder and task scheduler reach repo.cloudlinux.com and patches.kernelcare.com through the proxy server](/images/eportal-with-proxy.svg)
 
 On the ePortal machine, you should define the same proxy settings as you use on the command line.
 
@@ -601,7 +601,7 @@ When you log in to ePortal with your LDAP credentials for the first time, a user
 
 In the picture, you can see one user created with `kc.eportal` command line interface and two users logged in with LDAP credentials:
 
-![ldap users](/images/eportalLDAPusers.png)
+![ePortal users list with the local admin user and two read-only LDAP users](/images/eportalLDAPusers.png)
 
 :::tip Note
 All fresh LDAP users have read-only permissions. You can set admin rights on `User edit` page by turning off `Readonly` field.
@@ -674,7 +674,7 @@ The filter idea is to find the `mathematicians` group which has an attribute `un
 
 To access KernelCare.eportal management console, connect to **http://YOUR_IP/admin** and enter your login & password.
 
-![login screen](/images/access_eportal.png)
+![KernelCare.ePortal login form with username and password fields and a Sign In button](/images/access_eportal.png)
 
 You can manage your login information using the [kc.eportal tool](#managing-users)
 
@@ -682,11 +682,11 @@ You can manage your login information using the [kc.eportal tool](#managing-user
 
 ePortal has a built-in mechanism to download the latest patchsets. To start using it, click the _Settings_ link in the ePortal navigational bar and then click _Patch Source_. To get access, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com) and request your ePortal access credentials.
 
-![patch source](/images/eportal-edit-patch-source.png)
+![Patch Source Settings page with URL, login, password and checkboxes to select which distros to download patches for](/images/eportal-edit-patch-source.png)
 
 You can choose only a limited set of distros to fetch to reduce disk space and network bandwidth requirements. Once you set up patch source access info, you will get to a list of available patchsets.
 
-![dashboard](/images/eportal-dashboard.png)
+![Available KernelCare PatchSets list showing each patchset status (Enabled, Disabled, Not downloaded) per feed, with a Manage button](/images/eportal-dashboard.png)
 
 * **Usage**: amount of servers using particular patchset on any feed. You can click on the number to see a list of servers using the patchset. You can filter the patchset list to show only patchsets that are in use by using the Usage column filter.
 
@@ -726,7 +726,7 @@ You can filter patchsets on the dashboard page:
 
 ### Manage patchset page
 
-![manage patchsets](/images/eportal-manage.png)
+![Manage patchset page with per-feed actions: Enable all up to this patchset, Enable, Do nothing, Disable, Undeploy down to this patchset](/images/eportal-manage.png)
 
 In this dialog you can control which patchsets will be enabled/disabled on corresponding feeds.
 
@@ -838,7 +838,7 @@ is accessible from the `Patches / LibCare` navigation item. LibCare patches
 use the same Patch Source credentials, and you don't need to perform additional
 configuration.
 
-![libcare feed](/images/eportal-libcare-feed.png)
+![LivePatching menu open with LibCare selected, above the Available LibCare PatchSets list](/images/eportal-libcare-feed.png)
 
 ### Disable arbitrary patchset
 
@@ -908,7 +908,7 @@ Support for QemuCare will be removed in ePortal 2.23 and KernelCare 3.4 (Februar
 
 Qemu patchsets are accessible from the `Patches / QEMUcare` navigation item. QEMU patchsets use the same Patch Source credentials, and you don't need to perform additional configuration.
 
-![qemu feed](/images/eportal-qemu-feed.png)
+![Patches menu open with QEMUCare selected, above the Available QEMUCare PatchSets list](/images/eportal-qemu-feed.png)
 
 ### Command to install the latest patchsets
 
@@ -957,15 +957,15 @@ This command will deploy and enable the `U20210818_01-qemu` patchset in to the `
 
 To register new servers you need to create a KernelCare key that will be used for server registration. To go to the list of keys, click the _Keys_ navigation item.
 
-![keys](/images/key-menu_zoom70.png)
+![Keys list showing key, description, server count/limit, feed and products, with edit and remove icons](/images/key-menu_zoom70.png)
 
-* To edit a key, click ![edit keys](/images/eportal_keys_edit.png). The _Edit_ tab opens.
-* To remove a key, click ![remove keys](/images/eportal_keys_remove.png). Please note, that removing the key would remove all servers under that key.
+* To edit a key, click ![Edit](/images/eportal_keys_edit.png). The _Edit_ tab opens.
+* To remove a key, click ![Remove](/images/eportal_keys_remove.png). Please note, that removing the key would remove all servers under that key.
 * Click a key to go to Servers tab with the list of [servers registered](#managing-servers) under that key. You can also remove servers on that tab.
 
 To create a new registration click _Create_ tab.
 
-![create key](/images/key-creation_zoom70.png)
+![Create key form with key, description, server limit, feed and products fields](/images/key-creation_zoom70.png)
 
 Fill in the following fields:
 
@@ -1048,7 +1048,7 @@ Set feed to key:
 
 You can see servers belonging to the key by clicking on the key itself in the [Managing Keys](#managing-keys) interface.
 
-![server list](/images/server_list_1_zoom70.png)
+![Servers list filtered by key, showing IP, hostname, tags, effective kernel, registration and check-in dates, server ID, key and patchset](/images/server_list_1_zoom70.png)
 
 The screen shows servers registered under the key, their IP, hostname, effective kernel as well as the time of registration and last check in.
 
@@ -1062,7 +1062,7 @@ To view the list of all servers IDs that are connected to the particular key, do
 To view the list of all servers, use the
 <span class="notranslate">_Servers_</span> menu on the navigation bar and select _Servers_ from the dropdown menu. The dropdown menu also provides access to _Server tags_ and _Overview_ pages.
 
-![eportal servers](/images/eportal-servers.png)
+![Servers page with total, active and silent server counts and the list of all servers](/images/eportal-servers.png)
 
 :::tip Clickable counters
 The counters displayed on the Servers page are clickable. Clicking on any counter will filter the server list to show only servers matching that criteria. For example, clicking on a counter showing "KCare active" will filter to show only servers with KernelCare actively reporting. This provides quick navigation and filtering capabilities. See also the [Overview page](#overview-page) for similar interactive features.
@@ -1103,12 +1103,12 @@ The number of servers for each key is listed on the _Keys_ page.
 
 You can use 'Server tags' page to deal with tags.
 
-![server tags view](/images/tags_view.png)
+![Server tags list with tag names and number of servers](/images/tags_view.png)
 
 Tagging is a convenient way to group servers by any criteria. For example OS, deployment environment, location, etc.
 You need to create a tag and then it can be assigned to a server from the [Managing Servers](#managing-servers) interface.
 
-![tag assignment](/images/tag_assignment.png)
+![Server Tags tab with checkboxes to assign tags and tag value fields](/images/tag_assignment.png)
 
 The tag may have an optional value. For example, this allows you to introduce a new geo location without creating a new tag for it.
 
@@ -1132,7 +1132,7 @@ This server has two tags : `env:prod` and `ubuntu`.
 
 `env:prod` is a parameter that has tag name `env` and the value `prod`.
 
-![tags](/images/addingextratagfield_zoom88.png)
+![Server details showing tags as extra fields: Tag Env set to prod and Tag Ubuntu set to True](/images/addingextratagfield_zoom88.png)
 
 To remove all tags from a particular server, run:
 
@@ -1150,11 +1150,11 @@ for preliminary testing of patchsets, for applying updates to groups of servers 
 
 To get into Feeds Management interface go to LivePatching -> Feeds:
 
-![feeds](/images/feed-button_zoom70.png)
+![LivePatching menu open with Feeds highlighted](/images/feed-button_zoom70.png)
 
 On this page a user can manage the existing feeds: create, delete, edit.
 
-![feed menu](/images/feed-menu_zoom70.png)
+![Feeds list with name, autoupdate, deploy after X hours and channel columns](/images/feed-menu_zoom70.png)
 
 Available options:
 
@@ -1181,15 +1181,15 @@ To make the feed auto-update immediately, so new patchsets are loaded to the fee
 A special case is a clean installation when ePortal is installed on a new server (there aren't any downloaded archives with patches and feeds with deployed patchsets, including default feed). In this case, if a user creates a new feed and sets Deployed after X hours option right away, then all patchsets (from the oldest to the latest available) will be deployed to the feed after the specified X hours. This is because the archives are downloaded from scratch and will be considered as "just appeared on ePortal" - that is, all patchsets will have the same appearance time on ePortal from which the option Deploy after X hours
 will repel.
 
-![feed management](/images/feedmanagement3_zoom70.png)
+![Create feed form with name, autoupdate, deploy after X hours and channel fields](/images/feedmanagement3_zoom70.png)
 
 On the main ePortal page, a user can set the corresponding key <> feed pair. This is done in the key creation interface or when editing a key.
 
-![edit key](/images/feedmanagement4_zoom70.png)
+![Keys list showing the feed bound to each key](/images/feedmanagement4_zoom70.png)
 
 By default, a new key is bound to the default feed, alternatively, a user can choose a desired feed from the drop-down menu.
 
-![feed list](/images/feedmanagement5_01_zoom70.png)
+![Create key form with the Feed drop-down menu set to main](/images/feedmanagement5_01_zoom70.png)
 
 :::tip Note
 When removing a feed all keys attached to this feed will be moved to the default feed.
@@ -1244,11 +1244,11 @@ without affecting each other, and you don't need to share your credentials.
 
 To get into API keys Management interface go to Settings -> API keys:
 
-![API keys](/images/api_key_list.png)
+![API keys list with key name, username, created date and expiration date](/images/api_key_list.png)
 
 On this page a user can manage the existing API keys: create, revoke (delete).
 
-![API key edit](/images/api_key_create.png)
+![Create API key form with key name and optional expiration date](/images/api_key_create.png)
 
 Available options:
 
@@ -1257,7 +1257,7 @@ Available options:
 
 After generating the key, you will see a bar with a token, as in the picture below.
 
-![API key generated](/images/api_key_generated.png)
+![Message asking to save the newly generated API token, which cannot be viewed again](/images/api_key_generated.png)
 
 This token is not stored on the server, so you need to keep it in a safe place.
 Use this token in an API client as described in [ePortal API documentation](/eportal-api).
@@ -1294,7 +1294,7 @@ Additional metrics:
 You can click on any segment of the donut chart to drill down and filter the server list. This allows you to explore which servers fall into each uptime category and view detailed information about them.
 :::
 
-![Uptime distribution](/images/overview_uptime_distribution.png)
+![Overview page with the uptime distribution donut chart, max, average and median uptime, and the CPU arch distribution chart](/images/overview_uptime_distribution.png)
 
 ### CPU arch distribution
 
@@ -1305,7 +1305,7 @@ If the architecture is not reported, it appears as `unknown`.
 Click on any segment of the donut chart to filter the server list and view servers with that specific architecture. See also the [Uptime distribution](#uptime-distribution) section for similar functionality.
 :::
 
-![Architecture distribution](/images/overview_arch_distribution.png)
+![CPU arch distribution donut chart with a tooltip showing the number of aarch64 servers](/images/overview_arch_distribution.png)
 
 ### OS distribution
 
@@ -1322,7 +1322,7 @@ The LibCare usage statistics show how many servers have LibCare enabled and are 
 If more than 10 OS types are detected, the rest are grouped under an **"Other"** row.
 A **Total** row summarizes all servers.
 
-![OS distribution](/images/overview_os_distribution.png)
+![OS distribution (top 10) table with KernelCare and LibCare active and silent server counts per distro and a total row](/images/overview_os_distribution.png)
 
 ### Kernel distribution
 
@@ -1335,7 +1335,7 @@ along with how many servers are running each version with KCare enabled:
 If more than 10 kernel versions are detected, the rest are grouped under an "Other" row.
 A **Total** row summarizes all servers.
 
-![Kernel distribution](/images/overview_kernel_distribution.png)
+![Kernel distribution (top 10) table with KernelCare active and silent server counts per kernel version and a total row](/images/overview_kernel_distribution.png)
 
 ### Effective kernels
 
@@ -1815,7 +1815,7 @@ in db.
 
 ### Backup and restore for ePortal docker container
 
-Volume backup process can be performed according to the instructions given [here](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes).
+Volume backup process can be performed according to [Docker's guide to backing up, restoring or migrating data volumes](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes).
 For example:
 ```text
 docker run --rm --volumes-from eportal -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /var/lib/eportal/data/
@@ -2012,7 +2012,7 @@ Restart ePortal (see the [Stopping & Starting](#stopping-starting) section, choo
 
 If all settings configured correctly the new **Sign In with SSO** button has to appear on login page `http://eportal_ip/admin/login`
 
-![sso eportal](/images/sso_eportal.png)
+![ePortal login page with Sign In and Sign In with SSO buttons](/images/sso_eportal.png)
 
 ## Custom patchsets storage
 

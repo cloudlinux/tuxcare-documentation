@@ -1,0 +1,10 @@
+extends: existence
+message: "Keep one space between sentences in '%s'."
+level: error
+nonword: true
+# Only the double-space check. The upstream "missing space after period" token
+# (`\w+[.?!][A-Z]\w+`) was dropped: on these docs it produced ~800 false-positive
+# errors, all from version strings (`5.3.9.RELEASE`, `2.1.3.Final`) and .NET
+# namespaces (`ASP.NET`, `Newtonsoft.Json`, `System.Text`) in tables.
+tokens:
+  - '\w+[.?!]\s{2,}[A-Z]\w+'

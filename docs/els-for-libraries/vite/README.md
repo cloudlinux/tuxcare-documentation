@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Vite from TuxCare provides security fixes fo
 
 ## Supported Versions
 
-* Vite 2.9.18, 3.2.11, 4.5.5, 4.5.14, 5.4.14, 5.4.21, 6.4.2
+* Vite 2.9.18, 3.2.11, 4.1.5, 4.5.0, 4.5.5, 4.5.14, 5.0.12, 5.4.10, 5.4.14, 5.4.21, 6.4.2, 6.4.3, 7.3.2, 7.3.3, 8.0.8, 8.0.9, 8.0.10, 8.0.12
 
 ## Installation
 
@@ -132,7 +132,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=vite) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Vite) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vite/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

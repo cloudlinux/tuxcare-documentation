@@ -1,0 +1,11 @@
+extends: existence
+message: "Consider removing or rewording '%s' (often over-promises or adds nothing)."
+level: suggestion
+ignorecase: true
+tokens:
+  - robust
+  - powerful
+  - feature-rich
+  - simply
+  - just
+  - easily

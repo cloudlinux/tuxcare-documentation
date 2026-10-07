@@ -1,6 +1,6 @@
 # NumPy
 
-Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for NumPy. This allows you to continue running your NumPy applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for NumPy from TuxCare provides security fixes for NumPy. This allows you to continue running your NumPy applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
@@ -92,7 +92,7 @@ If you want to keep using public PyPI and fetch only specific patched packages f
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=NumPy) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=NumPy) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/numpy/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#Python) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

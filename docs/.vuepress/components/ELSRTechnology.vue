@@ -29,7 +29,7 @@
             <sup>{{ runtime.footnoteSymbol }}</sup> {{ runtime.footnote }}
           </span>
         </span>
-        <span v-if="runtime.link" class="item-arrow">&rarr;</span>
+        <span v-if="runtime.link" class="item-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </div>
@@ -196,20 +196,24 @@ const operatingSystems = [
   cursor: pointer;
 }
 
-.runtimes-sorting-d .item.clickable:hover {
+.runtimes-sorting-d .item.clickable:hover,
+.runtimes-sorting-d .item.clickable:focus-visible {
   background-color: #FEF6F2;
   box-shadow: 0 2px 8px rgba(244, 130, 67, 0.1);
 }
 
 .runtimes-sorting-d .item.clickable:hover .item-l,
-.runtimes-sorting-d .item.clickable:hover .item-r {
-  color: #F48243;
+.runtimes-sorting-d .item.clickable:hover .item-r,
+.runtimes-sorting-d .item.clickable:focus-visible .item-l,
+.runtimes-sorting-d .item.clickable:focus-visible .item-r {
+  color: #B34F12;
 }
 
-.runtimes-sorting-d .item.clickable:hover .item-arrow {
+.runtimes-sorting-d .item.clickable:hover .item-arrow,
+.runtimes-sorting-d .item.clickable:focus-visible .item-arrow {
   opacity: 1;
   transform: translateX(0);
-  color: #F48243;
+  color: #B34F12;
 }
 
 .runtimes-sorting-d .item:last-child {
@@ -218,6 +222,8 @@ const operatingSystems = [
 
 .runtimes-sorting-d .item-l {
   flex: 0 0 40%;
+  min-width: 0;
+  overflow-wrap: anywhere;
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -226,6 +232,7 @@ const operatingSystems = [
 }
 
 .runtimes-sorting-d .item-l img {
+  flex-shrink: 0;
   height: 24px;
   width: 24px;
   margin-right: 0.75rem;
@@ -298,7 +305,8 @@ const operatingSystems = [
   transition: transform 0.2s ease;
 }
 
-.txc-logos-list .list li a:hover {
+.txc-logos-list .list li a:hover,
+.txc-logos-list .list li a:focus-visible {
   transform: translateY(-5px);
 }
 
@@ -338,6 +346,23 @@ const operatingSystems = [
   
   .heading.heading-with-sub h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .runtimes-sorting-d .item {
+    flex-wrap: wrap;
+  }
+
+  .runtimes-sorting-d .item-l {
+    flex: 1 1 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .runtimes-sorting-d .item-r {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-left: calc(24px + 0.75rem);
   }
 }
 </style>

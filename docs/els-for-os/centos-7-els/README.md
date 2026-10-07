@@ -1,5 +1,7 @@
 # CentOS 7 ELS
 
+<ELSVendorEol os="centos-7-els" />
+
 ## Installation
 
 <ELSPrerequisites>
@@ -7,9 +9,13 @@
 * A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
 * TCP port 443 open to `cln.cloudlinux.com`, `repo.tuxcare.com`, and `rollout.tuxcare.com`
-* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* Architecture: x86_64, aarch64, and i686. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 </ELSPrerequisites>
+
+:::tip
+On aarch64 and i686, ELS covers userspace packages. Kernel live patching is available for x86_64 only.
+:::
 
 <ELSSteps>
 
@@ -30,7 +36,7 @@
 3. Verify that the installation was successful by running the following command
 
    ```
-   yum info els-define
+   yum info els-os-release
    ```
 
    It should return information about the available package. If the package information is displayed, the installation was successful.
@@ -39,20 +45,19 @@
    Example:
 
    ```
-   [els@centos7 ~]# yum info els-define
+   [els@centos7 ~]# yum info els-os-release
    Loaded plugins: fastestmirror
-   Loading mirror speeds from cached hostfile
    Installed Packages
-   Name        : els-define
-   Arch        : x86_64
-   Version     : 1
-   Release     : 1.0.4.el7
-   Size        : 52
+   Name        : els-os-release
+   Arch        : noarch
+   Version     : 1.0.0
+   Release     : 2.el7
+   Size        : 8.2 k
    Repo        : installed
-   From repo   : centos7-els
-   Summary     : CentOS Server els-release file
-   License     : GPLv2
-   Description : CentOS Server els-release file
+   Summary     : TuxCare OS ELS repository configuration
+   License     : GPLv2+
+   Description : This package configures the TuxCare ELS repository for
+               : CentOS/RHEL systems.
    ```
 
 </ELSSteps>

@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for jQuery from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* jQuery 1.4.1, 1.4.2, 1.4.3, 1.8.2, 1.8.3, 1.11.3, 1.12.4, 2.1.3, 2.2.4, 3.1.1, 3.2.1, 3.3.1, 3.4.1
+* jQuery 1.3.2, 1.4.1, 1.4.2, 1.4.3, 1.8.2, 1.8.3, 1.11.3, 1.12.4, 2.1.3, 2.2.4, 3.1.1, 3.2.1, 3.3.1, 3.4.1, 3.6.0
 
 ## Installation
 
@@ -220,6 +220,19 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 
       </template>
 
+      <template #jQuery_3.6.0>
+
+      ```text
+      "dependencies": {
+        "jquery": "npm:@els-js/jquery@>=3.6.0-tuxcare.1"
+      },
+      "overrides": {
+        "jquery@3.6.0": "npm:@els-js/jquery@>=3.6.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
      </TableTabs>
 
 4. **Refresh the project dependencies**
@@ -258,7 +271,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=jQuery) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=jQuery) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

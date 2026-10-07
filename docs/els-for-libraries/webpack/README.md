@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for webpack from TuxCare provides security fixes
 
 ## Supported Versions
 
-* webpack 5.50.0, 5.55.0, 5.76.1, 5.88.2, 5.94.0
+* webpack 5.50.0, 5.55.0, 5.76.1, 5.82.1, 5.88.2, 5.94.0
 
 ## Installation
 
@@ -153,7 +153,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=webpack) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=webpack) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/webpack/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

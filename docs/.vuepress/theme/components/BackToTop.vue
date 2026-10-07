@@ -1,8 +1,14 @@
 <template>
   <div class="back-to-top">
-    <a :class="{ active: isVisible }" class="nav-arrow top back-to-top__link" @click="goToTop">
-      <span class="back-to-top__link-span">Scroll up</span>
-    </a>
+    <button
+        type="button"
+        :class="{ active: isVisible }"
+        class="nav-arrow top back-to-top__link"
+        aria-label="Scroll up to the top of the page"
+        @click="goToTop"
+    >
+      <span class="back-to-top__link-span" aria-hidden="true">Scroll up</span>
+    </button>
   </div>
 </template>
 
@@ -21,8 +27,15 @@ const handleScroll = () => {
   if(window)  isVisible.value = window.pageYOffset > props.boundary;
 }
 const goToTop = () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top: 0, behavior: reduceMotion ? 'auto' : 'smooth'});
+  // The button hides itself at the top; move focus to the main content so
+  // keyboard and screen reader users are not left on a hidden element.
+  const target = document.getElementById('main-content');
+  if (target) {
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.focus({preventScroll: true});
+  }
 }
 
 onMounted(() => {
@@ -49,6 +62,16 @@ onUnmounted(() => {
   cursor pointer
   z-index 10
   text-underline none
+  // reset native button styles; the arrow comes from .nav-arrow.top
+  border 0
+  padding 0
+  background-color transparent
+  font inherit
+  color inherit
+
+  &:focus-visible
+    outline 2px solid $accentColor
+    outline-offset 2px
 
   &-span
     position absolute
@@ -62,6 +85,10 @@ onUnmounted(() => {
   &.active
     visibility visible
     opacity 1
+
+@media (prefers-reduced-motion: reduce)
+  .back-to-top__link
+    transition none
 
 @media (max-width: $mobileBreakpoint)
   .back-to-top__link

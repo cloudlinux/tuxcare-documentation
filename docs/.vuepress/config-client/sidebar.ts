@@ -353,6 +353,11 @@ export default {
                     icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
+                    path: '/els-for-libraries/php-http-guzzle6-adapter/',
+                    title: 'PHP-HTTP Guzzle6 Adapter',
+                    icon: '/images/guzzle6-adapter.webp',
+                },
+                {
                     path: '/els-for-libraries/php-svg-lib/',
                     icon: '/images/dompdf-logo.webp',
                 },
@@ -605,6 +610,11 @@ export default {
                     path: '/securechain/javascript/',
                     icon: '/images/javascript.webp',
                 },
+                {
+                    path: '/securechain/cli/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                "/securechain/managing-securechain-repository/",
             ]
         },
     ],
@@ -650,9 +660,14 @@ export default {
                     icon: '/images/minio.webp',
                 },
                 {
-                    path: '/els-for-applications/mysql-and-percona-server/',
-                    title: 'MySQL and Percona Server',
+                    path: '/els-for-applications/mysql/',
+                    title: 'MySQL',
                     icon: '/images/mysql.webp',
+                },
+                {
+                    path: '/els-for-applications/percona-server/',
+                    title: 'Percona Server',
+                    icon: '/images/percona_server.webp',
                 },
                 {
                     path: '/els-for-applications/postgresql/',

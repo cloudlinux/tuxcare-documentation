@@ -29,7 +29,7 @@ defineEmits(['toggle']);
       @keydown.space.prevent="collapsible && $emit('toggle')"
   >
     <span v-if="collapsible" class="section-arrow" aria-hidden="true"></span>
-    <img :src="item.icon" class="language-logo" alt="language-logo" loading="lazy" />
+    <img :src="item.icon" class="language-logo" alt="" loading="lazy" />
     <span class="language-title">{{ item.title }}</span>
   </div>
 </template>

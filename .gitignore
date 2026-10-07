@@ -7,3 +7,6 @@ package-lock.json
 
 # Generated at build time by scripts/generate-llms-full.mjs
 docs/.vuepress/public/llms-full.txt
+
+# Written by scripts/a11y-check.mjs (yarn a11y)
+a11y-report.json

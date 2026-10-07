@@ -1,0 +1,6 @@
+extends: existence
+message: "'%s' may be passive voice — prefer active voice where possible."
+level: suggestion
+ignorecase: true
+raw:
+  - \b(am|are|were|being|is|been|was|be)\b\s+([\w]+ed|awoken|born|beaten|become|begun|bent|built|bought|caught|chosen|come|done|drawn|driven|eaten|fallen|felt|found|given|gone|got|grown|heard|held|kept|known|led|left|lost|made|meant|met|paid|put|read|run|said|seen|sent|set|shown|sold|spent|taken|taught|told|thought|understood|written)\b

@@ -1,5 +1,7 @@
 # CentOS 6 ELS
 
+<ELSVendorEol os="centos-6-els" />
+
 ## Installation
 
 <ELSPrerequisites>
@@ -7,7 +9,7 @@
 * A valid TuxCare Endless Lifecycle Support (ELS) license key
 * Root access to the server
 * TCP port 443 open to `cln.cloudlinux.com`, `repo.cloudlinux.com`, and `els-rollout.cloudlinux.com`
-* Architecture: x86_64. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
+* Architecture: x86_64 and i386. For other architectures, please contact our [sales@tuxcare.com](mailto:sales@tuxcare.com).
 
 </ELSPrerequisites>
 

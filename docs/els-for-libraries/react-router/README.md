@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for react-router from TuxCare provides security 
 
 ## Supported Versions
 
-* react-router 6.3.0, 6.30.6, 7.5.1
+* react-router 6.3.0, 6.30.3, 6.30.6, 7.5.1, 7.18.1
 
 ## Installation
 
@@ -70,6 +70,32 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
       },
       "overrides": {
         "react-router@6.3.0": "npm:@els-js/react-router@>=6.3.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #react_router_6.30.3>
+
+      ```text
+      "dependencies": {
+        "react-router": "npm:@els-js/react-router@>=6.30.3-tuxcare.1"
+      },
+      "overrides": {
+        "react-router@6.30.3": "npm:@els-js/react-router@>=6.30.3-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #react_router_6.30.6>
+
+      ```text
+      "dependencies": {
+        "react-router": "npm:@els-js/react-router@>=6.30.6-tuxcare.1"
+      },
+      "overrides": {
+        "react-router@6.30.6": "npm:@els-js/react-router@>=6.30.6-tuxcare.1"
       }
       ```
 
@@ -154,7 +180,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=react-router) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?q=react-router) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/react-router/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

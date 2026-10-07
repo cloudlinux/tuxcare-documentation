@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for webpack-dev-server from TuxCare provides sec
 
 ## Supported Versions
 
-* webpack-dev-server 2.7.1, 2.11.5, 3.1.14, 3.11.0, 3.11.2, 3.11.3, 4.7.3, 4.11.0, 4.11.1, 4.15.1, 4.15.2, 5.2.2
+* webpack-dev-server 2.7.1, 2.11.5, 3.1.14, 3.11.0, 3.11.2, 3.11.3, 4.7.3, 4.9.3, 4.11.0, 4.11.1, 4.15.1, 4.15.2, 5.2.2, 5.2.5
 
 ## Installation
 
@@ -166,7 +166,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=webpack-dev-server) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=webpack-dev-server) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/webpack-dev-server/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

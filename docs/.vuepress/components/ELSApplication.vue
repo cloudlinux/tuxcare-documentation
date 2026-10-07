@@ -24,7 +24,7 @@
           {{ app.name }}
         </span>
         <span class="item-r">{{ app.versions }}</span>
-        <span v-if="app.link" class="item-arrow">&rarr;</span>
+        <span v-if="app.link" class="item-arrow" aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </div>
@@ -46,7 +46,7 @@ const applications = [
   },
   {
     name: "Apache Tomcat®",
-    versions: "7.0.109 | 8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
+    versions: "7.0.70 | 7.0.109 | 8.5.100 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.18 | 10.1.42",
     link: "./apache-tomcat/",
     icon: "/images/tomcat.webp",
   },
@@ -76,7 +76,7 @@ const applications = [
   },
   {
     name: "Maven",
-    versions: "3.8.1",
+    versions: "3.0.5 | 3.2.5 | 3.8.1",
     link: "./maven/",
     icon: "/images/maven.webp",
   },
@@ -89,8 +89,14 @@ const applications = [
   {
     name: "MySQL",
     versions: "8.0",
-    link: "./mysql-and-percona-server/",
+    link: "./mysql/",
     icon: "/images/mysql.webp",
+  },
+  {
+    name: "Percona Server",
+    versions: "8.0",
+    link: "./percona-server/",
+    icon: "/images/percona_server.webp",
   },
   {
     name: "PostgreSQL",
@@ -111,6 +117,11 @@ const applications = [
 .heading.text-center {
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+.heading p a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .sp-sorting.apps-sorting {
@@ -164,20 +175,24 @@ const applications = [
   cursor: pointer;
 }
 
-.apps-sorting-d .item.clickable:hover {
+.apps-sorting-d .item.clickable:hover,
+.apps-sorting-d .item.clickable:focus-visible {
   background-color: #FEF6F2;
   box-shadow: 0 2px 8px rgba(244, 130, 67, 0.1);
 }
 
 .apps-sorting-d .item.clickable:hover .item-l,
-.apps-sorting-d .item.clickable:hover .item-r {
-  color: #F48243;
+.apps-sorting-d .item.clickable:hover .item-r,
+.apps-sorting-d .item.clickable:focus-visible .item-l,
+.apps-sorting-d .item.clickable:focus-visible .item-r {
+  color: #B34F12;
 }
 
-.apps-sorting-d .item.clickable:hover .item-arrow {
+.apps-sorting-d .item.clickable:hover .item-arrow,
+.apps-sorting-d .item.clickable:focus-visible .item-arrow {
   opacity: 1;
   transform: translateX(0);
-  color: #F48243;
+  color: #B34F12;
 }
 
 .apps-sorting-d .item:last-child {
@@ -186,6 +201,8 @@ const applications = [
 
 .apps-sorting-d .item-l {
   flex: 0 0 40%;
+  min-width: 0;
+  overflow-wrap: anywhere;
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -194,6 +211,7 @@ const applications = [
 }
 
 .apps-sorting-d .item-l img {
+  flex-shrink: 0;
   height: 24px;
   width: 24px;
   margin-right: 0.75rem;
@@ -218,5 +236,22 @@ const applications = [
   color: #5c6370;
   flex-shrink: 0;
   margin-left: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .apps-sorting-d .item {
+    flex-wrap: wrap;
+  }
+
+  .apps-sorting-d .item-l {
+    flex: 1 1 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .apps-sorting-d .item-r {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-left: calc(24px + 0.75rem);
+  }
 }
 </style>

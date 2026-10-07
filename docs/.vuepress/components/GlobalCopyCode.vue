@@ -5,14 +5,15 @@
 <script setup>
 import { nextTick, onBeforeUnmount, onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
+import { copyText, ensureLiveRegion } from "../utils/announce";
 
 const route = useRoute();
 let observer = null;
 let resizeHandler = null;
 const fadeUpdaters = [];
 
-const COPY_SVG = `<img src="/images/copy.webp" width="16" height="16" alt="Copy" />`;
-const CHECK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>`;
+const COPY_SVG = `<img src="/images/copy.webp" width="16" height="16" alt="" />`;
+const CHECK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>`;
 
 function injectCopyButtons() {
   const codeBlocks = document.querySelectorAll(
@@ -25,17 +26,21 @@ function injectCopyButtons() {
     if (wrapper.closest(".code-block-wrapper")) return;
 
     const btn = document.createElement("button");
+    btn.type = "button";
     btn.className = "global-copy-btn";
     btn.setAttribute("aria-label", "Copy code");
     btn.innerHTML = COPY_SVG;
 
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", async () => {
       const code = pre.querySelector("code");
       if (!code) return;
-      navigator.clipboard.writeText(code.innerText);
+      // Show the check (and announce) only when the copy really succeeded.
+      if (!(await copyText(code.innerText))) return;
       btn.innerHTML = CHECK_SVG;
+      btn.setAttribute("aria-label", "Copied");
       setTimeout(() => {
         btn.innerHTML = COPY_SVG;
+        btn.setAttribute("aria-label", "Copy code");
       }, 2000);
     });
 
@@ -78,6 +83,7 @@ function refreshAllFades() {
 }
 
 onMounted(async () => {
+  ensureLiveRegion();
   await nextTick();
   injectCopyButtons();
   connectObserver();

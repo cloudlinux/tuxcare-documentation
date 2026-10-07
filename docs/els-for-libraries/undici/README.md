@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for undici from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* undici 5.5.1, 5.28.5, 5.29.0, 6.11.1
+* undici 5.5.1, 5.28.5, 5.29.0, 6.11.1, 6.19.5, 6.19.7, 6.20.0, 6.28.0, 7.28.0, 7.29.0
 
 ## Installation
 
@@ -153,7 +153,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=undici) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=undici) — Patched versions and changelogs
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/undici/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

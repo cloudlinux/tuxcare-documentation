@@ -2,11 +2,13 @@
 
 Endless Lifecycle Support (ELS) for Vue from TuxCare provides security fixes for Vue versions that have reached end of life. This allows you to continue running Vue applications without vulnerability concerns, even after official support has ended.
 
-The versions **2.6.11**, **2.6.14**, and **2.7.16** are supported by TuxCare for the following Vue ecosystem packages:
+## Supported Versions
 
-* `vue`
-* `@vue/server-renderer`
-* `vue-template-compiler`
+| Package | Version |
+|---|---|
+| vue | 2.6.11, 2.6.14, 2.7.16 |
+| @vue/server-renderer | 2.2.6, 2.6.11, 2.6.14, 2.7.16 |
+| vue-template-compiler | 2.2.6, 2.6.11, 2.6.14, 2.7.16 |
 
 ## Installation
 
@@ -153,7 +155,7 @@ Follow the [SecureChain installation instructions](/securechain/javascript/#ELS)
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Vue) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Vue) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/vue/) — Vulnerability Exploitability eXchange feed
-* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (Nexus, credentials required)
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#JavaScript) — Update an installed package to a newer TuxCare release
 
 </WhatsNext>

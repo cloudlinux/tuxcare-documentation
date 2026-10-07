@@ -70,7 +70,7 @@ If you would rather pull the information than receive mail, the CVE Tracker also
 
 The ELS repository is removed by running the installation script with the `--delete` flag.
 
-<TableTabs label="Choose the application: " :labels="{ MariaDB: 'MariaDB', MySQL_and_Percona_Server: 'MySQL and Percona Server', PostgreSQL: 'PostgreSQL' }">
+<TableTabs label="Choose the application: " :labels="{ MariaDB: 'MariaDB', MySQL: 'MySQL', Percona_Server: 'Percona Server', PostgreSQL: 'PostgreSQL' }">
 
 <template #MariaDB>
 
@@ -80,10 +80,18 @@ sh install-mariadb-els-repo.sh --delete
 
 </template>
 
-<template #MySQL_and_Percona_Server>
+<template #MySQL>
 
 ```text
 sh install-mysql-els-repo.sh --delete
+```
+
+</template>
+
+<template #Percona_Server>
+
+```text
+sh install-percona-els-repo.sh --delete
 ```
 
 </template>

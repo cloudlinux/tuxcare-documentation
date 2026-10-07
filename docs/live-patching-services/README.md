@@ -270,7 +270,7 @@ To see applied patches, run:
 
 ##### kcarectl
 
-| | |
+| Option | Description |
 |-|-|
 |`-i, --info` | Display information about patches installed by KernelCare.|
 |`-u, --update` | Download latest patches, and apply them to current kernel.|
@@ -307,7 +307,7 @@ Currently available userspace patch type is `libs`. To apply patches only for sh
 
 Print certain system information. Default is `-s`
 
-| | |
+| Option | Description |
 |-|-|
 |`-a, --all` | print all information in the following order, except omit `-p` and `-i` if unknown|
 |`-s, --kernel-name` | print the kernel name|
@@ -344,7 +344,7 @@ If there was a connection problem during uploading the report, the report will b
 
 `kcarectl` behavior can be configured using `/etc/sysconfig/kcare/kcare.conf`
 
-| | |
+| Parameter | Description |
 |-|-|
 |`AUTO_UPDATE=YES\|NO` | `YES` - enable auto-update; `NO` - disable auto-update.|
 |`PATCH_METHOD=normal\|nofreeze\|smart` | `Normal` - (default) use freezer;<br>`Nofreeze` - don't use freezer to freeze processes;<br> `Smart` - smart freezer freezes only threads that need to be frozen for patching [kernelcare 2.3+].|
@@ -380,9 +380,8 @@ To disable the patch, set the corresponding kcare option to `1`
 
 Patches that can be disabled:
 
-| | |
-|-|-|
 |Patch |  _sysctl_ option|
+|-|-|
 |CVE-2015-5157 | kcare_modify_ldt|
 
 #### Extra patchset
@@ -483,7 +482,7 @@ Once you are happy with these patches, set the same Sticky Tag for Production se
 
 Let's assume that you have a kernel patch that you want to "stick" with. All you need is to find a proper label for that patch.
 
-![sticky-proper-label](/images/sticky-proper-label.png)
+![KernelCare patch page for kernel-5.4.0-1019.19 with the release date 2020-09-16 highlighted](/images/sticky-proper-label.png)
 
 As you can see, the patch was released at 2020-09-16 (16th September 2020). And if you apply a supported date format, it becomes `16092020`, that will be the sticky patch value.
 
@@ -497,11 +496,11 @@ It's rather simple. New scan results after installing a package and applying a p
 
 For example, Nessus for an old kernel shows a lot of detected CVEs before apply live patches:
 
-![before](/images/scanner-manipulation-before.png)
+![Nessus scan results before live patching, listing several high-severity CentOS 7 kernel advisories](/images/scanner-manipulation-before.png)
 
 After the live patches were applied, there are no kernel-related CVEs:
 
-![after](/images/scanner-manipulation-after.png)
+![Nessus scan results after live patching, with no kernel advisories in the list](/images/scanner-manipulation-after.png)
 
 ##### What if my scanner is producing false positives?
 
@@ -605,23 +604,23 @@ If you don't have a MOK password, `mokutil` will ask you to create one. The pass
 
    First, go down to the 'Enroll Mok':
 
-![alt text](/images/uefi-enroll-mok.png "Select Enroll MOK")
+![Perform MOK management menu with Enroll MOK selected](/images/uefi-enroll-mok.png "Select Enroll MOK")
 
 Then the firmware gives you the option of viewing the new MOK or continuing. Let's continue.
 
-![alt text](/images/uefi-continue.png "Select Continue")
+![Enroll MOK menu with Continue selected](/images/uefi-continue.png "Select Continue")
 
 It then asks you to confirm the enrollment.
 
-![alt text](/images/uefi-yes.png "Select Yes")
+![Enroll the key(s)? prompt with Yes selected](/images/uefi-yes.png "Select Yes")
 
 Then you will need to enter the password you used when running `mokutil --import`.
 
-![alt text](/images/uefi-password.png "Enter the password")
+![Enroll the key(s)? password prompt](/images/uefi-password.png "Enter the password")
 
 Finally, the firmware will ask you to reboot.
 
-![alt text](/images/uefi-ok.png  "Select OK")
+![The system must now be rebooted message with OK selected](/images/uefi-ok.png "Select OK")
 
 #### Verification
 
@@ -669,7 +668,7 @@ An additional address is used for KernelCare agent installation/update:
 repo.cloudlinux.com
 ```
 
-![through firewall](/images/patchingthroughfirewall.png)
+![Diagram: servers connect through a firewall to the KernelCare patch server](/images/patchingthroughfirewall.png)
 
 ##### Patching servers through proxy
 
@@ -704,7 +703,7 @@ If you define these settings in the config, you don't need to export them each `
 
 All `kcarectl` launches will be aware of proxy settings from the config. In this case, you need to set proxy settings only once.
 
-![through proxy](/images/patchingthroughproxy.png)
+![Diagram: servers connect through a proxy and a firewall to the KernelCare patch server](/images/patchingthroughproxy.png)
 
 #### KernelCare on AWS - Deployment User Guide
 
@@ -745,11 +744,11 @@ cln.cloudlinux.com
 patches.kernelcare.com
 ```
 
-![aws arch](/images/AWS_arch2.png)
+![Diagram: an EC2 instance with KernelCare in AWS Cloud connects over HTTPS/TLS (TCP 443) to patches.kernelcare.com for binary patch updates and to cln.cloudlinux.com for registration and statistics](/images/AWS_arch2.png)
 
 If your servers don't have direct Internet access but can gain access to the Internet using a proxy, the configuration is not that different. KernelCare can pick up standard environment variables for proxies.
 
-![aws proxy](/images/AWS_proxy_arch2.png)
+![Diagram: an EC2 instance with KernelCare in AWS Cloud connects through a proxy over HTTPS/TLS (TCP 443) to patches.kernelcare.com for binary patch updates and to cln.cloudlinux.com for registration and statistics](/images/AWS_proxy_arch2.png)
 
 Make sure you have environment settings for your proxy setup, and everything else will be the same as if the servers were directly connected to the Internet:
 
@@ -801,9 +800,9 @@ You can easily automate KernelCare deployment with Ansible, Puppet, Chef or othe
 
 ##### Health Check
 
-Systems protected by KernelCare can be monitored by means of CloudLinux Network (CLN) portal available at [https://cln.cloudlinux.com](https://cln.cloudlinux.com). Registered KernelCare installations are grouped by license keys. Kernels that are marked with the exclamation sign in <span style="color:#E76930">amber</span> do not have the latest patches installed.
+Systems protected by KernelCare can be monitored by means of CloudLinux Network (CLN) portal available at [https://cln.cloudlinux.com](https://cln.cloudlinux.com). Registered KernelCare installations are grouped by license keys. Kernels that are marked with the exclamation sign in <span style="color:#C2410C">amber</span> do not have the latest patches installed.
 
-![monit](/images/KC-Ent-monit.png)
+![CLN Activation Key Details page listing registered servers, with an amber exclamation mark next to kernels that lack the latest patches](/images/KC-Ent-monit.png)
 
 In either case, you can check whether the latest available patch has been applied by running the following command on a system protected by KernelCare:
 
@@ -858,13 +857,13 @@ The alternate feed option is enabled by setting `PREFIX` variable in `/etc/sysco
 
 The best way to handle QA and Production environments is to use Sticky tag feature of KernelCare license keys issued from CloudLinux Network (CLN) portal. To use this tag, go to CLN portal -> KernelCare tab -> click on the target key -> Edit Key Info window.
 
-![activation keys](/images/KC-Ent-list.png)
+![CLN KernelCare Activation Keys page with an arrow pointing to the key to open](/images/KC-Ent-list.png)
 
-![key details](/images/KC-Ent-edit.png)
+![CLN Activation Key Details page with an arrow pointing to Edit Key](/images/KC-Ent-edit.png)
 
 You should provide a separate key for each environment and set them to a particular sticky tag which is actually the date to which all the servers in an environment have to be patched.
 
-![edit key](/images/KC-Ent-sticky.png)
+![Edit activation key dialog with an arrow pointing to the Sticky tag date field](/images/KC-Ent-sticky.png)
 
 The date in the Sticky tag field can be any date from May 28, 2018 up to one day before today. To use the Sticky tag feature on the servers to be patched, run:
 
@@ -909,7 +908,7 @@ KernelCare is available in the English language only.
 
 #### Reseller Partner UI
 
-Once you have got the reseller partner access, in the IP Reseller Partner UI you can view and manage IP licenses, billing options and profile details. Here you can track your balance, license count and license prices as well as using an IP address search to find customers. You can find more information about KernelCare licensing [here](https://www.kernelcare.com/pricing/).
+Once you have got the reseller partner access, in the IP Reseller Partner UI you can view and manage IP licenses, billing options and profile details. Here you can track your balance, license count and license prices as well as using an IP address search to find customers. You can find more information on the [KernelCare pricing page](https://www.kernelcare.com/pricing/).
 
 ##### Server Section
 
@@ -917,7 +916,7 @@ As soon as you have added funds (See **Billing Info/Add Funds** below) to your a
 
 1. Enter IP address in the **Add IP License** field, choose a license type in the pull-down menu (KernelCare) and click **Add license**.
 
-![reseller ui](/images/reseller001.jpg)
+![IP Reseller Partner UI with license prices, balance, the Add IP License field and license type selector](/images/reseller001.jpg)
 
 2. To delete a license click **Delete** in front of the needed IP address.
 
@@ -925,7 +924,7 @@ As soon as you have added funds (See **Billing Info/Add Funds** below) to your a
 
 In the **Operations List** you are able to edit or delete the key.
 
-![reseller ops](/images/reseller007_zoom96.png)
+![KernelCare Keys tab with the Add Key form and a key list with Operations buttons](/images/reseller007_zoom96.png)
 
 ##### Billing Info/Add Funds
 
@@ -935,13 +934,13 @@ To add funds:
 
 2. Click **Add** to add credit card details, then enter funds amount and click **TopUp** or **Process to Checkout** to pay via PayPal.
 
-![reseller billing](/images/reseller002.jpg)
+![Billing page with Billing Info, Add Funds via Credit Card and Add Funds via PayPal sections](/images/reseller002.jpg)
 
 While adding credit card details, you can also choose the **Auto add funds** option - the funds amount you choose in the pull down menu will be automatically added when your balance is below $100.
 
 If you choose **Auto repay**, your card will be automatically charged when your balance becomes negative. The minimum charge is $20 (e.g. for a balance of -$15 you will be charged at $20, for a balance of -$134.2 you will be charged at $134.2).
 
-![add funds](/images/reseller003.jpg)
+![Edit Credit Card form with Auto add funds, Auto repay and Do not add funds automatically options](/images/reseller003.jpg)
 
 :::tip Note
 If your balance is shown as negative, it means that you have to deposit more funds.
@@ -951,14 +950,14 @@ If your balance is shown as negative, it means that you have to deposit more fun
 
 CloudLinux and KernelCare IP license adding and removing is compatible with different hosting and domain management and billing systems and platforms. You can find comprehensive information on all possible CloudLinux modules and plug-ins APIs in API Section.
 
-![reseller api](/images/reseller004.jpg)
+![CloudLinux partner API page with links to REST and XMLRPC API documentation and WHMCS and Blesta plugins](/images/reseller004.jpg)
 
 ##### Profile
 
 You can edit your profile information by clicking on **Profile** section. Edit the necessary info and click **Update Account**.
 
-![profile](/images/reseller5.jpg)
-![contacts](/images/reseller006.jpg)
+![Edit your CloudLinux profile form with login, billing contact and company information](/images/reseller5.jpg)
+![Contact information form with the Update Account button](/images/reseller006.jpg)
 
 #### How To
 
@@ -990,7 +989,9 @@ Kernel is safe
 
 As soon as you have these files in place, it is possible to proceed with disabling SMT.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RUGCvEO1hAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px"><iframe style="width:100%;height:auto;aspect-ratio:16/9;vertical-align:top" width="560" height="315" title="Video: How to disable the CPU simultaneous multithreading (SMT) without reboot" src="https://www.youtube.com/embed/RUGCvEO1hAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+Watch on YouTube: [How to disable the CPU simultaneous multithreading (SMT) without reboot](https://www.youtube.com/watch?v=RUGCvEO1hAE)
 
 ##### SMT Control
 
@@ -1317,7 +1318,9 @@ microcode       : 17
 microcode       : 17
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EydWy-b9uns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px"><iframe style="width:100%;height:auto;aspect-ratio:16/9;vertical-align:top" width="560" height="315" title="Video: How to update microcode without reboot with vendor-provided package" src="https://www.youtube.com/embed/EydWy-b9uns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+Watch on YouTube: [How to update microcode without reboot with vendor-provided package](https://www.youtube.com/watch?v=EydWy-b9uns)
 
 #### Plesk related
 
@@ -1331,9 +1334,9 @@ To get the KernelCare activation key from the extended Plesk license key, you wi
 
 1. Navigate to *Tools & Settings -> Plesk -> License Management -> Additional License Keys*
 
-  ![plesk keys](/images/LicenseManagement.png)
+  ![Plesk Tools & Settings page with License Management highlighted under Plesk](/images/LicenseManagement.png)
 
-  ![more keys](/images/AdditionalLicenseKeys.png)
+  ![Plesk License Management page with the Additional License Keys tab highlighted](/images/AdditionalLicenseKeys.png)
 
 2. Click *Download key* next to the KernelCare license listed on the page and open the file downloaded in some text editor
 
@@ -1475,7 +1478,7 @@ The UChecker (originated from "userspace checker") works with all modern Linux D
 
 This activity diagram shows how UChecker works:
 
-![uchecker](/images/uchecker.jpg)
+![UChecker activity diagram: get the latest BuildIDs from KernelCare, then for each running process and each linked shared library, parse the ELF (from disk, or from mapped memory if the library was replaced or deleted), read its BuildID and report whether the library is up to date](/images/uchecker.jpg)
 
 ##### UChecker Usage
 
