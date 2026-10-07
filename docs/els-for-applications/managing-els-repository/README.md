@@ -26,9 +26,9 @@ This page provides instructions for upgrading to newer TuxCare-patched applicati
 
 If you encounter any issues, please contact [TuxCare support](https://tuxcare.com/support-portal/).
 
-## Staying informed about updates
+## Subscribing to updates
 
-TuxCare publishes vulnerability and fix information in the CVE Tracker. You can be notified by email, or poll an RSS feed from a reader or a script.
+TuxCare publishes vulnerability and fix information in the CVE Tracker. You can get notified by email, or follow an RSS feed in a feed reader or a script.
 
 ### Email subscription
 
