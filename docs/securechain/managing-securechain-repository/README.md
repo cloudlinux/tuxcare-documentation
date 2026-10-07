@@ -12,7 +12,7 @@ TuxCare keeps releasing patched builds for the package versions you already use 
 
 ### Option 1: SecureChain CLI (recommended)
 
-The CLI compares the installed tree with the TuxCare catalogue, so you do not need to look versions up yourself. Run the commands in the root directory of a project that is already connected to SecureChain (see [Connecting a Project](/securechain/cli/#connecting-a-project)).
+The CLI compares the installed tree with the TuxCare catalogue, so you do not need to look versions up yourself. Run the commands in the root directory of a project that is already connected to SecureChain (see [Developer start](https://sc.tuxcare.cloud/guide/developer) in the SecureChain user guide).
 
 <ELSSteps>
 

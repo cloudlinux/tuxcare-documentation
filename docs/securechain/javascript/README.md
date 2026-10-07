@@ -23,7 +23,7 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
   curl -fsSL https://securechain.tuxcare.com/get/securechain | sh
   ```
 
-  Docker, npm, pip, apt, dnf and the other methods are on the [SecureChain CLI](/securechain/cli/#installation) page.
+  Docker, npm, pip, apt, dnf and the other methods are in the [SecureChain user guide](https://sc.tuxcare.cloud/guide/cli#install).
 
 </ELSPrerequisites>
 
@@ -67,7 +67,7 @@ There are two ways to connect a project to SecureChain. Both lead to the same re
 
 </ELSSteps>
 
-Every command, the options, CI usage and air-gapped machines are described on the [SecureChain CLI](/securechain/cli/) page.
+Every command, the options, CI usage and air-gapped machines are described in the [SecureChain user guide](https://sc.tuxcare.cloud/guide/cli); the [SecureChain CLI](/securechain/cli/) page is the overview.
 
 ### Option 2: Manual Setup
 
@@ -1312,7 +1312,7 @@ pnpm, Bun and Yarn 1 (Classic) read the same `.npmrc`, so every check below appl
 
 <WhatsNext hide-title>
 
-* ![](/images/bolt.webp) [SecureChain CLI](/securechain/cli/) — Every command, the options, CI usage and air-gapped machines
+* ![](/images/bolt.webp) [SecureChain CLI](/securechain/cli/) — What the CLI does, and where its full documentation lives
 * ![](/images/wrench.webp) [Managing the SecureChain repository](/securechain/managing-securechain-repository/) — Upgrade to a newer version
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/) — Vulnerability Exploitability eXchange feed
