@@ -17,7 +17,6 @@ import CodeTabs from "./components/CodeTabs.vue";
 import TableTabs from "./components/TableTabs.vue";
 import ELSTechnology from "./components/ELSTechnology.vue";
 import ELSRTechnology from "./components/ELSRTechnology.vue";
-import SecureChainEcosystemSelector from "./components/SecureChainEcosystemSelector.vue";
 import ELSOSSelector from "./components/ELSOSSelector.vue";
 import ELSVendorEol from "./components/ELSVendorEol.vue";
 import ELSPrerequisites from "./components/ELSPrerequisites.vue";
@@ -118,7 +117,6 @@ export default defineClientConfig({
         app.component("TableTabs", TableTabs);
         app.component("ELSTechnology", ELSTechnology);
         app.component("ELSRTechnology", ELSRTechnology);
-        app.component("SecureChainEcosystemSelector", SecureChainEcosystemSelector);
         app.component("ELSOSSelector", ELSOSSelector);
         app.component("ELSVendorEol", ELSVendorEol);
         app.component("ELSPrerequisites", ELSPrerequisites);

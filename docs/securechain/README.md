@@ -2,8 +2,6 @@
 
 # SecureChain for Open Source Software
 
-<SecureChainEcosystemSelector />
-
 ## What SecureChain Covers
 
 * Verified, signed builds from trusted sources
