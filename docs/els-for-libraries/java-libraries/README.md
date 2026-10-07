@@ -6,7 +6,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 
 * **Aircompressor** 0.8, 0.10, 0.20, 0.21, 0.27
 * **Apache ActiveMQ Artemis** 2.26.0, 2.33.0, 2.37.0, 2.40.0
-* **Apache ActiveMQ Classic** 6.1.8
+* **Apache ActiveMQ Classic** 6.1.6, 6.1.8
 * **Apache Ant** 1.9.4
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
@@ -35,11 +35,12 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apache XML Graphics Batik** 1.7, 1.8
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.3.0, 2.6.0, 5.1.1
+* **Apache ZooKeeper** 3.9.1
 * **AssertJ** 2.9.0, 3.11.1, 3.18.1, 3.19.0, 3.23.1, 3.24.2, 3.25.3
 * **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.77, 1.78.1
-* **c3p0** 0.9.5.4, 0.9.5.5
-* **Cassandra Java Driver** 4.18.1
+* **c3p0** 0.9.2.1, 0.9.5.2, 0.9.5.3, 0.9.5.4, 0.9.5.5
+* **Cassandra Java Driver** 4.17.0, 4.18.1
 * **Couchbase Java Client** 3.6.3
 * **Couchbase JVM Core IO** 2.6.3
 * **Couchbase JVM Core IO Deps** 1.6.3
@@ -67,7 +68,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **HornetQ** 2.4.9.Final
 * **HPPC** 0.8.1
 * **HtmlUnit** 2.70.0
-* **iText** 2.1.7
+* **iText** 2.0.8, 2.1.7
 * **iTextPDF** 5.0.6
 * **JasperReports** 3.7.4, 6.2.2, 6.21.5
 * **JBoss XNIO** 3.8.0, 3.8.8
@@ -103,20 +104,20 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Plexus Utils** 1.2, 1.4.5, 1.5.6, 1.5.8, 1.5.15, 2.0.4, 2.0.5, 2.0.6, 2.1, 3.0.1, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.24, 3.1.0, 3.2.0, 3.2.1, 3.3.1, 3.4.1, 3.4.2, 3.5.1, 3.6.0, 4.0.0, 4.0.1, 4.0.2
 * **Quartz Scheduler** 1.8.5
 * **Querydsl** 5.1.0
-* **RabbitMQ Java Client** 5.19.0
+* **RabbitMQ Java Client** 5.19.0, 5.21.0, 5.30.0
 * **Reactive Pulsar Client** 0.5.9, 0.5.10
-* **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2020.0.47, 2022.0.13, 2022.0.15, 2023.0.19
+* **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2020.0.47, 2022.0.13, 2022.0.15, 2023.0.19, 2024.0.13, 2024.0.18
 * **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31, 1.2.13, 1.2.18
 * **Retrofit** 2.9.0
 * **RSocket** 1.1.3, 1.1.5
 * **SLF4J** 1.6.1, 1.7.21
-* **SnakeYAML** 1.23, 1.26, 1.27, 1.28, 1.29, 1.30, 1.33
+* **SnakeYAML** 1.7, 1.23, 1.26, 1.27, 1.28, 1.29, 1.30, 1.33
 * **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
 * **Sonatype Sisu** 2.3.0
 * **Testcontainers** 1.18.3, 1.19.8, 1.21.4
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
-* **Undertow** 2.2.24.Final, 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final
+* **Undertow** 1.4.27.Final, 2.0.26.Final, 2.2.24.Final, 2.2.28.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final, 2.3.24.Final
 * **Woodstox** 5.0.3, 5.3.0
 * **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.9.1, 2.9.0

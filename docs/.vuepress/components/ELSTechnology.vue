@@ -124,7 +124,7 @@ const techData = [
       },
       {
         name: "Apache ActiveMQ Classic",
-        versions: "6.1.8",
+        versions: "6.1.6 | 6.1.8",
         link: "./java-libraries/",
       },
       {
@@ -329,6 +329,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache ZooKeeper",
+        versions: "3.9.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "AssertJ",
         versions: "2.9.0 | 3.11.1 | 3.18.1 | 3.19.0 | 3.23.1 | 3.24.2 | 3.25.3",
         link: "./java-libraries/",
@@ -345,12 +350,12 @@ const techData = [
       },
       {
         name: "c3p0",
-        versions: "0.9.5.4 | 0.9.5.5",
+        versions: "0.9.2.1 | 0.9.5.2 | 0.9.5.3 | 0.9.5.4 | 0.9.5.5",
         link: "./java-libraries/",
       },
       {
         name: "Cassandra Java Driver",
-        versions: "4.18.1",
+        versions: "4.17.0 | 4.18.1",
         link: "./java-libraries/",
       },
       {
@@ -510,7 +515,7 @@ const techData = [
       },
       {
         name: "iText",
-        versions: "2.1.7",
+        versions: "2.0.8 | 2.1.7",
         link: "./java-libraries/",
       },
       {
@@ -700,7 +705,7 @@ const techData = [
       },
       {
         name: "RabbitMQ Java Client",
-        versions: "5.19.0",
+        versions: "5.19.0 | 5.21.0 | 5.30.0",
         link: "./java-libraries/",
       },
       {
@@ -710,7 +715,7 @@ const techData = [
       },
       {
         name: "Reactor BOM",
-        versions: "2020.0.0 | 2020.0.7 | 2020.0.23 | 2020.0.32 | 2020.0.38 | 2020.0.47 | 2022.0.13 | 2022.0.15 | 2023.0.19",
+        versions: "2020.0.0 | 2020.0.7 | 2020.0.23 | 2020.0.32 | 2020.0.38 | 2020.0.47 | 2022.0.13 | 2022.0.15 | 2023.0.19 | 2024.0.13 | 2024.0.18",
         link: "./java-libraries/",
       },
       {
@@ -735,7 +740,7 @@ const techData = [
       },
       {
         name: "SnakeYAML",
-        versions: "1.23 | 1.26 | 1.27 | 1.28 | 1.29 | 1.30 | 1.33",
+        versions: "1.7 | 1.23 | 1.26 | 1.27 | 1.28 | 1.29 | 1.30 | 1.33",
         link: "./java-libraries/",
       },
       {
@@ -838,7 +843,7 @@ const techData = [
       },
       {
         name: "Spring® Retry",
-        versions: "1.3.4",
+        versions: "1.3.4 | 2.0.11 | 2.0.12",
         link: "./spring/",
         detailsHash: "Retry",
       },
@@ -873,7 +878,7 @@ const techData = [
       },
       {
         name: "Undertow",
-        versions: "2.2.24.Final | 2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final",
+        versions: "1.4.27.Final | 2.0.26.Final | 2.2.24.Final | 2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final | 2.3.24.Final",
         link: "./java-libraries/",
       },
       {
@@ -1004,7 +1009,7 @@ const techData = [
       },
       {
         name: "babel-helpers",
-        versions: "7.11.5 | 7.12.13 | 7.14.8 | 7.15.4 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.5 | 7.25.6 | 7.25.7 | 7.26.0 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.14.8 | 7.15.4 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.2 | 7.23.9 | 7.24.0 | 7.24.1 | 7.24.5 | 7.25.6 | 7.25.7 | 7.26.0 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1024,17 +1029,17 @@ const techData = [
       },
       {
         name: "babel-runtime-corejs2",
-        versions: "7.11.5 | 7.12.13 | 7.14.8 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.14.8 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.2 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-runtime-corejs3",
-        versions: "7.11.5 | 7.12.13 | 7.14.8 | 7.15.3 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.29.0",
+        versions: "7.11.5 | 7.12.13 | 7.14.8 | 7.15.3 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.2 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.29.0",
         link: "./javascript-libraries/",
       },
       {
         name: "babel-traverse",
-        versions: "6.26.0 | 7.14.8 | 7.15.4 | 7.22.15 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7",
+        versions: "6.26.0 | 7.14.8 | 7.15.4 | 7.22.15 | 7.23.2 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7",
         link: "./javascript-libraries/",
       },
       {
@@ -1054,7 +1059,7 @@ const techData = [
       },
       {
         name: "baseline-browser-mapping",
-        versions: "2.10.0",
+        versions: "2.10.0 | 2.10.38",
         link: "./javascript-libraries/",
       },
       {
@@ -1064,7 +1069,7 @@ const techData = [
       },
       {
         name: "bn.js",
-        versions: "4.11.8 | 4.11.9 | 4.12.0 | 4.12.2 | 5.2.2",
+        versions: "4.11.8 | 4.11.9 | 4.12.0 | 4.12.2 | 5.2.1 | 5.2.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1145,6 +1150,11 @@ const techData = [
       {
         name: "cipher-base",
         versions: "1.0.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "compression",
+        versions: "1.5.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1349,7 +1359,7 @@ const techData = [
       },
       {
         name: "flatted",
-        versions: "2.0.2 | 3.2.9 | 3.3.1 | 3.3.2 | 3.3.3",
+        versions: "2.0.0 | 2.0.2 | 3.2.9 | 3.3.1 | 3.3.2 | 3.3.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1398,6 +1408,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "graphql-tools-utils",
+        versions: "11.2.2",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "growl",
         versions: "1.7.0",
         link: "./javascript-libraries/",
@@ -1420,6 +1435,11 @@ const techData = [
       {
         name: "hapi-hoek",
         versions: "6.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "hapi-joi",
+        versions: "16.1.8",
         link: "./javascript-libraries/",
       },
       {
@@ -1559,7 +1579,7 @@ const techData = [
       },
       {
         name: "JSONPath Plus",
-        versions: "5.1.0 | 6.0.1 | 7.2.0",
+        versions: "4.0.0 | 5.1.0 | 6.0.1 | 7.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1580,6 +1600,11 @@ const techData = [
       {
         name: "jwt-simple",
         versions: "0.3.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "katex",
+        versions: "0.12.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1614,7 +1639,7 @@ const techData = [
       },
       {
         name: "Lodash",
-        versions: "1.3.1 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.4 | 4.17.5 | 4.17.11 | 4.17.15 | 4.17.19 | 4.17.21 | 4.18.1 | 4.5.0",
+        versions: "1.3.1 | 2.3.0 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.4 | 4.17.5 | 4.17.11 | 4.17.15 | 4.17.19 | 4.17.21 | 4.17.23 | 4.18.1 | 4.5.0",
         link: "./lodash/",
       },
       {
@@ -1908,6 +1933,11 @@ const techData = [
         link: "./postcss/",
       },
       {
+        name: "postcss-selector-parser",
+        versions: "3.1.2",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "prismjs",
         versions: "1.27.0 | 1.29.0",
         link: "./javascript-libraries/",
@@ -1919,7 +1949,7 @@ const techData = [
       },
       {
         name: "protobufjs",
-        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.3 | 6.11.6 | 7.4.0",
+        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.3 | 6.11.6 | 7.4.0 | 8.0.0 | 8.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -2033,6 +2063,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "seroval",
+        versions: "1.5.6",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "serve-static",
         versions: "1.10.3",
         link: "./javascript-libraries/",
@@ -2044,12 +2079,22 @@ const techData = [
       },
       {
         name: "shell-quote",
-        versions: "1.4.3 | 1.6.1 | 1.7.2 | 1.7.3 | 1.8.1 | 1.10.0",
+        versions: "1.4.3 | 1.6.1 | 1.7.2 | 1.7.3 | 1.8.1 | 1.8.3 | 1.10.0",
         link: "./javascript-libraries/",
       },
       {
         name: "shelljs",
         versions: "0.1.4 | 0.3.0 | 0.8.2 | 0.8.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "simple-git",
+        versions: "3.36.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "smol-toml",
+        versions: "1.5.2",
         link: "./javascript-libraries/",
       },
       {
@@ -2235,6 +2280,11 @@ const techData = [
       {
         name: "vitest",
         versions: "3.2.4 | 3.2.7 | 4.0.18",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "vm2",
+        versions: "3.10.0 | 3.11.5 | 3.11.7",
         link: "./javascript-libraries/",
       },
       {
