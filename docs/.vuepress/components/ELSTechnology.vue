@@ -434,11 +434,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "GlassFish",
-        versions: "3.0.0",
-        link: "./java-libraries/",
-      },
-      {
         name: "Google Gson",
         versions: "2.2.4 | 2.4 | 2.8.5 | 2.8.9 | 2.9.1 | 2.10.1 | 2.11.0",
         link: "./java-libraries/",
@@ -544,7 +539,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Joda-Time",
+        name: "joda-time-hibernate",
         versions: "1.3",
         link: "./java-libraries/",
       },
