@@ -60,7 +60,7 @@ const CURATED_PAGES = [
   "/els-for-libraries/",                 // ELSTechnology (DataTables)
   "/els-for-runtimes/",                  // ELSRTechnology
   "/els-for-applications/",              // ELSApplication
-  "/securechain/",
+  "/securechain/",                       // SecureChainEcosystemSelector
   "/tuxcare-cln/",
   "/service-descriptions/",
   // Component pages
