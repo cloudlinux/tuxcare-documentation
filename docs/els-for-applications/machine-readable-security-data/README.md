@@ -23,6 +23,7 @@ Security advisories and patch definitions are published for the database applica
 | Percona Server | EL 7 | [errata](https://security.tuxcare.com/errata/els_percona/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_percona/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_percona/el7/) |
 | PostgreSQL | EL 7 | [errata](https://security.tuxcare.com/errata/els_postgresql/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_postgresql/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_postgresql/el7/) |
 | PostgreSQL | EL 9 | [errata](https://security.tuxcare.com/errata/els_postgresql/el9/) | [oval.xml](https://security.tuxcare.com/oval/els_postgresql/el9/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_postgresql/el9/) |
+| PostgreSQL | Ubuntu 22.04 | [errata](https://security.tuxcare.com/errata/els_postgresql/ubuntu22.04/) | [oval.xml](https://security.tuxcare.com/oval/els_postgresql/ubuntu22.04/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_postgresql/ubuntu22.04/) |
 
 ## Software Bill of Materials (SBOM)
 
