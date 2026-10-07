@@ -60,13 +60,13 @@ const CURATED_PAGES = [
   "/els-for-libraries/",                 // ELSTechnology (DataTables)
   "/els-for-runtimes/",                  // ELSRTechnology
   "/els-for-applications/",              // ELSApplication
-  "/securechain/",                       // SecureChainEcosystemSelector
+  "/securechain/",
   "/tuxcare-cln/",
   "/service-descriptions/",
   // Component pages
   "/els-for-runtimes/python/",           // CodeTabs, ContactSales, ELSPrerequisites, ELSSteps, WhatsNext
   "/els-for-runtimes/openjdk/",          // ELSBadge
-  "/securechain/javascript/",            // TableTabs
+  "/els-for-applications/grafana/",     // TableTabs
   "/els-for-os/centos-8-els/",           // ELSVendorEol
   "/endless-lifecycle-support/",         // page outside the sidebar/product menu
 ];
