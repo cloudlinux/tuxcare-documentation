@@ -12,7 +12,7 @@ Have a subscription for an individual library or framework? Use the installation
 
 An ELS for Language Ecosystems subscription covers an entire language ecosystem rather than an individual library: TuxCare-patched versions of all supported packages for that language are delivered through the TuxCare-managed registry.
 
-* **JavaScript** — covers TuxCare-patched versions of supported npm packages, delivered through the TuxCare npm registry as drop-in replacements for their end-of-life upstream releases. Follow the canonical installation instructions on the [SecureChain + ELS JavaScript page](/securechain/javascript/#ELS).
+* **JavaScript** — covers TuxCare-patched versions of supported npm packages, delivered through the TuxCare npm registry as drop-in replacements for their end-of-life upstream releases. Follow the installation instructions in the [SecureChain user guide](https://sc.tuxcare.cloud/guide/developer).
 
 * **Java** — covers TuxCare-patched versions of supported Java libraries, delivered through a TuxCare-managed Maven repository as drop-in replacements for their end-of-life upstream releases. Installation instructions are provided during onboarding; if you need them again, contact the team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 

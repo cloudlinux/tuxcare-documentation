@@ -307,7 +307,7 @@ Other libraries upon request.
 <ELSBadge heading>Docker compatible</ELSBadge>
 
 :::tip Have a SecureChain token?
-Follow the [SecureChain installation instructions](/securechain/javascript/#ELS) instead — the steps below are for username & password access.
+Follow the [SecureChain installation instructions](https://sc.tuxcare.cloud/guide/developer) instead — the steps below are for username & password access.
 :::
 
 <ELSPrerequisites>
