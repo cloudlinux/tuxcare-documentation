@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress {{ version }}">
+    <!--
+      Cookiebot and Google Tag Manager live in this template, not in the `head`
+      config: VuePress re-creates every `head` config tag on hydration and on each
+      page change, which ran both scripts again ("Cookiebot script is included
+      twice", and a new gtm.js start on every navigation).
+
+      Cookiebot MUST stay the first script in <head> so its auto-blocking mode can
+      gate cookie-setting scripts (GA4/GTM) until the user opts in (GDPR/CCPA).
+      SRI is intentionally not applied: consent.cookiebot.com is a versionless
+      vendor loader, so a pinned hash would break the banner on every update.
+      GitHub Pages cannot send a CSP header, so this is an accepted supply-chain
+      risk, taken for a legal consent requirement.
+    -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="683e5da5-be31-4695-80e1-2c71cc909411" data-blockingmode="auto" type="text/javascript"></script>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5BSW555');
+    </script>
+    <!--vuepress-ssr-head-->
+    <!--vuepress-ssr-styles-->
+    <!--vuepress-ssr-resources-->
+  </head>
+  <body>
+    <div id="app"><!--vuepress-ssr-app--></div>
+    <!--vuepress-ssr-scripts-->
+  </body>
+</html>

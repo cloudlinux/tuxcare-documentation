@@ -1,9 +1,12 @@
 import { defineUserConfig, viteBundler } from "vuepress";
+import { getDirname, path } from "@vuepress/utils";
 import theme from "./theme";
 import plugins from "./config-user/plugins";
 import headFunctions from "./headFunctions";
 import { slugify } from "./utils/slugify";
 import documents from "./config-client/documents";
+
+const __dirname = getDirname(import.meta.url);
 
 // Site name appended to every page title: "<page title> | TuxCare Docs".
 const SITE_TITLE = "TuxCare Docs";
@@ -70,6 +73,8 @@ export default defineUserConfig({
     },
   }),
   head: headFunctions,
+  // Static <head> scripts (Cookiebot, GTM) that must run exactly once per page load.
+  templateBuild: path.resolve(__dirname, "templates/build.html"),
   extendsPage: (page) => {
     // The generated 404 page has no title of its own.
     if (page.path === "/404.html" && !page.title) {
