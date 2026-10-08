@@ -22,6 +22,10 @@ alt-python provides a more flexible and convenient environment for working with 
 
 ## Supported OS and Python versions
 
+<TableTabs>
+
+  <template #Active_Support>
+
 | Operating Systems                                                       | Package Type | OS Version          | Python versions                                       |
 | :---------------------------------------------------------------------: | :----------: | :-----------------: | :---------------------------------------------------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x                 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
@@ -43,6 +47,32 @@ Every `alt-python` package ships its own bundled `pip`, `setuptools` and `wheel`
 * aarch64/arm64 — Debian 12 and 13, Ubuntu 16.04, 18.04, 20.04, 22.04 and 24.04, Alpine Linux 3.23 and later
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
+
+  </template>
+
+  <template #End_Of_Life>
+
+TuxCare provides additional security support for Python versions after the end of support from the vendor.
+
+*EOL — end of life, SST — security support time*
+
+| Version |  Released  | EOL by vendor | SST by vendor (years) | EOL by TuxCare | SST by TuxCare after vendor's EOL (years) |
+|:-------:|:----------:|:-------------:|:---------------------:|:--------------:|:----------------------------------------:|
+|   2.7   | 29.09.2012 |  29.09.2017   |          5.0          |                |                                          |
+|   3.3   | 29.09.2012 |  29.09.2017   |          5.0          |                |                                          |
+|   3.4   | 15.03.2014 |  18.03.2019   |          5.0          |                |                                          |
+|   3.5   | 12.09.2015 |  13.09.2020   |          5.0          |                |                                          |
+|   3.6   | 22.12.2016 |  23.12.2021   |          5.0          |                |                                          |
+|   3.7   | 26.06.2018 |  27.06.2023   |          5.0          |                |                                          |
+|   3.8   | 14.10.2019 |  14.10.2024   |          5.0          |                |                                          |
+|   3.9   | 05.10.2020 |  05.10.2025   |          5.0          |                |                                          |
+|  3.10   | 05.04.2021 |  04.10.2026   |          5.4          |                |                                          |
+|  3.11   | 24.10.2022 |  24.10.2027   |          5.0          |                |                                          |
+|  3.12   | 02.10.2023 |  02.10.2028   |          5.0          |                |                                          |
+
+  </template>
+
+</TableTabs>
 
 ## Installation
 
