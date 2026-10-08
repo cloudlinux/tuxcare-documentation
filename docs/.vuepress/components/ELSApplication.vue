@@ -58,13 +58,13 @@ const applications = [
   },
   {
     name: "Grafana",
-    versions: "10.4.1 | 11.2.0 | 11.3.0 | 11.4.0 | 11.5.0",
+    versions: "8.0.0 | 10.4.1 | 11.2.0 | 11.3.0 | 11.4.0 | 11.5.0",
     link: "./grafana/",
     icon: "/images/grafana_logo.webp",
   },
   {
     name: "Loki",
-    versions: "3.1.0 | 3.2.0 | 3.3.0",
+    versions: "2.6.0 | 2.8.3 | 2.9.0 | 3.1.0 | 3.2.0 | 3.3.0 | 3.4.0",
     link: "./loki/",
     icon: "/images/loki.webp",
   },
@@ -76,7 +76,7 @@ const applications = [
   },
   {
     name: "Maven",
-    versions: "3.0.5 | 3.2.5 | 3.8.1",
+    versions: "3.0.5 | 3.2.5 | 3.5.4 | 3.8.1 | 3.9.9",
     link: "./maven/",
     icon: "/images/maven.webp",
   },

@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for react-router from TuxCare provides security 
 
 ## Supported Versions
 
-* react-router 6.3.0, 6.30.3, 6.30.6, 7.5.1, 7.18.1
+* react-router 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.5.1, 7.15.0, 7.15.1, 7.18.1
 
 ## Installation
 

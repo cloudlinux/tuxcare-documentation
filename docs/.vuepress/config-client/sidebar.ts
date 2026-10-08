@@ -443,6 +443,10 @@ export default {
                     icon: '/images/astro-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/babel/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-libraries/bootstrap/',
                     icon: '/images/bootstrap-logo.webp',
                 },

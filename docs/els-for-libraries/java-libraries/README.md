@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 ## Supported Java Libraries
 
 * **Aircompressor** 0.8, 0.10, 0.20, 0.21, 0.27
+* **Angus Mail** 2.0.3
 * **Apache ActiveMQ Artemis** 2.26.0, 2.33.0, 2.37.0, 2.40.0
 * **Apache ActiveMQ Classic** 6.1.6, 6.1.8
 * **Apache Ant** 1.9.4
@@ -35,7 +36,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apache XML Graphics Batik** 1.7, 1.8
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.3.0, 2.6.0, 5.1.1
-* **Apache ZooKeeper** 3.9.1
+* **Apache ZooKeeper** 3.8.3, 3.9.1
 * **AssertJ** 2.9.0, 3.11.1, 3.18.1, 3.19.0, 3.23.1, 3.24.2, 3.25.3
 * **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.77, 1.78.1
@@ -82,7 +83,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **JsonPath** 2.2.0, 2.4.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
 * **jsoup** 1.7.2, 1.7.3, 1.17.2
 * **JUnit** 4.13
-* **Lettuce** 6.1.10.RELEASE, 6.3.2.RELEASE
+* **Lettuce** 6.1.10.RELEASE, 6.3.2.RELEASE, 6.4.2.RELEASE
 * **Logback** 1.1.7, 1.2.3, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18
 * **LZ4** 1.8.0, 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
@@ -106,6 +107,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **RabbitMQ Java Client** 5.19.0, 5.21.0, 5.30.0
 * **Reactive Pulsar Client** 0.5.9, 0.5.10
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2020.0.47, 2022.0.13, 2022.0.15, 2023.0.19, 2024.0.13, 2024.0.18
+* **Reactor Core** 3.6.18
 * **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31, 1.2.13, 1.2.18
 * **Retrofit** 2.9.0
 * **RSocket** 1.1.3, 1.1.5

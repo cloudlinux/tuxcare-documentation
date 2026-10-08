@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Starlette from TuxCare provides security fix
 
 ## Supported Versions
 
-* **Starlette** 0.13.6, 0.27.0
+* **Starlette** 0.13.6, 0.25.0, 0.27.0
 
 Other versions upon request.
 
