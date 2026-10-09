@@ -444,7 +444,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/babel/',
-                    icon: '/images/TuxCare_color_icon.webp',
+                    icon: '/images/babel.webp',
                 },
                 {
                     path: '/els-for-libraries/bootstrap/',
