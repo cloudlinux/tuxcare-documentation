@@ -22,6 +22,10 @@ alt-ruby provides a more flexible and convenient environment for working with di
 
 ## Supported OS and Ruby versions
 
+<TableTabs>
+
+  <template #Active_Support>
+
 | Operating Systems                                                       | Package Type | OS Version          | Ruby versions                               |
 | :---------------------------------------------------------------------: | :----------: | :-----------------: | :-----------------------------------------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x                 | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0 |
@@ -41,6 +45,26 @@ alt-ruby provides a more flexible and convenient environment for working with di
 * aarch64/arm64 — Debian 12 and 13, Alpine Linux 3.23 and later
 
 <ContactSales text="Other distros and architectures available upon request. Contact sales@tuxcare.com for more information." />
+
+  </template>
+
+  <template #End_Of_Life>
+
+TuxCare provides additional security support for Ruby versions after the end of support from the vendor.
+
+*EOL — end of life, SST — security support time*
+
+| Version |  Released  | EOL by vendor | SST by vendor (years) | EOL by TuxCare | SST by TuxCare after vendor's EOL (years) |
+|:-------:|:----------:|:-------------:|:---------------------:|:--------------:|:----------------------------------------:|
+|   2.6   | 25.12.2018 |  31.03.2022   |          3.3          |                |                                          |
+|   2.7   | 25.12.2019 |  31.03.2023   |          3.3          |                |                                          |
+|   3.0   | 25.12.2020 |  31.03.2024   |          3.3          |                |                                          |
+|   3.1   | 25.12.2021 |  31.03.2025   |          3.3          |                |                                          |
+|   3.2   | 25.12.2022 |  31.03.2026   |          3.3          |                |                                          |
+
+  </template>
+
+</TableTabs>
 
 ## Installation
 
