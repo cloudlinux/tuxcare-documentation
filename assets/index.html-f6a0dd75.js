@@ -1,0 +1,1 @@
+const o=JSON.parse('{"key":"v-d3307862","path":"/local-mirror-for-els-php/","title":"Installation instructions of a local mirror for ELS PHP","lang":"en-US","frontmatter":{"head":[["meta",{"name":"robots","content":"noindex, nofollow"}]]},"headers":[]}');export{o as data};

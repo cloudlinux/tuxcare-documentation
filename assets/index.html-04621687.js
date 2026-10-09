@@ -1,0 +1,1 @@
+const o=JSON.parse('{"key":"v-36b2a27d","path":"/local-mirror-for-els-ruby/","title":"Installation instructions of a local mirror for ELS Ruby","lang":"en-US","frontmatter":{"head":[["meta",{"name":"robots","content":"noindex, nofollow"}]]},"headers":[]}');export{o as data};
