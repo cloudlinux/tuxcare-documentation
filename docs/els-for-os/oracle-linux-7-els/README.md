@@ -64,19 +64,23 @@
 The installation script **does not automatically add** the TuxCare UEKR6 repository. If you plan to use the `kernel-uek` package on your Oracle Linux 7 system, you need to enable the TuxCare UEKR6 repository manually.
 <ELSSteps>
 
-1. Use an editor of your choice to edit the `/etc/yum.repos.d/oraclelinux7-els.repo` file
+1. Create the `/etc/yum.repos.d/oraclelinux7-els-uekr6.repo` file
 
    ```
-   vi /etc/yum.repos.d/oraclelinux7-els.repo
-   ```
-
-2. Add the following lines there to enable the TuxCare UEKR 6 repository
-
-   ```
+   cat > /etc/yum.repos.d/oraclelinux7-els-uekr6.repo <<'EOF'
    [oraclelinux7-els-UEKR6]
    name = OracleLinux 7 Extended Lifecycle Support by TuxCare UEKR6
-   baseurl = https://repo.tuxcare.com/oraclelinux7-els/\$elstoken/UEKR6/\$basearch/
-   enabled = 1
+   baseurl = https://repo.tuxcare.com/oraclelinux7-els/$elstoken/UEKR6/$basearch/
+   enabled=1
+   gpgcheck=1
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-TuxCare
+   EOF
+   ```
+
+2. Check that the UEKR6 kernels are available
+
+   ```
+   yum --disablerepo='*' --enablerepo=oraclelinux7-els-UEKR6 list available kernel-uek
    ```
 </ELSSteps>
 
