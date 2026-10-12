@@ -106,7 +106,7 @@ const applications = [
   },
   {
     name: "WildFly®",
-    versions: "27.0.1.Final",
+    versions: "19.0.1.Final | 27.0.1.Final",
     link: "./wildfly/",
     icon: "/images/wildfly-logo.webp",
   },

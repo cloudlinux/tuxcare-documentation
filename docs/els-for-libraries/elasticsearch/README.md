@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Elasticsearch provides security pa
 
 ## Supported Versions
 
-* Elasticsearch 7.16.3
+* Elasticsearch 7.16.3, 7.17.15, 8.7.1
 
 Other versions upon request.
 

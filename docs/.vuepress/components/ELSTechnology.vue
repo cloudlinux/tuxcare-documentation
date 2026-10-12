@@ -123,8 +123,13 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "antlr4",
+        versions: "4.7.2 | 4.11.1 | 4.13.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache ActiveMQ Artemis",
-        versions: "2.26.0 | 2.33.0 | 2.37.0 | 2.40.0",
+        versions: "2.26.0 | 2.28.0 | 2.33.0 | 2.37.0 | 2.40.0",
         link: "./java-libraries/",
       },
       {
@@ -159,7 +164,7 @@ const techData = [
       },
       {
         name: "Apache Commons Collections",
-        versions: "3.2 | 3.2.1",
+        versions: "3.1 | 3.2 | 3.2.1",
         link: "./java-libraries/",
       },
       {
@@ -169,7 +174,7 @@ const techData = [
       },
       {
         name: "Apache Commons Configuration",
-        versions: "1.10 | 2.11.0 | 2.12.0",
+        versions: "1.6 | 1.8 | 1.9 | 1.10 | 2.8.0 | 2.9.0 | 2.11.0 | 2.12.0",
         link: "./java-libraries/",
       },
       {
@@ -189,7 +194,7 @@ const techData = [
       },
       {
         name: "Apache Commons IO",
-        versions: "2.0.1 | 2.2 | 2.4 | 2.5 | 2.6 | 2.7 | 2.8.0 | 2.11.0",
+        versions: "2.0.1 | 2.1 | 2.2 | 2.3 | 2.4 | 2.5 | 2.6 | 2.7 | 2.8.0 | 2.9.0 | 2.10.0 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -199,7 +204,7 @@ const techData = [
       },
       {
         name: "Apache Commons Lang3",
-        versions: "3.4 | 3.8.1 | 3.10 | 3.11 | 3.12.0 | 3.14.0 | 3.15.0 | 3.17.0",
+        versions: "3.4 | 3.8.1 | 3.10 | 3.11 | 3.12.0 | 3.14.0 | 3.15.0 | 3.16.0 | 3.17.0",
         link: "./apache-commons-lang/",
       },
       {
@@ -218,18 +223,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache FreeMarker",
+        versions: "2.3.34",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache HttpComponents Client",
-        versions: "4.2 | 4.2.1 | 4.2.6 | 4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10",
+        versions: "4.0.1 | 4.2 | 4.2.1 | 4.2.6 | 4.5 | 4.5.1 | 4.5.2 | 4.5.6 | 4.5.8 | 4.5.9 | 4.5.10 | 4.5.12",
         link: "./java-libraries/",
       },
       {
         name: "Apache HttpComponents Client 5",
-        versions: "5.0.3 | 5.5.2",
+        versions: "5.0.3 | 5.3.1 | 5.5.2",
         link: "./java-libraries/",
       },
       {
         name: "Apache HttpComponents Core 5",
-        versions: "5.1.3 | 5.2.5",
+        versions: "5.0.2 | 5.1.3 | 5.1.5 | 5.2.4 | 5.2.5 | 5.3.4",
         link: "./java-libraries/",
       },
       {
@@ -254,7 +264,7 @@ const techData = [
       },
       {
         name: "Apache Kafka®",
-        versions: "2.8.2 | 3.2.3 | 3.7.1",
+        versions: "2.8.2 | 3.2.2 | 3.2.3 | 3.7.1",
         link: "./apache-kafka/",
       },
       {
@@ -274,7 +284,7 @@ const techData = [
       },
       {
         name: "Apache Maven",
-        versions: "3.0.5 | 3.2.5 | 3.8.1",
+        versions: "3.0.5 | 3.2.5 | 3.5.4 | 3.8.1 | 3.9.9",
         link: "./java-libraries/",
       },
       {
@@ -310,7 +320,7 @@ const techData = [
       },
       {
         name: "Apache Velocity Engine™",
-        versions: "1.7 | 1.7.1",
+        versions: "1.7",
         link: "./apache-velocity-engine/",
       },
       {
@@ -335,7 +345,7 @@ const techData = [
       },
       {
         name: "Apache ZooKeeper",
-        versions: "3.8.3 | 3.9.1",
+        versions: "3.5.5 | 3.8.3 | 3.9.1",
         link: "./java-libraries/",
       },
       {
@@ -360,7 +370,7 @@ const techData = [
       },
       {
         name: "Cassandra Java Driver",
-        versions: "4.17.0 | 4.18.1",
+        versions: "4.18.1",
         link: "./java-libraries/",
       },
       {
@@ -425,7 +435,7 @@ const techData = [
       },
       {
         name: "Elasticsearch",
-        versions: "7.16.3",
+        versions: "7.16.3 | 7.17.15 | 8.7.1",
         link: "./elasticsearch/",
       },
       {
@@ -445,7 +455,7 @@ const techData = [
       },
       {
         name: "Google Guava",
-        versions: "16.0.1 | 18.0 | 19.0 | 20.0 | 25.1-android | 25.1-jre | 27.1-android | 27.1-jre | 30.1-jre | 31.1-jre",
+        versions: "16.0.1 | 18.0 | 19.0-rc3 | 19.0 | 20.0 | 25.1-android | 25.1-jre | 27.1-android | 27.1-jre | 30.1-jre | 31.1-jre",
         link: "./java-libraries/",
       },
       {
@@ -466,6 +476,11 @@ const techData = [
       {
         name: "Grails Plugin Converters",
         versions: "5.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "graphql-java",
+        versions: "22.3",
         link: "./java-libraries/",
       },
       {
@@ -525,7 +540,7 @@ const techData = [
       },
       {
         name: "Jackson",
-        versions: "1.9.13 | 2.12.1 | 2.14.1 | 2.14.2 | 2.17.2 | 2.17.3",
+        versions: "1.9.13 | 2.8.11 | 2.9.10.3 | 2.11.1 | 2.11.3 | 2.12.1 | 2.12.2 | 2.12.7.1 | 2.13.4.2 | 2.14.1 | 2.14.2 | 2.17.1 | 2.17.2 | 2.17.3",
         link: "./jackson/",
       },
       {
@@ -565,7 +580,7 @@ const techData = [
       },
       {
         name: "JSON Smart v2",
-        versions: "1.3.2 | 2.4.8 | 2.5.0",
+        versions: "1.3.2 | 2.3 | 2.4.2 | 2.4.8 | 2.5.0 | 2.5.1",
         link: "./java-libraries/",
       },
       {
@@ -640,7 +655,7 @@ const techData = [
       },
       {
         name: "Neo4j Java Driver",
-        versions: "5.28.5",
+        versions: "4.4.12 | 5.28.5",
         link: "./java-libraries/",
       },
       {
@@ -650,7 +665,7 @@ const techData = [
       },
       {
         name: "Netty Incubator",
-        versions: "0.0.21.Final",
+        versions: "0.0.21.Final | 0.0.25.Final",
         link: "./java-libraries/",
       },
       {
@@ -695,7 +710,7 @@ const techData = [
       },
       {
         name: "Quartz Scheduler",
-        versions: "1.8.5",
+        versions: "1.8.5 | 2.3.2",
         link: "./java-libraries/",
       },
       {
@@ -715,12 +730,12 @@ const techData = [
       },
       {
         name: "Reactor BOM",
-        versions: "2020.0.0 | 2020.0.7 | 2020.0.23 | 2020.0.32 | 2020.0.38 | 2020.0.47 | 2022.0.13 | 2022.0.15 | 2023.0.19 | 2024.0.13 | 2024.0.18",
+        versions: "2020.0.0 | 2020.0.7 | 2020.0.23 | 2020.0.32 | 2020.0.38 | 2020.0.47 | 2022.0.13 | 2022.0.15 | 2022.0.22 | 2023.0.3 | 2023.0.4 | 2023.0.14 | 2023.0.17 | 2023.0.19 | 2024.0.13 | 2024.0.18",
         link: "./java-libraries/",
       },
       {
         name: "Reactor Core",
-        versions: "3.6.18",
+        versions: "3.4.41 | 3.5.20 | 3.6.3 | 3.6.4 | 3.6.13 | 3.6.16 | 3.6.18",
         link: "./java-libraries/",
       },
       {
@@ -735,7 +750,7 @@ const techData = [
       },
       {
         name: "RSocket",
-        versions: "1.1.3 | 1.1.5",
+        versions: "1.0.3 | 1.1.3 | 1.1.5",
         link: "./java-libraries/",
       },
       {
@@ -882,8 +897,13 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "tomlj",
+        versions: "1.0.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Undertow",
-        versions: "1.4.27.Final | 2.0.26.Final | 2.2.24.Final | 2.2.28.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final | 2.3.24.Final",
+        versions: "1.4.27.Final | 2.0.26.Final | 2.2.24.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final | 2.3.24.Final",
         link: "./java-libraries/",
       },
       {
@@ -913,7 +933,7 @@ const techData = [
       },
       {
         name: "Apache Santuario XML Security For Java",
-        versions: "2.0.10 | 2.3.1",
+        versions: "2.0.10",
         link: "./java-libraries/",
       },
     ],
@@ -1109,7 +1129,7 @@ const techData = [
       },
       {
         name: "browserify-sign",
-        versions: "4.0.4 | 4.2.1",
+        versions: "4.0.4 | 4.2.1 | 4.2.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1254,7 +1274,7 @@ const techData = [
       },
       {
         name: "dompurify",
-        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3 | 3.2.7 | 3.4.8 | 3.4.14",
+        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3 | 3.2.6 | 3.2.7 | 3.3.3 | 3.4.8 | 3.4.14",
         link: "./javascript-libraries/",
       },
       {
@@ -1724,7 +1744,7 @@ const techData = [
       },
       {
         name: "minimatch",
-        versions: "0.0.4 | 0.0.5 | 0.2.5 | 0.2.14 | 0.3.0 | 0.4.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 7.4.6 | 9.0.3 | 9.0.4 | 10.1.1",
+        versions: "0.0.4 | 0.0.5 | 0.2.5 | 0.2.14 | 0.3.0 | 0.4.0 | 1.0.0 | 2.0.10 | 3.0.4 | 3.0.5 | 3.0.8 | 3.1.2 | 3.1.5 | 5.1.0 | 7.4.6 | 9.0.3 | 9.0.4 | 9.0.5 | 10.1.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1734,7 +1754,7 @@ const techData = [
       },
       {
         name: "modelcontextprotocol-sdk",
-        versions: "1.13.3 | 1.17.3 | 1.24.0 | 1.25.2",
+        versions: "1.13.3 | 1.17.3 | 1.24.0 | 1.25.2 | 1.30.0 | 1.30.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1794,7 +1814,7 @@ const techData = [
       },
       {
         name: "nanoid",
-        versions: "3.3.4 | 3.3.6 | 3.3.7 | 3.3.11 | 3.3.12 | 3.3.14 | 3.3.16 | 5.1.5 | 5.1.11 | 5.1.15",
+        versions: "3.3.4 | 3.3.6 | 3.3.7 | 3.3.11 | 3.3.12 | 3.3.14 | 3.3.16 | 5.1.5 | 5.1.6 | 5.1.11 | 5.1.15",
         link: "./javascript-libraries/",
       },
       {
@@ -1849,7 +1869,7 @@ const techData = [
       },
       {
         name: "nodemailer",
-        versions: "0.7.1 | 2.7.2 | 6.10.1 | 9.1.0",
+        versions: "0.7.1 | 2.7.2 | 6.10.1 | 9.0.0 | 9.0.1 | 9.0.5 | 9.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1880,6 +1900,16 @@ const techData = [
       {
         name: "octokit-plugin-paginate-rest",
         versions: "2.21.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "opentelemetry-core",
+        versions: "1.17.0 | 1.27.0 | 2.0.1 | 2.2.0 | 2.5.1 | 2.7.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "opentelemetry-propagator-jaeger",
+        versions: "1.30.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1934,7 +1964,7 @@ const techData = [
       },
       {
         name: "PostCSS",
-        versions: "5.2.18 | 6.0.1 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.5.2 | 8.5.3 | 8.5.6 | 8.5.17 | 8.5.19 | 8.5.20 | 8.5.21 | 8.5.22",
+        versions: "5.2.18 | 6.0.1 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.31 | 8.4.41 | 8.4.49 | 8.5.2 | 8.5.3 | 8.5.6 | 8.5.12 | 8.5.17 | 8.5.19 | 8.5.20 | 8.5.21 | 8.5.22",
         link: "./postcss/",
       },
       {
@@ -2055,6 +2085,11 @@ const techData = [
       {
         name: "semver",
         versions: "2.3.2 | 4.3.6 | 5.0.3 | 5.1.0 | 5.3.0 | 5.6.0 | 6.3.0 | 7.0.0 | 7.1.3 | 7.3.2 | 7.3.4 | 7.3.5 | 7.3.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "semver-regex",
+        versions: "2.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -3236,7 +3271,7 @@ const techData = [
       },
       {
         name: "Zend Framework",
-        versions: "2.4.13",
+        versions: "2.4.13 | 2.5.3",
         link: "./zendframework/",
       },
       {
