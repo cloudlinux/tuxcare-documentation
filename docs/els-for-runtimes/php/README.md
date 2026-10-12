@@ -2554,7 +2554,7 @@ Customers who previously received an authentication token can continue to use it
 
 <template #TuxCare_Installer>
 
-TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
+TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025. The same installer manages [ELS .NET](/els-for-runtimes/dotnet/) and shows every product your license covers.
 
 <ELSSteps>
 
@@ -2575,7 +2575,11 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
    ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
 
    :::tip
-   If you previously registered on this machine with an authentication token and saved it, you can click **Use previous token** instead.
+   If you previously registered on this machine and saved the token, you can click **Use previous token** instead.
+   :::
+
+   :::warning
+   Clicking **Register** on a machine that is already registered releases its previous registration and asks for the license key again. Use **Use previous token** to keep the current registration.
    :::
 
 3. Register with your license key
@@ -2584,34 +2588,47 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
      ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
 
-   * Enter your license key to complete the registration.
+   * Enter your license key and click **Register**. Keep **Save token** ticked to reuse the registration next time.
 
      ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
 
+   If you have an authentication token instead of a license key, click **I have a token** and enter it.
+
 4. Select a PHP version
 
-   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
+   Under **PHP**, expand a version (for example, **8.2.29**) and a build (for example, **tuxcare.els1**), and tick the archive you want. **Only 1 version can be installed per installation**.
 
    ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
 
    :::tip
-   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
+   A version that is already installed is highlighted in green. To uninstall it, untick it and click **Continue**.
+
+   When you select a version while another PHP is already installed (by TuxCare Installer or found on the **Path**), the installer asks how to proceed:
+
+   * **Replace** — removes the previous installations, then installs the new version.
+   * **Alongside** — keeps them and installs the new version next to them.
 
    ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
    :::
 
+   If your license does not cover a product, it is shown as **PHP (Not Authenticated)** or **.NET (Not Authenticated)** with nothing to select.
+
 5. Choose installation path and load modules
 
-   * By default, the installer uses `C:\Program Files`.
+   * By default, the installer uses `C:\Program Files` and extracts the version to its own folder there.
    * Click **Change** to install to a different location.
-   * Click **Load** to fetch the required PHP archive.
+   * Click **Load** to fetch the PHP archive and list its modules.
    * Select the modules you need and click **Continue**.
 
    ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
 
+   The installer creates `php.ini` from the archive's `php.ini-production` with the selected modules enabled, and adds the PHP folder to the system **Path**. It also removes other PHP folders from the **Path**, so this version becomes the default.
+
+   When the installation finishes, the message **Updating completed successfully** confirms it.
+
 6. Verify the installation
 
-   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+   Open a **new** **Command Prompt**, **PowerShell**, or **Terminal** window, so that it picks up the updated **Path**, and run:
 
    ```text
    php -v
@@ -2626,8 +2643,6 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
    ```
 
 </ELSSteps>
-
-During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
 
 </template>
 
@@ -2835,7 +2850,14 @@ Depending on your ELS PHP usage purpose, additional configurations may be requir
 
 #### Change Default PHP Version
 
-If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
+If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable:
+
+1. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**.
+2. Under *System variables*, find **Path** and click **Edit**.
+3. Move the desired PHP version's folder to the top, and remove or move down the other PHP folders.
+4. Click **OK**, open a new terminal, and verify with `php -v`.
+
+Installing a version with TuxCare Installer makes it the default automatically.
 
 #### PHP Extensions List
 
@@ -3731,9 +3753,41 @@ memory_limit=256M
 
 #### Uninstallation
 
+To **uninstall a PHP version via TuxCare Installer**, run the installer, untick the installed (green) version, and click **Continue**. The installer moves the PHP folder to `%APPDATA%\TuxCareInstaller\Backups\<folder>_<date>_<time>` instead of deleting it, so you can recover your `php.ini` and files, and removes the folder from the **Path**.
+
+To **remove everything installed by TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer*, and click **Uninstall**. Then choose **Uninstall products** to remove the installed PHP and .NET products too, or **Keep products** to remove only the installer.
+
+A silent removal of TuxCare Installer, as deployment tools run it, cannot ask this question and keeps the products:
+
+```text
+TuxCare.Installer.exe /uninstall /quiet
+```
+
+To uninstall the products too and release the registration, add `UninstallProducts=1`:
+
+```text
+TuxCare.Installer.exe /uninstall /quiet UninstallProducts=1
+```
+
 To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
 
-To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
+### Frequent Issues
+
+* **PHP shows "(Not Authenticated)" in TuxCare Installer.**
+
+  Your license or token does not cover PHP. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
+* **`php -v` still shows the old version, or "php is not recognized".**
+
+  Open a new terminal: a terminal that was already open keeps the old **Path**. If the problem persists, check the order of PHP folders in the **System Path** (see [Change Default PHP Version](#change-default-php-version)).
+
+* **An extension does not load.**
+
+  Check that its line in `php.ini` has no leading `;` and that `extension_dir="ext"` is set. TuxCare Installer writes `extension_dir` when at least one module is available.
+
+* **I uninstalled a version by mistake.**
+
+  TuxCare Installer keeps its folder in `%APPDATA%\TuxCareInstaller\Backups`. Move the folder back to its original place and add it to the **Path** again, or install the version again.
 
 ## SaxonC Use Case
 
