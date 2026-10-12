@@ -11,7 +11,7 @@ This guide outlines the steps needed for WildFly server setup and configuration.
 
 ## Supported Versions
 
-* WildFly 27.0.1.Final
+* WildFly 19.0.1.Final, 27.0.1.Final
 
 ## Installation
 
