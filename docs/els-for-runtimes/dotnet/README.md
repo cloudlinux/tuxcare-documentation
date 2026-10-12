@@ -4,17 +4,17 @@ Endless Lifecycle Support (ELS) for .NET from TuxCare provides security fixes fo
 
 ## Supported Versions
 
-| Windows Version                                         | .NET 6 | .NET 8 | .NET 10 | Architectures |
-|---------------------------------------------------------|:------:|:------:|:-------:|:-------------:|
-| **Nano Server 2019, 2022**                              | ✓      | ✓      | ✓       | x64           |
-| **Nano Server 2025**                                    | —      | ✓      | ✓       | x64           |
-| **Windows 11** (24H2, 23H2, 22H2 E/Edu)                 | ✓      | ✓      | ✓       | x64           |
-| **Windows 10** (22H2)                                   | ✓      | ✓      | ✓       | x64           |
-| **Windows Server** 2025                                 | —      | ✓      | ✓       | x64           |
-| **Windows Server** 2022, 2019, 2016, 2012-R2, 2012      | ✓      | ✓      | ✓       | x64, x86      |
-| **Windows Server Core** 2022, 2019, 2016, 2012-R2, 2012 | ✓      | ✓      | ✓       | x64, x86      |
+| Windows Version                                         | .NET 1.1 | .NET 2.0 | .NET 2.2 | .NET 6 | .NET 8 | .NET 10 | Architectures |
+|---------------------------------------------------------|:--------:|:--------:|:--------:|:------:|:------:|:-------:|:-------------:|
+| **Nano Server 2019, 2022**                              |    —     |    —     |    ✓     |   ✓    |   ✓    |    ✓    |      x64      |
+| **Nano Server 2025**                                    |    —     |    —     |    ✓     |   —    |   ✓    |    ✓    |      x64      |
+| **Windows 11** (24H2, 23H2, 22H2 E/Edu)                 |    ✓     |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |      x64      |
+| **Windows 10** (22H2)                                   |    ✓     |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |      x64      |
+| **Windows Server** 2025                                 |    ✓     |    ✓     |    ✓     |   —    |   ✓    |    ✓    |      x64      |
+| **Windows Server** 2022, 2019, 2016, 2012-R2, 2012      |    ✓¹    |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |    x64, x86   |
+| **Windows Server Core** 2022, 2019, 2016, 2012-R2, 2012 |    ✓¹    |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |    x64, x86   |
 
-TuxCare also provides .NET 1.1, 2.0, and 2.2. They are listed in TuxCare Installer when your license covers them.
+¹ .NET 1.1 supports Windows Server 2012 R2 and later; Windows Server 2012 is not supported.
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -74,7 +74,7 @@ Customers who previously received an authentication token can continue to use it
 
 <template #TuxCare_Installer>
 
-TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a graphical interface on Windows Server 2019, 2022, and 2025. The same installer manages ELS PHP and shows every product your license covers.
+TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a graphical interface on Windows Server 2019, 2022, and 2025.
 
 <ELSSteps>
 
@@ -88,21 +88,11 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
 
    Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
 
-2. Select Register
+2. Register with your license key
 
-   Click **Register**.
+   * Click **Register**.
 
-   ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/dotnet-installer-register.webp)
-
-   :::tip
-   If you previously registered on this machine and saved the token, you can click **Use previous token** instead.
-   :::
-
-   :::warning
-   Clicking **Register** on a machine that is already registered releases its previous registration and asks for the license key again. Use **Use previous token** to keep the current registration.
-   :::
-
-3. Register with your license key
+     ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/dotnet-installer-register.webp)
 
    * Click **I have a license key**.
 
@@ -112,20 +102,23 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
 
      ![TuxCare Installer prompting for a license key, with the Save token checkbox ticked](/images/dotnet-installer-token.webp)
 
-   If you have an authentication token instead of a license key, click **I have a token** and enter it.
+   :::tip
+   If you registered on this machine before, click **Use previous token** instead of **Register** — **Register** releases the current registration. If you have an authentication token instead of a license key, click **I have a token**.
+   :::
 
-4. Select the .NET runtimes and SDKs
+3. Select the .NET runtimes and SDKs
 
    The installer lists the products of your license. Under **.NET**, expand a version (for example, **6.0**) and a build (for example, **6.0.37-tuxcare.1**), and tick the installers you want:
 
-   | Installer | Contains |
+   | Installer | Description |
    | --- | --- |
    | `dotnet-runtime-<version>-win-<arch>.exe` | .NET Runtime |
    | `aspnetcore-runtime-<version>-win-<arch>.exe` | ASP.NET Core Runtime |
    | `windowsdesktop-runtime-<version>-win-<arch>.exe` (or `.msi`) | Windows Desktop Runtime |
    | `dotnet-sdk-<version>-win-<arch>.exe` | .NET SDK (includes the runtimes) |
+   | `<arch>` in the file name | Architecture: `x64` or `x86` |
 
-   `<arch>` is `x64` or `x86`. You can select several installers from several versions at once — .NET versions are installed side by side.
+   You can select several installers from several versions at once — .NET versions are installed side by side.
 
    When your selection is ready, click **Continue**.
 
@@ -137,21 +130,21 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
    ![TuxCare Installer Products Selection with the installed dotnet-sdk-6.0.429-tuxcare.1-win-x64.exe highlighted in green](/images/dotnet-installer-installed.webp)
    :::
 
-   If your license does not cover a product, it is shown as **.NET (Not Authenticated)** or **PHP (Not Authenticated)** with nothing to select.
+   If your license does not cover a product, it is shown as **.NET (Not Authenticated)** with nothing to select.
 
-5. Install
+4. Install
 
    The installer downloads each selected file and runs it silently.
 
-   Installing .NET changes the whole machine, so Windows asks for administrator permission (User Account Control) unless TuxCare Installer already runs as administrator. Check that the verified publisher is **Cloud Linux Software, Inc** and click **Yes**. Clicking **No** cancels the installation of that file.
+   When Windows shows the User Account Control prompt, check that the verified publisher is **Cloud Linux Software, Inc** and click **Yes**. Clicking **No** cancels the installation of that file.
 
    ![Windows User Account Control prompt asking to allow TuxCare .NET SDK 6.0.429-tuxcare.1 (x64) to make changes, verified publisher Cloud Linux Software, Inc](/images/dotnet-installer-uac.webp)
 
-   When the installation finishes, the message **Updating completed successfully** confirms it. Click **OK**. If a runtime needs a restart to complete, the message lists it — restart Windows before using it.
+   When the message **Updating completed successfully** appears, click **OK**. If the message lists a runtime that needs a restart, restart Windows before using it.
 
    ![TuxCare Installer Progress screen with the Updating completed successfully message](/images/dotnet-installer-done.webp)
 
-6. Verify the installation
+5. Verify the installation
 
    Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
 
@@ -382,51 +375,59 @@ All .NET versions are installed side by side under `C:\Program Files\dotnet`, an
 
 ### Uninstallation
 
-* **Via TuxCare Installer**
+<TableTabs label="Choose uninstallation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer', Windows_Settings: 'Windows Settings', Control_Panel: 'Control Panel' }">
 
-  Run TuxCare Installer, untick the installed (green) runtime or SDK, and click **Continue**.
+<template #TuxCare_Installer>
 
-  To remove everything installed by TuxCare Installer, open **Settings** &rarr; **Apps**, find *TuxCare Installer*, and click **Uninstall**. Then choose **Uninstall products** to remove the installed .NET and PHP products too, or **Keep products** to remove only the installer.
+Run TuxCare Installer, untick the installed (green) runtime or SDK, and click **Continue**.
 
-  A silent removal of TuxCare Installer, as deployment tools run it, cannot ask this question and keeps the products:
+To remove everything installed by TuxCare Installer, open **Settings** &rarr; **Apps**, find *TuxCare Installer*, and click **Uninstall**. Then choose **Uninstall products** to remove all products installed by TuxCare Installer, or **Keep products** to remove only the installer.
 
-  ```text
-  TuxCare.Installer.exe /uninstall /quiet
-  ```
+A silent removal of TuxCare Installer, as deployment tools run it, cannot ask this question and keeps the products:
 
-  To uninstall the products too and release the registration, add `UninstallProducts=1`:
+```text
+TuxCare.Installer.exe /uninstall /quiet
+```
 
-  ```text
-  TuxCare.Installer.exe /uninstall /quiet UninstallProducts=1
-  ```
+To uninstall the products too and release the registration, add `UninstallProducts=1`:
 
-* **Via Windows Settings** 
-  
-  Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** (or **Apps & Features** on older versions). Search for *.NET SDK* or *.NET Runtime* depending on what you've installed. Click on each entry and select **Uninstall**.
+```text
+TuxCare.Installer.exe /uninstall /quiet UninstallProducts=1
+```
 
-  :::tip
-  During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
-  :::
+</template>
 
-  A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
+<template #Windows_Settings>
 
-  ![Uninstalling via Windows Settings](/images/dotnet-uninstall-settings.webp)
+Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** (or **Apps & Features** on older versions). Search for *.NET SDK* or *.NET Runtime* depending on what you've installed. Click on each entry and select **Uninstall**.
 
-* **Via Control Panel**
-  
-  Open **Control Panel** &rarr; **Programs** &rarr; **Programs and Features**. Search for *.NET SDK* or *.NET Runtime*, right-click on each entry and select **Uninstall**.
+:::tip
+During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
+:::
 
-  :::tip
-  During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
-  :::
+A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
 
-  A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
+![Uninstalling via Windows Settings](/images/dotnet-uninstall-settings.webp)
 
-  ![Uninstalling via Control Panel](/images/dotnet-uninstall-controlpanel.webp)
+</template>
 
-* **Remove remaining files**
-  
-  After uninstalling .NET some files may remain in `C:\Program Files\dotnet\` and `C:\Users\<user>\.dotnet\`. Delete these folders manually to fully remove .NET.
+<template #Control_Panel>
+
+Open **Control Panel** &rarr; **Programs** &rarr; **Programs and Features**. Search for *.NET SDK* or *.NET Runtime*, right-click on each entry and select **Uninstall**.
+
+:::tip
+During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
+:::
+
+A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
+
+![Uninstalling via Control Panel](/images/dotnet-uninstall-controlpanel.webp)
+
+</template>
+
+</TableTabs>
+
+After uninstalling .NET some files may remain in `C:\Program Files\dotnet\` and `C:\Users\<user>\.dotnet\`. Delete these folders manually to fully remove .NET.
 
 ## Frequent Issues
 

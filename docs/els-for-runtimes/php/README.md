@@ -2554,7 +2554,7 @@ Customers who previously received an authentication token can continue to use it
 
 <template #TuxCare_Installer>
 
-TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025. The same installer manages [ELS .NET](/els-for-runtimes/dotnet/) and shows every product your license covers.
+TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
 
 <ELSSteps>
 
@@ -2568,21 +2568,11 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
    Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
 
-2. Select Register
+2. Register with your license key
 
-   Click **Register**.
+   * Click **Register**.
 
-   ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
-
-   :::tip
-   If you previously registered on this machine and saved the token, you can click **Use previous token** instead.
-   :::
-
-   :::warning
-   Clicking **Register** on a machine that is already registered releases its previous registration and asks for the license key again. Use **Use previous token** to keep the current registration.
-   :::
-
-3. Register with your license key
+     ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
 
    * Click **I have a license key**.
 
@@ -2592,9 +2582,11 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
      ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
 
-   If you have an authentication token instead of a license key, click **I have a token** and enter it.
+   :::tip
+   If you registered on this machine before, click **Use previous token** instead of **Register** — **Register** releases the current registration. If you have an authentication token instead of a license key, click **I have a token**.
+   :::
 
-4. Select a PHP version
+3. Select a PHP version
 
    Under **PHP**, expand a version (for example, **8.2.29**) and a build (for example, **tuxcare.els1**), and tick the archive you want. **Only 1 version can be installed per installation**.
 
@@ -2611,9 +2603,9 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
    ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
    :::
 
-   If your license does not cover a product, it is shown as **PHP (Not Authenticated)** or **.NET (Not Authenticated)** with nothing to select.
+   If your license does not cover a product, it is shown as **PHP (Not Authenticated)** with nothing to select.
 
-5. Choose installation path and load modules
+4. Choose installation path and load modules
 
    * By default, the installer uses `C:\Program Files` and extracts the version to its own folder there.
    * Click **Change** to install to a different location.
@@ -2626,7 +2618,7 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
    When the installation finishes, the message **Updating completed successfully** confirms it.
 
-6. Verify the installation
+5. Verify the installation
 
    Open a **new** **Command Prompt**, **PowerShell**, or **Terminal** window, so that it picks up the updated **Path**, and run:
 
@@ -3755,7 +3747,7 @@ memory_limit=256M
 
 To **uninstall a PHP version via TuxCare Installer**, run the installer, untick the installed (green) version, and click **Continue**. The installer moves the PHP folder to `%APPDATA%\TuxCareInstaller\Backups\<folder>_<date>_<time>` instead of deleting it, so you can recover your `php.ini` and files, and removes the folder from the **Path**.
 
-To **remove everything installed by TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer*, and click **Uninstall**. Then choose **Uninstall products** to remove the installed PHP and .NET products too, or **Keep products** to remove only the installer.
+To **remove everything installed by TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer*, and click **Uninstall**. Then choose **Uninstall products** to remove all products installed by TuxCare Installer, or **Keep products** to remove only the installer.
 
 A silent removal of TuxCare Installer, as deployment tools run it, cannot ask this question and keeps the products:
 
