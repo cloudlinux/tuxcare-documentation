@@ -1274,7 +1274,7 @@ const techData = [
       },
       {
         name: "dompurify",
-        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3 | 3.2.6 | 3.2.7 | 3.3.3 | 3.4.8 | 3.4.14",
+        versions: "2.0.8 | 2.3.0 | 2.3.3 | 2.3.10 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.1 | 3.0.2 | 3.0.3 | 3.0.11 | 3.1.0 | 3.1.1 | 3.1.2 | 3.1.3 | 3.1.4 | 3.1.6 | 3.2.3 | 3.2.6 | 3.2.7 | 3.3.3 | 3.4.5 | 3.4.6 | 3.4.7 | 3.4.8 | 3.4.9 | 3.4.10 | 3.4.11 | 3.4.14",
         link: "./javascript-libraries/",
       },
       {
@@ -1449,7 +1449,7 @@ const techData = [
       },
       {
         name: "handlebars",
-        versions: "1.0.12 | 1.3.0 | 2.0.0 | 3.0.3 | 3.0.8 | 4.7.7 | 4.7.8 | 4.7.9",
+        versions: "1.0.12 | 1.3.0 | 2.0.0 | 3.0.3 | 3.0.8 | 4.5.3 | 4.7.7 | 4.7.8 | 4.7.9",
         link: "./javascript-libraries/",
       },
       {
@@ -1869,7 +1869,7 @@ const techData = [
       },
       {
         name: "nodemailer",
-        versions: "0.7.1 | 2.7.2 | 6.10.1 | 9.0.0 | 9.0.1 | 9.0.5 | 9.1.0",
+        versions: "0.7.1 | 2.7.2 | 6.10.1 | 9.0.0 | 9.0.1 | 9.0.2 | 9.0.3 | 9.0.5 | 9.0.6 | 9.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1904,7 +1904,7 @@ const techData = [
       },
       {
         name: "opentelemetry-core",
-        versions: "1.17.0 | 1.27.0 | 2.0.1 | 2.2.0 | 2.5.1 | 2.7.1",
+        versions: "1.17.0 | 1.17.1 | 1.22.0 | 1.27.0 | 1.30.1 | 2.0.1 | 2.2.0 | 2.5.1 | 2.7.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1928,6 +1928,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "parse-url",
+        versions: "6.0.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "parsejson",
         versions: "0.0.3",
         link: "./javascript-libraries/",
@@ -1939,7 +1944,7 @@ const techData = [
       },
       {
         name: "path-to-regexp",
-        versions: "0.1.3 | 0.1.10 | 0.1.12 | 6.2.1",
+        versions: "0.1.3 | 0.1.7 | 0.1.10 | 0.1.12 | 6.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1975,6 +1980,11 @@ const techData = [
       {
         name: "prismjs",
         versions: "1.27.0 | 1.29.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "private-ip",
+        versions: "2.3.4",
         link: "./javascript-libraries/",
       },
       {
@@ -2093,6 +2103,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "send",
+        versions: "0.1.0 | 0.17.2 | 0.18.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "sentry-browser",
         versions: "5.7.1",
         link: "./javascript-libraries/",
@@ -2125,6 +2140,11 @@ const techData = [
       {
         name: "shelljs",
         versions: "0.1.4 | 0.3.0 | 0.8.2 | 0.8.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "sigstore",
+        versions: "2.3.1",
         link: "./javascript-libraries/",
       },
       {
