@@ -6,7 +6,7 @@ Endless Lifecycle Support (ELS) for Vue from TuxCare provides security fixes for
 
 | Package | Version |
 |---|---|
-| vue | 2.6.11, 2.6.14, 2.7.16 |
+| vue | 2.2.6, 2.6.11, 2.6.14, 2.7.16 |
 | @vue/server-renderer | 2.2.6, 2.6.11, 2.6.14, 2.7.16 |
 | vue-template-compiler | 2.2.6, 2.6.11, 2.6.14, 2.7.16 |
 
