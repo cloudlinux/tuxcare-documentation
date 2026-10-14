@@ -56,7 +56,7 @@ The .NET Runtime is the base runtime required to run console or server-based .NE
 
 ## Installation
 
-TuxCare provides two ways to install ELS .NET on Windows: using the **TuxCare Installer** (recommended) — a graphical tool that installs and removes .NET runtimes and SDKs, or **manually** by downloading the installers from the repository.
+TuxCare provides three ways to install ELS .NET on Windows: the **TuxCare Installer** (recommended) — a graphical tool that installs and removes .NET runtimes and SDKs, the **PowerShell script** that does the same from the command line, or **manual** installation of the .NET setup files from the repository.
 
 <ELSPrerequisites>
 
@@ -70,7 +70,7 @@ TuxCare provides two ways to install ELS .NET on Windows: using the **TuxCare In
 Customers who previously received an authentication token can continue to use it: select **Use previous token** in the TuxCare Installer, or use the tokenized URL for manual installation.
 :::
 
-<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)' }">
+<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)', PowerShell_Script: 'Manual (via PowerShell script)' }">
 
 <template #TuxCare_Installer>
 
@@ -90,7 +90,7 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
 
 2. Register with your license key
 
-   * Click **Register**.
+   * If you registered on this machine before, the installer first shows **Register** and **Use previous token**. Click **Use previous token** to keep the current registration and go straight to the product list (step 3), or **Register** to register again with a license key, which releases the current registration. New customers do not see this screen and start from the next one.
 
      ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/dotnet-installer-register.webp)
 
@@ -103,7 +103,7 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
      ![TuxCare Installer prompting for a license key, with the Save token checkbox ticked](/images/dotnet-installer-token.webp)
 
    :::tip
-   If you registered on this machine before, click **Use previous token** instead of **Register** — **Register** releases the current registration. If you have an authentication token instead of a license key, click **I have a token**.
+   If you have an authentication token instead of a license key, click **I have a token**.
    :::
 
 3. Select the .NET runtimes and SDKs
@@ -125,7 +125,7 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
    ![TuxCare Installer Products Selection listing the .NET 6.0.37-tuxcare.1 installers with a checkbox beside each, dotnet-sdk-6.0.429-tuxcare.1-win-x64.exe ticked](/images/dotnet-installer-versions.webp)
 
    :::tip
-   Installers that are already installed are highlighted in green and ticked. To uninstall one, untick it and click **Continue**. **Continue** stays disabled until you change the selection.
+   The installer highlights already installed files in green and ticks them. To uninstall one, untick it and click **Continue**. **Continue** stays disabled until you change the selection.
 
    ![TuxCare Installer Products Selection with the installed dotnet-sdk-6.0.429-tuxcare.1-win-x64.exe highlighted in green](/images/dotnet-installer-installed.webp)
    :::
@@ -179,94 +179,104 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
 
 </template>
 
-<template #Manual>
+<template #PowerShell_Script>
 
-Manual installation requires a tokenized URL — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to receive instructions for generating one.
-
-Before you start, check if .NET is already installed — open **Command Prompt** (`cmd`) or **PowerShell** and run:
-
-```text
-dotnet --version
-```
-
-If .NET is already installed, the command will return the version number. If it's not installed, you'll see an error message. Install the latest version of .NET before uninstalling the old one to ensure a smooth transition without breaking the dependencies.
-
-:::warning
-The following steps use the .NET SDK installation as an example. If you are installing a runtime instead, follow a similar process using the corresponding .msi file.
-:::
+The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer from the command line. The script and TuxCare Installer keep the same records, so each sees what the other installed.
 
 <ELSSteps>
 
-1. Download the installer
+1. Open PowerShell as administrator
 
-   Use your tokenized URL to access the download page. Choose the appropriate runtime (SDK, Runtime, Desktop Runtime, or ASP.NET Core Runtime) and download the installer for your architecture (x64 or x86). Downloading the latest version is recommended.
+   Listing and downloading also work without administrator rights.
 
-   The .NET SDK is installed via an `.exe` installer. The .NET Runtime, Desktop Runtime, and ASP.NET Core Runtime are installed via `.msi` files.
+2. Register with your license key
 
-   :::tip
-   In certain versions of some browsers (for example, Edge), you might see a warning after downloading. In this case, manually allow the download.
-   :::
+   Register this server once:
 
-2. Run the installer
+   ```text
+   .\tuxcare-installer.ps1 -LicenseKey <license-key>
+   ```
 
-   Double-click the downloaded file. Accept the **license agreement** and click **Install**.
+3. List the available installers
 
-   ![TuxCare .NET installer showing the license agreement with the Install button](/images/els-dotnet-installation.webp)
+   The list shows what your license offers and marks the installed files:
 
-3. Complete the installation
+   ```text
+   .\tuxcare-installer.ps1 -List -Product dotnet
+   ```
 
-   Wait for the process to finish, then click **Close**.
+4. Install the runtimes and SDKs
+
+   Use the file names shown by `-List`. You can use wildcards:
+
+   ```text
+   .\tuxcare-installer.ps1 -Install dotnet-sdk-8.0.416-win-x64.exe,aspnetcore-runtime-8.0.22-win-x64.exe
+   ```
+
+5. Verify the installation
+
+   ```text
+   dotnet --list-sdks
+   ```
+
+</ELSSteps>
+
+To uninstall, run:
+
+```text
+.\tuxcare-installer.ps1 -Uninstall aspnetcore-runtime-8.0.22-win-x64.exe
+```
+
+To only download the installers without installing them (to `%USERPROFILE%\Downloads\TuxCare` by default), run:
+
+```text
+.\tuxcare-installer.ps1 -Download 'dotnet-runtime-6.0.37-tuxcare.3-win-*' -OutputDir C:\Downloads
+```
+
+The script saves the downloads as `<OutputDir>\dotnet\<version>\<build>\<file>` and does not install or record anything. Run `.\tuxcare-installer.ps1 -Help` for all options, for example `-Token`, `-Force`, and `-Delete`.
+
+Exit codes: `0` success, `1` repository or download failure, `2` already registered (use `-Force`), `3` registration failed or no token, `4` nothing matched, `5` install failed, `6` uninstall failed, `12` unregister failed, `14` administrator rights needed, `15` `-Delete` needs `-UninstallProducts` or `-KeepProducts`.
+
+</template>
+
+<template #Manual>
+
+:::warning
+Manual installation is available only to customers who previously received an authentication token. New customers register with a license key in TuxCare Installer or the PowerShell script.
+:::
+
+Manual installation uses a tokenized URL that gives access to the TuxCare .NET for Windows repository. The token is placed right after the domain:
+
+```text
+https://windows.tuxcare.com/<YOUR-TOKEN>/dotnet/
+```
+
+<ELSSteps>
+
+1. Open the repository in your browser
+
+   Navigate to your tokenized URL:
+
+   ```text
+   https://windows.tuxcare.com/<YOUR-TOKEN>/dotnet/
+   ```
+
+   You will see a directory listing of all available .NET versions (e.g. `6.0/`, `8.0/`, `10.0/`). Click on the version you need.
+
+2. Download the .NET setup file
+
+   Choose the setup file for the runtime and architecture you need and download it.
+
+3. Run the setup file
+
+   Double-click the downloaded file. Accept the **license agreement**, click **Install**, and click **Close** when the installation finishes.
 
 4. Verify the installation
 
    Open **Command Prompt** or **PowerShell** and run:
 
    ```text
-   dotnet --version
-   ```
-
-   Example output:
-
-   ```text
-   6.0.429
-   ```
-
-5. Create and run a test project
-
-   Create a new console application to confirm everything works:
-
-   ```text
-   dotnet new console -o MyTestApp
-   ```
-
-   Example output:
-
-   ```text
-   Welcome to .NET 6.0!
-   ---------------------
-   SDK Version: 6.0.429
-
-   ----------------------------------------------------------------------------
-   The template "Console App" was created successfully.
-
-   Processing post-creation actions...
-   Running 'dotnet restore' on C:\Users\user\MyTestApp\MyTestApp.csproj...
-     Determining projects to restore...
-     Restored C:\Users\user\MyTestApp\MyTestApp.csproj (in 115 ms).
-   Restore succeeded.
-   ```
-
-   Navigate to the folder and run it:
-
-   ```text
-   cd MyTestApp
-   dotnet run
-   ```
-
-   Expected output:
-
-   ```text
-   Hello, World!
+   dotnet --list-runtimes
    ```
 
 </ELSSteps>
@@ -275,9 +285,11 @@ The following steps use the .NET SDK installation as an example. If you are inst
 
 </TableTabs>
 
-## Additional configurations
+## Additional Configurations
 
-### Choose the .NET version for an application
+After installation, you can choose which .NET version each application uses, check what is installed, and uninstall .NET runtimes and SDKs.
+
+### Choose the .NET Version for an Application
 
 All .NET versions are installed side by side under `C:\Program Files\dotnet`, and each application picks its own. There is no default version to switch.
 
@@ -288,7 +300,7 @@ All .NET versions are installed side by side under `C:\Program Files\dotnet`, an
   { "sdk": { "version": "6.0.429-tuxcare.3", "rollForward": "latestPatch" } }
   ```
 
-### Useful commands
+### Useful Commands
 
 * `where.exe dotnet` — locates the dotnet executable on the system:
 
@@ -296,11 +308,14 @@ All .NET versions are installed side by side under `C:\Program Files\dotnet`, an
   where.exe dotnet
   ```
 
-  Example output:
+  <details>
+  <summary>Example output</summary>
 
   ```text
   C:\Program Files\dotnet\dotnet.exe
   ```
+
+  </details>
 
 * `dotnet --info` — displays information about installed SDKs, runtimes, and your OS:
 
@@ -354,11 +369,14 @@ All .NET versions are installed side by side under `C:\Program Files\dotnet`, an
   dotnet --list-sdks
   ```
   
-  Example output:
+  <details>
+  <summary>Example output</summary>
 
   ```text
   6.0.429 [C:\Program Files\dotnet\sdk]
   ```
+
+  </details>
 
 * `dotnet --list-runtimes` — lists all installed runtimes:
 
@@ -366,12 +384,15 @@ All .NET versions are installed side by side under `C:\Program Files\dotnet`, an
   dotnet --list-runtimes
   ```
 
-  Example output:
+  <details>
+  <summary>Example output</summary>
 
   ```text
   Microsoft.AspNetCore.App 6.0.36 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
   Microsoft.NETCore.App 6.0.36 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
   ```
+
+  </details>
 
 ### Uninstallation
 
