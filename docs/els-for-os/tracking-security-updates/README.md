@@ -16,7 +16,7 @@ notified by email, or follow an RSS feed in a feed reader or a script.
 
 2. Fill in your details
 
-   **Name** and **Work email** are required. **Company name** is optional.
+   You must fill in **Name** and **Work email**. **Company name** is optional.
 
    <img src="/images/subscription-step2.webp" alt="Subscribe to updates dialog with the About you fields and the Subscription Filters section below them" style="max-height: 460px" />
 
@@ -33,7 +33,7 @@ notified by email, or follow an RSS feed in a feed reader or a script.
 
    Tick the consent checkbox and select **Subscribe**. Consent covers processing your
    personal information and receiving TuxCare communications, including the monthly
-   newsletter, under the TuxCare.com Privacy Policy.
+   newsletter, under the [TuxCare.com Privacy Policy](https://tuxcare.com/privacy-policies-hub/users-privacy-policy/). Follow the link to read the policy before you subscribe.
 
    <img src="/images/subscription-step4.webp" alt="Subscribe to updates dialog with the consent checkbox and the Subscribe button highlighted" style="max-height: 460px" />
 
@@ -41,11 +41,11 @@ notified by email, or follow an RSS feed in a feed reader or a script.
 
 To change or cancel a subscription, use the **Unsubscribe** section on the same page:
 enter the address you subscribed with and TuxCare sends a link for managing your
-preferences. The same link is used to edit filters — there is no separate form.
+preferences. You also use this link to edit filters — there is no separate form.
 
 ## RSS
 
-If you would rather pull the information than receive mail, the CVE Tracker also publishes
-RSS. The CVEs, Fixes and Products views each offer an RSS export alongside CSV and JSON,
+Instead of email, you can follow updates through the RSS feeds that the CVE Tracker
+publishes. The CVEs, Fixes and Products views each offer an RSS export alongside CSV and JSON,
 and the feed keeps whatever filters you set on screen — so set the filters for the products
 you run, copy the export address, and follow it from a feed reader or a script.

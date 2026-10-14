@@ -618,7 +618,6 @@ export default {
                     icon: '/images/TuxCare_color_icon.webp',
                 },
                 "/securechain/managing-securechain-repository/",
-                "/securechain/tracking-security-updates/",
             ]
         },
     ],
