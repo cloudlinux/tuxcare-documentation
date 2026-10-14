@@ -94,8 +94,9 @@ export default {
                     path: '/els-for-os/ubuntu-20-04-els/',
                     icon: '/images/Ubuntu.webp',
                 },
-                "/els-for-os/managing-els-repository/",
                 "/els-for-os/machine-readable-security-data/",
+                "/els-for-os/managing-els-repository/",
+                "/els-for-os/tracking-security-updates/",
             ]
         },
     ],
@@ -129,6 +130,7 @@ export default {
                     icon: '/images/ruby.webp',
                 },
                 "/els-for-runtimes/machine-readable-security-data/",
+                "/els-for-runtimes/tracking-security-updates/",
             ]
         },
     ],
@@ -600,8 +602,9 @@ export default {
                     type: 'section-header',
                     icon: '/images/star.webp',
                 },
-                "/els-for-libraries/managing-els-repository/",
                 "/els-for-libraries/machine-readable-security-data/",
+                "/els-for-libraries/managing-els-repository/",
+                "/els-for-libraries/tracking-security-updates/",
             ]
         },
     ],
@@ -681,8 +684,9 @@ export default {
                     type: 'section-header',
                     icon: '/images/star.webp',
                 },
-                "/els-for-applications/managing-els-repository/",
                 "/els-for-applications/machine-readable-security-data/",
+                "/els-for-applications/managing-els-repository/",
+                "/els-for-applications/tracking-security-updates/",
             ]
         },
     ],
