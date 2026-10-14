@@ -10,9 +10,9 @@ notified by email, or follow an RSS feed in a feed reader or a script.
 1. Open the CVE Tracker
 
    Go to [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and select
-   **Subscription** in the top bar.
+   **Subscribe** in the top bar.
 
-   ![CVE Tracker top bar with the Subscription button highlighted](/images/subscription-step1.webp)
+   ![CVE Tracker top bar with the Subscribe button](/images/subscription-step1.webp)
 
 2. Fill in your details
 

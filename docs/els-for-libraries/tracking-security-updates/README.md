@@ -8,9 +8,9 @@ TuxCare publishes vulnerability and fix information in the CVE Tracker. You can 
 
 1. Open the CVE Tracker
 
-   Go to [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and select **Subscription** in the top bar.
+   Go to [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and select **Subscribe** in the top bar.
 
-   ![CVE Tracker top bar with the Subscription button highlighted](/images/subscription-step1.webp)
+   ![CVE Tracker top bar with the Subscribe button](/images/subscription-step1.webp)
 
 2. Fill in your details
 
