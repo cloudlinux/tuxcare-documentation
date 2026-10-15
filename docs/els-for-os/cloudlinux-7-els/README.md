@@ -4,7 +4,7 @@
 
 You do not need an Endless Lifecycle Support (ELS) for CentOS 7 subscription if you are already using CloudLinux OS 7. You can find more information in the [CLN billing documentation](https://docs.cloudlinux.com/cln/billing/).
 
-## How it works
+## How It Works
 
 There is nothing to install and no separate repository to add. When CloudLinux OS 7 reached its end of life, existing servers moved to CloudLinux 7 ELS automatically and keep receiving updates from the repositories they already use. Patches appear there as they are released.
 

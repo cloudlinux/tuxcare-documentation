@@ -193,7 +193,7 @@ Check logs for detailed error information:
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 

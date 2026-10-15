@@ -1,8 +1,8 @@
-# Managing the ELS repository
+# Managing the ELS Repository
 
 This page provides instructions for updating packages and removing the Endless Lifecycle Support (ELS) repository.
 
-## Updating packages
+## Updating Packages
 
 After the ELS repository is installed, you can apply security updates using your system's standard package manager.
 
@@ -50,7 +50,7 @@ apk update && apk upgrade
 
 </TableTabs>
 
-### Rollout process
+### Rollout Process
 
 For several platforms, TuxCare delivers security updates through staged rollout repositories. This process may take up to 14 additional days after a patch is published to stable repositories.
 
@@ -62,7 +62,7 @@ For example (packages in the 3rd rollout slot):
 yum update kernel* --enablerepo=centos7els-rollout-3-bypass
 ```
 
-## Removing the ELS repository
+## Removing the ELS Repository
 
 <TableTabs label="Choose your system: ">
 

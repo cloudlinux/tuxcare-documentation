@@ -1,4 +1,4 @@
-# Managing the ELS repository
+# Managing the ELS Repository
 
 This page provides instructions for upgrading to newer TuxCare package versions, accessing source code for libraries patched under Endless Lifecycle Support (ELS), managing the TuxCare NuGet source for .NET projects, and consuming the Java repository through your own repository manager.
 
@@ -87,7 +87,7 @@ dotnet build
 
 </TableTabs>
 
-## Source code
+## Source Code
 
 <TableTabs label="Choose the Ecosystem: " :labels="{ javaSources: 'Java', dotnetSources: '.NET' }">
 
@@ -163,7 +163,7 @@ The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `d
 
 </TableTabs>
 
-## Consuming ELS through your own repository manager
+## Consuming ELS Through Your Own Repository Manager
 
 Instead of pointing Maven or Gradle directly at `https://nexus.repo.tuxcare.com/repository/els_java/`, you can proxy the TuxCare Java repository through your own repository manager. This is optional and intended for organizations that already run one — otherwise ELS connects directly, as described in the setup steps on each library's page.
 

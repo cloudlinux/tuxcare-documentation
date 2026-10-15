@@ -4,7 +4,7 @@ head:
     - name: robots
       content: noindex, nofollow
 ---
-# Installation instructions of a local mirror for ELS Node.js
+# Installation Instructions of a Local Mirror for ELS Node.js
 
 We provide the ability to create local mirrors of Node.js for Endless Lifecycle Support (ELS) updates.
 
