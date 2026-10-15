@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for CakePHP from TuxCare provides security fixes
 
 ## Supported Versions
 
-* **CakePHP** 2.10.24
+* **CakePHP** 2.10.24, 4.4.18, 5.0.11
 
 Other versions upon request.
 

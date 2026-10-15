@@ -1228,6 +1228,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "cypress-request",
+        versions: "2.88.12",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "datatables.net",
         versions: "1.10.13",
         link: "./javascript-libraries/",
@@ -1274,7 +1279,7 @@ const techData = [
       },
       {
         name: "dompurify",
-        versions: "2.0.8 | 2.3.0 | 2.3.3 | 2.3.10 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.1 | 3.0.2 | 3.0.3 | 3.0.8 | 3.0.9 | 3.0.11 | 3.1.0 | 3.1.1 | 3.1.2 | 3.1.3 | 3.1.4 | 3.1.6 | 3.2.3 | 3.2.6 | 3.2.7 | 3.3.3 | 3.4.5 | 3.4.6 | 3.4.7 | 3.4.8 | 3.4.9 | 3.4.10 | 3.4.11 | 3.4.14",
+        versions: "2.0.8 | 2.3.0 | 2.3.3 | 2.3.10 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.1 | 3.0.2 | 3.0.3 | 3.0.5 | 3.0.6 | 3.0.8 | 3.0.9 | 3.0.11 | 3.1.0 | 3.1.1 | 3.1.2 | 3.1.3 | 3.1.4 | 3.1.6 | 3.2.3 | 3.2.6 | 3.2.7 | 3.3.3 | 3.4.5 | 3.4.6 | 3.4.7 | 3.4.8 | 3.4.9 | 3.4.10 | 3.4.11 | 3.4.14",
         link: "./javascript-libraries/",
       },
       {
@@ -1509,7 +1514,7 @@ const techData = [
       },
       {
         name: "http-proxy-middleware",
-        versions: "0.0.5 | 0.17.2 | 0.17.3 | 0.18.0 | 0.19.1 | 0.20.0 | 1.0.0 | 1.1.0 | 1.3.1 | 2.0.6 | 2.0.7 | 2.0.8 | 3.0.3",
+        versions: "0.0.5 | 0.17.2 | 0.17.3 | 0.18.0 | 0.19.1 | 0.20.0 | 1.0.0 | 1.1.0 | 1.3.1 | 2.0.6 | 2.0.7 | 2.0.8 | 3.0.3 | 4.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2158,6 +2163,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "sigstore-core",
+        versions: "2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "simple-git",
         versions: "3.36.0",
         link: "./javascript-libraries/",
@@ -2549,7 +2559,7 @@ const techData = [
       },
       {
         name: "xmldom",
-        versions: "0.1.31 | 0.6.0 | 0.9.8",
+        versions: "0.1.31 | 0.6.0 | 0.7.13 | 0.9.8",
         link: "./javascript-libraries/",
       },
       {
@@ -2956,7 +2966,7 @@ const techData = [
       },
       {
         name: "CakePHP",
-        versions: "2.10.24",
+        versions: "2.10.24 | 4.4.18 | 5.0.11",
         link: "./cakephp/",
       },
       {
@@ -2966,7 +2976,7 @@ const techData = [
       },
       {
         name: "CraftCMS",
-        versions: "3.9.15 | 4.18.7",
+        versions: "3.9.15 | 4.18.7 | 4.18.9",
         link: "./craftcms/",
       },
       {
