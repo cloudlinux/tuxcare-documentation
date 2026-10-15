@@ -94,6 +94,11 @@ export default {
                     path: '/els-for-os/ubuntu-20-04-els/',
                     icon: '/images/Ubuntu.webp',
                 },
+                {
+                    title: 'Resources',
+                    type: 'section-header',
+                    icon: '/images/star.webp',
+                },
                 "/els-for-os/machine-readable-security-data/",
                 "/els-for-os/managing-els-repository/",
                 "/els-for-os/tracking-security-updates/",
@@ -128,6 +133,11 @@ export default {
                 {
                     path: '/els-for-runtimes/ruby/',
                     icon: '/images/ruby.webp',
+                },
+                {
+                    title: 'Resources',
+                    type: 'section-header',
+                    icon: '/images/star.webp',
                 },
                 "/els-for-runtimes/machine-readable-security-data/",
                 "/els-for-runtimes/tracking-security-updates/",
