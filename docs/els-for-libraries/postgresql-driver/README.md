@@ -1,4 +1,4 @@
-# PostgreSQL driver
+# PostgreSQL Driver
 
 TuxCare's Endless Lifecycle Support (ELS) for PostgreSQL driver provides security patches and selected bug fixes that are integral to the stable operation of applications using the PostgreSQL driver.
 

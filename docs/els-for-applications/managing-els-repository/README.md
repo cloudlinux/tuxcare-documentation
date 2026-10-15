@@ -1,8 +1,8 @@
-# Managing the ELS repository
+# Managing the ELS Repository
 
 This page provides instructions for upgrading to newer TuxCare-patched application versions in the Endless Lifecycle Support (ELS) repository.
 
-## Upgrading to a newer TuxCare version
+## Upgrading to a Newer TuxCare Version
 
 <ELSSteps>
 
@@ -26,7 +26,7 @@ This page provides instructions for upgrading to newer TuxCare-patched applicati
 
 If you encounter any issues, please contact [TuxCare support](https://tuxcare.com/support-portal/).
 
-## Removing the ELS repository
+## Removing the ELS Repository
 
 The ELS repository is removed by running the installation script with the `--delete` flag.
 
@@ -66,7 +66,7 @@ sh install-postgresql-els-repo.sh --delete
 
 </TableTabs>
 
-## Source code
+## Source Code
 
 TuxCare provides source code for patched applications in the [Nexus repository](https://nexus.repo.tuxcare.com). Source archives and JARs follow the standard naming conventions with a `-sources` classifier or suffix.
 

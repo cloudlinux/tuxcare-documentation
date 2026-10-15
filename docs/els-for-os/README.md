@@ -36,7 +36,7 @@ TuxCare provides technical support according to the standard [support policy](ht
 	
 It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/) and to TuxCare’s online knowledge base.
 
-## Vulnerability coverage
+## Vulnerability Coverage
 
 TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the severity of security vulnerabilities. Our severity rating system integrates both NVD scoring and vendor scoring (when available); when the vendor's score is lower than the NVD score, we prioritize the NVD score.
 
@@ -44,7 +44,7 @@ TuxCare shall provide security patches for high- and critical-risk vulnerabili
 
 Custom coverage options are available, including a 10-pack of customer-directed patches for clients who need CVEs patched outside of the ELS scope. Specific details regarding these coverage options and their pricing can be obtained by contacting our sales team.
 
-## Target response times
+## Target Response Times
 
 Aligning with many industry standards and regulatory requirements, TuxCare is committed to delivering timely security updates. For instance, the Payment Card Industry Data Security Standard (PCI DSS) mandates that all 'High' vulnerabilities (CVSS score of 7.0+) must be addressed within 30 days. Other regulations and standards, such as the Health Insurance Portability and Accountability Act (HIPAA) for healthcare or the Federal Information Security Management Act (FISMA) for government agencies, uphold similar requirements.
 
@@ -76,7 +76,7 @@ You can track the status of vulnerabilities and their corresponding fixes via [t
 * [Vulnerabilities](https://tuxcare.com/cve-tracker/)
 * [Fixes](https://tuxcare.com/cve-tracker/fixes/)
 
-## CVE status definition
+## CVE Status Definition
 
 - Needs Triage: Vulnerability information received and pending initial review
 - In Research: Investigating the details of the vulnerability
@@ -88,11 +88,11 @@ You can track the status of vulnerabilities and their corresponding fixes via [t
 - Not Vulnerable: The vulnerability does not affect our version
 - Already Fixed: The vulnerability has already been addressed by the vendor
 
-## Supported packages
+## Supported Packages
 
 TuxCare's Endless Lifecycle Support provides updates for a comprehensive list of packages integral to server operations (100+ packages), providing maximum security for your operating system. You can view the full list of supported packages for each operating system, as well as get detailed information on the patched Common Vulnerabilities and Exposures (CVEs), in the [TuxCare CVE Tracker](https://tuxcare.com/cve-tracker/products/). The list of supported packages may change as projects can be added or removed from the list. Support for additional packages can be provided on request.
 
-## Live patching for ELS systems
+## Live Patching for ELS Systems
 
 TuxCare provides KernelCare live patching for **Ubuntu 18.04 ELS** and **CentOS 7 ELS** systems. [KernelCare](https://docs.tuxcare.com/live-patching-services/) is a product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It can be further enhanced with LibCare providing live security patches for critical shared libraries – openssl and glibc. Updating both the kernel and these libraries requires a system reboot while updating other packages does not. Using ELS, KernelCare and LibCare together provides comprehensive protection for your entire system without reboots and downtime.
 

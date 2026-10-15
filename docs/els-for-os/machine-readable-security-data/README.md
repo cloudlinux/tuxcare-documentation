@@ -9,7 +9,7 @@ TuxCare provides the following security updates for ELS for OS:
 
 Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/fixes) and [security.tuxcare.com](https://security.tuxcare.com).
 
-## Security data feeds
+## Security Data Feeds
 
 | OS | Errata | OVAL | CSAF | RSS |
 |----|--------|------|------|-----|
@@ -31,19 +31,19 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 | Ubuntu 18.04 ELS | [errata](https://security.tuxcare.com/errata/els_os/ubuntu18.04els/) | [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu18.04els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/ubuntu18.04els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Ubuntu+18.04+ELS) |
 | Ubuntu 20.04 ELS | [errata](https://security.tuxcare.com/errata/els_os/ubuntu20.04els/) | [oval.xml](https://security.tuxcare.com/oval/els_os/ubuntu20.04els/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_os/ubuntu20.04els/) | [rss](https://tuxcare.com/cve-tracker/api/products/export/rss?product=Ubuntu+20.04+ELS) |
 
-## Errata advisories
+## Errata Advisories
 
 TuxCare Endless Lifecycle Support provides qualified security and selected bug-fix errata advisories across all architectures. They can help users track which CVEs are resolved and which bugs have been addressed.
 
 You can view the full list of released fixes on [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/fixes/).
 
-## OVAL patch definitions
+## OVAL Patch Definitions
 
 Leveraging the Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
 
 Identifying the vulnerabilities that apply to your systems is an important task for IT and InfoSec teams, and at TuxCare we make it easy. We provide OVAL data that contain instructions to the vulnerability scanner to determine the addressed vulnerabilities from the ELS updates. OVAL streams for each OS are listed in the [Security data feeds](#security-data-feeds) table above.
 
-### How to use OpenSCAP with TuxCare ELS
+### How to Use OpenSCAP With TuxCare ELS
 
 OpenSCAP is an open source vulnerability scanner and compliance tool and it can be used to scan a system protected by TuxCare ELS. The following steps show how to produce a vulnerability report for the system:
 
@@ -118,7 +118,7 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
    oval:com.tuxcare.clsa:def:1694538670 false patch [CLSA-2023:1694538670], [CVE-2022-40433] Fix CVE(s): CVE-2022-40433
    ```
 
-### How to integrate the OVAL data with a new vulnerability scanner
+### How to Integrate the OVAL Data With a New Vulnerability Scanner
 
 Identifying the vulnerabilities that apply to your systems is an important task for IT and InfoSec teams, and at TuxCare we make it easy.
 
@@ -138,7 +138,7 @@ TuxCare publishes the following CSAF files at [security.tuxcare.com](https://sec
 * [csaf.data.security.tuxcare.com](https://csaf.data.security.tuxcare.com/)
 * [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
 
-## RSS release feeds
+## RSS Release Feeds
 
 TuxCare provides RSS feeds for tracking new ELS releases. RSS links for each OS are listed in the [Security data feeds](#security-data-feeds) table above.
 

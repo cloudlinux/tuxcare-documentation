@@ -6,7 +6,7 @@ head:
 ---
 <!-- markdownlint-disable MD040 MD033 -->
 
-# Installation instructions of a local mirror with ELS updates
+# Installation Instructions of a Local Mirror With ELS Updates
 
 We provide the ability to create local mirrors of Endless Lifecycle Support and Extended Security Updates repositories.
 

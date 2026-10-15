@@ -93,7 +93,7 @@ Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.
 | Alpine Linux 3.23 | [errata](https://security.tuxcare.com/errata/els_alt_ruby/alpinelinux3.23/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/alpinelinux3.23/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
 | Alpine Linux 3.24 | [errata](https://security.tuxcare.com/errata/els_alt_ruby/alpinelinux3.24/) | — | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
 
-## How to use OVAL
+## How to Use OVAL
 
 OVAL can be used with the OpenSCAP tool.
 
@@ -116,7 +116,7 @@ OVAL can be used with the OpenSCAP tool.
    oscap oval eval --results result.xml --report report.xml oval.xml
    ```
 
-## How to use CSAF
+## How to Use CSAF
 
 Common Security Advisory Framework (CSAF) is a machine-readable format, standardized by [OASIS](https://www.csaf.io/). TuxCare publishes CSAF VEX and Security Advisory files in CSAF 2.0 format at [security.tuxcare.com](https://security.tuxcare.com/csaf/v2/).
 

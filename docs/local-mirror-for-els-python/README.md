@@ -4,7 +4,7 @@ head:
     - name: robots
       content: noindex, nofollow
 ---
-# Installation instructions of a local mirror for ELS Python
+# Installation Instructions of a Local Mirror for ELS Python
 
 We provide the ability to create local mirrors of Python for Endless Lifecycle Support (ELS) updates.
 
