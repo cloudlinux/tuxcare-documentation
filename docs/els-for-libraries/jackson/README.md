@@ -6,7 +6,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Jackson provides security patches 
 
 * Jackson 1.9.13, 2.8.11, 2.9.10.3, 2.11.1, 2.11.3, 2.12.1, 2.12.2, 2.12.7.1, 2.13.4.2, 2.14.1, 2.14.2, 2.17.1, 2.17.2, 2.17.3
 
-Specific supported artifacts are listed in the [CVE Tracker](https://tuxcare.com/cve-tracker/products?product=Jackson).
+Specific supported artifacts are listed in the [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Jackson).
 
 ## Installation
 
@@ -106,7 +106,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Jackson) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Jackson) — Patched versions and changelogs
-* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Jackson) — Full list of product parts covered by ELS
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=Jackson&ecosystem=java) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.codehaus.jackson/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [Source code](/els-for-libraries/managing-els-repository/#javaSources) — Access source JARs in Nexus
 * ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)

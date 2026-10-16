@@ -172,7 +172,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=phpunit%2Fphpunit) — Track vulnerability fixes and updates
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=phpunit%2Fphpunit) — Patched versions and changelogs
-* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?q=phpunit%2Fphpunit) — Components covered by ELS
+* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=phpunit%2Fphpunit) — Components covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/phpunit/phpunit/) — Vulnerability Exploitability eXchange feed
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
