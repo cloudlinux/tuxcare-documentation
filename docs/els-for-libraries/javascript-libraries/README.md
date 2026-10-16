@@ -213,7 +213,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **sanitize-html** 1.27.5
 * **semver** 2.3.2, 4.3.6, 5.0.3, 5.1.0, 5.3.0, 5.6.0, 6.3.0, 7.0.0, 7.1.3, 7.3.2, 7.3.4, 7.3.5, 7.3.8
 * **semver-regex** 2.0.0
-* **send** 0.1.0, 0.17.2, 0.18.0
+* **send** 0.0.4, 0.1.0, 0.13.2, 0.17.2, 0.18.0
 * **sentry-browser** 5.7.1
 * **serialize-javascript** 1.9.1, 2.1.2, 3.1.0, 4.0.0, 5.0.1, 6.0.2, 7.1.1
 * **seroval** 1.5.6

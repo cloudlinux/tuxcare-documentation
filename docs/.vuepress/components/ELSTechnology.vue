@@ -2119,7 +2119,7 @@ const techData = [
       },
       {
         name: "send",
-        versions: "0.1.0 | 0.17.2 | 0.18.0",
+        versions: "0.0.4 | 0.1.0 | 0.13.2 | 0.17.2 | 0.18.0",
         link: "./javascript-libraries/",
       },
       {
