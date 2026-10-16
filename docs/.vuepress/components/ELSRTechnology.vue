@@ -61,7 +61,7 @@
 const runtimes = [
   {
     name: ".NET",
-    versions: "6 | 8 | 10",
+    versions: "1.1 | 2.0 | 2.2 | 6 | 8 | 10",
     link: "./dotnet/",
     icon: "/images/csharp.webp",
   },
