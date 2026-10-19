@@ -11,10 +11,10 @@ Endless Lifecycle Support (ELS) for .NET from TuxCare provides security fixes fo
 | **Windows 11** (24H2, 23H2, 22H2 E/Edu)                 |    ✓     |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |      x64      |
 | **Windows 10** (22H2)                                   |    ✓     |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |      x64      |
 | **Windows Server** 2025                                 |    ✓     |    ✓     |    ✓     |   —    |   ✓    |    ✓    |      x64      |
-| **Windows Server** 2022, 2019, 2016, 2012-R2, 2012      |    ✓¹    |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |    x64, x86   |
-| **Windows Server Core** 2022, 2019, 2016, 2012-R2, 2012 |    ✓¹    |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |    x64, x86   |
+| **Windows Server** 2022, 2019, 2016, 2012-R2, 2012      |    ✓*    |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |    x64, x86   |
+| **Windows Server Core** 2022, 2019, 2016, 2012-R2, 2012 |    ✓*    |    ✓     |    ✓     |   ✓    |   ✓    |    ✓    |    x64, x86   |
 
-¹ .NET 1.1 supports Windows Server 2012 R2 and later; Windows Server 2012 is not supported.
+<sup>*</sup> .NET 1.1 supports Windows Server 2012 R2 and later; Windows Server 2012 is not supported.
 
 <ContactSales text="Other versions and architectures available upon request. Contact sales@tuxcare.com for more information." />
 
@@ -28,7 +28,7 @@ Choose the component that fits your use case. For more details, refer to the [of
 
 The .NET SDK (Software Development Kit) is the recommended option if you plan to develop, build, test, or publish .NET applications. It includes the .NET Runtime (required to run .NET apps), the ASP.NET Core Runtime (for hosting web applications out of the box), and the .NET CLI and build tools for compiling and managing your projects.
 
-With the SDK, you won't need to install separate runtimes for ASP.NET Core or the Desktop environment - everything is bundled together to streamline development and deployment.
+With the SDK, you won't need to install separate runtimes for ASP.NET Core or the Desktop environment — the SDK bundles everything together to streamline development and deployment.
 
   </template>
 
@@ -83,7 +83,7 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
    Download the installer from the following link:
 
    ```text
-   https://windows.tuxcare.com/php/TuxCare.Installer.exe
+   https://windows.tuxcare.com/TuxCare.Installer.exe
    ```
 
    Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
@@ -118,7 +118,7 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
    | `dotnet-sdk-<version>-win-<arch>.exe` | .NET SDK (includes the runtimes) |
    | `<arch>` in the file name | Architecture: `x64` or `x86` |
 
-   You can select several installers from several versions at once — .NET versions are installed side by side.
+   You can select several installers from several versions at once — the installer puts .NET versions side by side.
 
    When your selection is ready, click **Continue**.
 
@@ -189,7 +189,23 @@ The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer
 
    Listing and downloading also work without administrator rights.
 
-2. Register with your license key
+2. Download the script
+
+   Download the script to the current folder:
+
+   ```text
+   Invoke-WebRequest -Uri https://windows.tuxcare.com/tuxcare-installer.ps1 -OutFile tuxcare-installer.ps1
+   ```
+
+   :::tip
+   If PowerShell refuses to run the script, allow it for the current session:
+
+   ```text
+   Set-ExecutionPolicy -Scope Process Bypass
+   ```
+   :::
+
+3. Register with your license key
 
    Register this server once:
 
@@ -197,7 +213,7 @@ The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer
    .\tuxcare-installer.ps1 -LicenseKey <license-key>
    ```
 
-3. List the available installers
+4. List the available installers
 
    The list shows what your license offers and marks the installed files:
 
@@ -205,7 +221,7 @@ The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer
    .\tuxcare-installer.ps1 -List -Product dotnet
    ```
 
-4. Install the runtimes and SDKs
+5. Install the runtimes and SDKs
 
    Use the file names shown by `-List`. You can use wildcards:
 
@@ -213,19 +229,13 @@ The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer
    .\tuxcare-installer.ps1 -Install dotnet-sdk-8.0.416-win-x64.exe,aspnetcore-runtime-8.0.22-win-x64.exe
    ```
 
-5. Verify the installation
+6. Verify the installation
 
    ```text
    dotnet --list-sdks
    ```
 
 </ELSSteps>
-
-To uninstall, run:
-
-```text
-.\tuxcare-installer.ps1 -Uninstall aspnetcore-runtime-8.0.22-win-x64.exe
-```
 
 To only download the installers without installing them (to `%USERPROFILE%\Downloads\TuxCare` by default), run:
 
@@ -235,7 +245,20 @@ To only download the installers without installing them (to `%USERPROFILE%\Downl
 
 The script saves the downloads as `<OutputDir>\dotnet\<version>\<build>\<file>` and does not install or record anything. Run `.\tuxcare-installer.ps1 -Help` for all options, for example `-Token`, `-Force`, and `-Delete`.
 
-Exit codes: `0` success, `1` repository or download failure, `2` already registered (use `-Force`), `3` registration failed or no token, `4` nothing matched, `5` install failed, `6` uninstall failed, `12` unregister failed, `14` administrator rights needed, `15` `-Delete` needs `-UninstallProducts` or `-KeepProducts`.
+The script returns these exit codes:
+
+| Code | Meaning |
+| --- | --- |
+| `0` | Success |
+| `1` | Repository or download failure |
+| `2` | Already registered (use `-Force` to register again) |
+| `3` | Registration failed or no token |
+| `4` | None of the given names matched |
+| `5` | Install failed |
+| `6` | Uninstall failed |
+| `12` | Releasing the registration failed |
+| `14` | Administrator rights needed |
+| `15` | `-Delete` needs `-UninstallProducts` or `-KeepProducts` |
 
 </template>
 
@@ -245,7 +268,7 @@ Exit codes: `0` success, `1` repository or download failure, `2` already registe
 Manual installation is available only to customers who previously received an authentication token. New customers register with a license key in TuxCare Installer or the PowerShell script.
 :::
 
-Manual installation uses a tokenized URL that gives access to the TuxCare .NET for Windows repository. The token is placed right after the domain:
+Manual installation uses a tokenized URL that gives access to the TuxCare .NET for Windows repository. The token goes right after the domain:
 
 ```text
 https://windows.tuxcare.com/<YOUR-TOKEN>/dotnet/
@@ -261,7 +284,7 @@ https://windows.tuxcare.com/<YOUR-TOKEN>/dotnet/
    https://windows.tuxcare.com/<YOUR-TOKEN>/dotnet/
    ```
 
-   You will see a directory listing of all available .NET versions (e.g. `6.0/`, `8.0/`, `10.0/`). Click on the version you need.
+   You will see a directory listing of all available .NET versions (for example, `6.0/`, `8.0/`, `10.0/`). Click on the version you need.
 
 2. Download the .NET setup file
 
@@ -287,11 +310,11 @@ https://windows.tuxcare.com/<YOUR-TOKEN>/dotnet/
 
 ## Additional Configurations
 
-After installation, you can choose which .NET version each application uses, check what is installed, and uninstall .NET runtimes and SDKs.
+After installation, you can choose which .NET version each application uses, check which runtimes and SDKs you have, and uninstall them.
 
 ### Choose the .NET Version for an Application
 
-All .NET versions are installed side by side under `C:\Program Files\dotnet`, and each application picks its own. There is no default version to switch.
+.NET keeps all installed versions side by side under `C:\Program Files\dotnet`, and each application picks its own. There is no default version to switch.
 
 * **Runtime.** An application requests a runtime in its `*.runtimeconfig.json` file (for example, `Microsoft.NETCore.App 6.0.0`). .NET uses the highest installed patch of that version: with `6.0.37-tuxcare.1` and `6.0.37-tuxcare.3` installed, the application runs on `6.0.37-tuxcare.3`. Other major versions, such as .NET 8 and 10, do not affect it. To change this behavior, set `rollForward` in the application's `runtimeconfig.json`, set the `DOTNET_ROLL_FORWARD` environment variable, or start the application with `dotnet --fx-version <version> app.dll`.
 * **SDK.** The `dotnet` CLI uses the newest installed SDK. To use a specific SDK for a project, put a `global.json` file in the project folder:
@@ -396,7 +419,7 @@ All .NET versions are installed side by side under `C:\Program Files\dotnet`, an
 
 ### Uninstallation
 
-<TableTabs label="Choose uninstallation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer', Windows_Settings: 'Windows Settings', Control_Panel: 'Control Panel' }">
+<TableTabs label="Choose uninstallation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer', PowerShell_Script: 'PowerShell script', Windows_Settings: 'Windows Settings', Control_Panel: 'Control Panel' }">
 
 <template #TuxCare_Installer>
 
@@ -418,6 +441,24 @@ TuxCare.Installer.exe /uninstall /quiet UninstallProducts=1
 
 </template>
 
+<template #PowerShell_Script>
+
+To uninstall a runtime or SDK, run the script with the file name shown by `-List`:
+
+```text
+.\tuxcare-installer.ps1 -Uninstall aspnetcore-runtime-8.0.22-win-x64.exe
+```
+
+To remove everything installed with the script or TuxCare Installer and release the registration, run:
+
+```text
+.\tuxcare-installer.ps1 -Delete
+```
+
+The script asks whether to uninstall or keep the installed products. Add `-UninstallProducts` to uninstall them or `-KeepProducts` to keep them, and the script does not ask.
+
+</template>
+
 <template #Windows_Settings>
 
 Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** (or **Apps & Features** on older versions). Search for *.NET SDK* or *.NET Runtime* depending on what you've installed. Click on each entry and select **Uninstall**.
@@ -426,7 +467,7 @@ Open **Settings** &rarr; **Apps** &rarr; **Installed Apps** (or **Apps & Feature
 During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
 :::
 
-A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
+A dialog window appears. Click **Uninstall**. The process takes a few minutes. When it finishes, close the window.
 
 ![Uninstalling via Windows Settings](/images/dotnet-uninstall-settings.webp)
 
@@ -440,7 +481,7 @@ Open **Control Panel** &rarr; **Programs** &rarr; **Programs and Features**. Sea
 During the uninstall, a **"Files in use"** window can appear. Select the **"Do not close applications. A reboot will be required"** option and click **OK** to proceed.
 :::
 
-A dialog window will appear. Click **Uninstall**. It should take a few minutes. When the process is finished, close the window.
+A dialog window appears. Click **Uninstall**. The process takes a few minutes. When it finishes, close the window.
 
 ![Uninstalling via Control Panel](/images/dotnet-uninstall-controlpanel.webp)
 
@@ -468,7 +509,7 @@ After uninstalling .NET some files may remain in `C:\Program Files\dotnet\` and 
 
 * **"TuxCare .NET Standard Targeting Pack" stays in Settings &rarr; Apps after uninstalling an SDK.**
 
-  This package is shared with other SDKs on the machine, for example, the one Visual Studio installs. Windows keeps it while another SDK still depends on it. This is expected.
+  Other SDKs on the machine share this package, for example, the one Visual Studio installs. Windows keeps it while another SDK still depends on it, so you can leave it in place.
 
 * **What should I do if there are conflicts during installation?**
 
