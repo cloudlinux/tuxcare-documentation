@@ -2650,19 +2650,7 @@ The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer
 
 2. Download the script
 
-   Download the script to the current folder:
-
-   ```text
-   Invoke-WebRequest -Uri https://windows.tuxcare.com/tuxcare-installer.ps1 -OutFile tuxcare-installer.ps1
-   ```
-
-   :::tip
-   If PowerShell refuses to run the script, allow it for the current session:
-
-   ```text
-   Set-ExecutionPolicy -Scope Process Bypass
-   ```
-   :::
+   Download the [script](https://windows.tuxcare.com/tuxcare-installer.ps1) to the project folder.
 
 3. Register with your license key
 
