@@ -4,7 +4,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Protobuf provides security patches
 
 ## Supported Versions
 
-* Protobuf 2.5.0, 2.6.1, 3.19.6, 3.21.1, 3.21.9
+* Protobuf 2.5.0, 2.6.1, 3.6.1, 3.7.1, 3.12.0, 3.16.1, 3.19.2, 3.19.6, 3.21.1, 3.21.7, 3.21.9, 3.21.12
 
 ## Installation
 
