@@ -12,7 +12,7 @@ Here are the key features and characteristics of alt-php:
 
 * **User Segmentation** - alt-php allows hosting providers and web server administrators to provide different PHP versions for different users. Each user can choose the PHP version that suits their website.
 
-* **Enhanced Compatibility** - alt-php is designed to ensure maximum compatibility with various web applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of PHP applications.
+* **Enhanced Compatibility** - alt-php works with a wide range of web applications and frameworks. It includes optimizations and changes that make it compatible with many PHP applications.
 
 * **Updates and Support** - TuxCare provides regular updates for alt-php, including bug fixes, performance improvements, and updates for new PHP versions. This helps ensure the security and currency of PHP usage.
 
@@ -157,13 +157,13 @@ TuxCare provides additional security support for PHP versions after the end of s
 
 ### Useful Commands and Usage
 
-When you deploy an updated version of PHP through PHP ELS, using your system's regular update tool (yum, dnf, apt), the new version will be installed under `/opt/alt/php[version]/`. This means that all modules, configurations and additional files pertaining to this version will be contained inside that path. Different versions of PHP will each have their own path and can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
+When you deploy an updated version of PHP through PHP ELS with your system's regular update tool (yum, dnf, apt), the tool installs the new version under `/opt/alt/php[version]/`. This path contains all modules, configurations and additional files of this version. Each PHP version has its own path, so different versions can coexist without issues on the same system. Below you will find the location of all the relevant files, should you want to make any changes.
 
 <TableTabs>
 
   <template #Check_current_version_of_alt-php_packages>
 
-To check whether the package is installed and see its current version, use the following command based on your OS:
+To check whether your system has the package and see its current version, use the following command based on your OS:
 
   <CodeTabs :tabs="[
     { title: 'RPM', content: `sudo yum list installed | grep php` },
@@ -2537,7 +2537,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
 ## Installation on Windows
 
-TuxCare provides two ways to install ELS PHP on Windows: using the **TuxCare Installer** (recommended) — a graphical tool that automates the process, or **manually** by downloading and configuring PHP from the repository.
+TuxCare provides three ways to install ELS PHP on Windows: the **TuxCare Installer** (recommended) — a graphical tool that automates the process, the **PowerShell script** that does the same from the command line, or **manually** by downloading and configuring PHP from the repository.
 
 <ELSPrerequisites id="windows-prerequisites">
 
@@ -2550,11 +2550,11 @@ TuxCare provides two ways to install ELS PHP on Windows: using the **TuxCare Ins
 Customers who previously received an authentication token can continue to use it: select **Use previous token** in the TuxCare Installer, or use the tokenized URL for manual installation.
 :::
 
-<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)' }">
+<TableTabs label="Choose installation method: " :labels="{ TuxCare_Installer: 'TuxCare Installer (recommended)', PowerShell_Script: 'Manual (via PowerShell script)' }">
 
 <template #TuxCare_Installer>
 
-TuxCare Installer allows you to install and manage ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
+TuxCare Installer installs and manages ELS PHP versions through a graphical interface on Windows Server 2019, 2022, and 2025.
 
 <ELSSteps>
 
@@ -2563,55 +2563,64 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
    Download the installer from the following link:
 
    ```text
-   https://windows.tuxcare.com/php/TuxCare.Installer.exe
+   https://windows.tuxcare.com/TuxCare.Installer.exe
    ```
 
    Run the downloaded file. After the first run, the installer appears under **Settings > Apps**.
 
-2. Select Register
+2. Register with your license key
 
-   Click **Register**.
+   * If you registered on this machine before, the installer first shows **Register** and **Use previous token**. Click **Use previous token** to keep the current registration and go straight to the product list (step 3), or **Register** to register again with a license key, which releases the current registration. New customers do not see this screen and start from the next one.
 
-   ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
-
-   :::tip
-   If you previously registered on this machine with an authentication token and saved it, you can click **Use previous token** instead.
-   :::
-
-3. Register with your license key
+     ![TuxCare Installer selection window with the Register and Use previous token buttons](/images/php-installer-register.webp)
 
    * Click **I have a license key**.
 
      ![TuxCare Installer selection window with the I have a license key button highlighted](/images/php-installer-license-key.webp)
 
-   * Enter your license key to complete the registration.
+   * Enter your license key and click **Register**. Keep **Save token** ticked to reuse the registration next time.
 
      ![TuxCare PHP installer prompting for a license key or authentication token](/images/php-installer-token.webp)
 
-4. Select a PHP version
+   :::tip
+   If you have an authentication token instead of a license key, click **I have a token**.
+   :::
 
-   Tick the checkbox next to the version you want. **Only 1 version can be installed per installation**.
+3. Select a PHP version
+
+   Under **PHP**, expand a version (for example, **8.2.29**) and a build (for example, **tuxcare.els1**), and tick the archive you want. **Only 1 version can be installed per installation**.
 
    ![TuxCare PHP installer listing the available PHP versions with a checkbox beside each](/images/php-installer-version.webp)
 
    :::tip
-   If you already have a version installed, it will appear highlighted in green. When another version is selected, the installer will ask whether to **replace** the existing one or install it **alongside**.
+   The installer highlights already installed versions in green. To uninstall one, untick it and click **Continue**.
+
+   When you select a version while another PHP is already installed (by TuxCare Installer or found on the **Path**), the installer asks how to proceed:
+
+   * **Replace** — removes the previous installations, then installs the new version.
+   * **Alongside** — keeps them and installs the new version next to them.
 
    ![TuxCare PHP installer highlighting an already-installed PHP version in green and asking whether to replace it or install alongside it](/images/php-installer-versions-2.webp)
    :::
 
-5. Choose installation path and load modules
+   If your license does not cover a product, the installer shows it as **PHP (Not Authenticated)** with nothing to select.
 
-   * By default, the installer uses `C:\Program Files`.
+4. Choose installation path and load modules
+
+   * By default, the installer uses `C:\Program Files` and extracts the version to its own folder there.
    * Click **Change** to install to a different location.
-   * Click **Load** to fetch the required PHP archive.
+   * Click **Load** to fetch the PHP archive and list its modules.
    * Select the modules you need and click **Continue**.
 
    ![TuxCare PHP installer showing the installation path and the list of PHP modules available to select](/images/php-installer-load.webp)
 
-6. Verify the installation
+   The installer creates `php.ini` from the archive's `php.ini-production` with the selected modules enabled, and adds the PHP folder to the system **Path**. It also removes other PHP folders from the **Path**, so this version becomes the default.
 
-   Open **Command Prompt**, **PowerShell**, or **Terminal** and run:
+   When the installation finishes, the message **Updating completed successfully** confirms it.
+
+5. Verify the installation
+
+   Open a **new** **Command Prompt**, **PowerShell**, or **Terminal** window, so that it picks up the updated **Path**, and run:
 
    ```text
    php -v
@@ -2627,20 +2636,97 @@ TuxCare Installer allows you to install and manage ELS PHP versions through a gr
 
 </ELSSteps>
 
-During installation, the installer creates a folder with PHP configuration and selected modules, and adds TuxCare PHP to the **System PATH**.
+</template>
+
+<template #PowerShell_Script>
+
+The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer from the command line. The script and TuxCare Installer keep the same records, so each sees what the other installed.
+
+<ELSSteps>
+
+1. Open PowerShell as administrator
+
+   Listing and downloading also work without administrator rights.
+
+2. Download the script
+
+   Download the [script](https://windows.tuxcare.com/tuxcare-installer.ps1) to the project folder.
+
+3. Register with your license key
+
+   Register this server once:
+
+   ```text
+   .\tuxcare-installer.ps1 -LicenseKey <license-key>
+   ```
+
+4. List the available PHP builds
+
+   The list shows what your license offers and marks the installed builds:
+
+   ```text
+   .\tuxcare-installer.ps1 -List -Product php
+   ```
+
+5. Install a PHP version
+
+   Use the archive name shown by `-List`. You can use wildcards. `-Modules` lists the extensions to enable in `php.ini`:
+
+   ```text
+   .\tuxcare-installer.ps1 -Install 'php-8.2.29-*.zip' -Modules curl,mbstring,openssl,pdo_mysql
+   ```
+
+   To install to another folder without changing the **Path**, add `-InstallFolder` and `-NoPath`:
+
+   ```text
+   .\tuxcare-installer.ps1 -Install 'php-8.2.29-*.zip' -InstallFolder D:\PHP -NoPath
+   ```
+
+6. Verify the installation
+
+   Open a new terminal and run:
+
+   ```text
+   php -v
+   ```
+
+</ELSSteps>
+
+To only download the archives without installing them (to `%USERPROFILE%\Downloads\TuxCare` by default), run:
+
+```text
+.\tuxcare-installer.ps1 -Download 'php-8.2.*' -Product php -OutputDir C:\Downloads
+```
+
+The script saves the downloads as `<OutputDir>\php\<version>\<build>\<file>` and does not install or record anything. Run `.\tuxcare-installer.ps1 -Help` for all options, for example `-Token`, `-Force`, and `-Delete`.
+
+The script returns these exit codes:
+
+| Code | Meaning |
+| --- | --- |
+| `0` | Success |
+| `1` | Repository or download failure |
+| `2` | Already registered (use `-Force` to register again) |
+| `3` | Registration failed or no token |
+| `4` | None of the given names matched |
+| `5` | Install failed |
+| `6` | Uninstall failed |
+| `12` | Releasing the registration failed |
+| `14` | Administrator rights needed |
+| `15` | `-Delete` needs `-UninstallProducts` or `-KeepProducts` |
 
 </template>
 
 <template #Manual>
 
-Manual installation requires a tokenized URL (obtain via [sales@tuxcare.com](mailto:sales@tuxcare.com)) that gives access to the TuxCare PHP for Windows repository. The token is placed right after the domain:
+Manual installation requires a tokenized URL (obtain via [sales@tuxcare.com](mailto:sales@tuxcare.com)) that gives access to the TuxCare PHP for Windows repository. The token goes right after the domain:
 
 ```text
 https://windows.tuxcare.com/<YOUR-TOKEN>/php/
 ```
 
 :::warning Troubleshooting: browser credential prompts
-Always include a **trailing slash** at the end of your tokenized URL (e.g. `https://windows.tuxcare.com/TOKEN/php/`). Without it, the server may issue a redirect that drops the token, causing the browser to prompt for credentials. With the trailing slash, subfolder navigation works as expected.
+Always include a **trailing slash** at the end of your tokenized URL (for example, `https://windows.tuxcare.com/TOKEN/php/`). Without it, the server may issue a redirect that drops the token, causing the browser to prompt for credentials. With the trailing slash, subfolder navigation works as expected.
 
 <details>
 <summary>How to use a tokenized URL</summary>
@@ -2661,7 +2747,7 @@ https://windows.tuxcare.com/<YOUR-TOKEN>/php/
 - **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
 - **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)
 
-**Browsing subdirectories.** If you are prompted for credentials when entering a subdirectory, manually insert the token into the URL — add `<YOUR-TOKEN>/` right after `windows.tuxcare.com/` in the address bar.
+**Browsing subdirectories.** If the browser asks for credentials when you open a subdirectory, manually insert the token into the URL — add `<YOUR-TOKEN>/` right after `windows.tuxcare.com/` in the address bar.
 
 **Example walkthrough:**
 
@@ -2718,7 +2804,7 @@ curl -O "${BASE}${FILE}"
    https://windows.tuxcare.com/<YOUR-TOKEN>/php/
    ```
 
-   You will see a directory listing of all available PHP versions (e.g. `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
+   You will see a directory listing of all available PHP versions (for example, `5.6.40/`, `7.4.33/`, `8.1.33/`). Click on the version you need.
 
 2. Choose the correct archive
 
@@ -2740,7 +2826,7 @@ curl -O "${BASE}${FILE}"
 
 3. Extract the archive
 
-   Create a destination folder (e.g. `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
+   Create a destination folder (for example, `C:\PHP`) and extract the ZIP contents into it. Right-click the downloaded ZIP file, select **Extract All...**, set the destination, and click **Extract**.
 
    Alternatively, use PowerShell:
 
@@ -2800,7 +2886,7 @@ curl -O "${BASE}${FILE}"
    Zend Engine v3.4.0, Copyright (c) Zend Technologies
    ```
 
-   To verify that the required extensions are loaded, run `php -m`.
+   To list the loaded extensions and check that the ones you need are there, run `php -m`.
 
 </ELSSteps>
 
@@ -2831,18 +2917,25 @@ curl -O "${BASE}${FILE}"
 
 ### Additional Configurations
 
-Depending on your ELS PHP usage purpose, additional configurations may be required. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
+Depending on how you use ELS PHP, you may need additional configuration. You can integrate PHP with other tools, for example, IIS or WordPress. For further details, refer to the [official PHP documentation](https://www.php.net/manual/en/index.php).
 
 #### Change Default PHP Version
 
-If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**. Under *System variables*, find **Path** and click **Edit**. Move the desired PHP version's path to the top, and remove or move down other PHP paths. Click OK, restart your terminal, and verify with `php -v`.
+If you have multiple PHP versions installed and want to change the default, update your **System Path** environment variable:
+
+1. Open **Settings > System > About** → **Advanced system settings** → **Environment Variables**.
+2. Under *System variables*, find **Path** and click **Edit**.
+3. Move the desired PHP version's folder to the top, and remove or move down the other PHP folders.
+4. Click **OK**, open a new terminal, and verify with `php -v`.
+
+Installing a version with TuxCare Installer, or with the PowerShell script without `-NoPath`, makes it the default automatically.
 
 #### PHP Extensions List
 
 ELS PHP for Windows comes with two kinds of extensions. **Built-in** extensions are part of the PHP build and always available. **Loadable** extensions are DLLs in the `ext` folder that you enable in one of two ways:
 
 * **TuxCare Installer** — select the modules you need at the **Choose installation path and load modules** step.
-* **Manually** — open `php.ini` in your PHP installation directory (e.g. `C:\PHP`) and remove the semicolon `;` at the start of the `extension=` line. Add `;` to disable an extension.
+* **Manually** — open `php.ini` in your PHP installation directory (for example, `C:\PHP`) and remove the semicolon `;` at the start of the `extension=` line. Add `;` to disable an extension.
 
 Extensions marked *TS only* or *NTS only* are available only in the Thread Safe or Non-Thread Safe build.
 
@@ -3731,9 +3824,55 @@ memory_limit=256M
 
 #### Uninstallation
 
-To **uninstall a PHP version manually**, delete the PHP installation directory (e.g. `C:\PHP`) and remove the corresponding path from **System Path**.
+To **uninstall a PHP version via TuxCare Installer**, run the installer, untick the installed (green) version, and click **Continue**. The installer moves the PHP folder to `%APPDATA%\TuxCareInstaller\Backups\<folder>_<date>_<time>` instead of deleting it, so you can recover your `php.ini` and files, and removes the folder from the **Path**.
 
-To **uninstall via TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer* and click **Uninstall**.
+To **remove everything installed by TuxCare Installer**, open **Settings > Apps**, find *TuxCare Installer*, and click **Uninstall**. Then choose **Uninstall products** to remove all products installed by TuxCare Installer, or **Keep products** to remove only the installer.
+
+A silent removal of TuxCare Installer, as deployment tools run it, cannot ask this question and keeps the products:
+
+```text
+TuxCare.Installer.exe /uninstall /quiet
+```
+
+To uninstall the products too and release the registration, add `UninstallProducts=1`:
+
+```text
+TuxCare.Installer.exe /uninstall /quiet UninstallProducts=1
+```
+
+To **uninstall a PHP version with the PowerShell script**, run it with the archive name shown by `-List`:
+
+```text
+.\tuxcare-installer.ps1 -Uninstall 'php-8.2.29-*.zip'
+```
+
+To remove everything installed with the script or TuxCare Installer and release the registration, run:
+
+```text
+.\tuxcare-installer.ps1 -Delete
+```
+
+The script asks whether to uninstall or keep the installed products. Add `-UninstallProducts` to uninstall them or `-KeepProducts` to keep them, and the script does not ask.
+
+To **uninstall a PHP version manually**, delete the PHP installation directory (for example, `C:\PHP`) and remove the corresponding path from **System Path**.
+
+### Frequent Issues
+
+* **PHP shows "(Not Authenticated)" in TuxCare Installer.**
+
+  Your license or token does not cover PHP. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+
+* **`php -v` still shows the old version, or "php is not recognized".**
+
+  Open a new terminal: a terminal that was already open keeps the old **Path**. If the problem persists, check the order of PHP folders in the **System Path** (see [Change Default PHP Version](#change-default-php-version)).
+
+* **An extension does not load.**
+
+  Check that its line in `php.ini` has no leading `;` and that `php.ini` contains `extension_dir="ext"`. TuxCare Installer writes `extension_dir` when at least one module is available.
+
+* **I uninstalled a version by mistake.**
+
+  TuxCare Installer keeps its folder in `%APPDATA%\TuxCareInstaller\Backups`. Move the folder back to its original place and add it to the **Path** again, or install the version again.
 
 ## SaxonC Use Case
 
