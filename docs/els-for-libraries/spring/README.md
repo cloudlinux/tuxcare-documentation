@@ -74,7 +74,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-amqp | 2.1.8.RELEASE, 2.3.16, 2.4.12, 2.4.17, 3.0.10, 3.1.8, 3.1.12 |
+| spring-amqp | 2.1.4.RELEASE, 2.1.8.RELEASE, 2.2.12.RELEASE, 2.3.6, 2.3.7, 2.3.10, 2.3.16, 2.4.4, 2.4.12, 2.4.16, 2.4.17, 3.0.10, 3.1.8, 3.1.11, 3.1.12, 3.2.8, 3.2.11, 3.2.12 |
 | spring-rabbit | 2.1.8.RELEASE, 2.3.16, 2.4.12, 2.4.17, 3.0.10, 3.1.8, 3.1.12 |
 | spring-rabbit-junit | 2.1.8.RELEASE, 2.3.16, 2.4.12, 2.4.17, 3.0.10, 3.1.8, 3.1.12 |
 | spring-rabbit-test | 2.1.8.RELEASE, 2.3.16, 2.4.12, 2.4.17, 3.0.10, 3.1.8, 3.1.12 |
@@ -95,7 +95,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | spring-batch-infrastructure-tests | 4.3.3, 4.3.8 |
 | spring-batch-samples | 4.3.9 |
 | spring-batch-docs | 4.3.3, 4.3.8, 4.3.9 |
-| spring-batch | 5.1.2, 5.1.3, 5.2.6 |
+| spring-batch | 3.0.10.RELEASE, 4.0.1.RELEASE, 4.1.2.RELEASE, 4.2.4.RELEASE, 4.3.2, 4.3.3, 4.3.8, 4.3.9, 4.3.10, 5.0.4, 5.1.2, 5.1.3, 5.2.4, 5.2.6 |
 | spring-batch-bom | 5.1.2, 5.1.3, 5.2.6 |
 </template>
 
@@ -255,7 +255,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-security | 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.1.6 |
+| spring-security | 5.1.5.RELEASE, 5.5.8, 5.6.7, 5.6.9, 5.6.10, 5.7.7, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.7, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.9, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
 | spring-security-bom | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.5.8, 5.6.9, 5.6.10, 5.7.7, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.9, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
 | spring-security-core | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.5.8, 5.6.9, 5.6.10, 5.7.7, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.9, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
 | spring-security-config | 4.2.12.RELEASE, 4.2.20.RELEASE, 5.5.8, 5.6.9, 5.6.10, 5.7.7, 5.7.11, 5.7.12, 5.7.14, 5.8.14, 5.8.15, 5.8.16, 6.0.8, 6.1.6, 6.2.2, 6.2.7, 6.2.8, 6.3.9, 6.3.10, 6.4.3, 6.4.13, 6.5.11 |
@@ -295,14 +295,14 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | spring-ws-security | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.15, 4.0.17, 4.1.4 |
 | spring-ws-test | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.15, 4.0.17, 4.1.4 |
 | spring-ws-support | 3.0.7.RELEASE, 3.1.6, 3.1.8, 4.0.15, 4.0.17, 4.1.4 |
-| spring-ws | 3.0.7.RELEASE, 3.1.6, 3.1.8 |
+| spring-ws | 2.4.5.RELEASE, 3.0.7.RELEASE, 3.0.10.RELEASE, 3.1.6, 3.1.7, 3.1.8, 4.0.8, 4.0.10, 4.0.11, 4.0.14, 4.0.15, 4.0.17 |
 </template>
 
 <template #Integration>
 
 | Module | Version |
 |---|---|
-| spring-integration | 5.5.16, 5.5.20, 6.2.11, 6.3.11, 6.4.10, 6.5.10 |
+| spring-integration | 5.3.2.RELEASE, 5.5.16, 5.5.19, 5.5.20, 6.0.9, 6.1.5, 6.2.5, 6.2.11, 6.3.10, 6.3.11, 6.4.9, 6.4.10, 6.5.9, 6.5.10 |
 | spring-integration-amqp | 5.5.16, 5.5.20, 6.2.11, 6.3.11, 6.4.10, 6.5.10 |
 | spring-integration-bom | 5.5.16, 5.5.20, 6.2.11, 6.3.11, 6.4.10, 6.5.10 |
 | spring-integration-core | 5.5.16, 5.5.20, 6.2.11, 6.3.11, 6.4.9, 6.4.10, 6.5.10 |
@@ -347,7 +347,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-hateoas | 0.25.2.RELEASE, 1.5.6, 2.0.7, 2.3.4, 2.4.1 |
+| spring-hateoas | 0.23.0.RELEASE, 0.25.2.RELEASE, 1.1.1.RELEASE, 1.1.2.RELEASE, 1.1.5.RELEASE, 1.2.6, 1.2.8, 1.5.5, 1.5.6, 2.0.7, 2.2.5, 2.3.4, 2.4.1, 2.5.3 |
 </template>
 
 <template #LDAP>
@@ -369,7 +369,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-graphql | 1.0.6, 1.1.7, 1.2.9, 1.3.5, 1.3.7, 1.4.6 |
+| spring-graphql | 1.0.6, 1.1.7, 1.2.4, 1.2.9, 1.3.5, 1.3.7, 1.4.6 |
 | spring-graphql-docs | 1.0.6, 1.3.5, 1.3.7, 1.4.6 |
 | spring-graphql-test | 1.0.6, 1.2.9, 1.3.7, 1.4.6 |
 </template>
@@ -378,7 +378,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-retry | 1.3.4, 2.0.10, 2.0.11, 2.0.12 |
+| spring-retry | 1.0.2.RELEASE, 1.2.1.RELEASE, 1.3.4, 2.0.10, 2.0.11, 2.0.12 |
 </template>
 
 <template #Plugin>
@@ -404,7 +404,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-pulsar | 1.0.12, 1.1.13, 1.2.13, 1.2.18 |
+| spring-pulsar | 1.0.12, 1.1.12, 1.1.13, 1.2.13, 1.2.18 |
 | spring-pulsar-reactive | 1.0.12, 1.1.13, 1.2.13, 1.2.18 |
 | spring-pulsar-cache-provider | 1.0.12, 1.1.13, 1.2.13, 1.2.18 |
 | spring-pulsar-cache-provider-caffeine | 1.0.12, 1.1.13, 1.2.13, 1.2.18 |
