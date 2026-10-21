@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for node-fetch from TuxCare provides security fi
 
 ## Supported Versions
 
-* node-fetch 1.6.3, 1.7.3, 2.6.1
+* node-fetch 1.6.3, 1.7.3, 2.6.0, 2.6.1
 
 ## Installation
 

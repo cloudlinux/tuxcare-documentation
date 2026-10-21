@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for express from TuxCare provides security fixes
 
 ## Supported Versions
 
-* express 3.4.8, 3.21.2, 4.17.1, 4.18.1, 4.18.2, 4.18.3, 4.19.2, 4.22.3
+* express 3.1.2, 3.4.8, 3.21.2, 4.16.3, 4.17.1, 4.18.1, 4.18.2, 4.18.3, 4.19.2, 4.22.3
 
 ## Installation
 
