@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for jQuery UI from TuxCare provides security fix
 
 ## Supported Versions
 
-* jQuery UI 1.10.4
+* jQuery UI 1.10.3, 1.10.4
 
 ## Installation
 
