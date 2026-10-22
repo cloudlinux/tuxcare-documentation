@@ -3276,7 +3276,7 @@ const techData = [
       },
       {
         name: "Symfony HttpKernel",
-        versions: "3.4.x | 7.4.x",
+        versions: "3.4.x | 4.4.x | 7.4.x",
         link: "./symfony/",
       },
       {
