@@ -37,7 +37,8 @@ alt-python provides a more flexible and convenient environment for working with 
 | Ubuntu                                                                  | DEB          | 24.04               | 2.7, 3.6, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14      |
 | Debian                                                                  | DEB          | 10, 11              | 2.7, 3.6, 3.7, 3.10, 3.11, 3.12, 3.13, 3.14           |
 | Debian                                                                  | DEB          | 12, 13              | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
-| Alpine Linux                                                            | APK          | 3.23, 3.24          | 3.6, 3.7, 3.8, 3.9                                    |
+| Alpine Linux                                                            | APK          | 3.23                | 3.6, 3.7, 3.8, 3.9                                    |
+| Alpine Linux                                                            | APK          | 3.24                | 3.6, 3.7, 3.8, 3.9, 3.10                              |
 
 Every `alt-python` package ships its own bundled `pip`, `setuptools` and `wheel`. These are covered by ELS and patched together with the interpreter.
 
