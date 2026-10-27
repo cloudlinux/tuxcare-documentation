@@ -5,11 +5,6 @@ export default [
         link: "/tuxcare/",
     },
     {
-        title: "TuxCare Radar",
-        description: "Rather than relying on the conventional scoring mechanisms of legacy scanning solutions, TuxCare Radar takes a holistic, comprehensive approach to reveal the actual real-world risk that vulnerabilities pose.",
-        link: "/radar/",
-    },
-    {
         title: "TuxCare Enterprise Support",
         description: "TuxCare Enterprise Support provides a TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with 16 years of support coverage, delivers an extension of an additional 4.5 years of security fixes for Critical and High-risk vulnerabilities and FIPS-compliant security patches for select minor versions, minimizes vulnerability windows with rebootless security patches and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.",
         link: "/enterprise-support-for-almalinux/",

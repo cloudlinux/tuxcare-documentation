@@ -7,7 +7,6 @@ The full text of every documentation page, concatenated into a single file, is a
 ## Products
 
 - [TuxCare](https://docs.tuxcare.com/tuxcare/): Overview of TuxCare services that automate, simplify, and enhance Linux operations.
-- [TuxCare Radar](https://docs.tuxcare.com/radar/): Vulnerability risk assessment and prioritization that reveals real-world risk beyond conventional scanner scores.
 - [TuxCare Enterprise Support](https://docs.tuxcare.com/enterprise-support-for-almalinux/): Extended support and security fixes for AlmaLinux and Rocky Linux.
 
 ## Live patching
