@@ -34,6 +34,7 @@ alt-ruby provides a more flexible and convenient environment for working with di
 | EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0 |
 | Ubuntu                                                                  | DEB          | 16.04, 18.04, 20.04 | 3.2, 3.3, 3.4, 3.5, 4.0                     |
 | Ubuntu                                                                  | DEB          | 22.04, 24.04        | 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0      |
+| Ubuntu                                                                  | DEB          | 26.04               | 3.3, 3.4, 4.0                               |
 | Debian                                                                  | DEB          | 10                  | 3.2, 3.3, 3.4, 3.5, 4.0                     |
 | Debian                                                                  | DEB          | 11                  | 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0      |
 | Debian                                                                  | DEB          | 12, 13              | 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 4.0 |

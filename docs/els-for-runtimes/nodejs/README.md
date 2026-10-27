@@ -26,22 +26,23 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 
   <template #Active_Support>
 
-| Operating Systems                                                       | Package Type | OS Version | Node.js versions                   |
-| :---------------------------------------------------------------------: | :----------: | :--------: | :--------------------------------: |
-| EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 6.x        | 12, 14                             |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x        | 12, 14, 16, 18, 20                 |
-| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x        | 12, 14, 16, 18, 20, 22, 24, 26     |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x        | 12, 14, 16, 18, 20, 22, 24, 26     |
-| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x       | 12, 14, 16, 18, 20, 22, 24, 26     |
-| Ubuntu                                                                  | DEB          | 18.04      | 12, 14, 16, 18, 20                 |
-| Ubuntu                                                                  | DEB          | 20.04      | 12, 14, 16, 18, 20, 22             |
-| Ubuntu                                                                  | DEB          | 22.04      | 12, 14, 16, 18, 20, 22, 24         |
-| Ubuntu                                                                  | DEB          | 24.04      | 12, 14, 16, 18, 20, 22, 24, 26     |
-| Debian                                                                  | DEB          | 10         | 12, 14, 16, 18, 20                 |
-| Debian                                                                  | DEB          | 11         | 12, 14, 16, 18, 20, 22             |
-| Debian                                                                  | DEB          | 12         | 12, 14, 16, 18, 20, 22, 23, 24     |
-| Debian                                                                  | DEB          | 13         | 12, 14, 16, 18, 20, 22, 23, 24, 26 |
-| Alpine Linux                                                            | APK          | 3.23, 3.24 | 14, 16, 18, 23                     |
+| Operating Systems                                                       | Package Type | OS Version | Node.js versions                       |
+| :---------------------------------------------------------------------: | :----------: | :--------: | :------------------------------------: |
+| EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 6.x        | 12, 14                                 |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x        | 10, 12, 14, 16, 18, 19, 20             |
+| EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x        | 10, 12, 14, 16, 18, 19, 20, 22, 24, 26 |
+| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x        | 10, 12, 14, 16, 18, 19, 20, 22, 24, 26 |
+| EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x       | 10, 12, 14, 16, 18, 19, 20, 22, 24, 26 |
+| Ubuntu                                                                  | DEB          | 18.04      | 12, 14, 16, 18, 20                     |
+| Ubuntu                                                                  | DEB          | 20.04      | 12, 14, 16, 18, 20, 22                 |
+| Ubuntu                                                                  | DEB          | 22.04      | 12, 14, 16, 18, 20, 22, 24             |
+| Ubuntu                                                                  | DEB          | 24.04      | 12, 14, 16, 18, 20, 22, 24, 26         |
+| Ubuntu                                                                  | DEB          | 26.04      | 22, 24, 26                             |
+| Debian                                                                  | DEB          | 10         | 12, 14, 16, 18, 20                     |
+| Debian                                                                  | DEB          | 11         | 12, 14, 16, 18, 20, 22                 |
+| Debian                                                                  | DEB          | 12         | 12, 14, 16, 18, 20, 22, 23, 24         |
+| Debian                                                                  | DEB          | 13         | 12, 14, 16, 18, 20, 22, 23, 24, 26     |
+| Alpine Linux                                                            | APK          | 3.23, 3.24 | 14, 16, 18, 23                         |
 
 **Supported architectures:**
 

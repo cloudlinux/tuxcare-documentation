@@ -67,7 +67,7 @@ const runtimes = [
   },
   {
     name: "Node.js",
-    versions: "12 | 14 | 16 | 18 | 20 | 22 | 23 | 24 | 26",
+    versions: "10 | 12 | 14 | 16 | 18 | 19 | 20 | 22 | 23 | 24 | 26",
     link: "./nodejs/",
     icon: "/images/javascript.webp",
   },
