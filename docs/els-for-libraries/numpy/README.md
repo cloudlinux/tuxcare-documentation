@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for NumPy from TuxCare provides security fixes f
 
 ## Supported Versions
 
-* **NumPy** 1.15.4, 1.16.0, 1.21.0
+* **NumPy** 1.15.4, 1.16.0, 1.21.0, 2.0.2, 2.1.3
 
 Other versions upon request.
 
