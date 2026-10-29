@@ -9,10 +9,6 @@ Endless Lifecycle Support (ELS) for Nexmo from TuxCare provides security fixes f
 
 Other versions upon request.
 
-:::warning Note:
-TuxCare patches the `nexmo/client` and `nexmo/client-core` packages. Upstream has renamed this SDK to `vonage/*` and no longer maintains the `nexmo/*` line — that end-of-life line is what ELS covers here.
-:::
-
 ## Installation
 
 <ELSPrerequisites>

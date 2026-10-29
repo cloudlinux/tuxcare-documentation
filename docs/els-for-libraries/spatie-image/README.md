@@ -8,10 +8,6 @@ Endless Lifecycle Support (ELS) for Spatie Image from TuxCare provides security 
 
 Other versions upon request.
 
-:::warning Note:
-`spatie/image` and `spatie/image-optimizer` are different packages. This page covers `spatie/image` only.
-:::
-
 ## Installation
 
 <ELSPrerequisites>

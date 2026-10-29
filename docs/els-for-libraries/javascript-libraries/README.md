@@ -149,6 +149,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **mime** 1.2.4, 1.2.6, 1.2.11, 1.3.0, 1.3.4, 1.3.6
 * **minimatch** 0.0.4, 0.0.5, 0.2.5, 0.2.14, 0.3.0, 0.4.0, 1.0.0, 2.0.10, 3.0.3, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 4.2.3, 5.1.0, 5.1.1, 5.1.2, 7.4.6, 9.0.3, 9.0.4, 9.0.5, 10.1.1, 10.2.2
 * **minimist** 0.0.8, 0.0.9, 0.0.10, 1.1.3, 1.2.0, 1.2.1, 1.2.8
+* **modelcontextprotocol-client** 2.0.0
 * **modelcontextprotocol-sdk** 1.13.3, 1.17.3, 1.24.0, 1.25.2, 1.26.0, 1.29.0, 1.30.0, 1.30.1
 * **moment** 2.0.0, 2.10.6, 2.22.2, 2.24.0, 2.30.1
 * **moment-timezone** 0.4.1
@@ -180,6 +181,8 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **nth-check** 1.0.2
 * **object-path** 0.11.4
 * **octokit-plugin-paginate-rest** 2.21.3
+* **octokit-request** 5.6.3
+* **octokit-request-error** 2.1.0
 * **opentelemetry-core** 1.17.0, 1.17.1, 1.22.0, 1.25.1, 1.27.0, 1.30.1, 2.0.1, 2.2.0, 2.5.1, 2.6.1, 2.7.1
 * **opentelemetry-propagator-jaeger** 1.30.1
 * **pac-resolver** 4.2.0
@@ -189,6 +192,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **parse-url** 6.0.5
 * **parsejson** 0.0.1, 0.0.3
 * **path-to-regexp** 0.1.3, 0.1.7, 0.1.10, 0.1.12, 6.1.0, 6.2.1
+* **pbkdf2** 3.1.6
 * **pdfjs-dist** 2.14.305, 2.16.105, 3.11.174
 * **phin** 2.9.3
 * **picocolors** 0.2.1
@@ -203,6 +207,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **pug** 2.0.4
 * **qs** 0.4.2, 0.5.1, 0.6.5, 0.6.6, 1.0.2, 1.2.2, 2.2.4, 2.2.5, 2.3.3, 2.4.2, 3.1.0, 4.0.0, 5.1.0, 5.2.0, 5.2.1, 6.2.1, 6.2.6, 6.4.3, 6.5.1, 6.5.3, 6.5.5, 6.7.0, 6.10.3, 6.10.4, 6.10.7, 6.11.0, 6.11.2, 6.13.0, 6.14.0, 6.14.2, 6.15.3
 * **quill** 1.3.7
+* **react-dev-utils** 4.2.3
 * **react-native-community-cli** 2.0.2, 5.0.1, 11.4.1, 12.0.0-alpha.15, 12.0.0-alpha.17, 12.3.0, 12.3.2, 12.3.6, 12.3.7, 13.5.1, 13.6.8, 13.6.9, 15.1.3
 * **react-router-dom** 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.13.1, 7.14.1, 7.14.2, 7.15.0, 7.15.1, 7.18.1
 * **react-router-dom-v5-compat** 6.3.0, 6.30.4, 6.30.6

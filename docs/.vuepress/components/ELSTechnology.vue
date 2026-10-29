@@ -1783,6 +1783,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "modelcontextprotocol-client",
+        versions: "2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "modelcontextprotocol-sdk",
         versions: "1.13.3 | 1.17.3 | 1.24.0 | 1.25.2 | 1.26.0 | 1.29.0 | 1.30.0 | 1.30.1",
         link: "./javascript-libraries/",
@@ -1938,6 +1943,16 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "octokit-request",
+        versions: "5.6.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "octokit-request-error",
+        versions: "2.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "opentelemetry-core",
         versions: "1.17.0 | 1.17.1 | 1.22.0 | 1.25.1 | 1.27.0 | 1.30.1 | 2.0.1 | 2.2.0 | 2.5.1 | 2.6.1 | 2.7.1",
         link: "./javascript-libraries/",
@@ -1980,6 +1995,11 @@ const techData = [
       {
         name: "path-to-regexp",
         versions: "0.1.3 | 0.1.7 | 0.1.10 | 0.1.12 | 6.1.0 | 6.2.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "pbkdf2",
+        versions: "3.1.6",
         link: "./javascript-libraries/",
       },
       {
@@ -2061,6 +2081,11 @@ const techData = [
         name: "React",
         versions: "15.6.2 | 16.4.1 | 19.2.0",
         link: "./react/",
+      },
+      {
+        name: "react-dev-utils",
+        versions: "4.2.3",
+        link: "./javascript-libraries/",
       },
       {
         name: "react-pdf",
