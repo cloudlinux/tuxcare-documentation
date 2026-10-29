@@ -107,6 +107,10 @@ const operatingSystems = [
     icon: "/images/centos.webp",
   },
   {
+    name: "CentOS Stream",
+    icon: "/images/centos-stream.webp",
+  },
+  {
     name: "AlmaLinux",
     icon: "/images/almalinux.webp",
   },
