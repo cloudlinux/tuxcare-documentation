@@ -3195,6 +3195,16 @@ const techData = [
         link: "./laravel-media-library/",
       },
       {
+        name: "Laravel Nexmo Notification Channel",
+        versions: "1.0.1",
+        link: "./laravel/",
+      },
+      {
+        name: "Laravel Slack Notification Channel",
+        versions: "1.0.3",
+        link: "./laravel/",
+      },
+      {
         name: "League Commonmark",
         versions: "1.6.7 | 2.7.1 | 2.8.2",
         link: "./league-commonmark/",
