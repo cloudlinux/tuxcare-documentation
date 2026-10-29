@@ -1024,7 +1024,7 @@ const techData = [
       },
       {
         name: "babel-core",
-        versions: "6.26.0 | 7.11.5 | 7.12.13 | 7.14.8 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.0 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.26.0 | 7.29.0",
+        versions: "6.26.0 | 7.7.7 | 7.10.5 | 7.11.5 | 7.12.3 | 7.12.9 | 7.12.13 | 7.14.8 | 7.16.7 | 7.16.12 | 7.18.9 | 7.20.12 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.0 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.26.0 | 7.28.0 | 7.29.0",
         link: "./babel/",
       },
       {
@@ -1119,7 +1119,7 @@ const techData = [
       },
       {
         name: "brace-expansion",
-        versions: "1.1.3 | 1.1.11 | 1.1.12 | 1.1.14 | 1.1.15 | 1.1.16 | 1.1.18 | 1.1.20 | 2.0.1 | 2.0.2 | 2.1.2 | 2.1.3 | 2.1.4 | 2.1.6 | 4.0.1 | 5.0.2 | 5.0.3 | 5.0.4 | 5.0.5 | 5.0.6 | 5.0.8 | 5.0.9 | 5.0.10 | 5.0.11",
+        versions: "1.1.1 | 1.1.3 | 1.1.11 | 1.1.12 | 1.1.14 | 1.1.15 | 1.1.16 | 1.1.18 | 1.1.20 | 2.0.1 | 2.0.2 | 2.1.2 | 2.1.3 | 2.1.4 | 2.1.6 | 4.0.1 | 5.0.2 | 5.0.3 | 5.0.4 | 5.0.5 | 5.0.6 | 5.0.8 | 5.0.9 | 5.0.10 | 5.0.11",
         link: "./javascript-libraries/",
       },
       {
@@ -1134,7 +1134,7 @@ const techData = [
       },
       {
         name: "browserslist",
-        versions: "1.7.7 | 2.11.3 | 3.2.8 | 4.10.0 | 4.13.0 | 4.14.2 | 4.21.5 | 4.24.0 | 4.24.4 | 4.27.0 | 4.28.1 | 4.28.2 | 4.28.4 | 4.28.5",
+        versions: "1.7.7 | 2.11.3 | 3.2.8 | 4.10.0 | 4.13.0 | 4.14.2 | 4.21.5 | 4.21.10 | 4.23.0 | 4.23.1 | 4.23.2 | 4.23.3 | 4.24.0 | 4.24.4 | 4.27.0 | 4.28.1 | 4.28.2 | 4.28.4 | 4.28.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1518,6 +1518,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "hono-node-server",
+        versions: "1.19.9 | 1.19.10 | 1.19.11",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "hosted-git-info",
         versions: "2.1.4 | 2.7.1",
         link: "./javascript-libraries/",
@@ -1559,7 +1564,7 @@ const techData = [
       },
       {
         name: "ip-address",
-        versions: "6.4.0 | 7.1.0 | 9.0.5 | 10.1.0 | 10.1.1 | 10.5.0 | 10.5.1 | 10.7.0",
+        versions: "6.4.0 | 7.1.0 | 9.0.5 | 10.1.0 | 10.1.1 | 10.5.0 | 10.5.1 | 10.7.0 | 10.7.1 | 10.7.2 | 10.7.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1778,13 +1783,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "modelcontextprotocol-client",
+        versions: "2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "modelcontextprotocol-sdk",
         versions: "1.13.3 | 1.17.3 | 1.24.0 | 1.25.2 | 1.26.0 | 1.29.0 | 1.30.0 | 1.30.1",
         link: "./javascript-libraries/",
       },
       {
         name: "moment",
-        versions: "2.0.0 | 2.10.6 | 2.22.2 | 2.24.0",
+        versions: "2.0.0 | 2.10.6 | 2.22.2 | 2.24.0 | 2.30.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1884,7 +1894,7 @@ const techData = [
       },
       {
         name: "node-fetch",
-        versions: "1.6.3 | 1.7.3 | 2.6.0 | 2.6.1",
+        versions: "1.6.3 | 1.7.3 | 2.1.2 | 2.6.0 | 2.6.1",
         link: "./node-fetch/",
       },
       {
@@ -1933,8 +1943,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "octokit-request",
+        versions: "5.6.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "octokit-request-error",
+        versions: "2.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "opentelemetry-core",
-        versions: "1.17.0 | 1.17.1 | 1.22.0 | 1.27.0 | 1.30.1 | 2.0.1 | 2.2.0 | 2.5.1 | 2.7.1",
+        versions: "1.17.0 | 1.17.1 | 1.22.0 | 1.25.1 | 1.27.0 | 1.30.1 | 2.0.1 | 2.2.0 | 2.5.1 | 2.6.1 | 2.7.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1964,7 +1984,7 @@ const techData = [
       },
       {
         name: "parsejson",
-        versions: "0.0.3",
+        versions: "0.0.1 | 0.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1975,6 +1995,11 @@ const techData = [
       {
         name: "path-to-regexp",
         versions: "0.1.3 | 0.1.7 | 0.1.10 | 0.1.12 | 6.1.0 | 6.2.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "pbkdf2",
+        versions: "3.1.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1994,12 +2019,12 @@ const techData = [
       },
       {
         name: "picomatch",
-        versions: "2.3.1 | 4.0.1 | 4.0.2",
+        versions: "2.3.1 | 4.0.1 | 4.0.2 | 4.0.3",
         link: "./javascript-libraries/",
       },
       {
         name: "piscina",
-        versions: "4.4.0 | 4.6.1 | 4.8.0 | 5.2.0",
+        versions: "3.2.0 | 4.4.0 | 4.6.1 | 4.8.0 | 5.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2058,6 +2083,11 @@ const techData = [
         link: "./react/",
       },
       {
+        name: "react-dev-utils",
+        versions: "4.2.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "react-pdf",
         versions: "7.7.1",
         link: "./react-pdf/",
@@ -2114,12 +2144,12 @@ const techData = [
       },
       {
         name: "request",
-        versions: "2.37.0 | 2.40.0 | 2.65.0 | 2.75.0 | 2.81.0 | 2.88.0 | 2.88.2",
+        versions: "2.37.0 | 2.40.0 | 2.65.0 | 2.75.0 | 2.81.0 | 2.87.0 | 2.88.0 | 2.88.2",
         link: "./javascript-libraries/",
       },
       {
         name: "Rollup",
-        versions: "0.36.3 | 0.41.6 | 0.56.4 | 0.57.1 | 0.59.4 | 0.63.5 | 2.1.0 | 2.26.5 | 2.38.4 | 2.77.3 | 2.79.1 | 2.79.2 | 3.15.0 | 4.22.4",
+        versions: "0.36.3 | 0.41.6 | 0.56.4 | 0.57.1 | 0.59.4 | 0.63.5 | 1.32.1 | 2.1.0 | 2.26.5 | 2.38.4 | 2.77.3 | 2.79.1 | 2.79.2 | 3.15.0 | 4.22.4",
         link: "./javascript-libraries/",
       },
       {
@@ -2149,7 +2179,7 @@ const techData = [
       },
       {
         name: "serialize-javascript",
-        versions: "1.9.1 | 2.1.2 | 3.1.0 | 4.0.0 | 5.0.1 | 6.0.2 | 7.1.1 | 7.1.2",
+        versions: "1.9.1 | 2.1.2 | 3.1.0 | 4.0.0 | 5.0.1 | 6.0.0 | 6.0.1 | 6.0.2 | 7.1.1 | 7.1.2",
         link: "./javascript-libraries/",
       },
       {
@@ -2294,7 +2324,7 @@ const techData = [
       },
       {
         name: "tmp",
-        versions: "0.0.24 | 0.0.28 | 0.0.29 | 0.0.30 | 0.0.31 | 0.0.33 | 0.1.0 | 0.2.1 | 0.2.3",
+        versions: "0.0.24 | 0.0.28 | 0.0.29 | 0.0.30 | 0.0.31 | 0.0.33 | 0.1.0 | 0.2.1 | 0.2.3 | 0.2.4 | 0.2.5 | 0.2.6",
         link: "./javascript-libraries/",
       },
       {
@@ -2629,7 +2659,7 @@ const techData = [
       },
       {
         name: "zod",
-        versions: "3.21.4 | 3.25.76",
+        versions: "3.21.4 | 3.25.48 | 3.25.67 | 3.25.75 | 3.25.76",
         link: "./javascript-libraries/",
       },
     ],
@@ -3160,9 +3190,24 @@ const techData = [
         link: "./laravel/",
       },
       {
+        name: "Illuminate Http",
+        versions: "5.8.36",
+        link: "./laravel/",
+      },
+      {
+        name: "Illuminate Session",
+        versions: "5.8.36",
+        link: "./laravel/",
+      },
+      {
         name: "Illuminate View",
         versions: "5.4.36",
         link: "./laravel/",
+      },
+      {
+        name: "JMESPath.php",
+        versions: "2.6.1",
+        link: "./jmespath-php/",
       },
       {
         name: "Laminas Diactoros",
@@ -3190,6 +3235,16 @@ const techData = [
         link: "./laravel-media-library/",
       },
       {
+        name: "Laravel Nexmo Notification Channel",
+        versions: "1.0.1",
+        link: "./laravel/",
+      },
+      {
+        name: "Laravel Slack Notification Channel",
+        versions: "1.0.3",
+        link: "./laravel/",
+      },
+      {
         name: "League Commonmark",
         versions: "1.6.7 | 2.7.1 | 2.8.2",
         link: "./league-commonmark/",
@@ -3213,6 +3268,16 @@ const techData = [
         name: "Monolog",
         versions: "1.11.0",
         link: "./monolog/",
+      },
+      {
+        name: "Nexmo Client",
+        versions: "1.9.1",
+        link: "./nexmo/",
+      },
+      {
+        name: "Nexmo Client Core",
+        versions: "1.8.1",
+        link: "./nexmo/",
       },
       {
         name: "php-svg-lib",
@@ -3265,6 +3330,21 @@ const techData = [
         link: "./saloon/",
       },
       {
+        name: "Spatie Image",
+        versions: "1.10.6",
+        link: "./spatie-image/",
+      },
+      {
+        name: "Stack Builder",
+        versions: "1.0.6",
+        link: "./stack-builder/",
+      },
+      {
+        name: "Stack CORS",
+        versions: "1.3.0",
+        link: "./stack-cors/",
+      },
+      {
         name: "svg-sanitize",
         versions: "0.16.0",
         link: "./svg-sanitize/",
@@ -3278,6 +3358,11 @@ const techData = [
         name: "Symfony CMF Routing",
         versions: "1.4.1",
         link: "./symfony-cmf-routing/",
+      },
+      {
+        name: "Symfony HttpClient",
+        versions: "6.0.x",
+        link: "./symfony/",
       },
       {
         name: "Symfony HttpFoundation",
@@ -3302,6 +3387,11 @@ const techData = [
       {
         name: "Symfony Polyfill Intl IDN",
         versions: "1.30.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony PSR HTTP Message Bridge",
+        versions: "1.1.x",
         link: "./symfony/",
       },
       {

@@ -5,6 +5,7 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 ## Supported Versions
 
 * **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
+* **Symfony HttpClient** 6.0.x
 * **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
 * **Symfony HttpKernel** 3.4.x, 4.4.x, 7.4.x
 * **Symfony Mailer** 6.4.x
@@ -12,6 +13,7 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 * **Symfony Routing** 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
 * **Symfony Yaml** 2.8.x, 3.4.x, 4.4.x
 * **Symfony Polyfill Intl IDN** 1.30.x
+* **Symfony PSR HTTP Message Bridge** 1.1.x
 
 Other versions upon request.
 
@@ -77,6 +79,15 @@ Other versions upon request.
 
    </template>
 
+   <template #Symfony_HttpClient>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/http-client:v6.0.20-p1+tuxcare` },
+     { title: 'composer.json', content: httpclientjson }
+   ]" />
+
+   </template>
+
    <template #Symfony_HttpFoundation>
 
    <CodeTabs :tabs="[
@@ -136,6 +147,15 @@ Other versions upon request.
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require symfony/polyfill-intl-idn:v1.30.0-p1+tuxcare` },
      { title: 'composer.json', content: polyfillintlidnjson }
+   ]" />
+
+   </template>
+
+   <template #Symfony_PSR_HTTP_Message_Bridge>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require symfony/psr-http-message-bridge:v1.1.2-p2+tuxcare` },
+     { title: 'composer.json', content: psrhttpmessagebridgejson }
    ]" />
 
    </template>
@@ -238,6 +258,13 @@ const httpfoundationjson =
     }
 }`
 
+const httpclientjson =
+`{
+    "require": {
+        "symfony/http-client": "v6.0.20-p1+tuxcare"
+    }
+}`
+
 const httpkerneljson =
 `{
     "require": {
@@ -277,6 +304,13 @@ const polyfillintlidnjson =
 `{
     "require": {
         "symfony/polyfill-intl-idn": "v1.30.0-p1+tuxcare"
+    }
+}`
+
+const psrhttpmessagebridgejson =
+`{
+    "require": {
+        "symfony/psr-http-message-bridge": "v1.1.2-p2+tuxcare"
     }
 }`
 
