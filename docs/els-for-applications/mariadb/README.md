@@ -4,11 +4,11 @@ Endless Lifecycle Support (ELS) for MariaDB from TuxCare provides security fixes
 
 ## Supported Versions
 
-| OS                                             | Package Type | OS Version | MariaDB version |
-| :--------------------------------------------: | :----------: | :--------: | :-------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.) | RPM          | 7.x        | 10.6            |
-| EL 8 (CentOS, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x        | 10.6            |
-| EL 9 (CentOS, CloudLinux, Oracle Linux, etc.) | RPM          | 9.x        | 10.6            |
+| OS                                                   | Package Type | OS Version | MariaDB version |
+| :--------------------------------------------------: | :----------: | :--------: | :-------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)        | RPM          | 7.x        | 10.6            |
+| EL 8 (CentOS, CloudLinux, Oracle Linux, etc.)        | RPM          | 8.x        | 10.6            |
+| EL 9 (CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 9.x        | 10.6            |
 
 **Supported architecture:** x86_64 (64-bit)
 

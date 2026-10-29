@@ -107,6 +107,10 @@ const operatingSystems = [
     icon: "/images/centos.webp",
   },
   {
+    name: "CentOS Stream",
+    icon: "/images/centos-stream.webp",
+  },
+  {
     name: "AlmaLinux",
     icon: "/images/almalinux.webp",
   },
@@ -291,7 +295,10 @@ const operatingSystems = [
 
 .txc-logos-list .list li {
   display: flex;
-  justify-content: center;
+  /* Align to the start of the grid cell, not the centre: the cells are
+     equal width but the logo + label content is not, so centring each
+     item leaves the columns out of line from one row to the next. */
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -320,8 +327,10 @@ const operatingSystems = [
 }
 
 .txc-logos-list .thumb img {
-  max-width: 100%;
-  max-height: 100%;
+  /* Cap at the natural size of the other logos (~55px) so a higher
+     resolution source, such as centos-stream.webp, does not render larger. */
+  max-width: 55px;
+  max-height: 55px;
   object-fit: contain;
 }
 

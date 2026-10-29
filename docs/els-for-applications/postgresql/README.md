@@ -4,11 +4,11 @@ Endless Lifecycle Support (ELS) for PostgreSQL from TuxCare provides security fi
 
 ## Supported Versions
 
-| OS                                                          | Package Type | OS Version | PostgreSQL version |
-| :----------------------------------------------------------: | :----------: | :--------: | :----------------: |
-| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)               | RPM          | 7.x        | 9.6, 11            |
-| EL 9 (CentOS, CloudLinux, AlmaLinux, Oracle Linux, etc.)    | RPM          | 9.x        | 14                 |
-| Ubuntu                                                      | DEB          | 22.04      | 13                 |
+| OS                                                              | Package Type | OS Version | PostgreSQL version |
+| :-------------------------------------------------------------: | :----------: | :--------: | :----------------: |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                   | RPM          | 7.x        | 9.6, 11            |
+| EL 9 (CentOS Stream, CloudLinux, AlmaLinux, Oracle Linux, etc.) | RPM          | 9.x        | 14                 |
+| Ubuntu                                                          | DEB          | 22.04      | 13                 |
 
 **Supported architectures:** x86_64 (64-bit) for RPM, amd64 for DEB
 
