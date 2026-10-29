@@ -329,6 +329,10 @@ export default {
                     icon: '/images/php-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/jmespath-php/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/laminas/',
                     icon: '/images/laminas.webp',
                 },
@@ -363,6 +367,10 @@ export default {
                 {
                     path: '/els-for-libraries/monolog/',
                     icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
+                    path: '/els-for-libraries/nexmo/',
+                    icon: '/images/php-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/php-http-guzzle6-adapter/',
@@ -404,6 +412,18 @@ export default {
                 {
                     path: '/els-for-libraries/saloon/',
                     icon: '/images/saloon.webp',
+                },
+                {
+                    path: '/els-for-libraries/spatie-image/',
+                    icon: '/images/spatie.webp',
+                },
+                {
+                    path: '/els-for-libraries/stack-builder/',
+                    icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/stack-cors/',
+                    icon: '/images/php-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/svg-sanitize/',

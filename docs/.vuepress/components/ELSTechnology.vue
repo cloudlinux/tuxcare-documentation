@@ -3170,6 +3170,11 @@ const techData = [
         link: "./laravel/",
       },
       {
+        name: "JMESPath.php",
+        versions: "2.6.1",
+        link: "./jmespath-php/",
+      },
+      {
         name: "Laminas Diactoros",
         versions: "1.8.7p2 | 2.22.0",
         link: "./laminas/",
@@ -3230,6 +3235,16 @@ const techData = [
         link: "./monolog/",
       },
       {
+        name: "Nexmo Client",
+        versions: "1.9.1",
+        link: "./nexmo/",
+      },
+      {
+        name: "Nexmo Client Core",
+        versions: "1.8.1",
+        link: "./nexmo/",
+      },
+      {
         name: "php-svg-lib",
         versions: "0.3.4 | 0.4.1",
         link: "./php-svg-lib/",
@@ -3278,6 +3293,21 @@ const techData = [
         name: "Saloon",
         versions: "3.15.0",
         link: "./saloon/",
+      },
+      {
+        name: "Spatie Image",
+        versions: "1.10.6",
+        link: "./spatie-image/",
+      },
+      {
+        name: "Stack Builder",
+        versions: "1.0.6",
+        link: "./stack-builder/",
+      },
+      {
+        name: "Stack CORS",
+        versions: "1.3.0",
+        link: "./stack-cors/",
       },
       {
         name: "svg-sanitize",
