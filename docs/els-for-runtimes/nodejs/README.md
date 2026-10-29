@@ -31,7 +31,7 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 | EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 6.x        | 12, 14                                 |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x        | 10, 12, 14, 16, 18, 19, 20             |
 | EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x        | 10, 12, 14, 16, 18, 19, 20, 22, 24, 26 |
-| EL 9 (AlmaLinux, CentOS Stream, CloudLinux, Oracle Linux, etc.)         | RPM          | 9.x        | 10, 12, 14, 16, 18, 19, 20, 22, 24, 26 |
+| EL 9 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 9.x        | 10, 12, 14, 16, 18, 19, 20, 22, 24, 26 |
 | EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x       | 10, 12, 14, 16, 18, 19, 20, 22, 24, 26 |
 | Ubuntu                                                                  | DEB          | 18.04      | 12, 14, 16, 18, 20                     |
 | Ubuntu                                                                  | DEB          | 20.04      | 12, 14, 16, 18, 20, 22                 |
