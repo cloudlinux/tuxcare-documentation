@@ -370,7 +370,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/nexmo/',
-                    icon: '/images/TuxCare_color_icon.webp',
+                    icon: '/images/nexmo.webp',
                 },
                 {
                     path: '/els-for-libraries/php-http-guzzle6-adapter/',
@@ -419,11 +419,11 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/stack-builder/',
-                    icon: '/images/TuxCare_color_icon.webp',
+                    icon: '/images/stack.webp',
                 },
                 {
                     path: '/els-for-libraries/stack-cors/',
-                    icon: '/images/TuxCare_color_icon.webp',
+                    icon: '/images/stack.webp',
                 },
                 {
                     path: '/els-for-libraries/svg-sanitize/',
