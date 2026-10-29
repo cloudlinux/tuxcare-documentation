@@ -3165,6 +3165,16 @@ const techData = [
         link: "./laravel/",
       },
       {
+        name: "Illuminate Http",
+        versions: "5.8.36",
+        link: "./laravel/",
+      },
+      {
+        name: "Illuminate Session",
+        versions: "5.8.36",
+        link: "./laravel/",
+      },
+      {
         name: "Illuminate View",
         versions: "5.4.36",
         link: "./laravel/",
@@ -3325,6 +3335,11 @@ const techData = [
         link: "./symfony-cmf-routing/",
       },
       {
+        name: "Symfony HttpClient",
+        versions: "6.0.x",
+        link: "./symfony/",
+      },
+      {
         name: "Symfony HttpFoundation",
         versions: "2.8.x | 3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
         link: "./symfony/",
@@ -3347,6 +3362,11 @@ const techData = [
       {
         name: "Symfony Polyfill Intl IDN",
         versions: "1.30.x",
+        link: "./symfony/",
+      },
+      {
+        name: "Symfony PSR HTTP Message Bridge",
+        versions: "1.1.x",
         link: "./symfony/",
       },
       {

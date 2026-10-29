@@ -7,6 +7,8 @@ Endless Lifecycle Support (ELS) for Laravel from TuxCare provides security fixes
 * **Laravel** 5.4.36, 5.5.50, 5.6.40, 5.7.29, 5.8.38, 6.20.45, 7.30.7, 8.12.0, 8.12.1, 8.12.2, 8.12.3, 8.83.29, 9.52.21, 10.48.28, 10.48.29, 10.50.2, 11.44.0, 11.51.0, 12.58.0
 * **Illuminate View** 5.4.36
 * **Illuminate Database** 5.4.36
+* **Illuminate Http** 5.8.36
+* **Illuminate Session** 5.8.36
 * **Laravel Slack Notification Channel** 1.0.3
 * **Laravel Nexmo Notification Channel** 1.0.1
 
@@ -63,7 +65,7 @@ Other versions upon request.
 
    Install the TuxCare-maintained Laravel or Illuminate release that matches your project:
 
-   <TableTabs label="Choose version: " >
+   <TableTabs label="Choose package: ">
 
    <template #Laravel>
 
@@ -88,6 +90,24 @@ Other versions upon request.
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require illuminate/database:5.4.36-p2+tuxcare` },
      { title: 'composer.json', content: illuminateDbJson }
+   ]" />
+
+   </template>
+
+   <template #Illuminate_Http>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require illuminate/http:v5.8.36-p1+tuxcare` },
+     { title: 'composer.json', content: illuminateHttpJson }
+   ]" />
+
+   </template>
+
+   <template #Illuminate_Session>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require illuminate/session:v5.8.36-p1+tuxcare` },
+     { title: 'composer.json', content: illuminateSessionJson }
    ]" />
 
    </template>
@@ -212,6 +232,20 @@ const illuminateDbJson =
 `{
     "require": {
         "illuminate/database": "5.4.36-p2+tuxcare"
+    }
+}`
+
+const illuminateHttpJson =
+`{
+    "require": {
+        "illuminate/http": "v5.8.36-p1+tuxcare"
+    }
+}`
+
+const illuminateSessionJson =
+`{
+    "require": {
+        "illuminate/session": "v5.8.36-p1+tuxcare"
     }
 }`
 
