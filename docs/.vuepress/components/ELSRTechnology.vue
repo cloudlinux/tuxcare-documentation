@@ -324,8 +324,10 @@ const operatingSystems = [
 }
 
 .txc-logos-list .thumb img {
-  max-width: 100%;
-  max-height: 100%;
+  /* Cap at the natural size of the other logos (~55px) so a higher
+     resolution source, such as centos-stream.webp, does not render larger. */
+  max-width: 55px;
+  max-height: 55px;
   object-fit: contain;
 }
 
