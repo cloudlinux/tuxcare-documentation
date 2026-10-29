@@ -30,7 +30,7 @@ alt-python provides a more flexible and convenient environment for working with 
 | :---------------------------------------------------------------------: | :----------: | :-----------------: | :---------------------------------------------------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x                 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
 | EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
-| EL 9 (AlmaLinux, CentOS, CloudLinux, Oracle Linux, etc.)                | RPM          | 9.x                 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
+| EL 9 (AlmaLinux, CentOS Stream, CloudLinux, Oracle Linux, etc.)         | RPM          | 9.x                 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
 | EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
 | Ubuntu                                                                  | DEB          | 16.04               | 2.7, 3.6, 3.7, 3.10, 3.11, 3.12, 3.13, 3.14           |
 | Ubuntu                                                                  | DEB          | 18.04, 20.04, 22.04 | 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
