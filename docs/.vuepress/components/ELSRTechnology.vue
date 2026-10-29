@@ -295,7 +295,10 @@ const operatingSystems = [
 
 .txc-logos-list .list li {
   display: flex;
-  justify-content: center;
+  /* Align to the start of the grid cell, not the centre: the cells are
+     equal width but the logo + label content is not, so centring each
+     item leaves the columns out of line from one row to the next. */
+  justify-content: flex-start;
   align-items: center;
 }
 
