@@ -104,7 +104,7 @@ Other versions upon request.
    <template #Laravel_Nexmo_Notification_Channel>
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require laravel/nexmo-notification-channel:v1.0.1-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require laravel/nexmo-notification-channel:v1.0.1-p2+tuxcare` },
      { title: 'composer.json', content: nexmoChannelJson }
    ]" />
 
@@ -225,7 +225,7 @@ const slackChannelJson =
 const nexmoChannelJson =
 `{
     "require": {
-        "laravel/nexmo-notification-channel": "v1.0.1-p1+tuxcare"
+        "laravel/nexmo-notification-channel": "v1.0.1-p2+tuxcare"
     }
 }`
 
