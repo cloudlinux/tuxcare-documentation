@@ -13,27 +13,27 @@ We provide the ability to create local mirrors of PHP for Endless Lifecycle Supp
 * To create a local mirror of the repository with security updates via `rsync`, use the following:
 
   ```
-  rsync://repo.cloudlinux.com/ALT_COMMON/
+  rsync://rsync.tuxcare.com/ALT_COMMON/
   ```
 
   and
 
   ```
-  rsync://repo.cloudlinux.com/ALT_PHP_ELS/
+  rsync://rsync.tuxcare.com/ALT_PHP_ELS/
   ```
 
 * Example of creating a local mirror for all supported OS versions:
 
   ```
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/   alt-common
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/ alt-php-els
+  rsync -avSHP --delete rsync://rsync.tuxcare.com/ALT_COMMON/   alt-common
+  rsync -avSHP --delete rsync://rsync.tuxcare.com/ALT_PHP_ELS/ alt-php-els
   ```
 
 * Example of creating a local mirror for a specific OS version:
 
   ```
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/rpm/el/8/   alt-common
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PHP_ELS/rpm/el/8/ alt-php-els
+  rsync -avSHP --delete rsync://rsync.tuxcare.com/ALT_COMMON/rpm/el/8/   alt-common
+  rsync -avSHP --delete rsync://rsync.tuxcare.com/ALT_PHP_ELS/rpm/el/8/ alt-php-els
   ```
 
 * Use one of the suggested options to specify the OS:
