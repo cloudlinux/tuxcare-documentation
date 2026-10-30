@@ -61,6 +61,7 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **twisted** 20.3.0
 * **urllib3** 1.25.11, 1.26.4, 1.26.20, 2.0.7, 2.5.0
 * **uvicorn** 0.11.6
+* **virtualenv** 20.39.1
 * **waitress** 2.1.2
 * **websockets** 8.1
 

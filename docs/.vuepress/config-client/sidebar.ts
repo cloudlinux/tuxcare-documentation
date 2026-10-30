@@ -418,6 +418,10 @@ export default {
                     icon: '/images/spatie.webp',
                 },
                 {
+                    path: '/els-for-libraries/spatie-image-optimizer/',
+                    icon: '/images/spatie.webp',
+                },
+                {
                     path: '/els-for-libraries/stack-builder/',
                     icon: '/images/stack.webp',
                 },

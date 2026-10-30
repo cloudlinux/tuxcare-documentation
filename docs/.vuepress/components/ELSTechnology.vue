@@ -943,8 +943,23 @@ const techData = [
     ecosystemIcon: "/images/javascript.webp",
     projects: [
       {
-        name: "ai-sdk",
-        versions: "3.0.27",
+        name: "agent-base",
+        versions: "2.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ai",
+        versions: "2.2.8",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ai-sdk-openai",
+        versions: "4.0.27",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "ai-sdk-provider-utils",
+        versions: "2.2.8 | 3.0.27 | 4.0.27",
         link: "./javascript-libraries/",
       },
       {
@@ -1100,6 +1115,11 @@ const techData = [
       {
         name: "body-parser",
         versions: "1.8.4 | 1.13.3 | 1.14.2 | 1.18.2 | 1.19.0 | 1.20.0 | 1.20.1 | 1.20.2 | 1.20.3 | 1.20.4 | 1.20.5 | 1.20.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "boom",
+        versions: "0.4.2 | 2.10.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1353,6 +1373,16 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "extract-zip",
+        versions: "1.7.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "faker",
+        versions: "5.5.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "fast-uri",
         versions: "2.4.0 | 2.4.2 | 2.4.3 | 2.4.5 | 2.4.7 | 3.0.1 | 3.0.3 | 3.0.6 | 3.1.0 | 3.1.2 | 3.1.3 | 3.1.4 | 3.1.5 | 3.1.6 | 3.1.7 | 3.1.8",
         link: "./javascript-libraries/",
@@ -1434,7 +1464,7 @@ const techData = [
       },
       {
         name: "glob",
-        versions: "10.2.6 | 10.3.10 | 10.4.5",
+        versions: "3.2.11 | 6.0.4 | 7.1.6 | 7.2.3 | 10.2.6 | 10.3.10 | 10.4.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1493,6 +1523,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "har-validator",
+        versions: "1.8.0 | 2.0.6",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "hawk",
         versions: "0.13.1 | 1.0.0 | 1.1.1 | 2.3.1 | 3.1.0 | 3.1.3",
         link: "./javascript-libraries/",
@@ -1528,8 +1563,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "html-minifier",
+        versions: "4.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "http-proxy-middleware",
         versions: "0.0.5 | 0.17.2 | 0.17.3 | 0.18.0 | 0.19.1 | 0.20.0 | 1.0.0 | 1.1.0 | 1.3.1 | 2.0.6 | 2.0.7 | 2.0.8 | 3.0.3 | 3.0.5 | 4.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "https-proxy-agent",
+        versions: "1.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1570,6 +1615,11 @@ const techData = [
       {
         name: "is-my-json-valid",
         versions: "2.10.1 | 2.12.2 | 2.12.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "jasmine",
+        versions: "2.1.1 | 2.3.2 | 2.4.1 | 3.99.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1788,8 +1838,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "modelcontextprotocol-core",
+        versions: "2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "modelcontextprotocol-sdk",
         versions: "1.13.3 | 1.17.3 | 1.24.0 | 1.25.2 | 1.26.0 | 1.29.0 | 1.30.0 | 1.30.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "modelcontextprotocol-server-legacy",
+        versions: "2.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1824,12 +1884,12 @@ const techData = [
       },
       {
         name: "ms",
-        versions: "0.3.0 | 0.6.2 | 0.7.1 | 0.7.2 | 1.0.0 | 2.0.0 | 2.1.3",
+        versions: "0.3.0 | 0.6.2 | 0.7.1 | 0.7.2 | 0.7.3 | 1.0.0 | 2.0.0 | 2.1.3",
         link: "./javascript-libraries/",
       },
       {
         name: "msgpack5",
-        versions: "4.5.1",
+        versions: "3.6.1 | 4.5.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1954,12 +2014,17 @@ const techData = [
       },
       {
         name: "opentelemetry-core",
-        versions: "1.17.0 | 1.17.1 | 1.22.0 | 1.25.1 | 1.27.0 | 1.30.1 | 2.0.1 | 2.2.0 | 2.5.1 | 2.6.1 | 2.7.1",
+        versions: "1.17.0 | 1.17.1 | 1.22.0 | 1.25.1 | 1.27.0 | 1.30.1 | 2.0.1 | 2.2.0 | 2.5.1 | 2.6.1 | 2.7.0 | 2.7.1",
         link: "./javascript-libraries/",
       },
       {
         name: "opentelemetry-propagator-jaeger",
-        versions: "1.30.1",
+        versions: "1.22.0 | 1.27.0 | 1.30.1 | 2.8.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "optimist",
+        versions: "0.6.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1970,6 +2035,11 @@ const techData = [
       {
         name: "pacote",
         versions: "12.0.2 | 12.0.3 | 17.0.7 | 18.0.6 | 19.0.2 | 20.0.0 | 20.0.1 | 21.0.1 | 21.0.3 | 21.0.4 | 21.5.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "parcel-reporter-dev-server",
+        versions: "2.8.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2039,7 +2109,7 @@ const techData = [
       },
       {
         name: "prismjs",
-        versions: "1.27.0 | 1.29.0",
+        versions: "1.17.1 | 1.27.0 | 1.29.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2054,12 +2124,17 @@ const techData = [
       },
       {
         name: "protobufjs",
-        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.3 | 6.11.6 | 7.4.0 | 7.5.4 | 8.0.0 | 8.0.1",
+        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.3 | 6.11.6 | 7.4.0 | 7.5.4 | 7.5.9 | 8.0.0 | 8.0.1",
         link: "./javascript-libraries/",
       },
       {
         name: "protobufjs-utf8",
         versions: "1.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "protractor",
+        versions: "1.8.0 | 2.5.1 | 3.3.0 | 4.0.14 | 5.4.4 | 6.0.0 | 7.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2124,17 +2199,22 @@ const techData = [
       },
       {
         name: "react-server-dom-turbopack",
-        versions: "19.2.0",
+        versions: "19.0.0 | 19.2.0",
         link: "./javascript-libraries/",
       },
       {
         name: "react-server-dom-webpack",
-        versions: "19.2.0",
+        versions: "19.0.0 | 19.2.0",
         link: "./javascript-libraries/",
       },
       {
         name: "redis",
         versions: "2.8.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "remix-run-router",
+        versions: "1.7.2",
         link: "./javascript-libraries/",
       },
       {
@@ -2144,7 +2224,7 @@ const techData = [
       },
       {
         name: "request",
-        versions: "2.37.0 | 2.40.0 | 2.65.0 | 2.75.0 | 2.81.0 | 2.87.0 | 2.88.0 | 2.88.2",
+        versions: "2.36.0 | 2.37.0 | 2.40.0 | 2.57.0 | 2.65.0 | 2.67.0 | 2.75.0 | 2.81.0 | 2.87.0 | 2.88.0 | 2.88.2",
         link: "./javascript-libraries/",
       },
       {
@@ -2155,6 +2235,16 @@ const techData = [
       {
         name: "sanitize-html",
         versions: "1.27.5",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "saucelabs",
+        versions: "1.0.1 | 1.3.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "selenium-webdriver",
+        versions: "2.44.0 | 2.47.0 | 2.52.0 | 2.53.3 | 3.6.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2169,7 +2259,7 @@ const techData = [
       },
       {
         name: "send",
-        versions: "0.0.4 | 0.1.0 | 0.1.1 | 0.7.4 | 0.13.2 | 0.16.1 | 0.16.2 | 0.17.1 | 0.17.2 | 0.18.0",
+        versions: "0.0.4 | 0.1.0 | 0.1.1 | 0.1.4 | 0.7.4 | 0.13.0 | 0.13.2 | 0.16.1 | 0.16.2 | 0.17.1 | 0.17.2 | 0.18.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2195,6 +2285,11 @@ const techData = [
       {
         name: "set-value",
         versions: "2.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "sharp",
+        versions: "0.27.2 | 0.32.6",
         link: "./javascript-libraries/",
       },
       {
@@ -2228,8 +2323,13 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "sntp",
+        versions: "0.2.4 | 1.0.9",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "socket.io",
-        versions: "1.7.4 | 2.0.4 | 2.1.1",
+        versions: "1.7.3 | 1.7.4 | 2.0.4 | 2.1.1 | 3.1.1",
         link: "./javascript-libraries/",
       },
       {
@@ -2240,6 +2340,11 @@ const techData = [
       {
         name: "sockjs",
         versions: "0.3.18 | 0.3.19",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "sprintf-js",
+        versions: "1.1.2 | 1.1.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2563,6 +2668,16 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "webdriver-js-extender",
+        versions: "2.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "webdriver-manager",
+        versions: "12.1.9",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "webpack",
         versions: "5.50.0 | 5.55.0 | 5.76.1 | 5.82.1 | 5.88.2 | 5.94.0 | 5.98.0 | 5.99.8 | 5.99.9",
         link: "./webpack/",
@@ -2635,6 +2750,11 @@ const techData = [
       {
         name: "yaml",
         versions: "1.10.2 | 2.4.1 | 2.4.2 | 2.5.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "yargs",
+        versions: "12.0.5",
         link: "./javascript-libraries/",
       },
       {
@@ -2976,6 +3096,11 @@ const techData = [
       {
         name: "uvicorn",
         versions: "0.11.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "virtualenv",
+        versions: "20.39.1",
         link: "./python-libraries/",
       },
       {
@@ -3333,6 +3458,11 @@ const techData = [
         name: "Spatie Image",
         versions: "1.10.6",
         link: "./spatie-image/",
+      },
+      {
+        name: "Spatie Image Optimizer",
+        versions: "1.5.0",
+        link: "./spatie-image-optimizer/",
       },
       {
         name: "Stack Builder",
