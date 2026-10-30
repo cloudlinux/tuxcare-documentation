@@ -10,6 +10,10 @@ We provide the ability to create local mirrors of Node.js for Endless Lifecycle 
 
 **To obtain access to the local mirroring, provide your External IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com).**
 
+:::tip Note
+If your local mirror is already set up against `repo.tuxcare.com` or `repo.cloudlinux.com`, keep using that host: your existing configuration continues to work and no changes are required until you are asked to switch.
+:::
+
 * To create a local mirror of the repository with security updates via `rsync`, use the following:
 
   ```
