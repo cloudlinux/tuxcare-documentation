@@ -13,27 +13,27 @@ We provide the ability to create local mirrors of Python for Endless Lifecycle S
 * To create a local mirror of the repository with security updates via `rsync`, use the following:
 
   ```
-  rsync://repo.cloudlinux.com/ALT_COMMON/
+  rsync://rsync.tuxcare.com/ALT_COMMON/
   ```
 
   and
 
   ```
-  rsync://repo.cloudlinux.com/ALT_PYTHON_ELS/
+  rsync://rsync.tuxcare.com/ALT_PYTHON_ELS/
   ```
 
 * Example of creating a local mirror for all supported OS versions:
 
   ```
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/   alt-common
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PYTHON_ELS/ alt-python-els
+  rsync -avSHP --delete rsync://rsync.tuxcare.com/ALT_COMMON/   alt-common
+  rsync -avSHP --delete rsync://rsync.tuxcare.com/ALT_PYTHON_ELS/ alt-python-els
   ```
 
 * Example of creating a local mirror for a specific OS version:
 
   ```
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_COMMON/rpm/el/8/   alt-common
-  rsync -avSHP --delete rsync://repo.cloudlinux.com/ALT_PYTHON_ELS/rpm/el/8/ alt-python-els
+  rsync -avSHP --delete rsync://rsync.tuxcare.com/ALT_COMMON/rpm/el/8/   alt-common
+  rsync -avSHP --delete rsync://rsync.tuxcare.com/ALT_PYTHON_ELS/rpm/el/8/ alt-python-els
   ```
 
 * Use one of the suggested options to specify the OS:
