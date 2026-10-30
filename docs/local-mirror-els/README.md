@@ -22,6 +22,10 @@ Before creating a local mirror, ensure the following requirements are met:
 
 To create a local mirror, use one of the following sets of instructions based on your operating system.
 
+:::tip Note
+If your local mirror is already set up against `repo.tuxcare.com` or `repo.cloudlinux.com`, keep using that host: your existing configuration continues to work and no changes are required until you are asked to switch.
+:::
+
 ### CentOS 6 ELS
 
 To create a local mirror of the centos6-els repository with security updates via `rsync`, use the following:
