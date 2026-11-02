@@ -251,14 +251,14 @@ rsync://rsync.tuxcare.com/ALMALINUX92ESU/
 To create a local mirror of the AlmaLinux 9.2 repository, use the following:
 
 ```
-rsync://repo.tuxcare.com/ALMALINUX/9.2/
+rsync://rsync.tuxcare.com/ALMALINUX/9.2/
 ```
 
 For example:
 
 ```
 rsync -avSHP --delete rsync://rsync.tuxcare.com/ALMALINUX92ESU/ .
-rsync -avSHP --delete rsync://repo.tuxcare.com/ALMALINUX/9.2/ .
+rsync -avSHP --delete rsync://rsync.tuxcare.com/ALMALINUX/9.2/ .
 ```
 
 ### TuxCare 9.6 ESU
