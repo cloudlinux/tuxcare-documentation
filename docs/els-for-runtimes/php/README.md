@@ -307,8 +307,6 @@ PHP extensions are modules that extend the functionality of the PHP programming 
 
 The PHP core includes many built-in extensions that provide basic functionality, such as working with databases, string processing, working with images, and others. However, to support more specific tasks and third-party libraries, you can use additional PHP extensions.
 
-Each tab lists the extensions available for that PHP version in the TuxCare ELS repositories. An extension without a footnote is available on every OS that ships that PHP version (see [Supported OS and PHP Versions](#supported-os-and-php-versions)); a footnote lists the exceptions. EL 7 includes Amazon Linux 2. Unless an architecture is named, a footnote covers all architectures of that OS.
-
 <TableTabs>
 
   <template #PHP_5.2_extensions>
