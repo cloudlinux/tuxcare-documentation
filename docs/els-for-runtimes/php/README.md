@@ -317,19 +317,19 @@ The PHP core includes many built-in extensions that provide basic functionality,
    <li>Reflection</li>
    <li>SPL</li>
    <li>SimpleXML</li>
-   <li>apc</li>
-   <li>apm</li>
-   <li>ares</li>
+   <li>apc<sup>1</sup></li>
+   <li>apm<sup>1</sup></li>
+   <li>ares<sup>1</sup></li>
    <li>bcmath</li>
-   <li>bcompiler</li>
-   <li>big_int</li>
-   <li>bitset</li>
-   <li>bloomy</li>
+   <li>bcompiler<sup>2</sup></li>
+   <li>big_int<sup>1</sup></li>
+   <li>bitset<sup>1</sup></li>
+   <li>bloomy<sup>1</sup></li>
    <li>bz2</li>
-   <li>bz2_filter</li>
+   <li>bz2_filter<sup>1</sup></li>
    <li>calendar</li>
-   <li>coin_acceptor</li>
-   <li>crack</li>
+   <li>coin_acceptor<sup>1</sup></li>
+   <li>crack<sup>1</sup></li>
    <li>ctype</li>
    <li>curl</li>
    <li>date</li>
@@ -337,66 +337,66 @@ The PHP core includes many built-in extensions that provide basic functionality,
    <li>dbase</li>
    <li>dbx</li>
    <li>dom</li>
-   <li>doublemetaphone</li>
-   <li>eaccelerator</li>
+   <li>doublemetaphone<sup>1</sup></li>
+   <li>eaccelerator<sup>3</sup></li>
    <li>enchant</li>
    <li>exif</li>
-   <li>ffmpeg*</li>
    <li>fileinfo</li>
    <li>filter</li>
    <li>ftp</li>
    <li>gd</li>
-   <li>gender</li>
-   <li>geoip</li>
-   <li>geos</li>
+   <li>gender<sup>1</sup></li>
+   <li>geoip<sup>1</sup></li>
+   <li>geos<sup>1</sup></li>
    <li>gettext</li>
-   <li>gmagick</li>
+   <li>gmagick<sup>1</sup></li>
    <li>gmp</li>
-   <li>gnupg</li>
-   <li>haru</li>
+   <li>gnupg<sup>1</sup></li>
+   <li>haru<sup>1</sup></li>
    <li>hash</li>
-   <li>hidef</li>
-   <li>htscanner</li>
-   <li>http</li>
-   <li>huffman</li>
+   <li>hidef<sup>1</sup></li>
+   <li>htscanner<sup>1</sup></li>
+   <li>http<sup>1</sup></li>
+   <li>huffman<sup>1</sup></li>
    <li>iconv</li>
-   <li>idn</li>
-   <li>igbinary</li>
-   <li>imagick</li>
+   <li>idn<sup>1</sup></li>
+   <li>igbinary<sup>1</sup></li>
+   <li>imagick<sup>1</sup></li>
    <li>imap</li>
-   <li>inclued</li>
-   <li>inotify</li>
+   <li>inclued<sup>1</sup></li>
+   <li>inotify<sup>1</sup></li>
    <li>interbase</li>
    <li>intl</li>
-   <li>ioncube_loader</li>
+   <li>ioncube_loader<sup>4</sup></li>
    <li>json</li>
    <li>ldap</li>
    <li>libxml</li>
-   <li>lzf</li>
-   <li>mailparse</li>
+   <li>lzf<sup>1</sup></li>
+   <li>magickwand<sup>5</sup></li>
+   <li>mailparse<sup>1</sup></li>
    <li>mbstring</li>
    <li>mcrypt</li>
-   <li>memcache</li>
-   <li>memcached</li>
+   <li>memcache<sup>1</sup></li>
+   <li>memcached<sup>1</sup></li>
    <li>mhash</li>
-   <li>mongo</li>
-   <li>msgpack</li>
-   <li>mssql</li>
+   <li>mongo<sup>1</sup></li>
+   <li>msgpack<sup>1</sup></li>
+   <li>mssql<sup>6</sup></li>
    <li>mysql</li>
    <li>mysqli</li>
-   <li>ncurses</li>
-   <li>oauth</li>
+   <li>ncurses<sup>6</sup></li>
+   <li>oauth<sup>1</sup></li>
    <li>odbc</li>
-   <li>opcache</li>
+   <li>opcache<sup>6</sup></li>
    <li>openssl</li>
    <li>pcntl</li>
    <li>pcre</li>
-   <li>pdf</li>
+   <li>pdf<sup>1</sup></li>
    <li>pdo</li>
    <li>pdo_dblib</li>
    <li>pdo_firebird</li>
    <li>pdo_mysql</li>
-   <li>pdo_oci*</li>
+   <li>pdo_oci<sup>5</sup></li>
    <li>pdo_odbc</li>
    <li>pdo_pgsql</li>
    <li>pdo_sqlite</li>
@@ -404,57 +404,68 @@ The PHP core includes many built-in extensions that provide basic functionality,
    <li>phar</li>
    <li>posix</li>
    <li>pspell</li>
-   <li>quickhash</li>
-   <li>radius</li>
-   <li>rar</li>
+   <li>quickhash<sup>1</sup></li>
+   <li>radius<sup>1</sup></li>
    <li>readline</li>
    <li>recode</li>
-   <li>redis</li>
-   <li>rsync</li>
+   <li>redis<sup>1</sup></li>
+   <li>rsync<sup>1</sup></li>
    <li>session</li>
    <li>shmop</li>
    <li>snmp</li>
    <li>soap</li>
    <li>sockets</li>
-   <li>sourceguardian</li>
-   <li>spl_types</li>
+   <li>sourceguardian<sup>3</sup></li>
+   <li>spl_types<sup>1</sup></li>
    <li>sqlite</li>
    <li>ssh2</li>
    <li>standard</li>
-   <li>stats</li>
-   <li>stem</li>
-   <li>stomp</li>
-   <li>suhosin</li>
+   <li>stats<sup>1</sup></li>
+   <li>stem<sup>1</sup></li>
+   <li>stomp<sup>1</sup></li>
+   <li>suhosin<sup>3</sup></li>
    <li>sybase_ct</li>
    <li>sysvmsg</li>
    <li>sysvsem</li>
    <li>sysvshm</li>
    <li>tidy</li>
-   <li>timezonedb</li>
+   <li>timezonedb<sup>1</sup></li>
    <li>tokenizer</li>
-   <li>translit</li>
-   <li>uploadprogress</li>
-   <li>uuid</li>
+   <li>translit<sup>1</sup></li>
+   <li>uploadprogress<sup>1</sup></li>
+   <li>uuid<sup>1</sup></li>
    <li>wddx</li>
-   <li>xcache</li>
-   <li>xcache_3</li>
-   <li>xdebug</li>
-   <li>xhprof</li>
+   <li>xcache<sup>7</sup></li>
+   <li>xcache_3<sup>3</sup></li>
+   <li>xdebug<sup>1</sup></li>
+   <li>xdiff</li>
+   <li>xhprof<sup>1</sup></li>
    <li>xml</li>
    <li>xmlreader</li>
    <li>xmlrpc</li>
    <li>xmlwriter</li>
-   <li>xrange</li>
+   <li>xrange<sup>1</sup></li>
    <li>xsl</li>
    <li>yaf</li>
-   <li>yaz</li>
-   <li>zend_optimizer</li>
+   <li>yaz<sup>1</sup></li>
    <li>zip</li>
    <li>zlib</li>
    </ul>
    </div>
 
-   <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+   <sup>1</sup> Only on EL and Debian.
+
+   <sup>2</sup> Only on EL and Debian 13 (x86_64).
+
+   <sup>3</sup> Only on EL 6–9.
+
+   <sup>4</sup> Only on EL 6–9 and Ubuntu 18.04–22.04.
+
+   <sup>5</sup> Only on EL 6, 7.
+
+   <sup>6</sup> Only on EL.
+
+   <sup>7</sup> Only on EL 6.
 
   </template>
 
@@ -463,172 +474,181 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <div class="notranslate">
 
   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>amqp</li>
-  <li>apc</li>
-  <li>apcu</li>
-  <li>apm</li>
-  <li>ares</li>
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>apc<sup>1</sup></li>
+  <li>apcu<sup>1</sup></li>
+  <li>apm<sup>1</sup></li>
+  <li>ares<sup>1</sup></li>
   <li>bcmath</li>
-  <li>bcompiler</li>
-  <li>big_int</li>
-  <li>bitset</li>
-  <li>bloomy</li>
-  <li>brotli</li>
+  <li>bcompiler<sup>2</sup></li>
+  <li>big_int<sup>1</sup></li>
+  <li>bitset<sup>1</sup></li>
+  <li>bloomy<sup>1</sup></li>
+  <li>brotli<sup>3</sup></li>
   <li>bz2</li>
-  <li>bz2_filter</li>
+  <li>bz2_filter<sup>1</sup></li>
   <li>calendar</li>
-  <li>clamav*</li>
-  <li>coin_acceptor</li>
-  <li>core</li>
-  <li>crack</li>
+  <li>coin_acceptor<sup>1</sup></li>
+  <li>crack<sup>1</sup></li>
   <li>ctype</li>
   <li>curl</li>
   <li>date</li>
   <li>dba</li>
-  <li>dbase</li>
-  <li>dbx</li>
+  <li>dbase<sup>1</sup></li>
+  <li>dbx<sup>4</sup></li>
   <li>dom</li>
-  <li>doublemetaphone</li>
-  <li>eaccelerator</li>
-  <li>eio</li>
+  <li>doublemetaphone<sup>1</sup></li>
+  <li>eaccelerator<sup>3</sup></li>
+  <li>eio<sup>1</sup></li>
   <li>enchant</li>
   <li>ereg</li>
   <li>exif</li>
-  <li>ffmpeg*</li>
   <li>fileinfo</li>
   <li>filter</li>
   <li>ftp</li>
-  <li>functional</li>
+  <li>functional<sup>5</sup></li>
   <li>gd</li>
-  <li>gender</li>
-  <li>geoip</li>
-  <li>geos</li>
+  <li>gender<sup>1</sup></li>
+  <li>geoip<sup>1</sup></li>
+  <li>geos<sup>1</sup></li>
   <li>gettext</li>
-  <li>gmagick</li>
+  <li>gmagick<sup>1</sup></li>
   <li>gmp</li>
-  <li>gnupg</li>
-  <li>haru</li>
+  <li>gnupg<sup>1</sup></li>
+  <li>haru<sup>1</sup></li>
   <li>hash</li>
-  <li>hidef</li>
-  <li>htscanner</li>
-  <li>http</li>
-  <li>huffman</li>
+  <li>hidef<sup>1</sup></li>
+  <li>htscanner<sup>1</sup></li>
+  <li>http<sup>1</sup></li>
+  <li>huffman<sup>1</sup></li>
   <li>iconv</li>
-  <li>idn</li>
-  <li>igbinary</li>
-  <li>imagick</li>
+  <li>idn<sup>1</sup></li>
+  <li>igbinary<sup>1</sup></li>
+  <li>imagick<sup>1</sup></li>
   <li>imap</li>
-  <li>inclued</li>
-  <li>inotify</li>
-  <li>interbase</li>
+  <li>inclued<sup>1</sup></li>
+  <li>inotify<sup>1</sup></li>
+  <li>interbase<sup>4</sup></li>
   <li>intl</li>
-  <li>ioncube_loader</li>
-  <li>jsmin</li>
+  <li>ioncube_loader<sup>3</sup></li>
+  <li>jsmin<sup>1</sup></li>
   <li>json</li>
   <li>ldap</li>
-  <li>libevent</li>
+  <li>libevent<sup>1</sup></li>
   <li>libxml</li>
-  <li>lzf</li>
-  <li>mailparse</li>
+  <li>lzf<sup>1</sup></li>
+  <li>magickwand<sup>6</sup></li>
+  <li>mailparse<sup>1</sup></li>
   <li>mbstring</li>
   <li>mcrypt</li>
-  <li>memcache</li>
-  <li>memcached</li>
+  <li>memcache<sup>1</sup></li>
+  <li>memcached<sup>1</sup></li>
   <li>mhash</li>
-  <li>mongo</li>
-  <li>msgpack</li>
+  <li>mongo<sup>1</sup></li>
+  <li>msgpack<sup>1</sup></li>
   <li>mssql</li>
   <li>mysql</li>
   <li>mysqli</li>
   <li>mysqlnd</li>
-  <li>ncurses</li>
-  <li>nd_mysql</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>oauth</li>
+  <li>ncurses<sup>1</sup></li>
+  <li>oauth<sup>1</sup></li>
   <li>odbc</li>
-  <li>opcache</li>
-  <li>openssl</li>
+  <li>opcache<sup>5</sup></li>
+  <li>openssl<sup>5</sup></li>
   <li>pcntl</li>
   <li>pcre</li>
-  <li>pdf</li>
+  <li>pdf<sup>1</sup></li>
   <li>pdo</li>
-  <li>pdo_oci*</li>
   <li>pdo_dblib</li>
-  <li>pdo_firebird</li>
+  <li>pdo_firebird<sup>4</sup></li>
   <li>pdo_mysql</li>
+  <li>pdo_oci<sup>6</sup></li>
   <li>pdo_odbc</li>
   <li>pdo_pgsql</li>
   <li>pdo_sqlite</li>
   <li>pgsql</li>
-  <li>phalcon*</li>
+  <li>phalcon<sup>6</sup></li>
   <li>phar</li>
   <li>posix</li>
-  <li>propro</li>
+  <li>postal<sup>7</sup></li>
+  <li>propro<sup>1</sup></li>
   <li>pspell</li>
-  <li>quickhash</li>
-  <li>radius</li>
-  <li>raphf</li>
-  <li>rar</li>
+  <li>quickhash<sup>1</sup></li>
+  <li>radius<sup>1</sup></li>
+  <li>raphf<sup>1</sup></li>
+  <li>rar<sup>1</sup></li>
   <li>readline</li>
   <li>recode</li>
-  <li>redis</li>
-  <li>reflection</li>
-  <li>rsync</li>
+  <li>redis<sup>1</sup></li>
+  <li>rsync<sup>1</sup></li>
   <li>session</li>
   <li>shmop</li>
-  <li>simplexml</li>
   <li>snmp</li>
   <li>soap</li>
   <li>sockets</li>
-  <li>sourceguardian</li>
-  <li>solr</li>
-  <li>spl</li>
-  <li>spl_types</li>
-  <li>sqlite</li>
+  <li>solr<sup>1</sup></li>
+  <li>sourceguardian<sup>3</sup></li>
+  <li>spl_types<sup>1</sup></li>
+  <li>sqlite<sup>5</sup></li>
   <li>sqlite3</li>
-  <li>ssh2</li>
+  <li>ssh2<sup>1</sup></li>
   <li>standard</li>
-  <li>stats</li>
-  <li>stem</li>
-  <li>stomp</li>
-  <li>suhosin</li>
+  <li>stats<sup>1</sup></li>
+  <li>stem<sup>1</sup></li>
+  <li>stomp<sup>1</sup></li>
+  <li>suhosin<sup>3</sup></li>
   <li>sybase_ct</li>
   <li>sysvmsg</li>
   <li>sysvsem</li>
   <li>sysvshm</li>
+  <li>tideways<sup>1</sup></li>
   <li>tidy</li>
-  <li>tideways</li>
-  <li>timezonedb</li>
+  <li>timezonedb<sup>1</sup></li>
   <li>tokenizer</li>
-  <li>trader</li>
-  <li>translit</li>
-  <li>uploadprogress</li>
-  <li>uri_template</li>
-  <li>uuid</li>
+  <li>trader<sup>1</sup></li>
+  <li>translit<sup>1</sup></li>
+  <li>uploadprogress<sup>1</sup></li>
+  <li>uri_template<sup>1</sup></li>
+  <li>uuid<sup>1</sup></li>
   <li>wddx</li>
-  <li>weakref</li>
-  <li>xcache*</li>
-  <li>xcache_3</li>
-  <li>xdebug</li>
+  <li>weakref<sup>1</sup></li>
+  <li>xcache<sup>6</sup></li>
+  <li>xcache_3<sup>5</sup></li>
+  <li>xdebug<sup>1</sup></li>
+  <li>xdiff<sup>1</sup></li>
+  <li>xhprof<sup>1</sup></li>
   <li>xml</li>
   <li>xmlreader</li>
   <li>xmlrpc</li>
   <li>xmlwriter</li>
-  <li>xrange</li>
+  <li>xrange<sup>1</sup></li>
   <li>xsl</li>
-  <li>xhprof</li>
-  <li>yaf</li>
-  <li>yaml</li>
-  <li>yaz</li>
-  <li>zend_guard_loader</li>
+  <li>yaf<sup>1</sup></li>
+  <li>yaml<sup>1</sup></li>
+  <li>yaz<sup>1</sup></li>
+  <li>zend_guard_loader<sup>3</sup></li>
   <li>zip</li>
   <li>zlib</li>
-  <li>zmq</li>
+  <li>zmq<sup>1</sup></li>
   </ul>
   </div>
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+  <sup>1</sup> Only on EL and Debian.
+
+  <sup>2</sup> Only on EL and Debian 13 (x86_64).
+
+  <sup>3</sup> Only on EL 6–9.
+
+  <sup>4</sup> Not available on EL 10.
+
+  <sup>5</sup> Only on EL.
+
+  <sup>6</sup> Only on EL 6, 7.
+
+  <sup>7</sup> Only on EL 7.
 
   </template>
 
@@ -637,173 +657,178 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <div class="notranslate">
 
   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>aapm**</li>
-  <li>amqp</li>
-  <li>apc</li>
-  <li>apcu</li>
-  <li>apm</li>
-  <li>ares</li>
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp<sup>1</sup></li>
+  <li>apc<sup>1</sup></li>
+  <li>apcu<sup>1</sup></li>
+  <li>apm<sup>1</sup></li>
+  <li>ares<sup>1</sup></li>
   <li>bcmath</li>
-  <li>big_int</li>
-  <li>bitset</li>
-  <li>brotli</li>
+  <li>big_int<sup>1</sup></li>
+  <li>bitset<sup>1</sup></li>
+  <li>brotli<sup>2</sup></li>
   <li>bz2</li>
-  <li>bz2_filter</li>
+  <li>bz2_filter<sup>1</sup></li>
   <li>calendar</li>
-  <li>core</li>
   <li>ctype</li>
   <li>curl</li>
-  <li>clos_ssa</li>
   <li>date</li>
   <li>dba</li>
-  <li>dbase</li>
+  <li>dbase<sup>1</sup></li>
   <li>dbx</li>
   <li>dom</li>
-  <li>doublemetaphone</li>
-  <li>eaccelerator</li>
-  <li>eio</li>
+  <li>doublemetaphone<sup>1</sup></li>
+  <li>eaccelerator<sup>2</sup></li>
+  <li>eio<sup>1</sup></li>
   <li>enchant</li>
   <li>ereg</li>
   <li>exif</li>
-  <li>ffmpeg*</li>
   <li>fileinfo</li>
   <li>filter</li>
   <li>ftp</li>
-  <li>functional</li>
+  <li>functional<sup>3</sup></li>
   <li>gd</li>
-  <li>gender</li>
-  <li>geoip</li>
-  <li>geos</li>
+  <li>gender<sup>1</sup></li>
+  <li>geoip<sup>1</sup></li>
+  <li>geos<sup>1</sup></li>
   <li>gettext</li>
-  <li>gmagick</li>
+  <li>gmagick<sup>1</sup></li>
   <li>gmp</li>
-  <li>gnupg</li>
-  <li>haru</li>
+  <li>gnupg<sup>1</sup></li>
+  <li>haru<sup>1</sup></li>
   <li>hash</li>
-  <li>hidef</li>
-  <li>htscanner</li>
-  <li>http</li>
+  <li>hidef<sup>1</sup></li>
+  <li>htscanner<sup>1</sup></li>
+  <li>http<sup>1</sup></li>
   <li>iconv</li>
-  <li>igbinary</li>
-  <li>imagick</li>
+  <li>igbinary<sup>1</sup></li>
+  <li>imagick<sup>1</sup></li>
   <li>imap</li>
-  <li>inclued</li>
-  <li>inotify</li>
+  <li>inclued<sup>1</sup></li>
+  <li>inotify<sup>1</sup></li>
   <li>interbase</li>
   <li>intl</li>
-  <li>ioncube_loader</li>
+  <li>ioncube_loader<sup>2</sup></li>
+  <li>jsmin<sup>1</sup></li>
   <li>json</li>
   <li>ldap</li>
-  <li>libevent</li>
-  <li>libsodium</li>
+  <li>libevent<sup>1</sup></li>
+  <li>libsodium<sup>1</sup></li>
   <li>libxml</li>
-  <li>lzf</li>
-  <li>luasandbox*</li>
-  <li>mailparse</li>
+  <li>luasandbox<sup>1</sup></li>
+  <li>lzf<sup>1</sup></li>
+  <li>magickwand<sup>4</sup></li>
+  <li>mailparse<sup>1</sup></li>
   <li>mbstring</li>
   <li>mcrypt</li>
-  <li>memcache</li>
-  <li>memcached</li>
+  <li>memcache<sup>1</sup></li>
+  <li>memcached<sup>1</sup></li>
   <li>mhash</li>
-  <li>mongo</li>
-  <li>mongodb</li>
-  <li>msgpack</li>
+  <li>mongo<sup>1</sup></li>
+  <li>mongodb<sup>3</sup></li>
+  <li>msgpack<sup>1</sup></li>
   <li>mssql</li>
   <li>mysql</li>
   <li>mysqli</li>
   <li>mysqlnd</li>
-  <li>ncurses</li>
-  <li>nd_mysql</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>oauth</li>
-  <li>oci8*</li>
+  <li>ncurses<sup>1</sup></li>
+  <li>oauth<sup>1</sup></li>
+  <li>oci8<sup>5</sup></li>
   <li>odbc</li>
-  <li>opcache</li>
-  <li>openssl</li>
+  <li>opcache<sup>3</sup></li>
+  <li>openssl<sup>3</sup></li>
   <li>pcntl</li>
   <li>pcre</li>
-  <li>pdf</li>
+  <li>pdf<sup>1</sup></li>
   <li>pdo</li>
   <li>pdo_dblib</li>
   <li>pdo_firebird</li>
   <li>pdo_mysql</li>
+  <li>pdo_oci<sup>4</sup></li>
   <li>pdo_odbc</li>
   <li>pdo_pgsql</li>
   <li>pdo_sqlite</li>
-  <li>pdo_oci*</li>
   <li>pgsql</li>
-  <li>phalcon*</li>
+  <li>phalcon<sup>4</sup></li>
   <li>phar</li>
   <li>posix</li>
-  <li>propro</li>
+  <li>postal<sup>6</sup></li>
+  <li>propro<sup>1</sup></li>
   <li>pspell</li>
-  <li>quickhash</li>
-  <li>radius</li>
-  <li>raphf</li>
-  <li>rar</li>
+  <li>quickhash<sup>1</sup></li>
+  <li>radius<sup>1</sup></li>
+  <li>raphf<sup>1</sup></li>
+  <li>rar<sup>1</sup></li>
   <li>readline</li>
   <li>recode</li>
-  <li>redis</li>
-  <li>reflection</li>
-  <li>rsync</li>
+  <li>redis<sup>1</sup></li>
+  <li>rsync<sup>1</sup></li>
   <li>session</li>
   <li>shmop</li>
-  <li>simplexml</li>
   <li>snmp</li>
   <li>soap</li>
   <li>sockets</li>
-  <li>solr</li>
-  <li>sourceguardian</li>
-  <li>spl</li>
-  <li>spl_types</li>
+  <li>sodium<sup>3</sup></li>
+  <li>solr<sup>1</sup></li>
+  <li>sourceguardian<sup>2</sup></li>
+  <li>spl_types<sup>1</sup></li>
   <li>sqlite3</li>
-  <li>ssh2</li>
+  <li>ssh2<sup>1</sup></li>
   <li>standard</li>
-  <li>stats</li>
-  <li>stem</li>
-  <li>stomp</li>
-  <li>suhosin</li>
+  <li>stats<sup>1</sup></li>
+  <li>stem<sup>1</sup></li>
+  <li>stomp<sup>1</sup></li>
+  <li>suhosin<sup>2</sup></li>
   <li>sybase_ct</li>
   <li>sysvmsg</li>
   <li>sysvsem</li>
   <li>sysvshm</li>
+  <li>tideways<sup>1</sup></li>
   <li>tidy</li>
-  <li>tideways</li>
-  <li>timezonedb</li>
+  <li>timezonedb<sup>1</sup></li>
   <li>tokenizer</li>
-  <li>trader</li>
-  <li>translit</li>
-  <li>uploadprogress</li>
-  <li>uri_template</li>
-  <li>uuid</li>
+  <li>trader<sup>1</sup></li>
+  <li>translit<sup>1</sup></li>
+  <li>uploadprogress<sup>1</sup></li>
+  <li>uri_template<sup>1</sup></li>
+  <li>uuid<sup>1</sup></li>
   <li>wddx</li>
-  <li>weakref</li>
-  <li>xcache*</li>
-  <li>xcache_3</li>
-  <li>xdebug</li>
+  <li>weakref<sup>1</sup></li>
+  <li>xcache<sup>4</sup></li>
+  <li>xcache_3<sup>2</sup></li>
+  <li>xdebug<sup>1</sup></li>
+  <li>xdiff<sup>1</sup></li>
+  <li>xhprof<sup>1</sup></li>
   <li>xml</li>
   <li>xmlreader</li>
   <li>xmlrpc</li>
   <li>xmlwriter</li>
-  <li>xrange</li>
-  <li>xray**</li>
+  <li>xrange<sup>1</sup></li>
   <li>xsl</li>
-  <li>xhprof</li>
-  <li>jsmin</li>
-  <li>yaf</li>
-  <li>yaml</li>
-  <li>yaz</li>
-  <li>zend_guard_loader</li>
+  <li>yaf<sup>1</sup></li>
+  <li>yaml<sup>1</sup></li>
+  <li>yaz<sup>1</sup></li>
+  <li>zend_guard_loader<sup>2</sup></li>
   <li>zip</li>
   <li>zlib</li>
-  <li>zmq</li>
+  <li>zmq<sup>1</sup></li>
   </ul>
   </div>
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+  <sup>1</sup> Only on EL and Debian.
 
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+  <sup>2</sup> Only on EL 6–9.
+
+  <sup>3</sup> Only on EL.
+
+  <sup>4</sup> Only on EL 6, 7.
+
+  <sup>5</sup> Only on EL 6–9 and Debian.
+
+  <sup>6</sup> Only on EL 7.
 
   </template>
 
@@ -812,7 +837,10 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <div class="notranslate">
 
   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>aapm*</li>
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
   <li>amqp</li>
   <li>apcu</li>
   <li>apm</li>
@@ -820,27 +848,23 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>bcmath</li>
   <li>big_int</li>
   <li>bitset</li>
-  <li>brotli</li>
+  <li>brotli<sup>1</sup></li>
   <li>bz2</li>
   <li>bz2_filter</li>
   <li>calendar</li>
-  <li>clamav*</li>
-  <li>core</li>
   <li>ctype</li>
   <li>curl</li>
-  <li>clos_ssa</li>
   <li>date</li>
   <li>dba</li>
   <li>dbase</li>
   <li>dbx</li>
+  <li>diseval<sup>1</sup></li>
   <li>dom</li>
   <li>doublemetaphone</li>
-  <li>diseval</li>
   <li>eio</li>
   <li>enchant</li>
   <li>ereg</li>
   <li>exif</li>
-  <li>ffmpeg*</li>
   <li>fileinfo</li>
   <li>filter</li>
   <li>ftp</li>
@@ -852,7 +876,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>gmagick</li>
   <li>gmp</li>
   <li>gnupg</li>
-  <li>gRPC</li>
+  <li>grpc<sup>2</sup></li>
   <li>haru</li>
   <li>hash</li>
   <li>hidef</li>
@@ -865,15 +889,16 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>inotify</li>
   <li>interbase</li>
   <li>intl</li>
-  <li>ioncube_loader</li>
+  <li>ioncube_loader<sup>1</sup></li>
   <li>jsmin</li>
   <li>json</li>
   <li>ldap</li>
   <li>libevent</li>
-  <li>libsodium</li>
+  <li>libsodium<sup>3</sup></li>
   <li>libxml</li>
+  <li>luasandbox</li>
   <li>lzf</li>
-  <li>luasandbox*</li>
+  <li>magickwand<sup>4</sup></li>
   <li>mailparse</li>
   <li>mbstring</li>
   <li>mcrypt</li>
@@ -888,14 +913,11 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>mysqli</li>
   <li>mysqlnd</li>
   <li>ncurses</li>
-  <li>nd_mysql</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
   <li>oauth</li>
-  <li>oci8*</li>
+  <li>oci8<sup>5</sup></li>
   <li>odbc</li>
-  <li>opcache*</li>
-  <li>openssl</li>
+  <li>opcache<sup>6</sup></li>
+  <li>openssl<sup>6</sup></li>
   <li>pcntl</li>
   <li>pcre</li>
   <li>pdf</li>
@@ -903,17 +925,18 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>pdo_dblib</li>
   <li>pdo_firebird</li>
   <li>pdo_mysql</li>
+  <li>pdo_oci<sup>4</sup></li>
   <li>pdo_odbc</li>
   <li>pdo_pgsql</li>
   <li>pdo_sqlite</li>
-  <li>pdo_oci*</li>
   <li>pgsql</li>
-  <li>phalcon*</li>
-  <li>phalcon3</li>
+  <li>phalcon<sup>4</sup></li>
+  <li>phalcon3<sup>1</sup></li>
   <li>phar</li>
   <li>posix</li>
-  <li>postal*</li>
+  <li>postal<sup>7</sup></li>
   <li>propro</li>
+  <li>protobuf</li>
   <li>pspell</li>
   <li>quickhash</li>
   <li>radius</li>
@@ -922,17 +945,15 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>readline</li>
   <li>recode</li>
   <li>redis</li>
-  <li>reflection</li>
   <li>rsync</li>
   <li>session</li>
   <li>shmop</li>
-  <li>simplexml</li>
   <li>snmp</li>
   <li>soap</li>
   <li>sockets</li>
-  <li>sourceguardian</li>
+  <li>sodium<sup>6</sup></li>
   <li>solr</li>
-  <li>spl</li>
+  <li>sourceguardian<sup>1</sup></li>
   <li>spl_types</li>
   <li>sqlite3</li>
   <li>ssh2</li>
@@ -940,13 +961,13 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>stats</li>
   <li>stem</li>
   <li>stomp</li>
-  <li>suhosin</li>
+  <li>suhosin<sup>1</sup></li>
   <li>sybase_ct</li>
   <li>sysvmsg</li>
   <li>sysvsem</li>
   <li>sysvshm</li>
-  <li>tidy</li>
   <li>tideways</li>
+  <li>tidy</li>
   <li>timezonedb</li>
   <li>tokenizer</li>
   <li>trader</li>
@@ -956,27 +977,39 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>uuid</li>
   <li>wddx</li>
   <li>weakref</li>
-  <li>xcache_3</li>
+  <li>xcache_3<sup>1</sup></li>
   <li>xdebug</li>
+  <li>xdiff</li>
+  <li>xhprof</li>
   <li>xml</li>
   <li>xmlreader</li>
   <li>xmlrpc</li>
   <li>xmlwriter</li>
   <li>xrange</li>
-  <li>xray</li>
   <li>xsl</li>
-  <li>xhprof</li>
   <li>yaf</li>
   <li>yaml</li>
   <li>yaz</li>
-  <li>zend_guard_loader</li>
+  <li>zend_guard_loader<sup>6</sup></li>
   <li>zip</li>
   <li>zlib</li>
   <li>zmq</li>
   </ul>
   </div>
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+  <sup>1</sup> Only on EL 6–9.
+
+  <sup>2</sup> Not available on Debian 13 (arm64).
+
+  <sup>3</sup> Only on EL and Debian.
+
+  <sup>4</sup> Only on EL 6, 7.
+
+  <sup>5</sup> Not available on EL 10.
+
+  <sup>6</sup> Only on EL.
+
+  <sup>7</sup> Only on EL 7.
 
   </template>
 
@@ -985,7 +1018,10 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <div class="notranslate">
 
   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>aapm*</li>
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
   <li>amqp</li>
   <li>apcu</li>
   <li>apm</li>
@@ -997,34 +1033,31 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>bz2</li>
   <li>bz2_filter</li>
   <li>calendar</li>
-  <li>core</li>
   <li>ctype</li>
   <li>curl</li>
-  <li>clos_ssa*</li>
   <li>date</li>
   <li>dba</li>
   <li>dbase</li>
   <li>dbx</li>
+  <li>diseval<sup>1</sup></li>
   <li>dom</li>
   <li>doublemetaphone</li>
-  <li>diseval</li>
   <li>eio</li>
   <li>enchant</li>
   <li>ereg</li>
   <li>exif</li>
-  <li>ffmpeg*</li>
   <li>fileinfo</li>
   <li>filter</li>
   <li>ftp</li>
   <li>gd</li>
   <li>gender</li>
   <li>geoip</li>
-  <li>gettext</li>
   <li>geos</li>
+  <li>gettext</li>
   <li>gmagick</li>
   <li>gmp</li>
   <li>gnupg</li>
-  <li>gRPC</li>
+  <li>grpc<sup>2</sup></li>
   <li>haru</li>
   <li>hash</li>
   <li>htscanner</li>
@@ -1036,15 +1069,15 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>inotify</li>
   <li>interbase</li>
   <li>intl</li>
-  <li>ioncube_loader</li>
+  <li>ioncube_loader<sup>3</sup></li>
   <li>jsmin</li>
   <li>json</li>
   <li>ldap</li>
   <li>libevent</li>
-  <li>libsodium</li>
+  <li>libsodium<sup>4</sup></li>
   <li>libxml</li>
+  <li>luasandbox</li>
   <li>lzf</li>
-  <li>luasandbox*</li>
   <li>mailparse</li>
   <li>mbstring</li>
   <li>mcrypt</li>
@@ -1054,171 +1087,13 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>mongo</li>
   <li>mongodb</li>
   <li>msgpack</li>
-  <li>mssql</li>
+  <li>mssql<sup>5</sup></li>
   <li>mysql</li>
   <li>mysqli</li>
   <li>mysqlnd</li>
   <li>ncurses</li>
-  <li>nd_mysql</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
   <li>oauth</li>
-  <li>oci8</li>
-  <li>odbc</li>
-  <li>opcache*</li>
-  <li>openssl</li>
-  <li>pcntl</li>
-  <li>pcre</li>
-  <li>pdf</li>
-  <li>pdo</li>
-  <li>pdo_dblib</li>
-  <li>pdo_firebird</li>
-  <li>pdo_mysql</li>
-  <li>pdo_odbc</li>
-  <li>pdo_pgsql</li>
-  <li>pdo_sqlite</li>
-  <li>pdo_oci*</li>
-  <li>pgsql</li>
-  <li>phalcon*</li>
-  <li>phalcon3</li>
-  <li>phar</li>
-  <li>posix</li>
-  <li>postal*</li>
-  <li>propro</li>
-  <li>pspell</li>
-  <li>quickhash</li>
-  <li>radius</li>
-  <li>raphf</li>
-  <li>rar</li>
-  <li>readline</li>
-  <li>recode</li>
-  <li>redis</li>
-  <li>reflection</li>
-  <li>rsync</li>
-  <li>session</li>
-  <li>shmop</li>
-  <li>simplexml</li>
-  <li>snmp</li>
-  <li>soap</li>
-  <li>sockets</li>
-  <li>sourceguardian</li>
-  <li>spl</li>
-  <li>spl_types</li>
-  <li>sqlite3</li>
-  <li>ssh2</li>
-  <li>standard</li>
-  <li>stats</li>
-  <li>stem</li>
-  <li>stomp</li>
-  <li>solr</li>
-  <li>suhosin</li>
-  <li>sybase_ct</li>
-  <li>sysvmsg</li>
-  <li>sysvsem</li>
-  <li>sysvshm</li>
-  <li>tidy</li>
-  <li>timezonedb</li>
-  <li>tokenizer</li>
-  <li>trader</li>
-  <li>translit</li>
-  <li>tideways</li>
-  <li>uploadprogress</li>
-  <li>uri_template</li>
-  <li>uuid</li>
-  <li>wddx</li>
-  <li>xcache_3</li>
-  <li>xdebug</li>
-  <li>xml</li>
-  <li>xmlreader</li>
-  <li>xmlrpc</li>
-  <li>xmlwriter</li>
-  <li>xrange</li>
-  <li>xray</li>
-  <li>xsl</li>
-  <li>xhprof</li>
-  <li>yaml</li>
-  <li>yaz</li>
-  <li>zend_guard_loader</li>
-  <li>zip</li>
-  <li>zlib</li>
-  <li>zmq</li>
-  </ul>
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_7.0_extensions>
-
-  <div class="notranslate">
-
-  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>aapm*</li>
-  <li>amqp</li>
-  <li>apcu</li>
-  <li>bcmath</li>
-  <li>bitset</li>
-  <li>brotli</li>
-  <li>bz2</li>
-  <li>clos_ssa*</li>
-  <li>calendar</li>
-  <li>core</li>
-  <li>ctype</li>
-  <li>curl</li>
-  <li>date</li>
-  <li>dba</li>
-  <li>dbase</li>
-  <li>dom</li>
-  <li>diseval</li>
-  <li>eio</li>
-  <li>enchant</li>
-  <li>exif</li>
-  <li>fileinfo</li>
-  <li>filter</li>
-  <li>ftp</li>
-  <li>ffmpeg*</li>
-  <li>gd</li>
-  <li>gearman</li>
-  <li>gender</li>
-  <li>geos</li>
-  <li>geoip</li>
-  <li>gettext</li>
-  <li>gmagick</li>
-  <li>gmp</li>
-  <li>gnupg</li>
-  <li>gRPC</li>
-  <li>hash</li>
-  <li>htscanner</li>
-  <li>http</li>
-  <li>iconv</li>
-  <li>igbinary</li>
-  <li>imagick</li>
-  <li>imap</li>
-  <li>inotify</li>
-  <li>interbase</li>
-  <li>intl</li>
-  <li>ioncube_loader</li>
-  <li>jsmin</li>
-  <li>json</li>
-  <li>ldap</li>
-  <li>libsodium</li>
-  <li>libxml</li>
-  <li>lzf</li>
-  <li>luasandbox*</li>
-  <li>mailparse</li>
-  <li>mbstring</li>
-  <li>mcrypt</li>
-  <li>memcached</li>
-  <li>memcache</li>
-  <li>mongodb</li>
-  <li>mysqli</li>
-  <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>_newrelic_</li>
-  <li>oauth</li>
-  <li>oci8*</li>
+  <li>oci8<sup>6</sup></li>
   <li>odbc</li>
   <li>opcache</li>
   <li>openssl</li>
@@ -1229,75 +1104,269 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>pdo_dblib</li>
   <li>pdo_firebird</li>
   <li>pdo_mysql</li>
-  <li>psr</li>
+  <li>pdo_oci<sup>7</sup></li>
   <li>pdo_odbc</li>
   <li>pdo_pgsql</li>
   <li>pdo_sqlite</li>
-  <li>pdo_sqlsrv</li>
-  <li>pdo_oci</li>
   <li>pgsql</li>
-  <li>phalcon3</li>
+  <li>phalcon<sup>7</sup></li>
+  <li>phalcon3<sup>5</sup></li>
   <li>phar</li>
   <li>posix</li>
-  <li>postal*</li>
+  <li>postal<sup>8</sup></li>
   <li>propro</li>
+  <li>protobuf</li>
   <li>pspell</li>
-  <li>phalcon4</li>
+  <li>quickhash</li>
+  <li>radius</li>
   <li>raphf</li>
   <li>rar</li>
   <li>readline</li>
-  <li>rrd</li>
-  <li>redis</li>
-  <li>reflection</li>
   <li>recode</li>
+  <li>redis</li>
+  <li>rsync</li>
   <li>session</li>
   <li>shmop</li>
-  <li>simplexml</li>
   <li>snmp</li>
-  <li>snuffleupagus</li>
   <li>soap</li>
   <li>sockets</li>
-  <li>sourceguardian</li>
-  <li>sodium</li>
+  <li>sodium<sup>5</sup></li>
   <li>solr</li>
-  <li>spl</li>
+  <li>sourceguardian<sup>5</sup></li>
+  <li>spl_types</li>
   <li>sqlite3</li>
-  <li>sqlsrv</li>
   <li>ssh2</li>
   <li>standard</li>
   <li>stats</li>
-  <li>suhosin7</li>
+  <li>stem</li>
+  <li>stomp</li>
+  <li>suhosin<sup>9</sup></li>
+  <li>sybase_ct</li>
   <li>sysvmsg</li>
-  <li>swoole</li>
   <li>sysvsem</li>
   <li>sysvshm</li>
+  <li>tideways</li>
   <li>tidy</li>
   <li>timezonedb</li>
   <li>tokenizer</li>
   <li>trader</li>
-  <li>tideways_xhprof</li>
+  <li>translit</li>
   <li>uploadprogress</li>
+  <li>uri_template</li>
   <li>uuid</li>
-  <li>vips*</li>
-  <li>vld*</li>
   <li>wddx</li>
+  <li>weakref</li>
+  <li>xcache_3<sup>9</sup></li>
   <li>xdebug</li>
+  <li>xdiff</li>
+  <li>xhprof</li>
   <li>xml</li>
   <li>xmlreader</li>
   <li>xmlrpc</li>
   <li>xmlwriter</li>
-  <li>xray</li>
+  <li>xrange</li>
   <li>xsl</li>
+  <li>yaf</li>
   <li>yaml</li>
   <li>yaz</li>
-  <li>yaf</li>
+  <li>zend_guard_loader<sup>5</sup></li>
   <li>zip</li>
   <li>zlib</li>
   <li>zmq</li>
   </ul>
   </div>
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+  <sup>1</sup> Not available on EL 10 or Ubuntu 26.04.
+
+  <sup>2</sup> Not available on Debian 13 (arm64).
+
+  <sup>3</sup> Not available on Ubuntu 26.04 or Debian 12, 13 (arm64).
+
+  <sup>4</sup> Not available on Ubuntu 16.04.
+
+  <sup>5</sup> Only on EL.
+
+  <sup>6</sup> Not available on EL 10.
+
+  <sup>7</sup> Only on EL 6, 7.
+
+  <sup>8</sup> Only on EL 7.
+
+  <sup>9</sup> Only on EL 6–9.
+
+  </template>
+
+  <template #PHP_7.0_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp</li>
+  <li>apc</li>
+  <li>apcu</li>
+  <li>apm</li>
+  <li>bcmath</li>
+  <li>bitset</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>diseval<sup>1</sup></li>
+  <li>dom</li>
+  <li>eio</li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>geos</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>grpc</li>
+  <li>hash</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>interbase</li>
+  <li>intl</li>
+  <li>ioncube_loader<sup>2</sup></li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>libsodium<sup>3</sup></li>
+  <li>libxml</li>
+  <li>luasandbox</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mongodb</li>
+  <li>msgpack</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>newrelic<sup>4</sup></li>
+  <li>oauth</li>
+  <li>oci8<sup>5</sup></li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci<sup>6</sup></li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phalcon3<sup>3</sup></li>
+  <li>phalcon4<sup>6</sup></li>
+  <li>phar</li>
+  <li>phpiredis<sup>3</sup></li>
+  <li>posix</li>
+  <li>postal<sup>7</sup></li>
+  <li>propro</li>
+  <li>protobuf</li>
+  <li>pspell</li>
+  <li>psr</li>
+  <li>quickhash<sup>8</sup></li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>recode</li>
+  <li>redis</li>
+  <li>rrd</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>snuffleupagus</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium<sup>9</sup></li>
+  <li>solr</li>
+  <li>sourceguardian<sup>3</sup></li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>stomp<sup>10</sup></li>
+  <li>suhosin7<sup>6</sup></li>
+  <li>swoole</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>translit<sup>10</sup></li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips</li>
+  <li>vld<sup>8</sup></li>
+  <li>wddx</li>
+  <li>weakref</li>
+  <li>xdebug</li>
+  <li>xdiff</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+  </div>
+
+  <sup>1</sup> Not available on Ubuntu 26.04.
+
+  <sup>2</sup> Not available on Ubuntu 26.04 or Debian 12, 13 (arm64).
+
+  <sup>3</sup> Only on EL.
+
+  <sup>4</sup> Not available on Debian 12, 13 (arm64).
+
+  <sup>5</sup> Not available on EL 10.
+
+  <sup>6</sup> Only on EL 6–9.
+
+  <sup>7</sup> Only on EL 7.
+
+  <sup>8</sup> Only on EL 7–10.
+
+  <sup>9</sup> Not available on Ubuntu 16.04.
+
+  <sup>10</sup> Not available on EL 6.
 
   ::: tip Note
   To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
@@ -1311,41 +1380,42 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <div class="notranslate">
 
   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>aapm*</li>
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
   <li>amqp</li>
-  <li>snuffleupagus</li>
-  <li>vld</li>
+  <li>apc</li>
   <li>apcu</li>
+  <li>apm</li>
   <li>bcmath</li>
+  <li>bitset</li>
   <li>brotli</li>
   <li>bz2</li>
-  <li>clos_ssa*</li>
   <li>calendar</li>
-  <li>core</li>
   <li>ctype</li>
   <li>curl</li>
   <li>date</li>
   <li>dba</li>
   <li>dbase</li>
+  <li>diseval<sup>1</sup></li>
   <li>dom</li>
-  <li>diseval</li>
   <li>eio</li>
   <li>enchant</li>
   <li>exif</li>
   <li>fileinfo</li>
   <li>filter</li>
   <li>ftp</li>
-  <li>ffmpeg*</li>
   <li>gd</li>
   <li>gearman</li>
   <li>gender</li>
   <li>geoip</li>
-  <li>gettext</li>
   <li>geos</li>
+  <li>gettext</li>
   <li>gmagick</li>
   <li>gmp</li>
   <li>gnupg</li>
-  <li>gRPC</li>
+  <li>grpc</li>
   <li>hash</li>
   <li>htscanner</li>
   <li>http</li>
@@ -1356,103 +1426,124 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>inotify</li>
   <li>interbase</li>
   <li>intl</li>
-  <li>ioncube_loader</li>
+  <li>ioncube_loader<sup>2</sup></li>
   <li>jsmin</li>
   <li>json</li>
   <li>ldap</li>
-  <li>libsodium</li>
+  <li>libsodium<sup>3</sup></li>
   <li>libxml</li>
+  <li>luasandbox</li>
   <li>lzf</li>
-  <li>luasandbox*</li>
   <li>mailparse</li>
   <li>mbstring</li>
   <li>mcrypt</li>
-  <li>memcached</li>
   <li>memcache</li>
+  <li>memcached</li>
   <li>mongodb</li>
+  <li>msgpack</li>
   <li>mysqli</li>
   <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>_newrelic_</li>
+  <li>newrelic<sup>4</sup></li>
   <li>oauth</li>
-  <li>oci8</li>
+  <li>oci8<sup>5</sup></li>
   <li>odbc</li>
   <li>opcache</li>
   <li>openssl</li>
   <li>pcntl</li>
   <li>pcre</li>
+  <li>pdf</li>
   <li>pdo</li>
   <li>pdo_dblib</li>
   <li>pdo_firebird</li>
   <li>pdo_mysql</li>
+  <li>pdo_oci<sup>6</sup></li>
   <li>pdo_odbc</li>
-  <li>pdo_pgsql psr</li>
+  <li>pdo_pgsql</li>
   <li>pdo_sqlite</li>
   <li>pdo_sqlsrv</li>
   <li>pgsql</li>
-  <li>phalcon3</li>
+  <li>phalcon3<sup>3</sup></li>
+  <li>phalcon4<sup>6</sup></li>
   <li>phar</li>
-  <li>pdf</li>
-  <li>pdo_oci</li>
-  <li>phalcon4</li>
+  <li>phpiredis<sup>3</sup></li>
   <li>posix</li>
   <li>propro</li>
+  <li>protobuf</li>
   <li>pspell</li>
-  <li>psr*</li>
+  <li>psr</li>
+  <li>quickhash<sup>7</sup></li>
   <li>raphf</li>
   <li>rar</li>
   <li>readline</li>
-  <li>redis</li>
-  <li>reflection</li>
-  <li>rrd</li>
   <li>recode</li>
-  <li>solr</li>
+  <li>redis</li>
+  <li>rrd</li>
+  <li>scoutapm</li>
   <li>session</li>
   <li>shmop</li>
-  <li>simplexml</li>
   <li>snmp</li>
+  <li>snuffleupagus</li>
   <li>soap</li>
   <li>sockets</li>
-  <li>sourceguardian</li>
-  <li>spl</li>
-  <li>sodium</li>
+  <li>sodium<sup>8</sup></li>
+  <li>solr</li>
+  <li>sourceguardian<sup>3</sup></li>
   <li>sqlite3</li>
   <li>sqlsrv</li>
   <li>ssh2</li>
   <li>standard</li>
   <li>stats</li>
-  <li>suhosin7</li>
-  <li>sysvmsg</li>
+  <li>stomp<sup>9</sup></li>
+  <li>suhosin7<sup>6</sup></li>
   <li>swoole</li>
+  <li>sysvmsg</li>
   <li>sysvsem</li>
   <li>sysvshm</li>
+  <li>tideways_xhprof</li>
   <li>tidy</li>
   <li>timezonedb</li>
   <li>tokenizer</li>
   <li>trader</li>
-  <li>tideways_xhprof</li>
+  <li>translit<sup>9</sup></li>
   <li>uploadprogress</li>
   <li>uuid</li>
-  <li>vips*</li>
+  <li>vips</li>
+  <li>vld<sup>3</sup></li>
   <li>wddx</li>
+  <li>weakref</li>
   <li>xdebug</li>
+  <li>xdiff</li>
   <li>xml</li>
   <li>xmlreader</li>
   <li>xmlrpc</li>
   <li>xmlwriter</li>
   <li>xsl</li>
-  <li>xray</li>
-  <li>yaz</li>
-  <li>yaml</li>
   <li>yaf</li>
+  <li>yaml</li>
+  <li>yaz</li>
   <li>zip</li>
   <li>zlib</li>
   <li>zmq</li>
   </ul>
   </div>
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+  <sup>1</sup> Not available on Ubuntu 26.04.
+
+  <sup>2</sup> Not available on Ubuntu 26.04 or Debian 12, 13 (arm64).
+
+  <sup>3</sup> Only on EL.
+
+  <sup>4</sup> Not available on Debian 12, 13 (arm64).
+
+  <sup>5</sup> Not available on EL 10.
+
+  <sup>6</sup> Only on EL 6–9.
+
+  <sup>7</sup> Only on EL 7–10.
+
+  <sup>8</sup> Not available on Ubuntu 16.04.
+
+  <sup>9</sup> Not available on EL 6.
 
   ::: tip Note
   To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
@@ -1466,46 +1557,45 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <div class="notranslate">
 
   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>aapm*</li>
-  <li>jsmin</li>
-  <li>psr</li>
-  <li>rrd</li>
-  <li>yaz</li>
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
   <li>amqp</li>
-  <li>snuffleupagus</li>
-  <li>vld</li>
+  <li>apc</li>
   <li>apcu</li>
+  <li>apm</li>
   <li>bcmath</li>
+  <li>bitset</li>
   <li>brotli</li>
   <li>bz2</li>
   <li>calendar</li>
-  <li>clos_ssa*</li>
-  <li>core</li>
   <li>ctype</li>
   <li>curl</li>
   <li>date</li>
   <li>dba</li>
-  <li>dom</li>
   <li>dbase</li>
-  <li>diseval</li>
+  <li>diseval<sup>1</sup></li>
+  <li>dom</li>
   <li>eio</li>
+  <li>elastic_apm<sup>2</sup></li>
   <li>enchant</li>
   <li>exif</li>
   <li>fileinfo</li>
   <li>filter</li>
   <li>ftp</li>
-  <li>ffmpeg*</li>
   <li>gd</li>
+  <li>gearman</li>
   <li>gender</li>
   <li>geoip</li>
-  <li>gettext</li>
-  <li>gearman</li>
   <li>geos</li>
+  <li>gettext</li>
   <li>gmagick</li>
   <li>gmp</li>
   <li>gnupg</li>
-  <li>gRPC</li>
+  <li>grpc</li>
   <li>hash</li>
+  <li>htscanner</li>
   <li>http</li>
   <li>iconv</li>
   <li>igbinary</li>
@@ -1514,95 +1604,122 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>inotify</li>
   <li>interbase</li>
   <li>intl</li>
-  <li>ioncube_loader</li>
+  <li>ioncube_loader<sup>3</sup></li>
+  <li>jsmin</li>
   <li>json</li>
   <li>ldap</li>
+  <li>leveldb<sup>4</sup></li>
   <li>libxml</li>
+  <li>luasandbox</li>
   <li>lzf</li>
-  <li>luasandbox*</li>
-  <li>mcrypt</li>
-  <li>memcache</li>
   <li>mailparse</li>
   <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
   <li>memcached</li>
   <li>mongodb</li>
+  <li>msgpack</li>
   <li>mysqli</li>
   <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>_newrelic_</li>
+  <li>newrelic<sup>5</sup></li>
   <li>oauth</li>
-  <li>oci8</li>
+  <li>oci8<sup>6</sup></li>
   <li>odbc</li>
   <li>opcache</li>
   <li>openssl</li>
   <li>pcntl</li>
   <li>pcre</li>
+  <li>pdf</li>
   <li>pdo</li>
   <li>pdo_dblib</li>
   <li>pdo_firebird</li>
-  <li>pdf</li>
-  <li>pdo_oci</li>
-  <li>phalcon4</li>
   <li>pdo_mysql</li>
+  <li>pdo_oci<sup>7</sup></li>
   <li>pdo_odbc</li>
   <li>pdo_pgsql</li>
   <li>pdo_sqlite</li>
   <li>pdo_sqlsrv</li>
   <li>pgsql</li>
-  <li>phalcon3</li>
+  <li>phalcon3<sup>2</sup></li>
+  <li>phalcon4<sup>2</sup></li>
   <li>phar</li>
+  <li>phpiredis<sup>2</sup></li>
   <li>posix</li>
   <li>propro</li>
+  <li>protobuf</li>
   <li>pspell</li>
+  <li>psr</li>
+  <li>pthreads<sup>2</sup></li>
+  <li>quickhash<sup>4</sup></li>
   <li>raphf</li>
+  <li>rar</li>
   <li>readline</li>
-  <li>redis</li>
-  <li>reflection</li>
   <li>recode</li>
-  <li>sodium</li>
-  <li>sourceguardian</li>
-  <li>swoole</li>
+  <li>redis</li>
+  <li>rrd</li>
+  <li>scoutapm</li>
   <li>session</li>
   <li>shmop</li>
-  <li>simplexml</li>
   <li>snmp</li>
+  <li>snuffleupagus</li>
   <li>soap</li>
   <li>sockets</li>
-  <li>spl</li>
+  <li>sodium</li>
+  <li>solr</li>
+  <li>sourceguardian<sup>2</sup></li>
   <li>sqlite3</li>
   <li>sqlsrv</li>
   <li>ssh2</li>
   <li>standard</li>
   <li>stats</li>
+  <li>stomp<sup>8</sup></li>
+  <li>swoole</li>
   <li>sysvmsg</li>
   <li>sysvsem</li>
   <li>sysvshm</li>
+  <li>tideways_xhprof</li>
   <li>tidy</li>
   <li>timezonedb</li>
   <li>tokenizer</li>
   <li>trader</li>
-  <li>tideways_xhprof</li>
+  <li>translit<sup>8</sup></li>
   <li>uploadprogress</li>
   <li>uuid</li>
-  <li>vips*</li>
+  <li>vips</li>
+  <li>vld<sup>2</sup></li>
   <li>wddx</li>
+  <li>weakref</li>
+  <li>xdebug</li>
+  <li>xdiff</li>
   <li>xml</li>
   <li>xmlreader</li>
   <li>xmlrpc</li>
   <li>xmlwriter</li>
   <li>xsl</li>
-  <li>xdebug</li>
   <li>yaf</li>
   <li>yaml</li>
+  <li>yaz</li>
   <li>zip</li>
   <li>zlib</li>
   <li>zmq</li>
-  <li>xray</li>
   </ul>
   </div>
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+  <sup>1</sup> Not available on Ubuntu 26.04.
+
+  <sup>2</sup> Only on EL.
+
+  <sup>3</sup> Not available on Ubuntu 26.04 or Debian 12, 13 (arm64).
+
+  <sup>4</sup> Only on EL 7–10.
+
+  <sup>5</sup> Not available on Debian 12, 13 (arm64).
+
+  <sup>6</sup> Not available on EL 10.
+
+  <sup>7</sup> Only on EL 6–9.
+
+  <sup>8</sup> Not available on EL 6.
 
   ::: tip Note 
   To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
@@ -1616,144 +1733,174 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <div class="notranslate">
 
   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>ffmpeg*</li>
-  <li>aapm*</li>
-  <li>amqp</li>
-  <li>clos_ssa*</li>
-  <li>gearman</li>
-  <li>jsmin</li>
-  <li>mailparse</li>
-  <li>memcache</li>
-  <li>psr</li>
-  <li>rrd</li>
-  <li>solr</li>
-  <li>tideways_xhprof</li>
-  <li>zmq</li>
-  <li>snuffleupagus</li>
-  <li>vld</li>
-  <li>apcu</li>
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp<sup>1</sup></li>
+  <li>apc<sup>1</sup></li>
+  <li>apcu<sup>1</sup></li>
+  <li>bcmath</li>
+  <li>bitset<sup>1</sup></li>
+  <li>brotli<sup>1</sup></li>
   <li>bz2</li>
-  <li>brotli</li>
   <li>calendar</li>
-  <li>core</li>
   <li>ctype</li>
   <li>curl</li>
   <li>date</li>
-  <li>exif</li>
+  <li>dba</li>
+  <li>dbase<sup>1</sup></li>
+  <li>diseval<sup>2</sup></li>
+  <li>dom</li>
+  <li>eio<sup>1</sup></li>
+  <li>elastic_apm<sup>3</sup></li>
   <li>enchant</li>
+  <li>exif</li>
+  <li>ffmpeg<sup>4</sup></li>
+  <li>fileinfo</li>
   <li>filter</li>
   <li>ftp</li>
+  <li>gd</li>
+  <li>gearman<sup>1</sup></li>
+  <li>gender<sup>1</sup></li>
+  <li>geoip<sup>1</sup></li>
+  <li>geos<sup>1</sup></li>
   <li>gettext</li>
+  <li>gmagick<sup>1</sup></li>
   <li>gmp</li>
-  <li>gnupg</li>
+  <li>gnupg<sup>1</sup></li>
+  <li>grpc<sup>1</sup></li>
   <li>hash</li>
+  <li>htscanner<sup>1</sup></li>
+  <li>http<sup>1</sup></li>
   <li>iconv</li>
-  <li>interbase</li>
-  <li>luasandbox*</li>
+  <li>igbinary<sup>1</sup></li>
+  <li>imagick<sup>1</sup></li>
+  <li>imap</li>
+  <li>inotify<sup>1</sup></li>
+  <li>interbase<sup>1</sup></li>
+  <li>intl</li>
+  <li>ioncube_loader<sup>5</sup></li>
+  <li>jsmin<sup>1</sup></li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>leveldb<sup>1</sup></li>
   <li>libxml</li>
+  <li>luasandbox<sup>1</sup></li>
+  <li>lzf<sup>1</sup></li>
+  <li>mailparse<sup>1</sup></li>
+  <li>mbstring</li>
+  <li>mcrypt<sup>1</sup></li>
+  <li>memcache<sup>1</sup></li>
+  <li>memcached<sup>1</sup></li>
+  <li>mongodb<sup>1</sup></li>
+  <li>msgpack<sup>1</sup></li>
+  <li>mysqli</li>
   <li>mysqlnd</li>
+  <li>newrelic<sup>6</sup></li>
+  <li>oauth<sup>1</sup></li>
+  <li>oci8<sup>7</sup></li>
+  <li>odbc</li>
   <li>opcache</li>
   <li>openssl</li>
   <li>pcntl</li>
   <li>pcre</li>
+  <li>pdf<sup>1</sup></li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird<sup>1</sup></li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci<sup>8</sup></li>
+  <li>pdo_odbc</li>
   <li>pdo_pgsql</li>
+  <li>pdo_snowflake<sup>9</sup></li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv<sup>1</sup></li>
+  <li>pgsql</li>
+  <li>phalcon3<sup>8</sup></li>
+  <li>phalcon4<sup>3</sup></li>
   <li>phar</li>
+  <li>phpiredis<sup>3</sup></li>
+  <li>posix</li>
+  <li>propro<sup>1</sup></li>
+  <li>protobuf<sup>1</sup></li>
+  <li>pspell</li>
+  <li>psr<sup>1</sup></li>
+  <li>quickhash<sup>10</sup></li>
+  <li>raphf<sup>1</sup></li>
+  <li>rar<sup>1</sup></li>
   <li>readline</li>
-  <li>reflection</li>
+  <li>recode<sup>1</sup></li>
+  <li>redis<sup>1</sup></li>
+  <li>rrd<sup>1</sup></li>
+  <li>scoutapm<sup>1</sup></li>
   <li>session</li>
   <li>shmop</li>
-  <li>simplexml</li>
-  <li>sourceguardian</li>
-  <li>spl</li>
-  <li>sqlite3</li>
-  <li>standard</li>
   <li>snmp</li>
-  <li>stats</li>
-  <li>tokenizer</li>
-  <li>trader</li>
-  <li>xmlreader</li>
-  <li>bcmath</li>
-  <li>fileinfo</li>
-  <li>grpc</li>
-  <li>intl</li>
-  <li>lzf</li>
-  <li>nd_mysqli</li>
-  <li>pdf</li>
-  <li>pdo</li>
-  <li>posix</li>
-  <li>swoole</li>
-  <li>uploadprogress</li>
-  <li>xmlrpc</li>
-  <li>gd</li>
-  <li>http</li>
-  <li>ioncube_loader</li>
-  <li>mbstring</li>
-  <li>nd_pdo_mysql</li>
-  <li>pdo_dblib</li>
-  <li>pdo_sqlite</li>
-  <li>propro</li>
+  <li>snuffleupagus<sup>1</sup></li>
   <li>soap</li>
-  <li>sysvmsg</li>
-  <li>uuid</li>
-  <li>xmlwriter</li>
-  <li>dbase</li>
-  <li>gender</li>
-  <li>igbinary</li>
-  <li>mcrypt</li>
-  <li>newrelic</li>
-  <li>pdo_firebird</li>
-  <li>pdo_sqlsrv</li>
-  <li>pspell</li>
   <li>sockets</li>
-  <li>sysvsem</li>
-  <li>vips*</li>
-  <li>xsl</li>
-  <li>dba</li>
-  <li>geoip</li>
-  <li>imagick</li>
-  <li>json</li>
-  <li>memcached</li>
-  <li>oauth</li>
-  <li>pdo_mysql</li>
-  <li>pgsql</li>
-  <li>raphf</li>
   <li>sodium</li>
+  <li>solr<sup>1</sup></li>
+  <li>sourceguardian<sup>3</sup></li>
+  <li>sqlite3</li>
+  <li>sqlsrv<sup>1</sup></li>
+  <li>ssh2<sup>1</sup></li>
+  <li>standard</li>
+  <li>stats<sup>1</sup></li>
+  <li>stomp<sup>11</sup></li>
+  <li>swoole<sup>1</sup></li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
   <li>sysvshm</li>
-  <li>yaml</li>
-  <li>dom</li>
-  <li>geos</li>
-  <li>imap</li>
-  <li>ldap</li>
-  <li>mongodb</li>
-  <li>oci8</li>
-  <li>pdo_oci</li>
-  <li>phalcon3</li>
-  <li>recode</li>
-  <li>sqlsrv</li>
+  <li>tideways_xhprof<sup>1</sup></li>
   <li>tidy</li>
-  <li>wddx</li>
-  <li>yaz</li>
-  <li>eio</li>
-  <li>gmagick</li>
-  <li>inotify</li>
-  <li>leveldb</li>
-  <li>mysqli</li>
-  <li>odbc</li>
-  <li>pdo_odbc</li>
-  <li>phalcon4</li>
-  <li>redis</li>
-  <li>ssh2</li>
-  <li>timezonedb</li>
-  <li>xdebug</li>
-  <li>zip</li>
+  <li>timezonedb<sup>1</sup></li>
+  <li>tokenizer</li>
+  <li>trader<sup>1</sup></li>
+  <li>translit<sup>11</sup></li>
+  <li>uploadprogress<sup>1</sup></li>
+  <li>uuid<sup>1</sup></li>
+  <li>vips<sup>1</sup></li>
+  <li>vld<sup>3</sup></li>
+  <li>wddx<sup>1</sup></li>
+  <li>xdebug<sup>1</sup></li>
+  <li>xdiff<sup>1</sup></li>
   <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf<sup>1</sup></li>
+  <li>yaml<sup>1</sup></li>
+  <li>yaz<sup>1</sup></li>
+  <li>zip</li>
   <li>zlib</li>
-  <li>xray</li>
-  <li>yaf</li>
+  <li>zmq<sup>1</sup></li>
   </ul>
   </div>
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+  <sup>1</sup> Not available on Alpine Linux.
+
+  <sup>2</sup> Only on EL, Ubuntu 16.04–24.04 and Debian.
+
+  <sup>3</sup> Only on EL.
+
+  <sup>4</sup> Only on EL 6, 7.
+
+  <sup>5</sup> Not available on Ubuntu 26.04, Debian 12, 13 (arm64) or Alpine Linux.
+
+  <sup>6</sup> Not available on Debian 12, 13 (arm64) or Alpine Linux.
+
+  <sup>7</sup> Only on EL 6–9, Ubuntu and Debian.
+
+  <sup>8</sup> Only on EL 6–9.
+
+  <sup>9</sup> Only on EL 7–9.
+
+  <sup>10</sup> Only on EL 7–10.
+
+  <sup>11</sup> Only on EL 7–10, Ubuntu and Debian.
 
   :::tip Note
   To use <span class="notranslate">`newrelic`</span> extension you should set your own <span class="notranslate">`New Relic License Key`</span> in your own <span class="notranslate">`/opt/alt/php7*/etc/php.ini`</span> file.
@@ -1767,43 +1914,861 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <div class="notranslate">
 
   <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>leveldb</li>
-  <li>sourceguardian</li>
-  <li>ffmpeg*</li>
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp<sup>1</sup></li>
+  <li>apc<sup>1</sup></li>
+  <li>apcu<sup>1</sup></li>
+  <li>bcmath</li>
+  <li>bitset<sup>1</sup></li>
+  <li>brotli<sup>1</sup></li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase<sup>1</sup></li>
+  <li>diseval<sup>2</sup></li>
+  <li>dom</li>
+  <li>eio<sup>1</sup></li>
+  <li>elastic_apm<sup>3</sup></li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi<sup>4</sup></li>
+  <li>ffmpeg<sup>5</sup></li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman<sup>1</sup></li>
+  <li>gender<sup>1</sup></li>
+  <li>geoip<sup>1</sup></li>
+  <li>geos<sup>1</sup></li>
+  <li>gettext</li>
+  <li>gmagick<sup>1</sup></li>
+  <li>gmp</li>
+  <li>gnupg<sup>1</sup></li>
+  <li>grpc<sup>1</sup></li>
+  <li>hash</li>
+  <li>htscanner<sup>1</sup></li>
+  <li>http<sup>1</sup></li>
+  <li>iconv</li>
+  <li>igbinary<sup>1</sup></li>
+  <li>imagick<sup>1</sup></li>
+  <li>imap</li>
+  <li>inotify<sup>1</sup></li>
+  <li>intl</li>
+  <li>ioncube_loader<sup>6</sup></li>
+  <li>jsmin<sup>1</sup></li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>leveldb<sup>1</sup></li>
+  <li>libxml</li>
+  <li>luasandbox<sup>1</sup></li>
+  <li>lzf<sup>1</sup></li>
+  <li>mailparse<sup>1</sup></li>
+  <li>mbstring</li>
+  <li>mcrypt<sup>1</sup></li>
+  <li>memcache<sup>1</sup></li>
+  <li>memcached<sup>1</sup></li>
+  <li>mongodb<sup>1</sup></li>
+  <li>msgpack<sup>1</sup></li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>newrelic<sup>7</sup></li>
+  <li>oauth<sup>1</sup></li>
+  <li>oci8<sup>8</sup></li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf<sup>1</sup></li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird<sup>1</sup></li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci<sup>9</sup></li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_snowflake<sup>10</sup></li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv<sup>1</sup></li>
+  <li>pgsql</li>
+  <li>phalcon4<sup>3</sup></li>
+  <li>phalcon5<sup>3</sup></li>
+  <li>phar</li>
+  <li>phpiredis<sup>3</sup></li>
+  <li>posix</li>
+  <li>propro<sup>1</sup></li>
+  <li>protobuf<sup>1</sup></li>
+  <li>pspell</li>
+  <li>psr<sup>1</sup></li>
+  <li>quickhash<sup>11</sup></li>
+  <li>raphf<sup>1</sup></li>
+  <li>rar<sup>1</sup></li>
+  <li>readline</li>
+  <li>redis<sup>1</sup></li>
+  <li>rrd<sup>1</sup></li>
+  <li>scoutapm<sup>1</sup></li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>snuffleupagus<sup>1</sup></li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>solr<sup>1</sup></li>
+  <li>sourceguardian<sup>3</sup></li>
+  <li>sqlite3</li>
+  <li>sqlsrv<sup>1</sup></li>
+  <li>ssh2<sup>1</sup></li>
+  <li>standard</li>
+  <li>stats<sup>1</sup></li>
+  <li>stomp<sup>4</sup></li>
+  <li>swoole<sup>1</sup></li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof<sup>1</sup></li>
+  <li>tidy</li>
+  <li>timezonedb<sup>1</sup></li>
+  <li>tokenizer</li>
+  <li>trader<sup>1</sup></li>
+  <li>translit<sup>4</sup></li>
+  <li>uploadprogress<sup>1</sup></li>
+  <li>uuid<sup>1</sup></li>
+  <li>vips<sup>1</sup></li>
+  <li>vld<sup>3</sup></li>
+  <li>xdebug<sup>1</sup></li>
+  <li>xdiff<sup>1</sup></li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf<sup>1</sup></li>
+  <li>yaml<sup>1</sup></li>
+  <li>yaz<sup>1</sup></li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq<sup>1</sup></li>
+  </ul>
+  </div>
+
+  <sup>1</sup> Not available on Alpine Linux.
+
+  <sup>2</sup> Only on EL, Ubuntu 16.04–24.04 and Debian.
+
+  <sup>3</sup> Only on EL.
+
+  <sup>4</sup> Only on EL 7–10, Ubuntu and Debian.
+
+  <sup>5</sup> Only on EL 6, 7.
+
+  <sup>6</sup> Not available on Ubuntu 26.04, Debian 12, 13 (arm64) or Alpine Linux.
+
+  <sup>7</sup> Not available on Debian 12, 13 (arm64) or Alpine Linux.
+
+  <sup>8</sup> Only on EL 6–9, Ubuntu and Debian.
+
+  <sup>9</sup> Only on EL 6–9.
+
+  <sup>10</sup> Only on EL 7–9.
+
+  <sup>11</sup> Only on EL 7–10.
+
+  </template>
+
+  <template #PHP_8.0_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp<sup>1</sup></li>
+  <li>apcu<sup>1</sup></li>
+  <li>bcmath</li>
+  <li>bitset<sup>1</sup></li>
+  <li>brotli<sup>1</sup></li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase<sup>1</sup></li>
+  <li>diseval<sup>2</sup></li>
+  <li>dom</li>
+  <li>eio<sup>1</sup></li>
+  <li>elastic_apm<sup>3</sup></li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi<sup>4</sup></li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman<sup>1</sup></li>
+  <li>gender<sup>5</sup></li>
+  <li>geoip<sup>1</sup></li>
+  <li>geos<sup>1</sup></li>
+  <li>gettext</li>
+  <li>gmagick<sup>1</sup></li>
+  <li>gmp</li>
+  <li>gnupg<sup>5</sup></li>
+  <li>grpc<sup>1</sup></li>
+  <li>hash</li>
+  <li>htscanner<sup>1</sup></li>
+  <li>http<sup>1</sup></li>
+  <li>iconv</li>
+  <li>igbinary<sup>1</sup></li>
+  <li>imagick<sup>1</sup></li>
+  <li>imap</li>
+  <li>inotify<sup>1</sup></li>
+  <li>intl</li>
+  <li>jsmin<sup>1</sup></li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>leveldb<sup>1</sup></li>
+  <li>libxml</li>
+  <li>luasandbox<sup>1</sup></li>
+  <li>lzf<sup>1</sup></li>
+  <li>mailparse<sup>1</sup></li>
+  <li>mbstring</li>
+  <li>mcrypt<sup>1</sup></li>
+  <li>memcache<sup>1</sup></li>
+  <li>memcached<sup>1</sup></li>
+  <li>mongodb<sup>1</sup></li>
+  <li>msgpack<sup>1</sup></li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>newrelic<sup>5</sup></li>
+  <li>oauth<sup>1</sup></li>
+  <li>oci8<sup>6</sup></li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf<sup>1</sup></li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird<sup>1</sup></li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci<sup>7</sup></li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_snowflake<sup>8</sup></li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv<sup>1</sup></li>
+  <li>pgsql</li>
+  <li>phalcon5<sup>3</sup></li>
+  <li>phar</li>
+  <li>phpiredis<sup>3</sup></li>
+  <li>posix</li>
+  <li>protobuf<sup>1</sup></li>
+  <li>pspell</li>
+  <li>psr<sup>1</sup></li>
+  <li>quickhash<sup>5</sup></li>
+  <li>raphf<sup>1</sup></li>
+  <li>rar<sup>1</sup></li>
+  <li>readline</li>
+  <li>redis<sup>1</sup></li>
+  <li>rrd<sup>1</sup></li>
+  <li>scoutapm<sup>1</sup></li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>snuffleupagus<sup>1</sup></li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>solr<sup>1</sup></li>
+  <li>sourceguardian<sup>3</sup></li>
+  <li>sqlite3</li>
+  <li>sqlsrv<sup>1</sup></li>
+  <li>ssh2<sup>1</sup></li>
+  <li>standard</li>
+  <li>stats<sup>1</sup></li>
+  <li>stomp<sup>5</sup></li>
+  <li>swoole<sup>1</sup></li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof<sup>1</sup></li>
+  <li>tidy</li>
+  <li>timezonedb<sup>1</sup></li>
+  <li>tokenizer</li>
+  <li>trader<sup>1</sup></li>
+  <li>translit<sup>5</sup></li>
+  <li>uploadprogress<sup>1</sup></li>
+  <li>uuid<sup>1</sup></li>
+  <li>vips<sup>1</sup></li>
+  <li>vld<sup>3</sup></li>
+  <li>xdebug<sup>1</sup></li>
+  <li>xdiff<sup>1</sup></li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc<sup>5</sup></li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf<sup>1</sup></li>
+  <li>yaml<sup>1</sup></li>
+  <li>yaz<sup>1</sup></li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq<sup>1</sup></li>
+  </ul>
+  </div>
+
+  <sup>1</sup> Not available on Alpine Linux.
+
+  <sup>2</sup> Only on EL, Ubuntu 16.04–24.04 and Debian.
+
+  <sup>3</sup> Only on EL.
+
+  <sup>4</sup> Only on EL 7–10.
+
+  <sup>5</sup> Only on EL 7–10, Ubuntu and Debian.
+
+  <sup>6</sup> Only on EL 6–9, Ubuntu and Debian.
+
+  <sup>7</sup> Only on EL 6–9.
+
+  <sup>8</sup> Only on EL 7–9.
+
+  </template>
+
+  <template #PHP_8.1_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp<sup>1</sup></li>
+  <li>apcu<sup>1</sup></li>
+  <li>bcmath</li>
+  <li>bitset<sup>1</sup></li>
+  <li>brotli<sup>1</sup></li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase<sup>1</sup></li>
+  <li>diseval<sup>2</sup></li>
+  <li>dom</li>
+  <li>eio<sup>1</sup></li>
+  <li>elastic_apm<sup>3</sup></li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi<sup>4</sup></li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman<sup>1</sup></li>
+  <li>gender<sup>5</sup></li>
+  <li>geoip<sup>1</sup></li>
+  <li>geos<sup>1</sup></li>
+  <li>gettext</li>
+  <li>gmagick<sup>1</sup></li>
+  <li>gmp</li>
+  <li>gnupg<sup>5</sup></li>
+  <li>grpc<sup>1</sup></li>
+  <li>hash</li>
+  <li>htscanner<sup>1</sup></li>
+  <li>http<sup>1</sup></li>
+  <li>iconv</li>
+  <li>igbinary<sup>1</sup></li>
+  <li>imagick<sup>1</sup></li>
+  <li>imap</li>
+  <li>inotify<sup>1</sup></li>
+  <li>intl</li>
+  <li>ioncube_loader<sup>6</sup></li>
+  <li>jsmin<sup>1</sup></li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>leveldb<sup>1</sup></li>
+  <li>libxml</li>
+  <li>luasandbox<sup>1</sup></li>
+  <li>lzf<sup>1</sup></li>
+  <li>mailparse<sup>1</sup></li>
+  <li>mbstring</li>
+  <li>mcrypt<sup>1</sup></li>
+  <li>memcache<sup>1</sup></li>
+  <li>memcached<sup>1</sup></li>
+  <li>mongodb<sup>1</sup></li>
+  <li>msgpack<sup>1</sup></li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>newrelic<sup>5</sup></li>
+  <li>oauth<sup>1</sup></li>
+  <li>oci8<sup>7</sup></li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf<sup>1</sup></li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird<sup>1</sup></li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci<sup>8</sup></li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_snowflake<sup>9</sup></li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv<sup>1</sup></li>
+  <li>pgsql</li>
+  <li>phalcon5<sup>3</sup></li>
+  <li>phar</li>
+  <li>phpiredis<sup>3</sup></li>
+  <li>posix</li>
+  <li>protobuf<sup>1</sup></li>
+  <li>pspell</li>
+  <li>psr<sup>1</sup></li>
+  <li>quickhash<sup>5</sup></li>
+  <li>raphf<sup>1</sup></li>
+  <li>rar<sup>1</sup></li>
+  <li>readline</li>
+  <li>redis<sup>1</sup></li>
+  <li>rrd<sup>1</sup></li>
+  <li>scoutapm<sup>1</sup></li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>snuffleupagus<sup>1</sup></li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>solr<sup>1</sup></li>
+  <li>sourceguardian<sup>10</sup></li>
+  <li>sqlite3</li>
+  <li>sqlsrv<sup>1</sup></li>
+  <li>ssh2<sup>1</sup></li>
+  <li>standard</li>
+  <li>stats<sup>1</sup></li>
+  <li>stomp<sup>5</sup></li>
+  <li>swoole<sup>1</sup></li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof<sup>1</sup></li>
+  <li>tidy</li>
+  <li>timezonedb<sup>1</sup></li>
+  <li>tokenizer</li>
+  <li>trader<sup>1</sup></li>
+  <li>translit<sup>5</sup></li>
+  <li>uploadprogress<sup>1</sup></li>
+  <li>uuid<sup>1</sup></li>
+  <li>vips<sup>1</sup></li>
+  <li>vld<sup>3</sup></li>
+  <li>xdebug<sup>1</sup></li>
+  <li>xdiff<sup>1</sup></li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc<sup>5</sup></li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf<sup>1</sup></li>
+  <li>yaml<sup>1</sup></li>
+  <li>yaz<sup>1</sup></li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq<sup>1</sup></li>
+  </ul>
+  </div>
+
+  <sup>1</sup> Not available on Alpine Linux.
+
+  <sup>2</sup> Only on EL, Ubuntu 16.04–24.04 and Debian.
+
+  <sup>3</sup> Only on EL.
+
+  <sup>4</sup> Only on EL 7–10 and Alpine Linux.
+
+  <sup>5</sup> Only on EL 7–10, Ubuntu and Debian.
+
+  <sup>6</sup> Not available on Ubuntu 26.04, Debian 12, 13 (arm64) or Alpine Linux.
+
+  <sup>7</sup> Only on EL 6–9, Ubuntu and Debian.
+
+  <sup>8</sup> Only on EL 6–9.
+
+  <sup>9</sup> Only on EL 7–9.
+
+  <sup>10</sup> Only on EL 7–10.
+
+  </template>
+
+  <template #PHP_8.2_extensions>
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
   <li>amqp</li>
-  <li>clos_ssa*</li>
-  <li>gearman</li>
-  <li>ioncube_loader</li>
-  <li>jsmin</li>
-  <li>mailparse</li>
-  <li>mcrypt</li>
-  <li>memcache</li>
-  <li>psr</li>
-  <li>rrd</li>
-  <li>solr</li>
-  <li>ssh2</li>
-  <li>tideways_xhprof</li>
-  <li>yaz</li>
-  <li>zmq</li>
   <li>apcu</li>
   <li>bcmath</li>
+  <li>bitset</li>
   <li>brotli</li>
   <li>bz2</li>
   <li>calendar</li>
-  <li>core</li>
   <li>ctype</li>
   <li>curl</li>
   <li>date</li>
   <li>dba</li>
   <li>dbase</li>
+  <li>diseval<sup>1</sup></li>
   <li>dom</li>
   <li>eio</li>
+  <li>elastic_apm<sup>2</sup></li>
   <li>enchant</li>
   <li>exif</li>
+  <li>ffi<sup>3</sup></li>
   <li>fileinfo</li>
   <li>filter</li>
   <li>ftp</li>
   <li>gd</li>
+  <li>gearman</li>
+  <li>gender<sup>4</sup></li>
+  <li>geoip</li>
+  <li>geos</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg<sup>4</sup></li>
+  <li>grpc</li>
+  <li>hash</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>intl</li>
+  <li>ioncube_loader<sup>5</sup></li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>leveldb</li>
+  <li>libxml</li>
+  <li>luasandbox</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mongodb</li>
+  <li>msgpack</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>newrelic<sup>4</sup></li>
+  <li>oauth</li>
+  <li>oci8<sup>6</sup></li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci<sup>7</sup></li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_snowflake<sup>3</sup></li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phalcon5<sup>2</sup></li>
+  <li>phar</li>
+  <li>phpiredis<sup>2</sup></li>
+  <li>posix</li>
+  <li>protobuf</li>
+  <li>pspell</li>
+  <li>psr</li>
+  <li>quickhash<sup>4</sup></li>
+  <li>random</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>redis</li>
+  <li>rrd</li>
+  <li>scoutapm</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>snuffleupagus</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium<sup>8</sup></li>
+  <li>solr</li>
+  <li>sourceguardian<sup>3</sup></li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>stomp<sup>4</sup></li>
+  <li>swoole</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>translit<sup>4</sup></li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips</li>
+  <li>vld<sup>2</sup></li>
+  <li>xdebug</li>
+  <li>xdiff</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc<sup>4</sup></li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+
+  <sup>1</sup> Not available on Ubuntu 26.04.
+
+  <sup>2</sup> Only on EL.
+
+  <sup>3</sup> Only on EL 7–10.
+
+  <sup>4</sup> Not available on EL 6.
+
+  <sup>5</sup> Not available on Ubuntu 26.04 or Debian 12, 13 (arm64).
+
+  <sup>6</sup> Not available on EL 10.
+
+  <sup>7</sup> Only on EL 6–9.
+
+  <sup>8</sup> Not available on Ubuntu 16.04.
+
+  </template>
+
+  <template #PHP_8.3_extensions>
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>bitset</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>diseval<sup>1</sup></li>
+  <li>dom</li>
+  <li>eio</li>
+  <li>elastic_apm<sup>2</sup></li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi<sup>3</sup></li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman</li>
+  <li>gender<sup>4</sup></li>
+  <li>geoip</li>
+  <li>geos</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg<sup>4</sup></li>
+  <li>grpc</li>
+  <li>hash</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>intl</li>
+  <li>ioncube_loader<sup>5</sup></li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>leveldb</li>
+  <li>libxml</li>
+  <li>luasandbox</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mongodb</li>
+  <li>msgpack</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>newrelic<sup>4</sup></li>
+  <li>oauth</li>
+  <li>oci8<sup>6</sup></li>
+  <li>odbc</li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird</li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci<sup>7</sup></li>
+  <li>pdo_odbc</li>
+  <li>pdo_pgsql</li>
+  <li>pdo_snowflake<sup>3</sup></li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phalcon5<sup>2</sup></li>
+  <li>phar</li>
+  <li>phpiredis<sup>3</sup></li>
+  <li>posix</li>
+  <li>protobuf</li>
+  <li>pspell</li>
+  <li>psr</li>
+  <li>quickhash<sup>4</sup></li>
+  <li>random</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>redis</li>
+  <li>rrd</li>
+  <li>scoutapm</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>snuffleupagus</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium<sup>8</sup></li>
+  <li>solr</li>
+  <li>sourceguardian<sup>3</sup></li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>stomp<sup>4</sup></li>
+  <li>swoole</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>translit<sup>4</sup></li>
+  <li>uploadprogress</li>
+  <li>uuid</li>
+  <li>vips</li>
+  <li>vld<sup>3</sup></li>
+  <li>xdebug</li>
+  <li>xdiff</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc<sup>4</sup></li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+
+  <sup>1</sup> Not available on Ubuntu 26.04.
+
+  <sup>2</sup> Only on EL.
+
+  <sup>3</sup> Only on EL 7–10.
+
+  <sup>4</sup> Not available on EL 6.
+
+  <sup>5</sup> Not available on Ubuntu 26.04 or Debian 12, 13 (arm64).
+
+  <sup>6</sup> Not available on EL 10.
+
+  <sup>7</sup> Only on EL 6–9.
+
+  <sup>8</sup> Not available on Ubuntu 16.04.
+
+  </template>
+
+  <template #PHP_8.4_extensions>
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>bitset</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>diseval<sup>1</sup></li>
+  <li>dom</li>
+  <li>eio</li>
+  <li>elastic_apm<sup>2</sup></li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi<sup>2</sup></li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman</li>
   <li>gender</li>
   <li>geoip</li>
   <li>geos</li>
@@ -1813,6 +2778,7 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>gnupg</li>
   <li>grpc</li>
   <li>hash</li>
+  <li>htscanner</li>
   <li>http</li>
   <li>iconv</li>
   <li>igbinary</li>
@@ -1820,262 +2786,13 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>imap</li>
   <li>inotify</li>
   <li>intl</li>
-  <li>json</li>
-  <li>ldap</li>
-  <li>libxml</li>
-  <li>luasandbox*</li>
-  <li>lzf</li>
-  <li>mbstring</li>
-  <li>memcached</li>
-  <li>mongodb</li>
-  <li>mysqli</li>
-  <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>newrelic</li>
-  <li>snuffleupagus</li>
-  <li>oauth</li>
-  <li>oci8</li>
-  <li>odbc</li>
-  <li>opcache</li>
-  <li>openssl</li>
-  <li>pcntl</li>
-  <li>pcre</li>
-  <li>pdf</li>
-  <li>pdo</li>
-  <li>pdo_dblib</li>
-  <li>pdo_firebird</li>
-  <li>pdo_mysql</li>
-  <li>pdo_oci</li>
-  <li>pdo_odbc</li>
-  <li>pdo_pgsql</li>
-  <li>vld</li>
-  <li>pdo_sqlite</li>
-  <li>pdo_sqlsrv</li>
-  <li>pgsql</li>
-  <li>phalcon4</li>
-  <li>phar</li>
-  <li>posix</li>
-  <li>propro</li>
-  <li>pspell</li>
-  <li>raphf</li>
-  <li>readline</li>
-  <li>redis</li>
-  <li>reflection</li>
-  <li>phalcon5</li>
-  <li>session</li>
-  <li>shmop</li>
-  <li>simplexml</li>
-  <li>snmp</li>
-  <li>soap</li>
-  <li>sockets</li>
-  <li>sodium</li>
-  <li>spl</li>
-  <li>sqlite3</li>
-  <li>sqlsrv</li>
-  <li>standard</li>
-  <li>stats</li>
-  <li>swoole</li>
-  <li>sysvmsg</li>
-  <li>sysvsem</li>
-  <li>sysvshm</li>
-  <li>tidy</li>
-  <li>timezonedb</li>
-  <li>tokenizer</li>
-  <li>trader</li>
-  <li>xray</li>
-  <li>uploadprogress</li>
-  <li>uuid</li>
-  <li>vips*</li>
-  <li>xdebug</li>
-  <li>xml</li>
-  <li>xmlreader</li>
-  <li>xmlrpc</li>
-  <li>xmlwriter</li>
-  <li>xsl</li>
-  <li>yaml</li>
-  <li>zip</li>
-  <li>zlib</li>
-  </ul>
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  </template>
-
-  <template #PHP_8.0_extensions>
-
-  <div class="notranslate">
-
-  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>brotli</li>
-  <li>amqp</li>
-  <li>clos_ssa*</li>
-  <li>core</li>
-  <li>date</li>
-  <li>filter</li>
-  <li>gearman</li>
-  <li>geoip</li>
-  <li>gmagick</li>
-  <li>gnupg*</li>
-  <li>grpc</li>
-  <li>apcu</li>
-  <li>bcmath</li>
-  <li>bz2</li>
-  <li>calendar</li>
-  <li>ctype</li>
-  <li>curl</li>
-  <li>dba</li>
-  <li>dbase</li>
-  <li>dom</li>
-  <li>enchant</li>
-  <li>exif</li>
-  <li>ffi**</li>
-  <li>fileinfo</li>
-  <li>hash</li>
-  <li>igbinary</li>
-  <li>inotify</li>
-  <li>jsmin</li>
-  <li>json</li>
-  <li>libxml</li>
-  <li>mcrypt</li>
-  <li>memcache ftp</li>
-  <li>gd</li>
-  <li>gettext</li>
-  <li>gmp</li>
-  <li>iconv</li>
-  <li>imagick</li>
-  <li>imap</li>
-  <li>intl</li>
-  <li>ldap</li>
-  <li>lzf</li>
-  <li>mailparse</li>
-  <li>mbstring</li>
-  <li>mongodb</li>
-  <li>newrelic</li>
-  <li>oauth</li>
-  <li>oci8</li>
-  <li>openssl</li>
-  <li>pcntl</li>
-  <li>pcre</li>
-  <li>pdo_oci</li>
-  <li>pdo_sqlsrv</li>
-  <li>readline</li>
-  <li>redis</li>
-  <li>reflection</li>
-  <li>rrd</li>
-  <li>session memcached</li>
-  <li>mysqli</li>
-  <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>odbc</li>
-  <li>opcache</li>
-  <li>pdo</li>
-  <li>pdo_dblib</li>
-  <li>pdo_firebird</li>
-  <li>pdo_mysql</li>
-  <li>pdo_odbc</li>
-  <li>snuffleupagus</li>
-  <li>solr</li>
-  <li>SPL</li>
-  <li>sqlsrv</li>
-  <li>ssh2</li>
-  <li>standard</li>
-  <li>swoole</li>
-  <li>tideways_xhprof</li>
-  <li>trader pdo_pgsql</li>
-  <li>pdo_sqlite</li>
-  <li>pgsql</li>
-  <li>phar</li>
-  <li>posix</li>
-  <li>pspell</li>
-  <li>psr</li>
-  <li>raphf</li>
-  <li>shmop</li>
-  <li>simplexml</li>
-  <li>snmp</li>
-  <li>soap</li>
-  <li>sockets</li>
-  <li>uploadprogress</li>
-  <li>uuid</li>
-  <li>vips*</li>
-  <li>vld</li>
-  <li>xdebug</li>
-  <li>xmlrpc**</li>
-  <li>yaml</li>
-  <li>yaz</li>
-  <li>zip</li>
-  <li>zlib sodium</li>
-  <li>sqlite3</li>
-  <li>sysvmsg</li>
-  <li>sysvsem</li>
-  <li>sysvshm</li>
-  <li>tidy</li>
-  <li>timezonedb</li>
-  <li>tokenizer</li>
-  <li>xml</li>
-  <li>xmlreader</li>
-  <li>xmlwriter</li>
-  <li>xsl</li>
-  <li>zmq</li>
-  <li>sourceguardian</li>
-  <li>phalcon5</li>
-  <li>xray</li>
-  </ul>
-  </div>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_8.1_extensions>
-
-  <div class="notranslate">
-
-  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>amqp</li>
-  <li>apcu</li>
-  <li>bcmath</li>
-  <li>brotli</li>
-  <li>bz2</li>
-  <li>calendar</li>
-  <li>clos_ssa***</li>
-  <li>Core</li>
-  <li>ctype</li>
-  <li>curl</li>
-  <li>date</li>
-  <li>dba</li>
-  <li>dbase</li>
-  <li>dom</li>
-  <li>enchant</li>
-  <li>exif</li>
-  <li>ffi**</li>
-  <li>fileinfo</li>
-  <li>filter</li>
-  <li>ftp</li>
-  <li>gd</li>
-  <li>geoip</li>
-  <li>gearman</li>
-  <li>gettext</li>
-  <li>gmagick</li>
-  <li>gmp</li>
-  <li>gnupg**</li>
-  <li>grpc</li>
-  <li>hash</li>
-  <li>ioncube_loader</li>
-  <li>iconv</li>
-  <li>igbinary</li>
-  <li>imagick</li>
-  <li>imap</li>
-  <li>inotify</li>
-  <li>intl</li>
+  <li>ioncube_loader<sup>3</sup></li>
   <li>jsmin</li>
   <li>json</li>
   <li>ldap</li>
+  <li>leveldb</li>
   <li>libxml</li>
+  <li>luasandbox</li>
   <li>lzf</li>
   <li>mailparse</li>
   <li>mbstring</li>
@@ -2083,14 +2800,13 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>memcache</li>
   <li>memcached</li>
   <li>mongodb</li>
+  <li>msgpack</li>
   <li>mysqli</li>
   <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
   <li>newrelic</li>
   <li>oauth</li>
-  <li>oci8</li>
-  <li>odbc</li>
+  <li>oci8<sup>4</sup></li>
+  <li>odbc<sup>5</sup></li>
   <li>opcache</li>
   <li>openssl</li>
   <li>pcntl</li>
@@ -2098,38 +2814,46 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>pdf</li>
   <li>pdo</li>
   <li>pdo_dblib</li>
+  <li>pdo_firebird<sup>6</sup></li>
   <li>pdo_mysql</li>
-  <li>pdo_oci</li>
-  <li>pdo_odbc</li>
-  <li>phalcon5</li>
+  <li>pdo_oci<sup>4</sup></li>
+  <li>pdo_odbc<sup>5</sup></li>
   <li>pdo_pgsql</li>
-  <li>pdo_firebird</li>
+  <li>pdo_snowflake<sup>2</sup></li>
   <li>pdo_sqlite</li>
   <li>pdo_sqlsrv</li>
   <li>pgsql</li>
+  <li>phalcon5<sup>2</sup></li>
   <li>phar</li>
+  <li>phpiredis<sup>2</sup></li>
   <li>posix</li>
-  <li>process</li>
+  <li>propro<sup>7</sup></li>
+  <li>protobuf</li>
   <li>pspell</li>
   <li>psr</li>
-  <li>rrd</li>
+  <li>quickhash</li>
+  <li>random</li>
   <li>raphf</li>
+  <li>rar</li>
   <li>readline</li>
   <li>redis</li>
-  <li>Reflection</li>
+  <li>rrd</li>
+  <li>scoutapm</li>
   <li>session</li>
   <li>shmop</li>
-  <li>SimpleXML v snmp</li>
-  <li>solr</li>
-  <li>sourceguardian</li>
+  <li>snmp</li>
+  <li>snuffleupagus</li>
   <li>soap</li>
   <li>sockets</li>
   <li>sodium</li>
-  <li>SPL</li>
+  <li>solr</li>
+  <li>sourceguardian<sup>2</sup></li>
   <li>sqlite3</li>
   <li>sqlsrv</li>
   <li>ssh2</li>
   <li>standard</li>
+  <li>stats</li>
+  <li>stomp</li>
   <li>swoole</li>
   <li>sysvmsg</li>
   <li>sysvsem</li>
@@ -2139,397 +2863,203 @@ The PHP core includes many built-in extensions that provide basic functionality,
   <li>timezonedb</li>
   <li>tokenizer</li>
   <li>trader</li>
+  <li>translit</li>
   <li>uploadprogress</li>
   <li>uuid</li>
-  <li>vips*</li>
+  <li>vips</li>
+  <li>vld<sup>2</sup></li>
   <li>xdebug</li>
+  <li>xdiff</li>
   <li>xml</li>
   <li>xmlreader</li>
-  <li>xmlrpc**</li>
+  <li>xmlrpc</li>
   <li>xmlwriter</li>
   <li>xsl</li>
   <li>yaf</li>
   <li>yaml</li>
+  <li>yaz</li>
   <li>zip</li>
   <li>zlib</li>
   <li>zmq</li>
-  <li>xray</li>
   </ul>
+
+  <sup>1</sup> Not available on Ubuntu 26.04.
+
+  <sup>2</sup> Only on EL.
+
+  <sup>3</sup> Not available on Ubuntu 26.04 or Debian 12, 13 (arm64).
+
+  <sup>4</sup> Not available on EL 10.
+
+  <sup>5</sup> Not available on Ubuntu 18.04.
+
+  <sup>6</sup> Not available on EL 7.
+
+  <sup>7</sup> Only on EL 7–9.
+
+  </template>
+
+  <template #PHP_8.5_extensions>
+
+  <div class="notranslate">
+
+  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
+  <li>Core</li>
+  <li>Reflection</li>
+  <li>SPL</li>
+  <li>SimpleXML</li>
+  <li>amqp</li>
+  <li>apcu</li>
+  <li>bcmath</li>
+  <li>bitset</li>
+  <li>brotli</li>
+  <li>bz2</li>
+  <li>calendar</li>
+  <li>ctype</li>
+  <li>curl</li>
+  <li>date</li>
+  <li>dba</li>
+  <li>dbase</li>
+  <li>diseval<sup>1</sup></li>
+  <li>dom</li>
+  <li>eio</li>
+  <li>elastic_apm<sup>2</sup></li>
+  <li>enchant</li>
+  <li>exif</li>
+  <li>ffi<sup>2</sup></li>
+  <li>fileinfo</li>
+  <li>filter</li>
+  <li>ftp</li>
+  <li>gd</li>
+  <li>gearman</li>
+  <li>gender</li>
+  <li>geoip</li>
+  <li>geos</li>
+  <li>gettext</li>
+  <li>gmagick</li>
+  <li>gmp</li>
+  <li>gnupg</li>
+  <li>grpc</li>
+  <li>hash</li>
+  <li>htscanner</li>
+  <li>http</li>
+  <li>iconv</li>
+  <li>igbinary</li>
+  <li>imagick</li>
+  <li>imap</li>
+  <li>inotify</li>
+  <li>intl</li>
+  <li>ioncube_loader<sup>3</sup></li>
+  <li>jsmin</li>
+  <li>json</li>
+  <li>ldap</li>
+  <li>leveldb</li>
+  <li>lexbor</li>
+  <li>libxml</li>
+  <li>luasandbox</li>
+  <li>lzf</li>
+  <li>mailparse</li>
+  <li>mbstring</li>
+  <li>mcrypt</li>
+  <li>memcache</li>
+  <li>memcached</li>
+  <li>mongodb</li>
+  <li>msgpack</li>
+  <li>mysqli</li>
+  <li>mysqlnd</li>
+  <li>newrelic</li>
+  <li>oauth</li>
+  <li>oci8<sup>4</sup></li>
+  <li>odbc<sup>5</sup></li>
+  <li>opcache</li>
+  <li>openssl</li>
+  <li>pcntl</li>
+  <li>pcre</li>
+  <li>pdf</li>
+  <li>pdo</li>
+  <li>pdo_dblib</li>
+  <li>pdo_firebird<sup>6</sup></li>
+  <li>pdo_mysql</li>
+  <li>pdo_oci<sup>4</sup></li>
+  <li>pdo_odbc<sup>5</sup></li>
+  <li>pdo_pgsql</li>
+  <li>pdo_snowflake<sup>2</sup></li>
+  <li>pdo_sqlite</li>
+  <li>pdo_sqlsrv</li>
+  <li>pgsql</li>
+  <li>phalcon5<sup>2</sup></li>
+  <li>phar</li>
+  <li>phpiredis<sup>2</sup></li>
+  <li>posix</li>
+  <li>protobuf</li>
+  <li>pspell</li>
+  <li>psr</li>
+  <li>quickhash</li>
+  <li>random</li>
+  <li>raphf</li>
+  <li>rar</li>
+  <li>readline</li>
+  <li>redis</li>
+  <li>rrd</li>
+  <li>scoutapm</li>
+  <li>session</li>
+  <li>shmop</li>
+  <li>snmp</li>
+  <li>snuffleupagus</li>
+  <li>soap</li>
+  <li>sockets</li>
+  <li>sodium</li>
+  <li>solr</li>
+  <li>sourceguardian<sup>2</sup></li>
+  <li>sqlite3</li>
+  <li>sqlsrv</li>
+  <li>ssh2</li>
+  <li>standard</li>
+  <li>stats</li>
+  <li>stomp</li>
+  <li>swoole</li>
+  <li>sysvmsg</li>
+  <li>sysvsem</li>
+  <li>sysvshm</li>
+  <li>tideways_xhprof</li>
+  <li>tidy</li>
+  <li>timezonedb</li>
+  <li>tokenizer</li>
+  <li>trader</li>
+  <li>translit</li>
+  <li>uploadprogress</li>
+  <li>uri</li>
+  <li>uuid</li>
+  <li>vips</li>
+  <li>vld<sup>2</sup></li>
+  <li>xdebug</li>
+  <li>xdiff</li>
+  <li>xml</li>
+  <li>xmlreader</li>
+  <li>xmlrpc</li>
+  <li>xmlwriter</li>
+  <li>xsl</li>
+  <li>yaf</li>
+  <li>yaml</li>
+  <li>yaz</li>
+  <li>zip</li>
+  <li>zlib</li>
+  <li>zmq</li>
+  </ul>
+
   </div>
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
+  <sup>1</sup> Not available on Ubuntu 26.04.
 
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+  <sup>2</sup> Only on EL.
 
-  </template>
+  <sup>3</sup> Not available on Ubuntu 26.04 or Debian 12, 13 (arm64).
 
-  <template #PHP_8.2_extensions>
+  <sup>4</sup> Not available on EL 10.
 
-  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>amqp**</li>
-  <li>apcu**</li>
-  <li>bcmath</li>
-  <li>brotli**</li>
-  <li>bz2</li>
-  <li>calendar</li>
-  <li>Core</li>
-  <li>ctype</li>
-  <li>curl</li>
-  <li>date</li>
-  <li>dba</li>
-  <li>dbase**</li>
-  <li>dom</li>
-  <li>enchant</li>
-  <li>exif</li>
-  <li>ffi</li>
-  <li>fileinfo</li>
-  <li>filter</li>
-  <li>ftp</li>
-  <li>gd</li>
-  <li>gearman**</li>
-  <li>geoip**</li>
-  <li>gettext</li>
-  <li>gmagick**</li>
-  <li>gmp</li>
-  <li>gnupg*</li>
-  <li>grpc**</li>
-  <li>hash</li>
-  <li>iconv</li>
-  <li>igbinary**</li>
-  <li>imagick**</li>
-  <li>imap</li>
-  <li>inotify**</li>
-  <li>intl</li>
-  <li>ioncube_loader</li>
-  <li>jsmin**</li>
-  <li>json</li>
-  <li>ldap</li>
-  <li>libxml</li>
-  <li>lzf**</li>
-  <li>mailparse**</li>
-  <li>mbstring</li>
-  <li>mcrypt**</li>
-  <li>memcache**</li>
-  <li>memcached**</li>
-  <li>mongodb**</li>
-  <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>oauth**</li>
-  <li>oci8**</li>
-  <li>odbc</li>
-  <li>opcache</li>
-  <li>openssl</li>
-  <li>pcntl</li>
-  <li>pcre**</li>
-  <li>pdo</li>
-  <li>pdo_dblib</li>
-  <li>pdo_firebird</li>
-  <li>pdo_mysql*</li>
-  <li>pdo_oci**</li>
-  <li>pdo_odbc</li>
-  <li>pdo_pgsql</li>
-  <li>pdo_sqlite</li>
-  <li>pdo_sqlsrv**</li>
-  <li>pgsql</li>
-  <li>phar</li>
-  <li>posix</li>
-  <li>pspell</li>
-  <li>psr**</li>
-  <li>random</li>
-  <li>raphf**</li>
-  <li>readline</li>
-  <li>redis**</li>
-  <li>Reflection</li>
-  <li>rrd**</li>
-  <li>session</li>
-  <li>shmop</li>
-  <li>SimpleXML</li>
-  <li>snmp</li>
-  <li>soap</li>
-  <li>sockets</li>
-  <li>sodium</li>
-  <li>solr**</li>
-  <li>SPL</li>
-  <li>sqlite3</li>
-  <li>sqlsrv**</li>
-  <li>ssh2**</li>
-  <li>standard</li>
-  <li>swoole**</li>
-  <li>sysvmsg</li>
-  <li>sysvsem</li>
-  <li>sysvshm</li>
-  <li>tideways_xhprof**</li>
-  <li>tidy</li>
-  <li>timezonedb**</li>
-  <li>tokenizer</li>
-  <li>trader**</li>
-  <li>uploadprogress**</li>
-  <li>uuid**</li>
-  <li>vips*</li>
-  <li>xdebug**</li>
-  <li>xml</li>
-  <li>xmlreader</li>
-  <li>xmlrpc**</li>
-  <li>xmlwriter</li>
-  <li>xsl</li>
-  <li>yaml**</li>
-  <li>zip</li>
-  <li>zlib</li>
-  <li>zmq**</li>
-  </ul>
+  <sup>5</sup> Not available on Ubuntu 18.04.
 
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
-
-  </template>
-
-  <template #PHP_8.3_extensions>
-
-  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>amqp**</li>
-  <li>apcu**</li>
-  <li>bcmath</li>
-  <li>brotli**</li>
-  <li>bz2</li>
-  <li>calendar</li>
-  <li>Core</li>
-  <li>ctype</li>
-  <li>curl</li>
-  <li>date</li>
-  <li>dba</li>
-  <li>dbase**</li>
-  <li>dom</li>
-  <li>elastic_apm</li>
-  <li>enchant</li>
-  <li>exif</li>
-  <li>ffi</li>
-  <li>fileinfo</li>
-  <li>filter</li>
-  <li>ftp</li>
-  <li>gd</li>
-  <li>gearman**</li>
-  <li>geoip**</li>
-  <li>gettext</li>
-  <li>gmagick**</li>
-  <li>gmp</li>
-  <li>gnupg*</li>
-  <li>grpc**</li>
-  <li>hash</li>
-  <li>iconv</li>
-  <li>igbinary**</li>
-  <li>imagick**</li>
-  <li>imap</li>
-  <li>inotify**</li>
-  <li>intl</li>
-  <li>ioncube_loader</li>
-  <li>jsmin**</li>
-  <li>json</li>
-  <li>ldap</li>
-  <li>libxml</li>
-  <li>lzf**</li>
-  <li>mailparse**</li>
-  <li>mbstring</li>
-  <li>mcrypt**</li>
-  <li>memcache**</li>
-  <li>memcached**</li>
-  <li>mongodb**</li>
-  <li>mysqli</li>
-  <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>oauth**</li>
-  <li>oci8**</li>
-  <li>odbc</li>
-  <li>opcache</li>
-  <li>openssl</li>
-  <li>pcntl</li>
-  <li>pcre**</li>
-  <li>pdf</li>
-  <li>pdo</li>
-  <li>pdo_dblib</li>
-  <li>pdo_firebird</li>
-  <li>pdo_mysql*</li>
-  <li>pdo_oci**</li>
-  <li>pdo_odbc</li>
-  <li>pdo_pgsql</li>
-  <li>pdo_sqlite</li>
-  <li>pdo_sqlsrv**</li>
-  <li>pgsql</li>
-  <li>phalcon5</li>
-  <li>phar</li>
-  <li>posix</li>
-  <li>pspell</li>
-  <li>psr**</li>
-  <li>random</li>
-  <li>raphf**</li>
-  <li>readline</li>
-  <li>redis**</li>
-  <li>Reflection</li>
-  <li>rrd**</li>
-  <li>session</li>
-  <li>shmop</li>
-  <li>SimpleXML</li>
-  <li>snmp</li>
-  <li>snuffleupagus</li>
-  <li>soap</li>
-  <li>sockets</li>
-  <li>sodium</li>
-  <li>solr**</li>
-  <li>SPL</li>
-  <li>sqlite3</li>
-  <li>sqlsrv**</li>
-  <li>ssh2**</li>
-  <li>standard</li>
-  <li>sysvmsg</li>
-  <li>sysvsem</li>
-  <li>sysvshm</li>
-  <li>tideways_xhprof**</li>
-  <li>tidy</li>
-  <li>timezonedb**</li>
-  <li>tokenizer</li>
-  <li>trader**</li>
-  <li>uploadprogress**</li>
-  <li>uuid**</li>
-  <li>xml</li>
-  <li>xmlreader</li>
-  <li>xmlrpc**</li>
-  <li>xmlwriter</li>
-  <li>xsl</li>
-  <li>yaml**</li>
-  <li>zip</li>
-  <li>zlib</li>
-  <li>zmq**</li>
-  </ul>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc. 
-
-  </template>
-
-  <template #PHP_8.4_extensions>
-
-  <ul style="columns:5 9rem;list-style:none;padding:0;margin:0">
-  <li>amqp**</li>
-  <li>apcu**</li>
-  <li>bcmath</li>
-  <li>brotli**</li>
-  <li>bz2</li>
-  <li>calendar</li>
-  <li>Core</li>
-  <li>ctype</li>
-  <li>curl</li>
-  <li>date</li>
-  <li>dba</li>
-  <li>dbase**</li>
-  <li>dom</li>
-  <li>elastic_apm</li>
-  <li>enchant</li>
-  <li>exif</li>
-  <li>ffi</li>
-  <li>fileinfo</li>
-  <li>filter</li>
-  <li>ftp</li>
-  <li>gd</li>
-  <li>gearman**</li>
-  <li>geoip**</li>
-  <li>gettext</li>
-  <li>gmagick**</li>
-  <li>gmp</li>
-  <li>gnupg*</li>
-  <li>grpc**</li>
-  <li>hash</li>
-  <li>iconv</li>
-  <li>igbinary**</li>
-  <li>imagick**</li>
-  <li>imap</li>
-  <li>inotify**</li>
-  <li>intl</li>
-  <li>ioncube_loader</li>
-  <li>jsmin**</li>
-  <li>json</li>
-  <li>ldap</li>
-  <li>libxml</li>
-  <li>lzf**</li>
-  <li>mailparse**</li>
-  <li>mbstring</li>
-  <li>mcrypt**</li>
-  <li>memcache**</li>
-  <li>memcached**</li>
-  <li>mongodb**</li>
-  <li>mysqli</li>
-  <li>mysqlnd</li>
-  <li>nd_mysqli</li>
-  <li>nd_pdo_mysql</li>
-  <li>oauth**</li>
-  <li>oci8**</li>
-  <li>odbc</li>
-  <li>opcache</li>
-  <li>openssl</li>
-  <li>pcntl</li>
-  <li>pcre**</li>
-  <li>pdf</li>
-  <li>pdo</li>
-  <li>pdo_dblib</li>
-  <li>pdo_firebird</li>
-  <li>pdo_mysql*</li>
-  <li>pdo_oci**</li>
-  <li>pdo_odbc</li>
-  <li>pdo_pgsql</li>
-  <li>pdo_sqlite</li>
-  <li>pdo_sqlsrv**</li>
-  <li>pgsql</li>
-  <li>phalcon5</li>
-  <li>phar</li>
-  <li>posix</li>
-  <li>pspell</li>
-  <li>psr**</li>
-  <li>random</li>
-  <li>raphf**</li>
-  <li>readline</li>
-  <li>redis**</li>
-  <li>Reflection</li>
-  <li>rrd**</li>
-  <li>session</li>
-  <li>shmop</li>
-  <li>SimpleXML</li>
-  <li>snmp</li>
-  <li>snuffleupagus</li>
-  <li>soap</li>
-  <li>sockets</li>
-  <li>sodium</li>
-  <li>solr**</li>
-  <li>SPL</li>
-  <li>sqlite3</li>
-  <li>sqlsrv**</li>
-  <li>ssh2**</li>
-  <li>standard</li>
-  <li>sysvmsg</li>
-  <li>sysvsem</li>
-  <li>sysvshm</li>
-  <li>tideways_xhprof**</li>
-  <li>tidy</li>
-  <li>timezonedb**</li>
-  <li>tokenizer</li>
-  <li>trader**</li>
-  <li>uploadprogress**</li>
-  <li>uuid**</li>
-  <li>xml</li>
-  <li>xmlreader</li>
-  <li>xmlrpc**</li>
-  <li>xmlwriter</li>
-  <li>xsl</li>
-  <li>yaml**</li>
-  <li>zip</li>
-  <li>zlib</li>
-  <li>zmq**</li>
-  </ul>
-
-  <sup>*</sup> CentOS 7, CloudLinux 7, etc.
-
-  <sup>**</sup> CentOS 7, CentOS 8, CloudLinux 7, CloudLinux 8, etc.
+  <sup>6</sup> Not available on EL 7.
 
   </template>
 
