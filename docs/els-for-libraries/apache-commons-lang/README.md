@@ -18,7 +18,7 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache Commons Lang provides secur
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, you can consume ELS through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>
@@ -43,7 +43,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
 2. **Configure credentials**
 
    :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but use the same value in both `settings.xml` and `pom.xml`.
    :::
 
    <CodeTabs :tabs="[
@@ -66,7 +66,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
    * To keep both, add TuxCare after the official one.
 
    :::tip
-   Example **[Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)** projects are available on GitHub. Ensure the required environment variables are set.
+   Example **[Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)** projects are available on GitHub. Before running the examples, set the required environment variables.
    :::
 
 4. **Update dependencies**
@@ -111,7 +111,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
      { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-   The build tool should be able to identify and resolve dependencies from the TuxCare ELS for Apache Commons Lang repository.
+   The build tool identifies and resolves dependencies from the TuxCare ELS for Apache Commons Lang repository.
 
 </ELSSteps>
 

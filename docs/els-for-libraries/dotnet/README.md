@@ -1,6 +1,6 @@
 # .NET
 
-Endless Lifecycle Support (ELS) for .NET from TuxCare delivers security fixes for .NET library, framework, and tool packages, distributed through NuGet packages. This allows you to continue running your .NET applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for .NET from TuxCare delivers security fixes for .NET library, framework, and tool packages, distributed through NuGet packages. With ELS, you can continue running your .NET applications without vulnerability concerns, even after official support has ended.
 
 NuGet is the standard package manager for .NET, used to deliver the reusable components that applications depend on. ELS applies fixes at the package level, so your applications receive security updates without requiring changes to your own code.
 

@@ -1,6 +1,6 @@
 # yii2-dev
 
-Endless Lifecycle Support (ELS) for yii2-dev from TuxCare provides security fixes for Yii 2 framework versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for yii2-dev from TuxCare provides security fixes for Yii 2 framework versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

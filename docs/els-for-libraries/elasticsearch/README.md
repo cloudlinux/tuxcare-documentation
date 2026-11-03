@@ -40,7 +40,7 @@ Other versions upon request.
 2. **Configure credentials**
 
    :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but use the same value in both `settings.xml` and `pom.xml`.
    :::
 
    <CodeTabs :tabs="[
@@ -63,7 +63,7 @@ Other versions upon request.
    * To keep both, add TuxCare after the official one.
 
    :::tip
-   Example **[Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)** projects are available on GitHub. Ensure the required environment variables are set.
+   Example **[Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)** projects are available on GitHub. Before running the examples, set the required environment variables.
    :::
 
 4. **Update dependencies**
@@ -91,7 +91,7 @@ Other versions upon request.
      { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-   The build tool should be able to identify and resolve dependencies from the TuxCare ELS for Elasticsearch repository.
+   The build tool identifies and resolves dependencies from the TuxCare ELS for Elasticsearch repository.
 
 </ELSSteps>
 

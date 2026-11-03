@@ -1,6 +1,6 @@
 # .NET
 
-Endless Lifecycle Support (ELS) for .NET from TuxCare provides security fixes for .NET that has reached its end of life. This allows you to continue running .NET applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for .NET from TuxCare provides security fixes for .NET that has reached its end of life. With ELS, you can continue running .NET applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
@@ -42,7 +42,7 @@ Note, if you install the full .NET SDK, you already get the ASP.NET Core Runtime
 
   <template #Desktop_Runtime>
 
-The .NET Desktop Runtime allows you to run Windows desktop applications built with Windows Forms or WPF (Windows Presentation Foundation). It focuses on providing a smooth experience for traditional graphical apps on Windows platforms.
+The .NET Desktop Runtime runs Windows desktop applications built with Windows Forms or WPF (Windows Presentation Foundation). It focuses on providing a smooth experience for traditional graphical apps on Windows platforms.
 
   </template>
 
@@ -130,7 +130,7 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
    ![TuxCare Installer Products Selection with the installed dotnet-sdk-6.0.429-tuxcare.1-win-x64.exe highlighted in green](/images/dotnet-installer-installed.webp)
    :::
 
-   If your license does not cover a product, it is shown as **.NET (Not Authenticated)** with nothing to select.
+   If your license does not cover a product, the installer shows it as **.NET (Not Authenticated)** with nothing to select.
 
 4. Install
 

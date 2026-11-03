@@ -1,6 +1,6 @@
 # MinIO
 
-Endless Lifecycle Support (ELS) for MinIO from TuxCare provides security fixes for MinIO versions that have reached their end of life. This allows you to continue running MinIO without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for MinIO from TuxCare provides security fixes for MinIO versions that have reached their end of life. With ELS, you can continue running MinIO without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

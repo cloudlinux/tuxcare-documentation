@@ -5,7 +5,7 @@ Apache®, Apache Struts™, are either registered trademarks or trademarks of th
 <br>
 
 TuxCare's Endless Lifecycle Support (ELS) for Apache Struts™ provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Struts™ core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Apache Struts™ service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Struts™ applications.
+TuxCare's ELS for Apache Struts™ service provides solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Struts™ applications.
 
 ## Supported Versions
 
@@ -22,7 +22,7 @@ Our ELS for Apache Struts™ service is designed to provide solutions for organi
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, you can consume ELS through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>
@@ -47,7 +47,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
 2. **Configure credentials**
 
    :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but use the same value in both `settings.xml` and `pom.xml`.
    :::
 
    <CodeTabs :tabs="[
@@ -70,7 +70,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
    * To keep both, add TuxCare after the official one.
 
    :::tip
-   Example **[Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)** projects are available on GitHub. Ensure the required environment variables are set.
+   Example **[Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)** projects are available on GitHub. Before running the examples, set the required environment variables.
    :::
 
 4. **Update dependencies**
@@ -115,7 +115,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
      { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-   The build tool should be able to identify and resolve dependencies from the TuxCare ELS for Apache Struts™ repository.
+   The build tool identifies and resolves dependencies from the TuxCare ELS for Apache Struts™ repository.
 
 </ELSSteps>
 

@@ -6,7 +6,7 @@ Spring® is a trademark of Broadcom Inc. and/or its subsidiaries.
 
 TuxCare's Endless Lifecycle Support (ELS) for Spring® provides security updates and selected bug fixes that are integral to the stable operation of applications running on these versions of Spring® ecosystem components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
-Our ELS for Spring® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Spring® applications.
+TuxCare's ELS for Spring® service provides solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Spring® applications.
 
 :::tip
 ELS for Spring® also patches transitive dependencies at no extra cost, including Hibernate, Netty, Jackson Databind, SnakeYAML, Apache Kafka, Apache Velocity, and more. See the [full list of supported Java libraries](/els-for-libraries/java-libraries/).
@@ -433,7 +433,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS for Spring® can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, you can consume ELS for Spring® through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>
@@ -458,7 +458,7 @@ Optionally, ELS for Spring® can be consumed through your own repository manager
 2. **Configure credentials**
 
    :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but use the same value in both `settings.xml` and `pom.xml`.
    :::
 
    <CodeTabs :tabs="[
@@ -481,7 +481,7 @@ Optionally, ELS for Spring® can be consumed through your own repository manager
    * To keep both, add TuxCare after the official one.
 
    :::tip
-   Example **[Maven](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle)** projects are available on GitHub. Ensure the required environment variables are set.
+   Example **[Maven](https://github.com/cloudlinux/securechain-java/blob/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/blob/main/examples/gradle)** projects are available on GitHub. Before running the examples, set the required environment variables.
    :::
 
 4. **Update dependencies**
@@ -509,7 +509,7 @@ Optionally, ELS for Spring® can be consumed through your own repository manager
      { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-   The build tool should be able to identify and resolve dependencies from the TuxCare ELS for Spring® repository.
+   The build tool identifies and resolves dependencies from the TuxCare ELS for Spring® repository.
 
 </ELSSteps>
 

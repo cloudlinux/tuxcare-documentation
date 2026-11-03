@@ -1,6 +1,6 @@
 # OpenJDK
 
-Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK versions that have reached end-of-life. This allows you to continue running your OpenJDK-based applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK versions that have reached end-of-life. With ELS, you can continue running your OpenJDK-based applications without vulnerability concerns, even after official support has ended.
 
 ## Supported OS and OpenJDK versions
 

@@ -1,6 +1,6 @@
 # svg-sanitize
 
-Endless Lifecycle Support (ELS) for svg-sanitize from TuxCare provides security fixes for svg-sanitize (an SVG sanitizer for PHP) versions that have reached their end of life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for svg-sanitize from TuxCare provides security fixes for svg-sanitize (an SVG sanitizer for PHP) versions that have reached their end of life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

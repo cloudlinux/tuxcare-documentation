@@ -1,6 +1,6 @@
 # NumPy
 
-Endless Lifecycle Support (ELS) for NumPy from TuxCare provides security fixes for NumPy. This allows you to continue running your NumPy applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for NumPy from TuxCare provides security fixes for NumPy. With ELS, you can continue running your NumPy applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
@@ -30,7 +30,7 @@ Replace `USERNAME` and `PASSWORD` with your TuxCare credentials (see [Prerequisi
 
 ### Option 2: Configure `pip` to Use the ELS Repository (Full Replacement)
 
-This method is recommended if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
+Use this method if you want to use only ELS-patched Python packages from TuxCare and replace the default PyPI source with the TuxCare ELS repository.
 
 <ELSSteps>
 

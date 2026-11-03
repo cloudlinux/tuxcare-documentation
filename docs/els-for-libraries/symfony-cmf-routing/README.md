@@ -1,6 +1,6 @@
 # Symfony CMF Routing
 
-Endless Lifecycle Support (ELS) for Symfony CMF Routing from TuxCare provides security fixes for Symfony CMF Routing (a dynamic router for Symfony) versions that have reached their end of life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Symfony CMF Routing from TuxCare provides security fixes for Symfony CMF Routing (a dynamic router for Symfony) versions that have reached their end of life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

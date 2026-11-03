@@ -1,6 +1,6 @@
 # Gradle
 
-TuxCare's Endless Lifecycle Support (ELS) for Gradle provides security patches for versions of Gradle that have reached End of Life (EOL) or are no longer maintained by the upstream vendor. Our ELS for Gradle service is designed for organizations that are not yet ready to migrate to newer Gradle versions and that are seeking long-term stability for their build infrastructure.
+TuxCare's Endless Lifecycle Support (ELS) for Gradle provides security patches for versions of Gradle that have reached End of Life (EOL) or are no longer maintained by the upstream vendor. The ELS for Gradle service serves organizations that are not yet ready to migrate to newer Gradle versions and that are seeking long-term stability for their build infrastructure.
 
 ## Supported Versions
 

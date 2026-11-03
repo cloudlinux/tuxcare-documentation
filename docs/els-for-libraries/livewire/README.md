@@ -1,6 +1,6 @@
 # Livewire
 
-Endless Lifecycle Support (ELS) for Livewire from TuxCare provides security fixes for Livewire versions that have reached their end-of-life. This allows you to continue running your Livewire applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Livewire from TuxCare provides security fixes for Livewire versions that have reached their end-of-life. With ELS, you can continue running your Livewire applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

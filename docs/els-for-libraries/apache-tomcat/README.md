@@ -5,7 +5,7 @@ Apache®, Apache Tomcat®, are either registered trademarks or trademarks of the
 <br>
 
 TuxCare's Endless Lifecycle Support (ELS) for Apache Tomcat® provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Tomcat® core components such as Coyote, Catalina, Jasper, etc. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Apache Tomcat® service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
+TuxCare's ELS for Apache Tomcat® service provides solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Tomcat® applications.
 
 :::tip
 Apache Tomcat® is also available for installation as a standalone server. See [ELS for Apache Tomcat® as a standalone server](/els-for-applications/apache-tomcat/).
@@ -26,7 +26,7 @@ Apache Tomcat® is also available for installation as a standalone server. See [
 </ELSPrerequisites>
 
 :::tip
-Optionally, ELS can be consumed through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
+Optionally, you can consume ELS through your own repository manager instead of connecting to TuxCare directly. See [Consuming ELS through your own repository manager](/els-for-libraries/managing-els-repository/#consuming-els-through-your-own-repository-manager).
 :::
 
 <ELSSteps>
@@ -51,7 +51,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
 2. **Configure credentials**
 
    :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-tomcat-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-tomcat-registry`, but use the same value in both `settings.xml` and `pom.xml`.
    :::
 
    <CodeTabs :tabs="[
@@ -74,7 +74,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
    * To keep both, add TuxCare after the official one.
 
    :::tip
-   Example **[Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)** projects are available on GitHub. Ensure the required environment variables are set.
+   Example **[Maven](https://github.com/cloudlinux/securechain-java/tree/main/examples/maven)** and **[Gradle](https://github.com/cloudlinux/securechain-java/tree/main/examples/gradle)** projects are available on GitHub. Before running the examples, set the required environment variables.
    :::
 
 4. **Update dependencies**
@@ -102,7 +102,7 @@ Optionally, ELS can be consumed through your own repository manager instead of c
      { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-   The build tool should be able to identify and resolve dependencies from the TuxCare ELS for Apache Tomcat® repository.
+   The build tool identifies and resolves dependencies from the TuxCare ELS for Apache Tomcat® repository.
 
 </ELSSteps>
 

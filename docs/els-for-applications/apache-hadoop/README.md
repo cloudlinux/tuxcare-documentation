@@ -1,7 +1,7 @@
 # Apache Hadoop
 
 TuxCare's Endless Lifecycle Support (ELS) for Apache Hadoop provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Hadoop core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for Apache Hadoop service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Hadoop applications.
+The ELS for Apache Hadoop service provides solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Hadoop applications.
 
 ## Supported Versions
 
@@ -38,7 +38,7 @@ Our ELS for Apache Hadoop service is designed to provide solutions for organizat
 2. **Configure credentials**
 
    :::tip
-   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but the same value must be used in both `settings.xml` and `pom.xml`.
+   For Maven, you may choose any valid `<id>` value instead of `tuxcare-registry`, but use the same value in both `settings.xml` and `pom.xml`.
    :::
 
    <CodeTabs :tabs="[
@@ -75,7 +75,7 @@ Our ELS for Apache Hadoop service is designed to provide solutions for organizat
 
 5. **Verify the setup**
 
-   Use your build tool to list the project's dependencies and confirm TuxCare packages are resolved correctly.
+   Use your build tool to list the project's dependencies and confirm that the build tool resolves TuxCare packages correctly.
 
    <CodeTabs :tabs="[
      { title: 'Maven', content: `mvn dependency:tree -Dverbose` },
@@ -91,7 +91,7 @@ Our ELS for Apache Hadoop service is designed to provide solutions for organizat
      { title: 'Gradle', content: `./gradlew build` }
    ]" />
 
-   The build tool you're using should be able to identify and resolve dependencies from the TuxCare ELS for Apache Hadoop repository.
+   The build tool you're using identifies and resolves dependencies from the TuxCare ELS for Apache Hadoop repository.
 
 </ELSSteps>
 

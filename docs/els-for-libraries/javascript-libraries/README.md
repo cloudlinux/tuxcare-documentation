@@ -1,6 +1,6 @@
 # JavaScript Libraries
 
-Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides security fixes for a variety of JavaScript Libraries. This allows you to continue running your JavaScript applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides security fixes for a variety of JavaScript Libraries. With ELS, you can continue running your JavaScript applications without vulnerability concerns, even after official support has ended.
 
 ## Supported JavaScript Libraries
 
@@ -396,13 +396,13 @@ Follow the [SecureChain installation instructions](https://sc.tuxcare.cloud/guid
 
 5. **Verify the setup**
 
-   Use npm to list the project's dependencies and confirm TuxCare packages are resolved correctly:
+   Use npm to list the project's dependencies and confirm that npm resolves TuxCare packages correctly:
 
    ```text
    npm list
    ```
 
-   After reviewing the dependencies, run your application to ensure everything works correctly. The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for JavaScript Libraries repository.
+   After reviewing the dependencies, run your application to ensure everything works correctly. The `npm` tool identifies and resolves dependencies from the TuxCare ELS for JavaScript Libraries repository.
 
 </ELSSteps>
 
