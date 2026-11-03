@@ -1,6 +1,6 @@
 # Firebase PHP-JWT
 
-Endless Lifecycle Support (ELS) for Firebase PHP-JWT from TuxCare provides security fixes for Firebase PHP-JWT library versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Firebase PHP-JWT from TuxCare provides security fixes for Firebase PHP-JWT library versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

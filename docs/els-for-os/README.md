@@ -2,7 +2,7 @@
 
 TuxCare's [Endless Lifecycle Support (ELS) for OS](https://tuxcare.com/extended-lifecycle-support/) service provides security updates and selected bug fixes for older versions of a variety of Linux distributions. These distributions have either reached their end of standard support from vendors or have reached End of Life (EOL).
 
-Our ELS service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
+TuxCare's ELS service provides solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their out-of-date operating systems. The service coverage includes updates for the Linux kernel and a list of essential packages that are integral to server operations.
 
 <ELSOSSelector />
 
@@ -10,7 +10,7 @@ Our ELS service is designed to provide solutions for organizations that are not 
 
 TuxCare provides continuous security patching for all supported end-of-life (EOL) operating systems for as long as your organization requires them, eliminating the need for rushed or disruptive upgrades. For each supported operating system, TuxCare commits to a support term of 25 years from the original EOL date, giving you a defined horizon for migration planning. The table below lists the original EOL date and the resulting TuxCare EOL date for every distribution.
 
-All updates are delivered at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
+TuxCare delivers all updates at a fixed price for the full term of your contract, ensuring predictable costs and uninterrupted protection.
 
 | **Distribution** | **Original EOL date** | **TuxCare EOL date** |
 |---|---|---|
@@ -38,11 +38,11 @@ It delivers 24/7/365 access to TuxCare’s support team through the [TuxCare Sup
 
 ## Vulnerability Coverage
 
-TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the severity of security vulnerabilities. Our severity rating system integrates both NVD scoring and vendor scoring (when available); when the vendor's score is lower than the NVD score, we prioritize the NVD score.
+TuxCare employs the Common Vulnerability Scoring System (CVSS) to assess the severity of security vulnerabilities. TuxCare's severity rating system integrates both NVD scoring and vendor scoring (when available); when the vendor's score is lower than the NVD score, the NVD score takes priority.
 
 TuxCare shall provide security patches for high- and critical-risk vulnerabilities (CVSS 7 and above). For medium-risk vulnerabilities (CVSS 4.0 to 6.9), TuxCare may provide security patches where mitigations are not available, and there is sufficient customer demand. TuxCare reserves the right to offer a mitigation strategy as an alternative to a direct code fix.
 
-Custom coverage options are available, including a 10-pack of customer-directed patches for clients who need CVEs patched outside of the ELS scope. Specific details regarding these coverage options and their pricing can be obtained by contacting our sales team.
+Custom coverage options are available, including a 10-pack of customer-directed patches for clients who need CVEs patched outside of the ELS scope. Specific details regarding these coverage options and their pricing can be obtained by contacting the TuxCare sales team.
 
 ## Target Response Times
 
@@ -50,7 +50,7 @@ Aligning with many industry standards and regulatory requirements, TuxCare is co
 
 TuxCare will make commercially reasonable efforts to deliver security patches for critical and high-risk vulnerabilities (CVSS 7 and above) within 14 days from the date the vulnerabilities become publicly disclosed.
 
-Requests for customer-directed security patches for CVEs that are outside of the ELS scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 14 days.
+TuxCare reviews requests for customer-directed security patches for CVEs that are outside of the ELS scope within 3 working days. If TuxCare accepts the request, it provides the patch within the next 14 days.
 
 ## Rollout Process
 
@@ -85,7 +85,7 @@ You can track the status of vulnerabilities and their corresponding fixes via [t
 - In Rollout: Releasing the fix in rollout repositories
 - Released: Fix has been fully released to all users
 - Ignored: This CVE is ignored for specific reasons (low score or another), detailed in the statement field
-- Not Vulnerable: The vulnerability does not affect our version
+- Not Vulnerable: The vulnerability does not affect the TuxCare version
 - Already Fixed: The vulnerability has already been addressed by the vendor
 
 ## Supported Packages
@@ -96,6 +96,6 @@ TuxCare's Endless Lifecycle Support provides updates for a comprehensive list of
 
 TuxCare provides KernelCare live patching for **Ubuntu 18.04 ELS** and **CentOS 7 ELS** systems. [KernelCare](https://docs.tuxcare.com/live-patching-services/) is a product that provides security patches for a range of popular Linux kernels that can be installed without rebooting the system. It can be further enhanced with LibCare providing live security patches for critical shared libraries – openssl and glibc. Updating both the kernel and these libraries requires a system reboot while updating other packages does not. Using ELS, KernelCare and LibCare together provides comprehensive protection for your entire system without reboots and downtime.
 
-You can easily add KernelCare to your ELS systems and start live patching them. You can also add ELS to systems already using KernelCare's live patching. Both ways, there's no need for system reboots or disruptions.
+You can add KernelCare to your ELS systems and start live patching them. You can also add ELS to systems already using KernelCare's live patching. Both ways, there's no need for system reboots or disruptions.
 
 Please note that if you are using KernelCare on the system that will soon reach its end-of-life date, you will be able to continue using it after this date without subscribing to ELS. In this scenario, you will [still receive](https://docs.tuxcare.com/live-patching-services/#kernel-patching-lifetime) live kernel patches, but won’t receive security updates for other operating system packages which are delivered by ELS. At the same time, if you choose to uninstall KernelCare from your Ubuntu 18.04 ELS or CentOS 7 ELS systems and subscribe these systems to ELS, all previously applied KernelCare patches will be removed. Consequently, the systems will start getting updates only from the ELS repository.

@@ -1,6 +1,6 @@
 # PHP
 
-Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
+Endless Lifecycle Support (ELS) for PHP from TuxCare provides security fixes for PHP versions that have reached their end-of-life. With ELS, you can continue running your server vulnerability-free.
 
 ## About ALT-PHP
 
@@ -127,7 +127,7 @@ TuxCare provides additional security support for PHP versions after the end of s
 
 3. Install a PHP version
 
-   Each version can be installed individually or all versions at once.
+   You can install each version individually or all versions at once.
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum groupinstall alt-php73` },
@@ -3272,7 +3272,7 @@ https://windows.tuxcare.com/<YOUR-TOKEN>/php/
 - ✅ `https://windows.tuxcare.com/TOKEN/php/` — works correctly
 - ❌ `https://windows.tuxcare.com/TOKEN/php` — may prompt for credentials
 
-**Use a private browsing window.** We recommend opening the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
+**Use a private browsing window.** Open the tokenized URL in a private (incognito) window to ensure a clean session with no cached credentials that might interfere with token authentication.
 
 - **Chrome / Edge**: `Ctrl+Shift+N` (Windows) or `Cmd+Shift+N` (macOS)
 - **Firefox**: `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS)

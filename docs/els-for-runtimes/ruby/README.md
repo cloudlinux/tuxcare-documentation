@@ -1,6 +1,6 @@
 # Ruby
 
-Endless Lifecycle Support (ELS) for Ruby from TuxCare provides security fixes for Ruby versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
+Endless Lifecycle Support (ELS) for Ruby from TuxCare provides security fixes for Ruby versions that have reached their end-of-life. With ELS, you can continue running your server vulnerability-free.
 
 ## About ALT-Ruby
 
@@ -12,11 +12,11 @@ Here are the key features and characteristics of alt-ruby:
 
 * **User Segmentation** - alt-ruby allows administrators to provide different Ruby versions for different users or applications. Each user can choose the Ruby version that suits their project.
 
-* **Enhanced Compatibility** - alt-ruby is designed to ensure maximum compatibility with various Ruby applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of Ruby applications.
+* **Enhanced Compatibility** - alt-ruby ensures maximum compatibility with various Ruby applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of Ruby applications.
 
 * **Updates and Support** - TuxCare provides regular updates for alt-ruby, including bug fixes, performance improvements, and updates for new Ruby versions. This helps ensure the security and currency of Ruby usage.
 
-* **Easy Version Switching** - alt-ruby allows switching between versions; users can easily manage which Ruby version is active in their environment.
+* **Easy Version Switching** - alt-ruby allows switching between versions; users can manage which Ruby version is active in their environment.
 
 alt-ruby provides a more flexible and convenient environment for working with different Ruby versions on a single server, which is particularly useful in development and production environments where multiple applications have varying requirements for Ruby versions.
 

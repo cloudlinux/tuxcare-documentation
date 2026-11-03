@@ -1,6 +1,6 @@
 # PostgreSQL
 
-Endless Lifecycle Support (ELS) for PostgreSQL from TuxCare provides security fixes for versions that have reached end-of-life. This allows you to continue running your deployments without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for PostgreSQL from TuxCare provides security fixes for versions that have reached end-of-life. With ELS, you can continue running your deployments without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

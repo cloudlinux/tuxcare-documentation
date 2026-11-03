@@ -1,6 +1,6 @@
 # Python
 
-Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
+Endless Lifecycle Support (ELS) for Python from TuxCare provides security fixes for Python versions that have reached their end-of-life. With ELS, you can continue running your server vulnerability-free.
 
 ## About ALT-Python
 
@@ -12,11 +12,11 @@ Here are the key features and characteristics of alt-python:
 
 * **User Segmentation** - alt-python allows administrators to provide different Python versions for different users or applications. Each user can choose the Python version that suits their project.
 
-* **Enhanced Compatibility** - alt-python is designed to ensure maximum compatibility with various Python applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of Python applications.
+* **Enhanced Compatibility** - alt-python ensures maximum compatibility with various Python applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of Python applications.
 
 * **Updates and Support** - TuxCare provides regular updates for alt-python, including bug fixes, performance improvements, and updates for new Python versions. This helps ensure the security and currency of Python usage.
 
-* **Direct Version Access** - alt-python allows switching between versions, users can easily manage which Python version is active in their environment.
+* **Direct Version Access** - alt-python allows switching between versions, users can manage which Python version is active in their environment.
 
 alt-python provides a more flexible and convenient environment for working with different Python versions on a single server, which is particularly useful in development and production environments where multiple applications have varying requirements for Python versions.
 

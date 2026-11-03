@@ -1,6 +1,6 @@
 # Node.js
 
-Endless Lifecycle Support (ELS) for Node.js from TuxCare provides security fixes for Node.js versions that have reached their end-of-life. This allows you to continue running your server vulnerability-free.
+Endless Lifecycle Support (ELS) for Node.js from TuxCare provides security fixes for Node.js versions that have reached their end-of-life. With ELS, you can continue running your server vulnerability-free.
 
 ## About ALT-Node.js
 
@@ -12,11 +12,11 @@ Here are the key features and characteristics of alt-nodejs:
 
 * **User Segmentation** - alt-nodejs allows administrators to provide different Node.js versions for different users or applications. Each user can choose the Node.js version that suits their project.
 
-* **Enhanced Compatibility** - alt-nodejs is designed to ensure maximum compatibility with various Node.js applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of Node.js applications.
+* **Enhanced Compatibility** - alt-nodejs ensures maximum compatibility with various Node.js applications and frameworks. This includes optimizations and changes to make it compatible with a wide range of Node.js applications.
 
 * **Updates and Support** - TuxCare provides regular updates for alt-nodejs, including bug fixes, performance improvements, and updates for new Node.js versions. This helps ensure the security and currency of Node.js usage.
 
-* **Easy Version Switching** - alt-nodejs allows switching between versions; users can easily manage which Node.js version is active in their environment.
+* **Easy Version Switching** - alt-nodejs allows switching between versions; users can manage which Node.js version is active in their environment.
 
 alt-nodejs provides a more flexible and convenient environment for working with different Node.js versions on a single server, which is particularly useful in development and production environments where multiple applications have varying requirements for Node.js versions.
 
@@ -102,7 +102,7 @@ TuxCare provides additional security support for Node.js versions after the end 
 
 3. Install a Node.js version
 
-   Each version can be installed individually or all versions at once.
+   You can install each version individually or all versions at once.
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum install alt-nodejs18*` },

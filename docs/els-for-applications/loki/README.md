@@ -1,6 +1,6 @@
 # Loki
 
-Endless Lifecycle Support (ELS) for Loki from TuxCare provides security fixes for Loki versions that have reached their end of life. This allows you to continue running Loki without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Loki from TuxCare provides security fixes for Loki versions that have reached their end of life. With ELS, you can continue running Loki without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

@@ -41,7 +41,7 @@ You can view the full list of released fixes on [tuxcare.com/cve-tracker](https:
 
 Leveraging the Open Vulnerability and Assessment Language (OVAL) patch definitions with OVAL-compatible tools, e.g. OpenSCAP, users can accurately check their systems for the presence of vulnerabilities.
 
-Identifying the vulnerabilities that apply to your systems is an important task for IT and InfoSec teams, and at TuxCare we make it easy. We provide OVAL data that contain instructions to the vulnerability scanner to determine the addressed vulnerabilities from the ELS updates. OVAL streams for each OS are listed in the [Security data feeds](#security-data-feeds) table above.
+Identifying the vulnerabilities that apply to your systems is an important task for IT and InfoSec teams. TuxCare provides OVAL data that contain instructions to the vulnerability scanner to determine the addressed vulnerabilities from the ELS updates. OVAL streams for each OS are listed in the [Security data feeds](#security-data-feeds) table above.
 
 ### How to Use OpenSCAP With TuxCare ELS
 
@@ -120,7 +120,7 @@ OpenSCAP is an open source vulnerability scanner and compliance tool and it can 
 
 ### How to Integrate the OVAL Data With a New Vulnerability Scanner
 
-Identifying the vulnerabilities that apply to your systems is an important task for IT and InfoSec teams, and at TuxCare we make it easy.
+Identifying the vulnerabilities that apply to your systems is an important task for IT and InfoSec teams.
 
 To detect whether a system has TuxCare ELS installed, check for the following file being present: `/etc/els-release`.
 
@@ -230,7 +230,7 @@ confirm it is present in the trust store your package manager uses, run:
 
 ### Verify a Package
 
-Because verification is automatic, the primary check is simply that a normal
+Because verification is automatic, the primary check is that a normal
 install or update succeeds. You can also verify a downloaded package explicitly.
 
 <TableTabs label="Choose distribution: ">

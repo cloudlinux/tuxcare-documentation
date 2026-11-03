@@ -1,6 +1,6 @@
 # Zend Framework
 
-Endless Lifecycle Support (ELS) for Zend Framework from TuxCare provides security fixes for end-of-life Zend Framework packages. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Zend Framework from TuxCare provides security fixes for end-of-life Zend Framework packages. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

@@ -1,6 +1,6 @@
 # MySQL
 
-Endless Lifecycle Support (ELS) for MySQL from TuxCare provides security fixes for versions that have reached end-of-life. This allows you to continue running your deployments without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for MySQL from TuxCare provides security fixes for versions that have reached end-of-life. With ELS, you can continue running your deployments without vulnerability concerns, even after official support has ended.
 
 This product ships MySQL Community Server only. Percona Server is patched separately — see [Percona Server](/els-for-applications/percona-server/).
 

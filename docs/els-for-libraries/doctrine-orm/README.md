@@ -1,6 +1,6 @@
 # Doctrine ORM
 
-Endless Lifecycle Support (ELS) for Doctrine ORM from TuxCare provides security fixes for Doctrine ORM versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Doctrine ORM from TuxCare provides security fixes for Doctrine ORM versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 

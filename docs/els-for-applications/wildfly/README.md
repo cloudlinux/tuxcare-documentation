@@ -5,7 +5,7 @@ WildFly is a registered trademark of the Commonhaus Foundation.
 <br>
 
 TuxCare's Endless Lifecycle Support (ELS) for WildFly provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of WildFly. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-Our ELS for WildFly service is designed to provide solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy WildFly applications.
+The ELS for WildFly service provides solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy WildFly applications.
 
 This guide outlines the steps needed for WildFly server setup and configuration.
 

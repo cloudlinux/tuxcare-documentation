@@ -1,6 +1,6 @@
 # JSON Web Token (JWT)
 
-Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides security fixes for JSON Web Token versions that have reached their end of life. This allows you to continue running JSON Web Token applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides security fixes for JSON Web Token versions that have reached their end of life. With ELS, you can continue running JSON Web Token applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
@@ -201,13 +201,13 @@ Follow the [SecureChain installation instructions](https://sc.tuxcare.cloud/guid
 
 5. **Verify the setup**
 
-   Use npm to list the project's dependencies and confirm TuxCare packages are resolved correctly:
+   Use npm to list the project's dependencies and confirm that npm resolves TuxCare packages correctly:
 
    ```text
    npm list
    ```
 
-   After reviewing the dependencies, run your application to ensure everything works correctly. The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for JSON Web Token repository.
+   After reviewing the dependencies, run your application to ensure everything works correctly. The `npm` tool identifies and resolves dependencies from the TuxCare ELS for JSON Web Token repository.
 
 </ELSSteps>
 
