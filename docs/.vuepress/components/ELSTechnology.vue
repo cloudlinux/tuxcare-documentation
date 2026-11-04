@@ -1624,7 +1624,7 @@ const techData = [
       },
       {
         name: "hono-node-server",
-        versions: "1.19.9 | 1.19.10 | 1.19.11",
+        versions: "1.19.9 | 1.19.10 | 1.19.11 | 1.19.17",
         link: "./javascript-libraries/",
       },
       {
@@ -3035,7 +3035,7 @@ const techData = [
       },
       {
         name: "NumPy",
-        versions: "1.15.4 | 1.16.0 | 1.21.0 | 2.0.2 | 2.1.3",
+        versions: "1.15.4 | 1.16.0 | 1.21.0 | 1.21.6 | 1.26.4 | 2.0.2 | 2.1.3 | 2.2.6",
         link: "./numpy/",
       },
       {
