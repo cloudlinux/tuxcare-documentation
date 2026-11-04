@@ -110,7 +110,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **highlight.js** 8.9.1, 9.18.5
 * **hoek** 0.8.5, 0.9.1, 2.11.1, 2.12.0, 2.14.0, 2.16.3, 4.2.1
 * **hono** 3.12.12
-* **hono-node-server** 1.19.9, 1.19.10, 1.19.11
+* **hono-node-server** 1.19.9, 1.19.10, 1.19.11, 1.19.17
 * **hosted-git-info** 2.1.4, 2.7.1
 * **html-minifier** 4.0.0
 * **http-proxy-middleware** 0.0.5, 0.17.2, 0.17.3, 0.18.0, 0.19.1, 0.20.0, 1.0.0, 1.1.0, 1.3.1, 2.0.6, 2.0.7, 2.0.8, 3.0.3, 3.0.5, 4.0.0
