@@ -2,11 +2,128 @@
 
 TuxCare's Endless Lifecycle Support (ELS) for Jackson provides security patches and selected bug fixes that are integral to the stable operation of applications running on Jackson.
 
-## Supported Versions
+## Supported Modules and Versions
 
-* Jackson 1.9.13, 2.8.11, 2.9.10.3, 2.11.1, 2.11.3, 2.12.1, 2.12.2, 2.12.7.1, 2.13.4.2, 2.14.1, 2.14.2, 2.17.1, 2.17.2, 2.17.3
+<TableTabs label="Choose group: " :labels="{
+  Jackson_3: 'Jackson 3',
+  Core: 'Jackson 2 Core',
+  Data_Formats: 'Data Formats',
+  Data_Types: 'Data Types',
+  JAX_RS: 'JAX-RS Providers',
+  Modules: 'Modules',
+  Jackson_jr: 'Jackson jr',
+  Jackson_1: 'Jackson 1.x'
+}">
 
-Specific supported artifacts are listed in the [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Jackson).
+<template #Jackson_3>
+
+| Module | Version |
+|---|---|
+| jackson-databind | 3.1.2 |
+</template>
+
+<template #Core>
+
+| Module | Version |
+|---|---|
+| jackson-core | 2.1.3, 2.2.3, 2.4.0, 2.6.0, 2.6.7, 2.7.0, 2.7.4, 2.7.8, 2.7.9, 2.8.7, 2.8.8, 2.8.11, 2.9.3, 2.9.6, 2.9.8, 2.9.9, 2.9.10, 2.10.0, 2.10.4, 2.10.5, 2.11.1, 2.11.2, 2.11.3, 2.11.4, 2.12.1, 2.12.2, 2.12.3, 2.12.6, 2.12.7, 2.13.2, 2.13.3, 2.13.4, 2.13.5, 2.14.1, 2.14.2, 2.14.3, 2.15.0, 2.15.2, 2.15.3, 2.15.4, 2.16.1, 2.17.1, 2.17.2, 2.17.3, 2.18.0, 2.18.1, 2.18.3, 2.18.4.1, 2.18.5, 2.18.8, 2.19.4, 2.20.1, 2.21.2, 2.21.4 |
+| jackson-databind | 2.1.4, 2.2.3, 2.4.0, 2.4.1, 2.4.1.1, 2.4.3, 2.4.5, 2.5.4, 2.6.3, 2.6.4, 2.6.5, 2.6.6, 2.6.7.1, 2.6.7.2, 2.6.7.3, 2.7.0, 2.7.1, 2.7.3, 2.7.5, 2.7.8, 2.7.9, 2.7.9.3, 2.7.9.7, 2.8.4, 2.8.5, 2.8.7, 2.8.10, 2.8.11, 2.8.11.1, 2.8.11.3, 2.8.11.4, 2.9.1, 2.9.2, 2.9.3, 2.9.4, 2.9.5, 2.9.7, 2.9.8, 2.9.9, 2.9.9.1, 2.9.9.3, 2.9.10, 2.9.10.1, 2.9.10.3, 2.9.10.4, 2.9.10.5, 2.9.10.6, 2.9.10.7, 2.9.10.8, 2.10.0, 2.10.2, 2.10.3, 2.10.4, 2.10.5.1, 2.11.0, 2.11.1, 2.11.2, 2.11.3, 2.11.4, 2.12.1, 2.12.2, 2.12.4, 2.12.5, 2.12.6, 2.12.6.1, 2.12.7, 2.12.7.1, 2.13.0, 2.13.1, 2.13.2.2, 2.13.3, 2.13.4, 2.13.4.2, 2.13.5, 2.14.1, 2.14.2, 2.14.3, 2.15.0, 2.15.1, 2.15.2, 2.15.3, 2.15.4, 2.16.0, 2.16.1, 2.16.2, 2.17.0, 2.17.1, 2.17.2, 2.17.3, 2.18.0, 2.18.2, 2.18.3, 2.18.4, 2.18.5, 2.18.8, 2.19.0, 2.19.2, 2.19.4, 2.20.1, 2.21.2, 2.21.4 |
+</template>
+
+<template #Data_Formats>
+
+| Module | Version |
+|---|---|
+| jackson-dataformat-avro | 2.8.11, 2.10.4, 2.11.3, 2.11.4, 2.14.3, 2.15.3, 2.15.4, 2.17.3, 2.18.5, 2.21.4 |
+| jackson-dataformat-cbor | 2.8.11, 2.10.4, 2.11.3, 2.11.4, 2.14.3, 2.15.3, 2.15.4, 2.17.3, 2.18.5, 2.21.4 |
+| jackson-dataformat-csv | 2.9.5, 2.9.7, 2.9.9, 2.9.10, 2.10.4, 2.11.1, 2.11.2, 2.11.3, 2.11.4, 2.12.1, 2.13.1, 2.16.2 |
+| jackson-dataformat-ion | 2.10.4, 2.11.3, 2.11.4, 2.14.3, 2.15.3, 2.15.4, 2.17.3, 2.18.5, 2.21.4 |
+| jackson-dataformat-properties | 2.9.5, 2.9.7, 2.9.9, 2.9.10, 2.10.4, 2.11.1, 2.11.2, 2.11.3, 2.11.4, 2.12.1, 2.13.1, 2.16.2 |
+| jackson-dataformat-protobuf | 2.8.11, 2.10.4, 2.11.3, 2.11.4, 2.14.3, 2.15.3, 2.15.4, 2.17.3, 2.18.5, 2.21.4 |
+| jackson-dataformat-smile | 2.8.11, 2.10.4, 2.11.3, 2.11.4, 2.14.3, 2.15.3, 2.15.4, 2.17.3, 2.18.5, 2.21.4 |
+| jackson-dataformat-toml | 2.13.1, 2.16.2 |
+| jackson-dataformat-xml | 2.10.0, 2.15.4, 2.16.2 |
+| jackson-dataformat-yaml | 2.9.5, 2.9.7, 2.9.9, 2.9.10, 2.10.4, 2.11.1, 2.11.2, 2.11.3, 2.11.4, 2.12.1, 2.13.1, 2.16.2 |
+</template>
+
+<template #Data_Types>
+
+| Module | Version |
+|---|---|
+| jackson-datatype-eclipse-collections | 2.15.4, 2.16.2 |
+| jackson-datatype-guava | 2.15.4, 2.16.2 |
+| jackson-datatype-hibernate4 | 2.16.2 |
+| jackson-datatype-hibernate5 | 2.16.2 |
+| jackson-datatype-hibernate5-jakarta | 2.16.2 |
+| jackson-datatype-hibernate6 | 2.16.2 |
+| jackson-datatype-hppc | 2.15.4, 2.16.2 |
+| jackson-datatype-jakarta-jsonp | 2.15.4, 2.16.2 |
+| jackson-datatype-jakarta-mail | 2.15.4, 2.16.2 |
+| jackson-datatype-jaxrs | 2.11.4, 2.15.4 |
+| jackson-datatype-jdk8 | 2.9.9, 2.11.4, 2.14.3, 2.15.3, 2.15.4, 2.17.3, 2.18.5, 2.19.4 |
+| jackson-datatype-joda | 2.15.4, 2.16.2 |
+| jackson-datatype-joda-money | 2.15.4, 2.16.2 |
+| jackson-datatype-json-org | 2.15.4, 2.16.2 |
+| jackson-datatype-jsr310 | 2.9.9, 2.11.4, 2.14.3, 2.15.3, 2.15.4, 2.17.3, 2.18.5, 2.19.4 |
+| jackson-datatype-jsr353 | 2.15.4, 2.16.2 |
+| jackson-datatype-pcollections | 2.15.4, 2.16.2 |
+</template>
+
+<template #JAX_RS>
+
+| Module | Version |
+|---|---|
+| jackson-jaxrs-base | 2.11.4, 2.15.4 |
+| jackson-jaxrs-cbor-provider | 2.11.4, 2.15.4 |
+| jackson-jaxrs-json-provider | 2.11.4, 2.15.4 |
+| jackson-jaxrs-providers | 2.11.4, 2.15.4 |
+| jackson-jaxrs-smile-provider | 2.11.4, 2.15.4 |
+| jackson-jaxrs-xml-provider | 2.11.4, 2.15.4 |
+| jackson-jaxrs-yaml-provider | 2.11.4, 2.15.4 |
+</template>
+
+<template #Modules>
+
+| Module | Version |
+|---|---|
+| jackson-module-afterburner | 2.15.4 |
+| jackson-module-blackbird | 2.15.4 |
+| jackson-module-guice | 2.15.4 |
+| jackson-module-jakarta-xmlbind-annotations | 2.15.4 |
+| jackson-module-jaxb-annotations | 2.15.4 |
+| jackson-module-kotlin | 2.15.4 |
+| jackson-module-mrbean | 2.15.4 |
+| jackson-module-no-ctor-deser | 2.15.4 |
+| jackson-module-osgi | 2.15.4 |
+| jackson-module-parameter-names | 2.9.9, 2.11.4, 2.14.3, 2.15.3, 2.15.4, 2.17.3, 2.18.5, 2.19.4 |
+| jackson-module-paranamer | 2.15.4 |
+</template>
+
+<template #Jackson_jr>
+
+| Module | Version |
+|---|---|
+| jackson-jr-all | 2.10.0 |
+| jackson-jr-objects | 2.10.0 |
+| jackson-jr-retrofit2 | 2.10.0 |
+| jackson-jr-stree | 2.10.0 |
+</template>
+
+<template #Jackson_1>
+
+| Module | Version |
+|---|---|
+| jackson-core-asl | 1.9.13 |
+| jackson-core-lgpl | 1.9.13 |
+| jackson-jaxrs | 1.9.13 |
+| jackson-mapper-asl | 1.9.13 |
+| jackson-mapper-lgpl | 1.9.13 |
+| jackson-mrbean | 1.9.13 |
+| jackson-smile | 1.9.13 |
+| jackson-xc | 1.9.13 |
+</template>
+
+</TableTabs>
 
 ## Installation
 

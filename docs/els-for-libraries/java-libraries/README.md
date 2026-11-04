@@ -38,14 +38,14 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apache XML Graphics Batik** 1.7, 1.8
 * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.3.0, 2.6.0, 5.1.1
-* **Apache ZooKeeper** 3.5.5, 3.5.7, 3.5.9, 3.7.2, 3.8.3, 3.9.1
+* **Apache ZooKeeper** 3.5.5, 3.5.7, 3.5.9, 3.7.2, 3.8.3, 3.8.6, 3.9.1
 * **AssertJ** 2.9.0, 3.11.1, 3.18.1, 3.19.0, 3.23.1, 3.24.2, 3.25.3
 * **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.77, 1.78.1
 * **c3p0** 0.9.2.1, 0.9.5.2, 0.9.5.3, 0.9.5.4, 0.9.5.5
 * **Cassandra Java Driver** 4.14.1, 4.18.1
 * **Couchbase Java Client** 3.6.3
-* **Couchbase JVM Core IO** 2.6.3
+* **Couchbase JVM Core IO** 2.4.11, 2.6.3
 * **Couchbase JVM Core IO Deps** 1.6.3
 * **DNSJava** 2.1.7, 3.5.2
 * **docker-java** 3.0.14, 3.2.11, 3.2.13, 3.3.0, 3.3.6, 3.4.2
@@ -84,6 +84,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **JSON Smart v2** 1.3.2, 2.3, 2.3.1, 2.4.2, 2.4.7, 2.4.8, 2.5.0, 2.5.1
 * **json-io** 2.9.4
 * **JsonPath** 2.2.0, 2.4.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
+* **jsonschema2pojo** 1.1.0
 * **jsoup** 1.7.2, 1.7.3, 1.17.2
 * **JUnit** 4.13
 * **Lettuce** 5.3.7.RELEASE, 6.1.10.RELEASE, 6.3.2.RELEASE, 6.4.2.RELEASE
@@ -96,7 +97,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **MySQL Connector/J** 5.1.49
 * **NekoHTML** 1.9.22
 * **Neo4j Bolt Connection** 2.0.0
-* **Neo4j Java Driver** 4.4.12, 5.28.5
+* **Neo4j Java Driver** 4.1.1, 4.4.12, 5.28.5
 * **Netty** 3.7.0.Final, 3.10.6.Final, 4.1.42.Final, 4.1.43.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.79.Final, 4.1.80.Final, 4.1.82.Final, 4.1.87.Final, 4.1.92.Final, 4.1.93.Final, 4.1.94.Final, 4.1.99.Final, 4.1.107.Final, 4.1.108.Final, 4.1.111.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.119.Final, 4.1.122.Final, 4.1.130.Final, 4.1.135.Final
 * **Netty Incubator** 0.0.21.Final, 0.0.25.Final
 * **Nimbus JOSE + JWT** 3.10, 8.23, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
@@ -111,7 +112,8 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Reactive Pulsar Client** 0.5.9, 0.5.10, 0.7.0
 * **Reactor BOM** 2020.0.0, 2020.0.7, 2020.0.23, 2020.0.32, 2020.0.38, 2020.0.47, 2022.0.13, 2022.0.15, 2022.0.22, 2023.0.3, 2023.0.4, 2023.0.14, 2023.0.17, 2023.0.19, 2024.0.13, 2024.0.18
 * **Reactor Core** 3.4.34, 3.4.41, 3.5.8, 3.5.10, 3.5.12, 3.5.14, 3.5.20, 3.6.0, 3.6.3, 3.6.4, 3.6.6, 3.6.9, 3.6.10, 3.6.12, 3.6.13, 3.6.16, 3.6.17, 3.6.18, 3.7.14, 3.7.19
-* **Reactor Netty** 1.0.0, 1.0.7, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31, 1.2.13, 1.2.18
+* **Reactor Netty** 1.0.0, 1.0.7, 1.0.18, 1.0.23, 1.0.32, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31, 1.2.13, 1.2.18
+* **rescu** 2.0.2
 * **Retrofit** 2.9.0
 * **RSocket** 1.0.3, 1.1.3, 1.1.5
 * **SLF4J** 1.6.1, 1.7.2, 1.7.5, 1.7.7, 1.7.12, 1.7.20, 1.7.21, 1.7.24, 1.7.25, 1.7.26, 1.7.28, 1.7.29, 1.7.30, 1.7.31, 1.7.32, 1.8.0-alpha2

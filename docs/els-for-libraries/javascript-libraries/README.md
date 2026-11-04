@@ -18,6 +18,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **ansi-html** 0.0.7
 * **ansi-regex** 3.0.0
 * **apollo-server** 4.13.0
+* **astrojs-rss** 4.0.1, 4.0.2
 * **async** 2.6.1, 2.6.3, 3.2.0
 * **axios** 0.15.3, 0.18.0, 0.18.1, 0.19.2, 0.21.1, 0.21.2, 0.21.4, 0.24.0, 0.26.0, 0.26.1, 0.27.2, 0.33.0, 1.6.2, 1.6.8, 1.7.5, 1.7.7, 1.7.9, 1.12.2, 1.13.2, 1.13.5, 1.13.6, 1.16.0, 1.16.1, 1.17.0, 1.18.0, 1.18.1, 1.19.0
 * **azure-identity** 4.0.1
@@ -40,7 +41,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **ckeditor** 4.5.11
 * **ckeditor4** 4.17.1
 * **clean-css** 2.2.23, 3.4.28
-* **cli** 0.4.5
+* **cli** 0.4.3, 0.4.5, 0.6.6
 * **colord** 2.9.3
 * **compression** 1.5.2, 1.7.3, 1.7.4, 1.7.5, 1.8.1
 * **concat-stream** 1.4.8, 1.4.10, 1.5.0, 1.5.1
@@ -49,6 +50,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **cookie-signature** 1.0.0, 1.0.1
 * **copy-anything** 2.0.6
 * **cross-spawn** 0.2.9, 3.0.1, 5.1.0, 6.0.5, 7.0.3
+* **cryptiles** 0.2.2, 2.0.5, 3.2.1
 * **crypto-js** 3.3.0
 * **css-what** 3.3.0
 * **csvtojson** 2.0.8
@@ -75,7 +77,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **expr-eval** 2.0.2
 * **express-jwt** 0.1.3, 0.1.4
 * **extend** 3.0.0
-* **extract-zip** 1.7.0
+* **extract-zip** 1.7.0, 2.0.1
 * **faker** 5.5.3
 * **fast-uri** 2.4.0, 2.4.2, 2.4.3, 2.4.5, 2.4.7, 3.0.1, 3.0.3, 3.0.6, 3.1.0, 3.1.2, 3.1.3, 3.1.4, 3.1.5, 3.1.6, 3.1.7, 3.1.8
 * **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.4.1, 4.5.1, 4.5.3, 4.5.6, 4.5.7, 5.2.5
@@ -106,13 +108,13 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **happy-dom** 9.10.9, 9.20.3, 14.12.3, 15.11.7, 20.8.8, 20.12.0
 * **har-validator** 1.8.0, 2.0.6
 * **hawk** 0.13.1, 1.0.0, 1.1.1, 2.3.1, 3.1.0, 3.1.3
-* **highcharts** 6.0.7, 6.1.0, 6.1.3, 6.2.0, 7.2.0, 7.2.2, 8.2.2
+* **highcharts** 6.0.7, 6.1.0, 6.1.3, 6.2.0, 7.2.0, 7.2.2, 8.2.2, 12.5.0
 * **highlight.js** 8.9.1, 9.18.5
 * **hoek** 0.8.5, 0.9.1, 2.11.1, 2.12.0, 2.14.0, 2.16.3, 4.2.1
 * **hono** 3.12.12
 * **hono-node-server** 1.19.9, 1.19.10, 1.19.11
 * **hosted-git-info** 2.1.4, 2.7.1
-* **html-minifier** 4.0.0
+* **html-minifier** 3.5.21, 4.0.0
 * **http-proxy-middleware** 0.0.5, 0.17.2, 0.17.3, 0.18.0, 0.19.1, 0.20.0, 1.0.0, 1.1.0, 1.3.1, 2.0.6, 2.0.7, 2.0.8, 3.0.3, 3.0.5, 4.0.0
 * **https-proxy-agent** 1.0.0
 * **i18next** 23.16.8
@@ -160,8 +162,10 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **minimatch** 0.0.4, 0.0.5, 0.2.5, 0.2.14, 0.3.0, 0.4.0, 1.0.0, 2.0.10, 3.0.3, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 4.2.3, 5.1.0, 5.1.1, 5.1.2, 7.4.6, 9.0.3, 9.0.4, 9.0.5, 10.1.1, 10.2.2
 * **minimist** 0.0.8, 0.0.9, 0.0.10, 1.1.3, 1.2.0, 1.2.1, 1.2.8
 * **modelcontextprotocol-client** 2.0.0
+* **modelcontextprotocol-codemod** 2.1.0
 * **modelcontextprotocol-core** 2.0.0
 * **modelcontextprotocol-sdk** 1.13.3, 1.17.3, 1.24.0, 1.25.2, 1.26.0, 1.29.0, 1.30.0, 1.30.1
+* **modelcontextprotocol-server** 2.1.0
 * **modelcontextprotocol-server-legacy** 2.0.0
 * **moment** 2.0.0, 2.10.6, 2.22.2, 2.24.0, 2.30.1
 * **moment-timezone** 0.4.1
@@ -195,7 +199,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **octokit-plugin-paginate-rest** 2.21.3
 * **octokit-request** 5.6.3
 * **octokit-request-error** 2.1.0
-* **opentelemetry-core** 1.17.0, 1.17.1, 1.22.0, 1.25.1, 1.27.0, 1.30.1, 2.0.1, 2.2.0, 2.5.1, 2.6.1, 2.7.0, 2.7.1
+* **opentelemetry-core** 1.17.0, 1.17.1, 1.22.0, 1.25.1, 1.27.0, 1.30.1, 2.0.1, 2.1.0, 2.2.0, 2.5.1, 2.6.1, 2.7.0, 2.7.1
 * **opentelemetry-propagator-jaeger** 1.22.0, 1.27.0, 1.30.1, 2.8.0
 * **optimist** 0.6.1
 * **pac-resolver** 4.2.0
@@ -232,7 +236,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **react-server-dom-turbopack** 19.0.0, 19.2.0
 * **react-server-dom-webpack** 19.0.0, 19.2.0
 * **redis** 2.8.0
-* **remix-run-router** 1.7.2
+* **remix-run-router** 1.6.2, 1.7.2, 1.15.3, 1.23.0, 1.23.2, 1.23.3
 * **request** 2.36.0, 2.37.0, 2.40.0, 2.57.0, 2.65.0, 2.67.0, 2.75.0, 2.81.0, 2.87.0, 2.88.0, 2.88.2
 * **rollup** 0.36.3, 0.41.6, 0.56.4, 0.57.1, 0.59.4, 0.63.5, 1.32.1, 2.1.0, 2.26.5, 2.38.4, 2.77.3, 2.79.1, 2.79.2, 3.15.0, 4.22.4
 * **sanitize-html** 1.27.5
@@ -257,7 +261,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **socket.io** 1.7.3, 1.7.4, 2.0.4, 2.1.1, 3.1.1
 * **socket.io-parser** 2.2.2, 2.2.4, 2.3.1, 3.1.3, 3.2.0, 3.3.4, 3.4.3, 4.0.5, 4.2.4
 * **sockjs** 0.3.18, 0.3.19
-* **sprintf-js** 1.1.2, 1.1.3
+* **sprintf-js** 1.0.3, 1.1.2, 1.1.3
 * **ssr-window** 4.0.2
 * **ssri** 5.3.0, 7.1.0
 * **storybook** 7.0.7, 8.5.8, 8.6.14, 9.1.16, 10.1.9
@@ -275,7 +279,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **tmp** 0.0.24, 0.0.28, 0.0.29, 0.0.30, 0.0.31, 0.0.33, 0.1.0, 0.2.1, 0.2.3, 0.2.4, 0.2.5, 0.2.6
 * **tmpl** 1.0.4
 * **toml** 3.0.0, 4.3.0
-* **tootallnate-once** 1.1.2
+* **tootallnate-once** 1.1.2, 2.0.0
 * **tough-cookie** 0.12.1, 1.2.0, 2.2.0, 2.2.1, 2.2.2, 2.3.2, 2.3.4, 2.4.3, 2.5.0, 3.0.1
 * **tunnel-agent** 0.3.0, 0.4.0, 0.4.3
 * **ua-parser-js** 0.7.21, 0.7.22, 0.7.31
@@ -285,11 +289,14 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **unhead** 1.11.20
 * **unhead-schema** 1.11.20
 * **unhead-vue** 1.11.20
+* **url-parse** 1.4.7
 * **uuid** 2.0.3, 3.3.2, 3.4.0, 7.0.3, 8.0.0, 8.3.2, 9.0.0, 9.0.1, 10.0.0, 11.0.3, 11.0.5, 11.1.0
 * **valibot** 0.41.0, 1.2.0
 * **validator** 4.4.0, 7.2.0, 8.2.0, 10.11.0, 13.12.0
 * **visualcaptcha.jquery** 0.0.8
+* **vite-node** 2.0.5
 * **vitest** 2.0.5, 2.1.9, 3.2.4, 3.2.7, 4.0.18
+* **vitest-mocker** 3.2.4, 4.0.18
 * **vm2** 3.10.0, 3.11.5, 3.11.7
 * **web3** 1.10.4
 * **web3-bzz** 1.10.4
@@ -315,7 +322,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **web3-shh** 1.10.4
 * **web3-utils** 1.10.4
 * **webdriver-js-extender** 2.1.0
-* **webdriver-manager** 12.1.9
+* **webdriver-manager** 10.3.0, 12.1.9, 13.0.0
 * **webpack-bundle-analyzer** 2.13.1
 * **webpack-dev-middleware** 1.10.2, 1.11.0, 1.12.0, 1.12.2, 3.0.1, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3, 5.3.4, 6.1.2, 6.1.3, 7.4.2, 7.4.5, 8.0.3, 8.1.1
 * **webpack-subresource-integrity** 1.4.0, 1.4.1

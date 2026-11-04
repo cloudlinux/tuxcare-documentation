@@ -345,7 +345,7 @@ const techData = [
       },
       {
         name: "Apache ZooKeeper",
-        versions: "3.5.5 | 3.5.7 | 3.5.9 | 3.7.2 | 3.8.3 | 3.9.1",
+        versions: "3.5.5 | 3.5.7 | 3.5.9 | 3.7.2 | 3.8.3 | 3.8.6 | 3.9.1",
         link: "./java-libraries/",
       },
       {
@@ -380,7 +380,7 @@ const techData = [
       },
       {
         name: "Couchbase JVM Core IO",
-        versions: "2.6.3",
+        versions: "2.4.11 | 2.6.3",
         link: "./java-libraries/",
       },
       {
@@ -539,9 +539,59 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Jackson",
-        versions: "1.9.13 | 2.8.11 | 2.9.10.3 | 2.11.1 | 2.11.3 | 2.12.1 | 2.12.2 | 2.12.7.1 | 2.13.4.2 | 2.14.1 | 2.14.2 | 2.17.1 | 2.17.2 | 2.17.3",
+        name: "Jackson 3",
+        versions: "3.1.2",
         link: "./jackson/",
+        detailsHash: "Jackson_3",
+      },
+      {
+        name: "Jackson 2 Core",
+        versions: "2.1 | 2.2 | 2.4 | 2.5 | 2.6 | 2.7 | 2.8 | 2.9 | 2.10 | 2.11 | 2.12 | 2.13 | 2.14 | 2.15 | 2.16 | 2.17 | 2.18 | 2.19 | 2.20 | 2.21",
+        link: "./jackson/",
+        detailsHash: "Core",
+        versionsVary: true,
+      },
+      {
+        name: "Jackson Data Formats",
+        versions: "2.8 | 2.9 | 2.10 | 2.11 | 2.12 | 2.13 | 2.14 | 2.15 | 2.16 | 2.17 | 2.18 | 2.21",
+        link: "./jackson/",
+        detailsHash: "Data_Formats",
+        versionsVary: true,
+      },
+      {
+        name: "Jackson Data Types",
+        versions: "2.9 | 2.11 | 2.14 | 2.15 | 2.16 | 2.17 | 2.18 | 2.19",
+        link: "./jackson/",
+        detailsHash: "Data_Types",
+        versionsVary: true,
+      },
+      {
+        name: "Jackson JAX-RS Providers",
+        versions: "2.11 | 2.15",
+        link: "./jackson/",
+        detailsHash: "JAX_RS",
+        versionsVary: true,
+      },
+      {
+        name: "Jackson Modules",
+        versions: "2.9 | 2.11 | 2.14 | 2.15 | 2.17 | 2.18 | 2.19",
+        link: "./jackson/",
+        detailsHash: "Modules",
+        versionsVary: true,
+      },
+      {
+        name: "Jackson jr",
+        versions: "2.10",
+        link: "./jackson/",
+        detailsHash: "Jackson_jr",
+        versionsVary: true,
+      },
+      {
+        name: "Jackson 1.x",
+        versions: "1.9",
+        link: "./jackson/",
+        detailsHash: "Jackson_1",
+        versionsVary: true,
       },
       {
         name: "JasperReports",
@@ -591,6 +641,11 @@ const techData = [
       {
         name: "JsonPath",
         versions: "2.2.0 | 2.4.0 | 2.5.0 | 2.6.0 | 2.7.0 | 2.8.0 | 2.9.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "jsonschema2pojo",
+        versions: "1.1.0",
         link: "./java-libraries/",
       },
       {
@@ -655,7 +710,7 @@ const techData = [
       },
       {
         name: "Neo4j Java Driver",
-        versions: "4.4.12 | 5.28.5",
+        versions: "4.1.1 | 4.4.12 | 5.28.5",
         link: "./java-libraries/",
       },
       {
@@ -740,7 +795,12 @@ const techData = [
       },
       {
         name: "Reactor Netty",
-        versions: "1.0.0 | 1.0.7 | 1.0.23 | 1.0.32 | 1.0.39 | 1.0.48 | 1.1.13 | 1.1.15 | 1.1.31 | 1.2.13 | 1.2.18",
+        versions: "1.0.0 | 1.0.7 | 1.0.18 | 1.0.23 | 1.0.32 | 1.0.39 | 1.0.48 | 1.1.13 | 1.1.15 | 1.1.31 | 1.2.13 | 1.2.18",
+        link: "./java-libraries/",
+      },
+      {
+        name: "rescu",
+        versions: "2.0.2",
         link: "./java-libraries/",
       },
       {
@@ -787,7 +847,7 @@ const techData = [
       },
       {
         name: "Spring® AMQP",
-        versions: "2.1.4.RELEASE | 2.1.8.RELEASE | 2.2.12.RELEASE | 2.3.6 | 2.3.7 | 2.3.10 | 2.3.16 | 2.4.4 | 2.4.12 | 2.4.16 | 2.4.17 | 3.0.10 | 3.1.8 | 3.1.11 | 3.1.12 | 3.2.8 | 3.2.11 | 3.2.12",
+        versions: "2.1.4.RELEASE | 2.1.8.RELEASE | 2.2.12.RELEASE | 2.3.6 | 2.3.7 | 2.3.10 | 2.3.16 | 2.4.4 | 2.4.12 | 2.4.16 | 2.4.17 | 3.0.10 | 3.1.5 | 3.1.8 | 3.1.11 | 3.1.12 | 3.2.8 | 3.2.11 | 3.2.12",
         link: "./spring/",
         detailsHash: "AMQP",
       },
@@ -806,7 +866,7 @@ const techData = [
       },
       {
         name: "Spring® Cloud",
-        versions: "3.1.6 | 3.1.9",
+        versions: "1.2.9.RELEASE | 3.1.6 | 3.1.9",
         link: "./spring/",
         detailsHash: "Cloud",
       },
@@ -832,7 +892,7 @@ const techData = [
       },
       {
         name: "Spring® Web Services",
-        versions: "2.4.5.RELEASE | 3.0.7.RELEASE | 3.0.10.RELEASE | 3.1.6 | 3.1.7 | 3.1.8 | 4.0.8 | 4.0.10 | 4.0.11 | 4.0.14 | 4.0.15 | 4.0.17 | 4.1.4",
+        versions: "2.4.5.RELEASE | 3.0.7.RELEASE | 3.0.10.RELEASE | 3.1.6 | 3.1.7 | 3.1.8 | 4.0.8 | 4.0.10 | 4.0.11 | 4.0.14 | 4.0.15 | 4.0.16 | 4.0.17 | 4.1.4",
         link: "./spring/",
         detailsHash: "Web_Services",
       },
@@ -881,7 +941,7 @@ const techData = [
       },
       {
         name: "Spring® for Apache Pulsar",
-        versions: "1.0.12 | 1.1.12 | 1.1.13 | 1.2.13 | 1.2.18",
+        versions: "1.0.12 | 1.1.12 | 1.1.13 | 1.2.12 | 1.2.13 | 1.2.18",
         link: "./spring/",
         detailsHash: "Pulsar",
       },
@@ -1015,6 +1075,11 @@ const techData = [
       {
         name: "ansi-regex",
         versions: "3.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "astrojs-rss",
+        versions: "4.0.1 | 4.0.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1179,7 +1244,7 @@ const techData = [
       },
       {
         name: "cli",
-        versions: "0.4.5",
+        versions: "0.4.3 | 0.4.5 | 0.6.6",
         link: "./javascript-libraries/",
       },
       {
@@ -1230,6 +1295,11 @@ const techData = [
       {
         name: "cross-spawn",
         versions: "0.2.9 | 3.0.1 | 5.1.0 | 6.0.5 | 7.0.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "cryptiles",
+        versions: "0.2.2 | 2.0.5 | 3.2.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1374,7 +1444,7 @@ const techData = [
       },
       {
         name: "extract-zip",
-        versions: "1.7.0",
+        versions: "1.7.0 | 2.0.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1534,7 +1604,7 @@ const techData = [
       },
       {
         name: "highcharts",
-        versions: "6.0.7 | 6.1.0 | 6.1.3 | 6.2.0 | 7.2.0 | 7.2.2 | 8.2.2",
+        versions: "6.0.7 | 6.1.0 | 6.1.3 | 6.2.0 | 7.2.0 | 7.2.2 | 8.2.2 | 12.5.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1564,7 +1634,7 @@ const techData = [
       },
       {
         name: "html-minifier",
-        versions: "4.0.0",
+        versions: "3.5.21 | 4.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1838,6 +1908,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "modelcontextprotocol-codemod",
+        versions: "2.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "modelcontextprotocol-core",
         versions: "2.0.0",
         link: "./javascript-libraries/",
@@ -1845,6 +1920,11 @@ const techData = [
       {
         name: "modelcontextprotocol-sdk",
         versions: "1.13.3 | 1.17.3 | 1.24.0 | 1.25.2 | 1.26.0 | 1.29.0 | 1.30.0 | 1.30.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "modelcontextprotocol-server",
+        versions: "2.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2014,7 +2094,7 @@ const techData = [
       },
       {
         name: "opentelemetry-core",
-        versions: "1.17.0 | 1.17.1 | 1.22.0 | 1.25.1 | 1.27.0 | 1.30.1 | 2.0.1 | 2.2.0 | 2.5.1 | 2.6.1 | 2.7.0 | 2.7.1",
+        versions: "1.17.0 | 1.17.1 | 1.22.0 | 1.25.1 | 1.27.0 | 1.30.1 | 2.0.1 | 2.1.0 | 2.2.0 | 2.5.1 | 2.6.1 | 2.7.0 | 2.7.1",
         link: "./javascript-libraries/",
       },
       {
@@ -2214,7 +2294,7 @@ const techData = [
       },
       {
         name: "remix-run-router",
-        versions: "1.7.2",
+        versions: "1.6.2 | 1.7.2 | 1.15.3 | 1.23.0 | 1.23.2 | 1.23.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2344,7 +2424,7 @@ const techData = [
       },
       {
         name: "sprintf-js",
-        versions: "1.1.2 | 1.1.3",
+        versions: "1.0.3 | 1.1.2 | 1.1.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2444,7 +2524,7 @@ const techData = [
       },
       {
         name: "tootallnate-once",
-        versions: "1.1.2",
+        versions: "1.1.2 | 2.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2498,6 +2578,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "url-parse",
+        versions: "1.4.7",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "uuid",
         versions: "2.0.3 | 3.3.2 | 3.4.0 | 7.0.3 | 8.0.0 | 8.3.2 | 9.0.0 | 9.0.1 | 10.0.0 | 11.0.3 | 11.0.5 | 11.1.0",
         link: "./javascript-libraries/",
@@ -2523,8 +2608,18 @@ const techData = [
         link: "./vite/",
       },
       {
+        name: "vite-node",
+        versions: "2.0.5",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "vitest",
         versions: "2.0.5 | 2.1.9 | 3.2.4 | 3.2.7 | 4.0.18",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "vitest-mocker",
+        versions: "3.2.4 | 4.0.18",
         link: "./javascript-libraries/",
       },
       {
@@ -2674,7 +2769,7 @@ const techData = [
       },
       {
         name: "webdriver-manager",
-        versions: "12.1.9",
+        versions: "10.3.0 | 12.1.9 | 13.0.0",
         link: "./javascript-libraries/",
       },
       {
@@ -3521,7 +3616,7 @@ const techData = [
       },
       {
         name: "Symfony PSR HTTP Message Bridge",
-        versions: "1.1.x",
+        versions: "1.1.x | 1.2.x",
         link: "./symfony/",
       },
       {
