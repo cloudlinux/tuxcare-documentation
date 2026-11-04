@@ -13,7 +13,7 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 * **Symfony Routing** 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
 * **Symfony Yaml** 2.8.x, 3.4.x, 4.4.x
 * **Symfony Polyfill Intl IDN** 1.30.x
-* **Symfony PSR HTTP Message Bridge** 1.1.x
+* **Symfony PSR HTTP Message Bridge** 1.1.x, 1.2.x
 
 Other versions upon request.
 
