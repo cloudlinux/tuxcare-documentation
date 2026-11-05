@@ -1,6 +1,6 @@
 # TuxCare Radar
 
-This guide describes [TuxCare Radar](https://tuxcare.com/radar/) and how to install and use it.
+This guide describes TuxCare Radar and how to install and use it.
 
 ## What is TuxCare Radar?
 
