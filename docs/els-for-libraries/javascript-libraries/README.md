@@ -84,7 +84,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **fastify-middie** 8.3.3
 * **fflate** 0.8.1, 0.8.2
 * **figlet** 1.9.1
-* **file-type** 16.5.4, 17.1.6
+* **file-type** 10.11.0, 16.5.4, 17.1.6
 * **find-my-way** 4.5.1, 8.2.2, 9.6.0
 * **flatted** 2.0.0, 2.0.2, 3.2.9, 3.3.1, 3.3.2, 3.3.3
 * **follow-redirects** 0.0.3, 1.0.0, 1.2.6, 1.5.10, 1.15.2, 1.15.3, 1.15.5, 1.15.6, 1.15.9, 1.15.11
@@ -94,7 +94,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **fresh** 0.1.0, 0.2.0, 0.2.2, 0.2.4, 0.3.0, 0.5.2
 * **fstream** 1.0.8
 * **gh-pages** 0.12.0
-* **glob** 3.2.11, 6.0.4, 7.1.6, 7.2.3, 10.2.6, 10.3.10, 10.4.5
+* **glob** 3.2.11, 6.0.4, 7.1.6, 7.2.3, 10.2.6, 10.3.10, 10.4.5, 10.5.0
 * **got** 2.9.2, 6.7.1, 7.1.0, 8.3.2, 9.6.0, 10.7.0
 * **graphql-tools-executor-legacy-ws** 0.0.11
 * **graphql-tools-utils** 6.0.9, 7.10.0, 8.6.5, 8.8.0, 8.9.0, 8.9.1, 8.12.0, 8.13.1, 9.2.1, 10.9.1, 10.11.0, 11.2.2, 12.0.0
@@ -159,7 +159,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **mem** 1.1.0
 * **micromatch** 2.3.11, 3.1.10
 * **mime** 1.2.4, 1.2.6, 1.2.11, 1.3.0, 1.3.4, 1.3.6
-* **minimatch** 0.0.4, 0.0.5, 0.2.5, 0.2.14, 0.3.0, 0.4.0, 1.0.0, 2.0.10, 3.0.3, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 4.2.3, 5.1.0, 5.1.1, 5.1.2, 7.4.6, 9.0.3, 9.0.4, 9.0.5, 10.1.1, 10.2.2
+* **minimatch** 0.0.4, 0.0.5, 0.2.5, 0.2.14, 0.3.0, 0.4.0, 1.0.0, 2.0.10, 3.0.3, 3.0.4, 3.0.5, 3.0.8, 3.1.2, 3.1.5, 4.2.3, 5.1.0, 5.1.1, 5.1.2, 7.4.6, 9.0.3, 9.0.4, 9.0.5, 10.1.1, 10.2.2, 10.2.3, 10.2.4, 10.2.5, 10.2.6
 * **minimist** 0.0.8, 0.0.9, 0.0.10, 1.1.3, 1.2.0, 1.2.1, 1.2.8
 * **modelcontextprotocol-client** 2.0.0
 * **modelcontextprotocol-codemod** 2.1.0
@@ -189,7 +189,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **nestjs-websockets** 10.4.22, 11.2.2, 11.2.3, 11.2.4
 * **netmask** 1.0.6
 * **nguniversal-express-engine** 10.1.0
-* **node-forge** 0.10.0, 1.3.1, 1.3.3
+* **node-forge** 0.9.0, 0.10.0, 1.3.1, 1.3.3
 * **node-notifier** 5.4.5, 7.0.2
 * **node-sass** 4.14.1, 6.0.1
 * **nodemailer** 0.7.1, 2.7.2, 6.10.1, 9.0.0, 9.0.1, 9.0.2, 9.0.3, 9.0.5, 9.0.6, 9.1.0
@@ -246,7 +246,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **semver-regex** 2.0.0
 * **send** 0.0.4, 0.1.0, 0.1.1, 0.1.4, 0.7.4, 0.13.0, 0.13.2, 0.16.1, 0.16.2, 0.17.1, 0.17.2, 0.18.0
 * **sentry-browser** 5.7.1
-* **serialize-javascript** 1.9.1, 2.1.2, 3.1.0, 4.0.0, 5.0.1, 6.0.0, 6.0.1, 6.0.2, 7.1.1, 7.1.2
+* **serialize-javascript** 1.9.1, 2.1.2, 3.0.0, 3.1.0, 4.0.0, 5.0.1, 6.0.0, 6.0.1, 6.0.2, 7.0.2, 7.0.4, 7.0.7, 7.1.1, 7.1.2
 * **seroval** 1.5.6
 * **serve-static** 1.10.3, 1.13.2
 * **set-value** 2.0.0
@@ -272,7 +272,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **swagger-ui-dist** 3.52.5
 * **swiper** 8.4.7, 11.2.10
 * **systeminformation** 5.23.8
-* **tar** 1.0.3, 2.1.1, 2.2.1, 2.2.2, 4.4.19, 6.0.2, 6.1.0, 6.1.6, 6.1.15, 6.2.0, 6.2.1, 7.5.17, 7.5.18
+* **tar** 1.0.3, 2.1.1, 2.2.1, 2.2.2, 4.4.6, 4.4.19, 6.0.2, 6.1.0, 6.1.6, 6.1.15, 6.2.0, 6.2.1, 7.5.17, 7.5.18
 * **tar-fs** 1.5.1, 2.1.1, 3.0.4
 * **terser** 3.17.0, 4.6.3, 4.6.10, 4.8.0, 4.8.1, 5.3.0, 5.5.1, 5.7.1, 5.10.0
 * **tinymce** 4.9.11, 5.10.9, 6.8.6
