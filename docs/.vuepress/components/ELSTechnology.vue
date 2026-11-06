@@ -158,6 +158,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Cassandra Java Driver",
+        versions: "3.1.4 | 3.6.0 | 3.11.5 | 4.18.1 | 4.19.3",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Commons BeanUtils",
         versions: "1.6 | 1.8.0 | 1.8.3 | 1.9.0 | 1.9.2 | 1.9.3 | 1.9.4 | 1.10.0 | 1.10.1",
         link: "./java-libraries/",
@@ -369,11 +374,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Cassandra Java Driver",
-        versions: "4.14.1 | 4.18.1",
-        link: "./java-libraries/",
-      },
-      {
         name: "Couchbase Java Client",
         versions: "3.6.3",
         link: "./java-libraries/",
@@ -386,6 +386,11 @@ const techData = [
       {
         name: "Couchbase JVM Core IO Deps",
         versions: "1.6.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "DataStax Java Driver",
+        versions: "4.11.3 | 4.14.1 | 4.17.0",
         link: "./java-libraries/",
       },
       {
@@ -419,7 +424,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Eclipse Sisu",
+        name: "Eclipse Sisu Plexus",
         versions: "0.0.0.M5",
         link: "./java-libraries/",
       },
@@ -435,7 +440,12 @@ const techData = [
       },
       {
         name: "Elasticsearch",
-        versions: "7.16.3 | 7.17.15 | 8.7.1",
+        versions: "7.16.3 | 7.17.15",
+        link: "./elasticsearch/",
+      },
+      {
+        name: "Elasticsearch Java Client",
+        versions: "7.17.15 | 8.7.1 | 8.13.4",
         link: "./elasticsearch/",
       },
       {
@@ -814,6 +824,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Sisu",
+        versions: "2.3.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "SLF4J",
         versions: "1.6.1 | 1.7.2 | 1.7.5 | 1.7.7 | 1.7.12 | 1.7.20 | 1.7.21 | 1.7.24 | 1.7.25 | 1.7.26 | 1.7.28 | 1.7.29 | 1.7.30 | 1.7.31 | 1.7.32 | 1.8.0-alpha2",
         link: "./java-libraries/",
@@ -831,11 +846,6 @@ const techData = [
       {
         name: "Sonatype Aether",
         versions: "1.13.1",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Sonatype Sisu",
-        versions: "2.3.0",
         link: "./java-libraries/",
       },
       {
