@@ -34,7 +34,7 @@ TuxCare's commitment to transparency and visibility is foundational to the ELS f
 * **Software Bill of Materials (SBOM)**: Machine-readable SBOMs provide visibility into package composition and dependencies, supporting software supply chain transparency and accountability. Depending on the package, TuxCare provides SBOMs in industry-standard formats — SPDX and CycloneDX. See [Machine-Readable Security Data](./machine-readable-security-data/) for current availability.
 
 :::warning
-Note: SBOM availability for certain components is still expanding and may vary by package. Contact [sales@tuxcare.com](mailto:sales@tuxcare.com) for current availability details.
+Note: SBOM availability varies by package. Customers can ask about a specific package through the [TuxCare Support Portal](https://tuxcare.com/support-portal/); if you are evaluating TuxCare, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
 * **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. VEX is published in standard formats, including CycloneDX VEX. See [Machine-Readable Security Data](./machine-readable-security-data/) for per-ecosystem feeds and details.

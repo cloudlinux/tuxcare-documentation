@@ -13,7 +13,7 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 
 Each package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. TuxCare provides SBOMs in industry-standard formats — SPDX and CycloneDX — so any SBOM-aware scanner or supply-chain tool can consume them.
 
-SBOMs are generated across all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET). For Java, JavaScript, Python, and PHP they are published on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/) and are publicly accessible — no credentials are needed.
+SBOMs are generated across all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET). For Java, JavaScript, Python, PHP, and .NET they are published on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/) and are publicly accessible — no credentials are needed.
 
 SBOMs are currently published for:
 
@@ -21,8 +21,9 @@ SBOMs are currently published for:
 * Python — [els_lang_python](https://security.tuxcare.com/sbom/cyclonedx/els_lang_python/), laid out as `<package>/<version>/<package>-<version>-sbom.json`, with the SBOM's detached `.asc` signature next to it
 * PHP — [els_lang_php](https://security.tuxcare.com/sbom/cyclonedx/els_lang_php/), with the SBOM's detached `.asc` signature under [signatures/els_lang_php](https://security.tuxcare.com/signatures/els_lang_php/)
 * Java — [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/)
+* .NET — [els_lang_dotnet](https://security.tuxcare.com/sbom/cyclonedx/els_lang_dotnet/), laid out as `<package>/<version>/<package>.<version>.sbom.json`; .NET SBOMs are published for a few packages so far and have no detached signature
 
-To check SBOM availability for .NET and other ecosystems, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+If the package you use has no SBOM in these directories, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 ## Vulnerability Exploitability eXchange (VEX)
 
@@ -60,7 +61,19 @@ Where the `.asc` is published varies by ecosystem. JavaScript signatures are on 
 
 ### Obtain the TuxCare Public Key
 
-To verify a signature you first need TuxCare's public signing key. Obtain the key from your TuxCare account, or request it from [sales@tuxcare.com](mailto:sales@tuxcare.com) or your TuxCare support contact.
+To verify a signature you first need TuxCare's public signing key, the TuxCare SecureChain key. It is published at [security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain](https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain); no credentials are needed:
+
+```text
+curl -fsSL https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain -o tuxcare-els-public.asc
+```
+
+The file holds two TuxCare SecureChain keys. Before importing, list them with their fingerprints:
+
+```text
+gpg --show-keys --with-fingerprint tuxcare-els-public.asc
+```
+
+The signatures published on security.tuxcare.com are made with the key whose fingerprint is `AD13 9411 89BF 2258 AA30  72C9 7BF1 2029 3948 A27B`; `gpg --verify` reports it as `using RSA key 7BF120293948A27B`. If `gpg` reports a different key, or `No public key` after you import this file, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 Once you have the key file (for example, `tuxcare-els-public.asc`), import it into your keyring:
 
@@ -297,7 +310,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
 If `gpg` reports `BAD signature`, or cannot find the matching public key, treat the artifact as an integrity violation: stop the installation and re-obtain the package and signature from TuxCare over a trusted channel.
 
 :::tip
-All ELS for Language Ecosystems ecosystems are signed the same way. If you need a signatures-repository path or the TuxCare public key, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+All ELS for Language Ecosystems packages are signed the same way. The public key is described in [Obtain the TuxCare Public Key](#obtain-the-tuxcare-public-key); if you cannot find the signature for an artifact, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 :::
 
 ## Integrity Violation Events

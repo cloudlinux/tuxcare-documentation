@@ -71,5 +71,5 @@ sh install-postgresql-els-repo.sh --delete
 TuxCare provides source code for patched applications in the [Nexus repository](https://nexus.repo.tuxcare.com). Source archives and JARs follow the standard naming conventions with a `-sources` classifier or suffix.
 
 :::tip
-If a source archive is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+If a source archive is not available for a specific package, request it through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 :::

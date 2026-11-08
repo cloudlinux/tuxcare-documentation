@@ -148,7 +148,7 @@ The repository setup script installs the key for you. To confirm it is present i
 If the key is missing, re-run the repository setup script from the [installation instructions](/els-for-runtimes/) rather than importing a key from an untrusted source.
 
 :::tip Obtaining the key manually
-The TuxCare public signing key is also published at [`repo.tuxcare.com/tuxcare/RPM-GPG-KEY-TuxCare`](https://repo.tuxcare.com/tuxcare/RPM-GPG-KEY-TuxCare) and, on RPM systems, installed to `/etc/pki/rpm-gpg/RPM-GPG-KEY-TuxCare`. If you need the key for a different ecosystem or for an air-gapped mirror, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+The TuxCare public signing key is also published at [`repo.tuxcare.com/tuxcare/RPM-GPG-KEY-TuxCare`](https://repo.tuxcare.com/tuxcare/RPM-GPG-KEY-TuxCare) and, on RPM systems, installed to `/etc/pki/rpm-gpg/RPM-GPG-KEY-TuxCare`. For an air-gapped mirror, download the key from that URL on a connected host and copy it to the mirror. ELS for Language Ecosystems and ELS for Applications use a different key, described in [their verification steps](/els-for-libraries/machine-readable-security-data/#obtain-the-tuxcare-public-key).
 :::
 
 ### Verify a Package
@@ -181,9 +181,29 @@ repo_gpgcheck=1
 On DEB and APK, the signed repository index (`InRelease`/`Release.gpg` and the APK index signature) is verified by default, so this step is RPM-specific.
 :::
 
-:::tip Windows runtimes
-ELS runtimes delivered for Windows (for example .NET and PHP for Windows) are distributed as individually signed archives rather than through a Linux package manager. For signature-verification guidance on those artifacts, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-:::
+## Windows Runtimes Signature Verification (Authenticode)
+
+ELS runtimes for Windows (for example .NET and PHP for Windows) are downloaded from `windows.tuxcare.com` rather than installed by a Linux package manager, so the GPG steps above do not apply to them. TuxCare signs the Windows executables, libraries, installers, and installer scripts it builds (`.exe`, `.dll`, `.msi`, `.ps1`) with an Authenticode code-signing certificate:
+
+* **Signer** — `Cloud Linux Software, Inc`, the verified publisher Windows shows in the User Account Control prompt of `TuxCare.Installer.exe`.
+* **Issuer** — `Sectigo Public Code Signing CA EV R36` (an Extended Validation code-signing certificate).
+
+A `.zip` archive carries no signature of its own: extract it and verify the `.exe` and `.dll` files inside. Run in PowerShell:
+
+<CodeTabs :tabs="[
+{ title: 'Single file', content:
+`Get-AuthenticodeSignature -FilePath tuxcare-installer.ps1 | Format-List Status, SignerCertificate` },
+{ title: 'Extracted archive', content:
+`Get-ChildItem php -Recurse -Include *.exe, *.dll |
+  Get-AuthenticodeSignature |
+  Where-Object { $_.Status -ne 'Valid' -or
+    $_.SignerCertificate.GetNameInfo('SimpleName', $false) -notin 'Cloud Linux Software, Inc', 'Microsoft Corporation' } |
+  Format-Table Path, Status` }
+]" />
+
+For a single file, `Status` must be `Valid` and the `SignerCertificate` subject must name `Cloud Linux Software, Inc`. For an extracted archive, replace `php` with the folder you extracted to; the command lists only the files that are not validly signed by Cloud Linux Software, Inc or by Microsoft Corporation (some .NET archives include Microsoft components). Empty output means every binary passed. With the Windows SDK installed, `signtool verify /pa /v <file>` also checks a signature and prints the signer.
+
+A `NotSigned`, `HashMismatch`, or other non-`Valid` status means the file is not verified: do not run it, and report it through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 ## Integrity Violation Events
 
