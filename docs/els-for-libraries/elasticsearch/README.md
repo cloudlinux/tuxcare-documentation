@@ -4,7 +4,8 @@ TuxCare's Endless Lifecycle Support (ELS) for Elasticsearch provides security pa
 
 ## Supported Versions
 
-* Elasticsearch 7.16.3, 7.17.15, 8.7.1
+* Elasticsearch 7.16.3, 7.17.15
+* Elasticsearch Java Client 7.17.15, 8.7.1, 8.13.4
 
 Other versions upon request.
 
@@ -73,6 +74,13 @@ Other versions upon request.
    <CodeTabs :tabs="[
      { title: 'Maven (pom.xml)', content: mavendeps },
      { title: 'Gradle (build.gradle)', content: gradledeps }
+   ]" />
+
+   For the Elasticsearch Java Client, use the `co.elastic.clients:elasticsearch-java` artifact:
+
+   <CodeTabs :tabs="[
+     { title: 'Maven (pom.xml)', content: mavendepsclient },
+     { title: 'Gradle (build.gradle)', content: gradledepsclient }
    ]" />
 
 5. **Verify and build**
@@ -161,5 +169,19 @@ const mavendeps =
 const gradledeps =
 `dependencies {
   implementation("org.elasticsearch.client:elasticsearch-rest-high-level-client:7.16.3-tuxcare.1")
+}`
+
+const mavendepsclient =
+`<dependencies>
+    <dependency>
+        <groupId>co.elastic.clients</groupId>
+        <artifactId>elasticsearch-java</artifactId>
+        <version>8.13.4-tuxcare.1</version>
+    </dependency>
+</dependencies>`
+
+const gradledepsclient =
+`dependencies {
+  implementation("co.elastic.clients:elasticsearch-java:8.13.4-tuxcare.1")
 }`
 </script>

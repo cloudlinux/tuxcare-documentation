@@ -13,6 +13,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apache Avro** 1.7.6, 1.7.7, 1.8.2, 1.10.2, 1.11.0, 1.11.3
 * **Apache Axis** 1.4
 * **Apache BookKeeper** 4.16.6
+* **Apache Cassandra Java Driver** 3.1.4, 3.6.0, 3.11.5, 4.18.1, 4.19.3
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.0, 1.9.2, 1.9.3, 1.9.4, 1.10.0, 1.10.1
 * **Apache Commons Collections** 3.1, 3.2, 3.2.1
 * **Apache Commons Compress** 1.4.1, 1.8.1, 1.12, 1.14, 1.15, 1.18, 1.19, 1.20, 1.21, 1.24.0, 1.25.0, 1.26.2
@@ -43,10 +44,10 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.77, 1.78.1
 * **c3p0** 0.9.2.1, 0.9.5.2, 0.9.5.3, 0.9.5.4, 0.9.5.5
-* **Cassandra Java Driver** 4.14.1, 4.18.1
 * **Couchbase Java Client** 3.6.3
 * **Couchbase JVM Core IO** 2.4.11, 2.6.3
 * **Couchbase JVM Core IO Deps** 1.6.3
+* **DataStax Java Driver** 4.11.3, 4.14.1, 4.17.0
 * **DNSJava** 2.1.7, 3.5.2
 * **docker-java** 3.0.14, 3.2.11, 3.2.13, 3.3.0, 3.3.6, 3.4.2
 * **docx4j** 3.3.6
@@ -54,7 +55,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Eclipse Aether** 1.0.2.v20150114
 * **Eclipse JGit** 5.7.0, 5.13.3
 * **Eclipse Parsson** 1.0.0, 1.1.1
-* **Eclipse Sisu** 0.0.0.M5
+* **Eclipse Sisu Plexus** 0.0.0.M5
 * **EdDSA** 0.3.0
 * **el-spec** 3.0.0
 * **EWS Java API** 2.0
