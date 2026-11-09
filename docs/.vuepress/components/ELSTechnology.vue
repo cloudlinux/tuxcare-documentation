@@ -824,11 +824,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Sisu",
-        versions: "2.3.0",
-        link: "./java-libraries/",
-      },
-      {
         name: "SLF4J",
         versions: "1.6.1 | 1.7.2 | 1.7.5 | 1.7.7 | 1.7.12 | 1.7.20 | 1.7.21 | 1.7.24 | 1.7.25 | 1.7.26 | 1.7.28 | 1.7.29 | 1.7.30 | 1.7.31 | 1.7.32 | 1.8.0-alpha2",
         link: "./java-libraries/",
@@ -846,6 +841,11 @@ const techData = [
       {
         name: "Sonatype Aether",
         versions: "1.13.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Sonatype Sisu",
+        versions: "2.3.0",
         link: "./java-libraries/",
       },
       {

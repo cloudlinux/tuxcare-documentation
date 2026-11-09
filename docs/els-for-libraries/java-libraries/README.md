@@ -117,11 +117,11 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **rescu** 2.0.2
 * **Retrofit** 2.9.0
 * **RSocket** 1.0.3, 1.1.3, 1.1.5
-* **Sisu** 2.3.0
 * **SLF4J** 1.6.1, 1.7.2, 1.7.5, 1.7.7, 1.7.12, 1.7.20, 1.7.21, 1.7.24, 1.7.25, 1.7.26, 1.7.28, 1.7.29, 1.7.30, 1.7.31, 1.7.32, 1.8.0-alpha2
 * **SnakeYAML** 1.7, 1.8, 1.23, 1.26, 1.27, 1.28, 1.29, 1.30, 1.33
 * **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
+* **Sonatype Sisu** 2.3.0
 * **Testcontainers** 1.18.3, 1.19.8, 1.21.4
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
 * **tomlj** 1.0.0
