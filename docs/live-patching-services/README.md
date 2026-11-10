@@ -68,6 +68,8 @@ KernelCare is available for both x86-64 (Intel and AMD) and ARM64 architectures.
 
 Customers can find detailed information about supported kernels, Linux distributions, specific vulnerabilities, and live patches provided by KernelCare and LibCare for each of the supported Linux distributions at [https://patches.kernelcare.com/](https://patches.kernelcare.com/).
 
+KernelCare supports only kernels from the vendor's stable repositories. Kernels from testing, beta, or pre-release repositories (for example, `updates-testing`) are not supported, and no live patches are available for them. To get live patches, use the latest kernel from the stable repository, or wait until the vendor moves the new kernel to the stable repository.
+
 #### End-of-life (EOL) policy
 
 TuxCare will stop supporting live patching for specific distros if there are no security advisories provided by the distro's vendor for the last 365 days. In this case, all customers running the affected distributions are notified about the upcoming EOL. Existing live patches for EOL distributions are available for the next 6 years after the EOL date.
