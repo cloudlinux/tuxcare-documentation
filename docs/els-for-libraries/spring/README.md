@@ -196,11 +196,11 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-cloud-build | 3.1.6, 3.1.9 |
-| spring-cloud-build-dependencies | 3.1.6, 3.1.9 |
-| spring-cloud-build-tools | 3.1.6, 3.1.9 |
-| spring-cloud-build-docs | 3.1.6, 3.1.9 |
-| spring-cloud-dependencies-parent | 3.1.9 |
+| spring-cloud-build | 3.1.6, 3.1.9, 4.2.4, 4.3.4 |
+| spring-cloud-build-dependencies | 3.1.6, 3.1.9, 4.2.4, 4.3.4 |
+| spring-cloud-build-tools | 3.1.6, 3.1.9, 4.2.4, 4.3.4 |
+| spring-cloud-build-docs | 3.1.6, 3.1.9, 4.2.4, 4.3.4 |
+| spring-cloud-dependencies-parent | 3.1.9, 4.2.4, 4.3.4 |
 | spring-cloud-gateway | 3.1.9 |
 | spring-cloud-gateway-dependencies | 3.1.9 |
 | spring-cloud-gateway-server | 3.1.9 |
@@ -208,7 +208,7 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 | spring-cloud-gateway-mvc | 3.1.9 |
 | spring-cloud-gateway-docs | 3.1.9 |
 | spring-cloud-starter-gateway | 3.1.9 |
-| spring-cloud-spring-service-connector | 1.2.9.RELEASE |
+| spring-cloud-spring-service-connector | 1.2.9.RELEASE, 2.0.6.RELEASE, 2.0.7.RELEASE |
 </template>
 
 <template #Data>
