@@ -34,7 +34,7 @@ SBOMs for these applications are published as follows:
 * Java applications (Apache Tomcat, WildFly, Apache Hive, Apache Hadoop) - [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/) on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), publicly accessible
 * Go applications (Grafana, Loki, MinIO) - [els_lang_go](https://security.tuxcare.com/sbom/cyclonedx/els_lang_go/) on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), publicly accessible; each SBOM is accompanied by its detached `.asc` signature in the same directory
 
-To check whether an SBOM is available for other applications or to request a copy, reach out to [sales@tuxcare.com](mailto:sales@tuxcare.com).
+To ask whether an SBOM is available for another application, use the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 ## Vulnerability Exploitability eXchange (VEX)
 
@@ -60,7 +60,19 @@ A failed verification is an **integrity violation**: the artifact must be treate
 
 ### Obtain the TuxCare Public Key
 
-To verify a signature you first need TuxCare's public signing key. Obtain the key from your TuxCare account, or request it from [sales@tuxcare.com](mailto:sales@tuxcare.com) or your TuxCare support contact.
+To verify a signature you first need TuxCare's public signing key, the TuxCare SecureChain key. It is published at [security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain](https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain); no credentials are needed:
+
+```text
+curl -fsSL https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain -o tuxcare-els-public.asc
+```
+
+The file holds two TuxCare SecureChain keys. Before importing, list them with their fingerprints:
+
+```text
+gpg --show-keys --with-fingerprint tuxcare-els-public.asc
+```
+
+The signatures published on security.tuxcare.com are made with the key whose fingerprint is `AD13 9411 89BF 2258 AA30  72C9 7BF1 2029 3948 A27B`; `gpg --verify` reports it as `using RSA key 7BF120293948A27B`. If `gpg` reports a different key, or `No public key` after you import this file, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 Once you have the key file (for example, `tuxcare-els-public.asc`), import it into your keyring:
 

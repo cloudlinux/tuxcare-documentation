@@ -98,7 +98,7 @@ Source code is available for TuxCare-patched **Java** libraries. Source JARs fol
 For example: [https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar).
 
 :::tip
-If a source JAR is not available for a specific package, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+If a source JAR is not available for a specific package, request it through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 :::
 
 </template>
