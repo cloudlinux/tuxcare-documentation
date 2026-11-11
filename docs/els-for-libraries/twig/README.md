@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Twig from TuxCare provides security fixes fo
 
 ## Supported Versions
 
-* **Twig** 1.44.8, 2.15.6, 2.16.1
+* **Twig** 1.44.8, 2.15.6, 2.16.1, 3.19.0
 
 Other versions upon request.
 

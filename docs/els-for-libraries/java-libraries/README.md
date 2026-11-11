@@ -25,8 +25,8 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apache Commons VFS** 2.0
 * **Apache FOP** 1.0
 * **Apache FreeMarker** 2.3.32, 2.3.33, 2.3.34
-* **Apache HttpComponents Client** 4.0.1, 4.1.2, 4.2, 4.2.1, 4.2.6, 4.4, 4.5, 4.5.1, 4.5.2, 4.5.6, 4.5.8, 4.5.9, 4.5.10, 4.5.12
-* **Apache HttpComponents Client 5** 5.0.3, 5.3.1, 5.5.2
+* **Apache HttpComponents Client** 4.0.1, 4.1.2, 4.2, 4.2.1, 4.2.2, 4.2.6, 4.4, 4.4.1, 4.5, 4.5.1, 4.5.2, 4.5.4, 4.5.5, 4.5.6, 4.5.8, 4.5.9, 4.5.10, 4.5.12
+* **Apache HttpComponents Client 5** 5.0.3, 5.1.3, 5.1.4, 5.2.3, 5.3.1, 5.4.4, 5.5.2
 * **Apache HttpComponents Core 5** 5.0.2, 5.1.3, 5.1.5, 5.2.4, 5.2.5, 5.3.4
 * **Apache Ivy** 2.3.0
 * **Apache Neethi** 3.1.1
@@ -64,8 +64,10 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Google Guava** 10.0.1, 16.0.1, 18.0, 19.0-rc3, 19.0, 20.0, 25.1-android, 25.1-jre, 27.1-android, 27.1-jre, 30.1-jre, 31.1-jre
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
-* **Grails** 2.5.6, 5.3.6, 6.2.1, 6.2.3
-* **Grails Plugin Converters** 2.5.6, 5.0.0
+* **Grails Core** 2.5.6, 5.3.6, 6.2.1, 6.2.3
+* **Grails Data Mapping** 7.3.4, 8.1.2
+* **Grails GSP** 2.5.6, 6.2.4
+* **Grails Plugin Converters** 5.0.0
 * **graphql-java** 21.5, 22.3
 * **H2 Database** 1.3.176, 1.4.200, 2.1.210
 * **Hazelcast** 4.2.8
@@ -82,7 +84,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **jose4j** 0.8.0
 * **JSON** 20090211, 20140107
 * **JSON Assert** 1.2.3
-* **JSON Smart v2** 1.3.2, 2.3, 2.3.1, 2.4.2, 2.4.7, 2.4.8, 2.5.0, 2.5.1
+* **json-smart** 1.1.1, 1.3.2, 2.2.1, 2.3, 2.3.1, 2.4.2, 2.4.7, 2.4.8, 2.5.0, 2.5.1
 * **json-io** 2.9.4
 * **JsonPath** 2.2.0, 2.4.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
 * **jsonschema2pojo** 1.1.0
@@ -93,6 +95,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **LZ4** 1.8.0, 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
 * **Micronaut** 3.6.0, 3.8.5, 3.10.4, 4.5.4
+* **Micronaut Spring** 4.5.0
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
 * **MySQL Connector/J** 5.1.49
@@ -122,8 +125,9 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Snappy Java** 1.1.2, 1.1.8.4
 * **Sonatype Aether** 1.13.1
 * **Sonatype Sisu** 2.3.0
-* **Testcontainers** 1.18.3, 1.19.8, 1.21.4
+* **Testcontainers** 1.18.3, 1.19.8, 1.20.6, 1.21.4
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
+* **Thymeleaf Spring** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
 * **tomlj** 1.0.0
 * **Undertow** 1.4.27.Final, 2.0.26.Final, 2.2.24.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final, 2.3.24.Final
 * **Woodstox** 5.0.3, 5.3.0
