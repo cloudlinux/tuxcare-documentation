@@ -510,7 +510,7 @@ const techData = [
       },
       {
         name: "Eclipse JGit",
-        versions: "5.7.0 | 5.7.0.202003110725-r | 5.13.3 | 5.13.3.202401111512-r",
+        versions: "5.7.0.202003110725-r | 5.13.3.202401111512-r",
         link: "./java-libraries/",
       },
       {
@@ -1280,12 +1280,12 @@ const techData = [
       },
       {
         name: "XMLUnit",
-        versions: "2.6.3 | 2.7.0 | 2.9.1 | 2.9.0",
+        versions: "2.6.3 | 2.7.0 | 2.9.0 | 2.9.1",
         link: "./java-libraries/",
       },
       {
         name: "XNIO",
-        versions: "3.8.0 | 3.8.7.Final | 3.8.8",
+        versions: "3.8.0.Final | 3.8.7.Final | 3.8.8.Final",
         link: "./java-libraries/",
       },
       {

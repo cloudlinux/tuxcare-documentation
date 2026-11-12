@@ -75,7 +75,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Dropwizard Metrics** 2.2.0, 3.0.1, 3.0.2, 3.1.0, 3.1.5, 3.2.4, 4.1.11
 * **Eclipse Aether** 1.0.2.v20150114
 * **Eclipse Angus Mail** 2.0.3
-* **Eclipse JGit** 5.7.0, 5.7.0.202003110725-r, 5.13.3, 5.13.3.202401111512-r
+* **Eclipse JGit** 5.7.0.202003110725-r, 5.13.3.202401111512-r
 * **Eclipse Parsson** 1.0.0, 1.1.1
 * **Eclipse Sisu Plexus** 0.0.0.M5
 * **Eclipse Vert.x** 4.2.4, 4.3.8, 4.5.7, 4.5.10, 4.5.11
@@ -183,8 +183,8 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Undertow** 1.4.27.Final, 2.0.26.Final, 2.2.24.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final, 2.3.24.Final
 * **Woodstox** 5.0.3, 5.3.0, 6.0.1
 * **XChange** 4.3.13
-* **XMLUnit** 2.6.3, 2.7.0, 2.9.1, 2.9.0
-* **XNIO** 3.8.0, 3.8.7.Final, 3.8.8
+* **XMLUnit** 2.6.3, 2.7.0, 2.9.0, 2.9.1
+* **XNIO** 3.8.0.Final, 3.8.7.Final, 3.8.8.Final
 * **XStream** 1.4.17
 * **zendesk-java-client** 0.6.2
 
