@@ -1,11 +1,15 @@
-# Apache Hadoop
+# Apache Hadoop<sup style="font-size: 0.5em;">®</sup>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Hadoop provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Hadoop core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
-The ELS for Apache Hadoop service provides solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Hadoop applications.
+Apache® and Apache Hadoop® are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for Apache Hadoop® provides security patches and selected bug fixes that are integral to the stable operation of applications running on these versions of Apache Hadoop® core components. These components have either reached their end of standard support from vendors or have reached End of Life (EOL).
+The ELS for Apache Hadoop® service provides solutions for organizations that are not yet ready to migrate to newer versions and that are seeking long-term stability for their legacy Apache Hadoop® applications.
 
 ## Supported Versions
 
-* Apache Hadoop 2.7.1, 2.7.3
+* Apache Hadoop® 2.7.1, 2.7.3
 
 ## Installation
 

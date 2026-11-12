@@ -1,6 +1,10 @@
-# Hibernate
+# Hibernate<sup style="font-size: 0.5em;">®</sup>
 
-TuxCare's Endless Lifecycle Support (ELS) for Hibernate provides security patches and selected bug fixes that are integral to the stable operation of applications running on Hibernate.
+Hibernate is a registered trademark of the Commonhaus Foundation.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for Hibernate® provides security patches and selected bug fixes that are integral to the stable operation of applications running on Hibernate®.
 
 ## Supported Versions
 

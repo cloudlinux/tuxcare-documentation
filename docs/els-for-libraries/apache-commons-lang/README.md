@@ -1,10 +1,14 @@
-# Apache Commons Lang
+# Apache Commons Lang<sup style="font-size: 0.5em;">™</sup>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache Commons Lang provides security patches and selected bug fixes that are integral to the stable operation of applications using Commons Lang.
+Apache®, Apache Commons Lang™, are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for Apache Commons Lang™ provides security patches and selected bug fixes that are integral to the stable operation of applications using Commons Lang™.
 
 ## Supported Versions
 
-* Apache Commons Lang 2.4, 2.6
+* Apache Commons Lang™ 2.4, 2.6
 * Apache Commons Lang3 3.4, 3.8.1, 3.9, 3.10, 3.11, 3.12.0, 3.14.0, 3.15.0, 3.16.0, 3.17.0
 
 ## Installation

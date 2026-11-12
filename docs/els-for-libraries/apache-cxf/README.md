@@ -1,10 +1,14 @@
-# Apache CXF
+# Apache CXF<sup style="font-size: 0.5em;">™</sup>
 
-TuxCare's Endless Lifecycle Support (ELS) for Apache CXF provides security patches and selected bug fixes that are integral to the stable operation of applications running on Apache CXF.
+Apache®, Apache CXF™, are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for Apache CXF™ provides security patches and selected bug fixes that are integral to the stable operation of applications running on Apache CXF™.
 
 ## Supported Versions
 
-* Apache CXF 3.4.5, 3.5.9, 3.5.11
+* Apache CXF™ 3.4.5, 3.5.9, 3.5.11
 
 ## Installation
 

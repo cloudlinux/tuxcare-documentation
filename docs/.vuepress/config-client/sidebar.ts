@@ -208,7 +208,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/postgresql-driver/',
-                    icon: '/images/postgresql.webp',
+                    icon: '/images/java.webp',
                 },
                 {
                     path: '/els-for-libraries/protobuf/',
@@ -216,7 +216,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/spring/',
-                    icon: '/images/els_for_spring_color.webp',
+                    icon: '/images/java.webp',
                 },
                 {
                     path: '/els-for-libraries/java-libraries/',

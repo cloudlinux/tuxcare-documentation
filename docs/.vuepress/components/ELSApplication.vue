@@ -33,13 +33,13 @@
 <script setup>
 const applications = [
   {
-    name: "Apache Hadoop",
+    name: "Apache Hadoop®",
     versions: "2.7.1 | 2.7.3",
     link: "./apache-hadoop/",
     icon: "/images/hadoop.webp",
   },
   {
-    name: "Apache Hive",
+    name: "Apache Hive™",
     versions: "2.3.9",
     link: "./apache-hive/",
     icon: "/images/hive.webp",

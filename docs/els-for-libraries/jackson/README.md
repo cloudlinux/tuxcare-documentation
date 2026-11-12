@@ -1,6 +1,10 @@
-# Jackson
+# Jackson<sup style="font-size: 0.5em;">™</sup>
 
-TuxCare's Endless Lifecycle Support (ELS) for Jackson provides security patches and selected bug fixes that are integral to the stable operation of applications running on Jackson.
+Jackson is a trademark of the Commonhaus Foundation.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for Jackson™ provides security patches and selected bug fixes that are integral to the stable operation of applications running on Jackson™.
 
 ## Supported Modules and Versions
 
