@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Guzzle from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* **Guzzle** 6.0.2, 6.3.3, 6.5.8, 7.10.0
+* **Guzzle** 6.0.2, 6.3.3, 6.5.8, 7.9.3, 7.10.0
 * **Guzzle PSR-7** 1.1.0, 1.4.2, 1.9.1
 
 Other versions upon request.
