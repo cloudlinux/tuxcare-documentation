@@ -7,7 +7,6 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Aircompressor** 0.8, 0.10, 0.20, 0.21, 0.27
 * **Airlift** 213
 * **Amazon Kinesis Client Library for Java** 2.2.8
-* **Angus Mail** 2.0.3
 * **ANTLR v4** 4.7.2, 4.10.1, 4.11.1, 4.13.0, 4.13.2
 * **Apache ActiveMQ family**
   * **Apache ActiveMQ Artemis** 2.26.0, 2.28.0, 2.33.0, 2.37.0, 2.40.0
@@ -44,20 +43,22 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Apache ORC** 1.6.3
 * **Apache POI** 3.10-FINAL, 4.1.2
 * **Apache Pulsar** 3.2.4
+* **Apache Pulsar Reactive Client** 0.5.9, 0.5.10, 0.7.0
 * **Apache Qpid JMS** 0.59.0, 1.7.0, 1.10.0
 * **Apache RocketMQ** 4.8.0
 * **Apache Santuario** 2.0.10, 2.1.4, 2.3.1
 * **Apache Thrift** 0.9.1, 0.9.3, 0.14.1
 * **Apache Tika** 2.9.4
-* **Apache Xalan** 2.7.1, 2.7.2
+* **Apache Xalan-Java** 2.7.1, 2.7.2
+* **Apache Xerces2** 2.11.0, 2.12.0
 * **Apache XML Graphics**
   * **Apache FOP** 1.0
   * **Apache XML Graphics Batik** 1.7, 1.8
   * **Apache XML Graphics Commons** 1.4, 2.1
 * **Apache XMLBeans** 2.3.0, 2.6.0, 5.1.1
 * **Apache ZooKeeper** 3.4.10, 3.5.5, 3.5.6, 3.5.7, 3.5.9, 3.6.0, 3.7.2, 3.8.3, 3.8.6, 3.9.1
-* **AssertJ** 2.9.0, 3.11.1, 3.18.1, 3.19.0, 3.22.0, 3.23.1, 3.24.2, 3.25.3
 * **Apereo Java CAS Client** 3.6.4, 4.0.3, 4.0.4
+* **AssertJ** 2.9.0, 3.11.1, 3.18.1, 3.19.0, 3.22.0, 3.23.1, 3.24.2, 3.25.3
 * **Async Http Client** 2.12.1, 2.12.3
 * **Bouncy Castle** 1.64, 1.75, 1.76, 1.77, 1.78.1, 1.81.1
 * **Byte Buddy** 1.14.1
@@ -68,18 +69,17 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
   * **Couchbase JVM Core IO** 2.0.10, 2.4.11, 2.6.3
 * **Couchbase JVM Core IO Deps** 1.6.3
 * **DataStax Java Driver** 4.11.3, 4.14.1, 4.17.0
-* **DNSJava** 2.1.7, 3.5.2
-* **docker-java** 3.0.14, 3.2.11, 3.2.13, 3.3.0, 3.3.6, 3.4.2
+* **dnsjava** 2.1.7, 3.5.2
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
 * **Dropwizard Metrics** 2.2.0, 3.0.1, 3.0.2, 3.1.0, 3.1.5, 3.2.4, 4.1.11
 * **Eclipse Aether** 1.0.2.v20150114
+* **Eclipse Angus Mail** 2.0.3
 * **Eclipse JGit** 5.7.0.202003110725-r, 5.13.3.202401111512-r
 * **Eclipse Parsson** 1.0.0, 1.1.1
 * **Eclipse Sisu Plexus** 0.0.0.M5
 * **Eclipse Vert.x** 4.2.4, 4.3.8, 4.5.7, 4.5.10, 4.5.11
-* **EdDSA** 0.3.0
-* **el-spec** 3.0.0
+* **EdDSA-Java** 0.3.0
 * **Esri Geometry API for Java** 1.2.1
 * **EWS Java API** 2.0
 * **excel-streaming-reader** 5.0.2
@@ -87,7 +87,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Google Gson** 2.2.2, 2.2.4, 2.4, 2.7, 2.8.5, 2.8.9, 2.9.1, 2.10.1, 2.11.0
 * **Google Guava** 10.0.1, 12.0.1, 14.0.1, 16.0.1, 18.0, 19.0-rc3, 19.0, 20.0, 25.1-android, 25.1-jre, 27.0.1-android, 27.1-android, 27.1-jre, 28.1-android, 30.1-jre, 31.0.1-android, 31.1-android, 31.1-jre
 * **Google Guice** 4.0, 4.2.1
-* **Google OAuth Client** 1.25.0
+* **Google OAuth Client Library for Java** 1.25.0
 * **Grails**
   * **Grails Core** 2.5.6, 5.3.6, 6.2.1, 6.2.3
   * **Grails Data Mapping** 7.3.4, 8.1.2
@@ -95,7 +95,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
   * **Grails Plugin Converters** 5.0.0
 * **GraphQL Java** 21.5, 22.3, 22.4, 24.3
 * **gRPC-Java** 1.26.0
-* **H2 Database** 1.3.176, 1.4.200, 2.1.210
+* **H2** 1.3.176, 1.4.200, 2.1.210
 * **Hazelcast** 4.2.8
 * **HdrHistogram** 2.1.8, 2.1.10, 2.1.11, 2.1.12
 * **Hosebird Client (hbc)** 2.2.0
@@ -107,18 +107,20 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **iTextPDF** 5.0.6
 * **Jansi** 1.11
 * **JasperReports** 3.7.4, 6.2.2, 6.21.5
+* **Java Docker API Client** 3.0.14, 3.2.11, 3.2.13, 3.3.0, 3.3.6, 3.4.2
+* **Java Expression Language (EL) API** 3.0.0
 * **Java SDK for SQL API of Azure Cosmos DB** 2.4.5
+* **Jayway JsonPath** 2.2.0, 2.4.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
 * **JDOM** 1.0, 1.1.3
 * **jFairy** 0.5.9
 * **JJWT** 0.11.1
 * **joda-time-hibernate** 1.3
 * **jose4j** 0.7.9, 0.8.0
 * **joss** 0.10.4
-* **JSON** 20090211, 20140107
-* **JSON Assert** 1.2.3
+* **JSON-java** 20090211, 20140107
 * **json-smart** 1.1.1, 1.3.2, 2.2.1, 2.3, 2.3.1, 2.4.2, 2.4.7, 2.4.8, 2.5.0, 2.5.1
 * **json-io** 2.9.4
-* **JsonPath** 2.2.0, 2.4.0, 2.5.0, 2.6.0, 2.7.0, 2.8.0, 2.9.0
+* **JSONassert** 1.2.3
 * **jsonschema2pojo** 1.1.0
 * **jsoup** 1.7.2, 1.7.3, 1.17.2
 * **JUnit** 4.12, 4.13
@@ -127,7 +129,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Lettuce** 5.3.7.RELEASE, 6.0.4.RELEASE, 6.0.5.RELEASE, 6.0.8.RELEASE, 6.1.8.RELEASE, 6.1.10.RELEASE, 6.3.2.RELEASE, 6.4.2.RELEASE
 * **LittleProxy** 0.4
 * **Logback** 1.1.7, 1.2.3, 1.2.5, 1.2.11, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18, 1.5.22
-* **LZ4** 1.8.0, 1.8.1
+* **LZ4 Java** 1.8.0, 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
 * **MCP Java SDK** 0.18.3
 * **Micrometer**
@@ -147,7 +149,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Netty Incubator** 0.0.21.Final, 0.0.25.Final
 * **Netty Reactive Streams** 2.0.6
 * **Nimbus JOSE + JWT** 3.10, 8.23, 9.8.1, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
-* **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6
+* **Nimbus OAuth 2.0 SDK with OpenID Connect extensions** 9.43.3, 9.43.6
 * **OkHttp3** 3.14.9, 4.10.0
 * **Okio** 1.4.0, 1.6.0, 1.14.0, 2.8.0, 2.10.0
 * **OpenMLDB** 0.4.4-hotfix1-allinone
@@ -162,7 +164,6 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Querydsl** 5.1.0
 * **R2DBC Pool** 0.9.2.RELEASE
 * **RabbitMQ Java Client** 4.0.3, 5.4.3, 5.5.0, 5.5.3, 5.7.3, 5.9.0, 5.13.1, 5.14.3, 5.16.1, 5.18.0, 5.19.0, 5.20.0, 5.21.0, 5.22.0, 5.26.0, 5.30.0
-* **Reactive Pulsar Client** 0.5.9, 0.5.10, 0.7.0
 * **Reactor BOM** Californium-SR11, 2020.0.0, 2020.0.7, 2020.0.17, 2020.0.18, 2020.0.22, 2020.0.23, 2020.0.31, 2020.0.32, 2020.0.34, 2020.0.35, 2020.0.38, 2020.0.47, 2022.0.9, 2022.0.11, 2022.0.13, 2022.0.15, 2022.0.22, 2023.0.0, 2023.0.3, 2023.0.4, 2023.0.6, 2023.0.9, 2023.0.10, 2023.0.12, 2023.0.14, 2023.0.17, 2023.0.18, 2023.0.19, 2024.0.11, 2024.0.13, 2024.0.18
 * **Reactor Core** 3.4.22, 3.4.23, 3.4.29, 3.4.32, 3.4.34, 3.4.41, 3.5.8, 3.5.10, 3.5.12, 3.5.14, 3.5.20, 3.6.0, 3.6.3, 3.6.4, 3.6.6, 3.6.9, 3.6.10, 3.6.12, 3.6.13, 3.6.16, 3.6.17, 3.6.18, 3.7.12, 3.7.14, 3.7.19
 * **Reactor Netty** 0.8.11.RELEASE, 1.0.0, 1.0.7, 1.0.17, 1.0.18, 1.0.23, 1.0.32, 1.0.34, 1.0.39, 1.0.48, 1.1.13, 1.1.15, 1.1.31, 1.2.13, 1.2.18
@@ -178,11 +179,10 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Testcontainers** 1.18.3, 1.19.8, 1.20.6, 1.21.4
 * **Thymeleaf** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
 * **Thymeleaf Spring** 3.0.15.RELEASE, 3.1.2.RELEASE, 3.1.3.RELEASE
-* **tomlj** 1.0.0
+* **TomlJ** 1.0.0
 * **Undertow** 1.4.27.Final, 2.0.26.Final, 2.2.24.Final, 2.2.33.Final, 2.2.37.Final, 2.3.0.Final, 2.3.10.Final, 2.3.17.Final, 2.3.18.Final, 2.3.20.Final, 2.3.24.Final
 * **Woodstox** 5.0.3, 5.3.0, 6.0.1
 * **XChange** 4.3.13
-* **Xerces** 2.11.0, 2.12.0
 * **XMLUnit** 2.6.3, 2.7.0, 2.9.0, 2.9.1
 * **XNIO** 3.8.0.Final, 3.8.7.Final, 3.8.8.Final
 * **XStream** 1.4.17

@@ -128,11 +128,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Angus Mail",
-        versions: "2.0.3",
-        link: "./java-libraries/",
-      },
-      {
         name: "ANTLR v4",
         versions: "4.7.2 | 4.10.1 | 4.11.1 | 4.13.0 | 4.13.2",
         link: "./java-libraries/",
@@ -323,6 +318,21 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Pulsar Reactive Client",
+        versions: "0.5.9 | 0.5.10 | 0.7.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Qpid JMS",
+        versions: "0.59.0 | 1.7.0 | 1.10.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache RocketMQ",
+        versions: "4.8.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Kafka®",
         versions: "2.8.2 | 3.2.2 | 3.2.3 | 3.7.1",
         link: "./apache-kafka/",
@@ -338,13 +348,8 @@ const techData = [
         link: "./apache-lucene-and-solr/",
       },
       {
-        name: "Apache Qpid JMS",
-        versions: "0.59.0 | 1.7.0 | 1.10.0",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Apache RocketMQ",
-        versions: "4.8.0",
+        name: "Apache Santuario",
+        versions: "2.0.10 | 2.1.4 | 2.3.1",
         link: "./java-libraries/",
       },
       {
@@ -389,8 +394,13 @@ const techData = [
         link: "./apache-velocity-engine/",
       },
       {
-        name: "Apache Xalan",
+        name: "Apache Xalan-Java",
         versions: "2.7.1 | 2.7.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Xerces2",
+        versions: "2.11.0 | 2.12.0",
         link: "./java-libraries/",
       },
       {
@@ -414,13 +424,13 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "AssertJ",
-        versions: "2.9.0 | 3.11.1 | 3.18.1 | 3.19.0 | 3.22.0 | 3.23.1 | 3.24.2 | 3.25.3",
+        name: "Apereo Java CAS Client",
+        versions: "3.6.4 | 4.0.3 | 4.0.4",
         link: "./java-libraries/",
       },
       {
-        name: "Apereo Java CAS Client",
-        versions: "3.6.4 | 4.0.3 | 4.0.4",
+        name: "AssertJ",
+        versions: "2.9.0 | 3.11.1 | 3.18.1 | 3.19.0 | 3.22.0 | 3.23.1 | 3.24.2 | 3.25.3",
         link: "./java-libraries/",
       },
       {
@@ -469,13 +479,8 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "DNSJava",
+        name: "dnsjava",
         versions: "2.1.7 | 3.5.2",
-        link: "./java-libraries/",
-      },
-      {
-        name: "docker-java",
-        versions: "3.0.14 | 3.2.11 | 3.2.13 | 3.3.0 | 3.3.6 | 3.4.2",
         link: "./java-libraries/",
       },
       {
@@ -499,6 +504,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Eclipse Angus Mail",
+        versions: "2.0.3",
+        link: "./java-libraries/",
+      },
+      {
         name: "Eclipse JGit",
         versions: "5.7.0.202003110725-r | 5.13.3.202401111512-r",
         link: "./java-libraries/",
@@ -519,13 +529,8 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "EdDSA",
+        name: "EdDSA-Java",
         versions: "0.3.0",
-        link: "./java-libraries/",
-      },
-      {
-        name: "el-spec",
-        versions: "3.0.0",
         link: "./java-libraries/",
       },
       {
@@ -574,7 +579,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Google OAuth Client",
+        name: "Google OAuth Client Library for Java",
         versions: "1.25.0",
         link: "./java-libraries/",
       },
@@ -609,7 +614,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "H2 Database",
+        name: "H2",
         versions: "1.3.176 | 1.4.200 | 2.1.210",
         link: "./java-libraries/",
       },
@@ -739,8 +744,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Java Docker API Client",
+        versions: "3.0.14 | 3.2.11 | 3.2.13 | 3.3.0 | 3.3.6 | 3.4.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Java Expression Language (EL) API",
+        versions: "3.0.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Java SDK for SQL API of Azure Cosmos DB",
         versions: "2.4.5",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Jayway JsonPath",
+        versions: "2.2.0 | 2.4.0 | 2.5.0 | 2.6.0 | 2.7.0 | 2.8.0 | 2.9.0",
         link: "./java-libraries/",
       },
       {
@@ -774,13 +794,8 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "JSON",
+        name: "JSON-java",
         versions: "20090211 | 20140107",
-        link: "./java-libraries/",
-      },
-      {
-        name: "JSON Assert",
-        versions: "1.2.3",
         link: "./java-libraries/",
       },
       {
@@ -794,8 +809,8 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "JsonPath",
-        versions: "2.2.0 | 2.4.0 | 2.5.0 | 2.6.0 | 2.7.0 | 2.8.0 | 2.9.0",
+        name: "JSONassert",
+        versions: "1.2.3",
         link: "./java-libraries/",
       },
       {
@@ -839,7 +854,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "LZ4",
+        name: "LZ4 Java",
         versions: "1.8.0 | 1.8.1",
         link: "./java-libraries/",
       },
@@ -929,7 +944,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Nimbus OAuth2 OIDC SDK",
+        name: "Nimbus OAuth 2.0 SDK with OpenID Connect extensions",
         versions: "9.43.3 | 9.43.6",
         link: "./java-libraries/",
       },
@@ -1011,11 +1026,6 @@ const techData = [
       {
         name: "RabbitMQ Java Client",
         versions: "4.0.3 | 5.4.3 | 5.5.0 | 5.5.3 | 5.7.3 | 5.9.0 | 5.13.1 | 5.14.3 | 5.16.1 | 5.18.0 | 5.19.0 | 5.20.0 | 5.21.0 | 5.22.0 | 5.26.0 | 5.30.0",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Reactive Pulsar Client",
-        versions: "0.5.9 | 0.5.10 | 0.7.0",
         link: "./java-libraries/",
       },
       {
@@ -1249,7 +1259,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "tomlj",
+        name: "TomlJ",
         versions: "1.0.0",
         link: "./java-libraries/",
       },
@@ -1266,11 +1276,6 @@ const techData = [
       {
         name: "XChange",
         versions: "4.3.13",
-        link: "./java-libraries/",
-      },
-      {
-        name: "Xerces",
-        versions: "2.11.0 | 2.12.0",
         link: "./java-libraries/",
       },
       {
@@ -1297,11 +1302,6 @@ const techData = [
         name: "Eclipse Jetty",
         versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.51.v20230217 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 9.4.63 | 9.4.64 | 9.4.65 | 9.4.66 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 10.0.31 | 10.0.32 | 10.0.33 | 10.0.34 | 11.0.18 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30 | 11.0.31 | 11.0.32 | 11.0.33 | 11.0.34 | 12.0.22",
         link: "./jetty/",
-      },
-      {
-        name: "Apache Santuario",
-        versions: "2.0.10 | 2.1.4 | 2.3.1",
-        link: "./java-libraries/",
       },
     ],
   },
