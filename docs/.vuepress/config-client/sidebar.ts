@@ -56,7 +56,7 @@ export default {
                 },
                 {
                     path: '/els-for-os/cloudlinux-7-els/',
-                    icon: '/images/cloudlinux.webp',
+                    icon: '/images/cloudlinux-mini.webp',
                 },
                 {
                     path: '/els-for-os/debian-10-els/',
