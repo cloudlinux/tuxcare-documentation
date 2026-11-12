@@ -216,7 +216,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/spring/',
-                    icon: '/images/java.webp',
+                    icon: '/images/els_for_spring_color.webp',
                 },
                 {
                     path: '/els-for-libraries/java-libraries/',

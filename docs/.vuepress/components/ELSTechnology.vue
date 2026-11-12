@@ -994,7 +994,7 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "PostgreSQL® driver",
+        name: "PostgreSQL driver",
         versions: "42.2.16 | 42.5.0",
         link: "./postgresql-driver/",
       },
