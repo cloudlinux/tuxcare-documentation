@@ -1,10 +1,14 @@
-# PostgreSQL Driver
+# PostgreSQL<sup style="font-size: 0.5em;">®</sup> Driver
 
-TuxCare's Endless Lifecycle Support (ELS) for PostgreSQL driver provides security patches and selected bug fixes that are integral to the stable operation of applications using the PostgreSQL driver.
+Postgres, PostgreSQL and the Slonik Logo are trademarks or registered trademarks of the PostgreSQL Community Association of Canada, and used with their permission.
+
+<br>
+
+TuxCare's Endless Lifecycle Support (ELS) for PostgreSQL® driver provides security patches and selected bug fixes that are integral to the stable operation of applications using the PostgreSQL® driver.
 
 ## Supported Versions
 
-* PostgreSQL driver  42.2.16, 42.5.0
+* PostgreSQL® driver 42.2.16, 42.5.0
 
 ## Installation
 

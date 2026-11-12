@@ -1,6 +1,6 @@
 # Apache Hadoop<sup style="font-size: 0.5em;">®</sup>
 
-Apache® and Apache Hadoop® are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+Apache Hadoop, Hadoop, Apache, the Apache feather logo, and the Apache Hadoop project logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and other countries.
 
 <br>
 
