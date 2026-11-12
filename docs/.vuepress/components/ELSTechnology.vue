@@ -1204,7 +1204,7 @@ const techData = [
       },
       {
         name: "baseline-browser-mapping",
-        versions: "2.10.0 | 2.10.34 | 2.10.38",
+        versions: "2.10.0 | 2.10.34 | 2.10.38 | 2.10.40",
         link: "./javascript-libraries/",
       },
       {
@@ -1624,7 +1624,7 @@ const techData = [
       },
       {
         name: "hapi-joi",
-        versions: "16.1.8",
+        versions: "16.1.8 | 17.1.1",
         link: "./javascript-libraries/",
       },
       {
@@ -1824,7 +1824,7 @@ const techData = [
       },
       {
         name: "katex",
-        versions: "0.12.0 | 0.16.47",
+        versions: "0.12.0 | 0.16.47 | 0.17.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1969,7 +1969,7 @@ const techData = [
       },
       {
         name: "modelcontextprotocol-sdk",
-        versions: "1.13.3 | 1.17.3 | 1.24.0 | 1.25.2 | 1.26.0 | 1.29.0 | 1.30.0 | 1.30.1",
+        versions: "0.5.0 | 1.13.3 | 1.17.3 | 1.24.0 | 1.25.2 | 1.26.0 | 1.29.0 | 1.30.0 | 1.30.1",
         link: "./javascript-libraries/",
       },
       {
@@ -2099,7 +2099,7 @@ const techData = [
       },
       {
         name: "nodemailer",
-        versions: "0.7.1 | 2.7.2 | 6.10.1 | 9.0.0 | 9.0.1 | 9.0.2 | 9.0.3 | 9.0.5 | 9.0.6 | 9.1.0",
+        versions: "0.7.1 | 2.7.2 | 6.10.1 | 7.0.13 | 9.0.0 | 9.0.1 | 9.0.2 | 9.0.3 | 9.0.5 | 9.0.6 | 9.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2324,17 +2324,17 @@ const techData = [
       },
       {
         name: "react-server-dom-parcel",
-        versions: "19.2.0",
+        versions: "19.2.0 | 19.2.8",
         link: "./javascript-libraries/",
       },
       {
         name: "react-server-dom-turbopack",
-        versions: "19.0.0 | 19.2.0",
+        versions: "19.0.0 | 19.2.0 | 19.2.8",
         link: "./javascript-libraries/",
       },
       {
         name: "react-server-dom-webpack",
-        versions: "19.0.0 | 19.2.0",
+        versions: "19.0.0 | 19.2.0 | 19.2.8",
         link: "./javascript-libraries/",
       },
       {
@@ -2489,7 +2489,7 @@ const techData = [
       },
       {
         name: "storybook",
-        versions: "7.0.7 | 8.5.8 | 8.6.14 | 9.1.16 | 10.1.9",
+        versions: "7.0.7 | 8.5.3 | 8.5.8 | 8.6.14 | 9.1.16 | 10.1.9",
         link: "./javascript-libraries/",
       },
       {
@@ -2609,7 +2609,7 @@ const techData = [
       },
       {
         name: "undici",
-        versions: "5.5.1 | 5.28.5 | 5.29.0 | 6.11.1 | 6.19.5 | 6.19.7 | 6.20.0 | 6.28.0 | 6.28.1 | 7.24.4 | 7.28.0 | 7.29.1",
+        versions: "5.5.1 | 5.28.4 | 5.28.5 | 5.29.0 | 6.11.1 | 6.19.5 | 6.19.7 | 6.20.0 | 6.28.0 | 6.28.1 | 7.24.4 | 7.24.8 | 7.28.0 | 7.29.0 | 7.29.1",
         link: "./undici/",
       },
       {
@@ -3436,7 +3436,7 @@ const techData = [
       },
       {
         name: "Guzzle",
-        versions: "6.0.2 | 6.3.3 | 6.5.8 | 7.10.0",
+        versions: "6.0.2 | 6.3.3 | 6.5.8 | 7.9.3 | 7.10.0",
         link: "./guzzle/",
       },
       {
@@ -3646,7 +3646,7 @@ const techData = [
       },
       {
         name: "Symfony HttpKernel",
-        versions: "3.4.x | 4.4.x | 7.4.x",
+        versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
         link: "./symfony/",
       },
       {

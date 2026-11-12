@@ -26,7 +26,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **base-x** 2.0.6
 * **base64-url** 1.2.1
 * **base64url** 0.0.6
-* **baseline-browser-mapping** 2.10.0, 2.10.34, 2.10.38
+* **baseline-browser-mapping** 2.10.0, 2.10.34, 2.10.38, 2.10.40
 * **basic-ftp** 5.0.5, 5.3.1
 * **bn.js** 2.0.4, 4.11.6, 4.11.8, 4.11.9, 4.12.0, 4.12.2, 5.2.0, 5.2.1, 5.2.2
 * **body-parser** 1.8.4, 1.13.3, 1.14.2, 1.18.2, 1.19.0, 1.20.0, 1.20.1, 1.20.2, 1.20.3, 1.20.4, 1.20.5, 1.20.6
@@ -105,7 +105,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **handlebars** 1.0.12, 1.3.0, 2.0.0, 3.0.3, 3.0.8, 4.5.3, 4.7.7, 4.7.8, 4.7.9, 4.7.10
 * **hapi-content** 5.0.2
 * **hapi-hoek** 6.2.4
-* **hapi-joi** 16.1.8
+* **hapi-joi** 16.1.8, 17.1.1
 * **hapi-wreck** 17.2.0
 * **happy-dom** 9.10.9, 9.20.3, 14.12.3, 15.11.7, 20.8.8, 20.12.0
 * **har-validator** 1.8.0, 2.0.6
@@ -143,7 +143,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **jspdf** 1.4.1, 2.5.1, 2.5.2, 3.0.4
 * **jws** 0.2.6
 * **jwt-simple** 0.3.1
-* **katex** 0.12.0, 0.16.47
+* **katex** 0.12.0, 0.16.47, 0.17.0
 * **knex** 0.95.15
 * **koa-cors** 3.4.3
 * **launch-editor** 2.2.1, 2.6.1
@@ -167,7 +167,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **modelcontextprotocol-client** 2.0.0
 * **modelcontextprotocol-codemod** 2.1.0
 * **modelcontextprotocol-core** 2.0.0
-* **modelcontextprotocol-sdk** 1.13.3, 1.17.3, 1.24.0, 1.25.2, 1.26.0, 1.29.0, 1.30.0, 1.30.1
+* **modelcontextprotocol-sdk** 0.5.0, 1.13.3, 1.17.3, 1.24.0, 1.25.2, 1.26.0, 1.29.0, 1.30.0, 1.30.1
 * **modelcontextprotocol-server** 2.1.0
 * **modelcontextprotocol-server-legacy** 2.0.0
 * **moment** 2.0.0, 2.10.6, 2.22.2, 2.24.0, 2.30.1
@@ -195,7 +195,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **node-forge** 0.9.0, 0.10.0, 1.3.1, 1.3.3
 * **node-notifier** 5.4.5, 7.0.2
 * **node-sass** 4.14.1, 6.0.1
-* **nodemailer** 0.7.1, 2.7.2, 6.10.1, 9.0.0, 9.0.1, 9.0.2, 9.0.3, 9.0.5, 9.0.6, 9.1.0
+* **nodemailer** 0.7.1, 2.7.2, 6.10.1, 7.0.13, 9.0.0, 9.0.1, 9.0.2, 9.0.3, 9.0.5, 9.0.6, 9.1.0
 * **npm-user-validate** 0.1.2, 0.1.5
 * **nth-check** 1.0.2
 * **object-path** 0.11.4
@@ -235,9 +235,9 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **react-router-dom-v5-compat** 6.3.0, 6.30.4, 6.30.6
 * **react-router-native** 6.3.0, 6.30.3, 6.30.6
 * **react-server-dom-esm** 0.0.0-13a913d5-20260727
-* **react-server-dom-parcel** 19.2.0
-* **react-server-dom-turbopack** 19.0.0, 19.2.0
-* **react-server-dom-webpack** 19.0.0, 19.2.0
+* **react-server-dom-parcel** 19.2.0, 19.2.8
+* **react-server-dom-turbopack** 19.0.0, 19.2.0, 19.2.8
+* **react-server-dom-webpack** 19.0.0, 19.2.0, 19.2.8
 * **redis** 2.8.0
 * **remix-run-router** 1.6.2, 1.7.2, 1.15.3, 1.23.0, 1.23.2, 1.23.3
 * **request** 2.36.0, 2.37.0, 2.40.0, 2.57.0, 2.65.0, 2.67.0, 2.75.0, 2.81.0, 2.87.0, 2.88.0, 2.88.2
@@ -267,7 +267,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **sprintf-js** 1.0.3, 1.1.2, 1.1.3
 * **ssr-window** 4.0.2
 * **ssri** 5.3.0, 7.1.0
-* **storybook** 7.0.7, 8.5.8, 8.6.14, 9.1.16, 10.1.9
+* **storybook** 7.0.7, 8.5.3, 8.5.8, 8.6.14, 9.1.16, 10.1.9
 * **stream-json** 1.9.1
 * **stringstream** 0.0.4, 0.0.5
 * **svgo** 0.7.2, 1.3.2, 2.8.0, 2.8.2, 2.8.3, 4.0.1, 4.0.2
