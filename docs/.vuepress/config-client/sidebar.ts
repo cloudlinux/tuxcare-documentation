@@ -208,7 +208,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/postgresql-driver/',
-                    icon: '/images/java.webp',
+                    icon: '/images/postgresql.webp',
                 },
                 {
                     path: '/els-for-libraries/protobuf/',
