@@ -14,7 +14,7 @@ We provide the ability to create local mirrors of Endless Lifecycle Support and 
 
 Before creating a local mirror, ensure the following requirements are met:
 
-* **Access**: To obtain access to the local mirroring facility, provide your external IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@cloudlinux.com)
+* **Access**: To obtain access to the local mirroring facility, provide your external IP address to your Account Manager or send it to [sales@tuxcare.com](mailto:sales@tuxcare.com)
 * **Connection**: The mirroring uses rsync over TCP port 873 (not port 22)
 * **Disk Space**: The minimum required free disk space for the mirror is 100 GB
 

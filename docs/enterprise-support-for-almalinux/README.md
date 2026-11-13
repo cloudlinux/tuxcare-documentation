@@ -643,7 +643,7 @@ TuxCare Technical Support is designed for enterprise clients with trained IT sta
 
 2. Email: acceptance of requests 24 hours a day, 365 days a year:
 
-   * New tickets may be created by simply emailing the support desk: [support@tuxcare.com](support@tuxcare.com)
+   * New tickets may be created by simply emailing the support desk: [support@tuxcare.com](mailto:support@tuxcare.com)
 
 :::warning
 If you are a user of our server product AMI's on AWS Marketplace, before you contact support, you should have your AWS accountId to hand, there are various ways to find it.
