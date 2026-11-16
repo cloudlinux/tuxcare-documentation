@@ -108,15 +108,14 @@ TuxCare provides additional security support for Node.js versions after the end 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum install alt-nodejs18*` },
      { title: 'DEB', content: `apt-get install alt-nodejs18*` },
-     { title: 'APK', content: `apk add 'alt-nodejs18*'` }
+     { title: 'APK', content: `apk add alt-nodejs18` }
    ]" />
 
-   To install all versions at the same time:
+   To install all versions at the same time (not available on Alpine Linux, which has no `alt-nodejs` meta-package):
 
    <CodeTabs :tabs="[
      { title: 'RPM', content: `yum groupinstall alt-nodejs` },
-     { title: 'DEB', content: `apt-get install alt-nodejs` },
-     { title: 'APK', content: `apk add alt-nodejs` }
+     { title: 'DEB', content: `apt-get install alt-nodejs` }
    ]" />
 
    To list available groups/meta-packages:
@@ -129,12 +128,13 @@ TuxCare provides additional security support for Node.js versions after the end 
 
 4. Verify the installation
 
-   Activate the desired version and check it returns the expected version:
+   Check that the installed version runs. On RPM and DEB systems, activate it first; on Alpine Linux the binaries are in `/opt/alt/nodejs<version>/bin` and there is no `enable` script:
 
-   ```text
-   source /opt/alt/alt-nodejs<version>/enable
-   node -v
-   ```
+   <CodeTabs :tabs="[
+     { title: 'RPM', content: `source /opt/alt/alt-nodejs18/enable && node -v` },
+     { title: 'DEB', content: `source /opt/alt/alt-nodejs18/enable && node -v` },
+     { title: 'APK', content: `/opt/alt/nodejs18/bin/node -v` }
+   ]" />
 
 5. Update packages
 
