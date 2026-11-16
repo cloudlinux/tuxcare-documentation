@@ -93,7 +93,7 @@ dotnet build
 
 <template #javaSources>
 
-Source code is available for TuxCare-patched **Java** libraries. Source JARs follow the standard Maven naming convention with a `-sources` classifier and are published to the [Nexus repository](https://nexus.repo.tuxcare.com/#browse/browse:els_java).
+Source code is available for TuxCare-patched **Java** libraries. Source JARs follow the standard Maven naming convention with a `-sources` classifier, and TuxCare publishes them to the [Nexus repository](https://nexus.repo.tuxcare.com/#browse/browse:els_java).
 
 For example: [https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar](https://nexus.repo.tuxcare.com/repository/els_java/commons-lang/commons-lang/2.6-tuxcare.1/commons-lang-2.6-tuxcare.1-sources.jar).
 
@@ -105,7 +105,7 @@ If a source JAR is not available for a specific package, request it through the 
 
 <template #dotnetSources>
 
-The TuxCare NuGet source is configured per-project in `nuget.config`. Use the `dotnet` CLI or edit `nuget.config` directly to manage it. Replace `<els_dotnet_customerN>` with your customer repository name.
+You configure the TuxCare NuGet source per project in `nuget.config`. Use the `dotnet` CLI or edit `nuget.config` directly to manage it. Replace `<els_dotnet_customerN>` with your customer repository name.
 
 * **Add the TuxCare source**
 
@@ -173,7 +173,7 @@ The steps below use the Java repository (`els_java`) as an example, but the same
 
 1. **Create the proxy repository**
 
-   In your repository manager, create a **Maven**-format repository that proxies an external URL. Depending on the product, this type is called a *proxy* or *remote* repository.
+   In your repository manager, create a **Maven**-format repository that proxies an external URL. Depending on the product, repository managers call this type a *proxy* or *remote* repository.
 
 2. **Point it at the TuxCare repository**
 
@@ -181,12 +181,12 @@ The steps below use the Java repository (`els_java`) as an example, but the same
 
 3. **Repoint your build tools**
 
-   Configure Maven or Gradle to resolve against your own repository manager instead of `nexus.repo.tuxcare.com`. Artifacts are fetched from TuxCare and cached on demand the first time they are requested.
+   Configure Maven or Gradle to resolve against your own repository manager instead of `nexus.repo.tuxcare.com`. Your repository manager fetches artifacts from TuxCare and caches them on demand the first time a build requests them.
 
 </ELSSteps>
 
 :::tip
-A proxy only caches and serves the artifacts that have actually been requested through it, so browsing your proxy will not show the full TuxCare catalog. This is expected behavior, not a permissions problem.
+A proxy only caches and serves the artifacts that builds have actually requested through it, so browsing your proxy will not show the full TuxCare catalog. This is expected behavior, not a permissions problem.
 
 To see the full list of available artifacts and versions, sign in to the TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_java) with your ELS credentials and browse the `els_java` repository directly. For automation or scripted checks, you can query the Nexus REST API `components` or `search` endpoints instead (for example, `/service/rest/v1/components?repository=els_java`), which return the full catalog regardless of what your proxy has cached, paginated via a `continuationToken`.
 :::

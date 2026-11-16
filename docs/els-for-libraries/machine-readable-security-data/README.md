@@ -13,15 +13,15 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 
 Each package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. TuxCare provides SBOMs in industry-standard formats — SPDX and CycloneDX — so any SBOM-aware scanner or supply-chain tool can consume them.
 
-SBOMs are generated across all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET). For Java, JavaScript, Python, PHP, and .NET they are published on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/) and are publicly accessible — no credentials are needed.
+TuxCare generates SBOMs for all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET) and publishes them on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/); accessing them requires no credentials.
 
 SBOMs are currently published for:
 
-* JavaScript — [els_lang_javascript](https://security.tuxcare.com/sbom/cyclonedx/els_lang_javascript/), laid out as `<package>/<version>/<package>-<version>.sbom.json`; the SBOM's detached `.asc` signature is published under [signatures/els_lang_javascript](https://security.tuxcare.com/signatures/els_lang_javascript/) at the same `<package>/<version>/` path
+* JavaScript — [els_lang_javascript](https://security.tuxcare.com/sbom/cyclonedx/els_lang_javascript/), laid out as `<package>/<version>/<package>-<version>.sbom.json`; TuxCare publishes the SBOM's detached `.asc` signature under [signatures/els_lang_javascript](https://security.tuxcare.com/signatures/els_lang_javascript/) at the same `<package>/<version>/` path
 * Python — [els_lang_python](https://security.tuxcare.com/sbom/cyclonedx/els_lang_python/), laid out as `<package>/<version>/<package>-<version>-sbom.json`, with the SBOM's detached `.asc` signature next to it
 * PHP — [els_lang_php](https://security.tuxcare.com/sbom/cyclonedx/els_lang_php/), with the SBOM's detached `.asc` signature under [signatures/els_lang_php](https://security.tuxcare.com/signatures/els_lang_php/)
 * Java — [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/)
-* .NET — [els_lang_dotnet](https://security.tuxcare.com/sbom/cyclonedx/els_lang_dotnet/), laid out as `<package>/<version>/<package>.<version>.sbom.json`; .NET SBOMs are published for a few packages so far and have no detached signature
+* .NET — [els_lang_dotnet](https://security.tuxcare.com/sbom/cyclonedx/els_lang_dotnet/), laid out as `<package>/<version>/<package>.<version>.sbom.json`; TuxCare publishes .NET SBOMs for a few packages, without a detached signature
 
 If the package you use has no SBOM in these directories, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
@@ -29,7 +29,7 @@ If the package you use has no SBOM in these directories, ask through the [TuxCar
 
 TuxCare publishes VEX as CycloneDX VEX documents, distributed alongside each package version and updated with every release. A VEX document tells you which known CVEs actually affect a given artifact version and which don't, so scanner results stay focused on real exposure.
 
-Feeds are published per ecosystem:
+TuxCare publishes a separate feed for each ecosystem:
 
 * Java - [els_lang_java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
 * Python - [els_lang_python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/) — Python releases iterate as `X.Y.Z.postN+tuxcare` (e.g. `2021.10.8.post2+tuxcare`), not `-tuxcare.N`
@@ -39,29 +39,29 @@ Feeds are published per ecosystem:
 
 Each entry links one CVE to one artifact version and carries a status:
 
-* **exploitable** — the CVE affects this artifact version and has not yet been patched in this release.
-* **resolved** — the CVE has been patched through a TuxCare release.
+* **exploitable** — the CVE affects this artifact version, and TuxCare has not yet patched it in this release.
+* **resolved** — TuxCare has released a patch for the CVE.
 
 Each VEX document reports the CVEs that directly affect the artifact. The feed covers every supported base version and every released `-tuxcare.N` iteration, so the entry count reflects these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
 
 ## Package Signature Verification (GPG)
 
-Every package TuxCare builds is signed with a detached OpenPGP signature so you can confirm, before installing or updating, that the artifact was produced by TuxCare and has not been altered in transit. The signature is published as a separate `.asc` file — on [security.tuxcare.com](https://security.tuxcare.com/signatures/) for JavaScript, in TuxCare Nexus for the other ecosystems — and is created with TuxCare's signing key (SHA-256 detached signature).
+TuxCare signs every package it builds with a detached OpenPGP signature so you can confirm, before installing or updating, that TuxCare produced the artifact and nobody altered it in transit. TuxCare creates the signature with its signing key (SHA-256 detached signature) and publishes it as a separate `.asc` file — on [security.tuxcare.com](https://security.tuxcare.com/signatures/) for JavaScript, in TuxCare Nexus for the other ecosystems.
 
 A successful verification proves two things about the artifact:
 
-* **Authenticity** — it was signed by TuxCare's private key.
-* **Integrity** — its bytes match exactly what was signed; no tampering or corruption occurred.
+* **Authenticity** — TuxCare signed it with its private key.
+* **Integrity** — its bytes match exactly what TuxCare signed; no tampering or corruption occurred.
 
-A failed verification is an **integrity violation**: the artifact must be treated as untrusted and not installed. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
+A failed verification is an **integrity violation**: treat the artifact as untrusted and do not install it. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
 
 ### Where Signatures Are Published
 
-Where the `.asc` is published varies by ecosystem. JavaScript signatures are on [security.tuxcare.com](https://security.tuxcare.com/signatures/els_lang_javascript/) and need no credentials. The other ecosystems publish to TuxCare Nexus, which requires the same credentials as the package repositories: Java publishes the `.asc` alongside the SBOM, PHP uses the `els_php_raw_custom1` raw repository, and Python publishes it next to each package in the `els_python` package repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise location and path.
+The location of the `.asc` depends on the ecosystem. JavaScript signatures are on [security.tuxcare.com](https://security.tuxcare.com/signatures/els_lang_javascript/) and need no credentials. The other ecosystems publish to TuxCare Nexus, which requires the same credentials as the package repositories: Java publishes the `.asc` alongside the SBOM, PHP uses the `els_php_raw_custom1` raw repository, and Python publishes it next to each package in the `els_python` package repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise location and path.
 
 ### Obtain the TuxCare Public Key
 
-To verify a signature you first need TuxCare's public signing key, the TuxCare SecureChain key. It is published at [security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain](https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain); no credentials are needed:
+To verify a signature you first need TuxCare's public signing key, the TuxCare SecureChain key. TuxCare publishes it at [security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain](https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain); downloading it requires no credentials:
 
 ```text
 curl -fsSL https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain -o tuxcare-els-public.asc
@@ -73,7 +73,7 @@ The file holds two TuxCare SecureChain keys. Before importing, list them with th
 gpg --show-keys --with-fingerprint tuxcare-els-public.asc
 ```
 
-The signatures published on security.tuxcare.com are made with the key whose fingerprint is `AD13 9411 89BF 2258 AA30  72C9 7BF1 2029 3948 A27B`; `gpg --verify` reports it as `using RSA key 7BF120293948A27B`. If `gpg` reports a different key, or `No public key` after you import this file, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+TuxCare creates the signatures published on security.tuxcare.com with the key whose fingerprint is `AD13 9411 89BF 2258 AA30  72C9 7BF1 2029 3948 A27B`; `gpg --verify` reports it as `using RSA key 7BF120293948A27B`. If `gpg` reports a different key, or `No public key` after you import this file, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 Once you have the key file (for example, `tuxcare-els-public.asc`), import it into your keyring:
 
@@ -96,7 +96,7 @@ Import the public key once. It can verify every TuxCare-signed package, so this 
 The verification procedure is the same for every ELS for Language Ecosystems language (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature (from [security.tuxcare.com](https://security.tuxcare.com/signatures/) for JavaScript, from TuxCare Nexus for the other ecosystems), and run `gpg --verify`. Select your ecosystem below.
 
 :::warning
-The signature location and artifact naming vary by ecosystem. The Java, JavaScript, PHP, and Python steps below are confirmed; the .NET steps shown are representative — confirm the exact signatures location and artifact naming for .NET with your TuxCare contact.
+The signature location and artifact naming vary by ecosystem. TuxCare has confirmed the Java, JavaScript, PHP, and Python steps below; the .NET steps shown are representative — confirm the exact signatures location and artifact naming for .NET with your TuxCare contact.
 :::
 
 <TableTabs label="Choose ecosystem: " :labels="{ DotNET: '.NET' }">
@@ -117,7 +117,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
 
 2. **Download the matching signature**
 
-   For Java, the `.asc` is published in the SBOM repository (`els-java-sbom`), keyed by artifact name and version:
+   For Java, TuxCare publishes the `.asc` in the SBOM repository (`els-java-sbom`), keyed by artifact name and version:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
@@ -143,17 +143,17 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
 
 1. **Obtain the exact published tarball**
 
-   Verification works on the byte-for-byte artifact that was signed, so download the published `.tgz` rather than repacking it locally. With your TuxCare registry configured (see the [JavaScript libraries](/els-for-libraries/javascript-libraries/) setup), `npm pack` with a version spec downloads the registry tarball as-is:
+   Verification works on the byte-for-byte artifact that TuxCare signed, so download the published `.tgz` rather than repacking it locally. With your TuxCare registry configured (see the [JavaScript libraries](/els-for-libraries/javascript-libraries/) setup), `npm pack` with a version spec downloads the registry tarball as-is:
 
    ```text
    npm pack @els-js/angular@1.8.3-tuxcare.8
    ```
 
-   This writes `els-js-angular-1.8.3-tuxcare.8.tgz` to the current directory. The filename is normalized by npm, but the contents are identical to the published artifact.
+   The command writes `els-js-angular-1.8.3-tuxcare.8.tgz` to the current directory. npm normalizes the filename, but the contents are identical to the published artifact.
 
 2. **Download the matching signature**
 
-   Fetch the `.asc` file for the same version from [security.tuxcare.com](https://security.tuxcare.com/signatures/els_lang_javascript/). Signatures are public, so no credentials are needed; the path is `signatures/els_lang_javascript/<package>/<version>/<package>-<version>.tgz.asc`:
+   Fetch the `.asc` file for the same version from [security.tuxcare.com](https://security.tuxcare.com/signatures/els_lang_javascript/). Signatures are public, so downloading them requires no credentials; the path is `signatures/els_lang_javascript/<package>/<version>/<package>-<version>.tgz.asc`:
 
    ```text
    curl -fsSL \
@@ -161,7 +161,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
      -o angular-1.8.3-tuxcare.8.tgz.asc
    ```
 
-   The same directory also holds the `.asc` of the package's SBOM, which itself is published under `sbom/cyclonedx/els_lang_javascript/<package>/<version>/`.
+   The same directory also holds the `.asc` of the package's SBOM; TuxCare publishes the SBOM under `sbom/cyclonedx/els_lang_javascript/<package>/<version>/`.
 
 3. **Verify the signature against the tarball**
 
@@ -201,7 +201,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
 
 2. **Download the matching signature**
 
-   For Python, the `.asc` is published next to the package in the `els_python` package repository, under `packages/<name>/<version>/`. Authenticate with your TuxCare Nexus credentials:
+   For Python, TuxCare publishes the `.asc` next to the package in the `els_python` package repository, under `packages/<name>/<version>/`. Authenticate with your TuxCare Nexus credentials:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
@@ -227,7 +227,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
 
 1. **Obtain the exact published artifact**
 
-   GPG verifies the byte-for-byte archive that was signed, so use the file exactly as you downloaded it rather than repacking it locally. For PHP, TuxCare publishes the signed archive together with its detached `.asc` signature in the `els_php_raw_custom1` raw repository on TuxCare Nexus, laid out as `<vendor>/<package>/<version>/`.
+   GPG verifies the byte-for-byte archive that TuxCare signed, so use the file exactly as you downloaded it rather than repacking it locally. For PHP, TuxCare publishes the signed archive together with its detached `.asc` signature in the `els_php_raw_custom1` raw repository on TuxCare Nexus, laid out as `<vendor>/<package>/<version>/`.
 
    Authenticate with the same Nexus credentials you use for the `els_php` Composer repository; any PHP library's setup shows them, for example [PHPMailer](/els-for-libraries/phpmailer/). Then download the archive for the version you use.
 
@@ -239,7 +239,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
      -o yaml-v4.4.45-p1+tuxcare.zip
    ```
 
-   Check the exact package, version, and path in your TuxCare Nexus account. Signatures are published per artifact, so a package only has an `.asc` if a signed build exists for it.
+   Check the exact package, version, and path in your TuxCare Nexus account. TuxCare publishes signatures per artifact, so a package only has an `.asc` if a signed build exists for it.
 
    Alternatively, verify the copy Composer downloaded during `composer install`, provided it is the same build. Composer stores it under a content-hashed filename such as `<vendor>/<package>/<hash>.zip` in its files cache, so locate it and copy it out under the published name first. The cache location varies by operating system:
 
@@ -247,11 +247,11 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
    * **macOS**: `~/Library/Caches/composer`
    * **Windows**: `C:\Users\<user>\AppData\Local\Composer`
 
-   Confirm your exact path with `composer config cache-dir`; the downloaded package archives are stored in its `files/` subdirectory.
+   Confirm your exact path with `composer config cache-dir`; Composer stores the downloaded package archives in its `files/` subdirectory.
 
 2. **Download the matching signature**
 
-   The `.asc` is published next to the archive in the same `els_php_raw_custom1` repository:
+   TuxCare publishes the `.asc` next to the archive in the same `els_php_raw_custom1` repository:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
@@ -283,7 +283,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
    nuget install Newtonsoft.Json -Version 12.0.4-tuxcare.1 -DependencyVersion Ignore -OutputDirectory .
    ```
 
-   The package is written to `./Newtonsoft.Json.12.0.4-tuxcare.1/`; copy the `.nupkg` from there for verification.
+   The command writes the package to `./Newtonsoft.Json.12.0.4-tuxcare.1/`; copy the `.nupkg` from there for verification.
 
 2. **Download the matching signature**
 
@@ -310,12 +310,12 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
 If `gpg` reports `BAD signature`, or cannot find the matching public key, treat the artifact as an integrity violation: stop the installation and re-obtain the package and signature from TuxCare over a trusted channel.
 
 :::tip
-All ELS for Language Ecosystems packages are signed the same way. The public key is described in [Obtain the TuxCare Public Key](#obtain-the-tuxcare-public-key); if you cannot find the signature for an artifact, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+TuxCare signs all ELS for Language Ecosystems packages the same way. For the public key, see [Obtain the TuxCare Public Key](#obtain-the-tuxcare-public-key); if you cannot find the signature for an artifact, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 :::
 
 ## Integrity Violation Events
 
-An **integrity violation** is any event where an artifact obtained from TuxCare — or the channel it was retrieved over — fails a verification check, indicating the package may not be authentic or may have been altered in transit. The package manager already **blocks** such an operation (the install or update stops), but by default the only trace is the command's exit code and its console output. To align with the EU Cyber Resilience Act (CRA), these events should be treated as security-relevant and retained in a dedicated log so a system administrator can review them regardless of when or how the update was triggered.
+An **integrity violation** is any event where an artifact obtained from TuxCare — or the channel you retrieved it over — fails a verification check, indicating the package may not be authentic or someone may have altered it in transit. The package manager already **blocks** the install or update, but by default the only trace is the command's exit code and its console output. To align with the EU Cyber Resilience Act (CRA), treat these events as security-relevant and retain them in a dedicated log so a system administrator can review them regardless of when or how the update started.
 
 ### What Counts as an Integrity Violation
 
@@ -327,9 +327,9 @@ The ELS for Language Ecosystems delivery model is a set of per-ecosystem registr
 
 | Event | What it means | How it surfaces |
 |---|---|---|
-| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or the artifact was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
-| **Checksum / integrity-hash mismatch** | The downloaded artifact's checksum does not match the `.sha1`/`.sha256` published next to it — the bytes changed in transit or the artifact was substituted. | **Maven**, run with strict checksums (`mvn -C`), fails with `Checksum validation failed`. **Gradle**, with dependency verification enabled, fails with `Dependency verification failed`. |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | Maven/Gradle fail with `PKIX path building failed` / `unable to find valid certification path`. |
+| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or TuxCare's key did not sign the artifact. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
+| **Checksum / integrity-hash mismatch** | The downloaded artifact's checksum does not match the `.sha1`/`.sha256` published next to it — the bytes changed in transit or someone substituted the artifact. | **Maven**, run with strict checksums (`mvn -C`), fails with `Checksum validation failed`. **Gradle**, with dependency verification enabled, fails with `Dependency verification failed`. |
+| **HTTPS / TLS certificate error** | The client cannot validate the TLS certificate that `nexus.repo.tuxcare.com` presents, so you cannot trust the transport itself. | Maven/Gradle fail with `PKIX path building failed` / `unable to find valid certification path`. |
 
 </template>
 
@@ -337,9 +337,9 @@ The ELS for Language Ecosystems delivery model is a set of per-ecosystem registr
 
 | Event | What it means | How it surfaces |
 |---|---|---|
-| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or the artifact was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
-| **Checksum / integrity-hash mismatch** | The downloaded tarball's hash does not match the integrity value recorded in `package-lock.json` — the bytes changed in transit or the artifact was substituted. | `npm` aborts the install with `EINTEGRITY` (`sha512-… integrity checksum failed`). |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | `npm` fails with `UNABLE_TO_VERIFY_LEAF_SIGNATURE` / `SELF_SIGNED_CERT_IN_CHAIN`. |
+| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or TuxCare's key did not sign the artifact. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
+| **Checksum / integrity-hash mismatch** | The downloaded tarball's hash does not match the integrity value recorded in `package-lock.json` — the bytes changed in transit or someone substituted the artifact. | `npm` aborts the install with `EINTEGRITY` (`sha512-… integrity checksum failed`). |
+| **HTTPS / TLS certificate error** | The client cannot validate the TLS certificate that `nexus.repo.tuxcare.com` presents, so you cannot trust the transport itself. | `npm` fails with `UNABLE_TO_VERIFY_LEAF_SIGNATURE` / `SELF_SIGNED_CERT_IN_CHAIN`. |
 
 </template>
 
@@ -347,9 +347,9 @@ The ELS for Language Ecosystems delivery model is a set of per-ecosystem registr
 
 | Event | What it means | How it surfaces |
 |---|---|---|
-| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or the artifact was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
-| **Checksum / integrity-hash mismatch** | The downloaded artifact's hash does not match the hash pinned for it — the bytes changed in transit or the artifact was substituted. | `pip`, when run in hash-checking mode (`--require-hashes`), aborts with `THESE PACKAGES DO NOT MATCH THE HASHES…`. |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | `pip` fails with `SSLError` / `CERTIFICATE_VERIFY_FAILED`. |
+| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or TuxCare's key did not sign the artifact. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
+| **Checksum / integrity-hash mismatch** | The downloaded artifact's hash does not match the hash pinned for it — the bytes changed in transit or someone substituted the artifact. | `pip`, when run in hash-checking mode (`--require-hashes`), aborts with `THESE PACKAGES DO NOT MATCH THE HASHES…`. |
+| **HTTPS / TLS certificate error** | The client cannot validate the TLS certificate that `nexus.repo.tuxcare.com` presents, so you cannot trust the transport itself. | `pip` fails with `SSLError` / `CERTIFICATE_VERIFY_FAILED`. |
 
 </template>
 
@@ -357,9 +357,9 @@ The ELS for Language Ecosystems delivery model is a set of per-ecosystem registr
 
 | Event | What it means | How it surfaces |
 |---|---|---|
-| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or the artifact was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
-| **Checksum / integrity-hash mismatch** | The downloaded package archive's hash does not match the `dist.shasum` recorded in `composer.lock` — the bytes changed in transit or the artifact was substituted. | **Composer** aborts with `The checksum verification of the file failed`. |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | **Composer** fails with `curl error 60` / `SSL certificate problem` — traffic to Nexus is HTTPS-only under the default `secure-http`. |
+| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or TuxCare's key did not sign the artifact. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
+| **Checksum / integrity-hash mismatch** | The downloaded package archive's hash does not match the `dist.shasum` recorded in `composer.lock` — the bytes changed in transit or someone substituted the artifact. | **Composer** aborts with `The checksum verification of the file failed`. |
+| **HTTPS / TLS certificate error** | The client cannot validate the TLS certificate that `nexus.repo.tuxcare.com` presents, so you cannot trust the transport itself. | **Composer** fails with `curl error 60` / `SSL certificate problem` — traffic to Nexus is HTTPS-only under the default `secure-http`. |
 
 </template>
 
@@ -367,27 +367,27 @@ The ELS for Language Ecosystems delivery model is a set of per-ecosystem registr
 
 | Event | What it means | How it surfaces |
 |---|---|---|
-| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or the artifact was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
-| **Checksum / integrity-hash mismatch** | The restored package's content hash does not match the value recorded in `packages.lock.json` — the bytes changed in transit or the artifact was substituted. | **NuGet** (`dotnet restore --locked-mode`) fails with `NU1403` (`Package content hash validation failed`). |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | `dotnet restore` fails with `The SSL connection could not be established` / `The remote certificate is invalid`. |
+| **GPG signature failure** | The detached `.asc` signature does not match the artifact, or TuxCare's key did not sign the artifact. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Package](#verify-a-package) above. |
+| **Checksum / integrity-hash mismatch** | The restored package's content hash does not match the value recorded in `packages.lock.json` — the bytes changed in transit or someone substituted the artifact. | **NuGet** (`dotnet restore --locked-mode`) fails with `NU1403` (`Package content hash validation failed`). |
+| **HTTPS / TLS certificate error** | The client cannot validate the TLS certificate that `nexus.repo.tuxcare.com` presents, so you cannot trust the transport itself. | `dotnet restore` fails with `The SSL connection could not be established` / `The remote certificate is invalid`. |
 
 </template>
 
 </TableTabs>
 
 :::tip
-**Metadata signature mismatch** is an OS-package-manager concept (yum/dnf and apt verify a GPG signature over the *repository metadata index* — `repomd.xml`, `InRelease`). The language registries used by ELS for Language Ecosystems — npm, pip, Maven, Composer, and NuGet — do not distribute a separately signed metadata index, so this specific violation type does not map to the setup. The equivalent authenticity and integrity guarantee is provided **per artifact** by the checksum/integrity-hash check and the detached GPG signature listed above.
+**Metadata signature mismatch** is an OS-package-manager concept (yum/dnf and apt verify a GPG signature over the *repository metadata index* — `repomd.xml`, `InRelease`). The language registries used by ELS for Language Ecosystems — npm, pip, Maven, Composer, and NuGet — do not distribute a separately signed metadata index, so this specific violation type does not map to the setup. The checksum/integrity-hash check and the detached GPG signature listed above provide the equivalent authenticity and integrity guarantee **per artifact**.
 :::
 
 ### Capturing Integrity Violations in a Dedicated Log
 
-Because these checks run inside the package manager (`npm`, `pip`, `mvn`, `composer`, `dotnet`) or `gpg`, their outcome is recorded only in the command's exit code and console output. To retain violations for later review — as CRA expects — run the install or verification inside a wrapper that writes the result to a dedicated log, separate from ordinary build output. Doing this in a CI job or an install/deploy script guarantees the event is captured no matter who triggered the update or whether its output was monitored.
+Because these checks run inside the package manager (`npm`, `pip`, `mvn`, `composer`, `dotnet`) or `gpg`, the only record of their outcome is the command's exit code and console output. To retain violations for later review — as CRA expects — run the install or verification inside a wrapper that writes the result to a dedicated log, separate from ordinary build output. Doing this in a CI job or an install/deploy script guarantees that the log captures the event no matter who triggered the update or whether anyone monitored its output.
 
 <TableTabs label="Choose ecosystem: " :labels="{ DotNET: '.NET' }">
 
 <template #Java>
 
-`mvn -C` (`--strict-checksums`) makes a checksum mismatch fail the build; TLS to Nexus is always enforced. A failure is written to a dedicated log file and to the system journal. (For Gradle, enable dependency verification and run `./gradlew build` in place of the Maven command.)
+`mvn -C` (`--strict-checksums`) makes a checksum mismatch fail the build; the connection to Nexus always uses TLS. The script below writes a failure to a dedicated log file and to the system journal. (For Gradle, enable dependency verification and run `./gradlew build` in place of the Maven command.)
 
 ```bash
 #!/usr/bin/env bash
@@ -409,7 +409,7 @@ fi
 
 <template #JavaScript>
 
-`npm ci` enforces the `package-lock.json` integrity hashes (checksum check) and TLS on every download; the on-demand `gpg --verify` adds signature verification. A non-zero exit from either is written to a dedicated log file and to the system journal under a distinct tag.
+`npm ci` enforces the `package-lock.json` integrity hashes (checksum check) and TLS on every download; the on-demand `gpg --verify` adds signature verification. The script below writes a non-zero exit from either to a dedicated log file and to the system journal under a distinct tag.
 
 ```bash
 #!/usr/bin/env bash
@@ -442,7 +442,7 @@ run "gpg verify @els-js/angular@1.8.3-tuxcare.8" \
 
 <template #Python>
 
-`--require-hashes` turns on pip's checksum verification against the hashes pinned in `requirements.txt`; TLS to the Nexus index is always enforced. A failure is written to a dedicated log file and to the system journal.
+`--require-hashes` turns on pip's checksum verification against the hashes pinned in `requirements.txt`; the connection to the Nexus index always uses TLS. The script below writes a failure to a dedicated log file and to the system journal.
 
 ```bash
 #!/usr/bin/env bash
@@ -464,7 +464,7 @@ fi
 
 <template #PHP>
 
-Composer verifies each downloaded package against the `dist.shasum` in `composer.lock` as a checksum check, and the HTTPS-only `secure-http` setting is enabled by default. A failure is written to a dedicated log file and to the system journal.
+Composer verifies each downloaded package against the `dist.shasum` in `composer.lock` as a checksum check and enables the HTTPS-only `secure-http` setting by default. The script below writes a failure to a dedicated log file and to the system journal.
 
 ```bash
 #!/usr/bin/env bash
@@ -486,7 +486,7 @@ fi
 
 <template #DotNET>
 
-`dotnet restore --locked-mode` enforces the `packages.lock.json` content hashes (checksum check) and TLS on every download. A failure is written to a dedicated log file and to the system journal.
+`dotnet restore --locked-mode` enforces the `packages.lock.json` content hashes (checksum check) and TLS on every download. The script below writes a failure to a dedicated log file and to the system journal.
 
 ```bash
 #!/usr/bin/env bash
@@ -523,5 +523,5 @@ journalctl -t tuxcare-integrity
 ```
 
 :::tip
-Forward `/var/log/tuxcare-integrity.log` (or the `tuxcare-integrity` journald tag) to your central log collector or SIEM so integrity violations are alerted on and retained under your standard log-retention policy.
+Forward `/var/log/tuxcare-integrity.log` (or the `tuxcare-integrity` journald tag) to your central log collector or SIEM so that it alerts on integrity violations and retains them under your standard log-retention policy.
 :::

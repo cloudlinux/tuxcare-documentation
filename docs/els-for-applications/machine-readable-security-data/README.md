@@ -12,7 +12,7 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 
 ## Errata, OVAL and CSAF
 
-Security advisories and patch definitions are published for the database applications:
+TuxCare publishes security advisories and patch definitions for the database applications:
 
 | Application | OS | Errata | OVAL | CSAF |
 |---|---|---|---|---|
@@ -29,7 +29,7 @@ Security advisories and patch definitions are published for the database applica
 
 Each application package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. TuxCare provides SBOMs in industry-standard formats — SPDX and CycloneDX — so any SBOM-aware scanner or supply-chain tool can consume them.
 
-SBOMs for these applications are published as follows:
+TuxCare publishes SBOMs for these applications as follows:
 
 * Java applications (Apache Tomcat, WildFly, Apache Hive, Apache Hadoop) - [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/) on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), publicly accessible
 * Go applications (Grafana, Loki, MinIO) - [els_lang_go](https://security.tuxcare.com/sbom/cyclonedx/els_lang_go/) on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), publicly accessible; each SBOM is accompanied by its detached `.asc` signature in the same directory
@@ -42,25 +42,25 @@ TuxCare publishes VEX as CycloneDX VEX documents, distributed alongside each pac
 
 Each entry links one CVE to one artifact version and carries a status:
 
-* **exploitable** - the CVE affects this artifact version and has not yet been patched in this release.
-* **resolved** - the CVE has been patched through a TuxCare release.
+* **exploitable** - the CVE affects this artifact version, and TuxCare has not yet patched it in this release.
+* **resolved** - TuxCare has released a patch for the CVE.
 
 Each VEX document reports the CVEs that directly affect the artifact. The feed covers every supported base version and every released `-tuxcare.N` iteration, so the entry count reflects these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
 
 ## Package Signature Verification (GPG)
 
-Every archive TuxCare builds is signed with a detached OpenPGP signature so you can confirm, before installing or updating, that the archive was produced by TuxCare and has not been altered in transit. The signature is published as a separate `.asc` file in TuxCare Nexus and is created with TuxCare's signing key (SHA-256 detached signature).
+TuxCare signs every archive it builds with a detached OpenPGP signature so you can confirm, before installing or updating, that TuxCare produced the archive and nobody altered it in transit. TuxCare creates the signature with its signing key (SHA-256 detached signature) and publishes it as a separate `.asc` file in TuxCare Nexus.
 
 A successful verification proves two things about the artifact:
 
-* **Authenticity** — it was signed by TuxCare's private key.
-* **Integrity** — its bytes match exactly what was signed; no tampering or corruption occurred.
+* **Authenticity** — TuxCare signed it with its private key.
+* **Integrity** — its bytes match exactly what TuxCare signed; no tampering or corruption occurred.
 
-A failed verification is an **integrity violation**: the artifact must be treated as untrusted and not installed. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
+A failed verification is an **integrity violation**: treat the artifact as untrusted and do not install it. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
 
 ### Obtain the TuxCare Public Key
 
-To verify a signature you first need TuxCare's public signing key, the TuxCare SecureChain key. It is published at [security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain](https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain); no credentials are needed:
+To verify a signature you first need TuxCare's public signing key, the TuxCare SecureChain key. TuxCare publishes it at [security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain](https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain); downloading it requires no credentials:
 
 ```text
 curl -fsSL https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain -o tuxcare-els-public.asc
@@ -72,7 +72,7 @@ The file holds two TuxCare SecureChain keys. Before importing, list them with th
 gpg --show-keys --with-fingerprint tuxcare-els-public.asc
 ```
 
-The signatures published on security.tuxcare.com are made with the key whose fingerprint is `AD13 9411 89BF 2258 AA30  72C9 7BF1 2029 3948 A27B`; `gpg --verify` reports it as `using RSA key 7BF120293948A27B`. If `gpg` reports a different key, or `No public key` after you import this file, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+TuxCare creates the signatures published on security.tuxcare.com with the key whose fingerprint is `AD13 9411 89BF 2258 AA30  72C9 7BF1 2029 3948 A27B`; `gpg --verify` reports it as `using RSA key 7BF120293948A27B`. If `gpg` reports a different key, or `No public key` after you import this file, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 Once you have the key file (for example, `tuxcare-els-public.asc`), import it into your keyring:
 
@@ -92,10 +92,10 @@ Import the public key once. It can verify every TuxCare-signed archive, so this 
 
 ### Verify a Downloaded Archive
 
-ELS applications are distributed as archives you download from TuxCare Nexus. To verify one, download its detached `.asc` signature from Nexus and run `gpg --verify` against the archive you downloaded. Select your ecosystem below.
+TuxCare distributes ELS applications as archives you download from TuxCare Nexus. To verify one, download its detached `.asc` signature from Nexus and run `gpg --verify` against the archive you downloaded. Select your ecosystem below.
 
 :::warning
-The signature location and artifact naming differ per ecosystem: for the Java-based applications the `.asc` is published in `els-java-sbom`, and for the Go-based applications next to the archive itself in `els-golang`. Not every Go archive has a signature published yet. Confirm the exact path and artifact naming for your archive with your TuxCare contact.
+The signature location and artifact naming differ per ecosystem: for the Java-based applications TuxCare publishes the `.asc` in `els-java-sbom`, and for the Go-based applications next to the archive itself in `els-golang`. Not every Go archive has a published signature. Confirm the exact path and artifact naming for your archive with your TuxCare contact.
 :::
 
 <TableTabs label="Choose ecosystem: ">
@@ -106,7 +106,7 @@ The signature location and artifact naming differ per ecosystem: for the Java-ba
 
 1. **Obtain the exact published archive**
 
-   Download the archive as described in the application's setup page (see, for example, [Apache Tomcat](/els-for-applications/apache-tomcat/)). Verification works on the byte-for-byte artifact that was signed, so keep the downloaded `.tar.gz` as-is:
+   Download the archive as described in the application's setup page (see, for example, [Apache Tomcat](/els-for-applications/apache-tomcat/)). Verification works on the byte-for-byte artifact that TuxCare signed, so keep the downloaded `.tar.gz` as-is:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -O \
@@ -115,7 +115,7 @@ The signature location and artifact naming differ per ecosystem: for the Java-ba
 
 2. **Download the matching signature**
 
-   For the Java-based applications, the `.asc` is published in the SBOM repository (`els-java-sbom`), keyed by artifact name and version:
+   For the Java-based applications, TuxCare publishes the `.asc` in the SBOM repository (`els-java-sbom`), keyed by artifact name and version:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -O \
@@ -140,7 +140,7 @@ The signature location and artifact naming differ per ecosystem: for the Java-ba
 
 1. **Obtain the exact published archive**
 
-   Download the archive as described in the application's setup page (see, for example, [Loki](/els-for-applications/loki/)). Verification works on the byte-for-byte artifact that was signed, so keep the downloaded `.tar.gz` as-is:
+   Download the archive as described in the application's setup page (see, for example, [Loki](/els-for-applications/loki/)). Verification works on the byte-for-byte artifact that TuxCare signed, so keep the downloaded `.tar.gz` as-is:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -O \
@@ -149,7 +149,7 @@ The signature location and artifact naming differ per ecosystem: for the Java-ba
 
 2. **Download the matching signature**
 
-   For the Go-based applications, the `.asc` is published next to the archive in the same `els-golang` repository. Authenticate with your TuxCare Nexus credentials:
+   For the Go-based applications, TuxCare publishes the `.asc` next to the archive in the same `els-golang` repository. Authenticate with your TuxCare Nexus credentials:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -O \
@@ -182,7 +182,7 @@ The signature location and artifact naming differ per ecosystem: for the Java-ba
 
 ## Integrity Violation Events
 
-An **integrity violation** is any event where an artifact obtained from TuxCare — or the channel it was retrieved over — fails a verification check, indicating the archive may not be authentic or may have been altered in transit. To align with the EU Cyber Resilience Act (CRA), these events should be treated as security-relevant and retained in a dedicated log so a system administrator can review them regardless of when or how the download was triggered.
+An **integrity violation** is any event where an artifact obtained from TuxCare — or the channel you retrieved it over — fails a verification check, indicating the archive may not be authentic or someone may have altered it in transit. To align with the EU Cyber Resilience Act (CRA), treat these events as security-relevant and retain them in a dedicated log so a system administrator can review them regardless of when or how the download started.
 
 ### What Counts as an Integrity Violation
 
@@ -194,9 +194,9 @@ ELS applications are downloaded as signed archives from TuxCare Nexus over HTTPS
 
 | Event | What it means | How it surfaces |
 |---|---|---|
-| **GPG signature failure** | The detached `.asc` signature does not match the archive, or the archive was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Downloaded Archive](#verify-a-downloaded-archive) above. |
+| **GPG signature failure** | The detached `.asc` signature does not match the archive, or TuxCare's key did not sign the archive. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Downloaded Archive](#verify-a-downloaded-archive) above. |
 | **Checksum / integrity-hash mismatch** | For applications resolved as Maven or Gradle dependencies (for example Apache Hive and Apache Hadoop), the build tool verifies the artifact checksum against the `.sha1`/`.sha256` published next to it. | **Maven**, run with strict checksums (`mvn -C`), fails with `Checksum validation failed`. **Gradle**, with dependency verification enabled, fails with `Dependency verification failed`. |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | A direct download aborts with `curl: (60) SSL certificate problem`; Maven/Gradle fail with `PKIX path building failed`. |
+| **HTTPS / TLS certificate error** | The client cannot validate the TLS certificate that `nexus.repo.tuxcare.com` presents, so you cannot trust the transport itself. | A direct download aborts with `curl: (60) SSL certificate problem`; Maven/Gradle fail with `PKIX path building failed`. |
 
 </template>
 
@@ -204,8 +204,8 @@ ELS applications are downloaded as signed archives from TuxCare Nexus over HTTPS
 
 | Event | What it means | How it surfaces |
 |---|---|---|
-| **GPG signature failure** | The detached `.asc` signature does not match the archive, or the archive was not signed by TuxCare's key. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Downloaded Archive](#verify-a-downloaded-archive) above. |
-| **HTTPS / TLS certificate error** | The TLS certificate presented by `nexus.repo.tuxcare.com` cannot be validated, so the transport itself cannot be trusted. | `curl` aborts the download with `curl: (60) SSL certificate problem` and a non-zero exit code. |
+| **GPG signature failure** | The detached `.asc` signature does not match the archive, or TuxCare's key did not sign the archive. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Downloaded Archive](#verify-a-downloaded-archive) above. |
+| **HTTPS / TLS certificate error** | The client cannot validate the TLS certificate that `nexus.repo.tuxcare.com` presents, so you cannot trust the transport itself. | `curl` aborts the download with `curl: (60) SSL certificate problem` and a non-zero exit code. |
 
 </template>
 
@@ -217,7 +217,7 @@ There is no separately signed repository metadata index in this delivery model, 
 
 ### Capturing Integrity Violations in a Dedicated Log
 
-Because the download and signature check run as `curl` and `gpg` commands, their outcome lives only in the command's exit code and console output. To retain violations for later review — as CRA expects — run the download and verification inside a wrapper that writes the result to a dedicated log, separate from ordinary output. Doing this in a CI job or an install/deploy script guarantees the event is captured no matter who triggered the download or whether anyone was watching the terminal.
+Because the download and signature check run as `curl` and `gpg` commands, their outcome lives only in the command's exit code and console output. To retain violations for later review — as CRA expects — run the download and verification inside a wrapper that writes the result to a dedicated log, separate from ordinary output. Doing this in a CI job or an install/deploy script guarantees that the log captures the event no matter who triggered the download or whether anyone was watching the terminal.
 
 <TableTabs label="Choose ecosystem: ">
 
@@ -304,5 +304,5 @@ journalctl -t tuxcare-integrity
 ```
 
 :::tip
-Forward `/var/log/tuxcare-integrity.log` (or the `tuxcare-integrity` journald tag) to your central log collector or SIEM so integrity violations are alerted on and retained under your standard log-retention policy.
+Forward `/var/log/tuxcare-integrity.log` (or the `tuxcare-integrity` journald tag) to your central log collector or SIEM so that it alerts on integrity violations and retains them under your standard log-retention policy.
 :::
