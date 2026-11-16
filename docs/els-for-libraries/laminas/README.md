@@ -6,6 +6,7 @@ Endless Lifecycle Support (ELS) for Laminas from TuxCare provides security fixes
 
 * **laminas-diactoros** 1.8.7p2, 2.22.0
 * **laminas-http** 2.5.6
+* **laminas-session** 2.1.6
 
 Other components and versions upon request.
 

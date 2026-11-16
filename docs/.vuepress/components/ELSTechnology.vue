@@ -3702,6 +3702,11 @@ const techData = [
         link: "./drupal/",
       },
       {
+        name: "EmailValidator",
+        versions: "2.1.25",
+        link: "./email-validator/",
+      },
+      {
         name: "Firebase PHP-JWT",
         versions: "5.5.1 | 6.11.1",
         link: "./firebase-php-jwt/",
@@ -3752,6 +3757,11 @@ const techData = [
         link: "./laravel/",
       },
       {
+        name: "Intervention Image",
+        versions: "2.7.2",
+        link: "./intervention-image/",
+      },
+      {
         name: "JMESPath.php",
         versions: "2.6.1",
         link: "./jmespath-php/",
@@ -3764,6 +3774,11 @@ const techData = [
       {
         name: "Laminas Http",
         versions: "2.5.6",
+        link: "./laminas/",
+      },
+      {
+        name: "Laminas Session",
+        versions: "2.1.6",
         link: "./laminas/",
       },
       {
@@ -3802,6 +3817,11 @@ const techData = [
         link: "./league-flysystem/",
       },
       {
+        name: "League Glide",
+        versions: "1.7.2",
+        link: "./league-glide/",
+      },
+      {
         name: "League OAuth2 Client",
         versions: "1.4.2",
         link: "./league-oauth2-client/",
@@ -3810,6 +3830,16 @@ const techData = [
         name: "Livewire",
         versions: "3.x",
         link: "./livewire/",
+      },
+      {
+        name: "Mobile Detect",
+        versions: "2.8.12",
+        link: "./mobile-detect/",
+      },
+      {
+        name: "MongoDB PHP Library",
+        versions: "1.9.0",
+        link: "./mongodb-php-library/",
       },
       {
         name: "Monolog",
@@ -3825,6 +3855,11 @@ const techData = [
         name: "Nexmo Client Core",
         versions: "1.8.1",
         link: "./nexmo/",
+      },
+      {
+        name: "Parsedown",
+        versions: "1.6.4",
+        link: "./parsedown/",
       },
       {
         name: "php-svg-lib",
@@ -3957,6 +3992,11 @@ const techData = [
         link: "./symfony/",
       },
       {
+        name: "Symfony Validator",
+        versions: "3.4.47 | 4.4.48",
+        link: "./symfony/",
+      },
+      {
         name: "Symfony Yaml",
         versions: "2.8.x | 3.4.x | 4.4.x",
         link: "./symfony/",
@@ -3994,6 +4034,11 @@ const techData = [
       {
         name: "Zend HTTP",
         versions: "2.5.6",
+        link: "./zendframework/",
+      },
+      {
+        name: "Zend Test",
+        versions: "2.6.1",
         link: "./zendframework/",
       },
       {
