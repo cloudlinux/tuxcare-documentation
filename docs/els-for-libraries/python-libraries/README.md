@@ -20,48 +20,51 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **h11** 0.9.0, 0.12.0
 * **httpx** 0.22.0
 * **idna** 2.1, 2.8, 2.10, 3.6
-* **jaraco-context** 5.3.0
+* **jaraco.context** 5.3.0
 * **Jinja2** 2.11.3, 3.0.3
 * **keras** 2.15.0
-* **langchain-core** 0.3.83
-* **langchain-text-splitters** 0.3.11
-* **langgraph-checkpoint** 2.1.2
+* **LangChain**
+  * **langchain-core** 0.3.83
+  * **langchain-text-splitters** 0.3.11
+  * **langgraph-checkpoint** 2.1.2
 * **LightGBM** 3.3.5
 * **lxml** 4.6.5, 4.9.4, 5.4.0
 * **MLflow** 2.9.1, 2.22.4
-* **MySQL Connector/Python** 8.4.0
+* **MySQL Connector/Python** (`mysql-connector-python`) 8.4.0
 * **orjson** 3.8.5
 * **pandas** 2.2.0, 2.2.2
 * **paramiko** 2.12.0, 3.0.0
 * **pdfkit** 0.6.1
-* **pip** 9.0
 * **Pillow** 8.4.0, 9.4.0, 9.5.0, 10.4.0, 11.2.1, 11.3.0
-* **protobuf** 3.17.0, 3.20.3, 4.24.3, 4.25.8, 4.25.9
-* **py** 1.11.0
+* **Protocol Buffers** (`protobuf`) 3.17.0, 3.20.3, 4.24.3, 4.25.8, 4.25.9
 * **pyarrow** 12.0.1
-* **pydantic** 1.10.0, 1.10.5
+* **Pydantic** 1.10.0, 1.10.5
 * **PyJWT** 1.7.1, 2.3.0, 2.8.0, 2.10.1
 * **pymongo** 3.13.0
-* **pymysql** 0.10.1
+* **PyMySQL** 0.10.1
 * **pyOpenSSL** 23.3.0, 24.3.0, 25.3.0
 * **pypdf** 5.9.0
-* **pytest** 7.4.4, 8.4.2
+* **pytest**
+  * **py** 1.11.0
+  * **pytest** 7.4.4, 8.4.2
+* **Python packaging toolchain**
+  * **pip** 9.0.0
+  * **setuptools** 59.8.0, 60.0.0, 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.3.2, 75.8.0
+  * **virtualenv** 20.39.1
 * **python-jose** 3.3.0
 * **python-multipart** 0.0.6
+* **PyTorch** (`torch`) 1.13.1
 * **PyYAML** 3.13, 5.3.1
-* **redis-py** 4.5.1
-* **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
+* **redis-py** (`redis`) 4.5.1
+* **Requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
 * **scikit-learn** 1.0.2
 * **sentence-transformers** 2.7.0
-* **setuptools** 59.8.0, 60.0.0, 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.3.2, 75.8.0
-* **torch** 1.13.1
 * **tornado** 5.1.1, 6.1.0
 * **tqdm** 4.66.1
 * **transformers** 4.57.6
-* **twisted** 20.3.0
+* **Twisted** 20.3.0
 * **urllib3** 1.25.11, 1.26.4, 1.26.20, 2.0.7, 2.5.0
 * **uvicorn** 0.11.6
-* **virtualenv** 20.39.1
 * **waitress** 2.1.2
 * **websockets** 8.1
 
