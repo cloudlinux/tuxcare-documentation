@@ -124,16 +124,16 @@ Common Security Advisory Framework (CSAF) is a machine-readable format, standard
 * [csaf.data.security.tuxcare.com](https://csaf.data.security.tuxcare.com/)
 * [tuxcare.com/.well-known/csaf/provider-metadata.json](https://tuxcare.com/.well-known/csaf/provider-metadata.json)
 
-The CSAF files are published in JSON format — OASIS provides a [list of reference tools](https://www.csaf.io/tools.html) that support CSAF.
+TuxCare publishes the CSAF files in JSON format — OASIS provides a [list of reference tools](https://www.csaf.io/tools.html) that support CSAF.
 
 ## Package Signature Verification (GPG)
 
-ELS for Runtimes (PHP, Python, Node.js, Ruby, and other runtimes delivered as `alt-*` packages) is distributed as native RPM, DEB, and APK packages from TuxCare-managed repositories. Every package and the repository metadata that indexes it are signed with TuxCare's OpenPGP key, so that before anything is installed or updated you can confirm two things about each artifact:
+TuxCare distributes ELS for Runtimes (PHP, Python, Node.js, Ruby, and other runtimes delivered as `alt-*` packages) as native RPM, DEB, and APK packages from repositories it manages. TuxCare signs every package and the repository metadata that indexes it with the TuxCare OpenPGP key, so that before you install or update anything you can confirm two things about each artifact:
 
-* **Authenticity** — it was signed with TuxCare's private key.
-* **Integrity** — its bytes match exactly what was signed; no tampering or corruption occurred in transit.
+* **Authenticity** — TuxCare signed it with its private key.
+* **Integrity** — its bytes match exactly what TuxCare signed; no tampering or corruption occurred in transit.
 
-Unlike a manual, registry-based flow, verification here is built into the native package manager. The repository setup script you run during [installation](/els-for-runtimes/) imports the TuxCare signing key and enables signature checking (`gpgcheck=1` on RPM; signed `InRelease`/index on DEB and APK), so `yum`/`dnf`, `apt`, and `apk` verify each package automatically on every install and update. A verification that fails is an **integrity violation**: the package manager refuses to install the artifact. Do not work around a failed check by disabling verification or re-downloading over an insecure channel — investigate the source instead (see [Integrity Violation Events](#integrity-violation-events)).
+Unlike a manual, registry-based flow, here the native package manager handles verification itself. The repository setup script you run during [installation](/els-for-runtimes/) imports the TuxCare signing key and enables signature checking (`gpgcheck=1` on RPM; signed `InRelease`/index on DEB and APK), so `yum`/`dnf`, `apt`, and `apk` verify each package automatically on every install and update. A verification that fails is an **integrity violation**: the package manager refuses to install the artifact. Do not work around a failed check by disabling verification or re-downloading over an insecure channel — investigate the source instead (see [Integrity Violation Events](#integrity-violation-events)).
 
 ### Confirm the TuxCare Signing Key Is Installed
 
@@ -172,18 +172,18 @@ apt-get install --reinstall --download-only alt-php74-meta` },
 A successful RPM check reports `digests signatures OK`; `apt-get update` completes with no `NO_PUBKEY`, `not signed`, or `Hash Sum mismatch` warnings; and `apk verify` prints `OK`. Any other result is an integrity violation — stop and re-obtain the package over a trusted channel.
 
 :::warning Repository metadata signing on RPM
-On RPM-based systems, package signatures are enforced by default (`gpgcheck=1`), and TuxCare also signs the repository metadata (`repomd.xml.asc` is published). However, metadata-signature checking (`repo_gpgcheck`) is not always enabled by default, so tampering with the repository index itself is not caught out of the box. To have `yum`/`dnf` reject unsigned or altered metadata, enable it in the repository configuration (`/etc/yum.repos.d/*.repo`):
+On RPM-based systems, `yum`/`dnf` enforce package signatures by default (`gpgcheck=1`), and TuxCare also signs the repository metadata and publishes `repomd.xml.asc`. However, metadata-signature checking (`repo_gpgcheck`) is not always enabled by default, so tampering with the repository index itself is not caught out of the box. To have `yum`/`dnf` reject unsigned or altered metadata, enable it in the repository configuration (`/etc/yum.repos.d/*.repo`):
 
 ```text
 repo_gpgcheck=1
 ```
 
-On DEB and APK, the signed repository index (`InRelease`/`Release.gpg` and the APK index signature) is verified by default, so this step is RPM-specific.
+On DEB and APK, `apt` and `apk` verify the signed repository index (`InRelease`/`Release.gpg` and the APK index signature) by default, so this step is RPM-specific.
 :::
 
 ## Windows Runtimes Signature Verification (Authenticode)
 
-ELS runtimes for Windows (for example .NET and PHP for Windows) are downloaded from `windows.tuxcare.com` rather than installed by a Linux package manager, so the GPG steps above do not apply to them. TuxCare signs the Windows executables, libraries, installers, and installer scripts it builds (`.exe`, `.dll`, `.msi`, `.ps1`) with an Authenticode code-signing certificate:
+You download ELS runtimes for Windows (for example .NET and PHP for Windows) from `windows.tuxcare.com` instead of installing them with a Linux package manager, so the GPG steps above do not apply to them. TuxCare signs the Windows executables, libraries, installers, and installer scripts it builds (`.exe`, `.dll`, `.msi`, `.ps1`) with an Authenticode code-signing certificate:
 
 * **Signer** — `Cloud Linux Software, Inc`, the verified publisher Windows shows in the User Account Control prompt of `TuxCare.Installer.exe`.
 * **Issuer** — `Sectigo Public Code Signing CA EV R36` (an Extended Validation code-signing certificate).
@@ -207,7 +207,7 @@ A `NotSigned`, `HashMismatch`, or other non-`Valid` status means the file is not
 
 ## Integrity Violation Events
 
-For compliance with regulations such as the EU Cyber Resilience Act (CRA), an administrator must be able to detect and retain evidence when an integrity check fails — not just have the installation blocked at the terminal. This section defines what counts as an integrity violation for ELS for Runtimes and shows how to capture these events in a dedicated log.
+For compliance with regulations such as the EU Cyber Resilience Act (CRA), an administrator must be able to detect and retain evidence when an integrity check fails, in addition to the package manager blocking the installation at the terminal. This section defines what counts as an integrity violation for ELS for Runtimes and shows how to capture these events in a dedicated log.
 
 ### What Counts as an Integrity Violation
 
@@ -265,7 +265,7 @@ apk: verification error` }
 ... sha256 ... mismatch` }
 ]" />
 
-**4. HTTPS/TLS certificate error** — the connection to the repository could not be authenticated, so the transport itself is untrusted.
+**4. HTTPS/TLS certificate error** — the package manager could not authenticate the connection to the repository, so you cannot trust the transport itself.
 
 <CodeTabs :tabs="[
 { title: 'RPM', content:
@@ -287,7 +287,7 @@ Never bypass one of these errors with flags such as `--nogpgcheck`, `[trusted=ye
 
 By default an integrity violation is only printed to the terminal of whoever ran the command, so an unattended update (cron, automation, or a fetch triggered while nobody is watching) leaves no durable record. To satisfy the CRA requirement, route these events to a dedicated log the administrator can review, separate from standard package-manager output.
 
-The approach is to run the update through a wrapper that scans the package manager's output for the violation signatures above and forwards any match to the system log via `logger`, tagged so it can be isolated:
+The approach is to run the update through a wrapper that scans the package manager's output for the violation signatures above and forwards any match to the system log via `logger`, tagged so you can isolate it:
 
 ```bash
 #!/bin/sh
@@ -345,4 +345,4 @@ On systems using **journald**, the `logger` tag is queryable without extra confi
 journalctl -t tuxcare-integrity
 ```
 
-Run the wrapper from your normal update mechanism (interactively, from cron, or from configuration management) instead of calling the package manager directly. Every blocked installation is then captured in `/var/log/tuxcare-integrity.log` (or the journal), regardless of when or how the update was triggered, giving administrators a durable, reviewable record of integrity violations.
+Run the wrapper from your normal update mechanism (interactively, from cron, or from configuration management) instead of calling the package manager directly. Every blocked installation is then captured in `/var/log/tuxcare-integrity.log` (or the journal), regardless of when or how the update started, giving administrators a durable, reviewable record of integrity violations.

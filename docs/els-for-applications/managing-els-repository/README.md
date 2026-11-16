@@ -20,7 +20,7 @@ This page provides instructions for upgrading to newer TuxCare-patched applicati
 
 4. **Verify and start using**
 
-   Confirm the new version is installed correctly and run your application as usual.
+   Confirm that you installed the new version correctly and run your application as usual.
 
 </ELSSteps>
 
@@ -28,7 +28,7 @@ If you encounter any issues, please contact [TuxCare support](https://tuxcare.co
 
 ## Removing the ELS Repository
 
-The ELS repository is removed by running the installation script with the `--delete` flag.
+To remove the ELS repository, run the installation script with the `--delete` flag.
 
 <TableTabs label="Choose the application: " :labels="{ MariaDB: 'MariaDB', MySQL: 'MySQL', Percona_Server: 'Percona Server', PostgreSQL: 'PostgreSQL' }">
 
