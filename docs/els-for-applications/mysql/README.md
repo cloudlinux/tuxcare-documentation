@@ -9,6 +9,7 @@ This product ships MySQL Community Server only. Percona Server is patched separa
 | OS                                                      | Package Type | OS Version | MySQL version |
 | :-----------------------------------------------------: | :----------: | :--------: | :-----------: |
 | EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)          | RPM          | 7.x        | 8.0           |
+| EL 8 (AlmaLinux, CloudLinux, RHEL, etc.)               | RPM          | 8.x        | 8.0           |
 
 **Supported architecture:** x86_64 (64-bit)
 
