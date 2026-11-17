@@ -313,6 +313,10 @@ export default {
                     icon: '/images/drupal.webp',
                 },
                 {
+                    path: '/els-for-libraries/email-validator/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-libraries/firebase-php-jwt/',
                     icon: '/images/firebase.webp',
                 },
@@ -327,6 +331,10 @@ export default {
                 {
                     path: '/els-for-libraries/httpful/',
                     icon: '/images/php-logo.webp',
+                },
+                {
+                    path: '/els-for-libraries/intervention-image/',
+                    icon: '/images/intervention-image.webp',
                 },
                 {
                     path: '/els-for-libraries/jmespath-php/',
@@ -357,6 +365,10 @@ export default {
                     icon: '/images/flysystem.webp',
                 },
                 {
+                    path: '/els-for-libraries/league-glide/',
+                    icon: '/images/league-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/league-oauth2-client/',
                     icon: '/images/php-logo.webp',
                 },
@@ -365,12 +377,24 @@ export default {
                     icon: '/images/livewire-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/mobile-detect/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
+                    path: '/els-for-libraries/mongodb-php-library/',
+                    icon: '/images/mongodb-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/monolog/',
                     icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
                     path: '/els-for-libraries/nexmo/',
                     icon: '/images/nexmo.webp',
+                },
+                {
+                    path: '/els-for-libraries/parsedown/',
+                    icon: '/images/parsedown.webp',
                 },
                 {
                     path: '/els-for-libraries/php-http-guzzle6-adapter/',

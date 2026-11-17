@@ -3221,7 +3221,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "celery",
+        name: "Celery",
         versions: "4.4.7 | 5.1.2",
         link: "./celery/",
       },
@@ -3256,7 +3256,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "fastapi",
+        name: "FastAPI",
         versions: "0.63.0 | 0.104.1",
         link: "./fastapi/",
       },
@@ -3306,7 +3306,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "jaraco-context",
+        name: "jaraco.context",
         versions: "5.3.0",
         link: "./python-libraries/",
       },
@@ -3382,7 +3382,7 @@ const techData = [
       },
       {
         name: "pip",
-        versions: "9.0",
+        versions: "9.0.0",
         link: "./python-libraries/",
       },
       {
@@ -3391,7 +3391,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "protobuf",
+        name: "Protocol Buffers",
         versions: "3.17.0 | 3.20.3 | 4.24.3 | 4.25.8 | 4.25.9",
         link: "./python-libraries/",
       },
@@ -3406,7 +3406,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "pydantic",
+        name: "Pydantic",
         versions: "1.10.0 | 1.10.5",
         link: "./python-libraries/",
       },
@@ -3421,7 +3421,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "pymysql",
+        name: "PyMySQL",
         versions: "0.10.1",
         link: "./python-libraries/",
       },
@@ -3451,6 +3451,11 @@ const techData = [
         link: "./python-libraries/",
       },
       {
+        name: "PyTorch",
+        versions: "1.13.1",
+        link: "./python-libraries/",
+      },
+      {
         name: "PyYAML",
         versions: "3.13 | 5.3.1",
         link: "./python-libraries/",
@@ -3461,7 +3466,7 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "requests",
+        name: "Requests",
         versions: "2.25.1 | 2.30.0 | 2.31.0 | 2.32.3",
         link: "./python-libraries/",
       },
@@ -3481,14 +3486,9 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "starlette",
+        name: "Starlette",
         versions: "0.13.6 | 0.25.0 | 0.27.0",
         link: "./starlette/",
-      },
-      {
-        name: "torch",
-        versions: "1.13.1",
-        link: "./python-libraries/",
       },
       {
         name: "tornado",
@@ -3501,7 +3501,12 @@ const techData = [
         link: "./python-libraries/",
       },
       {
-        name: "twisted",
+        name: "transformers",
+        versions: "4.57.6",
+        link: "./python-libraries/",
+      },
+      {
+        name: "Twisted",
         versions: "20.3.0",
         link: "./python-libraries/",
       },
@@ -3697,6 +3702,11 @@ const techData = [
         link: "./drupal/",
       },
       {
+        name: "EmailValidator",
+        versions: "2.1.25",
+        link: "./email-validator/",
+      },
+      {
         name: "Firebase PHP-JWT",
         versions: "5.5.1 | 6.11.1",
         link: "./firebase-php-jwt/",
@@ -3747,6 +3757,11 @@ const techData = [
         link: "./laravel/",
       },
       {
+        name: "Intervention Image",
+        versions: "2.7.2",
+        link: "./intervention-image/",
+      },
+      {
         name: "JMESPath.php",
         versions: "2.6.1",
         link: "./jmespath-php/",
@@ -3759,6 +3774,11 @@ const techData = [
       {
         name: "Laminas Http",
         versions: "2.5.6",
+        link: "./laminas/",
+      },
+      {
+        name: "Laminas Session",
+        versions: "2.1.6",
         link: "./laminas/",
       },
       {
@@ -3797,6 +3817,11 @@ const techData = [
         link: "./league-flysystem/",
       },
       {
+        name: "League Glide",
+        versions: "1.7.2",
+        link: "./league-glide/",
+      },
+      {
         name: "League OAuth2 Client",
         versions: "1.4.2",
         link: "./league-oauth2-client/",
@@ -3805,6 +3830,16 @@ const techData = [
         name: "Livewire",
         versions: "3.x",
         link: "./livewire/",
+      },
+      {
+        name: "Mobile Detect",
+        versions: "2.8.12",
+        link: "./mobile-detect/",
+      },
+      {
+        name: "MongoDB PHP Library",
+        versions: "1.9.0",
+        link: "./mongodb-php-library/",
       },
       {
         name: "Monolog",
@@ -3820,6 +3855,11 @@ const techData = [
         name: "Nexmo Client Core",
         versions: "1.8.1",
         link: "./nexmo/",
+      },
+      {
+        name: "Parsedown",
+        versions: "1.6.4",
+        link: "./parsedown/",
       },
       {
         name: "php-svg-lib",
@@ -3952,6 +3992,11 @@ const techData = [
         link: "./symfony/",
       },
       {
+        name: "Symfony Validator",
+        versions: "3.4.47 | 4.4.48",
+        link: "./symfony/",
+      },
+      {
         name: "Symfony Yaml",
         versions: "2.8.x | 3.4.x | 4.4.x",
         link: "./symfony/",
@@ -3989,6 +4034,11 @@ const techData = [
       {
         name: "Zend HTTP",
         versions: "2.5.6",
+        link: "./zendframework/",
+      },
+      {
+        name: "Zend Test",
+        versions: "2.6.1",
         link: "./zendframework/",
       },
       {
