@@ -1,10 +1,10 @@
-# CraftCMS
+# Craft CMS
 
 Endless Lifecycle Support (ELS) for CraftCMS from TuxCare provides security fixes for versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **CraftCMS** 3.x, 4.18.7, 4.18.9
+* **Craft CMS** 3.9.15, 4.18.7, 4.18.9
 
 Other versions upon request.
 

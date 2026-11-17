@@ -4,17 +4,17 @@ Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, 
 
 ## Supported Versions
 
-* **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
-* **Symfony HttpClient** 6.0.x
-* **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
-* **Symfony HttpKernel** 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
-* **Symfony Mailer** 6.4.x
-* **Symfony Mime** 5.4.x, 6.4.x, 7.4.x
-* **Symfony Routing** 3.4.x, 4.4.x, 5.4.x, 6.4.x, 7.4.x
+* **Symfony Process** 3.4.47, 4.4.44, 5.4.45, 6.4.13
+* **Symfony HttpClient** 6.0.20
+* **Symfony HttpFoundation** 2.8.52, 3.4.47, 4.4.49, 5.4.50, 6.4.35, 7.4.8
+* **Symfony HttpKernel** 3.4.49, 4.4.51, 5.4.51, 6.4.38, 7.4.10
+* **Symfony Mailer** 6.4.34
+* **Symfony Mime** 5.4.45, 6.4.37, 7.4.9
+* **Symfony Routing** 3.4.47, 4.4.44, 5.4.48, 6.4.37, 7.4.9
 * **Symfony Validator** 3.4.47, 4.4.48
-* **Symfony Yaml** 2.8.x, 3.4.x, 4.4.x
-* **Symfony Polyfill Intl IDN** 1.30.x
-* **Symfony PSR HTTP Message Bridge** 1.1.x, 1.2.x
+* **Symfony Yaml** 2.8.52, 3.4.47, 4.4.45
+* **Symfony Polyfill Intl IDN** 1.30.0
+* **Symfony PSR HTTP Message Bridge** 1.1.2, 1.2.0
 
 Other versions upon request.
 

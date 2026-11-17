@@ -3582,14 +3582,9 @@ const techData = [
         link: "./carbon/",
       },
       {
-        name: "CraftCMS",
+        name: "Craft CMS",
         versions: "3.9.15 | 4.18.7 | 4.18.9",
         link: "./craftcms/",
-      },
-      {
-        name: "CraftCMS Feed Me Plugin",
-        versions: "3.1.17",
-        link: "./craftcms-feed-me/",
       },
       {
         name: "Doctrine ORM",
@@ -3597,107 +3592,107 @@ const techData = [
         link: "./doctrine-orm/",
       },
       {
-        name: "DomPDF",
-        versions: "0.8.x | 1.2.x | 3.1.0",
+        name: "Dompdf",
+        versions: "0.8.6 | 1.2.2 | 3.1.0",
         link: "./dompdf/",
       },
       {
-        name: "Drupal",
-        versions: "8.9.x | 9.5.x | 10.5.12 | 10.6.17",
+        name: "drupal/core",
+        versions: "8.9.20 | 9.5.11 | 10.5.12 | 10.6.17",
         link: "./drupal/",
       },
       {
-        name: "Drupal Access Code",
+        name: "drupal/access_code",
         versions: "7.1.1",
         link: "./drupal/",
       },
       {
-        name: "Drupal Bootstrap Site Alert",
+        name: "drupal/bootstrap_site_alert",
         versions: "7.1.6",
         link: "./drupal/",
       },
       {
-        name: "Drupal Coffee",
+        name: "drupal/coffee",
         versions: "7.2.3",
         link: "./drupal/",
       },
       {
-        name: "Drupal Colorbox",
+        name: "drupal/colorbox",
         versions: "2.1.2 | 7.2.19",
         link: "./drupal/",
       },
       {
-        name: "Drupal Commerce Paybox",
+        name: "drupal/commerce_paybox",
         versions: "7.1.5",
         link: "./drupal/",
       },
       {
-        name: "Drupal Facebook Pixel",
+        name: "drupal/facebook_pixel",
         versions: "7.1.1",
         link: "./drupal/",
       },
       {
-        name: "Drupal File (Field) Paths",
+        name: "drupal/filefield_paths",
         versions: "7.1.2",
         link: "./drupal/",
       },
       {
-        name: "Drupal Flag",
+        name: "drupal/flag",
         versions: "7.3.9",
         link: "./drupal/",
       },
       {
-        name: "Drupal Form Builder",
+        name: "drupal/form_builder",
         versions: "7.1.22",
         link: "./drupal/",
       },
       {
-        name: "Drupal GDPR",
+        name: "drupal/gdpr",
         versions: "3.0.0 | 3.1.0 | 7.1.0",
         link: "./drupal/",
       },
       {
-        name: "Drupal Internationalization",
+        name: "drupal/i18n",
         versions: "7.1.35",
         link: "./drupal/",
       },
       {
-        name: "Drupal Link",
+        name: "drupal/link",
         versions: "7.1.13",
         link: "./drupal/",
       },
       {
-        name: "Drupal OpenID Connect",
+        name: "drupal/openid_connect",
         versions: "7.1.3",
         link: "./drupal/",
       },
       {
-        name: "Drupal Protected Pages",
+        name: "drupal/protected_pages",
         versions: "7.2.4",
         link: "./drupal/",
       },
       {
-        name: "Drupal Simple Hierarchical Select",
+        name: "drupal/shs",
         versions: "7.1.10",
         link: "./drupal/",
       },
       {
-        name: "Drupal SpamSpan",
+        name: "drupal/spamspan",
         versions: "3.2.0 | 7.1.4",
         link: "./drupal/",
       },
       {
-        name: "Drupal Taxonomy Term Reference Tree",
+        name: "drupal/term_reference_tree",
         versions: "7.1.11",
         link: "./drupal/",
       },
       {
-        name: "Drupal TFA Basic",
+        name: "drupal/tfa_basic",
         versions: "7.1.2",
         link: "./drupal/",
       },
       {
-        name: "Drupal Webform Multiple File Upload",
+        name: "drupal/webform_multifile",
         versions: "7.1.6",
         link: "./drupal/",
       },
@@ -3705,6 +3700,11 @@ const techData = [
         name: "EmailValidator",
         versions: "2.1.25",
         link: "./email-validator/",
+      },
+      {
+        name: "Feed Me",
+        versions: "3.1.17",
+        link: "./craftcms-feed-me/",
       },
       {
         name: "Firebase PHP-JWT",
@@ -3767,12 +3767,12 @@ const techData = [
         link: "./jmespath-php/",
       },
       {
-        name: "Laminas Diactoros",
+        name: "laminas-diactoros",
         versions: "1.8.7p2 | 2.22.0",
         link: "./laminas/",
       },
       {
-        name: "Laminas Http",
+        name: "laminas-http",
         versions: "2.5.6",
         link: "./laminas/",
       },
@@ -3807,7 +3807,7 @@ const techData = [
         link: "./laravel/",
       },
       {
-        name: "League Commonmark",
+        name: "League CommonMark",
         versions: "1.6.7 | 2.7.1 | 2.8.2",
         link: "./league-commonmark/",
       },
@@ -3828,7 +3828,7 @@ const techData = [
       },
       {
         name: "Livewire",
-        versions: "3.x",
+        versions: "3.6.3 | 3.6.4",
         link: "./livewire/",
       },
       {
@@ -3883,11 +3883,11 @@ const techData = [
       },
       {
         name: "PHPUnit",
-        versions: "4.8.10 | 5.7.27 | 6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
+        versions: "4.8.10 | 5.7.27 | 6.5.14 | 7.5.20 | 8.4.3 | 10.4.2 | 11.4.4 | 12.4.5",
         link: "./phpunit/",
       },
       {
-        name: "Protobuf",
+        name: "Protocol Buffers",
         versions: "3.24.4 | 3.25.9",
         link: "./google-protobuf/",
       },
@@ -3937,7 +3937,7 @@ const techData = [
         link: "./svg-sanitize/",
       },
       {
-        name: "SwiftMailer",
+        name: "Swift Mailer",
         versions: "5.4.12 | 6.0.2",
         link: "./swiftmailer/",
       },
@@ -3948,47 +3948,47 @@ const techData = [
       },
       {
         name: "Symfony HttpClient",
-        versions: "6.0.x",
+        versions: "6.0.20",
         link: "./symfony/",
       },
       {
         name: "Symfony HttpFoundation",
-        versions: "2.8.x | 3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
+        versions: "2.8.52 | 3.4.47 | 4.4.49 | 5.4.50 | 6.4.35 | 7.4.8",
         link: "./symfony/",
       },
       {
         name: "Symfony HttpKernel",
-        versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
+        versions: "3.4.49 | 4.4.51 | 5.4.51 | 6.4.38 | 7.4.10",
         link: "./symfony/",
       },
       {
         name: "Symfony Mailer",
-        versions: "6.4.x",
+        versions: "6.4.34",
         link: "./symfony/",
       },
       {
         name: "Symfony Mime",
-        versions: "5.4.x | 6.4.x | 7.4.x",
+        versions: "5.4.45 | 6.4.37 | 7.4.9",
         link: "./symfony/",
       },
       {
         name: "Symfony Polyfill Intl IDN",
-        versions: "1.30.x",
+        versions: "1.30.0",
         link: "./symfony/",
       },
       {
         name: "Symfony PSR HTTP Message Bridge",
-        versions: "1.1.x | 1.2.x",
+        versions: "1.1.2 | 1.2.0",
         link: "./symfony/",
       },
       {
         name: "Symfony Process",
-        versions: "3.4.x | 4.4.x | 5.x | 6.x",
+        versions: "3.4.47 | 4.4.44 | 5.4.45 | 6.4.13",
         link: "./symfony/",
       },
       {
         name: "Symfony Routing",
-        versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
+        versions: "3.4.47 | 4.4.44 | 5.4.48 | 6.4.37 | 7.4.9",
         link: "./symfony/",
       },
       {
@@ -3998,7 +3998,7 @@ const techData = [
       },
       {
         name: "Symfony Yaml",
-        versions: "2.8.x | 3.4.x | 4.4.x",
+        versions: "2.8.52 | 3.4.47 | 4.4.45",
         link: "./symfony/",
       },
       {
@@ -4012,7 +4012,7 @@ const techData = [
         link: "./twig/",
       },
       {
-        name: "yii2-dev",
+        name: "Yii 2",
         versions: "2.0.54",
         link: "./yii2-dev/",
       },
@@ -4034,6 +4034,11 @@ const techData = [
       {
         name: "Zend HTTP",
         versions: "2.5.6",
+        link: "./zendframework/",
+      },
+      {
+        name: "Zend Session",
+        versions: "2.1.6",
         link: "./zendframework/",
       },
       {

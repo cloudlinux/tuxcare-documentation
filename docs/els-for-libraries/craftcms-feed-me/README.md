@@ -1,10 +1,10 @@
-# CraftCMS Feed Me Plugin
+# Feed Me
 
 Endless Lifecycle Support (ELS) for the CraftCMS Feed Me plugin from TuxCare provides security fixes for versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **CraftCMS Feed Me Plugin** 3.x
+* **Feed Me** 3.1.17
 
 Other versions upon request.
 
