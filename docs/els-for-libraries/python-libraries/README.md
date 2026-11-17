@@ -30,13 +30,13 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
 * **LightGBM** 3.3.5
 * **lxml** 4.6.5, 4.9.4, 5.4.0
 * **MLflow** 2.9.1, 2.22.4
-* **MySQL Connector/Python** (`mysql-connector-python`) 8.4.0
+* **MySQL Connector/Python** 8.4.0
 * **orjson** 3.8.5
 * **pandas** 2.2.0, 2.2.2
 * **paramiko** 2.12.0, 3.0.0
 * **pdfkit** 0.6.1
 * **Pillow** 8.4.0, 9.4.0, 9.5.0, 10.4.0, 11.2.1, 11.3.0
-* **Protocol Buffers** (`protobuf`) 3.17.0, 3.20.3, 4.24.3, 4.25.8, 4.25.9
+* **Protocol Buffers** 3.17.0, 3.20.3, 4.24.3, 4.25.8, 4.25.9
 * **pyarrow** 12.0.1
 * **Pydantic** 1.10.0, 1.10.5
 * **PyJWT** 1.7.1, 2.3.0, 2.8.0, 2.10.1
@@ -53,9 +53,9 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
   * **virtualenv** 20.39.1
 * **python-jose** 3.3.0
 * **python-multipart** 0.0.6
-* **PyTorch** (`torch`) 1.13.1
+* **PyTorch** 1.13.1
 * **PyYAML** 3.13, 5.3.1
-* **redis-py** (`redis`) 4.5.1
+* **redis-py** 4.5.1
 * **Requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
 * **scikit-learn** 1.0.2
 * **sentence-transformers** 2.7.0
