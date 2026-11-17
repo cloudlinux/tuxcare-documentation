@@ -154,11 +154,12 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Okio** 1.4.0, 1.6.0, 1.14.0, 2.8.0, 2.10.0
 * **OpenMLDB** 0.4.4-hotfix1-allinone
 * **OpenTelemetry Java** 1.29.0
-* **Plexus Archiver Component** 3.4, 3.6.0
+* **Plexus Archiver Component** 2.8.1, 3.4, 3.5, 3.6.0, 4.2.0, 4.2.1, 4.4.0, 4.10.0
 * **Plexus Build API** 0.0.7
 * **Plexus Containers** 1.5.5
-* **Plexus Sec Dispatcher** 2.0
-* **Plexus Utils** 1.2, 1.4.5, 1.5.5, 1.5.6, 1.5.8, 1.5.15, 2.0.4, 2.0.5, 2.0.6, 2.1, 3.0.1, 3.0.8, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.22, 3.0.24, 3.1.0, 3.1.1, 3.2.0, 3.2.1, 3.3.0, 3.3.1, 3.4.1, 3.4.2, 3.5.1, 3.6.0, 4.0.0, 4.0.1, 4.0.2
+* **Plexus IO Components** 2.7.1
+* **Plexus Sec Dispatcher** 1.4, 2.0
+* **Plexus Utils** 1.1, 1.2, 1.4.5, 1.5.5, 1.5.6, 1.5.8, 1.5.15, 2.0.4, 2.0.5, 2.0.6, 2.0.7, 2.1, 3.0.1, 3.0.8, 3.0.15, 3.0.17, 3.0.18, 3.0.20, 3.0.22, 3.0.24, 3.1.0, 3.1.1, 3.2.0, 3.2.1, 3.3.0, 3.3.1, 3.4.1, 3.4.2, 3.5.1, 3.6.0, 4.0.0, 4.0.1, 4.0.2
 * **Prometheus Java Metrics Library** 0.16.0
 * **Quartz Scheduler** 1.8.5, 2.3.2
 * **Querydsl** 5.1.0
