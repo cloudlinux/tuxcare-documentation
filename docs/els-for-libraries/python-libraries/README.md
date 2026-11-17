@@ -53,9 +53,9 @@ Endless Lifecycle Support (ELS) for Python Libraries from TuxCare provides secur
   * **virtualenv** 20.39.1
 * **python-jose** 3.3.0
 * **python-multipart** 0.0.6
-* **PyTorch** 1.13.1
+* **PyTorch** (`torch`) 1.13.1
 * **PyYAML** 3.13, 5.3.1
-* **redis-py** 4.5.1
+* **redis-py** (`redis`) 4.5.1
 * **Requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
 * **scikit-learn** 1.0.2
 * **sentence-transformers** 2.7.0
