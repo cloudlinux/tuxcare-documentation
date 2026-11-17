@@ -314,7 +314,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/email-validator/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
                     path: '/els-for-libraries/firebase-php-jwt/',
@@ -334,7 +334,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/intervention-image/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/intervention-image.webp',
                 },
                 {
                     path: '/els-for-libraries/jmespath-php/',
@@ -366,7 +366,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/league-glide/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/league-logo.webp',
                 },
                 {
                     path: '/els-for-libraries/league-oauth2-client/',
@@ -378,7 +378,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/mobile-detect/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
                     path: '/els-for-libraries/mongodb-php-library/',
@@ -394,7 +394,7 @@ export default {
                 },
                 {
                     path: '/els-for-libraries/parsedown/',
-                    icon: '/images/php-logo.webp',
+                    icon: '/images/parsedown.webp',
                 },
                 {
                     path: '/els-for-libraries/php-http-guzzle6-adapter/',
