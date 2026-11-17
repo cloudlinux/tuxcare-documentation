@@ -73,13 +73,13 @@ TuxCare's Endless Lifecycle Support (ELS) for Jackson provides security patches 
 
 | Module | Version |
 |---|---|
-| jackson-jaxrs-base | 2.11.4, 2.15.4 |
-| jackson-jaxrs-cbor-provider | 2.11.4, 2.15.4 |
-| jackson-jaxrs-json-provider | 2.11.4, 2.15.4 |
-| jackson-jaxrs-providers | 2.11.4, 2.15.4 |
-| jackson-jaxrs-smile-provider | 2.11.4, 2.15.4 |
-| jackson-jaxrs-xml-provider | 2.11.4, 2.15.4 |
-| jackson-jaxrs-yaml-provider | 2.11.4, 2.15.4 |
+| jackson-jaxrs-base | 2.11.4, 2.15.4, 2.16.2 |
+| jackson-jaxrs-cbor-provider | 2.11.4, 2.15.4, 2.16.2 |
+| jackson-jaxrs-json-provider | 2.11.4, 2.15.4, 2.16.2 |
+| jackson-jaxrs-providers | 2.11.4, 2.15.4, 2.16.2 |
+| jackson-jaxrs-smile-provider | 2.11.4, 2.15.4, 2.16.2 |
+| jackson-jaxrs-xml-provider | 2.11.4, 2.15.4, 2.16.2 |
+| jackson-jaxrs-yaml-provider | 2.11.4, 2.15.4, 2.16.2 |
 </template>
 
 <template #Modules>
