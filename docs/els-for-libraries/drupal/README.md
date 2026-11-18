@@ -4,26 +4,26 @@ Endless Lifecycle Support (ELS) for Drupal from TuxCare provides security fixes 
 
 ## Supported Versions
 
-* **drupal/core** 8.9.20, 9.5.11, 10.5.12, 10.6.17
-* **drupal/access_code** 7.1.1
-* **drupal/bootstrap_site_alert** 7.1.6
-* **drupal/coffee** 7.2.3
-* **drupal/colorbox** 2.1.2, 7.2.19
-* **drupal/commerce_paybox** 7.1.5
-* **drupal/facebook_pixel** 7.1.1
-* **drupal/filefield_paths** 7.1.2
-* **drupal/flag** 7.3.9
-* **drupal/form_builder** 7.1.22
-* **drupal/gdpr** 3.0.0, 3.1.0, 7.1.0
-* **drupal/i18n** 7.1.35
-* **drupal/link** 7.1.13
-* **drupal/openid_connect** 7.1.3
-* **drupal/protected_pages** 7.2.4
-* **drupal/shs** 7.1.10
-* **drupal/spamspan** 3.2.0, 7.1.4
-* **drupal/term_reference_tree** 7.1.11
-* **drupal/tfa_basic** 7.1.2
-* **drupal/webform_multifile** 7.1.6
+* **Drupal** (`drupal/core`) 8.9.20, 9.5.11, 10.5.12, 10.6.17
+* **Drupal Access Code** (`drupal/access_code`) 7.1.1
+* **Drupal Bootstrap Site Alert** (`drupal/bootstrap_site_alert`) 7.1.6
+* **Drupal Coffee** (`drupal/coffee`) 7.2.3
+* **Drupal Colorbox** (`drupal/colorbox`) 2.1.2, 7.2.19
+* **Drupal Commerce Paybox** (`drupal/commerce_paybox`) 7.1.5
+* **Drupal Facebook Pixel** (`drupal/facebook_pixel`) 7.1.1
+* **Drupal File (Field) Paths** (`drupal/filefield_paths`) 7.1.2
+* **Drupal Flag** (`drupal/flag`) 7.3.9
+* **Drupal Form Builder** (`drupal/form_builder`) 7.1.22
+* **Drupal GDPR** (`drupal/gdpr`) 3.0.0, 3.1.0, 7.1.0
+* **Drupal Internationalization** (`drupal/i18n`) 7.1.35
+* **Drupal Link** (`drupal/link`) 7.1.13
+* **Drupal OpenID Connect** (`drupal/openid_connect`) 7.1.3
+* **Drupal Protected Pages** (`drupal/protected_pages`) 7.2.4
+* **Drupal Simple Hierarchical Select** (`drupal/shs`) 7.1.10
+* **Drupal SpamSpan** (`drupal/spamspan`) 3.2.0, 7.1.4
+* **Drupal Taxonomy Term Reference Tree** (`drupal/term_reference_tree`) 7.1.11
+* **Drupal TFA Basic** (`drupal/tfa_basic`) 7.1.2
+* **Drupal Webform Multiple File Upload** (`drupal/webform_multifile`) 7.1.6
 
 Other versions upon request.
 
