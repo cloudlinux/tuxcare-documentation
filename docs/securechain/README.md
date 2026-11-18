@@ -47,11 +47,6 @@ TuxCare's commitment to transparency and visibility is foundational to the Secur
 
 * **SLSA Compliance**: TuxCare packages are built and signed to support verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance at Level 3. Builds run from vetted sources, include attestations for dependencies, and undergo continuous testing to maintain integrity and trust.
 * **Software Bill of Materials (SBOM)**: Machine-readable SBOMs provide visibility into package composition and dependencies, supporting software supply chain transparency and accountability. Depending on the package, TuxCare provides SBOMs in industry-standard formats — SPDX and CycloneDX.
-
-:::warning
-Note: SBOM availability varies by package. Customers can ask about a specific package through the [TuxCare Support Portal](https://tuxcare.com/support-portal/); if you are evaluating TuxCare, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-:::
-
 * **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. TuxCare publishes VEX in standard formats, including CycloneDX VEX.
 * **Verifiable Integrity and Provenance**: Packages and metadata provide end-to-end provenance information, helping customers verify the build, test, and distribution history of the software.
 * **Secure Distribution**: TuxCare-managed infrastructure distributes signed packages and associated metadata, ensuring authenticity and integrity.

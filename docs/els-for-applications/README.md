@@ -32,18 +32,8 @@ TuxCare's commitment to transparency and visibility is foundational to the ELS f
 <!--* **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
 -->
 * **Software Bill of Materials (SBOM)**: Machine-readable SBOMs provide visibility into package composition and dependencies, supporting software supply chain transparency and accountability. Depending on the package, TuxCare provides SBOMs in industry-standard formats — SPDX and CycloneDX. See [Machine-Readable Security Data](./machine-readable-security-data/) for current availability.
-
-:::warning
-Note: SBOM availability varies by package. Customers can ask about a specific package through the [TuxCare Support Portal](https://tuxcare.com/support-portal/); if you are evaluating TuxCare, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-:::
-
 * **Vulnerability Exploitability eXchange (VEX)**: Machine-readable VEX documents provide contextual vulnerability information, helping teams understand which known CVEs affect specific package versions and reduce remediation noise. VEX is published in standard formats, including CycloneDX VEX. See [Machine-Readable Security Data](./machine-readable-security-data/) for per-ecosystem feeds and details.
 * **Verifiable Integrity and Provenance**: TuxCare packages and metadata provide comprehensive end-to-end provenance, detailing how each package was constructed and tested, ensuring that all components in your software stack are trustworthy.
-
-:::warning
-Note: This feature is under consideration for future development and may be available at a later date. If you are interested, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-:::
-
 * **Secure Distribution**: Signed versions of the packages and their metadata are distributed from a registry managed, secured, and protected by TuxCare, guaranteeing that your software updates are authentic and untampered.
 
 ## Support Duration
