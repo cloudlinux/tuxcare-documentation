@@ -7,38 +7,19 @@ NuGet is the standard package manager for .NET, used to deliver the reusable com
 ## Supported NuGet Packages
 
 * **.NET** 6, 8, 10
-* **AspNetKatana**
-  * **Microsoft.Owin** 3.1.0
-  * **Microsoft.Owin.\*** (all 20 packages) 3.1.0
-  * **OwinHost** 3.1.0
+* **AspNetKatana** 3.1.0
 * **AutoMapper** 2.2.1, 3.3.1, 4.2.1, 5.2.0, 6.2.2, 7.0.1, 8.1.1, 9.0.0, 10.1.1, 11.0.1, 12.0.1, 13.0.1, 14.0.0
 * **jose-jwt** 2.6.1
 * **log4net** 1.2.15
 * **Microsoft.Azure.Storage.DataMovement** 1.2.0
 * **Microsoft.Data.SqlClient** 1.1.4
 * **MimeKit** 3.6.1
-* **MSBuild**
-  * **Microsoft.Build** 17.3.2
-  * **Microsoft.Build.Framework** 17.3.2
-  * **Microsoft.Build.Tasks.Core** 17.3.2
-  * **Microsoft.Build.Utilities.Core** 17.3.2
-  * **Microsoft.NET.StringTools** 17.3.2
+* **MSBuild** 17.3.2
 * **Newtonsoft.Json** 4.5.11, 6.0.8, 8.0.3, 9.0.1, 10.0.3, 11.0.2, 12.0.3
 * **NHibernate** 4.1.2.4000
-* **NuGet.Client**
-  * **NuGet.Packaging** 6.3.4
-  * **NuGet.Packaging.Core** 6.3.4
-  * **NuGet.ProjectModel** 6.3.4
-* **Refit**
-  * **Refit** 6.3.2
-  * **Refit.HttpClientFactory** 6.3.2
-  * **Refit.Newtonsoft.Json** 6.3.2
-  * **Refit.Xml** 6.3.2
-* **RestSharp**
-  * **RestSharp** 108.0.3, 110.2.0, 111.4.1
-  * **RestSharp.Serializers.CsvHelper** 108.0.3, 110.2.0, 111.4.1
-  * **RestSharp.Serializers.NewtonsoftJson** 108.0.3, 110.2.0, 111.4.1
-  * **RestSharp.Serializers.Xml** 108.0.3, 110.2.0, 111.4.1
+* **NuGet.Client** 6.3.4
+* **Refit** 6.3.2
+* **RestSharp** 108.0.3, 110.2.0, 111.4.1
 * **SharpZipLib** 0.86.0
 * **SixLabors.ImageSharp** 1.0.4
 * **Snappier** 1.0.0

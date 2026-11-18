@@ -4070,8 +4070,6 @@ const techData = [
       {
         name: "AspNetKatana",
         versions: "3.1.0",
-        aliases:
-          "Microsoft.Owin Microsoft.Owin.Cors Microsoft.Owin.Diagnostics Microsoft.Owin.FileSystems Microsoft.Owin.Host.HttpListener Microsoft.Owin.Host.SystemWeb Microsoft.Owin.Hosting Microsoft.Owin.Security Microsoft.Owin.Security.ActiveDirectory Microsoft.Owin.Security.Cookies Microsoft.Owin.Security.Facebook Microsoft.Owin.Security.Google Microsoft.Owin.Security.Jwt Microsoft.Owin.Security.MicrosoftAccount Microsoft.Owin.Security.OAuth Microsoft.Owin.Security.OpenIdConnect Microsoft.Owin.Security.Twitter Microsoft.Owin.Security.WsFederation Microsoft.Owin.SelfHost Microsoft.Owin.StaticFiles Microsoft.Owin.Testing OwinHost",
         link: "./dotnet/",
       },
       {
@@ -4107,8 +4105,6 @@ const techData = [
       {
         name: "MSBuild",
         versions: "17.3.2",
-        aliases:
-          "Microsoft.Build Microsoft.Build.Framework Microsoft.Build.Tasks.Core Microsoft.Build.Utilities.Core Microsoft.NET.StringTools",
         link: "./dotnet/",
       },
       {
@@ -4124,20 +4120,16 @@ const techData = [
       {
         name: "NuGet.Client",
         versions: "6.3.4",
-        aliases: "NuGet.Packaging NuGet.Packaging.Core NuGet.ProjectModel",
         link: "./dotnet/",
       },
       {
         name: "Refit",
         versions: "6.3.2",
-        aliases: "Refit.HttpClientFactory Refit.Newtonsoft.Json Refit.Xml",
         link: "./dotnet/",
       },
       {
         name: "RestSharp",
         versions: "108.0.3 | 110.2.0 | 111.4.1",
-        aliases:
-          "RestSharp.Serializers.CsvHelper RestSharp.Serializers.NewtonsoftJson RestSharp.Serializers.Xml",
         link: "./dotnet/",
       },
       {
@@ -4174,10 +4166,8 @@ const filteredData = computed(() => {
   return techData
     .map((item) => {
       const matchEcosystem = item.ecosystem.toLowerCase().includes(term);
-      const filteredProjects = item.projects.filter(
-        (p) =>
-          p.name.toLowerCase().includes(term) ||
-          (p.aliases ?? "").toLowerCase().includes(term)
+      const filteredProjects = item.projects.filter((p) =>
+        p.name.toLowerCase().includes(term)
       );
       if (term && !matchEcosystem && filteredProjects.length === 0) return null;
       return {
