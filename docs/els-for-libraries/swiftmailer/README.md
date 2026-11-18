@@ -1,10 +1,10 @@
-# SwiftMailer
+# Swift Mailer
 
-Endless Lifecycle Support (ELS) for SwiftMailer from TuxCare provides security fixes for SwiftMailer library versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Swift Mailer from TuxCare provides security fixes for Swift Mailer library versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **SwiftMailer** 5.4.12, 6.0.2
+* **Swift Mailer** 5.4.12, 6.0.2
 
 Other versions upon request.
 
@@ -55,9 +55,9 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install SwiftMailer
+4. Install Swift Mailer
 
-   Install the TuxCare-maintained SwiftMailer release that matches your project:
+   Install the TuxCare-maintained Swift Mailer release that matches your project:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require swiftmailer/swiftmailer:5.4.12-p1+tuxcare` },

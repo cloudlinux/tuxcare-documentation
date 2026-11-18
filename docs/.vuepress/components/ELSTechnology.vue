@@ -3587,12 +3587,12 @@ const techData = [
         link: "./carbon/",
       },
       {
-        name: "CraftCMS",
+        name: "Craft CMS",
         versions: "3.9.15 | 4.18.7 | 4.18.9",
         link: "./craftcms/",
       },
       {
-        name: "CraftCMS Feed Me Plugin",
+        name: "Craft CMS Feed Me",
         versions: "3.1.17",
         link: "./craftcms-feed-me/",
       },
@@ -3602,13 +3602,13 @@ const techData = [
         link: "./doctrine-orm/",
       },
       {
-        name: "DomPDF",
-        versions: "0.8.x | 1.2.x | 3.1.0",
+        name: "Dompdf",
+        versions: "0.8.6 | 1.2.2 | 3.1.0",
         link: "./dompdf/",
       },
       {
         name: "Drupal",
-        versions: "8.9.x | 9.5.x | 10.5.12 | 10.6.17",
+        versions: "8.9.20 | 9.5.11 | 10.5.12 | 10.6.17",
         link: "./drupal/",
       },
       {
@@ -3772,17 +3772,17 @@ const techData = [
         link: "./jmespath-php/",
       },
       {
-        name: "Laminas Diactoros",
+        name: "laminas-diactoros",
         versions: "1.8.7p2 | 2.22.0",
         link: "./laminas/",
       },
       {
-        name: "Laminas Http",
+        name: "laminas-http",
         versions: "2.5.6",
         link: "./laminas/",
       },
       {
-        name: "Laminas Session",
+        name: "laminas-session",
         versions: "2.1.6",
         link: "./laminas/",
       },
@@ -3812,7 +3812,7 @@ const techData = [
         link: "./laravel/",
       },
       {
-        name: "League Commonmark",
+        name: "League CommonMark",
         versions: "1.6.7 | 2.7.1 | 2.8.2",
         link: "./league-commonmark/",
       },
@@ -3833,7 +3833,7 @@ const techData = [
       },
       {
         name: "Livewire",
-        versions: "3.x",
+        versions: "3.6.3 | 3.6.4",
         link: "./livewire/",
       },
       {
@@ -3888,11 +3888,11 @@ const techData = [
       },
       {
         name: "PHPUnit",
-        versions: "4.8.10 | 5.7.27 | 6.5.14 | 7.5.20 | 8.4.3 | 9.5.28 | 10.4.2 | 11.4.4 | 12.4.5",
+        versions: "4.8.10 | 5.7.27 | 6.5.14 | 7.5.20 | 8.4.3 | 10.4.2 | 11.4.4 | 12.4.5",
         link: "./phpunit/",
       },
       {
-        name: "Protobuf",
+        name: "Protocol Buffers",
         versions: "3.24.4 | 3.25.9",
         link: "./google-protobuf/",
       },
@@ -3942,7 +3942,7 @@ const techData = [
         link: "./svg-sanitize/",
       },
       {
-        name: "SwiftMailer",
+        name: "Swift Mailer",
         versions: "5.4.12 | 6.0.2",
         link: "./swiftmailer/",
       },
@@ -3953,47 +3953,47 @@ const techData = [
       },
       {
         name: "Symfony HttpClient",
-        versions: "6.0.x",
+        versions: "6.0.20",
         link: "./symfony/",
       },
       {
         name: "Symfony HttpFoundation",
-        versions: "2.8.x | 3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
+        versions: "2.8.52 | 3.4.47 | 4.4.49 | 5.4.50 | 6.4.35 | 7.4.8",
         link: "./symfony/",
       },
       {
         name: "Symfony HttpKernel",
-        versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
+        versions: "3.4.49 | 4.4.51 | 5.4.51 | 6.4.38 | 7.4.10",
         link: "./symfony/",
       },
       {
         name: "Symfony Mailer",
-        versions: "6.4.x",
+        versions: "6.4.34",
         link: "./symfony/",
       },
       {
         name: "Symfony Mime",
-        versions: "5.4.x | 6.4.x | 7.4.x",
+        versions: "5.4.45 | 6.4.37 | 7.4.9",
         link: "./symfony/",
       },
       {
         name: "Symfony Polyfill Intl IDN",
-        versions: "1.30.x",
+        versions: "1.30.0",
         link: "./symfony/",
       },
       {
         name: "Symfony PSR HTTP Message Bridge",
-        versions: "1.1.x | 1.2.x",
+        versions: "1.1.2 | 1.2.0",
         link: "./symfony/",
       },
       {
         name: "Symfony Process",
-        versions: "3.4.x | 4.4.x | 5.x | 6.x",
+        versions: "3.4.47 | 4.4.44 | 5.4.45 | 6.4.13",
         link: "./symfony/",
       },
       {
         name: "Symfony Routing",
-        versions: "3.4.x | 4.4.x | 5.4.x | 6.4.x | 7.4.x",
+        versions: "3.4.47 | 4.4.44 | 5.4.48 | 6.4.37 | 7.4.9",
         link: "./symfony/",
       },
       {
@@ -4003,7 +4003,7 @@ const techData = [
       },
       {
         name: "Symfony Yaml",
-        versions: "2.8.x | 3.4.x | 4.4.x",
+        versions: "2.8.52 | 3.4.47 | 4.4.45",
         link: "./symfony/",
       },
       {
@@ -4017,7 +4017,7 @@ const techData = [
         link: "./twig/",
       },
       {
-        name: "yii2-dev",
+        name: "Yii 2",
         versions: "2.0.54",
         link: "./yii2-dev/",
       },
@@ -4039,6 +4039,11 @@ const techData = [
       {
         name: "Zend HTTP",
         versions: "2.5.6",
+        link: "./zendframework/",
+      },
+      {
+        name: "Zend Session",
+        versions: "2.1.6",
         link: "./zendframework/",
       },
       {

@@ -1,10 +1,10 @@
-# CraftCMS Feed Me Plugin
+# Craft CMS Feed Me
 
-Endless Lifecycle Support (ELS) for the CraftCMS Feed Me plugin from TuxCare provides security fixes for versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for the Craft CMS Feed Me plugin from TuxCare provides security fixes for versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **CraftCMS Feed Me Plugin** 3.x
+* **Craft CMS Feed Me** 3.1.17
 
 Other versions upon request.
 
@@ -55,9 +55,9 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install CraftCMS Feed Me
+4. Install Craft CMS Feed Me
 
-   Install the TuxCare-maintained CraftCMS Feed Me release that matches your project:
+   Install the TuxCare-maintained Craft CMS Feed Me release that matches your project:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require verbb/feed-me:3.1.17-p5+tuxcare` },

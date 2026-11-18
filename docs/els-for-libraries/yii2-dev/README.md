@@ -1,10 +1,10 @@
-# yii2-dev
+# Yii 2
 
-Endless Lifecycle Support (ELS) for yii2-dev from TuxCare provides security fixes for Yii 2 framework versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Yii 2 from TuxCare provides security fixes for Yii 2 framework versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **yii2-dev** 2.0.54
+* **Yii 2** 2.0.54
 
 Other versions upon request.
 
@@ -55,9 +55,9 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install yii2-dev
+4. Install Yii 2
 
-   Install the TuxCare-maintained yii2-dev release that matches your project:
+   Install the TuxCare-maintained Yii 2 release that matches your project:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require yiisoft/yii2-dev:2.0.54-p1+tuxcare` },

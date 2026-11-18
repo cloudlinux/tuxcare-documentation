@@ -1,10 +1,10 @@
-# Protobuf for PHP
+# Protocol Buffers for PHP
 
-Endless Lifecycle Support (ELS) for Protobuf from TuxCare provides security fixes for Protobuf library versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Protocol Buffers from TuxCare provides security fixes for Protocol Buffers library versions that have reached their end-of-life. With ELS, you can continue running your applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* **Protobuf** 3.24.4, 3.25.9
+* **Protocol Buffers** 3.24.4, 3.25.9
 
 Other versions upon request.
 
@@ -55,13 +55,13 @@ Other versions upon request.
      { title: 'composer.json', content: composerjson }
    ]" />
 
-4. Install Protobuf
+4. Install Protocol Buffers
 
-   Install the TuxCare-maintained Protobuf release that matches your project:
+   Install the TuxCare-maintained Protocol Buffers release that matches your project:
 
    <TableTabs label="Choose version: ">
 
-   <template #Protobuf_3.24>
+   <template #Protocol_Buffers_3.24>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require google/protobuf:3.24.4-p1+tuxcare` },
@@ -70,7 +70,7 @@ Other versions upon request.
 
    </template>
 
-   <template #Protobuf_3.25>
+   <template #Protocol_Buffers_3.25>
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer require google/protobuf:3.25.9-p1+tuxcare` },

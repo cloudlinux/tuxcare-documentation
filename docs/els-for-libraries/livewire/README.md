@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Livewire from TuxCare provides security fixe
 
 ## Supported Versions
 
-* **Livewire** 3.x
+* **Livewire** 3.6.3, 3.6.4
 
 Other versions upon request.
 
