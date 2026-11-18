@@ -4068,113 +4068,101 @@ const techData = [
         link: "./dotnet/",
       },
       {
+        name: "AspNetKatana",
+        versions: "3.1.0",
+        aliases:
+          "Microsoft.Owin Microsoft.Owin.Cors Microsoft.Owin.Diagnostics Microsoft.Owin.FileSystems Microsoft.Owin.Host.HttpListener Microsoft.Owin.Host.SystemWeb Microsoft.Owin.Hosting Microsoft.Owin.Security Microsoft.Owin.Security.ActiveDirectory Microsoft.Owin.Security.Cookies Microsoft.Owin.Security.Facebook Microsoft.Owin.Security.Google Microsoft.Owin.Security.Jwt Microsoft.Owin.Security.MicrosoftAccount Microsoft.Owin.Security.OAuth Microsoft.Owin.Security.OpenIdConnect Microsoft.Owin.Security.Twitter Microsoft.Owin.Security.WsFederation Microsoft.Owin.SelfHost Microsoft.Owin.StaticFiles Microsoft.Owin.Testing OwinHost",
+        link: "./dotnet/",
+      },
+      {
         name: "AutoMapper",
-        versions: "2.2.2 | 3.3.2 | 4.2.2 | 5.2.1 | 6.2.3 | 7.0.2 | 8.1.2 | 9.0.1 | 10.1.2 | 11.0.2 | 12.0.2 | 13.0.2 | 14.0.1",
+        versions: "2.2.1 | 3.3.1 | 4.2.1 | 5.2.0 | 6.2.2 | 7.0.1 | 8.1.1 | 9.0.0 | 10.1.1 | 11.0.1 | 12.0.1 | 13.0.1 | 14.0.0",
         link: "./dotnet/",
       },
       {
         name: "jose-jwt",
-        versions: "2.6.2",
+        versions: "2.6.1",
         link: "./dotnet/",
       },
       {
         name: "log4net",
-        versions: "1.2.15 | 1.2.16",
+        versions: "1.2.15",
         link: "./dotnet/",
       },
       {
         name: "Microsoft.Azure.Storage.DataMovement",
-        versions: "1.2.0 | 1.2.1",
-        link: "./dotnet/",
-      },
-      {
-        name: "Microsoft.Build",
-        versions: "17.3.5",
-        link: "./dotnet/",
-      },
-      {
-        name: "Microsoft.Build.Tasks.Core",
-        versions: "17.3.5",
-        link: "./dotnet/",
-      },
-      {
-        name: "Microsoft.Build.Utilities.Core",
-        versions: "17.3.5",
+        versions: "1.2.0",
         link: "./dotnet/",
       },
       {
         name: "Microsoft.Data.SqlClient",
-        versions: "1.1.4 | 1.1.5",
-        link: "./dotnet/",
-      },
-      {
-        name: "Microsoft.Owin",
-        versions: "3.1.0 | 3.1.1",
+        versions: "1.1.4",
         link: "./dotnet/",
       },
       {
         name: "MimeKit",
-        versions: "3.6.1 | 3.6.2",
+        versions: "3.6.1",
+        link: "./dotnet/",
+      },
+      {
+        name: "MSBuild",
+        versions: "17.3.2",
+        aliases:
+          "Microsoft.Build Microsoft.Build.Framework Microsoft.Build.Tasks.Core Microsoft.Build.Utilities.Core Microsoft.NET.StringTools",
         link: "./dotnet/",
       },
       {
         name: "Newtonsoft.Json",
-        versions: "4.5.11 | 6.0.8 | 8.0.3 | 9.0.1 | 10.0.3 | 11.0.2 | 12.0.3 | 13.0.5",
+        versions: "4.5.11 | 6.0.8 | 8.0.3 | 9.0.1 | 10.0.3 | 11.0.2 | 12.0.3",
         link: "./dotnet/",
       },
       {
         name: "NHibernate",
-        versions: "4.1.2.4001",
+        versions: "4.1.2.4000",
         link: "./dotnet/",
       },
       {
-        name: "NuGet.Packaging",
-        versions: "6.3.5",
-        link: "./dotnet/",
-      },
-      {
-        name: "NuGet.Packaging.Core",
-        versions: "6.3.5",
-        link: "./dotnet/",
-      },
-      {
-        name: "NuGet.ProjectModel",
-        versions: "6.3.5",
+        name: "NuGet.Client",
+        versions: "6.3.4",
+        aliases: "NuGet.Packaging NuGet.Packaging.Core NuGet.ProjectModel",
         link: "./dotnet/",
       },
       {
         name: "Refit",
-        versions: "6.3.2 | 6.3.3",
+        versions: "6.3.2",
+        aliases: "Refit.HttpClientFactory Refit.Newtonsoft.Json Refit.Xml",
         link: "./dotnet/",
       },
       {
         name: "RestSharp",
-        versions: "108.0.3 | 108.0.4 | 110.2.0 | 110.2.1 | 111.4.1 | 111.4.2",
+        versions: "108.0.3 | 110.2.0 | 111.4.1",
+        aliases:
+          "RestSharp.Serializers.CsvHelper RestSharp.Serializers.NewtonsoftJson RestSharp.Serializers.Xml",
         link: "./dotnet/",
       },
       {
         name: "SharpZipLib",
-        versions: "0.86.0 | 0.86.1",
+        versions: "0.86.0",
         link: "./dotnet/",
       },
       {
         name: "SixLabors.ImageSharp",
-        versions: "1.0.5",
+        versions: "1.0.4",
         link: "./dotnet/",
       },
       {
         name: "Snappier",
-        versions: "1.0.1",
+        versions: "1.0.0",
         link: "./dotnet/",
       },
       {
         name: "System.Formats.Asn1",
-        versions: "5.0.1 | 7.0.1",
+        versions: "5.0.0 | 7.0.0",
         link: "./dotnet/",
       },
       {
         name: "System.Text.Json",
-        versions: "7.0.5",
+        versions: "7.0.4",
         link: "./dotnet/",
       },
     ],
@@ -4186,8 +4174,10 @@ const filteredData = computed(() => {
   return techData
     .map((item) => {
       const matchEcosystem = item.ecosystem.toLowerCase().includes(term);
-      const filteredProjects = item.projects.filter((p) =>
-        p.name.toLowerCase().includes(term)
+      const filteredProjects = item.projects.filter(
+        (p) =>
+          p.name.toLowerCase().includes(term) ||
+          (p.aliases ?? "").toLowerCase().includes(term)
       );
       if (term && !matchEcosystem && filteredProjects.length === 0) return null;
       return {

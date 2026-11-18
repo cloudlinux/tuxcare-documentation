@@ -6,29 +6,44 @@ NuGet is the standard package manager for .NET, used to deliver the reusable com
 
 ## Supported NuGet Packages
 
-* .NET 6, 8, 10
-* AutoMapper 2.2.2, 3.3.2, 4.2.2, 5.2.1, 6.2.3, 7.0.2, 8.1.2, 9.0.1, 10.1.2, 11.0.2, 12.0.2, 13.0.2, 14.0.1
-* jose-jwt 2.6.2
-* log4net 1.2.15, 1.2.16
-* Microsoft.Azure.Storage.DataMovement 1.2.0, 1.2.1
-* Microsoft.Build 17.3.5
-* Microsoft.Build.Tasks.Core 17.3.5
-* Microsoft.Build.Utilities.Core 17.3.5
-* Microsoft.Data.SqlClient 1.1.4, 1.1.5
-* Microsoft.Owin 3.1.0, 3.1.1
-* MimeKit 3.6.1, 3.6.2
-* Newtonsoft.Json 4.5.11, 6.0.8, 8.0.3, 9.0.1, 10.0.3, 11.0.2, 12.0.3, 13.0.5
-* NHibernate 4.1.2.4001
-* NuGet.Packaging 6.3.5
-* NuGet.Packaging.Core 6.3.5
-* NuGet.ProjectModel 6.3.5
-* Refit 6.3.2, 6.3.3
-* RestSharp 108.0.3, 108.0.4, 110.2.0, 110.2.1, 111.4.1, 111.4.2
-* SharpZipLib 0.86.0, 0.86.1
-* SixLabors.ImageSharp 1.0.5
-* Snappier 1.0.1
-* System.Formats.Asn1 5.0.1, 7.0.1
-* System.Text.Json 7.0.5
+* **.NET** 6, 8, 10
+* **AspNetKatana**
+  * **Microsoft.Owin** 3.1.0
+  * **Microsoft.Owin.\*** (all 20 packages) 3.1.0
+  * **OwinHost** 3.1.0
+* **AutoMapper** 2.2.1, 3.3.1, 4.2.1, 5.2.0, 6.2.2, 7.0.1, 8.1.1, 9.0.0, 10.1.1, 11.0.1, 12.0.1, 13.0.1, 14.0.0
+* **jose-jwt** 2.6.1
+* **log4net** 1.2.15
+* **Microsoft.Azure.Storage.DataMovement** 1.2.0
+* **Microsoft.Data.SqlClient** 1.1.4
+* **MimeKit** 3.6.1
+* **MSBuild**
+  * **Microsoft.Build** 17.3.2
+  * **Microsoft.Build.Framework** 17.3.2
+  * **Microsoft.Build.Tasks.Core** 17.3.2
+  * **Microsoft.Build.Utilities.Core** 17.3.2
+  * **Microsoft.NET.StringTools** 17.3.2
+* **Newtonsoft.Json** 4.5.11, 6.0.8, 8.0.3, 9.0.1, 10.0.3, 11.0.2, 12.0.3
+* **NHibernate** 4.1.2.4000
+* **NuGet.Client**
+  * **NuGet.Packaging** 6.3.4
+  * **NuGet.Packaging.Core** 6.3.4
+  * **NuGet.ProjectModel** 6.3.4
+* **Refit**
+  * **Refit** 6.3.2
+  * **Refit.HttpClientFactory** 6.3.2
+  * **Refit.Newtonsoft.Json** 6.3.2
+  * **Refit.Xml** 6.3.2
+* **RestSharp**
+  * **RestSharp** 108.0.3, 110.2.0, 111.4.1
+  * **RestSharp.Serializers.CsvHelper** 108.0.3, 110.2.0, 111.4.1
+  * **RestSharp.Serializers.NewtonsoftJson** 108.0.3, 110.2.0, 111.4.1
+  * **RestSharp.Serializers.Xml** 108.0.3, 110.2.0, 111.4.1
+* **SharpZipLib** 0.86.0
+* **SixLabors.ImageSharp** 1.0.4
+* **Snappier** 1.0.0
+* **System.Formats.Asn1** 5.0.0, 7.0.0
+* **System.Text.Json** 7.0.4
 
 Other versions upon request.
 
