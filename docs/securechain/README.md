@@ -23,7 +23,7 @@ Aligning with many industry standards and regulatory requirements, TuxCare deliv
 | Severity | Maintenance *(from upstream fix)* | Sustained *(from CVE publication)* | Endless Lifecycle Support *(from CVE publication)* |
 | :-- | :-: | :-: | :-: |
 | Critical (CVSS 9.0+) | 7 days | 14 days | 14 days |
-| High (CVSS 7.0–8.9) | 14 days | 21 days | 14 days |
+| High (CVSS 7.0–8.9) | 14 days | 14 days | 14 days |
 | Medium (CVSS 4.0–6.9) | 30 days | 60 days | 60 days |
 | Low (CVSS below 4.0) | 60 days | 90 days | 90 days |
 
