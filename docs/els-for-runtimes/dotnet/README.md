@@ -177,6 +177,30 @@ TuxCare Installer installs and removes ELS .NET runtimes and SDKs through a grap
 
 </ELSSteps>
 
+**Silent installation**
+
+`TuxCare.Installer.exe` accepts the standard WiX Burn command-line switches:
+
+| Switch | Action |
+| --- | --- |
+| `/install` | Install TuxCare Installer (default) |
+| `/uninstall` | Uninstall TuxCare Installer (see [Uninstallation](#uninstallation)) |
+| `/repair` | Repair the TuxCare Installer installation |
+| `/layout <dir>` | Copy the installer and its files to `<dir>` without installing |
+| `/quiet` (also `/q`, `/s`, `/silent`) | Run without a user interface |
+| `/passive` | Show progress only, without prompts |
+| `/norestart` | Do not restart Windows |
+| `/forcerestart` | Restart Windows when finished |
+| `/log <file>` | Write a log to `<file>` |
+
+TuxCare Installer installs per machine, so run a quiet installation from an elevated (administrator) prompt:
+
+```text
+TuxCare.Installer.exe /install /quiet /norestart /log C:\Temp\tuxcare-install.log
+```
+
+A silent installation installs or updates TuxCare Installer itself and does not install .NET runtimes or SDKs: no command-line option selects a product. To install them unattended, use the PowerShell script (the **Manual (via PowerShell script)** tab). The only option you can set on the command line is `UninstallProducts` (see [Uninstallation](#uninstallation)).
+
 </template>
 
 <template #PowerShell_Script>
