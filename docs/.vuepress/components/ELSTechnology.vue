@@ -4084,7 +4084,7 @@ const techData = [
       },
       {
         name: "log4net",
-        versions: "1.2.15",
+        versions: "2.0.5",
         link: "./dotnet/",
       },
       {
@@ -4104,7 +4104,7 @@ const techData = [
       },
       {
         name: "MSBuild",
-        versions: "17.3.2",
+        versions: "17.3.2 | 17.3.4",
         link: "./dotnet/",
       },
       {
