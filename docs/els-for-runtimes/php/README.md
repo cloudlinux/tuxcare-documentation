@@ -3222,26 +3222,30 @@ The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer
    .\tuxcare-installer.ps1 -List -Product php
    ```
 
-   The archive name describes the build. For example, `php-8.2.29-tuxcare-els1-nts-Win32-vs16-x64-signed.zip` contains:
+   The archive name describes the build. For example, `php-8.2.29-tuxcare-els5-nts-Win32-vs16-x64-signed.zip` contains:
 
    * `8.2.29` — PHP version
-   * `tuxcare-els1` — TuxCare ELS build
+   * `tuxcare-els5` — TuxCare ELS build
    * `nts` — non-thread-safe build. Thread-safe builds have no `nts` part.
-   * `vs16` — compiler the build was made with (`vs16`, `vc15`, or `VC11`)
+   * `Win32` — Windows build
+   * `vs16` — compiler the build was made with: `VC9` (PHP 5.2, 5.4), `VC11` (5.5, 5.6), `VC14` (7.0), `VC15` (7.2, 7.3), `vc15` (7.4), or `vs16` (8.x)
    * `x64` — architecture: `x64` (64-bit) or `x86` (32-bit)
+   * `signed` — the binaries are Authenticode-signed
+
+   Some older archives have no compiler or architecture part, for example, `php-5.2.17-tuxcare-els8-nts-Win32-signed.zip`.
 
 5. Install a PHP version
 
    Use the archive name shown by `-List`. You can use wildcards, but the script installs **every** archive that matches, one after another, so make sure the name matches one archive only. `-Modules` lists the extensions to enable in `php.ini`:
 
    ```text
-   .\tuxcare-installer.ps1 -Install 'php-8.2.29-tuxcare-els1-nts-*-x64-*.zip' -Modules curl,mbstring,openssl,pdo_mysql
+   .\tuxcare-installer.ps1 -Install 'php-8.2.29-tuxcare-els5-nts-*-x64-*.zip' -Modules curl,mbstring,openssl,pdo_mysql
    ```
 
    To install to another folder without changing the **Path**, add `-InstallFolder` and `-NoPath`:
 
    ```text
-   .\tuxcare-installer.ps1 -Install 'php-8.2.29-tuxcare-els1-nts-*-x64-*.zip' -InstallFolder D:\PHP -NoPath
+   .\tuxcare-installer.ps1 -Install 'php-8.2.29-tuxcare-els5-nts-*-x64-*.zip' -InstallFolder D:\PHP -NoPath
    ```
 
 6. Verify the installation
@@ -3259,14 +3263,14 @@ The `tuxcare-installer.ps1` PowerShell script does the same as TuxCare Installer
 To register the server and install a PHP version in one command, for example, from a deployment tool, run:
 
 ```text
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tuxcare-installer.ps1 -LicenseKey <license-key> -Product php -Install "php-8.2.29-tuxcare-els1-nts-*-x64-*.zip" -InstallFolder D:\PHP -Modules curl,mbstring,openssl -NoPath
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File tuxcare-installer.ps1 -LicenseKey <license-key> -Product php -Install "php-8.2.29-tuxcare-els5-nts-*-x64-*.zip" -InstallFolder D:\PHP -Modules curl,mbstring,openssl -NoPath
 ```
 
 `-ExecutionPolicy Bypass` lets the script run without the one-time prompt to trust its publisher, which the signed script shows under the `RemoteSigned` policy.
 
 * **Install folder.** The script installs PHP to `<InstallFolder>\<archive name without .zip>`, by default under `C:\Program Files`. If that folder already exists, the installation fails with exit code `5`.
 * **Modules.** Without `-Modules`, the script creates `php.ini` with all extensions disabled.
-* **Path.** Without `-NoPath`, the script adds the PHP folder to the system **Path** and removes every other **Path** entry that contains `php`, so this version becomes the default. With `-NoPath`, the script does not change the **Path**, either on installation or on uninstallation.
+* **Path.** Without `-NoPath`, the script adds the PHP folder to the system **Path** and removes every other **Path** entry that contains `php`, from both the system and the user **Path**, so this version becomes the default. This is a plain substring match, so unrelated folders such as `C:\tools\phpstorm` are removed too: use `-NoPath` if the **Path** has such entries. With `-NoPath`, the script does not change the **Path**, either on installation or on uninstallation.
 * **Several archives.** To install several archives in one run, separate the names with commas in one argument, for example, `-Install "<archive-1>,<archive-2>"`. The script refuses a second name separated by a space.
 
 When you run the script again on the same server:
@@ -3514,9 +3518,9 @@ Installing a version with TuxCare Installer, or with the PowerShell script witho
 
 #### Check the Installed ELS Build
 
-`php -v` shows only the PHP version and the build date. Neither `php -v` nor `php -i` shows the TuxCare ELS build (for example, `tuxcare-els1`): it is part of the archive name only. To see it:
+`php -v` shows only the PHP version and the build date. Neither `php -v` nor `php -i` shows the TuxCare ELS build (for example, `tuxcare-els5`): it is part of the archive name only. To see it:
 
-* Check the PHP folder name. TuxCare Installer and the PowerShell script install PHP to a folder named after the archive, for example, `C:\Program Files\php-8.2.29-tuxcare-els1-nts-Win32-vs16-x64-signed`.
+* Check the PHP folder name. TuxCare Installer and the PowerShell script install PHP to a folder named after the archive, for example, `C:\Program Files\php-8.2.29-tuxcare-els5-nts-Win32-vs16-x64-signed`.
 * Run `.\tuxcare-installer.ps1 -List -Product php`. The list marks the installed archives, including those installed with TuxCare Installer.
 
 #### PHP Extensions List
@@ -4432,7 +4436,7 @@ TuxCare.Installer.exe /uninstall /quiet /norestart UninstallProducts=1
 To **uninstall a PHP version with the PowerShell script**, run it with the archive name shown by `-List`:
 
 ```text
-.\tuxcare-installer.ps1 -Uninstall 'php-8.2.29-tuxcare-els1-nts-*-x64-*.zip'
+.\tuxcare-installer.ps1 -Uninstall 'php-8.2.29-tuxcare-els5-nts-*-x64-*.zip'
 ```
 
 If the version was installed with `-NoPath`, the uninstallation does not change the **Path** either.
