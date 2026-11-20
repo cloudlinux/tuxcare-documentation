@@ -112,6 +112,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=php-http%2Fguzzle6-adapter) — Patched versions and changelogs
 * ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=php-http%2Fguzzle6-adapter) — Components covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/php-http/guzzle6-adapter/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>

@@ -2,64 +2,14 @@
 
 TuxCare provides machine-readable security data and verification tooling for Endless Lifecycle Support (ELS) for Language Ecosystems:
 
-* **SBOM (Software Bill of Materials)** — package composition and dependency inventory in SPDX and CycloneDX formats
+* **SBOM (Software Bill of Materials)** — package composition and dependency inventory in CycloneDX format
 * **VEX (Vulnerability Exploitability eXchange)** — exploitability status for known CVEs in CycloneDX VEX format
-* **Package signatures (GPG)** — detached OpenPGP signatures to verify each artifact's authenticity and integrity
+* **Package signatures (GPG)** — signatures to verify each artifact's authenticity and integrity
 * **Integrity violation logging** — detecting and retaining integrity-check failures for administrator review
 
 Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and [security.tuxcare.com](https://security.tuxcare.com/).
 
-## Software Bill of Materials (SBOM)
-
-Each package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. TuxCare provides SBOMs in industry-standard formats — SPDX and CycloneDX — so any SBOM-aware scanner or supply-chain tool can consume them.
-
-TuxCare generates SBOMs for all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET) and publishes them on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/); accessing them requires no credentials.
-
-SBOMs are currently published for:
-
-* JavaScript — [els_lang_javascript](https://security.tuxcare.com/sbom/cyclonedx/els_lang_javascript/), laid out as `<package>/<version>/<package>-<version>.sbom.json`; TuxCare publishes the SBOM's detached `.asc` signature under [signatures/els_lang_javascript](https://security.tuxcare.com/signatures/els_lang_javascript/) at the same `<package>/<version>/` path
-* Python — [els_lang_python](https://security.tuxcare.com/sbom/cyclonedx/els_lang_python/), laid out as `<package>/<version>/<package>-<version>-sbom.json`, with the SBOM's detached `.asc` signature next to it
-* PHP — [els_lang_php](https://security.tuxcare.com/sbom/cyclonedx/els_lang_php/), with the SBOM's detached `.asc` signature under [signatures/els_lang_php](https://security.tuxcare.com/signatures/els_lang_php/)
-* Java — [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/)
-* .NET — [els_lang_dotnet](https://security.tuxcare.com/sbom/cyclonedx/els_lang_dotnet/), laid out as `<package>/<version>/<package>.<version>.sbom.json`; TuxCare publishes .NET SBOMs for a few packages, without a detached signature
-
-If the package you use has no SBOM in these directories, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
-
-## Vulnerability Exploitability eXchange (VEX)
-
-TuxCare publishes VEX as CycloneDX VEX documents, distributed alongside each package version and updated with every release. A VEX document tells you which known CVEs actually affect a given artifact version and which don't, so scanner results stay focused on real exposure.
-
-TuxCare publishes a separate feed for each ecosystem:
-
-* Java - [els_lang_java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
-* Python - [els_lang_python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/) — Python releases iterate as `X.Y.Z.postN+tuxcare` (e.g. `2021.10.8.post2+tuxcare`), not `-tuxcare.N`
-* JavaScript - [els_lang_javascript](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/)
-* PHP - [els_lang_php](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — PHP releases iterate as `-pN+tuxcare`, for example `5.2.28-p1+tuxcare`, not `-tuxcare.N`
-* .NET - [els_lang_dotnet](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/)
-
-Each entry links one CVE to one artifact version and carries a status:
-
-* **exploitable** — the CVE affects this artifact version, and TuxCare has not yet patched it in this release.
-* **resolved** — TuxCare has released a patch for the CVE.
-
-Each VEX document reports the CVEs that directly affect the artifact. The feed covers every supported base version and every released `-tuxcare.N` iteration, so the entry count reflects these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
-
-## Package Signature Verification (GPG)
-
-TuxCare signs every package it builds with a detached OpenPGP signature so you can confirm, before installing or updating, that TuxCare produced the artifact and nobody altered it in transit. TuxCare creates the signature with its signing key (SHA-256 detached signature) and publishes it as a separate `.asc` file — on [security.tuxcare.com](https://security.tuxcare.com/signatures/) for JavaScript, in TuxCare Nexus for the other ecosystems.
-
-A successful verification proves two things about the artifact:
-
-* **Authenticity** — TuxCare signed it with its private key.
-* **Integrity** — its bytes match exactly what TuxCare signed; no tampering or corruption occurred.
-
-A failed verification is an **integrity violation**: treat the artifact as untrusted and do not install it. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
-
-### Where Signatures Are Published
-
-The location of the `.asc` depends on the ecosystem. JavaScript signatures are on [security.tuxcare.com](https://security.tuxcare.com/signatures/els_lang_javascript/) and need no credentials. The other ecosystems publish to TuxCare Nexus, which requires the same credentials as the package repositories: Java publishes the `.asc` alongside the SBOM, PHP uses the `els_php_raw_custom1` raw repository, and Python publishes it next to each package in the `els_python` package repository. See the per-ecosystem steps under [Verify a Package](#verify-a-package) for the precise location and path.
-
-### Obtain the TuxCare Public Key
+## Obtain the TuxCare Public Key
 
 To verify a signature you first need TuxCare's public signing key, the TuxCare SecureChain key. TuxCare publishes it at [security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain](https://security.tuxcare.com/gpg/GPG-KEY-TuxCare-SecureChain); downloading it requires no credentials:
 
@@ -91,15 +41,94 @@ gpg --list-keys
 Import the public key once. It can verify every TuxCare-signed package, so this step is not repeated for each artifact.
 :::
 
+## Software Bill of Materials (SBOM)
+
+A Software Bill of Materials (SBOM) lists the components, versions, and dependency relationships of a package. TuxCare publishes SBOMs in CycloneDX format on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), so any SBOM-aware scanner or supply-chain tool can read them.
+
+SBOMs are available for:
+
+* Java — [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/), laid out as `<group path>/<artifactId>/<version>/<artifactId>-<version>.sbom.json`, where the group path is the `groupId` with `/` in place of `.`, for example `org/apache/commons/commons-lang3/3.12.0-tuxcare.1/`
+* JavaScript — [els_lang_javascript](https://security.tuxcare.com/sbom/cyclonedx/els_lang_javascript/), laid out as `<package>/<version>/<package>-<version>.sbom.json`
+* Python — [els_lang_python](https://security.tuxcare.com/sbom/cyclonedx/els_lang_python/), laid out as `<package>/<version>/<package>-<version>-sbom.json`
+* PHP — [els_lang_php](https://security.tuxcare.com/sbom/cyclonedx/els_lang_php/), laid out as `<vendor>/<package>/<version>/<package>-<version>.sbom.json`
+* .NET — [els_lang_dotnet](https://security.tuxcare.com/sbom/cyclonedx/els_lang_dotnet/), laid out as `<package>/<version>/<package>.<version>.sbom.json`; TuxCare publishes .NET SBOMs for a few packages so far
+
+Not every package has an SBOM yet. To ask about a specific package, go to the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+
+### Verify an SBOM
+
+Every SBOM except .NET has a detached `.asc` signature made with the TuxCare SecureChain key. Import the key first, as described in [Obtain the TuxCare Public Key](#obtain-the-tuxcare-public-key).
+
+| Ecosystem | Signature location |
+| --- | --- |
+| Java, Python | Same directory as the SBOM, named after the SBOM file with `.asc` added |
+| JavaScript | `signatures/els_lang_javascript/<package>/<version>/<package>-<version>.sbom.json.asc` |
+| PHP | `signatures/els_lang_php/<vendor>/<package>/<version>/<package>-<version>.sbom.json.asc` |
+| .NET | No signature |
+
+For example, to verify the SBOM of `commons-lang3` `3.12.0-tuxcare.1`:
+
+```text
+curl -fsSLO https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/org/apache/commons/commons-lang3/3.12.0-tuxcare.1/commons-lang3-3.12.0-tuxcare.1.sbom.json
+curl -fsSLO https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/org/apache/commons/commons-lang3/3.12.0-tuxcare.1/commons-lang3-3.12.0-tuxcare.1.sbom.json.asc
+gpg --verify commons-lang3-3.12.0-tuxcare.1.sbom.json.asc commons-lang3-3.12.0-tuxcare.1.sbom.json
+```
+
+A valid signature reports `using RSA key 7BF120293948A27B` and `Good signature from "TuxCare SecureChain <support@tuxcare.com>"`. If the `.asc` is missing or `gpg` reports a different key, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+
+## Vulnerability Exploitability eXchange (VEX)
+
+TuxCare publishes VEX as CycloneDX VEX documents, distributed alongside each package version and updated with every release. A VEX document tells you which known CVEs actually affect a given artifact version and which don't, so scanner results stay focused on real exposure.
+
+TuxCare publishes a separate feed for each ecosystem:
+
+* Java - [els_lang_java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
+* Python - [els_lang_python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/) — Python releases iterate as `X.Y.Z.postN+tuxcare` (e.g. `2021.10.8.post2+tuxcare`), not `-tuxcare.N`
+* JavaScript - [els_lang_javascript](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/)
+* PHP - [els_lang_php](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — PHP releases iterate as `-pN+tuxcare`, for example `5.2.28-p1+tuxcare`, not `-tuxcare.N`
+* .NET - [els_lang_dotnet](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/)
+
+Each entry links one CVE to one artifact version and carries a status:
+
+* **exploitable** — the CVE affects this artifact version, and TuxCare has not yet patched it in this release.
+* **resolved** — TuxCare has released a patch for the CVE.
+
+Each VEX document reports the CVEs that directly affect the artifact. The feed covers every supported base version and every released `-tuxcare.N` iteration, so the entry count reflects these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
+
+## Package Signature Verification (GPG)
+
+TuxCare signs the packages it builds so you can confirm, before installing or updating, that TuxCare produced the artifact and nobody altered it in transit. For most ecosystems TuxCare creates the signature with its signing key (SHA-256 detached signature) and publishes it as a separate `.asc` file.
+
+A successful verification proves two things about the artifact:
+
+* **Authenticity** — TuxCare signed it with its private key.
+* **Integrity** — its bytes match exactly what TuxCare signed; no tampering or corruption occurred.
+
+A failed verification is an **integrity violation**: treat the artifact as untrusted and do not install it. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
+
+### Where Signatures Are Published
+
+TuxCare publishes two kinds of `.asc` file, and they sign different things: one signs the **SBOM**, the other signs the **package**. To check an SBOM, follow [Verify an SBOM](#verify-an-sbom). This section is about package signatures.
+
+Package signatures are published per ecosystem:
+
+* **Java** — in TuxCare Nexus, next to the artifact in `els_java`
+* **JavaScript** — on [security.tuxcare.com](https://security.tuxcare.com/signatures/els_lang_javascript/), under `signatures/els_lang_javascript/`
+* **Python** — in TuxCare Nexus, in `els-python-whl` and `els-python-source`
+* **PHP** — in TuxCare Nexus, next to the archive in the `els_php_raw_custom1` raw repository
+* **.NET** — no detached signature; the `.nupkg` carries an embedded NuGet signature
+
+Except for JavaScript, downloading a package signature needs the same TuxCare Nexus credentials as the package itself. The steps under [Verify a Package](#verify-a-package) give the exact path for each ecosystem.
+
 ### Verify a Package
 
-The verification procedure is the same for every ELS for Language Ecosystems language (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature (from [security.tuxcare.com](https://security.tuxcare.com/signatures/) for JavaScript, from TuxCare Nexus for the other ecosystems), and run `gpg --verify`. Select your ecosystem below.
+The procedure is the same for Java, JavaScript, Python, and PHP: obtain the exact published artifact, download its detached `.asc` signature, and run `gpg --verify`. Select your ecosystem below.
 
-:::warning
-The signature location and artifact naming vary by ecosystem. TuxCare has confirmed the Java, JavaScript, PHP, and Python steps below; the .NET steps shown are representative — confirm the exact signatures location and artifact naming for .NET with your TuxCare contact.
+:::tip
+TuxCare does not publish a detached `.asc` file for .NET packages. A TuxCare `.nupkg` carries an embedded NuGet signature instead, so there is no separate `gpg --verify` step for .NET.
 :::
 
-<TableTabs label="Choose ecosystem: " :labels="{ DotNET: '.NET' }">
+<TableTabs label="Choose ecosystem: ">
 
 <template #Java>
 
@@ -107,7 +136,7 @@ The signature location and artifact naming vary by ecosystem. TuxCare has confir
 
 1. **Obtain the exact published artifact**
 
-   With your TuxCare repository configured (see the [Java libraries](/els-for-libraries/java-libraries/) setup), copy the published `.jar` out of the repository:
+   With the TuxCare Maven repository configured (see the [Java libraries](/els-for-libraries/java-libraries/) setup), copy the published `.jar` out of it:
 
    ```text
    mvn dependency:copy \
@@ -117,11 +146,11 @@ The signature location and artifact naming vary by ecosystem. TuxCare has confir
 
 2. **Download the matching signature**
 
-   For Java, TuxCare publishes the `.asc` in the SBOM repository (`els-java-sbom`), keyed by artifact name and version:
+   For Java, TuxCare publishes the `.asc` next to the artifact itself in the `els_java` repository, at the same Maven coordinate path:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
-     https://nexus.repo.tuxcare.com/repository/els-java-sbom/commons-lang3/3.12.0-tuxcare.1/commons-lang3-3.12.0-tuxcare.1.jar.asc \
+     https://nexus.repo.tuxcare.com/repository/els_java/org/apache/commons/commons-lang3/3.12.0-tuxcare.1/commons-lang3-3.12.0-tuxcare.1.jar.asc \
      -o commons-lang3-3.12.0-tuxcare.1.jar.asc
    ```
 
@@ -143,7 +172,7 @@ The signature location and artifact naming vary by ecosystem. TuxCare has confir
 
 1. **Obtain the exact published tarball**
 
-   Verification works on the byte-for-byte artifact that TuxCare signed, so download the published `.tgz` rather than repacking it locally. With your TuxCare registry configured (see the [JavaScript libraries](/els-for-libraries/javascript-libraries/) setup), `npm pack` with a version spec downloads the registry tarball as-is:
+   Verification works on the byte-for-byte artifact that TuxCare signed, so download the published `.tgz` rather than repacking it locally. With the TuxCare npm registry configured (see the [JavaScript libraries](/els-for-libraries/javascript-libraries/) setup), `npm pack` with a version spec downloads the registry tarball as-is:
 
    ```text
    npm pack @els-js/angular@1.8.3-tuxcare.8
@@ -153,7 +182,7 @@ The signature location and artifact naming vary by ecosystem. TuxCare has confir
 
 2. **Download the matching signature**
 
-   Fetch the `.asc` file for the same version from [security.tuxcare.com](https://security.tuxcare.com/signatures/els_lang_javascript/). Signatures are public, so downloading them requires no credentials; the path is `signatures/els_lang_javascript/<package>/<version>/<package>-<version>.tgz.asc`:
+   Fetch the `.asc` file for the same version from [security.tuxcare.com](https://security.tuxcare.com/signatures/els_lang_javascript/); the path is `signatures/els_lang_javascript/<package>/<version>/<package>-<version>.tgz.asc`:
 
    ```text
    curl -fsSL \
@@ -175,8 +204,8 @@ The signature location and artifact naming vary by ecosystem. TuxCare has confir
 
    ```text
    gpg: Signature made Mon 12 May 2025 10:14:21 UTC
-   gpg:                using RSA key <TUXCARE_KEY_ID>
-   gpg: Good signature from "TuxCare <...>" [unknown]
+   gpg:                using RSA key 7BF120293948A27B
+   gpg: Good signature from "TuxCare SecureChain <support@tuxcare.com>" [unknown]
    ```
 
    The `Good signature` line, and a key ID that matches the TuxCare public key you imported, confirm the artifact is authentic and unmodified. The `[unknown]` trust level only reflects that you have not personally signed TuxCare's key in your web of trust; it does not affect the validity of the signature.
@@ -191,28 +220,28 @@ The signature location and artifact naming vary by ecosystem. TuxCare has confir
 
 1. **Obtain the exact published artifact**
 
-   With your TuxCare index configured (see the [Python libraries](/els-for-libraries/python-libraries/) setup), `pip download` fetches the published wheel as-is (the customer index serves wheels):
+   With the TuxCare PyPI-compatible index configured (see the [Python libraries](/els-for-libraries/python-libraries/) setup), `pip download` fetches the published wheel as-is (the index serves wheels):
 
    ```text
-   pip download certifi==2021.10.8.post2+tuxcare --no-deps -d .
+   pip download anyio==3.7.1.post2+tuxcare --no-deps -d .
    ```
 
-   This writes `certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl` to the current directory.
+   This writes `anyio-3.7.1.post2+tuxcare-py3-none-any.whl` to the current directory.
 
 2. **Download the matching signature**
 
-   For Python, TuxCare publishes the `.asc` next to the package in the `els_python` package repository, under `packages/<name>/<version>/`. Authenticate with your TuxCare Nexus credentials:
+   For Python, TuxCare publishes the `.asc` next to the wheel in the `els-python-whl` repository, under `packages/<name>/<version>/`; TuxCare signs source distributions the same way in `els-python-source`. Authenticate with your TuxCare Nexus credentials:
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -fsSL \
-     "https://nexus.repo.tuxcare.com/repository/els_python/packages/certifi/2021.10.8.post2+tuxcare/certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl.asc" \
-     -o certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl.asc
+     "https://nexus.repo.tuxcare.com/repository/els-python-whl/packages/anyio/3.7.1.post2+tuxcare/anyio-3.7.1.post2+tuxcare-py3-none-any.whl.asc" \
+     -o anyio-3.7.1.post2+tuxcare-py3-none-any.whl.asc
    ```
 
 3. **Verify the signature against the artifact**
 
    ```text
-   gpg --verify certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl.asc certifi-2021.10.8.post2+tuxcare-py2.py3-none-any.whl
+   gpg --verify anyio-3.7.1.post2+tuxcare-py3-none-any.whl.asc anyio-3.7.1.post2+tuxcare-py3-none-any.whl
    ```
 
    A `Good signature` line confirms authenticity and integrity. `BAD signature`, or a missing public key, is an integrity violation — stop and re-obtain the package from TuxCare over a trusted channel.
@@ -263,40 +292,6 @@ The signature location and artifact naming vary by ecosystem. TuxCare has confir
 
    ```text
    gpg --verify yaml-v4.4.45-p1+tuxcare.zip.asc yaml-v4.4.45-p1+tuxcare.zip
-   ```
-
-   A `Good signature` line confirms authenticity and integrity. `BAD signature`, or a missing public key, is an integrity violation — stop and re-obtain the package from TuxCare over a trusted channel.
-
-</ELSSteps>
-
-</template>
-
-<template #DotNET>
-
-<ELSSteps>
-
-1. **Obtain the exact published artifact**
-
-   With your TuxCare NuGet source configured (see the [.NET libraries](/els-for-libraries/dotnet/) setup), download the published `.nupkg`:
-
-   ```text
-   nuget install Newtonsoft.Json -Version 12.0.4-tuxcare.1 -DependencyVersion Ignore -OutputDirectory .
-   ```
-
-   The command writes the package to `./Newtonsoft.Json.12.0.4-tuxcare.1/`; copy the `.nupkg` from there for verification.
-
-2. **Download the matching signature**
-
-   ```text
-   curl -u "${USERNAME}:${PASSWORD}" -fsSL \
-     https://nexus.repo.tuxcare.com/repository/els-dotnet-signatures/newtonsoft.json/12.0.4-tuxcare.1/newtonsoft.json.12.0.4-tuxcare.1.nupkg.asc \
-     -o newtonsoft.json.12.0.4-tuxcare.1.nupkg.asc
-   ```
-
-3. **Verify the signature against the artifact**
-
-   ```text
-   gpg --verify newtonsoft.json.12.0.4-tuxcare.1.nupkg.asc newtonsoft.json.12.0.4-tuxcare.1.nupkg
    ```
 
    A `Good signature` line confirms authenticity and integrity. `BAD signature`, or a missing public key, is an integrity violation — stop and re-obtain the package from TuxCare over a trusted channel.
