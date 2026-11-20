@@ -146,11 +146,11 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
   * **Neo4j Java Driver** 4.1.1, 4.1.2, 4.4.5, 4.4.12, 5.13.0, 5.15.0, 5.19.0, 5.25.0, 5.28.5, 5.28.10, 5.28.13
   * **Neo4j-OGM** 2.1.6
 * **Netty** 3.2.4.Final, 3.5.13.Final, 3.6.2.Final, 3.7.0.Final, 3.10.6.Final, 4.0.56.Final, 4.1.21.Final, 4.1.23.Final, 4.1.24.Final, 4.1.29.Final, 4.1.31.Final, 4.1.38.Final, 4.1.39.Final, 4.1.42.Final, 4.1.43.Final, 4.1.48.Final, 4.1.49.Final, 4.1.51.Final, 4.1.52.Final, 4.1.53.Final, 4.1.58.Final, 4.1.59.Final, 4.1.60.Final, 4.1.63.Final, 4.1.68.Final, 4.1.72.Final, 4.1.73.Final, 4.1.74.Final, 4.1.75.Final, 4.1.76.Final, 4.1.79.Final, 4.1.80.Final, 4.1.81.Final, 4.1.82.Final, 4.1.87.Final, 4.1.92.Final, 4.1.93.Final, 4.1.94.Final, 4.1.96.Final, 4.1.99.Final, 4.1.100.Final, 4.1.101.Final, 4.1.107.Final, 4.1.108.Final, 4.1.111.Final, 4.1.112.Final, 4.1.113.Final, 4.1.114.Final, 4.1.115.Final, 4.1.117.Final, 4.1.118.Final, 4.1.119.Final, 4.1.122.Final, 4.1.128.Final, 4.1.130.Final, 4.1.135.Final, 4.2.2.Final, 4.2.12.Final
-* **Netty Incubator** 0.0.21.Final, 0.0.25.Final
+* **Netty Incubator** 0.0.21.Final, 0.0.24.Final, 0.0.25.Final
 * **Netty Reactive Streams** 2.0.4, 2.0.6
 * **Nimbus JOSE + JWT** 3.10, 8.23, 9.8.1, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
 * **Nimbus OAuth 2.0 SDK with OpenID Connect extensions** 9.43.3, 9.43.6
-* **OkHttp3** 3.14.9, 4.10.0
+* **OkHttp3** 3.14.9, 4.7.2, 4.9.3, 4.10.0
 * **Okio** 1.4.0, 1.6.0, 1.14.0, 2.8.0, 2.10.0
 * **OpenMLDB** 0.4.4-hotfix1-allinone
 * **OpenTelemetry Java** 1.29.0

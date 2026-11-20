@@ -930,7 +930,7 @@ const techData = [
       },
       {
         name: "Netty Incubator",
-        versions: "0.0.21.Final | 0.0.25.Final",
+        versions: "0.0.21.Final | 0.0.24.Final | 0.0.25.Final",
         link: "./java-libraries/",
       },
       {
@@ -950,7 +950,7 @@ const techData = [
       },
       {
         name: "OkHttp3",
-        versions: "3.14.9 | 4.10.0",
+        versions: "3.14.9 | 4.7.2 | 4.9.3 | 4.10.0",
         link: "./java-libraries/",
       },
       {
