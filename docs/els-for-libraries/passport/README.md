@@ -1,10 +1,10 @@
-# passport
+# Passport
 
-Endless Lifecycle Support (ELS) for passport from TuxCare provides security fixes for passport versions that have reached their end of life. With ELS, you can continue running passport applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Passport from TuxCare provides security fixes for Passport versions that have reached their end of life. With ELS, you can continue running Passport applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* passport 0.5.3
+* Passport 0.5.3
 
 ## Installation
 

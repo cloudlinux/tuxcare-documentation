@@ -4,7 +4,13 @@ Endless Lifecycle Support (ELS) for Vite from TuxCare provides security fixes fo
 
 ## Supported Versions
 
-* Vite 2.9.18, 3.2.11, 4.1.5, 4.4.6, 4.5.0, 4.5.5, 4.5.14, 5.0.12, 5.2.11, 5.4.10, 5.4.14, 5.4.21, 6.4.2, 6.4.3, 7.2.6, 7.3.2, 7.3.3, 8.0.8, 8.0.9, 8.0.10, 8.0.12, 8.0.16, 8.1.3
+TuxCare publishes Vite packages under the `@els-js` scope. For example, `@els-js/vite-node` replaces `vite-node`.
+
+| Package | Versions |
+| --- | --- |
+| vite | 2.9.18, 3.2.11, 4.1.5, 4.4.6, 4.5.0, 4.5.5, 4.5.14, 5.0.12, 5.2.11, 5.4.10, 5.4.14, 5.4.21, 6.4.2, 6.4.3, 7.2.6, 7.3.2, 7.3.3, 8.0.8, 8.0.9, 8.0.10, 8.0.12, 8.0.16, 8.1.3 |
+| launch-editor | 2.2.1, 2.6.1, 2.9.1, 2.12.0, 2.13.1, 2.13.2 |
+| vite-node | 2.0.5 |
 
 ## Installation
 

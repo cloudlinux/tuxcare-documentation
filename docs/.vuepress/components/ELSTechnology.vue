@@ -1345,7 +1345,7 @@ const techData = [
         link: "./angularjs/",
       },
       {
-        name: "acorn",
+        name: "Acorn",
         versions: "6.0.4 | 6.2.0",
         link: "./javascript-libraries/",
       },
@@ -1375,11 +1375,6 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "animations",
-        versions: "5.2.11 | 6.0.1",
-        link: "./javascript-libraries/",
-      },
-      {
         name: "ansi-html",
         versions: "0.0.7",
         link: "./javascript-libraries/",
@@ -1387,6 +1382,11 @@ const techData = [
       {
         name: "ansi-regex",
         versions: "3.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "apollo-server",
+        versions: "4.13.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1406,7 +1406,7 @@ const techData = [
       },
       {
         name: "aws-sdk",
-        versions: "2.1693.0",
+        versions: "2.0.5 | 2.1693.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1421,7 +1421,7 @@ const techData = [
       },
       {
         name: "babel-core",
-        versions: "6.26.0 | 7.7.7 | 7.10.5 | 7.11.5 | 7.12.3 | 7.12.9 | 7.12.13 | 7.14.8 | 7.16.7 | 7.16.12 | 7.18.9 | 7.20.12 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.0 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.25.9 |7.26.0 | 7.28.0 | 7.29.0",
+        versions: "6.26.0 | 7.7.7 | 7.10.5 | 7.11.5 | 7.12.3 | 7.12.9 | 7.12.13 | 7.14.8 | 7.16.7 | 7.16.12 | 7.18.9 | 7.20.12 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.0 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.25.9 | 7.26.0 | 7.26.9 | 7.28.0 | 7.29.0",
         link: "./babel/",
       },
       {
@@ -1436,7 +1436,7 @@ const techData = [
       },
       {
         name: "babel-parser",
-        versions: "7.11.5 | 7.12.5 | 7.14.8 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.6 | 7.22.15 | 7.23.0 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.25.9 |7.26.0",
+        versions: "7.11.5 | 7.12.5 | 7.14.8 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.6 | 7.22.15 | 7.23.0 | 7.23.9 | 7.24.1 | 7.24.5 | 7.25.7 | 7.25.9 | 7.26.0 | 7.29.0",
         link: "./babel/",
       },
       {
@@ -1468,6 +1468,11 @@ const techData = [
         name: "babel-types",
         versions: "6.26.0 | 7.11.5 | 7.12.13 | 7.14.8 | 7.16.7 | 7.18.9 | 7.21.0 | 7.21.5 | 7.22.15 | 7.23.0 | 7.23.9 | 7.24.0 | 7.24.5 | 7.25.7 | 7.25.9 |7.26.0 | 7.29.0",
         link: "./babel/",
+      },
+      {
+        name: "base-x",
+        versions: "2.0.6",
+        link: "./javascript-libraries/",
       },
       {
         name: "base64-url",
@@ -1750,7 +1755,7 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "express",
+        name: "Express",
         versions: "3.1.2 | 3.4.8 | 3.21.2 | 4.16.3 | 4.17.1 | 4.18.1 | 4.18.2 | 4.18.3 | 4.19.2 | 4.22.3",
         link: "./express/",
       },
@@ -1785,7 +1790,7 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "fastify",
+        name: "Fastify",
         versions: "3.29.5 | 4.25.2 | 4.28.1 | 4.29.1 | 5.2.1 | 5.7.4 | 5.8.2 | 5.8.3 | 5.8.4 | 5.8.5 | 5.9.0 | 5.10.0 | 5.11.3 | 5.12.0 | 5.12.1 | 5.12.4 | 5.12.5",
         link: "./fastify/",
       },
@@ -2075,6 +2080,11 @@ const techData = [
         link: "./jsonwebtoken/",
       },
       {
+        name: "jsonpath",
+        versions: "1.1.1",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "JSONPath Plus",
         versions: "4.0.0 | 5.1.0 | 6.0.1 | 7.2.0",
         link: "./javascript-libraries/",
@@ -2132,7 +2142,7 @@ const techData = [
       {
         name: "launch-editor",
         versions: "2.2.1 | 2.6.1 | 2.9.1 | 2.12.0 | 2.13.1 | 2.13.2",
-        link: "./javascript-libraries/",
+        link: "./vite/",
       },
       {
         name: "Lodash",
@@ -2177,7 +2187,7 @@ const techData = [
       {
         name: "loader-utils",
         versions: "0.2.17 | 1.1.0 | 1.2.3 | 2.0.0",
-        link: "./javascript-libraries/",
+        link: "./webpack/",
       },
       {
         name: "luxon",
@@ -2231,7 +2241,7 @@ const techData = [
       },
       {
         name: "modelcontextprotocol-client",
-        versions: "2.0.0",
+        versions: "2.0.0 | 2.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2241,7 +2251,7 @@ const techData = [
       },
       {
         name: "modelcontextprotocol-core",
-        versions: "2.0.0",
+        versions: "2.0.0 | 2.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2301,7 +2311,7 @@ const techData = [
       },
       {
         name: "multer",
-        versions: "1.4.5-lts | 1.4.5-lts.1 | 1.4.5-lts.2 | 2.2.0 | 2.4.0",
+        versions: "1.4.5-lts.1 | 1.4.5-lts.2 | 2.2.0 | 2.4.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2330,6 +2340,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "nestjs-common",
+        versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "nestjs-core",
         versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
         link: "./javascript-libraries/",
@@ -2345,19 +2360,44 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "nestjs-platform-fastify",
+        versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-platform-socket.io",
+        versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-platform-ws",
+        versions: "10.4.22 | 11.2.2 | 11.2.3",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-testing",
+        versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-websockets",
+        versions: "10.4.22 | 11.2.2 | 11.2.3 | 11.2.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "netmask",
         versions: "1.0.6",
         link: "./javascript-libraries/",
       },
       {
+        name: "Next.js",
+        versions: "12.3.7 | 13.5.11 | 14.2.35 | 15.1.2 | 15.5.23 | 15.5.24 | 15.5.25 | 15.5.26 | 16.0.6",
+        link: "./next/",
+      },
+      {
         name: "nguniversal-express-engine",
         versions: "10.1.0",
         link: "./javascript-libraries/",
-      },
-      {
-        name: "next",
-        versions: "12.3.7 | 13.5.11 | 14.2.35 | 15.1.2 | 15.5.23 | 15.5.24 | 15.5.25 | 15.5.26 | 16.0.6",
-        link: "./next/",
       },
       {
         name: "node-fetch",
@@ -2382,6 +2422,11 @@ const techData = [
       {
         name: "node-sass",
         versions: "4.14.1 | 6.0.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "npm",
+        versions: "5.10.0 | 6.13.4",
         link: "./javascript-libraries/",
       },
       {
@@ -2455,6 +2500,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "parse-path",
+        versions: "4.0.1 | 4.0.4",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "parse-url",
         versions: "6.0.5",
         link: "./javascript-libraries/",
@@ -2465,7 +2515,7 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "passport",
+        name: "Passport",
         versions: "0.5.3",
         link: "./passport/",
       },
@@ -2570,6 +2620,11 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "react-native-community-cli",
+        versions: "2.0.2 | 5.0.1 | 11.4.1 | 12.3.0 | 12.3.2 | 12.3.6 | 12.3.7 | 13.5.1 | 13.6.8 | 13.6.9 | 15.1.3",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "react-pdf",
         versions: "7.7.1",
         link: "./react-pdf/",
@@ -2581,23 +2636,18 @@ const techData = [
       },
       {
         name: "react-router-dom",
-        versions: "6.3.0 | 6.30.3 | 6.30.4 | 6.30.6 | 7.13.1 | 7.14.1 | 7.14.2 | 7.15.0 | 7.15.1 | 7.18.1",
-        link: "./javascript-libraries/",
+        versions: "6.3.0 | 6.30.3 | 6.30.4 | 6.30.6 | 7.5.1 | 7.13.1 | 7.14.1 | 7.14.2 | 7.15.0 | 7.15.1 | 7.18.1",
+        link: "./react-router/",
       },
       {
         name: "react-router-dom-v5-compat",
         versions: "6.3.0 | 6.30.4 | 6.30.6",
-        link: "./javascript-libraries/",
+        link: "./react-router/",
       },
       {
         name: "react-router-native",
         versions: "6.3.0 | 6.30.3 | 6.30.6",
-        link: "./javascript-libraries/",
-      },
-      {
-        name: "react-server-dom-esm",
-        versions: "0.0.0-13a913d5-20260727",
-        link: "./javascript-libraries/",
+        link: "./react-router/",
       },
       {
         name: "react-server-dom-parcel",
@@ -2606,12 +2656,12 @@ const techData = [
       },
       {
         name: "react-server-dom-turbopack",
-        versions: "19.0.0 | 19.2.0 | 19.2.8",
+        versions: "19.0.0 | 19.0.8 | 19.2.0 | 19.2.8",
         link: "./javascript-libraries/",
       },
       {
         name: "react-server-dom-webpack",
-        versions: "19.0.0 | 19.2.0 | 19.2.8",
+        versions: "19.0.0 | 19.0.8 | 19.2.0 | 19.2.8",
         link: "./javascript-libraries/",
       },
       {
@@ -2622,7 +2672,7 @@ const techData = [
       {
         name: "remix-run-router",
         versions: "1.6.2 | 1.7.2 | 1.15.3 | 1.23.0 | 1.23.2 | 1.23.3",
-        link: "./javascript-libraries/",
+        link: "./react-router/",
       },
       {
         name: "RequireJS",
@@ -2765,7 +2815,7 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "storybook",
+        name: "Storybook",
         versions: "7.0.7 | 8.5.3 | 8.5.8 | 8.6.14 | 9.1.16 | 10.1.9",
         link: "./javascript-libraries/",
       },
@@ -2810,7 +2860,7 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "tailwindcss",
+        name: "Tailwind CSS",
         versions: "2.1.1",
         link: "./tailwindcss/",
       },
@@ -2937,7 +2987,7 @@ const techData = [
       {
         name: "vite-node",
         versions: "2.0.5",
-        link: "./javascript-libraries/",
+        link: "./vite/",
       },
       {
         name: "vitest",
@@ -2946,7 +2996,7 @@ const techData = [
       },
       {
         name: "vitest-mocker",
-        versions: "3.2.4 | 4.0.18",
+        versions: "2.1.9 | 3.2.4 | 3.2.7 | 4.0.18",
         link: "./javascript-libraries/",
       },
       {
@@ -2955,23 +3005,23 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "Vue",
+        versions: "2.2.6 | 2.6.11 | 2.6.14 | 2.7.16",
+        link: "./vue/",
+      },
+      {
         name: "Vuetify",
         versions: "2.5.5 | 2.6.13",
         link: "./vuetify/",
       },
       {
-        name: "vue",
+        name: "vue-server-renderer",
         versions: "2.2.6 | 2.6.11 | 2.6.14 | 2.7.16",
         link: "./vue/",
       },
       {
-        name: "vue-server-renderer",
-        versions: "2.6.11 | 2.6.14 | 2.7.16",
-        link: "./vue/",
-      },
-      {
         name: "vue-template-compiler",
-        versions: "2.6.11 | 2.6.14 | 2.7.16",
+        versions: "2.2.6 | 2.6.11 | 2.6.14 | 2.7.16",
         link: "./vue-template-compiler/",
       },
       {
@@ -3107,12 +3157,12 @@ const techData = [
       {
         name: "webpack-bundle-analyzer",
         versions: "2.13.1",
-        link: "./javascript-libraries/",
+        link: "./webpack/",
       },
       {
         name: "webpack-dev-middleware",
         versions: "1.10.2 | 1.11.0 | 1.12.0 | 1.12.2 | 2.0.6 | 3.0.1 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 5.3.4 | 6.0.1 | 6.1.2 | 6.1.3 | 7.4.2 | 7.4.5 | 8.0.3 | 8.1.1 | 8.2.0",
-        link: "./javascript-libraries/",
+        link: "./webpack/",
       },
       {
         name: "webpack-dev-server",
@@ -3122,7 +3172,7 @@ const techData = [
       {
         name: "webpack-subresource-integrity",
         versions: "1.4.0 | 1.4.1",
-        link: "./javascript-libraries/",
+        link: "./webpack/",
       },
       {
         name: "websocket-driver",
@@ -3156,7 +3206,12 @@ const techData = [
       },
       {
         name: "xmldom",
-        versions: "0.1.31 | 0.5.0 | 0.6.0 | 0.7.13 | 0.9.8",
+        versions: "0.1.31 | 0.5.0 | 0.6.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "@xmldom/xmldom",
+        versions: "0.7.13 | 0.9.8 | 0.9.10",
         link: "./javascript-libraries/",
       },
       {
@@ -3196,7 +3251,7 @@ const techData = [
       },
       {
         name: "YUI",
-        versions: "2.9.0 | 3.18.1",
+        versions: "2.9.0",
         link: "./yui/",
       },
       {
