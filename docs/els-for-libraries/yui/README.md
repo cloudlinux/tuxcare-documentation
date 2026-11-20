@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for YUI from TuxCare provides security fixes for
 
 ## Supported Versions
 
-* YUI 2.9.0, 3.18.1
+* YUI 2.9.0
 
 ## Installation
 
@@ -56,37 +56,14 @@ Follow the [SecureChain installation instructions](https://sc.tuxcare.cloud/guid
 
    Update your `package.json` file to replace YUI dependencies with TuxCare-maintained packages:
 
-     <TableTabs label="Choose YUI version: " >
-
-      <template #yui_2.9.0>
-
-      ```text
-      "dependencies": {
-        "yui2": "npm:@els-js/yui2@>=2.9.0-tuxcare.1"
-      },
-      "overrides": {
-        "yui2@2.9.0": "npm:@els-js/yui2@>=2.9.0-tuxcare.1"
-      }
-      ```
-
-      </template>
-
-      <template #yui_3.18.1>
-
-      ```text
-      "overrides": {
-        "hoek@0.9.1": "npm:@els-js/hoek@>=0.9.1-tuxcare.1",
-        "mime@1.2.11": "npm:@els-js/mime@>=1.2.11-tuxcare.1",
-        "tunnel-agent@0.4.3": "npm:@els-js/tunnel-agent@>=0.4.3-tuxcare.1",
-        "qs@1.0.2": "npm:@els-js/qs@>=1.0.2-tuxcare.1",
-        "hawk@1.1.1": "npm:@els-js/hawk@>=1.1.1-tuxcare.1",
-        "form-data@0.1.4": "npm:@els-js/form-data@>=0.1.4-tuxcare.1"
-      }
-      ```
-
-      </template>
-
-     </TableTabs>
+   ```text
+   "dependencies": {
+     "yui2": "npm:@els-js/yui2@>=2.9.0-tuxcare.1"
+   },
+   "overrides": {
+     "yui2@2.9.0": "npm:@els-js/yui2@>=2.9.0-tuxcare.1"
+   }
+   ```
 
 4. **Refresh the project dependencies**
 

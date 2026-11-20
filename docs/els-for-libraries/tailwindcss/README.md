@@ -1,10 +1,10 @@
-# tailwindcss
+# Tailwind CSS
 
-Endless Lifecycle Support (ELS) for tailwindcss from TuxCare provides security fixes for tailwindcss versions that have reached their end of life. With ELS, you can continue running tailwindcss applications without vulnerability concerns, even after official support has ended.
+Endless Lifecycle Support (ELS) for Tailwind CSS from TuxCare provides security fixes for Tailwind CSS versions that have reached their end of life. With ELS, you can continue running Tailwind CSS applications without vulnerability concerns, even after official support has ended.
 
 ## Supported Versions
 
-* tailwindcss 2.1.1
+* Tailwind CSS 2.1.1
 
 ## Installation
 

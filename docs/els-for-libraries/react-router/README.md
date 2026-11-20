@@ -4,7 +4,15 @@ Endless Lifecycle Support (ELS) for react-router from TuxCare provides security 
 
 ## Supported Versions
 
-* react-router 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.5.1, 7.13.1, 7.14.1, 7.14.2, 7.15.0, 7.15.1, 7.18.1
+TuxCare publishes react-router packages under the `@els-js` scope. For example, `@els-js/react-router-dom` replaces `react-router-dom`.
+
+| Package | Versions |
+| --- | --- |
+| react-router | 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.5.1, 7.13.1, 7.14.1, 7.14.2, 7.15.0, 7.15.1, 7.18.1 |
+| react-router-dom | 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.5.1, 7.13.1, 7.14.1, 7.14.2, 7.15.0, 7.15.1, 7.18.1 |
+| react-router-dom-v5-compat | 6.3.0, 6.30.4, 6.30.6 |
+| react-router-native | 6.3.0, 6.30.3, 6.30.6 |
+| remix-run-router | 1.6.2, 1.7.2, 1.15.3, 1.23.0, 1.23.2, 1.23.3 |
 
 ## Installation
 

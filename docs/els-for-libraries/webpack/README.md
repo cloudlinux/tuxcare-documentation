@@ -4,7 +4,15 @@ Endless Lifecycle Support (ELS) for webpack from TuxCare provides security fixes
 
 ## Supported Versions
 
-* webpack 5.50.0, 5.55.0, 5.76.1, 5.82.1, 5.88.2, 5.94.0, 5.98.0, 5.99.8, 5.99.9
+TuxCare publishes webpack packages under the `@els-js` scope. For example, `@els-js/loader-utils` replaces `loader-utils`.
+
+| Package | Versions |
+| --- | --- |
+| webpack | 5.50.0, 5.55.0, 5.76.1, 5.82.1, 5.88.2, 5.94.0, 5.98.0, 5.99.8, 5.99.9 |
+| loader-utils | 0.2.17, 1.1.0, 1.2.3, 2.0.0 |
+| webpack-bundle-analyzer | 2.13.1 |
+| webpack-dev-middleware | 1.10.2, 1.11.0, 1.12.0, 1.12.2, 2.0.6, 3.0.1, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3, 5.3.4, 6.0.1, 6.1.2, 6.1.3, 7.4.2, 7.4.5, 8.0.3, 8.1.1, 8.2.0 |
+| webpack-subresource-integrity | 1.4.0, 1.4.1 |
 
 ## Installation
 
