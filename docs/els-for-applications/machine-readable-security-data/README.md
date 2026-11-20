@@ -62,7 +62,7 @@ Import the public key once. It can verify every TuxCare-signed archive, so this 
 
 A Software Bill of Materials (SBOM) lists the components, versions, and dependency relationships of an application package. TuxCare publishes SBOMs in CycloneDX format on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/):
 
-* Java applications (Apache Tomcat, WildFly, Apache Hive, Apache Hadoop) — [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/), laid out as `<group path>/<artifactId>/<version>/<artifactId>-<version>.sbom.json`, for example `org/apache/tomcat/tomcat/8.5.46-tuxcare.3/`
+* Java applications — [els_lang_java](https://security.tuxcare.com/sbom/cyclonedx/els_lang_java/), laid out as `<group path>/<artifactId>/<version>/<artifactId>-<version>.sbom.json`, for example `org/apache/tomcat/tomcat/8.5.46-tuxcare.1/`
 * Go applications (Grafana, Loki, MinIO) — [els_lang_go](https://security.tuxcare.com/sbom/cyclonedx/els_lang_go/), laid out as `<application>/<version>/<build>.sbom.json`, with one SBOM per build target, for example `grafana-debian12.sbom.json`
 
 TuxCare publishes a detached `.asc` signature next to each SBOM, made with the TuxCare SecureChain key.
@@ -107,7 +107,7 @@ TuxCare distributes ELS applications as archives you download from TuxCare Nexus
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -O \
-     https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/tomcat-8.5.100-tuxcare.3.tar.gz
+     https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.46-tuxcare.1/tomcat-8.5.46-tuxcare.1.tar.gz
    ```
 
 2. **Download the matching signature**
@@ -116,13 +116,13 @@ TuxCare distributes ELS applications as archives you download from TuxCare Nexus
 
    ```text
    curl -u "${USERNAME}:${PASSWORD}" -O \
-     https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/tomcat-8.5.100-tuxcare.3.tar.gz.asc
+     https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.46-tuxcare.1/tomcat-8.5.46-tuxcare.1.tar.gz.asc
    ```
 
 3. **Verify the signature against the archive**
 
    ```text
-   gpg --verify tomcat-8.5.100-tuxcare.3.tar.gz.asc tomcat-8.5.100-tuxcare.3.tar.gz
+   gpg --verify tomcat-8.5.46-tuxcare.1.tar.gz.asc tomcat-8.5.46-tuxcare.1.tar.gz
    ```
 
    A `Good signature` line, and a key ID that matches the TuxCare public key you imported, confirm the archive is authentic and unmodified. `BAD signature`, or a missing public key, is an integrity violation — stop and re-obtain the archive from TuxCare over a trusted channel.
@@ -191,7 +191,7 @@ ELS applications are downloaded as signed archives from TuxCare Nexus over HTTPS
 | Event | What it means | How it surfaces |
 |---|---|---|
 | **GPG signature failure** | The detached `.asc` signature does not match the archive, or TuxCare's key did not sign the archive. | `gpg --verify` reports `BAD signature` or `No public key` — see [Verify a Downloaded Archive](#verify-a-downloaded-archive) above. |
-| **Checksum / integrity-hash mismatch** | For applications resolved as Maven or Gradle dependencies (for example Apache Hive and Apache Hadoop), the build tool verifies the artifact checksum against the `.sha1`/`.sha256` published next to it. | **Maven**, run with strict checksums (`mvn -C`), fails with `Checksum validation failed`. **Gradle**, with dependency verification enabled, fails with `Dependency verification failed`. |
+| **Checksum / integrity-hash mismatch** | For applications resolved as Maven or Gradle dependencies, the build tool verifies the artifact checksum against the `.sha1`/`.sha256` published next to it. | **Maven**, run with strict checksums (`mvn -C`), fails with `Checksum validation failed`. **Gradle**, with dependency verification enabled, fails with `Dependency verification failed`. |
 | **HTTPS / TLS certificate error** | The client cannot validate the TLS certificate that `nexus.repo.tuxcare.com` presents, so you cannot trust the transport itself. | A direct download aborts with `curl: (60) SSL certificate problem`; Maven/Gradle fail with `PKIX path building failed`. |
 
 </template>
@@ -223,9 +223,9 @@ Because the download and signature check run as `curl` and `gpg` commands, their
 #!/usr/bin/env bash
 set -o pipefail
 LOG=/var/log/tuxcare-integrity.log
-ARCHIVE=tomcat-8.5.100-tuxcare.3.tar.gz
-ARCHIVE_URL=https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/${ARCHIVE}
-SIG_URL=https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.100-tuxcare.3/${ARCHIVE}.asc
+ARCHIVE=tomcat-8.5.46-tuxcare.1.tar.gz
+ARCHIVE_URL=https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.46-tuxcare.1/${ARCHIVE}
+SIG_URL=https://nexus.repo.tuxcare.com/repository/els_java/org/apache/tomcat/tomcat/8.5.46-tuxcare.1/${ARCHIVE}.asc
 
 run() {
   # $1 = event label, remaining args = the command to check
