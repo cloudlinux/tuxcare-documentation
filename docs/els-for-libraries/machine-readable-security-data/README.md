@@ -4,7 +4,7 @@ TuxCare provides machine-readable security data and verification tooling for End
 
 * **SBOM (Software Bill of Materials)** — package composition and dependency inventory in CycloneDX format
 * **VEX (Vulnerability Exploitability eXchange)** — exploitability status for known CVEs in CycloneDX VEX format
-* **Package signatures (GPG)** — detached OpenPGP signatures to verify each artifact's authenticity and integrity
+* **Package signatures (GPG)** — signatures to verify each artifact's authenticity and integrity
 * **Integrity violation logging** — detecting and retaining integrity-check failures for administrator review
 
 Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/) and [security.tuxcare.com](https://security.tuxcare.com/).
@@ -41,7 +41,6 @@ gpg --list-keys
 Import the public key once. It can verify every TuxCare-signed package, so this step is not repeated for each artifact.
 :::
 
-
 ## Software Bill of Materials (SBOM)
 
 A Software Bill of Materials (SBOM) lists the components, versions, and dependency relationships of a package. TuxCare publishes SBOMs in CycloneDX format on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/), so any SBOM-aware scanner or supply-chain tool can read them.
@@ -52,9 +51,9 @@ SBOMs are available for:
 * JavaScript — [els_lang_javascript](https://security.tuxcare.com/sbom/cyclonedx/els_lang_javascript/), laid out as `<package>/<version>/<package>-<version>.sbom.json`
 * Python — [els_lang_python](https://security.tuxcare.com/sbom/cyclonedx/els_lang_python/), laid out as `<package>/<version>/<package>-<version>-sbom.json`
 * PHP — [els_lang_php](https://security.tuxcare.com/sbom/cyclonedx/els_lang_php/), laid out as `<vendor>/<package>/<version>/<package>-<version>.sbom.json`
-* .NET — [els_lang_dotnet](https://security.tuxcare.com/sbom/cyclonedx/els_lang_dotnet/), laid out as `<package>/<version>/<package>.<version>.sbom.json`
+* .NET — [els_lang_dotnet](https://security.tuxcare.com/sbom/cyclonedx/els_lang_dotnet/), laid out as `<package>/<version>/<package>.<version>.sbom.json`; TuxCare publishes .NET SBOMs for a few packages so far
 
-Not every package has an SBOM yet. To ask about a package, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+Not every package has an SBOM yet. To ask about a specific package, go to the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 ### Verify an SBOM
 
@@ -81,7 +80,7 @@ A valid signature reports `using RSA key 7BF120293948A27B` and `Good signature f
 
 TuxCare publishes VEX as CycloneDX VEX documents, distributed alongside each package version and updated with every release. A VEX document tells you which known CVEs actually affect a given artifact version and which don't, so scanner results stay focused on real exposure.
 
-Feeds are published per ecosystem:
+TuxCare publishes a separate feed for each ecosystem:
 
 * Java - [els_lang_java](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/)
 * Python - [els_lang_python](https://security.tuxcare.com/vex/cyclonedx/els_lang_python/) — Python releases iterate as `X.Y.Z.postN+tuxcare` (e.g. `2021.10.8.post2+tuxcare`), not `-tuxcare.N`
@@ -91,21 +90,21 @@ Feeds are published per ecosystem:
 
 Each entry links one CVE to one artifact version and carries a status:
 
-* **exploitable** — the CVE affects this artifact version and has not yet been patched in this release.
-* **resolved** — the CVE has been patched through a TuxCare release.
+* **exploitable** — the CVE affects this artifact version, and TuxCare has not yet patched it in this release.
+* **resolved** — TuxCare has released a patch for the CVE.
 
 Each VEX document reports the CVEs that directly affect the artifact. The feed covers every supported base version and every released `-tuxcare.N` iteration, so the entry count reflects these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
 
 ## Package Signature Verification (GPG)
 
-Packages TuxCare builds are signed so you can confirm, before installing or updating, that the artifact was produced by TuxCare and has not been altered in transit. For most ecosystems the signature is published as a separate `.asc` file, created with TuxCare's signing key (SHA-256 detached signature).
+TuxCare signs the packages it builds so you can confirm, before installing or updating, that TuxCare produced the artifact and nobody altered it in transit. For most ecosystems TuxCare creates the signature with its signing key (SHA-256 detached signature) and publishes it as a separate `.asc` file.
 
 A successful verification proves two things about the artifact:
 
-* **Authenticity** — it was signed by TuxCare's private key.
-* **Integrity** — its bytes match exactly what was signed; no tampering or corruption occurred.
+* **Authenticity** — TuxCare signed it with its private key.
+* **Integrity** — its bytes match exactly what TuxCare signed; no tampering or corruption occurred.
 
-A failed verification is an **integrity violation**: the artifact must be treated as untrusted and not installed. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
+A failed verification is an **integrity violation**: treat the artifact as untrusted and do not install it. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
 
 ### Where Signatures Are Published
 
@@ -126,7 +125,7 @@ Except for JavaScript, downloading a package signature needs the same TuxCare Ne
 The procedure is the same for Java, JavaScript, Python, and PHP: obtain the exact published artifact, download its detached `.asc` signature, and run `gpg --verify`. Select your ecosystem below.
 
 :::tip
-TuxCare does not publish a detached `.asc` file for .NET packages. A TuxCare `.nupkg` carries an embedded NuGet signature instead, which the NuGet client checks for you when the package is installed, so there is no separate `gpg --verify` step for .NET.
+TuxCare does not publish a detached `.asc` file for .NET packages. A TuxCare `.nupkg` carries an embedded NuGet signature instead, so there is no separate `gpg --verify` step for .NET.
 :::
 
 <TableTabs label="Choose ecosystem: ">
@@ -300,7 +299,6 @@ TuxCare does not publish a detached `.asc` file for .NET packages. A TuxCare `.n
 </ELSSteps>
 
 </template>
-
 
 </TableTabs>
 

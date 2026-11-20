@@ -58,7 +58,6 @@ gpg --list-keys
 Import the public key once. It can verify every TuxCare-signed archive, so this step is not repeated for each artifact.
 :::
 
-
 ## Software Bill of Materials (SBOM)
 
 A Software Bill of Materials (SBOM) lists the components, versions, and dependency relationships of an application package. TuxCare publishes SBOMs in CycloneDX format on [security.tuxcare.com](https://security.tuxcare.com/sbom/cyclonedx/):
@@ -68,7 +67,7 @@ A Software Bill of Materials (SBOM) lists the components, versions, and dependen
 
 TuxCare publishes a detached `.asc` signature next to each SBOM, made with the TuxCare SecureChain key.
 
-To ask whether an SBOM is available for another application, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+To find out whether an SBOM is available for another application, ask through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 ## Vulnerability Exploitability eXchange (VEX)
 
@@ -76,26 +75,25 @@ TuxCare publishes VEX as CycloneDX VEX documents, distributed alongside each pac
 
 Each entry links one CVE to one artifact version and carries a status:
 
-* **exploitable** - the CVE affects this artifact version and has not yet been patched in this release.
-* **resolved** - the CVE has been patched through a TuxCare release.
+* **exploitable** - the CVE affects this artifact version, and TuxCare has not yet patched it in this release.
+* **resolved** - TuxCare has released a patch for the CVE.
 
 Each VEX document reports the CVEs that directly affect the artifact. The feed covers every supported base version and every released `-tuxcare.N` iteration, so the entry count reflects these combinations rather than the number of unique CVEs. When checking coverage, filter to the artifact versions you actually use — usually the latest `-tuxcare.N` iteration of your chosen base version. Earlier iterations remain in the feed for historical completeness but aren't relevant once you've adopted a newer release.
 
 ## Package Signature Verification (GPG)
 
-Every archive TuxCare builds is signed with a detached OpenPGP signature so you can confirm, before installing or updating, that the archive was produced by TuxCare and has not been altered in transit. The signature is published as a separate `.asc` file in TuxCare Nexus and is created with TuxCare's signing key (SHA-256 detached signature).
+TuxCare signs every archive it builds with a detached OpenPGP signature so you can confirm, before installing or updating, that TuxCare produced the archive and nobody altered it in transit. TuxCare creates the signature with its signing key (SHA-256 detached signature) and publishes it as a separate `.asc` file in TuxCare Nexus.
 
 A successful verification proves two things about the artifact:
 
-* **Authenticity** — it was signed by TuxCare's private key.
-* **Integrity** — its bytes match exactly what was signed; no tampering or corruption occurred.
+* **Authenticity** — TuxCare signed it with its private key.
+* **Integrity** — its bytes match exactly what TuxCare signed; no tampering or corruption occurred.
 
-A failed verification is an **integrity violation**: the artifact must be treated as untrusted and not installed. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
+A failed verification is an **integrity violation**: treat the artifact as untrusted and do not install it. Do not work around a failed check by re-downloading over an insecure channel or skipping verification — investigate the source instead.
 
 ### Verify a Downloaded Archive
 
 TuxCare distributes ELS applications as archives you download from TuxCare Nexus. The signatures on [security.tuxcare.com](https://security.tuxcare.com/) sign the SBOMs, not the archives. To verify an archive, download its detached `.asc` signature from TuxCare Nexus with the credentials you use for the archive, and run `gpg --verify` against the archive. Select your ecosystem below.
-:::
 
 <TableTabs label="Choose ecosystem: ">
 
@@ -168,14 +166,6 @@ TuxCare distributes ELS applications as archives you download from TuxCare Nexus
 
    ```text
    gpg --verify minio_linux_amd64-2025.10.15T17.29.55Z-tuxcare.19.tar.gz.asc minio_linux_amd64-2025.10.15T17.29.55Z-tuxcare.19.tar.gz
-   ```
-
-   A valid signature produces output similar to:
-
-   ```text
-   gpg: Signature made Mon 12 May 2025 10:14:21 UTC
-   gpg:                using RSA key 7BF120293948A27B
-   gpg: Good signature from "TuxCare SecureChain <support@tuxcare.com>" [unknown]
    ```
 
    The `Good signature` line, and a key ID that matches the TuxCare public key you imported, confirm the archive is authentic and unmodified. `BAD signature`, or a missing public key, is an integrity violation — stop and re-obtain the archive from TuxCare over a trusted channel.
