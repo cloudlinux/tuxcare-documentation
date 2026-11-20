@@ -168,6 +168,14 @@ TuxCare distributes ELS applications as archives you download from TuxCare Nexus
    gpg --verify minio_linux_amd64-2025.10.15T17.29.55Z-tuxcare.19.tar.gz.asc minio_linux_amd64-2025.10.15T17.29.55Z-tuxcare.19.tar.gz
    ```
 
+   A valid signature produces output similar to:
+
+   ```text
+   gpg: Signature made <date>
+   gpg:                using RSA key <TUXCARE_KEY_ID>
+   gpg: Good signature from "TuxCare <...>" [unknown]
+   ```
+
    The `Good signature` line, and a key ID that matches the TuxCare public key you imported, confirm the archive is authentic and unmodified. `BAD signature`, or a missing public key, is an integrity violation — stop and re-obtain the archive from TuxCare over a trusted channel.
 
 </ELSSteps>
