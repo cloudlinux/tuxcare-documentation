@@ -6,11 +6,11 @@ This guide describes [TuxCare Enterprise Support](https://tuxcare.com/tuxcare-en
 
 ## What is TuxCare Enterprise Support?
 
-TuxCare Enterprise Support provides a TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with 16 years of support coverage, ensures long-term stability and FIPS 140-3 compliance with extended security support for select minor releases, and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.
+TuxCare Enterprise Support provides a TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with endless support coverage, ensures long-term stability and FIPS 140-3 compliance with extended security support for select minor releases, and helps to avoid costly upfront support package fees with pay-as-you-go hourly support bundles.
 
 Available services:
 
-* **Essential Support**: TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with guaranteed uptime, expedited break-and-fix support and up to 16 years of support coverage
+* **Essential Support**: TuxCare-vetted repository of AlmaLinux and Rocky Linux updates with guaranteed uptime, expedited break-and-fix support and endless support coverage
 * **Extended Security Updates** provide an extended period of security fixes for critical and high-risk vulnerabilities for select minor versions, as well as the **full suite of five FIPS-validated modules** (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified Linux deployments. **The product also unlocks commercial use of the FIPS-validated packages.**
 * **Enhanced Support**: Enterprise-grade support for AlmaLinux, Rocky Linux and open-source applications with pay-as-you-go pricing in 5, 10, and 20-hour bundles
 
@@ -26,9 +26,9 @@ AlmaLinux and Rocky Linux provide a 10-year lifecycle with a new minor release a
 
 ESU delivers an extended period of security fixes for critical and high-risk vulnerabilities for select minor versions, as well as the full suite of five FIPS-validated modules (kernel, openssl, libcrypt, nss and gnutls) and FIPS-compliant security patches for FIPS-certified Linux deployments. The product also unlocks commercial use of the FIPS-validated packages.
 
-Extended Security Updates are currently available for AlmaLinux 9.2, AlmaLinux 9.6, Rocky Linux 9.6, and planned support for 9.10. This provision ensures that a given minor release continues to receive essential updates, allowing customers to avoid upgrading every six months and test/certify their applications against the next minor version at their own pace.
+Extended Security Updates are currently available for AlmaLinux 9.2 ESU through June 2029; 9.6 ESU planned through June 2036; 9.10 ESU planned through June 2039; TuxCare renews the FIPS certificates to extend coverage; each ESU overlaps with the next; planned dates are confirmed when the FIPS 140-3 certificate is issued. 
 
-![Timeline of AlmaLinux 9 minor releases: Extended Security Updates with FIPS-compliant security patches cover 9.2 for 6.5 years (to 2029), 9.6 for 7.5 years (to 2032) and 9.10 for 7 years after the standard lifecycle ends](/images/esu_lifecycle_graph2.png)
+![](/images/esu-lifecycle-graph.png)
 
 :::warning
 **Disclaimer**: Minor releases planned for ESU are subject to change. TuxCare reserves the right to change them at any time without prior notice.
