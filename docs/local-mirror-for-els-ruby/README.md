@@ -53,6 +53,7 @@ If your local mirror is already set up against `repo.tuxcare.com` or `repo.cloud
 | deb/ubuntu/20.04/ | Ubuntu 20.04                                                               |
 | deb/ubuntu/22.04/ | Ubuntu 22.04                                                               |
 | deb/ubuntu/24.04/ | Ubuntu 24.04                                                               |
+| deb/ubuntu/26.04/ | Ubuntu 26.04                                                               |
 | deb/debian/10/    | Debian 10                                                                  |
 | deb/debian/11/    | Debian 11                                                                  |
 | deb/debian/12/    | Debian 12                                                                  |
