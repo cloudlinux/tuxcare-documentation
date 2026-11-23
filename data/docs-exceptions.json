@@ -1,0 +1,42 @@
+{
+  "rule": "A package whose only findings are AIKIDO/SNYK IDs, with no real CVE fixed by TuxCare, is not documented",
+  "verification": "The Slite page lists candidates, not exceptions. A candidate is added here only after a VEX/NVD review confirms that no real CVE is fixed for the listed versions. A candidate that has not been reviewed stays in Slite and is absent from this file, so its package is a docs gap, not an exclusion",
+  "source": "https://cloudlinux.slite.com/app/docs/injN-wqwDGcYDc",
+  "verified_in": "https://cloudlinux.atlassian.net/browse/ELSDOC-529",
+  "maintained_by": "docs team, by pull request",
+  "updated": "2026-11-23",
+  "entries": [
+    {
+      "ecosystem": "python",
+      "package": "piexif",
+      "versions": ["1.1.3"],
+      "advisories": ["SNYK-PYTHON-PIEXIF-2312874"],
+      "status": "excluded",
+      "decided": "2026-11-23"
+    },
+    {
+      "ecosystem": "python",
+      "package": "statsmodels",
+      "versions": ["0.14.4", "0.14.5"],
+      "advisories": ["AIKIDO-2024-10275"],
+      "status": "excluded",
+      "decided": "2026-11-23"
+    },
+    {
+      "ecosystem": "python",
+      "package": "google-cloud-storage",
+      "versions": ["2.19.0"],
+      "advisories": ["AIKIDO-2026-10425"],
+      "status": "excluded",
+      "decided": "2026-11-23"
+    },
+    {
+      "ecosystem": "javascript",
+      "package": "sitemap",
+      "versions": ["7.1.2"],
+      "advisories": ["AIKIDO-2025-10769"],
+      "status": "excluded",
+      "decided": "2026-11-23"
+    }
+  ]
+}
