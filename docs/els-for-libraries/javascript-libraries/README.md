@@ -90,6 +90,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **forwarded** 0.1.0
 * **fresh** 0.1.0, 0.2.0, 0.2.2, 0.2.4, 0.3.0, 0.5.2
 * **fstream** 1.0.8
+* **Gatsby** 2.32.13
 * **gh-pages** 0.12.0
 * **glob** 3.2.11, 6.0.4, 7.1.6, 7.2.3, 9.3.5, 10.2.6, 10.3.3, 10.3.10, 10.3.16, 10.4.2, 10.4.5, 10.5.0, 11.1.0
 * **got** 2.9.2, 6.7.1, 7.1.0, 8.3.2, 9.6.0, 10.7.0
@@ -205,6 +206,14 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
   * **octokit-request-error** 2.1.0
 * **OpenTelemetry JS**
   * **opentelemetry-core** 1.17.0, 1.17.1, 1.22.0, 1.25.1, 1.27.0, 1.30.1, 2.0.1, 2.1.0, 2.2.0, 2.5.1, 2.6.1, 2.7.0, 2.7.1
+  * **opentelemetry-instrumentation-cassandra-driver** 0.33.2, 0.35.0, 0.39.0, 0.40.0, 0.44.0, 0.45.1, 0.49.0, 0.54.1, 0.57.0, 0.58.0, 0.60.0, 0.61.0, 0.62.0, 0.64.0, 0.65.0
+  * **opentelemetry-instrumentation-knex** 0.32.4, 0.33.0, 0.37.0, 0.39.0, 0.43.0, 0.44.1, 0.48.0, 0.53.1, 0.55.0, 0.56.0, 0.57.0, 0.58.0, 0.59.0, 0.60.0, 0.61.0, 0.63.0, 0.64.0
+  * **opentelemetry-instrumentation-mongoose** 0.33.4, 0.35.0, 0.39.0, 0.40.0, 0.41.0, 0.45.0, 0.46.1, 0.50.0, 0.55.1, 0.57.0, 0.58.0, 0.59.0, 0.60.0, 0.61.0, 0.62.0, 0.63.0, 0.65.0, 0.66.0
+  * **opentelemetry-instrumentation-mysql** 0.34.5, 0.35.0, 0.39.0, 0.40.0, 0.44.0, 0.45.1, 0.49.0, 0.54.0, 0.55.0, 0.57.0, 0.58.0, 0.59.0, 0.60.0, 0.61.0, 0.62.0, 0.63.0, 0.65.0, 0.66.0
+  * **opentelemetry-instrumentation-mysql2** 0.34.5, 0.35.0, 0.39.0, 0.40.0, 0.44.0, 0.45.2, 0.49.0, 0.50.0, 0.55.1, 0.57.0, 0.58.0, 0.59.0, 0.60.0, 0.61.0, 0.62.0, 0.63.0, 0.65.0, 0.66.0
+  * **opentelemetry-instrumentation-oracledb** 0.29.0, 0.34.1, 0.37.0, 0.38.0, 0.40.0, 0.41.0, 0.42.0, 0.43.0, 0.44.0, 0.45.0
+  * **opentelemetry-instrumentation-pg** 0.36.2, 0.38.0, 0.42.0, 0.43.0, 0.49.0, 0.50.0, 0.51.1, 0.55.0, 0.56.1, 0.61.2, 0.63.0, 0.64.0, 0.65.0, 0.66.0, 0.67.0, 0.68.0, 0.69.0, 0.71.0, 0.72.0
+  * **opentelemetry-instrumentation-tedious** 0.6.5, 0.7.0, 0.11.0, 0.12.0, 0.13.0, 0.17.0, 0.18.1, 0.22.0, 0.27.0, 0.28.0, 0.30.0, 0.31.0, 0.32.0, 0.33.0, 0.34.0, 0.35.0, 0.36.0, 0.38.0, 0.39.0
   * **opentelemetry-propagator-jaeger** 1.22.0, 1.27.0, 1.30.1, 2.8.0
 * **optimist** 0.6.1
 * **pac-resolver** 4.2.0
@@ -238,6 +247,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **react-server-dom-webpack** 19.0.0, 19.0.8, 19.2.0, 19.2.8
 * **redis** 2.8.0
 * **request** 2.36.0, 2.37.0, 2.40.0, 2.57.0, 2.65.0, 2.67.0, 2.75.0, 2.81.0, 2.87.0, 2.88.0, 2.88.2
+* **requestretry** 1.13.0
 * **Rollup** 0.36.3, 0.41.6, 0.56.4, 0.57.1, 0.59.4, 0.63.5, 1.32.1, 2.1.0, 2.26.5, 2.38.4, 2.77.3, 2.79.1, 2.79.2, 3.15.0, 4.22.4
 * **sanitize-html** 1.27.5
 * **saucelabs** 1.0.1, 1.3.0
@@ -291,6 +301,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
 * **unhead-schema** 1.11.20
 * **unhead-vue** 1.11.20
 * **url-parse** 1.4.7
+* **useragent** 2.2.1, 2.3.0
 * **uuid** 2.0.3, 3.3.2, 3.4.0, 7.0.3, 8.0.0, 8.3.2, 9.0.0, 9.0.1, 10.0.0, 11.0.3, 11.0.5, 11.1.0
 * **valibot** 0.41.0, 1.2.0
 * **validator** 4.4.0, 7.2.0, 8.2.0, 10.11.0, 13.12.0
