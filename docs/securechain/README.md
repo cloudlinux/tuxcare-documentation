@@ -51,6 +51,21 @@ TuxCare's commitment to transparency and visibility is foundational to the Secur
 * **Verifiable Integrity and Provenance**: Packages and metadata provide end-to-end provenance information, helping customers verify the build, test, and distribution history of the software.
 * **Secure Distribution**: TuxCare-managed infrastructure distributes signed packages and associated metadata, ensuring authenticity and integrity.
 
+### Repacked Packages
+
+For certain packages whose published version cannot be traced to a public source-code commit, or that contain closed-source components, SecureChain may repack vendor-published archives without rebuilding from source. TuxCare limits repacking to vendors on its approved vendor list.
+
+Each repacked package is:
+
+* Scanned for malware
+* Checksum-verified
+* Cryptographically signed
+* Packaged on TuxCare-controlled infrastructure
+* Subject to a pre-publication hold
+* Clearly labeled as repacked
+
+TuxCare-generated provenance covers its repackaging process, not the vendor's original build.
+
 ## Support Duration
 
 TuxCare provides continuous security patching for all SecureChain-supported open-source packages for as long as your organization requires them, eliminating the need for rushed or disruptive upgrades.
