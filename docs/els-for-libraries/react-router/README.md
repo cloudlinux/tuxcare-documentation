@@ -8,10 +8,18 @@ TuxCare publishes react-router packages under the `@els-js` scope. For example, 
 
 | Package | Versions |
 | --- | --- |
-| react-router | 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.5.1, 7.13.1, 7.14.1, 7.14.2, 7.15.0, 7.15.1, 7.18.1 |
-| react-router-dom | 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.5.1, 7.13.1, 7.14.1, 7.14.2, 7.15.0, 7.15.1, 7.18.1 |
+| react-router | 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.5.1, 7.6.0, 7.13.1, 7.14.1, 7.14.2, 7.15.0, 7.15.1, 7.17.0, 7.18.1, 8.0.1, 8.1.0, 8.2.0 |
+| react-router-architect | 7.6.0, 8.0.1, 8.1.0, 8.2.0 |
+| react-router-cloudflare | 7.6.0, 8.0.1, 8.1.0, 8.2.0 |
+| react-router-dev | 7.6.0, 7.17.0, 8.0.1, 8.1.0, 8.2.0 |
+| react-router-dom | 6.3.0, 6.30.3, 6.30.4, 6.30.6, 7.5.1, 7.6.0, 7.13.1, 7.14.1, 7.14.2, 7.15.0, 7.15.1, 7.17.0, 7.18.1 |
 | react-router-dom-v5-compat | 6.3.0, 6.30.4, 6.30.6 |
+| react-router-express | 7.6.0, 7.17.0, 8.0.1, 8.1.0, 8.2.0 |
+| react-router-fs-routes | 7.6.0, 7.17.0, 8.0.1, 8.1.0, 8.2.0 |
 | react-router-native | 6.3.0, 6.30.3, 6.30.6 |
+| react-router-node | 7.6.0, 7.17.0, 8.0.1, 8.1.0, 8.2.0 |
+| react-router-remix-routes-option-adapter | 7.6.0, 8.0.1, 8.1.0, 8.2.0 |
+| react-router-serve | 7.6.0, 7.17.0, 8.0.1, 8.1.0, 8.2.0 |
 | remix-run-router | 1.6.2, 1.7.2, 1.15.3, 1.23.0, 1.23.2, 1.23.3 |
 
 ## Installation
