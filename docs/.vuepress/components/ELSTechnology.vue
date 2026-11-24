@@ -1855,7 +1855,7 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
-        name: "gatsby",
+        name: "Gatsby",
         versions: "2.32.13",
         link: "./javascript-libraries/",
       },
