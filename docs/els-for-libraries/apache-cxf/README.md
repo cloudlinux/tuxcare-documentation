@@ -4,7 +4,8 @@ TuxCare's Endless Lifecycle Support (ELS) for Apache CXF provides security patch
 
 ## Supported Versions
 
-* Apache CXF 3.4.5, 3.5.9, 3.5.11
+* Apache CXF 2.7.18, 3.0.12, 3.4.5, 3.5.9, 3.5.11
+* cxf-xjc-utils 3.0.2, 3.3.0, 3.3.1
 
 ## Installation
 
