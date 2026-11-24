@@ -30,10 +30,10 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
   * **Apache Commons FileUpload** 1.2.1, 1.2.2, 1.3.1, 1.5
   * **Apache Commons HttpClient** 3.1
   * **Apache Commons IO** 2.0.1, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.9.0, 2.10.0, 2.11.0
+  * **Apache Commons JCI** 1.1
   * **Apache Commons Text** 1.6, 1.7, 1.8, 1.9, 1.10.0, 1.12.0, 1.13.1
   * **Apache Commons Validator** 1.6, 1.7, 1.8.0, 1.9.0
   * **Apache Commons VFS** 2.0
-  * **commons-jci** 1.1
 * **Apache Curator** 2.7.1, 5.7.1
 * **Apache Directory LDAP API** 2.0.0.AM1, 2.1.6
 * **Apache FreeMarker** 2.3.29, 2.3.30, 2.3.31, 2.3.32, 2.3.33, 2.3.34
