@@ -123,8 +123,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "airline",
+        versions: "0.7",
+        link: "./java-libraries/",
+      },
+      {
+        name: "allocation-instrumenter",
+        versions: "3.3.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Amazon Kinesis Client Library for Java",
-        versions: "2.2.8",
+        versions: "1.7.3 | 2.2.8 | 3.1.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "amazon-kinesis-producer",
+        versions: "1.0.4",
         link: "./java-libraries/",
       },
       {
@@ -184,12 +199,12 @@ const techData = [
       },
       {
         name: "Apache Commons Compress",
-        versions: "1.4.1 | 1.8.1 | 1.9 | 1.12 | 1.14 | 1.15 | 1.18 | 1.19 | 1.20 | 1.21 | 1.22 | 1.23.0 | 1.24.0 | 1.25.0 | 1.26.0 | 1.26.2 | 1.27.1",
+        versions: "1.4.1 | 1.8.1 | 1.9 | 1.12 | 1.14 | 1.15 | 1.18 | 1.19 | 1.20 | 1.21 | 1.22 | 1.23.0 | 1.24.0 | 1.25.0 | 1.26.0 | 1.26.1 | 1.26.2 | 1.27.1",
         link: "./java-libraries/",
       },
       {
         name: "Apache Commons Configuration",
-        versions: "1.6 | 1.8 | 1.9 | 1.10 | 2.1.1 | 2.4 | 2.8.0 | 2.9.0 | 2.10.1 | 2.11.0 | 2.12.0",
+        versions: "1.6 | 1.7 | 1.8 | 1.9 | 1.10 | 2.1.1 | 2.4 | 2.8.0 | 2.9.0 | 2.10.1 | 2.11.0 | 2.12.0",
         link: "./java-libraries/",
       },
       {
@@ -213,6 +228,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Commons JCI",
+        versions: "1.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache Commons Lang",
         versions: "2.4 | 2.6",
         link: "./apache-commons-lang/",
@@ -229,12 +249,12 @@ const techData = [
       },
       {
         name: "Apache Commons Text",
-        versions: "1.9 | 1.12.0 | 1.13.1",
+        versions: "1.6 | 1.7 | 1.8 | 1.9 | 1.10.0 | 1.12.0 | 1.13.1",
         link: "./java-libraries/",
       },
       {
         name: "Apache Commons Validator",
-        versions: "1.8.0",
+        versions: "1.6 | 1.7 | 1.8.0 | 1.9.0",
         link: "./java-libraries/",
       },
       {
@@ -243,13 +263,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Curator",
+        versions: "2.7.1 | 5.7.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache CXF",
-        versions: "3.2.1 | 3.4.5 | 3.5.9 | 3.5.11",
+        versions: "2.7.18 | 3.0.12 | 3.2.1 | 3.4.5 | 3.5.9 | 3.5.11",
         link: "./apache-cxf/",
       },
       {
         name: "Apache Directory LDAP API",
-        versions: "1.0.0-M20 | 2.0.0.AM1 | 2.1.7",
+        versions: "1.0.0-M20 | 2.0.0.AM1 | 2.1.6 | 2.1.7",
         link: "./java-libraries/",
       },
       {
@@ -273,6 +298,16 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Apache Hadoop",
+        versions: "2.6.4",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache HTrace",
+        versions: "2.01 | 2.04 | 3.0.4",
+        link: "./java-libraries/",
+      },
+      {
         name: "Apache HttpComponents AsyncClient",
         versions: "4.0-beta3 | 4.1.2 | 4.1.4",
         link: "./java-libraries/",
@@ -284,7 +319,7 @@ const techData = [
       },
       {
         name: "Apache HttpComponents Client 5",
-        versions: "5.0.3 | 5.1.3 | 5.1.4 | 5.2.3 | 5.3.1 | 5.4.4 | 5.5.2",
+        versions: "5.0.3 | 5.1.3 | 5.1.4 | 5.2.3 | 5.3.1 | 5.4.3 | 5.4.4 | 5.5.2",
         link: "./java-libraries/",
       },
       {
@@ -295,6 +330,11 @@ const techData = [
       {
         name: "Apache Ivy",
         versions: "2.3.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Apache Jackrabbit",
+        versions: "1.4.12",
         link: "./java-libraries/",
       },
       {
@@ -309,12 +349,12 @@ const techData = [
       },
       {
         name: "Apache ORC",
-        versions: "1.6.3",
+        versions: "1.6.3 | 1.9.8",
         link: "./java-libraries/",
       },
       {
         name: "Apache POI",
-        versions: "3.10-FINAL | 3.11 | 3.15-beta1 | 3.17 | 4.1.2",
+        versions: "3.7 | 3.9 | 3.10-FINAL | 3.11 | 3.15-beta1 | 3.17 | 4.1.2 | 5.2.2",
         link: "./java-libraries/",
       },
       {
@@ -354,7 +394,7 @@ const techData = [
       },
       {
         name: "Apache Santuario",
-        versions: "2.0.10 | 2.1.4 | 2.3.1",
+        versions: "2.0.10 | 2.1.1 | 2.1.2 | 2.1.4 | 2.3.1",
         link: "./java-libraries/",
       },
       {
@@ -362,7 +402,6 @@ const techData = [
         versions: "5.5.5 | 8.5.2 | 8.11.3",
         link: "./apache-lucene-and-solr/",
       },
-
       {
         name: "Apache Spark™",
         versions: "2.4.8",
@@ -385,12 +424,12 @@ const techData = [
       },
       {
         name: "Apache Tomcat®",
-        versions: "7.0.70 | 7.0.109 | 8.5.46 | 8.5.78 | 8.5.100 | 9.0.13 | 9.0.24 | 9.0.39 | 9.0.46 | 9.0.50 | 9.0.75 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.16 | 10.1.18 | 10.1.33 | 10.1.42 | 10.1.50 | 10.1.55",
+        versions: "7.0.70 | 7.0.109 | 8.5.46 | 8.5.78 | 8.5.100 | 9.0.13 | 9.0.24 | 9.0.39 | 9.0.46 | 9.0.50 | 9.0.58 | 9.0.75 | 9.0.80 | 9.0.83 | 9.0.87 | 9.0.90 | 9.0.100 | 10.1.16 | 10.1.18 | 10.1.33 | 10.1.42 | 10.1.50 | 10.1.55",
         link: "./apache-tomcat/",
       },
       {
         name: "Apache Velocity Engine™",
-        versions: "1.7 | 2.4.1",
+        versions: "1.6.2 | 1.7 | 2.0 | 2.4.1",
         link: "./apache-velocity-engine/",
       },
       {
@@ -420,12 +459,12 @@ const techData = [
       },
       {
         name: "Apache XMLBeans",
-        versions: "2.3.0 | 2.6.0 | 5.1.1",
+        versions: "2.3.0 | 2.6.0 | 5.0.3 | 5.1.1 | 5.2.1",
         link: "./java-libraries/",
       },
       {
         name: "Apache ZooKeeper",
-        versions: "3.4.10 | 3.4.13 | 3.5.5 | 3.5.6 | 3.5.7 | 3.5.9 | 3.6.0 | 3.6.2 | 3.7.2 | 3.8.3 | 3.8.6 | 3.9.1",
+        versions: "3.4.10 | 3.4.13 | 3.5.3-beta | 3.5.5 | 3.5.6 | 3.5.7 | 3.5.9 | 3.6.0 | 3.6.2 | 3.7.1 | 3.7.2 | 3.8.3 | 3.8.4 | 3.8.5 | 3.8.6 | 3.9.1",
         link: "./java-libraries/",
       },
       {
@@ -434,8 +473,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "archaius",
+        versions: "0.5.12 | 0.6.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "aries-component-dsl",
+        versions: "1.2.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "arquillian-spacelift",
+        versions: "1.0.2",
+        link: "./java-libraries/",
+      },
+      {
         name: "arrow",
-        versions: "0.8.0 | 0.10.0",
+        versions: "0.1.0 | 0.8.0 | 0.10.0",
         link: "./java-libraries/",
       },
       {
@@ -449,18 +503,38 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "auto",
+        versions: "0.8 | 1.0.1 | 1.2.1 | 1.4 | 1.10.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "aviatorscript",
+        versions: "2.2.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "AWS SDK for Java",
+        versions: "1.11.641 | 1.11.1030",
+        link: "./java-libraries/",
+      },
+      {
         name: "aws-sdk-java",
         versions: "1.11.633 | 1.11.641 | 1.11.1030",
         link: "./java-libraries/",
       },
       {
         name: "azure-sdk-for-java",
-        versions: "1.2.4 | 1.13.7",
+        versions: "1.2.4 | 1.13.7 | 1.43.0 | 1.44.0 | 1.44.1 | 1.49.1",
         link: "./java-libraries/",
       },
       {
         name: "Bouncy Castle",
         versions: "1.64 | 1.75 | 1.76 | 1.77 | 1.78.1 | 1.81 | 1.81.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "brave",
+        versions: "5.16.0 | 6.0.3",
         link: "./java-libraries/",
       },
       {
@@ -479,13 +553,33 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "carrot2-guava",
+        versions: "18.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "castor",
+        versions: "1.4.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "cglib",
+        versions: "3.2.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "chunk-templates",
+        versions: "3.3.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "cos-java-sdk-v5",
         versions: "5.6.69",
         link: "./java-libraries/",
       },
       {
         name: "Couchbase Java Client",
-        versions: "3.0.9 | 3.6.3 | 3.8.3",
+        versions: "3.0.9 | 3.1.8 | 3.6.3 | 3.8.3",
         link: "./java-libraries/",
       },
       {
@@ -499,8 +593,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Couchbase Kotlin Client",
+        versions: "1.0.4",
+        link: "./java-libraries/",
+      },
+      {
+        name: "creadur-rat",
+        versions: "0.6",
+        link: "./java-libraries/",
+      },
+      {
         name: "creaper",
         versions: "1.6.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "crunch",
+        versions: "0.10.0-hadoop2",
         link: "./java-libraries/",
       },
       {
@@ -509,8 +618,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "cxf-xjc-utils",
+        versions: "3.0.2 | 3.3.0 | 3.3.1",
+        link: "./apache-cxf/",
+      },
+      {
         name: "DataStax Java Driver",
         versions: "4.11.3 | 4.14.1 | 4.17.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "digitalocean-api-java",
+        versions: "2.16",
+        link: "./java-libraries/",
+      },
+      {
+        name: "directory-server",
+        versions: "2.0.0-M24",
         link: "./java-libraries/",
       },
       {
@@ -530,7 +654,7 @@ const techData = [
       },
       {
         name: "Dropwizard Metrics",
-        versions: "2.2.0 | 3.0.1 | 3.0.2 | 3.1.0 | 3.1.5 | 3.2.4 | 3.2.6 | 4.1.11",
+        versions: "2.2.0 | 3.0.1 | 3.0.2 | 3.1.0 | 3.1.5 | 3.2.4 | 3.2.6 | 4.1.11 | 4.2.39",
         link: "./java-libraries/",
       },
       {
@@ -550,7 +674,7 @@ const techData = [
       },
       {
         name: "Eclipse JGit",
-        versions: "5.0.1.201806211838-r | 5.0.2.201807311906-r | 5.1.3.201810200350-r | 5.7.0.202003110725-r | 5.13.3.202401111512-r | 6.2.0.202206071550-r",
+        versions: "5.0.1.201806211838-r | 5.0.2.201807311906-r | 5.1.3.201810200350-r | 5.7.0.202003110725-r | 5.13.2.202306221912-r | 5.13.3.202401111512-r | 6.2.0.202206071550-r | 6.10.0.202406032230-r | 6.10.1.202505221210-r",
         link: "./java-libraries/",
       },
       {
@@ -560,7 +684,7 @@ const techData = [
       },
       {
         name: "Eclipse Sisu Plexus",
-        versions: "0.0.0.M5 | 0.9.0.M2",
+        versions: "0.0.0.M2a | 0.0.0.M5 | 0.9.0.M2",
         link: "./java-libraries/",
       },
       {
@@ -579,13 +703,28 @@ const techData = [
         link: "./elasticsearch/",
       },
       {
-        name: "Elasticsearch Java Client",
-        versions: "7.17.15 | 8.7.1 | 8.13.4",
+        name: "elasticsearch-hadoop",
+        versions: "7.12.1",
         link: "./elasticsearch/",
       },
       {
+        name: "Elasticsearch Java Client",
+        versions: "7.17.4 | 7.17.7 | 7.17.8 | 7.17.9 | 7.17.13 | 7.17.15 | 8.5.2 | 8.5.3 | 8.7.1 | 8.12.1 | 8.13.4 | 8.15.5",
+        link: "./elasticsearch/",
+      },
+      {
+        name: "emitter",
+        versions: "0.3.4 | 0.3.6",
+        link: "./java-libraries/",
+      },
+      {
+        name: "error-prone",
+        versions: "2.9.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Esri Geometry API for Java",
-        versions: "1.2.1",
+        versions: "1.2.1 | 2.2.0 | 2.2.4",
         link: "./java-libraries/",
       },
       {
@@ -604,6 +743,21 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "exec-maven-plugin",
+        versions: "1.6.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "extendedset",
+        versions: "1.3.10",
+        link: "./java-libraries/",
+      },
+      {
+        name: "fastexcel",
+        versions: "0.18.4",
+        link: "./java-libraries/",
+      },
+      {
         name: "fast-serialization",
         versions: "2.5",
         link: "./java-libraries/",
@@ -619,8 +773,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "GlassFish HK2",
+        versions: "2.2.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "gmavenplus",
+        versions: "3.0.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "google-auth-library-java",
+        versions: "0.6.1 | 0.9.0 | 0.11.0 | 0.16.1 | 0.16.2 | 0.18.0 | 0.19.0 | 1.2.1 | 1.3.0 | 1.4.0 | 1.7.0 | 1.11.0 | 1.12.2",
+        link: "./java-libraries/",
+      },
+      {
         name: "Google Gson",
-        versions: "2.2.2 | 2.2.4 | 2.4 | 2.7 | 2.8.5 | 2.8.9 | 2.9.1 | 2.10.1 | 2.11.0",
+        versions: "2.2.2 | 2.2.4 | 2.4 | 2.7 | 2.8.5 | 2.8.5.hibernate02 | 2.8.9 | 2.9.1 | 2.10.1 | 2.11.0",
         link: "./java-libraries/",
       },
       {
@@ -634,13 +803,23 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Google OAuth Client Library for Java",
-        versions: "1.25.0",
+        name: "google-http-java-client",
+        versions: "1.15.0-rc | 1.32.1 | 1.33.0 | 1.34.0 | 1.34.2 | 1.35.0 | 1.38.0 | 1.39.0 | 1.39.2 | 1.42.2",
         link: "./java-libraries/",
       },
       {
-        name: "google-auth-library-java",
-        versions: "1.2.1 | 1.3.0 | 1.4.0 | 1.7.0",
+        name: "google-maps-services-java",
+        versions: "0.2.9",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Google OAuth Client Library for Java",
+        versions: "1.25.0 | 1.30.4 | 1.30.5",
+        link: "./java-libraries/",
+      },
+      {
+        name: "governator",
+        versions: "1.2.7",
         link: "./java-libraries/",
       },
       {
@@ -665,12 +844,12 @@ const techData = [
       },
       {
         name: "GraphQL Java",
-        versions: "18.2 | 18.3 | 19.1 | 21.5 | 22.3 | 22.4 | 24.3",
+        versions: "18.2 | 18.3 | 19.1 | 19.2 | 21.5 | 22.3 | 22.4 | 24.3",
         link: "./java-libraries/",
       },
       {
         name: "gRPC-Java",
-        versions: "1.15.0 | 1.26.0 | 1.27.2",
+        versions: "1.12.0 | 1.15.0 | 1.21.0 | 1.26.0 | 1.27.2 | 1.28.0 | 1.28.1 | 1.43.2 | 1.44.0 | 1.44.1",
         link: "./java-libraries/",
       },
       {
@@ -681,6 +860,16 @@ const techData = [
       {
         name: "hadoop-thirdparty",
         versions: "1.2.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "handlebars.java",
+        versions: "4.1.2 | 4.2.0 | 4.3.0 | 4.3.1 | 4.4.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "hapi-fhir",
+        versions: "2.2",
         link: "./java-libraries/",
       },
       {
@@ -725,7 +914,7 @@ const techData = [
       },
       {
         name: "HornetQ",
-        versions: "2.4.9.Final",
+        versions: "2.3.0.CR1 | 2.4.9.Final",
         link: "./java-libraries/",
       },
       {
@@ -744,8 +933,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "htmlunit-neko",
+        versions: "2.40.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "http-client",
-        versions: "1.0.3 | 1.0.4",
+        versions: "1.0.3 | 1.0.4 | 2.1.0.RELEASE | 3.8.0.RELEASE | 3.12.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "ical4j",
+        versions: "1.0.7",
         link: "./java-libraries/",
       },
       {
@@ -759,63 +958,58 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "jackcess",
+        versions: "2.1.0 | 2.1.3 | 2.1.8 | 2.1.12 | 3.0.1 | 4.0.0 | 4.0.5 | 4.0.8",
+        link: "./java-libraries/",
+      },
+      {
+        name: "jackrabbit",
+        versions: "2.19.5",
+        link: "./java-libraries/",
+      },
+      {
         name: "Jackson 3",
         versions: "3.1.2",
         link: "./jackson/",
-        detailsHash: "Jackson_3",
       },
       {
         name: "Jackson 2 Core",
         versions: "2.1 | 2.2 | 2.4 | 2.5 | 2.6 | 2.7 | 2.8 | 2.9 | 2.10 | 2.11 | 2.12 | 2.13 | 2.14 | 2.15 | 2.16 | 2.17 | 2.18 | 2.19 | 2.20 | 2.21",
         link: "./jackson/",
-        detailsHash: "Core",
-        versionsVary: true,
       },
       {
         name: "Jackson Data Formats",
         versions: "2.8 | 2.9 | 2.10 | 2.11 | 2.12 | 2.13 | 2.14 | 2.15 | 2.16 | 2.17 | 2.18 | 2.21",
         link: "./jackson/",
-        detailsHash: "Data_Formats",
-        versionsVary: true,
       },
       {
         name: "Jackson Data Types",
         versions: "2.9 | 2.11 | 2.14 | 2.15 | 2.16 | 2.17 | 2.18 | 2.19",
         link: "./jackson/",
-        detailsHash: "Data_Types",
-        versionsVary: true,
       },
       {
         name: "Jackson JAX-RS Providers",
         versions: "2.11 | 2.15 | 2.16",
         link: "./jackson/",
-        detailsHash: "JAX_RS",
-        versionsVary: true,
       },
       {
         name: "Jackson Modules",
         versions: "2.9 | 2.11 | 2.14 | 2.15 | 2.17 | 2.18 | 2.19",
         link: "./jackson/",
-        detailsHash: "Modules",
-        versionsVary: true,
       },
       {
         name: "Jackson jr",
         versions: "2.10",
         link: "./jackson/",
-        detailsHash: "Jackson_jr",
-        versionsVary: true,
       },
       {
         name: "Jackson 1.x",
         versions: "1.9",
         link: "./jackson/",
-        detailsHash: "Jackson_1",
-        versionsVary: true,
       },
       {
-        name: "jackrabbit",
-        versions: "2.19.5",
+        name: "jaeger-client-java",
+        versions: "1.6.0",
         link: "./java-libraries/",
       },
       {
@@ -839,6 +1033,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "java-genai",
+        versions: "1.37.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "Java SDK for SQL API of Azure Cosmos DB",
         versions: "2.4.5",
         link: "./java-libraries/",
@@ -854,6 +1053,16 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "jboss-remoting",
+        versions: "5.0.26.Final | 5.0.27.Final | 5.0.30.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "jcifs",
+        versions: "2.1.37",
+        link: "./java-libraries/",
+      },
+      {
         name: "JDOM",
         versions: "1.0 | 1.1.3",
         link: "./java-libraries/",
@@ -864,8 +1073,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "jgroups-azure",
+        versions: "1.2.0.Final | 1.2.1.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "jgroups-raft",
+        versions: "0.4.2.Final",
+        link: "./java-libraries/",
+      },
+      {
         name: "JJWT",
-        versions: "0.11.1",
+        versions: "0.11.1 | 0.11.2",
         link: "./java-libraries/",
       },
       {
@@ -884,8 +1103,28 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "jsendnsca",
+        versions: "2.1.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "json-flattener",
+        versions: "0.13.0",
+        link: "./java-libraries/",
+      },
+      {
         name: "JSON-java",
         versions: "20090211 | 20140107",
+        link: "./java-libraries/",
+      },
+      {
+        name: "json-patch",
+        versions: "1.13",
+        link: "./java-libraries/",
+      },
+      {
+        name: "json-schema-validator",
+        versions: "0.1.25 | 1.0.48",
         link: "./java-libraries/",
       },
       {
@@ -919,8 +1158,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "junrar",
+        versions: "0.7",
+        link: "./java-libraries/",
+      },
+      {
         name: "Kotlin",
         versions: "1.6.0 | 1.9.24 | 1.9.25",
+        link: "./java-libraries/",
+      },
+      {
+        name: "language-detector",
+        versions: "0.5 | 0.6",
         link: "./java-libraries/",
       },
       {
@@ -931,6 +1180,11 @@ const techData = [
       {
         name: "Lettuce",
         versions: "5.0.2.RELEASE | 5.3.7.RELEASE | 6.0.4.RELEASE | 6.0.5.RELEASE | 6.0.8.RELEASE | 6.1.8.RELEASE | 6.1.10.RELEASE | 6.3.2.RELEASE | 6.4.2.RELEASE",
+        link: "./java-libraries/",
+      },
+      {
+        name: "leveldb",
+        versions: "0.2",
         link: "./java-libraries/",
       },
       {
@@ -949,8 +1203,88 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "maven",
+        versions: "3.0.1 | 3.1.0 | 3.9.10",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-archiver",
+        versions: "2.6 | 3.5.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-artifact-transfer",
+        versions: "0.9.1 | 0.10.1 | 0.11.0 | 0.12.0 | 0.13.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-common-artifact-filters",
+        versions: "1.4 | 3.0.0 | 3.0.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-compiler-plugin",
+        versions: "3.5.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-doxia",
+        versions: "1.7",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-doxia-sitetools",
+        versions: "1.11.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-file-management",
+        versions: "1.2.1 | 3.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-filtering",
+        versions: "3.1.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "maven-invoker",
-        versions: "3.0.1",
+        versions: "2.0.9 | 3.0.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-javadoc-plugin",
+        versions: "3.0.1 | 3.2.0 | 3.7.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-plugin-testing",
+        versions: "1.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-plugin-tools",
+        versions: "3.2 | 3.3 | 3.4 | 3.5 | 3.5.2 | 3.6.0 | 3.6.1 | 3.6.4 | 3.10.2 | 3.12.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-resolver",
+        versions: "1.1.1 | 1.4.1 | 1.4.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-shared-io",
+        versions: "3.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-shared-utils",
+        versions: "0.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "maven-wagon",
+        versions: "3.1.0 | 3.2.0 | 3.3.2 | 3.3.3 | 3.3.4 | 3.4.3",
         link: "./java-libraries/",
       },
       {
@@ -970,7 +1304,7 @@ const techData = [
       },
       {
         name: "Micrometer Tracing",
-        versions: "1.2.12 | 1.3.13 | 1.4.13 | 1.5.12",
+        versions: "1.0.12 | 1.2.12 | 1.3.13 | 1.4.13 | 1.5.12",
         link: "./java-libraries/",
       },
       {
@@ -985,12 +1319,17 @@ const techData = [
       },
       {
         name: "microsoft-authentication-library-for-java",
-        versions: "1.15.1",
+        versions: "1.13.9 | 1.13.10 | 1.15.0 | 1.15.1",
         link: "./java-libraries/",
       },
       {
         name: "mockwebserver",
-        versions: "0.1.7",
+        versions: "0.1.7 | 0.2.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "mojo-executor",
+        versions: "2.3.0 | 2.3.1",
         link: "./java-libraries/",
       },
       {
@@ -1020,22 +1359,22 @@ const techData = [
       },
       {
         name: "Neo4j Java Driver",
-        versions: "4.1.1 | 4.1.2 | 4.4.5 | 4.4.12 | 5.13.0 | 5.15.0 | 5.19.0 | 5.25.0 | 5.28.5 | 5.28.10 | 5.28.13",
+        versions: "4.1.1 | 4.1.2 | 4.4.5 | 4.4.12 | 5.4.0 | 5.13.0 | 5.15.0 | 5.19.0 | 5.25.0 | 5.28.5 | 5.28.10 | 5.28.13",
         link: "./java-libraries/",
       },
       {
         name: "Neo4j-OGM",
-        versions: "2.1.6",
+        versions: "2.1.6 | 3.0.5",
         link: "./java-libraries/",
       },
       {
         name: "Netty",
-        versions: "3.2.4.Final | 3.5.13.Final | 3.6.2.Final | 3.7.0.Final | 3.10.6.Final | 4.0.56.Final | 4.1.21.Final | 4.1.23.Final | 4.1.24.Final | 4.1.29.Final | 4.1.31.Final | 4.1.38.Final | 4.1.39.Final | 4.1.42.Final | 4.1.43.Final | 4.1.48.Final | 4.1.49.Final | 4.1.51.Final | 4.1.52.Final | 4.1.53.Final | 4.1.58.Final | 4.1.59.Final | 4.1.60.Final | 4.1.63.Final | 4.1.68.Final | 4.1.70.Final | 4.1.72.Final | 4.1.73.Final | 4.1.74.Final | 4.1.75.Final | 4.1.76.Final | 4.1.79.Final | 4.1.80.Final | 4.1.81.Final | 4.1.82.Final | 4.1.87.Final | 4.1.92.Final | 4.1.93.Final | 4.1.94.Final | 4.1.96.Final | 4.1.99.Final | 4.1.100.Final | 4.1.101.Final | 4.1.104.Final | 4.1.107.Final | 4.1.108.Final | 4.1.111.Final | 4.1.112.Final | 4.1.113.Final | 4.1.114.Final | 4.1.115.Final | 4.1.117.Final | 4.1.118.Final | 4.1.119.Final | 4.1.122.Final | 4.1.128.Final | 4.1.130.Final | 4.1.135.Final | 4.2.2.Final | 4.2.12.Final",
+        versions: "3.2.4.Final | 3.5.13.Final | 3.6.2.Final | 3.7.0.Final | 3.10.6.Final | 4.0.23.Final | 4.0.39.Final | 4.0.56.Final | 4.1.8.Final | 4.1.16.Final | 4.1.21.Final | 4.1.22.Final | 4.1.23.Final | 4.1.24.Final | 4.1.29.Final | 4.1.31.Final | 4.1.38.Final | 4.1.39.Final | 4.1.42.Final | 4.1.43.Final | 4.1.45.Final | 4.1.48.Final | 4.1.49.Final | 4.1.50.Final | 4.1.51.Final | 4.1.52.Final | 4.1.53.Final | 4.1.58.Final | 4.1.59.Final | 4.1.60.Final | 4.1.63.Final | 4.1.64.Final | 4.1.68.Final | 4.1.70.Final | 4.1.72.Final | 4.1.73.Final | 4.1.74.Final | 4.1.75.Final | 4.1.76.Final | 4.1.79.Final | 4.1.80.Final | 4.1.81.Final | 4.1.82.Final | 4.1.86.Final | 4.1.87.Final | 4.1.92.Final | 4.1.93.Final | 4.1.94.Final | 4.1.96.Final | 4.1.99.Final | 4.1.100.Final | 4.1.101.Final | 4.1.104.Final | 4.1.105.Final | 4.1.107.Final | 4.1.108.Final | 4.1.111.Final | 4.1.112.Final | 4.1.113.Final | 4.1.114.Final | 4.1.115.Final | 4.1.117.Final | 4.1.118.Final | 4.1.119.Final | 4.1.122.Final | 4.1.124.Final | 4.1.128.Final | 4.1.130.Final | 4.1.135.Final | 4.2.2.Final | 4.2.12.Final",
         link: "./java-libraries/",
       },
       {
         name: "Netty Incubator",
-        versions: "0.0.21.Final | 0.0.24.Final | 0.0.25.Final",
+        versions: "0.0.14.Final | 0.0.21.Final | 0.0.24.Final | 0.0.25.Final",
         link: "./java-libraries/",
       },
       {
@@ -1074,6 +1413,21 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "org.ops4j.pax.exam",
+        versions: "4.12.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "org.ops4j.pax.logging",
+        versions: "2.0.16 | 2.1.3 | 2.2.8",
+        link: "./java-libraries/",
+      },
+      {
+        name: "org.ops4j.pax.url",
+        versions: "2.6.10",
+        link: "./java-libraries/",
+      },
+      {
         name: "Plexus Archiver Component",
         versions: "2.8.1 | 3.4 | 3.5 | 3.6.0 | 4.2.0 | 4.2.1 | 4.4.0 | 4.10.0",
         link: "./java-libraries/",
@@ -1085,12 +1439,17 @@ const techData = [
       },
       {
         name: "Plexus Containers",
-        versions: "1.5.5",
+        versions: "1.0-alpha-30 | 1.0-alpha-34 | 1.0-beta-3.0.5 | 1.5.5",
+        link: "./java-libraries/",
+      },
+      {
+        name: "plexus-i18n",
+        versions: "1.0-beta-10",
         link: "./java-libraries/",
       },
       {
         name: "Plexus IO Components",
-        versions: "2.7.1",
+        versions: "1.0-alpha-3 | 1.0.1 | 2.7.1 | 3.4.1",
         link: "./java-libraries/",
       },
       {
@@ -1144,6 +1503,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "randomizedtesting",
+        versions: "2.3.2 | 2.5.2 | 2.7.2",
+        link: "./java-libraries/",
+      },
+      {
         name: "Reactor BOM",
         versions: "Californium-SR11 | 2020.0.0 | 2020.0.7 | 2020.0.17 | 2020.0.18 | 2020.0.22 | 2020.0.23 | 2020.0.31 | 2020.0.32 | 2020.0.34 | 2020.0.35 | 2020.0.38 | 2020.0.47 | 2022.0.9 | 2022.0.11 | 2022.0.13 | 2022.0.15 | 2022.0.22 | 2023.0.0 | 2023.0.3 | 2023.0.4 | 2023.0.6 | 2023.0.9 | 2023.0.10 | 2023.0.12 | 2023.0.14 | 2023.0.17 | 2023.0.18 | 2023.0.19 | 2024.0.11 | 2024.0.13 | 2024.0.18",
         link: "./java-libraries/",
@@ -1155,7 +1519,7 @@ const techData = [
       },
       {
         name: "Reactor Netty",
-        versions: "0.8.11.RELEASE | 0.8.22.RELEASE | 0.9.13.RELEASE | 1.0.0 | 1.0.7 | 1.0.17 | 1.0.18 | 1.0.23 | 1.0.32 | 1.0.34 | 1.0.36 | 1.0.39 | 1.0.48 | 1.1.13 | 1.1.15 | 1.1.31 | 1.2.13 | 1.2.18",
+        versions: "0.1.31 | 0.8.3.RELEASE | 0.8.11.RELEASE | 0.8.22.RELEASE | 0.9.13.RELEASE | 1.0.0 | 1.0.7 | 1.0.17 | 1.0.18 | 1.0.23 | 1.0.32 | 1.0.34 | 1.0.36 | 1.0.39 | 1.0.48 | 1.1.13 | 1.1.15 | 1.1.31 | 1.2.13 | 1.2.18",
         link: "./java-libraries/",
       },
       {
@@ -1170,7 +1534,7 @@ const techData = [
       },
       {
         name: "Retrofit",
-        versions: "2.7.2 | 2.9.0",
+        versions: "2.3.0 | 2.7.2 | 2.9.0",
         link: "./java-libraries/",
       },
       {
@@ -1179,8 +1543,38 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "schema-repo",
+        versions: "0.1.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "sdk-platform-java",
+        versions: "2.3.5 | 2.12.2",
+        link: "./java-libraries/",
+      },
+      {
+        name: "servo",
+        versions: "0.4.49 | 0.5.3 | 0.7.5 | 0.10.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "signalfx-java",
+        versions: "1.0.5 | 1.0.36 | 1.0.38 | 1.0.49",
+        link: "./java-libraries/",
+      },
+      {
         name: "SLF4J",
         versions: "1.6.1 | 1.6.3 | 1.7.1 | 1.7.2 | 1.7.5 | 1.7.6 | 1.7.7 | 1.7.9 | 1.7.10 | 1.7.12 | 1.7.13 | 1.7.16 | 1.7.20 | 1.7.21 | 1.7.22 | 1.7.24 | 1.7.25 | 1.7.26 | 1.7.28 | 1.7.29 | 1.7.30 | 1.7.31 | 1.7.32 | 1.7.33 | 1.8.0-alpha2 | 2.0.0-alpha6",
+        link: "./java-libraries/",
+      },
+      {
+        name: "smallrye-jwt",
+        versions: "4.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "smallrye-open-api",
+        versions: "3.0.1",
         link: "./java-libraries/",
       },
       {
@@ -1194,169 +1588,154 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "socketlabs-java",
+        versions: "1.2.1",
+        link: "./java-libraries/",
+      },
+      {
         name: "Sonatype Aether",
-        versions: "1.13.1",
+        versions: "1.11 | 1.13.1",
         link: "./java-libraries/",
       },
       {
         name: "Sonatype Sisu",
-        versions: "2.3.0",
+        versions: "1.4.2 | 1.4.3.1 | 2.2.3 | 2.3.0",
         link: "./java-libraries/",
       },
       {
         name: "Spring® Framework",
         versions: "3.0 | 3.1 | 3.2 | 4.0 | 4.1 | 4.2 | 4.3 | 5.0 | 5.1 | 5.2 | 5.3 | 6.0 | 6.1 | 6.2",
         link: "./spring/",
-        detailsHash: "Framework",
-        versionsVary: true,
       },
       {
         name: "Spring® AMQP",
-        versions: "1.7.14.RELEASE | 2.0.8.RELEASE | 2.1.4.RELEASE | 2.1.5.RELEASE | 2.1.8.RELEASE | 2.1.17.RELEASE | 2.2.12.RELEASE | 2.3.6 | 2.3.7 | 2.3.10 | 2.3.16 | 2.4.4 | 2.4.8 | 2.4.9 | 2.4.10 | 2.4.12 | 2.4.16 | 2.4.17 | 3.0.10 | 3.1.5 | 3.1.8 | 3.1.11 | 3.1.12 | 3.2.8 | 3.2.11 | 3.2.12",
+        versions: "1.7.14.RELEASE | 2.0.8.RELEASE | 2.1.2.RELEASE | 2.1.4.RELEASE | 2.1.5.RELEASE | 2.1.8.RELEASE | 2.1.17.RELEASE | 2.2.12.RELEASE | 2.3.6 | 2.3.7 | 2.3.10 | 2.3.12 | 2.3.16 | 2.4.4 | 2.4.8 | 2.4.9 | 2.4.10 | 2.4.12 | 2.4.16 | 2.4.17 | 3.0.10 | 3.1.5 | 3.1.8 | 3.1.11 | 3.1.12 | 3.2.8 | 3.2.11 | 3.2.12",
         link: "./spring/",
-        detailsHash: "AMQP",
       },
       {
         name: "Spring® Batch",
-        versions: "3.0.10.RELEASE | 4.0.1.RELEASE | 4.1.1.RELEASE | 4.1.2.RELEASE | 4.2.4.RELEASE | 4.3.2 | 4.3.3 | 4.3.4 | 4.3.8 | 4.3.9 | 4.3.10 | 5.0.4 | 5.1.2 | 5.1.3 | 5.2.4 | 5.2.6",
+        versions: "3.0.10.RELEASE | 4.0.1.RELEASE | 4.1.1.RELEASE | 4.1.2.RELEASE | 4.2.4.RELEASE | 4.3.2 | 4.3.3 | 4.3.4 | 4.3.5 | 4.3.6 | 4.3.7 | 4.3.8 | 4.3.9 | 4.3.10 | 5.0.4 | 5.1.2 | 5.1.3 | 5.2.4 | 5.2.6",
         link: "./spring/",
-        detailsHash: "Batch",
       },
       {
         name: "Spring® Boot",
         versions: "2.1 | 2.3 | 2.4 | 2.5 | 2.6 | 2.7 | 3.0 | 3.1 | 3.2 | 3.3 | 3.4 | 3.5",
         link: "./spring/",
-        detailsHash: "Boot",
-        versionsVary: true,
       },
       {
         name: "Spring® Cloud",
         versions: "1.2.9.RELEASE | 2.0.6.RELEASE | 2.0.7.RELEASE | 3.1.6 | 3.1.9 | 4.2.3 | 4.2.4 | 4.3.3 | 4.3.4 | 2024.0.3 | 2025.0.3",
         link: "./spring/",
-        detailsHash: "Cloud",
       },
       {
         name: "Spring® Data",
         versions: "2020.0 | 2021.0 | 2021.1 | 2021.2 | 2022.0 | 2023.0 | 2023.1 | 2024.0 | 2024.1 | 2025.0",
         link: "./spring/",
-        detailsHash: "Data",
-        versionsVary: true,
       },
       {
         name: "Spring® Security",
         versions: "1.0 | 3.2 | 4.2 | 5.0 | 5.1 | 5.5 | 5.6 | 5.7 | 5.8 | 6.0 | 6.1 | 6.2 | 6.3 | 6.4 | 6.5",
         link: "./spring/",
-        detailsHash: "Security",
-        versionsVary: true,
       },
       {
         name: "Spring® Security OAuth",
         versions: "1.1.1",
         link: "./spring/",
-        detailsHash: "Security_OAuth",
       },
       {
         name: "Spring® Web Services",
-        versions: "2.4.5.RELEASE | 3.0.7.RELEASE | 3.0.10.RELEASE | 3.1.4 | 3.1.5 | 3.1.6 | 3.1.7 | 3.1.8 | 4.0.8 | 4.0.10 | 4.0.11 | 4.0.14 | 4.0.15 | 4.0.16 | 4.0.17 | 4.1.4",
+        versions: "2.4.5.RELEASE | 3.0.6.RELEASE | 3.0.7.RELEASE | 3.0.10.RELEASE | 3.1.4 | 3.1.5 | 3.1.6 | 3.1.7 | 3.1.8 | 4.0.8 | 4.0.10 | 4.0.11 | 4.0.14 | 4.0.15 | 4.0.16 | 4.0.17 | 4.1.4",
         link: "./spring/",
-        detailsHash: "Web_Services",
       },
       {
         name: "Spring® Integration",
-        versions: "5.1.7.RELEASE | 5.1.13.RELEASE | 5.2.7.RELEASE | 5.3.2.RELEASE | 5.4.6 | 5.5.12 | 5.5.16 | 5.5.19 | 5.5.20 | 6.0.9 | 6.1.5 | 6.2.5 | 6.2.11 | 6.3.10 | 6.3.11 | 6.4.9 | 6.4.10 | 6.5.9 | 6.5.10",
+        versions: "5.1.3.RELEASE | 5.1.7.RELEASE | 5.1.13.RELEASE | 5.2.7.RELEASE | 5.3.2.RELEASE | 5.4.6 | 5.5.12 | 5.5.16 | 5.5.19 | 5.5.20 | 6.0.9 | 6.1.5 | 6.2.5 | 6.2.11 | 6.3.10 | 6.3.11 | 6.4.9 | 6.4.10 | 6.5.9 | 6.5.10",
         link: "./spring/",
-        detailsHash: "Integration",
       },
       {
         name: "Spring® HATEOAS",
         versions: "0.23.0.RELEASE | 0.25.2.RELEASE | 1.1.1.RELEASE | 1.1.2.RELEASE | 1.1.5.RELEASE | 1.2.5 | 1.2.6 | 1.2.8 | 1.2.11 | 1.3.7 | 1.4.3 | 1.4.4 | 1.4.5 | 1.5.1 | 1.5.2 | 1.5.3 | 1.5.5 | 1.5.6 | 2.0.7 | 2.1.3 | 2.2.5 | 2.3.4 | 2.4.1 | 2.5.3",
         link: "./spring/",
-        detailsHash: "HATEOAS",
       },
       {
         name: "Spring® LDAP",
         versions: "2.3.1.RELEASE | 2.3.2.RELEASE | 2.3.3.RELEASE | 2.3.4.RELEASE | 2.3.6.RELEASE | 2.3.7.RELEASE | 2.4.1 | 2.4.2 | 2.4.4 | 3.0.6 | 3.1.3 | 3.2.2 | 3.2.7 | 3.2.8 | 3.2.12 | 3.2.15 | 3.2.16 | 3.3.8",
         link: "./spring/",
-        detailsHash: "LDAP",
-        versionsVary: true,
       },
       {
         name: "Spring® GraphQL",
-        versions: "1.0.6 | 1.1.7 | 1.2.4 | 1.2.9 | 1.3.5 | 1.3.7 | 1.4.6",
+        versions: "1.0.6 | 1.1.7 | 1.2.4 | 1.2.9 | 1.3.5 | 1.3.6 | 1.3.7 | 1.4.6",
         link: "./spring/",
-        detailsHash: "GraphQL",
       },
       {
         name: "Spring® Retry",
         versions: "1.0.2.RELEASE | 1.1.5.RELEASE | 1.2.1.RELEASE | 1.2.2.RELEASE | 1.2.4.RELEASE | 1.2.5.RELEASE | 1.3.1 | 1.3.3 | 1.3.4 | 2.0.4 | 2.0.6 | 2.0.10 | 2.0.11 | 2.0.12",
         link: "./spring/",
-        detailsHash: "Retry",
       },
       {
         name: "Spring® Plugin",
         versions: "2.0.0.RELEASE | 3.0.0",
         link: "./spring/",
-        detailsHash: "Plugin",
       },
       {
         name: "Spring® Web Flow",
         versions: "2.3.1.RELEASE | 2.3.3.RELEASE | 3.0.2",
         link: "./spring/",
-        detailsHash: "Web_Flow",
       },
       {
         name: "Spring® for Apache Pulsar",
         versions: "1.0.12 | 1.1.12 | 1.1.13 | 1.2.12 | 1.2.13 | 1.2.18",
         link: "./spring/",
-        detailsHash: "Pulsar",
       },
       {
         name: "Spring® Authorization Server",
         versions: "1.1.4 | 1.2.7 | 1.3.6 | 1.3.7 | 1.4.8 | 1.5.8",
         link: "./spring/",
-        detailsHash: "Authorization_Server",
       },
       {
         name: "Spring® for Apache Kafka",
         versions: "2.6.7 | 2.7.14 | 2.8.6 | 2.8.11 | 2.9.13 | 3.0.13 | 3.1.5 | 3.1.10 | 3.2.9 | 3.2.10 | 3.3.11 | 3.3.16",
         link: "./spring/",
-        detailsHash: "Kafka",
       },
       {
         name: "Spring® AI",
         versions: "1.0.9 | 1.1.8",
         link: "./spring/",
-        detailsHash: "AI",
       },
       {
         name: "Spring® REST Docs",
         versions: "2.0.1.RELEASE | 2.0.2.RELEASE | 2.0.3.RELEASE | 2.0.5.RELEASE",
         link: "./spring/",
-        detailsHash: "REST_Docs",
       },
       {
         name: "Spring® Session",
         versions: "3.1.4",
         link: "./spring/",
-        detailsHash: "Session",
       },
       {
         name: "Spring® Shell",
         versions: "1.2.0.RELEASE",
         link: "./spring/",
-        detailsHash: "Shell",
       },
       {
         name: "Spring® Social Twitter",
         versions: "1.1.2.RELEASE",
         link: "./spring/",
-        detailsHash: "Social_Twitter",
       },
       {
         name: "Spring® Tuple",
         versions: "1.0.0.RELEASE",
         link: "./spring/",
-        detailsHash: "Tuple",
+      },
+      {
+        name: "sundrio",
+        versions: "0.13.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Swagger Core",
+        versions: "1.5.21 | 1.6.2",
+        link: "./java-libraries/",
       },
       {
         name: "tachyon",
@@ -1379,6 +1758,11 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "tiles",
+        versions: "2.2.2",
+        link: "./java-libraries/",
+      },
+      {
         name: "tinkerpop",
         versions: "3.4.5",
         link: "./java-libraries/",
@@ -1390,7 +1774,7 @@ const techData = [
       },
       {
         name: "Undertow",
-        versions: "1.4.27.Final | 2.0.26.Final | 2.2.18.Final | 2.2.24.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Beta1 | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final | 2.3.24.Final",
+        versions: "1.4.27.Final | 2.0.26.Final | 2.2.5.Final | 2.2.18.Final | 2.2.22.Final | 2.2.23.Final | 2.2.24.Final | 2.2.26.Final | 2.2.33.Final | 2.2.37.Final | 2.3.0.Beta1 | 2.3.0.Final | 2.3.10.Final | 2.3.17.Final | 2.3.18.Final | 2.3.20.Final | 2.3.24.Final",
         link: "./java-libraries/",
       },
       {
@@ -1414,13 +1798,48 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "wavefront-sdk-java",
+        versions: "2.6.6 | 3.0.4 | 3.1.0 | 3.4.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Wildfly",
+        versions: "26.1.3.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "wildfly-core",
+        versions: "18.1.1.Final | 19.0.1.Final | 27.0.1.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "wildfly-elytron",
+        versions: "1.19.1.Final | 1.20.3.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "wildfly-http-client",
+        versions: "1.1.15.Final | 2.0.0.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "wildfly-naming-client",
+        versions: "1.0.17.Final | 1.1.0.Final | 2.0.0.Final",
+        link: "./java-libraries/",
+      },
+      {
+        name: "wildfly-transaction-client",
+        versions: "2.0.2.Final | 3.0.0.Final",
+        link: "./java-libraries/",
+      },
+      {
         name: "Woodstox",
         versions: "5.0.3 | 5.3.0 | 6.0.1",
         link: "./java-libraries/",
       },
       {
         name: "ws-wss4j",
-        versions: "2.0.10",
+        versions: "2.0.10 | 2.2.1 | 2.2.2 | 2.2.4 | 2.2.6 | 2.4.1",
         link: "./java-libraries/",
       },
       {
@@ -1452,6 +1871,11 @@ const techData = [
         name: "Eclipse Jetty",
         versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.51.v20230217 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 9.4.63 | 9.4.64 | 9.4.65 | 9.4.66 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 10.0.31 | 10.0.32 | 10.0.33 | 10.0.34 | 11.0.18 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30 | 11.0.31 | 11.0.32 | 11.0.33 | 11.0.34 | 12.0.22",
         link: "./jetty/",
+      },
+      {
+        name: "zipkin-reporter-java",
+        versions: "2.16.3",
+        link: "./java-libraries/",
       },
     ],
   },
@@ -1550,13 +1974,18 @@ const techData = [
         link: "./astro/",
       },
       {
+        name: "auth-core",
+        versions: "0.37.2",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "aws-sdk",
         versions: "2.0.5 | 2.1693.0",
         link: "./javascript-libraries/",
       },
       {
         name: "axios",
-        versions: "0.15.3 | 0.18.0 | 0.18.1 | 0.19.2 | 0.21.1 | 0.21.2 | 0.21.4 | 0.24.0 | 0.26.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.3.4 | 1.6.2 | 1.6.8 | 1.7.5 | 1.7.7 | 1.7.9 | 1.12.2 | 1.13.2 | 1.13.5 | 1.13.6 | 1.15.0 | 1.15.2 | 1.16.0 | 1.16.1 | 1.17.0 | 1.18.0 | 1.18.1 | 1.19.0",
+        versions: "0.15.3 | 0.17.0 | 0.17.1 | 0.18.0 | 0.18.1 | 0.19.2 | 0.20.0 | 0.21.1 | 0.21.2 | 0.21.4 | 0.24.0 | 0.26.0 | 0.26.1 | 0.27.2 | 0.33.0 | 1.3.4 | 1.6.2 | 1.6.8 | 1.7.5 | 1.7.7 | 1.7.9 | 1.8.2 | 1.8.4 | 1.11.0 | 1.12.2 | 1.13.2 | 1.13.5 | 1.13.6 | 1.15.0 | 1.15.2 | 1.16.0 | 1.16.1 | 1.17.0 | 1.18.0 | 1.18.1 | 1.19.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1696,7 +2125,7 @@ const techData = [
       },
       {
         name: "browserslist",
-        versions: "1.7.7 | 2.11.3 | 3.2.8 | 4.6.6 | 4.7.0 | 4.8.6 | 4.10.0 | 4.13.0 | 4.14.2 | 4.16.3 | 4.16.6 | 4.18.1 | 4.20.3 | 4.21.5 | 4.21.10 | 4.23.0 | 4.23.1 | 4.23.2 | 4.23.3 | 4.24.0 | 4.24.4 | 4.24.5 | 4.26.3 | 4.27.0 | 4.28.1 | 4.28.2 | 4.28.4 | 4.28.5",
+        versions: "0.4.0 | 1.7.7 | 2.11.3 | 3.2.8 | 4.6.6 | 4.7.0 | 4.8.6 | 4.10.0 | 4.13.0 | 4.14.2 | 4.16.3 | 4.16.6 | 4.18.1 | 4.19.1 | 4.20.3 | 4.21.5 | 4.21.10 | 4.22.2 | 4.23.0 | 4.23.1 | 4.23.2 | 4.23.3 | 4.24.0 | 4.24.4 | 4.24.5 | 4.25.1 | 4.25.2 | 4.25.4 | 4.26.3 | 4.27.0 | 4.28.1 | 4.28.2 | 4.28.4 | 4.28.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1712,6 +2141,11 @@ const techData = [
       {
         name: "ckeditor4",
         versions: "4.17.1",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "class-validator",
+        versions: "0.7.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1772,6 +2206,11 @@ const techData = [
       {
         name: "copy-anything",
         versions: "2.0.6",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "create-react-router",
+        versions: "7.6.0 | 8.0.1 | 8.1.0 | 8.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1842,6 +2281,11 @@ const techData = [
       {
         name: "devalue",
         versions: "2.0.1 | 4.3.0 | 4.3.1 | 4.3.2 | 4.3.3 | 5.6.3 | 5.6.4 | 5.7.1 | 5.8.1 | 5.8.2 | 5.9.0 | 5.9.1 | 5.9.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "dicer",
+        versions: "0.2.5",
         link: "./javascript-libraries/",
       },
       {
@@ -1956,12 +2400,12 @@ const techData = [
       },
       {
         name: "Fastify",
-        versions: "3.29.5 | 4.25.2 | 4.28.1 | 4.29.1 | 5.2.1 | 5.7.4 | 5.8.2 | 5.8.3 | 5.8.4 | 5.8.5 | 5.9.0 | 5.10.0 | 5.11.3 | 5.12.0 | 5.12.1 | 5.12.4 | 5.12.5",
+        versions: "3.29.5 | 4.17.0 | 4.25.2 | 4.28.1 | 4.29.1 | 5.2.1 | 5.7.4 | 5.8.2 | 5.8.3 | 5.8.4 | 5.8.5 | 5.9.0 | 5.10.0 | 5.11.3 | 5.12.0 | 5.12.1 | 5.12.4 | 5.12.5",
         link: "./fastify/",
       },
       {
         name: "fastify-middie",
-        versions: "8.3.3",
+        versions: "8.3.3 | 9.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1981,7 +2425,7 @@ const techData = [
       },
       {
         name: "find-my-way",
-        versions: "4.5.1 | 8.2.2 | 9.6.0",
+        versions: "2.2.5 | 4.5.1 | 7.7.0 | 8.2.2 | 9.4.0 | 9.5.0 | 9.6.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2045,13 +2489,28 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "graphql-tools-mock",
+        versions: "7.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "graphql-tools-schema",
+        versions: "7.0.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "graphql-tools-utils",
-        versions: "6.0.9 | 7.10.0 | 8.6.5 | 8.8.0 | 8.9.0 | 8.9.1 | 8.12.0 | 8.13.1 | 9.2.1 | 10.6.1 | 10.9.1 | 10.11.0 | 11.2.2 | 12.0.0",
+        versions: "6.0.9 | 7.0.0 | 7.10.0 | 8.0.2 | 8.6.5 | 8.8.0 | 8.9.0 | 8.9.1 | 8.12.0 | 8.13.1 | 9.1.1 | 9.1.3 | 9.2.1 | 10.0.0 | 10.2.0 | 10.5.6 | 10.6.1 | 10.8.6 | 10.9.1 | 10.10.3 | 10.11.0 | 11.0.1 | 11.1.0 | 11.2.2 | 12.0.0",
         link: "./javascript-libraries/",
       },
       {
         name: "growl",
         versions: "1.7.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "grpc-grpc-js",
+        versions: "1.6.12 | 1.8.22",
         link: "./javascript-libraries/",
       },
       {
@@ -2086,7 +2545,7 @@ const techData = [
       },
       {
         name: "happy-dom",
-        versions: "9.10.9 | 9.20.3 | 14.12.3 | 15.11.7 | 20.8.8 | 20.12.0",
+        versions: "9.10.9 | 9.20.3 | 14.12.3 | 15.11.7 | 20.8.8 | 20.12.0 | 20.14.5 | 20.14.6",
         link: "./javascript-libraries/",
       },
       {
@@ -2116,7 +2575,7 @@ const techData = [
       },
       {
         name: "hono",
-        versions: "3.12.12 | 4.5.8 | 4.12.9 | 4.12.16 | 4.12.25 | 4.12.26 | 4.12.27 | 4.12.31",
+        versions: "3.12.12 | 4.5.8 | 4.11.4 | 4.12.9 | 4.12.16 | 4.12.25 | 4.12.26 | 4.12.27 | 4.12.31",
         link: "./javascript-libraries/",
       },
       {
@@ -2181,7 +2640,7 @@ const techData = [
       },
       {
         name: "ip-address",
-        versions: "6.4.0 | 7.1.0 | 9.0.5 | 10.0.1 | 10.1.0 | 10.1.1 | 10.2.0 | 10.3.1 | 10.4.0 | 10.5.0 | 10.5.1 | 10.6.0 | 10.7.0 | 10.7.1 | 10.7.2 | 10.7.3",
+        versions: "6.4.0 | 7.1.0 | 8.1.0 | 9.0.5 | 10.0.1 | 10.1.0 | 10.1.1 | 10.2.0 | 10.3.1 | 10.4.0 | 10.5.0 | 10.5.1 | 10.6.0 | 10.7.0 | 10.7.1 | 10.7.2 | 10.7.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2201,7 +2660,7 @@ const techData = [
       },
       {
         name: "joi",
-        versions: "11.4.0 | 14.3.1 | 17.11.0 | 17.13.4 | 17.13.6 | 18.2.0 | 18.2.3 | 18.2.9",
+        versions: "11.4.0 | 14.3.1 | 17.11.0 | 17.13.4 | 17.13.6 | 18.0.2 | 18.2.0 | 18.2.3 | 18.2.9",
         link: "./javascript-libraries/",
       },
       {
@@ -2271,7 +2730,7 @@ const techData = [
       },
       {
         name: "JSONPath Plus",
-        versions: "4.0.0 | 5.1.0 | 6.0.1 | 7.2.0",
+        versions: "4.0.0 | 5.1.0 | 6.0.1 | 7.2.0 | 10.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2335,8 +2794,13 @@ const techData = [
         link: "./vite/",
       },
       {
+        name: "locutus",
+        versions: "2.0.39",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "Lodash",
-        versions: "1.3.1 | 2.3.0 | 2.4.2 | 3.2.0 | 3.10.1 | 4.17.4 | 4.17.5 | 4.17.11 | 4.17.15 | 4.17.19 | 4.17.21 | 4.17.23 | 4.18.1 | 4.5.0",
+        versions: "1.3.1 | 2.3.0 | 2.4.2 | 3.2.0 | 3.10.1 | 4.5.0 | 4.12.0 | 4.17.4 | 4.17.5 | 4.17.11 | 4.17.15 | 4.17.19 | 4.17.21 | 4.17.23 | 4.18.1",
         link: "./lodash/",
       },
       {
@@ -2481,7 +2945,7 @@ const techData = [
       },
       {
         name: "Mongoose",
-        versions: "5.13.23 | 6.12.2 | 7.8.8 | 9.6.2 | 9.6.3 | 9.7.1 | 9.9.4 | 9.9.5 | 9.10.1 | 9.10.4",
+        versions: "5.13.23 | 6.12.2 | 7.8.8 | 9.4.1 | 9.5.0 | 9.6.2 | 9.6.3 | 9.7.1 | 9.7.2 | 9.7.3 | 9.7.4 | 9.9.4 | 9.9.5 | 9.10.1 | 9.10.4",
         link: "./mongoose/",
       },
       {
@@ -2506,12 +2970,17 @@ const techData = [
       },
       {
         name: "multer",
-        versions: "1.4.5-lts.1 | 1.4.5-lts.2 | 2.2.0 | 2.4.0",
+        versions: "1.4.5-lts.1 | 1.4.5-lts.2 | 2.0.2 | 2.2.0 | 2.4.0",
         link: "./javascript-libraries/",
       },
       {
         name: "multiparty",
         versions: "2.2.0 | 3.3.2",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "music-metadata",
+        versions: "11.12.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2531,7 +3000,7 @@ const techData = [
       },
       {
         name: "negotiator",
-        versions: "0.3.0 | 0.4.7 | 0.5.3",
+        versions: "0.3.0 | 0.4.7 | 0.4.9 | 0.5.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2601,7 +3070,7 @@ const techData = [
       },
       {
         name: "node-forge",
-        versions: "0.9.0 | 0.10.0 | 1.3.1 | 1.3.3",
+        versions: "0.7.1 | 0.7.6 | 0.9.0 | 0.10.0 | 1.3.1 | 1.3.3",
         link: "./javascript-libraries/",
       },
       {
@@ -2721,7 +3190,7 @@ const techData = [
       },
       {
         name: "pacote",
-        versions: "12.0.2 | 12.0.3 | 13.6.1 | 13.6.2 | 15.2.0 | 17.0.7 | 18.0.6 | 19.0.2 | 20.0.0 | 20.0.1 | 21.0.1 | 21.0.3 | 21.0.4 | 21.4.0 | 21.5.0",
+        versions: "7.6.1 | 8.1.6 | 11.3.5 | 12.0.2 | 12.0.3 | 13.6.1 | 13.6.2 | 15.2.0 | 17.0.7 | 18.0.6 | 19.0.2 | 20.0.0 | 20.0.1 | 21.0.1 | 21.0.3 | 21.0.4 | 21.4.0 | 21.5.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2756,7 +3225,7 @@ const techData = [
       },
       {
         name: "path-to-regexp",
-        versions: "0.1.3 | 0.1.7 | 0.1.10 | 0.1.12 | 6.1.0 | 6.2.1",
+        versions: "0.1.3 | 0.1.7 | 0.1.10 | 0.1.12 | 6.1.0 | 6.2.1 | 8.2.0",
         link: "./javascript-libraries/",
       },
       {
@@ -2791,12 +3260,12 @@ const techData = [
       },
       {
         name: "PostCSS",
-        versions: "5.2.18 | 6.0.1 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.9 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.17 | 8.4.31 | 8.4.33 | 8.4.35 | 8.4.41 | 8.4.49 | 8.5.2 | 8.5.3 | 8.5.5 | 8.5.6 | 8.5.12 | 8.5.14 | 8.5.17 | 8.5.18 | 8.5.19 | 8.5.20 | 8.5.21 | 8.5.22",
+        versions: "4.1.16 | 5.2.18 | 6.0.1 | 6.0.23 | 7.0.14 | 7.0.17 | 7.0.21 | 7.0.32 | 7.0.39 | 8.2.9 | 8.2.13 | 8.2.15 | 8.3.6 | 8.4.5 | 8.4.14 | 8.4.17 | 8.4.31 | 8.4.33 | 8.4.35 | 8.4.41 | 8.4.49 | 8.5.2 | 8.5.3 | 8.5.5 | 8.5.6 | 8.5.12 | 8.5.14 | 8.5.17 | 8.5.18 | 8.5.19 | 8.5.20 | 8.5.21 | 8.5.22",
         link: "./postcss/",
       },
       {
         name: "postcss-selector-parser",
-        versions: "2.2.3 | 3.1.2 | 5.0.0 | 6.0.2 | 6.1.2 | 6.1.4 | 7.1.0 | 7.1.1 | 7.1.4",
+        versions: "2.2.3 | 3.1.2 | 5.0.0 | 6.0.2 | 6.0.16 | 6.1.2 | 6.1.4 | 7.1.0 | 7.1.1 | 7.1.4",
         link: "./javascript-libraries/",
       },
       {
@@ -2816,8 +3285,13 @@ const techData = [
       },
       {
         name: "protobufjs",
-        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.3 | 6.11.6 | 7.4.0 | 7.5.4 | 7.5.9 | 8.0.0 | 8.0.1",
+        versions: "0.12.13 | 1.5.1 | 2.2.1 | 3.8.2 | 4.1.3 | 5.0.0 | 5.0.3 | 6.8.8 | 6.10.2 | 6.11.3 | 6.11.6 | 7.2.4 | 7.3.2 | 7.4.0 | 7.5.4 | 7.5.9 | 8.0.0 | 8.0.1",
         link: "./javascript-libraries/",
+      },
+      {
+        name: "protobufjs-cli",
+        versions: "2.4.2",
+        link: "./protobuf/",
       },
       {
         name: "protobufjs-utf8",
@@ -2836,7 +3310,7 @@ const techData = [
       },
       {
         name: "qs",
-        versions: "0.4.2 | 0.5.1 | 0.6.5 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.4 | 2.2.5 | 2.3.3 | 2.4.2 | 3.1.0 | 4.0.0 | 5.1.0 | 5.2.0 | 5.2.1 | 6.0.2 | 6.0.6 | 6.1.4 | 6.2.1 | 6.2.6 | 6.3.5 | 6.4.3 | 6.5.1 | 6.5.3 | 6.5.5 | 6.7.0 | 6.9.1 | 6.9.6 | 6.10.3 | 6.10.4 | 6.10.7 | 6.11.0 | 6.11.2 | 6.13.0 | 6.13.4 | 6.14.0 | 6.14.2 | 6.15.3 | 6.15.4",
+        versions: "0.4.2 | 0.5.1 | 0.6.5 | 0.6.6 | 1.0.2 | 1.2.2 | 2.2.4 | 2.2.5 | 2.3.3 | 2.4.2 | 3.1.0 | 4.0.0 | 5.1.0 | 5.2.0 | 5.2.1 | 6.0.2 | 6.0.6 | 6.1.4 | 6.2.1 | 6.2.6 | 6.3.5 | 6.4.3 | 6.5.1 | 6.5.3 | 6.5.5 | 6.7.0 | 6.9.1 | 6.9.6 | 6.10.3 | 6.10.4 | 6.10.7 | 6.11.0 | 6.11.2 | 6.12.6 | 6.13.0 | 6.13.4 | 6.14.0 | 6.14.2 | 6.15.3 | 6.15.4",
         link: "./javascript-libraries/",
       },
       {
@@ -2866,12 +3340,27 @@ const techData = [
       },
       {
         name: "react-router",
-        versions: "6.3.0 | 6.30.3 | 6.30.4 | 6.30.6 | 7.5.1 | 7.13.1 | 7.14.1 | 7.14.2 | 7.15.0 | 7.15.1 | 7.18.1",
+        versions: "6.3.0 | 6.30.3 | 6.30.4 | 6.30.6 | 7.5.1 | 7.6.0 | 7.13.1 | 7.14.1 | 7.14.2 | 7.15.0 | 7.15.1 | 7.17.0 | 7.18.1 | 8.0.1 | 8.1.0 | 8.2.0",
+        link: "./react-router/",
+      },
+      {
+        name: "react-router-architect",
+        versions: "7.6.0 | 8.0.1 | 8.1.0 | 8.2.0",
+        link: "./react-router/",
+      },
+      {
+        name: "react-router-cloudflare",
+        versions: "7.6.0 | 8.0.1 | 8.1.0 | 8.2.0",
+        link: "./react-router/",
+      },
+      {
+        name: "react-router-dev",
+        versions: "7.6.0 | 7.17.0 | 8.0.1 | 8.1.0 | 8.2.0",
         link: "./react-router/",
       },
       {
         name: "react-router-dom",
-        versions: "6.3.0 | 6.30.3 | 6.30.4 | 6.30.6 | 7.5.1 | 7.13.1 | 7.14.1 | 7.14.2 | 7.15.0 | 7.15.1 | 7.18.1",
+        versions: "6.3.0 | 6.30.3 | 6.30.4 | 6.30.6 | 7.5.1 | 7.6.0 | 7.13.1 | 7.14.1 | 7.14.2 | 7.15.0 | 7.15.1 | 7.17.0 | 7.18.1",
         link: "./react-router/",
       },
       {
@@ -2880,8 +3369,33 @@ const techData = [
         link: "./react-router/",
       },
       {
+        name: "react-router-express",
+        versions: "7.6.0 | 7.17.0 | 8.0.1 | 8.1.0 | 8.2.0",
+        link: "./react-router/",
+      },
+      {
+        name: "react-router-fs-routes",
+        versions: "7.6.0 | 7.17.0 | 8.0.1 | 8.1.0 | 8.2.0",
+        link: "./react-router/",
+      },
+      {
         name: "react-router-native",
         versions: "6.3.0 | 6.30.3 | 6.30.6",
+        link: "./react-router/",
+      },
+      {
+        name: "react-router-node",
+        versions: "7.6.0 | 7.17.0 | 8.0.1 | 8.1.0 | 8.2.0",
+        link: "./react-router/",
+      },
+      {
+        name: "react-router-remix-routes-option-adapter",
+        versions: "7.6.0 | 8.0.1 | 8.1.0 | 8.2.0",
+        link: "./react-router/",
+      },
+      {
+        name: "react-router-serve",
+        versions: "7.6.0 | 7.17.0 | 8.0.1 | 8.1.0 | 8.2.0",
         link: "./react-router/",
       },
       {
@@ -2940,13 +3454,18 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "schema-inspector",
+        versions: "1.7.0",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "selenium-webdriver",
         versions: "2.44.0 | 2.47.0 | 2.52.0 | 2.53.3 | 3.6.0",
         link: "./javascript-libraries/",
       },
       {
         name: "semver",
-        versions: "2.3.2 | 4.3.6 | 5.0.3 | 5.1.0 | 5.3.0 | 5.4.1 | 5.5.0 | 5.5.1 | 5.6.0 | 6.3.0 | 7.0.0 | 7.1.3 | 7.3.2 | 7.3.4 | 7.3.5 | 7.3.8",
+        versions: "2.3.2 | 4.3.6 | 5.0.3 | 5.1.0 | 5.3.0 | 5.4.1 | 5.5.0 | 5.5.1 | 5.6.0 | 6.1.1 | 6.3.0 | 7.0.0 | 7.1.3 | 7.3.2 | 7.3.4 | 7.3.5 | 7.3.8",
         link: "./javascript-libraries/",
       },
       {
@@ -3001,12 +3520,22 @@ const techData = [
       },
       {
         name: "sigstore",
-        versions: "1.9.0 | 2.3.1",
+        versions: "1.9.0 | 2.3.1 | 3.1.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "sigstore-bundle",
+        versions: "3.1.0",
         link: "./javascript-libraries/",
       },
       {
         name: "sigstore-core",
         versions: "2.0.0 | 3.2.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "sigstore-sign",
+        versions: "3.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -3086,7 +3615,7 @@ const techData = [
       },
       {
         name: "svgo",
-        versions: "0.7.2 | 1.3.2 | 2.3.0 | 2.8.0 | 2.8.2 | 2.8.3 | 4.0.1 | 4.0.2",
+        versions: "0.7.2 | 1.3.2 | 2.3.0 | 2.8.0 | 2.8.2 | 2.8.3 | 3.0.2 | 3.2.0 | 4.0.1 | 4.0.2",
         link: "./javascript-libraries/",
       },
       {
@@ -3106,7 +3635,7 @@ const techData = [
       },
       {
         name: "systeminformation",
-        versions: "5.22.9 | 5.23.8 | 5.27.11 | 5.31.5",
+        versions: "5.22.9 | 5.23.8 | 5.27.11 | 5.31.5 | 5.31.6",
         link: "./javascript-libraries/",
       },
       {
@@ -3116,7 +3645,7 @@ const techData = [
       },
       {
         name: "tar",
-        versions: "1.0.3 | 2.1.1 | 2.2.1 | 2.2.2 | 4.4.6 | 4.4.19 | 6.0.2 | 6.1.0 | 6.1.6 | 6.1.15 | 6.2.0 | 6.2.1 | 7.5.17 | 7.5.18",
+        versions: "1.0.3 | 2.1.1 | 2.2.1 | 2.2.2 | 4.4.6 | 4.4.19 | 6.0.2 | 6.1.0 | 6.1.6 | 6.1.15 | 6.2.0 | 6.2.1 | 7.5.7 | 7.5.17 | 7.5.18",
         link: "./javascript-libraries/",
       },
       {
@@ -3191,7 +3720,7 @@ const techData = [
       },
       {
         name: "undici",
-        versions: "5.5.1 | 5.23.0 | 5.25.3 | 5.26.5 | 5.28.4 | 5.28.5 | 5.29.0 | 6.11.1 | 6.19.5 | 6.19.7 | 6.20.0 | 6.21.3 | 6.23.0 | 6.24.1 | 6.25.0 | 6.26.0 | 6.27.0 | 6.28.0 | 6.28.1 | 7.14.0 | 7.18.2 | 7.19.2 | 7.21.0 | 7.22.0 | 7.24.4 | 7.24.8 | 7.28.0 | 7.29.0 | 7.29.1 | 7.30.0 | 8.3.0 | 8.4.1 | 8.5.0 | 8.6.0 | 8.7.0 | 8.8.0 | 8.9.0 | 8.10.1 | 8.10.2 | 8.11.1 | 8.11.2",
+        versions: "5.5.1 | 5.23.0 | 5.25.3 | 5.26.5 | 5.28.4 | 5.28.5 | 5.29.0 | 6.11.1 | 6.19.5 | 6.19.7 | 6.20.0 | 6.21.3 | 6.23.0 | 6.24.1 | 6.25.0 | 6.26.0 | 6.27.0 | 6.28.0 | 6.28.1 | 7.14.0 | 7.18.2 | 7.19.2 | 7.21.0 | 7.22.0 | 7.24.4 | 7.24.8 | 7.25.0 | 7.27.2 | 7.28.0 | 7.29.0 | 7.29.1 | 7.30.0 | 8.3.0 | 8.4.1 | 8.5.0 | 8.6.0 | 8.7.0 | 8.8.0 | 8.9.0 | 8.10.1 | 8.10.2 | 8.11.1 | 8.11.2",
         link: "./undici/",
       },
       {
@@ -3411,7 +3940,7 @@ const techData = [
       },
       {
         name: "webpack",
-        versions: "5.50.0 | 5.55.0 | 5.76.1 | 5.82.1 | 5.88.2 | 5.94.0 | 5.98.0 | 5.99.8 | 5.99.9",
+        versions: "5.1.0 | 5.3.0 | 5.10.0 | 5.11.0 | 5.12.3 | 5.19.0 | 5.31.2 | 5.37.1 | 5.38.1 | 5.40.0 | 5.50.0 | 5.55.0 | 5.65.0 | 5.67.0 | 5.68.0 | 5.72.1 | 5.76.1 | 5.82.1 | 5.88.2 | 5.94.0 | 5.98.0 | 5.99.8 | 5.99.9",
         link: "./webpack/",
       },
       {
@@ -3451,7 +3980,7 @@ const techData = [
       },
       {
         name: "ws",
-        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 2.3.1 | 3.3.3 | 4.1.0 | 6.0.0 | 6.1.4 | 6.2.1 | 6.2.2 | 6.2.3 | 7.4.0 | 7.4.3 | 7.4.5 | 7.4.6 | 7.5.3 | 7.5.9 | 7.5.10 | 8.2.3 | 8.5.0 | 8.11.0 | 8.13.0 | 8.14.2 | 8.16.0 | 8.17.0 | 8.17.1 | 8.18.0 | 8.18.2 | 8.18.3 | 8.20.0",
+        versions: "0.8.1 | 1.1.1 | 1.1.2 | 1.1.5 | 2.3.1 | 3.3.3 | 4.1.0 | 6.0.0 | 6.1.4 | 6.2.1 | 6.2.2 | 6.2.3 | 7.1.2 | 7.4.0 | 7.4.3 | 7.4.5 | 7.4.6 | 7.5.3 | 7.5.9 | 7.5.10 | 8.2.3 | 8.4.2 | 8.5.0 | 8.11.0 | 8.12.0 | 8.12.1 | 8.13.0 | 8.14.2 | 8.16.0 | 8.17.0 | 8.17.1 | 8.18.0 | 8.18.2 | 8.18.3 | 8.19.0 | 8.20.0",
         link: "./javascript-libraries/",
       },
       {
@@ -3912,6 +4441,11 @@ const techData = [
         link: "./craftcms-feed-me/",
       },
       {
+        name: "creocoder/yii2-nested-sets",
+        versions: "0.9.0",
+        link: "./yii2-dev/",
+      },
+      {
         name: "Doctrine ORM",
         versions: "2.8.3",
         link: "./doctrine-orm/",
@@ -4339,6 +4873,21 @@ const techData = [
       {
         name: "yii2tech/ar-softdelete",
         versions: "1.0.4",
+        link: "./yii2-dev/",
+      },
+      {
+        name: "yiisoft/yii2-debug",
+        versions: "2.1.27",
+        link: "./yii2-dev/",
+      },
+      {
+        name: "yiisoft/yii2-swiftmailer",
+        versions: "2.1.3",
+        link: "./yii2-dev/",
+      },
+      {
+        name: "yiisoft/yii2-symfonymailer",
+        versions: "2.0.4",
         link: "./yii2-dev/",
       },
       {

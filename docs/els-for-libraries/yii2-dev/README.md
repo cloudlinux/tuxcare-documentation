@@ -5,8 +5,12 @@ Endless Lifecycle Support (ELS) for Yii 2 from TuxCare provides security fixes f
 ## Supported Versions
 
 * **Yii**
+  * **creocoder/yii2-nested-sets** 0.9.0
   * **Yii 2** 2.0.54
   * **yii2tech/ar-softdelete** 1.0.4
+  * **yiisoft/yii2-debug** 2.1.27
+  * **yiisoft/yii2-swiftmailer** 2.1.3
+  * **yiisoft/yii2-symfonymailer** 2.0.4
 
 Other versions upon request.
 

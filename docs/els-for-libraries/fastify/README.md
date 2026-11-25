@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Fastify from TuxCare provides security fixes
 
 ## Supported Versions
 
-* Fastify 3.29.5, 4.25.2, 4.28.1, 4.29.1, 5.2.1, 5.7.4, 5.8.2, 5.8.3, 5.8.4, 5.8.5, 5.9.0, 5.10.0, 5.11.3, 5.12.0, 5.12.1, 5.12.4, 5.12.5
+* Fastify 3.29.5, 4.17.0, 4.25.2, 4.28.1, 4.29.1, 5.2.1, 5.7.4, 5.8.2, 5.8.3, 5.8.4, 5.8.5, 5.9.0, 5.10.0, 5.11.3, 5.12.0, 5.12.1, 5.12.4, 5.12.5
 
 ## Installation
 
