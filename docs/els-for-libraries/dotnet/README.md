@@ -152,6 +152,7 @@ Other versions upon request.
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=.NET) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?ecosystem=dotnet) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_dotnet/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/wrench.webp) [Managing NuGet sources](/els-for-libraries/managing-els-repository/#dotnetSources) — Add, update, and remove the TuxCare source
 * ![](/images/bolt.webp) [Package updates](/els-for-libraries/managing-els-repository/#dotnet) — Update an installed package to a newer TuxCare release
 

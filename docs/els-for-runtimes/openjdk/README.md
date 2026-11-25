@@ -236,5 +236,6 @@ The JDK is not registered with Windows and does not appear in Add or Remove Prog
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=OpenJDK) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=OpenJDK) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=OpenJDK) — Full list of product parts covered by ELS
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-runtimes/machine-readable-security-data/#openjdk) — Open Vulnerability and Assessment Language (OVAL), Common Security Advisory Framework (CSAF), Errata, and RSS feeds for OpenJDK ELS
 
 </WhatsNext>

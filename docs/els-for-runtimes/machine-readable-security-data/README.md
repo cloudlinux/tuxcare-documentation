@@ -95,6 +95,15 @@ Released fixes are also available via [tuxcare.com/cve-tracker](https://tuxcare.
 | Alpine Linux 3.23 | [errata](https://security.tuxcare.com/errata/els_alt_ruby/alpinelinux3.23/) | [csaf](https://security.tuxcare.com/csaf/v2/els_alt_ruby/alpinelinux3.23/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
 | Alpine Linux 3.24 | [errata](https://security.tuxcare.com/errata/els_alt_ruby/alpinelinux3.24/) | — | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=Ruby) |
 
+## OpenJDK
+
+| OS | Errata | OVAL | CSAF | RSS |
+|----|----|----|----|----|
+| EL 6 | [errata](https://security.tuxcare.com/errata/els_openjdk/el6/) | [oval.xml](https://security.tuxcare.com/oval/els_openjdk/el6/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_openjdk/el6/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=OpenJDK) |
+| EL 7 | [errata](https://security.tuxcare.com/errata/els_openjdk/el7/) | [oval.xml](https://security.tuxcare.com/oval/els_openjdk/el7/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_openjdk/el7/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=OpenJDK) |
+| EL 8 | [errata](https://security.tuxcare.com/errata/els_openjdk/el8/) | [oval.xml](https://security.tuxcare.com/oval/els_openjdk/el8/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_openjdk/el8/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=OpenJDK) |
+| EL 9 | [errata](https://security.tuxcare.com/errata/els_openjdk/el9/) | [oval.xml](https://security.tuxcare.com/oval/els_openjdk/el9/oval.xml) | [csaf](https://security.tuxcare.com/csaf/v2/els_openjdk/el9/) | [rss](https://tuxcare.com/cve-tracker/api/cves/export/rss?product=OpenJDK) |
+
 ## How to Use OVAL
 
 OVAL can be used with the OpenSCAP tool.

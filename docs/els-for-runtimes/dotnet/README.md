@@ -531,6 +531,7 @@ After uninstalling .NET some files may remain in `C:\Program Files\dotnet\` and 
 
 <WhatsNext hide-title>
 
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-runtimes/machine-readable-security-data/#windows-runtimes-signature-verification-authenticode) — Authenticode signature verification for ELS .NET binaries
 * ![](/images/box.webp) [ELS NuGet Repository](/els-for-libraries/dotnet/) — Set up the TuxCare NuGet feed, install patched packages, and manage .NET package dependencies
 * ![](/images/book.webp) [Official .NET documentation](https://learn.microsoft.com/en-us/dotnet/fundamentals/) — Getting started guides, API reference, and platform fundamentals
 
