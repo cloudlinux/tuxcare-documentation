@@ -264,7 +264,7 @@ const techData = [
       },
       {
         name: "Apache Curator",
-        versions: "2.7.1 | 5.7.1",
+        versions: "2.7.1 | 5.5.0 | 5.7.1",
         link: "./java-libraries/",
       },
       {
@@ -298,8 +298,8 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "Apache Hadoop",
-        versions: "2.6.4",
+        name: "Apache HBase Thirdparty",
+        versions: "1.0.1 | 2.1.0",
         link: "./java-libraries/",
       },
       {
@@ -334,7 +334,7 @@ const techData = [
       },
       {
         name: "Apache Jackrabbit",
-        versions: "1.4.12",
+        versions: "1.4.12 | 2.19.5",
         link: "./java-libraries/",
       },
       {
@@ -514,11 +514,6 @@ const techData = [
       },
       {
         name: "AWS SDK for Java",
-        versions: "1.11.641 | 1.11.1030",
-        link: "./java-libraries/",
-      },
-      {
-        name: "aws-sdk-java",
         versions: "1.11.633 | 1.11.641 | 1.11.1030",
         link: "./java-libraries/",
       },
@@ -610,11 +605,6 @@ const techData = [
       {
         name: "crunch",
         versions: "0.10.0-hadoop2",
-        link: "./java-libraries/",
-      },
-      {
-        name: "curator",
-        versions: "5.5.0",
         link: "./java-libraries/",
       },
       {
@@ -858,11 +848,6 @@ const techData = [
         link: "./java-libraries/",
       },
       {
-        name: "hadoop-thirdparty",
-        versions: "1.2.0",
-        link: "./java-libraries/",
-      },
-      {
         name: "handlebars.java",
         versions: "4.1.2 | 4.2.0 | 4.3.0 | 4.3.1 | 4.4.0",
         link: "./java-libraries/",
@@ -875,11 +860,6 @@ const techData = [
       {
         name: "Hazelcast",
         versions: "4.2.8",
-        link: "./java-libraries/",
-      },
-      {
-        name: "hbase-thirdparty",
-        versions: "1.0.1 | 2.1.0",
         link: "./java-libraries/",
       },
       {
@@ -906,11 +886,6 @@ const techData = [
         name: "Hibernate Validator",
         versions: "5.0.0.Final | 5.4.3.Final | 6.0.17.Final | 6.2.5.Final",
         link: "./hibernate/",
-      },
-      {
-        name: "hive",
-        versions: "2.2.1 | 2.6.0 | 2.7.1 | 2.7.2",
-        link: "./java-libraries/",
       },
       {
         name: "HornetQ",
@@ -960,11 +935,6 @@ const techData = [
       {
         name: "jackcess",
         versions: "2.1.0 | 2.1.3 | 2.1.8 | 2.1.12 | 3.0.1 | 4.0.0 | 4.0.5 | 4.0.8",
-        link: "./java-libraries/",
-      },
-      {
-        name: "jackrabbit",
-        versions: "2.19.5",
         link: "./java-libraries/",
       },
       {

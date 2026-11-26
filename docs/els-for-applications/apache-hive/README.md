@@ -5,7 +5,10 @@ The ELS for Apache Hive service provides solutions for organizations that are no
 
 ## Supported Versions
 
-* Apache Hive 2.3.9
+| Package | Versions |
+| --- | --- |
+| hive | 2.3.9 |
+| hive-storage-api | 2.2.1, 2.6.0, 2.7.1, 2.7.2 |
 
 ## Installation
 
@@ -160,10 +163,16 @@ const mavendeps =
       <artifactId>hive</artifactId>
       <version>2.3.9.tuxcare.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.hive</groupId>
+      <artifactId>hive-storage-api</artifactId>
+      <version>2.7.2-tuxcare.1</version>
+    </dependency>
 </dependencies>`
 
 const gradledeps =
 `dependencies {
     implementation("org.apache.hive:hive:2.3.9.tuxcare.1")
+    implementation("org.apache.hive:hive-storage-api:2.7.2-tuxcare.1")
 }`
 </script>
