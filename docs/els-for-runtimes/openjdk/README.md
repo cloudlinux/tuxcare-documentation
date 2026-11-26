@@ -10,6 +10,7 @@ Endless Lifecycle Support (ELS) from TuxCare provides security fixes for OpenJDK
 | EL 7 (CentOS, CloudLinux, Oracle Linux, RHEL) | RPM          | 7.x                             | 8, 11           |
 | EL 8 (CentOS, CentOS Stream, RHEL)            | RPM          | 8.x                             | 8, 11           |
 | EL 9 (AlmaLinux, TuxCare ESU)                 | RPM          | 9.x                             | 8, 11, 17       |
+| EL 10 (AlmaLinux, RHEL)                       | RPM          | 10.x                            | 8               |
 | Windows                                       | ZIP          | Windows Server 2019, 2022, 2025 | 8, 11, 17       |
 
 **Supported architectures:**
