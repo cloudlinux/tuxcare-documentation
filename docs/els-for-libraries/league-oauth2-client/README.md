@@ -110,6 +110,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=league%2Foauth2-client) — Track vulnerability fixes and updates
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=league%2Foauth2-client) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=league%2Foauth2-client) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/league/oauth2-client/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version

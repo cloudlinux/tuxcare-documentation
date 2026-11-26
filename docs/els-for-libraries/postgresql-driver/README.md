@@ -103,7 +103,7 @@ Optionally, you can consume ELS through your own repository manager instead of c
 <WhatsNext hide-title>
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=PostgreSQL+Driver) — Track vulnerability fixes and updates
-* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=PostgreSQL+Driver) — Patched versions and changelogs
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=PostgreSQL+Driver&q=PostgreSQL+Driver) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=PostgreSQL+Driver) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_java/org.postgresql/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [Source code](/els-for-libraries/managing-els-repository/#javaSources) — Access source JARs in Nexus

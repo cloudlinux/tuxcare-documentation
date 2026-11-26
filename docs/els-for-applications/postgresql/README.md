@@ -59,6 +59,8 @@ Endless Lifecycle Support (ELS) for PostgreSQL from TuxCare provides security fi
 <WhatsNext hide-title>
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=EL+7&product=EL+9&product=Ubuntu+22.04&q=postgresql) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/) — Full list of product parts covered by ELS
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-applications/machine-readable-security-data/) — Errata, OVAL, CSAF
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
