@@ -31,15 +31,15 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
   * **Apache Commons HttpClient** 3.1
   * **Apache Commons IO** 2.0.1, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8.0, 2.9.0, 2.10.0, 2.11.0
   * **Apache Commons JCI** 1.1
+  * **Apache Commons Logging** 1.1
   * **Apache Commons Text** 1.6, 1.7, 1.8, 1.9, 1.10.0, 1.12.0, 1.13.1
   * **Apache Commons Validator** 1.6, 1.7, 1.8.0, 1.9.0
   * **Apache Commons VFS** 2.0
-* **Apache Commons Logging** 1.1
-* **Apache Curator** 2.7.1, 5.7.1
+* **Apache Curator** 2.7.1, 2.8.0, 2.11.0, 4.2.0, 5.1.0, 5.7.1
 * **Apache Directory LDAP API** 1.0.0-M20, 2.0.0.AM1, 2.1.6, 2.1.7
 * **Apache FreeMarker** 2.3.29, 2.3.30, 2.3.31, 2.3.32, 2.3.33, 2.3.34
 * **Apache Groovy** 1.6.9, 2.5.7, 2.5.8
-* **Apache Hadoop** 2.6.4
+* **Apache HBase Thirdparty** 1.0.1, 2.1.0
 * **Apache HTrace** 2.01, 2.04, 3.0.4
 * **Apache HttpComponents**
   * **Apache HttpComponents AsyncClient** 4.0-beta3, 4.1.2, 4.1.4
@@ -47,7 +47,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
   * **Apache HttpComponents Client 5** 5.0.3, 5.1.3, 5.1.4, 5.2.3, 5.3.1, 5.4.3, 5.4.4, 5.5.2
   * **Apache HttpComponents Core 5** 5.0.2, 5.1.3, 5.1.5, 5.2.4, 5.2.5, 5.3.4
 * **Apache Ivy** 2.3.0
-* **Apache Jackrabbit** 1.4.12
+* **Apache Jackrabbit** 1.4.12, 2.19.5
 * **Apache Maven**
   * **maven** 3.0.1, 3.1.0, 3.9.10
   * **maven-archiver** 2.6, 3.5.0
@@ -94,8 +94,7 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Async Http Client** 2.12.1, 2.12.3
 * **auto** 0.8, 1.0.1, 1.2.1, 1.4, 1.10.1
 * **aviatorscript** 2.2.1
-* **AWS SDK for Java** 1.11.641, 1.11.1030
-* **aws-sdk-java** 1.11.633, 1.11.641, 1.11.1030
+* **AWS SDK for Java** 1.11.633, 1.11.641, 1.11.1030
 * **azure-sdk-for-java** 1.2.4, 1.13.7, 1.43.0, 1.44.0, 1.44.1, 1.49.1
 * **Bouncy Castle** 1.64, 1.75, 1.76, 1.77, 1.78.1, 1.81, 1.81.1
 * **brave** 5.16.0, 6.0.3
@@ -110,12 +109,11 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **Couchbase JVM clients**
   * **Couchbase Java Client** 3.0.9, 3.1.8, 3.6.3, 3.8.3
   * **Couchbase JVM Core IO** 1.2.9, 2.0.10, 2.2.7, 2.3.2, 2.4.11, 2.6.3
+  * **Couchbase JVM Core IO Deps** 1.6.3
   * **Couchbase Kotlin Client** 1.0.4
-* **Couchbase JVM Core IO Deps** 1.6.3
 * **creadur-rat** 0.6
 * **creaper** 1.6.2
 * **crunch** 0.10.0-hadoop2
-* **curator** 5.5.0
 * **DataStax Java Driver** 4.11.3, 4.14.1, 4.17.0
 * **digitalocean-api-java** 2.16
 * **directory-server** 2.0.0-M24
@@ -161,13 +159,10 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **GraphQL Java** 18.2, 18.3, 19.1, 19.2, 21.5, 22.3, 22.4, 24.3
 * **gRPC-Java** 1.12.0, 1.15.0, 1.21.0, 1.26.0, 1.27.2, 1.28.0, 1.28.1, 1.43.2, 1.44.0, 1.44.1
 * **H2** 1.3.176, 1.4.200, 2.1.210
-* **hadoop-thirdparty** 1.2.0
 * **handlebars.java** 4.1.2, 4.2.0, 4.3.0, 4.3.1, 4.4.0
 * **hapi-fhir** 2.2
 * **Hazelcast** 4.2.8
-* **hbase-thirdparty** 1.0.1, 2.1.0
 * **HdrHistogram** 2.1.8, 2.1.10, 2.1.11, 2.1.12
-* **hive** 2.2.1, 2.6.0, 2.7.1, 2.7.2
 * **Hosebird Client (hbc)** 2.2.0
 * **HPPC** 0.8.1
 * **HtmlUnit**
@@ -179,7 +174,6 @@ Endless Lifecycle Support (ELS) for Java Libraries from TuxCare provides securit
 * **iText** 2.0.8, 2.1.7
 * **iTextPDF** 5.0.6
 * **jackcess** 2.1.0, 2.1.3, 2.1.8, 2.1.12, 3.0.1, 4.0.0, 4.0.5, 4.0.8
-* **jackrabbit** 2.19.5
 * **jaeger-client-java** 1.6.0
 * **Jansi** 1.11
 * **JasperReports** 3.7.4, 6.2.2, 6.21.5

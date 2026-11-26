@@ -5,7 +5,10 @@ The ELS for Apache Hadoop service provides solutions for organizations that are 
 
 ## Supported Versions
 
-* Apache Hadoop 2.7.1, 2.7.3
+| Package | Versions |
+| --- | --- |
+| hadoop | 2.6.4, 2.7.1, 2.7.3 |
+| hadoop-thirdparty | 1.1.1 |
 
 ## Installation
 

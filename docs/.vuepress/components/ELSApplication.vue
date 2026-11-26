@@ -34,7 +34,7 @@
 const applications = [
   {
     name: "Apache Hadoop",
-    versions: "2.7.1 | 2.7.3",
+    versions: "2.6.4 | 2.7.1 | 2.7.3",
     link: "./apache-hadoop/",
     icon: "/images/hadoop.webp",
   },

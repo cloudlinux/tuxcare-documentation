@@ -286,7 +286,7 @@ Endless Lifecycle Support (ELS) for JavaScript Libraries from TuxCare provides s
   * **sigstore** 1.9.0, 2.3.1, 3.1.0
   * **sigstore-bundle** 3.1.0
   * **sigstore-core** 2.0.0, 3.2.0
-  * **sigstore-sign** 3.1.0
+* **sigstore-sign** 3.1.0
 * **simple-git** 3.36.0
 * **simple-markdown** 0.1.1
 * **smol-toml** 1.5.2, 1.7.0
