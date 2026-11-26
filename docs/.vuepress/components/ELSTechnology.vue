@@ -264,7 +264,7 @@ const techData = [
       },
       {
         name: "Apache Curator",
-        versions: "2.7.1 | 5.5.0 | 5.7.1",
+        versions: "2.7.1 | 2.8.0 | 2.11.0 | 4.2.0 | 5.1.0 | 5.7.1",
         link: "./java-libraries/",
       },
       {
