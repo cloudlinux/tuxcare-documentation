@@ -50,7 +50,9 @@ This product ships MySQL Community Server only. Percona Server is patched separa
 
 <WhatsNext hide-title>
 
-* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=EL+7&product=EL+8&component=mysql) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=EL+7&product=EL+8&q=mysql) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/) — Full list of product parts covered by ELS
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-applications/machine-readable-security-data/) — Errata, OVAL, CSAF
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 

@@ -110,6 +110,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=phpmailer%2Fphpmailer) — Track vulnerability fixes and updates
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=phpmailer%2Fphpmailer) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=phpmailer%2Fphpmailer) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/phpmailer/phpmailer/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version

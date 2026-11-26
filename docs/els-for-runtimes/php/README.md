@@ -4671,7 +4671,7 @@ This guide also uses **SaxonC-HE** as an example. Be sure to adjust file names a
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=PHP) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=PHP) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=PHP) — Full list of product parts covered by ELS
-* ![](/images/shield.webp) [Machine-readable security data](/els-for-runtimes/machine-readable-security-data/#php) — Open Vulnerability and Assessment Language (OVAL), Common Security Advisory Framework (CSAF), Errata, and RSS feeds for PHP ELS
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-runtimes/machine-readable-security-data/#php) — Open Vulnerability and Assessment Language (OVAL), Common Security Advisory Framework (CSAF), Errata, and RSS feeds for PHP ELS
 * ![](/images/clipboard-notes.webp) [PHP Changelog](https://changelog.cloudlinux.com/) — latest updates, fixes, and enhancements for ALT-PHP
 
 </WhatsNext>

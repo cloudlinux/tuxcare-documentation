@@ -354,6 +354,7 @@ The `"9.5.11-p6+tuxcare as 9.5.11"` alias is the key — it tells Composer to in
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=drupal%2Fcore) — Track vulnerability fixes and updates
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=drupal%2Fcore) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=drupal%2Fcore) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/drupal/) — Vulnerability Exploitability eXchange feed
 * ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version

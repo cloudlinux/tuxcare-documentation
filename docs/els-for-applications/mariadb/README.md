@@ -50,6 +50,8 @@ Endless Lifecycle Support (ELS) for MariaDB from TuxCare provides security fixes
 <WhatsNext hide-title>
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=MariaDB) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=EL+7&product=EL+8&product=EL+9&q=mariadb) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=MariaDB) — Full list of product parts covered by ELS
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-applications/machine-readable-security-data/) — Errata, OVAL, CSAF
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 

@@ -145,6 +145,6 @@ TuxCare provides additional security support for Ruby versions after the end of 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Ruby) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Ruby) — Patched versions and changelogs
 * ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Ruby) — Full list of product parts covered by ELS
-* ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — Common Security Advisory Framework (CSAF) advisories and RSS feeds for Ruby ELS
+* ![](/images/shield.webp) [Machine-Readable Security Data](../machine-readable-security-data/) — Common Security Advisory Framework (CSAF) advisories and RSS feeds for Ruby ELS
 
 </WhatsNext>

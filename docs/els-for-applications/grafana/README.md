@@ -97,6 +97,12 @@ TuxCare provides ELS for Grafana as pre-built binaries for the following distrib
 
 <WhatsNext hide-title>
 
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Grafana) — Track vulnerability fixes and updates
+* ![](/images/shield.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Grafana) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?package=Grafana&ecosystem=go) — Full list of product parts covered by ELS
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_go/github.com/grafana/grafana/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-applications/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
+* ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-applications/machine-readable-security-data/) — SBOM, VEX, signature verification
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-applications/managing-els-repository/) — Update to newer versions
 
 </WhatsNext>

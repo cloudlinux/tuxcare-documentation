@@ -110,7 +110,9 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 * ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?q=mongodb%2Fmongodb) — Track vulnerability fixes and updates
 * ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?q=mongodb%2Fmongodb) — Patched versions and changelogs
+* ![](/images/clipboard-notes.webp) [Supported components](https://tuxcare.com/cve-tracker/technologies/?q=mongodb%2Fmongodb) — Full list of product parts covered by ELS
 * ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/mongodb/mongodb/) — Vulnerability Exploitability eXchange feed
+* ![](/images/unlock-alt.webp) [SBOM](/els-for-libraries/machine-readable-security-data/#software-bill-of-materials-sbom) — Software Bill of Materials (security.tuxcare.com)
 * ![](/images/wrench.webp) [Package updates](/els-for-libraries/managing-els-repository/#PHP) — Upgrade to a newer version
 
 </WhatsNext>
