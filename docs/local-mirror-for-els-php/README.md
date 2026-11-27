@@ -45,7 +45,7 @@ If your local mirror is already set up against `repo.tuxcare.com` or `repo.cloud
 | Option            | OS                                                                         |
 | :---------------: | :------------------------------------------------------------------------: |
 | rpm/el/6/         | CentOS 6, CloudLinux 6, Oracle Linux 6, etc.                               |
-| rpm/el/7/         | CentOS 7, CloudLinux 7, OracleLinux 7, Amazon Linux 2, etc.                |
+| rpm/el/7/         | CentOS 7, CloudLinux 7, OracleLinux 7, etc.                                |
 | rpm/el/8/         | AlmaLinux 8, CentOS 8, CentOS Stream 8, CloudLinux 8, Oracle Linux 8, etc. |
 | rpm/el/9/         | AlmaLinux 9, CentOS Stream 9, CloudLinux 9, Oracle Linux 9, etc.           |
 | rpm/el/10/        | AlmaLinux 10, CentOS Stream 10, CloudLinux 10, Oracle Linux 10, etc.       |
