@@ -29,11 +29,12 @@ alt-php provides a more flexible and convenient environment for working with dif
 | OS                                                                      | Package Type | OS Version                      | PHP versions                                                                   |
 | :---------------------------------------------------------------------: | :----------: | :-----------------------------: | :----------------------------------------------------------------------------: |
 | EL 6 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 6.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3           |
-| EL 7 (Amazon Linux 2, CentOS, CloudLinux, Oracle Linux, etc.)           | RPM          | 7.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
+| EL 7 (CentOS, CloudLinux, Oracle Linux, etc.)                           | RPM          | 7.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
 | EL 8 (AlmaLinux, CentOS, CentOS Stream, CloudLinux, Oracle Linux, etc.) | RPM          | 8.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
 | EL 9 (AlmaLinux, CentOS Stream, CloudLinux, Oracle Linux, etc.)         | RPM          | 9.x                             | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
 | EL 10 (AlmaLinux, CloudLinux, Oracle Linux, etc.)                       | RPM          | 10.x                            | 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5      |
 | Amazon Linux 1 (AMI 2018.03)                                            | RPM          | 2018.03                         | 5.2, 5.3, 5.5, 5.6, 7.0, 7.2                                                   |
+| Amazon Linux 2                                                          | RPM          | 2                               | 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5 |
 | Ubuntu                                                                  | DEB          | 16.04                           | 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3                          |
 | Ubuntu                                                                  | DEB          | 18.04, 20.04                    | 5.2, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5                |
 | Ubuntu                                                                  | DEB          | 22.04, 24.04                    | 5.2, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5                |
@@ -88,11 +89,6 @@ TuxCare provides additional security support for PHP versions after the end of s
 
 * A valid TuxCare ELS license key — contact [sales@tuxcare.com](mailto:sales@tuxcare.com) to obtain one
 * Root or `sudo` access to the server
-* **Amazon Linux 2-specific.** Before installing `alt-php`, make sure `libvpx` is installed. Amazon Linux 2 provides two versions of libvpx: 1.9 (the default) and 1.3. `alt-php` requires 1.3 for compatibility with EL 7 systems like CentOS 7:
-
-  ```
-  sudo yum install libvpx-1.3.0
-  ```
 
 </ELSPrerequisites>
 
